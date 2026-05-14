@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": null,
+  "framework": null,
+  "outputDirectory": null,
+  "rewrites": [
+    { "source": "/webhook", "destination": "/api/telegram" }
+  ]
+}
