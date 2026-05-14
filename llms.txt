@@ -3,16 +3,16 @@
 > Container repo housing automation utilities. Active feature: trendwatch — daily GitHub Actions job that scans for new Claude Code Skills (folders in the format `.claude/skills/<name>/SKILL.md`) across GitHub (code search + topic search + verification), Reddit (with keyword post-filter), and X/Threads (disabled by default in Sprint 3), runs LLM analysis (Claude Sonnet 4.6) with cross-source mention counts and stars/score deltas vs yesterday, and posts a scored Telegram digest with test plans.
 
 ## Source
-- trendwatch/trendwatch.py: Orchestrator — fetch → state/delta → normalize → analyzer → report → Telegram.
-- trendwatch/analyzer.py: Anthropic SDK wrapper (prompt caching on system block); robust JSON parsing; `claude-sonnet-4-6` default, override via `TRENDWATCH_MODEL`.
-- trendwatch/prompts.py: SYSTEM_PROMPT (cached) + USER_PROMPT_TEMPLATE; JSON output schema described inline.
-- trendwatch/state.py: Read/write `digests/state.json`, compute per-item deltas (`is_new`, `delta_stars`, `delta_score`), preserve `first_seen`.
+- trendwatch/trendwatch.py: Orchestrator — fetch → state/delta → normalize → dedupe filter (`_is_worth_showing`) → analyzer → report → Telegram. If every item is filtered out, sends a short "no new Claude Skills" Telegram message (`[NO_NEW_ITEMS]`) and skips the analyzer.
+- trendwatch/analyzer.py: Anthropic SDK wrapper (prompt caching on system block); robust JSON parsing; `claude-sonnet-4-6` default, override via `TRENDWATCH_MODEL`; `max_tokens=12000` default, override via `TRENDWATCH_MAX_TOKENS`; stderr diagnostics before/after API call; raises `AnalyzerError` if `stop_reason=max_tokens`.
+- trendwatch/prompts.py: SYSTEM_PROMPT (cached) + USER_PROMPT_TEMPLATE; JSON output schema described inline. Each input/output item represents a REPO (may contain multiple skills listed in `skills_in_repo`).
+- trendwatch/state.py: Read/write `digests/state.json`, compute per-item deltas (`is_new`, `delta_stars`, `delta_score`, `delta_skills_count`, `has_new_skills`), preserve `first_seen`. Backwards-compatible with old state lacking `skills_count`.
 - trendwatch/normalizer.py: KNOWN_TOOLS list + alias map; aggregates cross-source mentions into `[{name, mentions:{github,reddit,twitter,threads,total}, urls, sample_titles}, ...]`.
 - trendwatch/report.py: JSON analysis → Markdown report committed to `digests/YYYY-MM-DD.md`.
 - trendwatch/telegram_client.py: `send_text` (LLM summary, plain text, chunked at 4000 chars) + `send_digest` (fallback links, MarkdownV2).
 - trendwatch/config.py: Keywords, GitHub topics, `GITHUB_CODE_QUERIES` (code-search queries for SKILL.md), subreddits, `REDDIT_KEYWORDS_FILTER` (post-filter), `REDDIT_MIN_SCORE` (lowered to 5), `VERIFY_GITHUB_SKILLS` (toggle for `/.claude/skills/` verification), per-source toggles (X/Threads off by default), Apify actor slugs.
 - trendwatch/get_chat_id.py: One-shot helper — prints chat ids from recent bot updates.
-- trendwatch/sources/github.py: GitHub Skill finder — code search for SKILL.md + topic search + description search, deduped by (repo_full_name, skill_path), verified against `/.claude/skills/` listing; emits items with `verified`/`skill_path`/`repo_full_name`/`stars`/`pushed_at`. Requires `GITHUB_TOKEN` for code search.
+- trendwatch/sources/github.py: GitHub Skill finder — code search for SKILL.md + topic search + description search, grouped by `repo_full_name` (one item per repo), verified against `/.claude/skills/` listing; emits items with `verified`/`skill_path`/`repo_full_name`/`stars`/`pushed_at`/`skills`/`skills_count` and a meta line listing up to 3 skill names. Requires `GITHUB_TOKEN` for code search.
 - trendwatch/sources/reddit.py: Public Reddit JSON endpoints + post-filter by `REDDIT_KEYWORDS_FILTER` (only keep posts whose title/selftext mention skill-related terms); meta line includes `match: <keyword>`.
 - trendwatch/sources/twitter.py: Apify run-sync (`apidojo~tweet-scraper` default).
 - trendwatch/sources/threads.py: Apify run-sync (`apify~threads-scraper` default).

@@ -78,13 +78,22 @@ def _extract_score(item: dict) -> int | None:
     return None
 
 
+def _extract_skills_count(item: dict) -> int | None:
+    """Pull skills_count from a github-grouped item (None for other sources)."""
+    sc = item.get("skills_count")
+    if isinstance(sc, int):
+        return sc
+    return None
+
+
 def compute_deltas(
     new_items_by_source: dict[str, list[dict]], prev_state: dict
 ) -> list[dict]:
     """Annotate each new item with is_new + delta vs the previous snapshot.
 
     Returns a flat list across sources. Each entry keeps the original item
-    fields plus: ``is_new``, ``delta_stars``, ``delta_score``, ``first_seen``.
+    fields plus: ``is_new``, ``delta_stars``, ``delta_score``,
+    ``delta_skills_count``, ``has_new_skills``, ``first_seen``.
     """
     prev_items: dict[str, dict] = (prev_state or {}).get("items", {}) or {}
     now = _now_iso()
@@ -97,16 +106,19 @@ def compute_deltas(
             prev = prev_items.get(key)
             stars = _extract_stars(it)
             score = _extract_score(it)
+            skills_count = _extract_skills_count(it)
             if prev is None:
                 first_seen = now
                 is_new = True
                 delta_stars = None
                 delta_score = None
+                delta_skills_count = None
             else:
                 first_seen = prev.get("first_seen", now)
                 is_new = False
                 prev_stars = prev.get("stars")
                 prev_score = prev.get("score")
+                prev_skills_count = prev.get("skills_count")
                 delta_stars = (
                     stars - prev_stars
                     if isinstance(stars, int) and isinstance(prev_stars, int)
@@ -117,11 +129,22 @@ def compute_deltas(
                     if isinstance(score, int) and isinstance(prev_score, int)
                     else None
                 )
+                # Backwards-compat: old state may lack skills_count.
+                delta_skills_count = (
+                    skills_count - prev_skills_count
+                    if isinstance(skills_count, int) and isinstance(prev_skills_count, int)
+                    else None
+                )
+            has_new_skills = (
+                isinstance(delta_skills_count, int) and delta_skills_count > 0
+            )
             enriched = dict(it)
             enriched["source"] = source
             enriched["is_new"] = is_new
             enriched["delta_stars"] = delta_stars
             enriched["delta_score"] = delta_score
+            enriched["delta_skills_count"] = delta_skills_count
+            enriched["has_new_skills"] = has_new_skills
             enriched["first_seen"] = first_seen
             out.append(enriched)
     return out
@@ -142,12 +165,14 @@ def save_state(
                 continue
             stars = _extract_stars(it)
             score = _extract_score(it)
+            skills_count = _extract_skills_count(it)
             first_seen = (prev_items.get(key) or {}).get("first_seen", now)
             new_items[key] = {
                 "source": source,
                 "title": it.get("title", ""),
                 "stars": stars,
                 "score": score,
+                "skills_count": skills_count,
                 "first_seen": first_seen,
             }
     snapshot: dict[str, Any] = {"last_run": now, "items": new_items}

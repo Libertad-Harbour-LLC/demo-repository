@@ -31,9 +31,21 @@ SKILL.md содержит инструкции/контекст/скрипты, 
   SKILL.md + topic-поиск + verification через /.claude/skills/), Reddit (с
   post-фильтром по ключевым словам). X/Threads по умолчанию выключены.
 - посчитали cross_source_mentions (сколько раз каждый skill упомянут и где);
-- проставили deltas (is_new, delta_stars, delta_score) — рост со вчера.
+- проставили deltas (is_new, delta_stars, delta_score, delta_skills_count,
+  has_new_skills) — рост со вчера.
 - у GitHub-элементов есть поля `verified` (True = реально лежит в
-  `.claude/skills/`), `skill_path`, `repo_full_name`, `stars`, `pushed_at`.
+  `.claude/skills/`), `skill_path`, `repo_full_name`, `stars`, `pushed_at`,
+  а также `skills` (список словарей `{name, path, url}`) и `skills_count`.
+
+ВАЖНО: каждый GitHub-элемент теперь представляет **РЕПОЗИТОРИЙ ЦЕЛИКОМ**, а не
+отдельный skill. Один репозиторий может содержать N skills внутри
+`.claude/skills/<имя>/`. Все они перечислены в поле `skills` и в `meta`
+("⭐ N • K skills: name1, name2, name3…"). Каждый пункт rankings/top_test/
+top_watch/top_skip/best_pick — это РЕПО, не отдельный skill. Если хочешь
+выделить один конкретный skill из мульти-skill репо — упомяни его в `what`.
+Предфильтр уже отбросил репозитории, которые мы показывали раньше без
+значимого роста (added skills или ≥5 новых звёзд), так что входной список —
+это либо НОВЫЕ репо, либо известные с материальным изменением.
 
 Твоя работа: отсеять НЕ-skills, ранжировать оставшихся, скорить, отобрать что
 тестировать, собрать дайджест.
@@ -92,44 +104,46 @@ decision:
   "main_takeaway": "1-2 предложения, что главное за день про Claude Skills",
   "executive_summary": "3-5 предложений, развёрнутая картина",
   "rankings": [
-    {"rank": 1, "skill": "<owner/repo: skill_name>",
+    {"rank": 1, "skill": "<owner/repo>",
      "category": "marketing_skill|vibe_coding_skill|ai_content_skill|general_skill",
      "scores": {"novelty": 0-10, "traction": 0-10, "utility": 0-10,
                 "testability": 0-10, "business_impact": 0-10, "noise_risk": 0-10},
      "final_score": 0.0, "confidence": "high|medium|low",
      "decision": "test_now|watch|skip",
-     "url": "ссылка на SKILL.md или папку skill'а на GitHub",
+     "url": "ссылка на репо или папку .claude/skills",
      "source": "github|reddit|twitter|threads"}
   ],
   "top_test": [
-    {"name": "<owner/repo: skill_name>",
+    {"name": "<owner/repo>",
      "category": "marketing_skill|vibe_coding_skill|ai_content_skill|general_skill",
-     "url": "ОБЯЗАТЕЛЬНО — на SKILL.md / папку skill'а / репозиторий, НЕ на твит",
+     "url": "ОБЯЗАТЕЛЬНО — на .claude/skills папку репо или сам репо, НЕ на твит",
      "source": "github|reddit|twitter|threads",
-     "what": "что делает skill",
+     "skills_in_repo": ["имена skills внутри репо (из item.skills[].name)"],
+     "what": "что делает репо/skills (можно выделить один конкретный skill)",
      "problem": "какую боль решает", "why_growing": "почему растёт сегодня",
-     "evidence": "ссылки/числа из данных (stars, verified, кросс-источники)",
+     "evidence": "ссылки/числа из данных (stars, verified, skills_count, кросс-источники)",
      "scores": {...},
      "final_score": 0.0, "confidence": "...", "decision": "test_now",
-     "test_steps": ["клонировать репо / скопировать SKILL.md в .claude/skills/<name>/",
+     "test_steps": ["клонировать репо / скопировать .claude/skills/<name>/ к себе",
                     "запустить Claude Code в проекте", "дать конкретный тест-промт"],
      "metric": "что измерять", "expected_result": "что ожидать",
      "risk": "что может пойти не так"}
   ],
   "top_watch": [
-    {"name": "...", "url": "ОБЯЗАТЕЛЬНО — на skill, не на твит", "source": "...",
+    {"name": "<owner/repo>", "url": "ОБЯЗАТЕЛЬНО — на репо/папку skills", "source": "...",
      "why_interesting": "...", "signal_to_wait": "..."}
   ],
   "top_skip": [
-    {"name": "...", "url": "ОБЯЗАТЕЛЬНО", "source": "...", "reason": "..."}
+    {"name": "<owner/repo>", "url": "ОБЯЗАТЕЛЬНО", "source": "...", "reason": "..."}
   ],
   "best_pick": {
-    "name": "<owner/repo: skill_name>",
-    "url": "ОБЯЗАТЕЛЬНО — на SKILL.md / папку skill'а",
+    "name": "<owner/repo>",
+    "url": "ОБЯЗАТЕЛЬНО — на репо / папку .claude/skills",
     "source": "...",
+    "skills_in_repo": ["имена skills из item.skills[].name"],
     "why": "почему лучший за день",
     "comparison": "чем лучше альтернатив",
-    "first_test": "конкретный первый шаг (как поставить skill себе)",
+    "first_test": "конкретный первый шаг (как поставить skills себе)",
     "metric": "..."
   },
   "excluded": {
@@ -169,27 +183,27 @@ URL берёшь из полей `url` каждого элемента `top_test
 <1-2 предложения про Claude Skills>
 
 🔥 Тестировать сегодня:
-1. <skill> — <почему> — первый шаг: <действие>
-🔗 <url-на-SKILL.md-или-папку>
-2. <skill> — <почему> — первый шаг: <действие>
-🔗 <url-на-SKILL.md-или-папку>
-3. <skill> — <почему> — первый шаг: <действие>
-🔗 <url-на-SKILL.md-или-папку>
+1. <owner/repo> (<N> skills: name1, name2, name3) — <почему> — первый шаг: <действие>
+🔗 <repo-url>
+2. <owner/repo> (<N> skills: name1, name2, name3) — <почему> — первый шаг: <действие>
+🔗 <repo-url>
+3. <owner/repo> (<N> skills: name1, name2, name3) — <почему> — первый шаг: <действие>
+🔗 <repo-url>
 
 👀 Понаблюдать:
-1. <skill> — <какой сигнал ждать>
+1. <owner/repo> — <какой сигнал ждать>
 🔗 <url>
-2. <skill> — <какой сигнал ждать>
+2. <owner/repo> — <какой сигнал ждать>
 🔗 <url>
-3. <skill> — <какой сигнал ждать>
+3. <owner/repo> — <какой сигнал ждать>
 🔗 <url>
 
 🗑 Пропустить:
-1. <skill> — <причина>
+1. <owner/repo> — <причина>
 🔗 <url>
 
-🎯 Лучший skill дня:
-<название + 3 коротких шага установки>
+🎯 Лучший репо дня:
+<owner/repo + список skills внутри + 3 коротких шага установки>
 🔗 <url>
 
 📊 Уверенность анализа: <высокая|средняя|низкая>

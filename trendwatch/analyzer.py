@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import sys
 from typing import Any
 
 import anthropic
@@ -17,6 +18,7 @@ import anthropic
 from prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
 
 DEFAULT_MODEL = "claude-sonnet-4-6"
+DEFAULT_MAX_TOKENS = 12000
 REQUIRED_KEYS = ("telegram_summary", "rankings", "metadata")
 
 _FENCE_RE = re.compile(r"^\s*```(?:json)?\s*|\s*```\s*$", re.MULTILINE)
@@ -86,9 +88,20 @@ def analyze(
         raise AnalyzerError(f"failed to construct Anthropic client: {exc}") from exc
 
     try:
+        max_tokens = int(os.environ.get("TRENDWATCH_MAX_TOKENS") or DEFAULT_MAX_TOKENS)
+    except ValueError:
+        max_tokens = DEFAULT_MAX_TOKENS
+
+    print(
+        f"[trendwatch.analyzer] model={chosen_model} "
+        f"items={len(items_with_deltas)} input_chars={len(user_text)}",
+        file=sys.stderr,
+    )
+
+    try:
         resp = client.messages.create(
             model=chosen_model,
-            max_tokens=8000,
+            max_tokens=max_tokens,
             system=[
                 {
                     "type": "text",
@@ -102,6 +115,21 @@ def analyze(
         raise AnalyzerError(f"Anthropic API call failed: {exc}") from exc
 
     text = _extract_text(resp)
+    stop_reason = getattr(resp, "stop_reason", None)
+    usage = getattr(resp, "usage", None)
+    usage_in = getattr(usage, "input_tokens", None) if usage is not None else None
+    usage_out = getattr(usage, "output_tokens", None) if usage is not None else None
+    print(
+        f"[trendwatch.analyzer] response_chars={len(text)} "
+        f"stop_reason={stop_reason} usage_in={usage_in} usage_out={usage_out}",
+        file=sys.stderr,
+    )
+
+    if stop_reason == "max_tokens":
+        raise AnalyzerError(
+            "Response truncated by max_tokens limit, increase TRENDWATCH_MAX_TOKENS env var"
+        )
+
     if not text:
         raise AnalyzerError("Anthropic response had no text content")
 

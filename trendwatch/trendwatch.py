@@ -23,6 +23,18 @@ import report
 import state
 
 
+def _is_worth_showing(item: dict) -> bool:
+    """Dedupe filter: include items only if new, gained skills, or grew ≥5 stars."""
+    if item.get("is_new", True):
+        return True
+    if item.get("has_new_skills"):
+        return True
+    delta = item.get("delta_stars") or 0
+    if isinstance(delta, int) and delta >= 5:
+        return True
+    return False
+
+
 def _safe(name: str, fn, *args, **kwargs) -> list[dict]:
     try:
         return fn(*args, **kwargs) or []
@@ -121,9 +133,34 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
     items_with_deltas = state.compute_deltas(items_by_source, prev_state)
     normalized, _annotated = normalizer.normalize(items_by_source)
 
+    # Dedupe filter: drop items that were already shown without material change.
+    filtered_items = [it for it in items_with_deltas if _is_worth_showing(it)]
+
+    if not filtered_items:
+        msg = (
+            f"\U0001f680 Daily Skill Radar — {date}\n\n"
+            "Нет новых Claude Skills за период. Все обнаруженные репозитории "
+            "уже были в предыдущих дайджестах без значимого роста.\n\n"
+            f"\U0001f4ca Источников проверено: {', '.join(items_by_source.keys())}"
+        )
+        try:
+            telegram_client.send_text(msg, bot_token, chat_id)
+        except Exception as exc:
+            print(f"[trendwatch] telegram send_text failed: {exc}", file=sys.stderr)
+            print(summary)
+            return 1
+        # Still save state so we don't re-find the same items next run.
+        try:
+            state.save_state(items_by_source)
+        except Exception as exc:
+            print(f"[trendwatch] state save failed: {exc}", file=sys.stderr)
+        print("[NO_NEW_ITEMS]")
+        print(summary)
+        return 0
+
     try:
         analysis = analyzer.analyze(
-            normalized, items_with_deltas, period=period, date=date
+            normalized, filtered_items, period=period, date=date
         )
     except Exception as exc:
         print(

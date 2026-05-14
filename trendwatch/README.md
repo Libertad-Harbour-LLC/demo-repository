@@ -54,7 +54,14 @@ The pipeline now has an LLM analysis step between the fetchers and Telegram:
 2. **Claude scores and ranks** — `analyzer.py` sends the preprocessed data to `claude-sonnet-4-6` (override via `TRENDWATCH_MODEL`). The long system prompt is sent with `cache_control: ephemeral` so subsequent runs hit the prompt cache. The model returns strict JSON: rankings, top_test / top_watch / top_skip, a best pick, and a Russian Telegram summary.
 3. **Outputs** — the full report is written to `digests/YYYY-MM-DD.md` (committed back by the workflow) and the `telegram_summary` field is sent to Telegram via `send_text` (plain text, no MarkdownV2 escaping needed).
 
-If the Anthropic API call or JSON parse fails for any reason, the orchestrator falls back to the original "list of links" digest so a daily message still goes out. Look for `[ANALYSIS_OK]`, `[FALLBACK_LINKS]`, or `[DRY_RUN]` in the workflow logs to see which path ran.
+If the Anthropic API call or JSON parse fails for any reason, the orchestrator falls back to the original "list of links" digest so a daily message still goes out. Look for `[ANALYSIS_OK]`, `[FALLBACK_LINKS]`, `[NO_NEW_ITEMS]`, or `[DRY_RUN]` in the workflow logs to see which path ran.
+
+## Repo-level grouping and dedupe (Sprint 4)
+
+- **One repo = one digest entry.** GitHub items are grouped by `repo_full_name`; all skill folders inside `.claude/skills/` are listed in a single entry's `skills` field and summarised in `meta` ("⭐ N • K skills: name1, name2, name3…"). A repo with 21 skills produces one item, not 21.
+- **Dedupe across days.** Repos already shown in earlier digests aren't shown again unless they gained 5+ stars or added new skill folders (`has_new_skills`). The orchestrator applies this filter before the analyzer runs.
+- **No new items short message.** If every candidate is filtered out, the analyzer is skipped entirely and Telegram receives a one-line "no new Claude Skills" message (marker `[NO_NEW_ITEMS]`). State is still saved so the same items don't reappear next run.
+- **Analyzer headroom.** `max_tokens` is now 12 000 (override via `TRENDWATCH_MAX_TOKENS`); `analyzer.py` logs input/output sizes and stop reason and raises a clear error if a response is truncated.
 
 ## Local dry-run
 
