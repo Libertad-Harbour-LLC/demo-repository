@@ -1,6 +1,24 @@
 # trendwatch
 
-Daily digest of fresh AI marketing / vibe-coding items from GitHub, Reddit, X, and Threads, posted to a Telegram chat.
+Daily digest of fresh **Claude Code Skills** discovered on GitHub and Reddit, scored by Claude and posted to a Telegram chat.
+
+## What counts as a Claude Skill
+
+A Claude Skill is a folder `.claude/skills/<name>/` containing a `SKILL.md` file. `SKILL.md` holds instructions / context / scripts that Claude Code auto-loads when you work in a repo that ships the folder. Skills are usually distributed through GitHub repositories (often a single repo holding many skills) and occasionally through marketplace listings. trendwatch looks specifically for this layout — a generic AI project, agent framework, or library is **not** a Claude Skill and will be filtered into `excluded.not_a_skill` by the analyzer.
+
+Skills are bucketed into four categories:
+- `marketing_skill` — SEO, growth, copy, content distribution, ad ops
+- `vibe_coding_skill` — IDE / coding-assistant skills (refactor, debug, scaffolding, code review)
+- `ai_content_skill` — content creation (text, video script, image prompt, audio)
+- `general_skill` — anything else that fits the SKILL.md format but doesn't match the three above
+
+## Sources in Sprint 3
+
+- **GitHub** — three combined strategies (code search for `path:.claude/skills filename:SKILL.md`, repo search by topics `claude-skill[s]`/`claude-code-skill[s]`, and a description keyword search), all deduped and optionally verified against the repo's `/.claude/skills/` listing.
+- **Reddit** — public `new.json` endpoints with a post-filter (`REDDIT_KEYWORDS_FILTER` in `config.py`) so only posts that mention `skill` / `SKILL.md` / `.claude/skills` / `claude skill` survive. `REDDIT_MIN_SCORE` is lowered to 5 because the niche has low traffic.
+- **X / Threads** — disabled by default (`SOURCES.twitter = False`, `SOURCES.threads = False` in `config.py`). They are too noisy for this niche and burn Apify credits. Flip the toggle to re-enable, but expect more not_a_skill exclusions.
+
+GitHub Code Search **requires authentication**. The GitHub Actions workflow already wires `GITHUB_TOKEN` for you; for a local dry-run set `GITHUB_TOKEN` manually with at least `public_repo` scope.
 
 ## Setup
 
@@ -23,10 +41,10 @@ Daily digest of fresh AI marketing / vibe-coding items from GitHub, Reddit, X, a
 6. Verify the digest message arrived in your Telegram chat.
 7. Tune `trendwatch/config.py` to taste — keywords, subreddits, GitHub topics, source toggles.
 
-## Sources
+## Source APIs
 
-- **GitHub** and **Reddit** use free public APIs (no Apify credits burned).
-- **X** and **Threads** use Apify actors. To swap actors, edit `APIFY_TWITTER_ACTOR` / `APIFY_THREADS_ACTOR` in `trendwatch/config.py`. Actor input shapes vary between authors — if a source returns 0 items, check the actor's input schema in the Apify console and adjust the POST body in `trendwatch/sources/twitter.py` or `threads.py`.
+- **GitHub** and **Reddit** use free public APIs (no Apify credits burned). GitHub now needs `GITHUB_TOKEN` for code search.
+- **X** and **Threads** use Apify actors and are disabled by default. To swap actors when re-enabling, edit `APIFY_TWITTER_ACTOR` / `APIFY_THREADS_ACTOR` in `trendwatch/config.py`. Actor input shapes vary between authors — if a source returns 0 items, check the actor's input schema in the Apify console and adjust the POST body in `trendwatch/sources/twitter.py` or `threads.py`.
 
 ## How analysis works
 

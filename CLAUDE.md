@@ -2,8 +2,10 @@
 
 ## Project Overview
 Container repo housing automation utilities. Current active feature: **trendwatch** —
-daily GitHub Actions job that pulls fresh items from GitHub, Reddit, X, and Threads
-about AI marketing / vibe-coding tooling and posts a digest of links to a Telegram bot.
+daily GitHub Actions job that scans for **new Claude Code Skills** (in the format
+`.claude/skills/<name>/SKILL.md`) across GitHub (code search + topic search), Reddit
+(with keyword post-filter), and X/Threads (disabled by default), runs Claude analysis,
+and posts a scored Telegram digest with test plans.
 
 ## Key Files
 | File | Purpose |
@@ -17,7 +19,7 @@ about AI marketing / vibe-coding tooling and posts a digest of links to a Telegr
 | `trendwatch/telegram_client.py` | `send_text` (LLM mode) + `send_digest` (fallback links) |
 | `trendwatch/sources/{github,reddit,twitter,threads}.py` | Per-source fetchers |
 | `trendwatch/get_chat_id.py` | One-shot helper to capture Telegram chat_id |
-| `trendwatch/config.py` | Keywords, subreddits, source toggles |
+| `trendwatch/config.py` | Keywords, subreddits, source toggles, `GITHUB_CODE_QUERIES`, `REDDIT_KEYWORDS_FILTER`, `VERIFY_GITHUB_SKILLS` |
 | `trendwatch/requirements.txt` | `requests`, `anthropic>=0.40` |
 | `.github/workflows/trendwatch.yml` | Daily cron 09:00 UTC + commit-back of `digests/` |
 | `digests/` | Committed daily reports (`YYYY-MM-DD.md`) and `state.json` snapshot |

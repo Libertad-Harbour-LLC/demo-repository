@@ -15,6 +15,8 @@ KNOWN_TOOLS: list[str] = [
     "claude",
     "claude-code",
     "claude code",
+    "claude skills",
+    "anthropic skills",
     "gpt",
     "chatgpt",
     "copilot",

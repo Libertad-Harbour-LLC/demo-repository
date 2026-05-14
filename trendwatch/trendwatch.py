@@ -38,7 +38,13 @@ def _fetch_all() -> dict[str, list[dict]]:
     items_by_source: dict[str, list[dict]] = {}
     if sources_enabled.get("github"):
         items_by_source["github"] = _safe(
-            "github", fetch_github, config.GITHUB_TOPICS, 24, max_items
+            "github",
+            fetch_github,
+            config.GITHUB_TOPICS,
+            getattr(config, "GITHUB_CODE_QUERIES", []),
+            24,
+            max_items,
+            getattr(config, "VERIFY_GITHUB_SKILLS", True),
         )
     if sources_enabled.get("reddit"):
         items_by_source["reddit"] = _safe(
@@ -48,6 +54,7 @@ def _fetch_all() -> dict[str, list[dict]]:
             config.REDDIT_MIN_SCORE,
             24,
             max_items,
+            getattr(config, "REDDIT_KEYWORDS_FILTER", None),
         )
     if sources_enabled.get("twitter"):
         items_by_source["twitter"] = _safe(

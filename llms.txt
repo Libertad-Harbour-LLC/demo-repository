@@ -1,6 +1,6 @@
 # demo-repository
 
-> Container repo housing automation utilities. Active feature: trendwatch — daily GitHub Actions job that scans GitHub, Reddit, X, and Threads for AI marketing / vibe-coding signals, runs LLM analysis (Claude Sonnet 4.6) with cross-source mention counts and stars/score deltas vs yesterday, and posts a scored Telegram digest with test plans.
+> Container repo housing automation utilities. Active feature: trendwatch — daily GitHub Actions job that scans for new Claude Code Skills (folders in the format `.claude/skills/<name>/SKILL.md`) across GitHub (code search + topic search + verification), Reddit (with keyword post-filter), and X/Threads (disabled by default in Sprint 3), runs LLM analysis (Claude Sonnet 4.6) with cross-source mention counts and stars/score deltas vs yesterday, and posts a scored Telegram digest with test plans.
 
 ## Source
 - trendwatch/trendwatch.py: Orchestrator — fetch → state/delta → normalize → analyzer → report → Telegram.
@@ -10,10 +10,10 @@
 - trendwatch/normalizer.py: KNOWN_TOOLS list + alias map; aggregates cross-source mentions into `[{name, mentions:{github,reddit,twitter,threads,total}, urls, sample_titles}, ...]`.
 - trendwatch/report.py: JSON analysis → Markdown report committed to `digests/YYYY-MM-DD.md`.
 - trendwatch/telegram_client.py: `send_text` (LLM summary, plain text, chunked at 4000 chars) + `send_digest` (fallback links, MarkdownV2).
-- trendwatch/config.py: Keywords, GitHub topics, subreddits, per-source toggles, Apify actor slugs.
+- trendwatch/config.py: Keywords, GitHub topics, `GITHUB_CODE_QUERIES` (code-search queries for SKILL.md), subreddits, `REDDIT_KEYWORDS_FILTER` (post-filter), `REDDIT_MIN_SCORE` (lowered to 5), `VERIFY_GITHUB_SKILLS` (toggle for `/.claude/skills/` verification), per-source toggles (X/Threads off by default), Apify actor slugs.
 - trendwatch/get_chat_id.py: One-shot helper — prints chat ids from recent bot updates.
-- trendwatch/sources/github.py: Public GitHub Search API.
-- trendwatch/sources/reddit.py: Public Reddit JSON endpoints.
+- trendwatch/sources/github.py: GitHub Skill finder — code search for SKILL.md + topic search + description search, deduped by (repo_full_name, skill_path), verified against `/.claude/skills/` listing; emits items with `verified`/`skill_path`/`repo_full_name`/`stars`/`pushed_at`. Requires `GITHUB_TOKEN` for code search.
+- trendwatch/sources/reddit.py: Public Reddit JSON endpoints + post-filter by `REDDIT_KEYWORDS_FILTER` (only keep posts whose title/selftext mention skill-related terms); meta line includes `match: <keyword>`.
 - trendwatch/sources/twitter.py: Apify run-sync (`apidojo~tweet-scraper` default).
 - trendwatch/sources/threads.py: Apify run-sync (`apify~threads-scraper` default).
 
