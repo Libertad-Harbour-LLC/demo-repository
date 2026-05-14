@@ -110,6 +110,48 @@ def _build_messages(items_by_source: dict[str, list[dict]]) -> list[str]:
     return messages
 
 
+def _split_plain(text: str, limit: int = 4000) -> list[str]:
+    """Split a plain-text message into chunks <= ``limit``, preferring line breaks."""
+    if len(text) <= limit:
+        return [text]
+    chunks: list[str] = []
+    current = ""
+    for line in text.split("\n"):
+        candidate = current + "\n" + line if current else line
+        if len(candidate) > limit and current:
+            chunks.append(current)
+            current = line
+        elif len(candidate) > limit:
+            # Single line longer than limit — hard split.
+            while len(line) > limit:
+                chunks.append(line[:limit])
+                line = line[limit:]
+            current = line
+        else:
+            current = candidate
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def send_text(text: str, bot_token: str, chat_id: str) -> None:
+    """Send a pre-formatted plain-text message (no MarkdownV2 escaping).
+
+    Splits into <=4000-char chunks on line breaks. ``parse_mode`` is omitted
+    so the model controls formatting and we don't need to escape MarkdownV2
+    metacharacters.
+    """
+    url = API_URL.format(token=bot_token)
+    for chunk in _split_plain(text):
+        payload = {
+            "chat_id": chat_id,
+            "text": chunk,
+            "disable_web_page_preview": True,
+        }
+        resp = requests.post(url, json=payload, timeout=30)
+        resp.raise_for_status()
+
+
 def send_digest(items_by_source: dict[str, list[dict]], bot_token: str, chat_id: str) -> None:
     messages = _build_messages(items_by_source)
     url = API_URL.format(token=bot_token)
