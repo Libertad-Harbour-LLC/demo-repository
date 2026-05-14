@@ -2,6 +2,12 @@
 
 > Container repo housing automation utilities. Active feature: trendwatch — daily GitHub Actions job that scans for new Claude Code Skills (folders in the format `.claude/skills/<name>/SKILL.md`) across GitHub (code search + topic search + verification), Reddit (with keyword post-filter), and X/Threads (disabled by default in Sprint 3), runs LLM analysis (Claude Sonnet 4.6) with cross-source mention counts and stars/score deltas vs yesterday, and posts a scored Telegram digest with test plans.
 
+## Bot (Vercel webhook)
+- api/telegram.py: Single-file Vercel Python serverless function — interactive Telegram bot. Commands `/start` `/list` `/categories` `/months` with inline-keyboard pagination. Stateless — fetches `digests/recommended.json` from `raw.githubusercontent.com` with 60s in-process cache. Env: `TELEGRAM_BOT_TOKEN`, optional `TELEGRAM_WEBHOOK_SECRET`, `BOT_REPO`, `BOT_BRANCH`.
+- requirements.txt (root): `requests==2.32.3` for Vercel runtime (separate from trendwatch/requirements.txt).
+- vercel.json, .vercelignore: Vercel deploy config; excludes `trendwatch/`, `digests/`, `.github/` from build.
+- bot-README.md: Russian-language Vercel deploy + setWebhook guide.
+
 ## Source
 - trendwatch/trendwatch.py: Orchestrator — fetch → state/delta → normalize → dedupe filter (`_is_worth_showing`) → analyzer → report → Telegram. If every item is filtered out, sends a short "no new Claude Skills" Telegram message (`[NO_NEW_ITEMS]`) and skips the analyzer.
 - trendwatch/analyzer.py: Anthropic SDK wrapper (prompt caching on system block); robust JSON parsing; `claude-sonnet-4-6` default, override via `TRENDWATCH_MODEL`; `max_tokens=12000` default, override via `TRENDWATCH_MAX_TOKENS`; stderr diagnostics before/after API call; raises `AnalyzerError` if `stop_reason=max_tokens`.

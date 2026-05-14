@@ -25,7 +25,10 @@ and posts a scored Telegram digest with test plans.
 | `trendwatch/config.py` | Keywords, subreddits, source toggles, `GITHUB_CODE_QUERIES`, `REDDIT_KEYWORDS_FILTER`, `VERIFY_GITHUB_SKILLS` |
 | `trendwatch/requirements.txt` | `requests`, `anthropic>=0.40` |
 | `.github/workflows/trendwatch.yml` | Daily cron 09:00 UTC + commit-back of `digests/` |
-| `digests/` | Committed daily reports (`YYYY-MM-DD.md`) and `state.json` snapshot |
+| `digests/` | Committed daily reports (`YYYY-MM-DD.md`), `state.json`, `recommended.json`, `watchlist.json`, `index/` |
+| `api/telegram.py` | Vercel serverless webhook for the interactive Telegram bot (`/start`, `/list`, `/categories`, `/months`) |
+| `requirements.txt` (root) | Vercel deploy deps (`requests`) — separate from `trendwatch/requirements.txt` |
+| `vercel.json`, `.vercelignore`, `bot-README.md` | Vercel deploy config + Russian deploy guide |
 | `index.html` / `package.json` | Legacy GitHub demo files |
 
 ## Commands
@@ -40,6 +43,12 @@ and posts a scored Telegram digest with test plans.
 - `TELEGRAM_BOT_TOKEN` — bot token from @BotFather
 - `TELEGRAM_CHAT_ID` — destination chat for digests
 - `ANTHROPIC_API_KEY` — Claude API key from console.anthropic.com
+
+## Vercel bot env vars (set in Vercel project → Settings → Environment Variables)
+- `TELEGRAM_BOT_TOKEN` — same bot token as the cron pipeline
+- `TELEGRAM_WEBHOOK_SECRET` (optional) — random string; if set, used to validate incoming Telegram POST headers
+- `BOT_REPO` (optional, default `Libertad-Harbour-LLC/demo-repository`) — repo to fetch `recommended.json` from
+- `BOT_BRANCH` (optional, default `main`)
 
 ## Conventions
 - Secrets never committed; read from env only.

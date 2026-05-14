@@ -1,0 +1,11 @@
+trendwatch/
+digests/
+.github/
+.claude/
+.superflow-state.json
+.par-evidence.json
+README.md
+CLAUDE.md
+llms.txt
+index.html
+package.json
