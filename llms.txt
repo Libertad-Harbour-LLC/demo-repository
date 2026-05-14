@@ -1,25 +1,34 @@
 # demo-repository
 
-> Container repo housing automation utilities. Current active feature: trendwatch — daily GitHub Actions job that scans GitHub, Reddit, X, and Threads for AI marketing / vibe-coding news and posts a digest of links to a Telegram bot.
+> Container repo housing automation utilities. Active feature: trendwatch — daily GitHub Actions job that scans GitHub, Reddit, X, and Threads for AI marketing / vibe-coding signals, runs LLM analysis (Claude Sonnet 4.6) with cross-source mention counts and stars/score deltas vs yesterday, and posts a scored Telegram digest with test plans.
 
 ## Source
-- trendwatch/trendwatch.py: Orchestrator — fans out to each source, composes the digest, sends via Telegram.
-- trendwatch/config.py: Keywords, GitHub topics, subreddits, per-source toggles and caps, Apify actor slugs.
-- trendwatch/telegram_client.py: MarkdownV2 message builder + chunked sender for `sendMessage`.
+- trendwatch/trendwatch.py: Orchestrator — fetch → state/delta → normalize → analyzer → report → Telegram.
+- trendwatch/analyzer.py: Anthropic SDK wrapper (prompt caching on system block); robust JSON parsing; `claude-sonnet-4-6` default, override via `TRENDWATCH_MODEL`.
+- trendwatch/prompts.py: SYSTEM_PROMPT (cached) + USER_PROMPT_TEMPLATE; JSON output schema described inline.
+- trendwatch/state.py: Read/write `digests/state.json`, compute per-item deltas (`is_new`, `delta_stars`, `delta_score`), preserve `first_seen`.
+- trendwatch/normalizer.py: KNOWN_TOOLS list + alias map; aggregates cross-source mentions into `[{name, mentions:{github,reddit,twitter,threads,total}, urls, sample_titles}, ...]`.
+- trendwatch/report.py: JSON analysis → Markdown report committed to `digests/YYYY-MM-DD.md`.
+- trendwatch/telegram_client.py: `send_text` (LLM summary, plain text, chunked at 4000 chars) + `send_digest` (fallback links, MarkdownV2).
+- trendwatch/config.py: Keywords, GitHub topics, subreddits, per-source toggles, Apify actor slugs.
 - trendwatch/get_chat_id.py: One-shot helper — prints chat ids from recent bot updates.
-- trendwatch/sources/github.py: Public GitHub Search API (topics × time window).
-- trendwatch/sources/reddit.py: Public Reddit JSON endpoints (per-subreddit, score filter).
-- trendwatch/sources/twitter.py: Apify run-sync (`apidojo~tweet-scraper` by default).
-- trendwatch/sources/threads.py: Apify run-sync (`apify~threads-scraper` by default).
+- trendwatch/sources/github.py: Public GitHub Search API.
+- trendwatch/sources/reddit.py: Public Reddit JSON endpoints.
+- trendwatch/sources/twitter.py: Apify run-sync (`apidojo~tweet-scraper` default).
+- trendwatch/sources/threads.py: Apify run-sync (`apify~threads-scraper` default).
 
 ## Configuration
-- trendwatch/requirements.txt: Python deps (`requests`).
-- .github/workflows/trendwatch.yml: Daily cron 09:00 UTC + manual dispatch; wires `APIFY_API_TOKEN`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `GITHUB_TOKEN`.
+- trendwatch/requirements.txt: `requests`, `anthropic>=0.40,<1.0`.
+- .github/workflows/trendwatch.yml: Daily cron 09:00 UTC + manual dispatch; `permissions: contents: write`; commit-back step with `git pull --rebase` guard; wires `APIFY_API_TOKEN`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `ANTHROPIC_API_KEY`, `GITHUB_TOKEN`.
+
+## Data
+- digests/state.json: Daily snapshot of per-item state (URL → stars/score/first_seen). Committed back by workflow.
+- digests/YYYY-MM-DD.md: Full Markdown report from LLM analysis.
 
 ## Documentation
 - README.md: Legacy GitHub demo readme.
 - CLAUDE.md: Claude Code instructions for this repo.
-- trendwatch/README.md: trendwatch setup (BotFather → chat_id → secrets → enable workflow) + troubleshooting.
+- trendwatch/README.md: trendwatch setup + analyzer behaviour + troubleshooting + CLI flags.
 
 ## Legacy
 - index.html, package.json: Original demo files, not used by trendwatch.
