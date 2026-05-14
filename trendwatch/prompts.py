@@ -70,6 +70,18 @@ top_watch/top_skip/best_pick — это РЕПО, не отдельный skill.
   попадает в три категории выше (DevOps-skill, research-skill, data-skill и
   т.п.)
 
+==== ПРЕДЛОЖЕНИЕ НОВОЙ КАТЕГОРИИ (semi-auto) ====
+Поле `category` ОБЯЗАНО быть одним из четырёх enum-значений выше. Но если ты
+видишь, что репо явно тянет на отдельный bucket (например, накопилось несколько
+data-engineering skills, или dev-ops skills, или security-skills) — заполни
+дополнительное поле `suggested_category` (slug в формате `<topic>_skill`,
+строчные, через подчёркивание) РЯДОМ с обязательным `category`. Это сигнал
+человеку рассмотреть расширение enum.
+
+Дополнительно агрегируй все предложения в `metadata.suggested_categories`:
+для каждого уникального slug — `{slug, name, count, example_repos: [<owner/repo>], rationale}`.
+Только если есть хотя бы 2 репо с этим предложением; иначе — пропусти.
+
 ==== СКОРИНГ (0–10 по каждой оси) ====
 - novelty — насколько свежо / редко встречается
 - traction — есть ли рост (звёзды, score, кросс-источники)
@@ -116,6 +128,7 @@ decision:
   "rankings": [
     {"rank": 1, "skill": "<owner/repo>",
      "category": "marketing_skill|vibe_coding_skill|ai_content_skill|general_skill",
+     "suggested_category": "опционально — slug новой категории, если 4 не подходят (напр. data_skill, devops_skill)",
      "scores": {"novelty": 0-10, "traction": 0-10, "utility": 0-10,
                 "testability": 0-10, "business_impact": 0-10, "noise_risk": 0-10},
      "final_score": 0.0, "confidence": "high|medium|low",
@@ -173,7 +186,12 @@ decision:
   "metadata": {
     "date": "YYYY-MM-DD", "period": "24h|72h",
     "data_completeness": "high|partial|low",
-    "missing_sources": []
+    "missing_sources": [],
+    "suggested_categories": [
+      {"slug": "data_skill", "name": "Data engineering skills",
+       "count": 2, "example_repos": ["a/b", "c/d"],
+       "rationale": "Накопилось 2 репо с SKILL.md для data engineering — не вписываются в 4 имеющиеся категории."}
+    ]
   }
 }
 
@@ -218,6 +236,14 @@ URL берёшь из полей `url` каждого элемента `top_test
 
 📊 Уверенность анализа: <высокая|средняя|низкая>
 ⚠️ Ограничения: <какие источники недоступны или мало данных>
+
+ЕСЛИ есть `metadata.suggested_categories` (хотя бы 1 запись с count ≥ 2) —
+ДОПОЛНИТЕЛЬНО добавь в конце блок:
+
+💡 Предложение новой категории:
+• <slug> (<count> репо: <example1>, <example2>) — <короткая причина>
+
+Если предложений нет — НЕ добавляй блок.
 
 Если данных недостаточно для какого-то блока — оставь блок, но напиши
 «— нет сигналов сегодня» вместо пунктов (без 🔗). Не выдумывай skills и URL,
