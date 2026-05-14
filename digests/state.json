@@ -1,0 +1,125 @@
+{
+  "items": {
+    "https://github.com/Murf-y/NetworkModelsVisualization/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 3,
+      "source": "github",
+      "stars": 0,
+      "title": "Murf-y/NetworkModelsVisualization"
+    },
+    "https://github.com/ProfSynapse/Stampede/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github",
+      "stars": 0,
+      "title": "ProfSynapse/Stampede"
+    },
+    "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 7,
+      "source": "github",
+      "stars": 7538,
+      "title": "anyproto/anytype-ts"
+    },
+    "https://github.com/atopile/atopile/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 21,
+      "source": "github",
+      "stars": 3356,
+      "title": "atopile/atopile"
+    },
+    "https://github.com/bytebase/dbhub/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 2,
+      "source": "github",
+      "stars": 2752,
+      "title": "bytebase/dbhub"
+    },
+    "https://github.com/halfwhey/claudraband/tree/master/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github",
+      "stars": 281,
+      "title": "halfwhey/claudraband"
+    },
+    "https://github.com/jayli/block-proxy/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 2,
+      "source": "github",
+      "stars": 2,
+      "title": "jayli/block-proxy"
+    },
+    "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 41,
+      "source": "github",
+      "stars": 195,
+      "title": "maslennikov-ig/claude-code-orchestrator-kit"
+    },
+    "https://github.com/nativewind/nativewind/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 4,
+      "source": "github",
+      "stars": 7826,
+      "title": "nativewind/nativewind"
+    },
+    "https://github.com/oysteinkrog/dotfiles/tree/master/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 139,
+      "source": "github",
+      "stars": 0,
+      "title": "oysteinkrog/dotfiles"
+    },
+    "https://github.com/pr-pm/prpm/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 39,
+      "source": "github",
+      "stars": 108,
+      "title": "pr-pm/prpm"
+    },
+    "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 6,
+      "source": "github",
+      "stars": 0,
+      "title": "rish2jain/paperresearchagent"
+    },
+    "https://github.com/sheinsight/spack/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github",
+      "stars": 6,
+      "title": "sheinsight/spack"
+    },
+    "https://github.com/sverzijl/planning_latest/tree/master/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 4,
+      "source": "github",
+      "stars": 1,
+      "title": "sverzijl/planning_latest"
+    },
+    "https://github.com/yanochka11/harness_bro/tree/main/.claude/skills": {
+      "first_seen": "2026-05-14T12:50:57Z",
+      "score": null,
+      "skills_count": 2,
+      "source": "github",
+      "stars": 0,
+      "title": "yanochka11/harness_bro"
+    }
+  },
+  "last_run": "2026-05-14T12:50:57Z"
+}
