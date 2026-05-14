@@ -111,7 +111,43 @@ def _tg(method: str, **payload) -> dict:
         return {"ok": False, "error": str(e)}
 
 
-def _send_message(chat_id: int, text: str, reply_markup: dict | None = None) -> dict:
+def _reply_keyboard() -> dict:
+    """Persistent reply keyboard with the 3 source buttons + menu/help.
+
+    Telegram only allows one `reply_markup` per sendMessage call. We attach
+    this reply_keyboard only on messages that do NOT carry an inline_keyboard
+    (i.e. menu-like messages). For messages with inline_keyboard, Telegram's
+    client keeps the most recently set reply_keyboard visible automatically.
+    """
+    return {
+        "keyboard": [
+            [
+                {"text": "📚 Claude Skills"},
+                {"text": "⚙️ N8N Workflows"},
+                {"text": "🧩 Make Workflows"},
+            ],
+            [
+                {"text": "📋 Меню"},
+                {"text": "ℹ️ Помощь"},
+            ],
+        ],
+        "resize_keyboard": True,
+        "is_persistent": True,
+    }
+
+
+def _send_message(
+    chat_id: int,
+    text: str,
+    reply_markup: dict | None = None,
+    reply_keyboard: dict | None = None,
+) -> dict:
+    """Send a Telegram message.
+
+    `reply_markup` (typically an inline_keyboard) takes precedence — Telegram
+    accepts only one reply_markup per message. If only `reply_keyboard` is
+    provided, it is used as reply_markup. If neither is provided, no markup.
+    """
     payload: dict[str, Any] = {
         "chat_id": chat_id,
         "text": text,
@@ -120,6 +156,8 @@ def _send_message(chat_id: int, text: str, reply_markup: dict | None = None) -> 
     }
     if reply_markup is not None:
         payload["reply_markup"] = reply_markup
+    elif reply_keyboard is not None:
+        payload["reply_markup"] = reply_keyboard
     return _tg("sendMessage", **payload)
 
 
@@ -414,13 +452,60 @@ def _render_month_page(source_key: str, ym: str, page: int) -> tuple[str, dict]:
     return _render_page(items, page, title, source_key, f"month:{ym}")
 
 
+# === Static help text ===
+HELP_TEXT = (
+    "*Trendwatch — навигатор по базе*\n"
+    "\n"
+    "Что это: я храню рекомендованные Claude Skills и готовые n8n / Make workflows.\n"
+    "Базы пополняются автоматически каждый день.\n"
+    "\n"
+    "Кнопки внизу чата:\n"
+    "📚 Claude Skills — база рекомендованных Claude Skills (с категориями)\n"
+    "⚙️ N8N Workflows — готовые n8n workflows для импорта\n"
+    "🧩 Make Workflows — готовые Make blueprints\n"
+    "📋 Меню — главное меню (выбор источника)\n"
+    "ℹ️ Помощь — это сообщение\n"
+    "\n"
+    "Команды:\n"
+    "/start, /menu — главное меню\n"
+    "/skills, /n8n, /make — открыть нужный источник\n"
+    "/list, /categories, /months — устаревший доступ к skills\n"
+    "/help — это сообщение\n"
+    "\n"
+    "База обновляется через GitHub-репозиторий; в каждом дайджесте под пунктами есть прямые ссылки на источники."
+)
+
+
 # === Command handlers (send new message) ===
+# Every fresh send_message from a command attaches the persistent reply_keyboard
+# (alongside inline_keyboard when present, Telegram picks one — but the most
+# recent reply_keyboard stays visible client-side regardless).
 def handle_start(chat_id: int) -> None:
+    # Top-level picker uses inline_keyboard; we send a tiny preamble first
+    # with the reply_keyboard so the persistent bar is guaranteed visible,
+    # then the picker itself. To keep chat clean: send single message with
+    # inline_keyboard AND set reply_keyboard separately on a follow-up only
+    # if needed. Simpler: send picker with inline_keyboard; rely on a recent
+    # reply_keyboard message. Here we send the picker, then a no-op message
+    # would be noisy — instead attach reply_keyboard to the picker itself by
+    # sending the reply_keyboard first as a quick "menu set" message.
+    # Cleanest implementation: send picker with inline_keyboard; the
+    # reply_keyboard is delivered via a separate one-time setter message on
+    # /start so the bar is set once per session.
+    _send_message(chat_id, "Открываю меню…", reply_keyboard=_reply_keyboard())
     _send_message(chat_id, _top_menu_text(), _top_menu_keyboard())
 
 
+def handle_help(chat_id: int) -> None:
+    _send_message(chat_id, HELP_TEXT, reply_keyboard=_reply_keyboard())
+
+
 def handle_source_menu(chat_id: int, source_key: str) -> None:
-    _send_message(chat_id, _source_menu_text(source_key), _source_menu_keyboard(source_key))
+    _send_message(
+        chat_id,
+        _source_menu_text(source_key),
+        _source_menu_keyboard(source_key),
+    )
 
 
 def handle_list(chat_id: int, source_key: str, page: int = 0) -> None:
@@ -557,12 +642,35 @@ def dispatch(update: dict) -> None:
         return
     chat_id = msg["chat"]["id"]
     text = (msg.get("text") or "").strip()
+    if not text:
+        return
+
+    # === Persistent reply_keyboard button labels (sent as plain text) ===
+    # Match BEFORE slash-command handling so taps route correctly.
+    if text == "📚 Claude Skills":
+        handle_source_menu(chat_id, "skills")
+        return
+    if text == "⚙️ N8N Workflows":
+        handle_source_menu(chat_id, "n8n")
+        return
+    if text == "🧩 Make Workflows":
+        handle_source_menu(chat_id, "make")
+        return
+    if text == "📋 Меню":
+        handle_start(chat_id)
+        return
+    if text == "ℹ️ Помощь":
+        handle_help(chat_id)
+        return
+
     # Strip bot mention suffix (e.g. /start@MyBot)
     cmd = text.split()[0] if text else ""
     if "@" in cmd:
         cmd = cmd.split("@", 1)[0]
-    if cmd == "/start":
+    if cmd == "/start" or cmd == "/menu":
         handle_start(chat_id)
+    elif cmd == "/help":
+        handle_help(chat_id)
     elif cmd == "/list":
         # Backwards-compat: default to skills.
         handle_list(chat_id, "skills", 0)
@@ -579,8 +687,8 @@ def dispatch(update: dict) -> None:
     else:
         _send_message(
             chat_id,
-            "Команды: /start /skills /n8n /make /list /categories /months",
-            _top_menu_keyboard(),
+            "Не понял команду. Жми кнопки внизу или /menu.",
+            reply_keyboard=_reply_keyboard(),
         )
 
 
