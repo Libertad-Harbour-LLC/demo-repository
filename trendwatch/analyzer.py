@@ -63,8 +63,14 @@ def analyze(
     period: str,
     date: str,
     model: str | None = None,
+    graduated_candidates: list[dict] | None = None,
 ) -> dict:
     """Call Claude to analyze the day's preprocessed trendwatch data.
+
+    ``graduated_candidates`` are watchlist items whose ``signal_to_wait`` was
+    met by fresh metrics this run; the model should treat them as priority
+    promotions to ``top_test`` and reference their ``trigger`` in
+    ``why_growing``.
 
     Raises ``AnalyzerError`` on any failure (network, parsing, schema).
     """
@@ -75,6 +81,7 @@ def analyze(
         "period": period,
         "cross_source_mentions": normalized,
         "items": items_with_deltas,
+        "graduated_candidates": graduated_candidates or [],
     }
     user_text = USER_PROMPT_TEMPLATE.format(
         date=date,

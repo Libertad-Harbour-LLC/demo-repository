@@ -106,6 +106,25 @@ def to_markdown(analysis: dict, date: str) -> str:
                 lines.append(f"- **Risk:** {_safe(t.get('risk'))}")
             lines.append("")
 
+    graduates = analysis.get("graduated_from_watch") or []
+    if graduates:
+        lines.append("## Promoted from watchlist this run")
+        lines.append("")
+        for g in graduates:
+            if not isinstance(g, dict):
+                continue
+            name = _safe(g.get("repo_full_name") or g.get("title") or g.get("name"))
+            url = _safe(g.get("url"))
+            trigger = _safe(g.get("trigger"))
+            signal = _safe(g.get("signal_to_wait"))
+            line = f"- **{name}** — trigger: {trigger}"
+            if signal:
+                line += f" (original signal: {signal})"
+            if url:
+                line += f" — <{url}>"
+            lines.append(line)
+        lines.append("")
+
     top_watch = analysis.get("top_watch") or []
     if top_watch:
         lines.append("## Top — watch")
