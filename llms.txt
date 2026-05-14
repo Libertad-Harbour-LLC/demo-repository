@@ -10,6 +10,9 @@
 - trendwatch/normalizer.py: KNOWN_TOOLS list + alias map; aggregates cross-source mentions into `[{name, mentions:{github,reddit,twitter,threads,total}, urls, sample_titles}, ...]`.
 - trendwatch/report.py: JSON analysis → Markdown report committed to `digests/YYYY-MM-DD.md`.
 - trendwatch/telegram_client.py: `send_text` (LLM summary, plain text, chunked at 4000 chars) + `send_digest` (fallback links, MarkdownV2).
+- trendwatch/skill_db.py: Persistent skill DB. `load_recommended` / `load_watchlist` / `save_*`, `is_recommended`, `add_to_recommended` (top_test → `digests/recommended.json`, dedup forever), `add_to_watchlist` (top_watch → `digests/watchlist.json` with `signal_to_wait` + `metric_baseline` + 30-day `expires_at`), `check_watchlist_graduates` (delta_stars≥5 OR +1 skill OR cross_source_count grew → returns entries with `trigger` label), `prune_expired`, `remove_from_watchlist`.
+- trendwatch/index_writer.py: `write_indexes(recommended_db)` regenerates `digests/index/all.md` (grouped by month header, newest first), `digests/index/by_category/<cat>.md` for the four canonical categories, and `digests/index/by_month/YYYY-MM.md`. Tables: Date | Repo | Skills | Stars | Final Score | Confidence | First Test.
+- trendwatch/links.py: `build_index_links(repo_full_name?, branch="main")` + `build_footer()` produce public github.com URLs for the Telegram footer. Reads `GITHUB_REPOSITORY` env var, falls back to `Libertad-Harbour-LLC/demo-repository`.
 - trendwatch/config.py: Keywords, GitHub topics, `GITHUB_CODE_QUERIES` (code-search queries for SKILL.md), subreddits, `REDDIT_KEYWORDS_FILTER` (post-filter), `REDDIT_MIN_SCORE` (lowered to 5), `VERIFY_GITHUB_SKILLS` (toggle for `/.claude/skills/` verification), per-source toggles (X/Threads off by default), Apify actor slugs.
 - trendwatch/get_chat_id.py: One-shot helper — prints chat ids from recent bot updates.
 - trendwatch/sources/github.py: GitHub Skill finder — code search for SKILL.md + topic search + description search, grouped by `repo_full_name` (one item per repo), verified against `/.claude/skills/` listing; emits items with `verified`/`skill_path`/`repo_full_name`/`stars`/`pushed_at`/`skills`/`skills_count` and a meta line listing up to 3 skill names. Requires `GITHUB_TOKEN` for code search.
@@ -24,6 +27,9 @@
 ## Data
 - digests/state.json: Daily snapshot of per-item state (URL → stars/score/first_seen). Committed back by workflow.
 - digests/YYYY-MM-DD.md: Full Markdown report from LLM analysis.
+- digests/recommended.json: Persistent DB of every repo ever promoted to `top_test` (URL keyed). Filtered out of future digests (one-shot recommendation rule). Committed back by the same workflow `git add digests/` step.
+- digests/watchlist.json: Persistent DB of `top_watch` repos with `signal_to_wait`, `metric_baseline`, and 30-day `expires_at`. Re-checked each run; graduates fed to LLM via `analyzer.analyze(graduated_candidates=...)`.
+- digests/index/{all.md, by_category/*.md, by_month/*.md}: Browsable Markdown indexes regenerated from `recommended.json` each successful run; public URLs appended to the Telegram digest footer.
 
 ## Documentation
 - README.md: Legacy GitHub demo readme.

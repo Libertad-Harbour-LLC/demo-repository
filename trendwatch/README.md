@@ -56,6 +56,23 @@ The pipeline now has an LLM analysis step between the fetchers and Telegram:
 
 If the Anthropic API call or JSON parse fails for any reason, the orchestrator falls back to the original "list of links" digest so a daily message still goes out. Look for `[ANALYSIS_OK]`, `[FALLBACK_LINKS]`, `[NO_NEW_ITEMS]`, or `[DRY_RUN]` in the workflow logs to see which path ran.
 
+## Persistent skill database (Sprint 5)
+
+trendwatch now keeps a memory of every Claude Skill repo it has ever recommended so a single repo never wins the daily slot twice.
+
+- **`digests/recommended.json`** — every repo the analyzer promoted to `top_test` is stored here forever. Before the analyzer runs we filter these URLs out of the input, so a recommended skill is one-shot: once you've been told to test it, it never shows up again.
+- **`digests/watchlist.json`** — repos placed in `top_watch` are saved with the model-supplied `signal_to_wait`, baseline metrics (`stars`, `skills_count`, `cross_source_count`), `added_date`, and a 30-day `expires_at`. On each subsequent run we re-check the baselines:
+  - `delta_stars >= 5`, `delta_skills_count >= 1`, or a growing `cross_source_count` graduates the item.
+  - Graduates are passed back to the analyzer as a separate `graduated_candidates` field; the model is instructed to promote them to `top_test` and explain the promotion using the human-readable `trigger` string (e.g. `stars +12`).
+  - Watchlist items past `expires_at` are pruned automatically.
+- **`digests/index/`** — browsable Markdown indexes regenerated on every successful run from `recommended.json`:
+  - `digests/index/all.md` — full history, newest first, grouped by month header.
+  - `digests/index/by_category/{marketing_skill,vibe_coding_skill,ai_content_skill,general_skill}.md` — one table per canonical category.
+  - `digests/index/by_month/YYYY-MM.md` — one table per month.
+- **Telegram footer** — every digest (including the `[NO_NEW_ITEMS]` short message) ends with public links to these indexes. URLs are built from the `GITHUB_REPOSITORY` env var GitHub Actions sets automatically, with a hard-coded fallback for local runs.
+
+All four JSON/Markdown artifacts live under `digests/` and are picked up by the workflow's existing `git add digests/` commit-back step — no workflow change required.
+
 ## Repo-level grouping and dedupe (Sprint 4)
 
 - **One repo = one digest entry.** GitHub items are grouped by `repo_full_name`; all skill folders inside `.claude/skills/` are listed in a single entry's `skills` field and summarised in `meta` ("⭐ N • K skills: name1, name2, name3…"). A repo with 21 skills produces one item, not 21.

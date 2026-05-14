@@ -4,6 +4,16 @@
 The LLM step (analyzer) is the new heart of the pipeline; on failure we fall
 back to the original "list of links" digest so the user still gets something
 in Telegram.
+
+Sprint 5 adds a persistent skill database:
+- ``digests/recommended.json`` — repos that have already been promoted to
+  ``top_test`` once. Excluded from future digests (no double recommendations).
+- ``digests/watchlist.json`` — repos the model wanted to watch with their
+  ``signal_to_wait``; on each run we check whether real metrics met the signal
+  and graduate the item back into the analyzer as a priority candidate.
+- ``digests/index/`` — browsable Markdown indexes regenerated from
+  recommended.json on every successful run. Public links to these indexes are
+  appended to the Telegram digest.
 """
 import argparse
 import os
@@ -18,8 +28,11 @@ from sources.threads import fetch_threads
 import telegram_client
 
 import analyzer
+import index_writer
+import links
 import normalizer
 import report
+import skill_db
 import state
 
 
@@ -88,6 +101,61 @@ def _write_report(analysis: dict, date: str) -> str:
     return path
 
 
+def _build_cross_source_map(annotated_items: list[dict]) -> dict[str, int]:
+    """For each URL, return how many distinct sources mentioned it.
+
+    Reuses ``matched_names`` produced by ``normalizer.normalize``: an item's
+    cross_source_count is the max, across all of its matched_names, of the
+    number of sources where that name has at least one mention. Falls back to 1
+    if the item has no matched names.
+    """
+    # source counts per name
+    name_sources: dict[str, set[str]] = {}
+    for it in annotated_items or []:
+        src = it.get("source") or ""
+        if not src:
+            continue
+        for name in it.get("matched_names") or []:
+            name_sources.setdefault(name, set()).add(src)
+
+    out: dict[str, int] = {}
+    for it in annotated_items or []:
+        url = it.get("url")
+        if not url:
+            continue
+        best = 1
+        for name in it.get("matched_names") or []:
+            best = max(best, len(name_sources.get(name, {it.get("source") or ""})))
+        # keep the max across duplicate URLs across sources
+        out[url] = max(out.get(url, 0), best)
+    return out
+
+
+def _annotate_cross_source(
+    items_with_deltas: list[dict], cross_map: dict[str, int]
+) -> list[dict]:
+    for it in items_with_deltas or []:
+        url = it.get("url")
+        if url and url in cross_map:
+            it["cross_source_count"] = cross_map[url]
+    return items_with_deltas
+
+
+def _baseline_metrics(items_with_deltas: list[dict]) -> dict[str, dict]:
+    """Build URL → {stars, skills_count, cross_source_count} for watchlist baseline."""
+    out: dict[str, dict] = {}
+    for it in items_with_deltas or []:
+        url = it.get("url") or ""
+        if not url:
+            continue
+        out[url] = {
+            "stars": it.get("stars"),
+            "skills_count": it.get("skills_count"),
+            "cross_source_count": it.get("cross_source_count"),
+        }
+    return out
+
+
 def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
     bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -131,37 +199,103 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
     # --- Analyzer pipeline ---
     prev_state = state.load_state()
     items_with_deltas = state.compute_deltas(items_by_source, prev_state)
-    normalized, _annotated = normalizer.normalize(items_by_source)
+
+    # Persistent skill DB load
+    recommended_db = skill_db.load_recommended()
+    watchlist_db = skill_db.load_watchlist()
+
+    # Filter out repos already permanently recommended.
+    pre_filter_count = len(items_with_deltas)
+    items_with_deltas = [
+        i for i in items_with_deltas
+        if not skill_db.is_recommended(recommended_db, i.get("url") or "")
+    ]
+    dropped_recommended = pre_filter_count - len(items_with_deltas)
+    if dropped_recommended:
+        print(
+            f"[trendwatch] dropped {dropped_recommended} already-recommended repo(s)",
+            file=sys.stderr,
+        )
+
+    normalized, annotated = normalizer.normalize(items_by_source)
+    cross_map = _build_cross_source_map(annotated)
+    items_with_deltas = _annotate_cross_source(items_with_deltas, cross_map)
+
+    # Watchlist maintenance: prune expired, then check graduates.
+    expired = skill_db.prune_expired(watchlist_db, date)
+    if expired:
+        print(
+            f"[trendwatch] pruned {len(expired)} expired watchlist item(s)",
+            file=sys.stderr,
+        )
+    graduates = skill_db.check_watchlist_graduates(watchlist_db, items_with_deltas)
+    graduate_urls = {g.get("url") for g in graduates if g.get("url")}
+    for g in graduates:
+        g["graduated_from_watch"] = True
+        # trigger already set by check_watchlist_graduates
 
     # Dedupe filter: drop items that were already shown without material change.
     filtered_items = [it for it in items_with_deltas if _is_worth_showing(it)]
 
-    if not filtered_items:
+    if not filtered_items and not graduates:
         msg = (
             f"\U0001f680 Daily Skill Radar — {date}\n\n"
             "Нет новых Claude Skills за период. Все обнаруженные репозитории "
             "уже были в предыдущих дайджестах без значимого роста.\n\n"
             f"\U0001f4ca Источников проверено: {', '.join(items_by_source.keys())}"
         )
+        # Append index links footer so the user can browse the DB.
+        msg += "\n\n" + links.build_footer()
         try:
             telegram_client.send_text(msg, bot_token, chat_id)
         except Exception as exc:
             print(f"[trendwatch] telegram send_text failed: {exc}", file=sys.stderr)
             print(summary)
             return 1
-        # Still save state so we don't re-find the same items next run.
+        # Save state + watchlist (last_checked / prune updates) so we don't
+        # re-find the same items next run.
         try:
             state.save_state(items_by_source)
         except Exception as exc:
             print(f"[trendwatch] state save failed: {exc}", file=sys.stderr)
+        try:
+            skill_db.save_watchlist(watchlist_db)
+        except Exception as exc:
+            print(f"[trendwatch] watchlist save failed: {exc}", file=sys.stderr)
         print("[NO_NEW_ITEMS]")
         print(summary)
         return 0
 
     try:
         analysis = analyzer.analyze(
-            normalized, filtered_items, period=period, date=date
+            normalized,
+            filtered_items,
+            period=period,
+            date=date,
+            graduated_candidates=graduates,
         )
+    except TypeError:
+        # Backwards-compat: older analyzer signature without graduated_candidates.
+        try:
+            analysis = analyzer.analyze(
+                normalized, filtered_items, period=period, date=date
+            )
+        except Exception as exc:
+            print(
+                f"[trendwatch] analyzer failed: {exc}; falling back to link digest",
+                file=sys.stderr,
+            )
+            try:
+                telegram_client.send_digest(items_by_source, bot_token, chat_id)
+            except Exception as exc2:
+                print(
+                    f"[trendwatch] telegram fallback failed: {exc2}", file=sys.stderr
+                )
+                print(summary)
+                return 1
+            print("[FALLBACK_LINKS] LLM analysis failed, sent link list.")
+            print(summary)
+            return 0
     except Exception as exc:
         print(
             f"[trendwatch] analyzer failed: {exc}; falling back to link digest",
@@ -177,20 +311,15 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
         print(summary)
         return 0
 
-    try:
-        report_path = _write_report(analysis, date)
-        print(f"[trendwatch] wrote {report_path}")
-        try:
-            state.save_state(items_by_source)
-        except Exception as exc:
-            print(f"[trendwatch] state save failed: {exc}", file=sys.stderr)
-    except Exception as exc:
-        print(f"[trendwatch] report write failed: {exc}", file=sys.stderr)
+    # Surface graduates in the rendered Markdown report too.
+    analysis.setdefault("graduated_from_watch", graduates)
 
+    # Check telegram_summary BEFORE any persistence — empty means the analyzer
+    # effectively failed, so treat as fallback and do NOT mutate state/DB.
     telegram_text = analysis.get("telegram_summary") or ""
-    if not telegram_text:
+    if not telegram_text.strip():
         print(
-            "[trendwatch] analysis had empty telegram_summary; falling back",
+            "[FALLBACK_LINKS] empty telegram_summary from analyzer",
             file=sys.stderr,
         )
         try:
@@ -202,6 +331,66 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
         print("[FALLBACK_LINKS] empty summary, sent link list.")
         print(summary)
         return 0
+
+    # Persist DB changes (only on full analyzer success with non-empty summary).
+    baseline_map = _baseline_metrics(items_with_deltas)
+    top_test_items = analysis.get("top_test") or []
+    top_watch_items = analysis.get("top_watch") or []
+
+    try:
+        added_rec = skill_db.add_to_recommended(
+            recommended_db, top_test_items, date
+        )
+        if added_rec:
+            print(
+                f"[trendwatch] added {len(added_rec)} repo(s) to recommended.json",
+                file=sys.stderr,
+            )
+        # Anything that graduated AND ended up in top_test should be removed
+        # from the watchlist; also drop any graduate explicitly listed even if
+        # the model placed it elsewhere (avoid stuck items).
+        promoted_urls = {
+            (it.get("url") or "")
+            for it in top_test_items
+            if isinstance(it, dict)
+        }
+        to_remove = (graduate_urls & promoted_urls) | {
+            u for u in graduate_urls if u in recommended_db.get("skills", {})
+        }
+        if to_remove:
+            skill_db.remove_from_watchlist(watchlist_db, list(to_remove))
+
+        added_watch = skill_db.add_to_watchlist(
+            watchlist_db, top_watch_items, date, baseline_map
+        )
+        if added_watch:
+            print(
+                f"[trendwatch] added {len(added_watch)} repo(s) to watchlist.json",
+                file=sys.stderr,
+            )
+        skill_db.save_recommended(recommended_db)
+        skill_db.save_watchlist(watchlist_db)
+    except Exception as exc:
+        print(f"[trendwatch] skill_db save failed: {exc}", file=sys.stderr)
+
+    # Regenerate Markdown indexes from the up-to-date recommended DB.
+    try:
+        index_writer.write_indexes(recommended_db)
+    except Exception as exc:
+        print(f"[trendwatch] index write failed: {exc}", file=sys.stderr)
+
+    try:
+        report_path = _write_report(analysis, date)
+        print(f"[trendwatch] wrote {report_path}")
+        try:
+            state.save_state(items_by_source)
+        except Exception as exc:
+            print(f"[trendwatch] state save failed: {exc}", file=sys.stderr)
+    except Exception as exc:
+        print(f"[trendwatch] report write failed: {exc}", file=sys.stderr)
+
+    # Append index links footer.
+    telegram_text = telegram_text.rstrip() + "\n\n" + links.build_footer()
 
     try:
         telegram_client.send_text(telegram_text, bot_token, chat_id)
