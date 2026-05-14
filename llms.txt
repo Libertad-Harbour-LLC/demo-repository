@@ -1,6 +1,6 @@
 # demo-repository
 
-> Container repo housing automation utilities. Active feature: trendwatch — daily GitHub Actions job that scans for new Claude Code Skills (folders in the format `.claude/skills/<name>/SKILL.md`) across GitHub (code search + topic search + verification), Reddit (with keyword post-filter), and X/Threads (disabled by default in Sprint 3), runs LLM analysis (Claude Sonnet 4.6) with cross-source mention counts and stars/score deltas vs yesterday, and posts a scored Telegram digest with test plans.
+> Container repo housing automation utilities. Two daily tracking pipelines: (1) **trendwatch** — scans for new Claude Code Skills (`.claude/skills/<name>/SKILL.md`) across GitHub / Reddit / X / Threads, runs Claude analysis, posts a scored Telegram digest at 09:00 UTC. (2) **workflows** — second pipeline that scans for ready-made n8n and Make workflow JSONs across GitHub (with JSON-signature verification) and Reddit, runs Claude analysis, posts to the same Telegram chat at 12:00 UTC. The workflows pipeline imports trendwatch primitives (analyzer, state, skill_db, telegram_client, index_writer, links, report) and only adds workflow-specific fetchers, prompts, and normalizer vocabulary.
 
 ## Bot (Vercel webhook)
 - api/telegram.py: Single-file Vercel Python serverless function — interactive Telegram bot. Commands `/start` `/list` `/categories` `/months` with inline-keyboard pagination. Stateless — fetches `digests/recommended.json` from `raw.githubusercontent.com` with 60s in-process cache. Env: `TELEGRAM_BOT_TOKEN`, optional `TELEGRAM_WEBHOOK_SECRET`, `BOT_REPO`, `BOT_BRANCH`.
@@ -25,10 +25,19 @@
 - trendwatch/sources/reddit.py: Public Reddit JSON endpoints + post-filter by `REDDIT_KEYWORDS_FILTER` (only keep posts whose title/selftext mention skill-related terms); meta line includes `match: <keyword>`.
 - trendwatch/sources/twitter.py: Apify run-sync (`apidojo~tweet-scraper` default).
 - trendwatch/sources/threads.py: Apify run-sync (`apify~threads-scraper` default).
+- workflows/workflows.py: Workflows orchestrator — mirrors `trendwatch.trendwatch` for n8n / Make. Reuses `trendwatch.analyzer.analyze(system_prompt=WORKFLOWS_SYSTEM_PROMPT)`, `trendwatch.state.{load,save}_state(path=config.STATE_PATH)`, `trendwatch.skill_db.*` with workflows-specific paths, `trendwatch.index_writer.write_indexes(base_dir=..., categories=..., tools=("n8n","make","other"), default_category="general_workflow")`, `trendwatch.links.build_footer(category="workflows")`. Markers: `[WORKFLOWS_ANALYSIS_OK]`, `[WORKFLOWS_FALLBACK]`, `[WORKFLOWS_NO_NEW_ITEMS]`, `[WORKFLOWS_DRY_RUN]`.
+- workflows/config.py: Keywords, `GITHUB_TOPICS_N8N`, `GITHUB_TOPICS_MAKE`, `GITHUB_CODE_QUERIES_N8N`/`_MAKE`, `REDDIT_SUBREDDITS`, `REDDIT_KEYWORDS_FILTER`, `SOURCES` toggles, `VERIFY_WORKFLOW_JSON`, `MAX_JSON_FETCH_BYTES=200_000`, paths under `digests/workflows/`, `CATEGORIES` (6 workflow buckets), `TOOLS=("n8n","make","other")`.
+- workflows/prompts.py: SYSTEM_PROMPT (Russian, cached) + USER_PROMPT_TEMPLATE; output schema adds `tool`, `json_url`, `docs_url`, `setup_steps`; new `excluded.incomplete_workflow` bucket; Telegram template header `⚙️ Daily Workflow Radar`; each item prefixed with `[n8n]`/`[make]`/`[other]` tag.
+- workflows/normalizer.py: Wraps `trendwatch.normalizer.normalize` with a workflow-specific `KNOWN_TOOLS` list (n8n, make.com, make, integromat, zapier, node-red, automate.io, airtable automation).
+- workflows/sources/_github_common.py: Shared GitHub fetcher — code search + topic search + description-keyword search; groups by repo; fetches JSON capped at `MAX_JSON_FETCH_BYTES` (Range header); accepts a `json_validator` callable for tool-specific signature checks; emits items with `tool`, `workflows[]`, `workflow_count`, `verified`, plus the `skills_count` alias so `trendwatch.state` deltas work unchanged.
+- workflows/sources/n8n_github.py: `fetch_n8n_github(topics, code_queries, ...)` — validator checks for `nodes` + `connections` keys (also under `workflow` wrapper); source label `github_n8n`, tool `n8n`.
+- workflows/sources/make_github.py: `fetch_make_github(topics, code_queries, ...)` — validator checks for `flow` or `modules` keys (also under `blueprint` wrapper); source label `github_make`, tool `make`.
+- workflows/sources/reddit.py: Thin wrapper around `trendwatch.sources.reddit.fetch_reddit` — annotates each item with `tool` (n8n / make / other) and `source = reddit_<tool>` based on the meta `r/<sub>` prefix.
 
 ## Configuration
-- trendwatch/requirements.txt: `requests`, `anthropic>=0.40,<1.0`.
+- trendwatch/requirements.txt: `requests`, `anthropic>=0.40,<1.0`. Shared between both pipelines.
 - .github/workflows/trendwatch.yml: Daily cron 09:00 UTC + manual dispatch; `permissions: contents: write`; commit-back step with `git pull --rebase` guard; wires `APIFY_API_TOKEN`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `ANTHROPIC_API_KEY`, `GITHUB_TOKEN`.
+- .github/workflows/workflows.yml: Daily cron 12:00 UTC + manual dispatch; same `permissions` and commit-back pattern; commits `digests/workflows/` back to the branch with author `workflows-bot`; wires the same five secrets as the skills workflow.
 
 ## Data
 - digests/state.json: Daily snapshot of per-item state (URL → stars/score/first_seen). Committed back by workflow.
@@ -36,11 +45,14 @@
 - digests/recommended.json: Persistent DB of every repo ever promoted to `top_test` (URL keyed). Filtered out of future digests (one-shot recommendation rule). Committed back by the same workflow `git add digests/` step.
 - digests/watchlist.json: Persistent DB of `top_watch` repos with `signal_to_wait`, `metric_baseline`, and 30-day `expires_at`. Re-checked each run; graduates fed to LLM via `analyzer.analyze(graduated_candidates=...)`.
 - digests/index/{all.md, by_category/*.md, by_month/*.md}: Browsable Markdown indexes regenerated from `recommended.json` each successful run; public URLs appended to the Telegram digest footer.
+- digests/workflows/state.json, YYYY-MM-DD.md, recommended.json, watchlist.json: Workflows-pipeline counterparts of the skills data. Same shapes; fully isolated path so the two pipelines never collide.
+- digests/workflows/index/{all.md, by_category/*.md, by_tool/{n8n,make,other}.md, by_month/*.md}: Workflows indexes. The extra `by_tool/` directory is enabled by passing `tools=` to `trendwatch.index_writer.write_indexes` (backwards-compat: omitted for the skills pipeline).
 
 ## Documentation
 - README.md: Legacy GitHub demo readme.
-- CLAUDE.md: Claude Code instructions for this repo.
+- CLAUDE.md: Claude Code instructions for this repo (covers both pipelines).
 - trendwatch/README.md: trendwatch setup + analyzer behaviour + troubleshooting + CLI flags.
+- workflows/README.md: workflows pipeline overview, sources, config knobs, reuse map vs trendwatch.
 
 ## Legacy
 - index.html, package.json: Original demo files, not used by trendwatch.

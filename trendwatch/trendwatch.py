@@ -20,20 +20,36 @@ import os
 import sys
 from datetime import datetime, timezone
 
-import config
-from sources.github import fetch_github
-from sources.reddit import fetch_reddit
-from sources.twitter import fetch_twitter
-from sources.threads import fetch_threads
-import telegram_client
+try:
+    from . import config
+    from .sources.github import fetch_github
+    from .sources.reddit import fetch_reddit
+    from .sources.twitter import fetch_twitter
+    from .sources.threads import fetch_threads
+    from . import telegram_client
 
-import analyzer
-import index_writer
-import links
-import normalizer
-import report
-import skill_db
-import state
+    from . import analyzer
+    from . import index_writer
+    from . import links
+    from . import normalizer
+    from . import report
+    from . import skill_db
+    from . import state
+except ImportError:
+    import config
+    from sources.github import fetch_github
+    from sources.reddit import fetch_reddit
+    from sources.twitter import fetch_twitter
+    from sources.threads import fetch_threads
+    import telegram_client
+
+    import analyzer
+    import index_writer
+    import links
+    import normalizer
+    import report
+    import skill_db
+    import state
 
 
 def _is_worth_showing(item: dict) -> bool:

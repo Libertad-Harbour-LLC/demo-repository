@@ -15,7 +15,10 @@ from typing import Any
 
 import anthropic
 
-from prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
+try:
+    from .prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
+except ImportError:
+    from prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
 
 DEFAULT_MODEL = "claude-sonnet-4-6"
 DEFAULT_MAX_TOKENS = 12000
@@ -64,6 +67,7 @@ def analyze(
     date: str,
     model: str | None = None,
     graduated_candidates: list[dict] | None = None,
+    system_prompt: str | None = None,
 ) -> dict:
     """Call Claude to analyze the day's preprocessed trendwatch data.
 
@@ -72,9 +76,14 @@ def analyze(
     promotions to ``top_test`` and reference their ``trigger`` in
     ``why_growing``.
 
+    ``system_prompt`` lets callers swap the cached system prompt (e.g. the
+    workflows pipeline uses its own one). When ``None`` (default), the
+    Claude-Skills SYSTEM_PROMPT from ``prompts.py`` is used.
+
     Raises ``AnalyzerError`` on any failure (network, parsing, schema).
     """
     chosen_model = model or os.environ.get("TRENDWATCH_MODEL") or DEFAULT_MODEL
+    system_text = system_prompt if system_prompt is not None else SYSTEM_PROMPT
 
     blob = {
         "date": date,
@@ -112,7 +121,7 @@ def analyze(
             system=[
                 {
                     "type": "text",
-                    "text": SYSTEM_PROMPT,
+                    "text": system_text,
                     "cache_control": {"type": "ephemeral"},
                 }
             ],
