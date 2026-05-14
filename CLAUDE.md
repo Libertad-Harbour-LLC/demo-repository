@@ -43,6 +43,8 @@ and posts a scored Telegram digest with test plans.
 - One Python script per source; orchestrator composes a single Telegram message.
 - Failures in a single source must not break the whole run.
 - Analyzer failure → fallback to plain-link `send_digest` (marker `[FALLBACK_LINKS]`); state is NOT saved on failure so deltas survive for the next run.
-- Model overridable via `TRENDWATCH_MODEL` env (default `claude-sonnet-4-6`).
+- Model overridable via `TRENDWATCH_MODEL` env (default `claude-sonnet-4-6`); `max_tokens` overridable via `TRENDWATCH_MAX_TOKENS` (default 12000).
+- GitHub items are grouped by repo (one digest entry per `repo_full_name`, all skill folders listed in `skills`/`skills_count`).
+- Dedupe filter: repos already shown earlier are dropped unless they gained ≥5 stars or have `has_new_skills`. If everything is filtered out → short "no new items" Telegram message (marker `[NO_NEW_ITEMS]`); state is still saved.
 
 <!-- updated-by-superflow:2026-05-14 -->

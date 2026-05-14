@@ -205,6 +205,16 @@ def _list_skill_dirs(full_name: str):
     ]
 
 
+def _skills_meta_line(stars: int, skills: list[dict], description: str) -> str:
+    """Format the meta line for a grouped repo item."""
+    if skills:
+        names = [s.get("name", "") for s in skills if s.get("name")]
+        head = ", ".join(names[:3])
+        suffix = "…" if len(names) > 3 else ""
+        return f"⭐ {stars} • {len(names)} skills: {head}{suffix}"
+    return f"⭐ {stars} • {description[:80]}"
+
+
 def fetch_github(
     topics: list[str],
     queries: list[str],
@@ -214,18 +224,22 @@ def fetch_github(
 ) -> list[dict]:
     """Fetch Claude Skill candidates from GitHub.
 
-    Deduped by (repo_full_name, skill_path). Returns up to ``max_items`` items.
+    Grouped by ``repo_full_name`` — ONE item per repo, with all skill folders
+    listed inside ``skills``. Returns up to ``max_items`` items.
+
     Each item has shape::
 
         {"source": "github",
-         "title": "<owner/repo>: <skill_name>",
-         "url": "...",
-         "meta": "⭐ N • <repo description first 80 chars>",
+         "title": "<owner/repo>",
+         "url": "<link to .claude/skills folder if verified, else repo root>",
+         "meta": "⭐ N • K skills: name1, name2, name3…" or "⭐ N • <desc>",
          "verified": bool,
-         "skill_path": str,
+         "skill_path": ".claude/skills",
          "repo_full_name": str,
          "stars": int,
-         "pushed_at": iso}
+         "pushed_at": iso,
+         "skills": [{"name": str, "path": str, "url": str}, ...],
+         "skills_count": int}
     """
     try:
         since_date = (
@@ -237,21 +251,20 @@ def fetch_github(
         raw.extend(_topic_search(topics or [], since_date))
         raw.extend(_description_search(since_date))
 
-        # Dedupe by (repo_full_name, skill_path)
-        seen: dict[tuple[str, str], dict] = {}
+        # Group all candidates by repo_full_name; keep first candidate per repo
+        # but remember whether any code_search candidate carried a path hint.
+        repos: dict[str, dict] = {}
+        code_search_paths: dict[str, str] = {}
         for cand in raw:
             full = cand.get("repo_full_name") or ""
-            path = cand.get("skill_path") or ""
-            key = (full, path)
             if not full:
                 continue
-            if key not in seen:
-                seen[key] = cand
+            if full not in repos:
+                repos[full] = cand
+            if cand.get("_from") == "code_search" and cand.get("skill_path"):
+                code_search_paths.setdefault(full, cand.get("skill_path"))
 
-        # Verification pass: for each unique repo, optionally inspect
-        # /.claude/skills/ to enumerate skill folders.
         items: list[dict] = []
-        # Cache per-repo metadata + dir listings so we hit the API once per repo.
         repo_meta_cache: dict[str, dict] = {}
         repo_dirs_cache: dict = {}
 
@@ -265,91 +278,104 @@ def fetch_github(
                 repo_dirs_cache[full] = _list_skill_dirs(full)
             return repo_dirs_cache[full]
 
-        produced_repos: set[str] = set()
-
-        for (full, path), cand in seen.items():
+        for full, cand in repos.items():
             try:
                 meta = _meta_for(full) if (verify or not cand.get("stars")) else {}
                 stars = cand.get("stars") or meta.get("stars") or 0
                 pushed_at = cand.get("pushed_at") or meta.get("pushed_at") or ""
                 description = cand.get("description") or meta.get("description") or ""
                 branch = cand.get("default_branch") or meta.get("default_branch") or "main"
+                repo_html = cand.get("repo_html_url") or f"https://github.com/{full}"
+                skills_dir_url = _build_skill_dir_url(full, ".claude/skills", branch)
 
                 if verify:
                     dirs = _dirs_for(full)
                     if dirs == RATE_LIMITED:
-                        # Verification unknown — keep as unverified candidate.
+                        # Verification unknown — keep as unverified single repo item.
                         items.append(
                             {
                                 "source": "github",
-                                "title": f"{full}: {path or '(repo)'}",
-                                "url": _build_skill_url(full, path, branch) if path else (cand.get("repo_html_url") or f"https://github.com/{full}"),
-                                "meta": f"⭐ {stars} • {description[:80]}",
+                                "title": full,
+                                "url": repo_html,
+                                "meta": _skills_meta_line(stars, [], description),
                                 "verified": False,
-                                "skill_path": path,
+                                "skill_path": ".claude/skills",
                                 "repo_full_name": full,
                                 "stars": stars,
                                 "pushed_at": pushed_at,
+                                "skills": [],
+                                "skills_count": 0,
                             }
                         )
                         continue
                     if dirs is None:
-                        # No .claude/skills directory in the repo.
-                        if cand.get("_from") == "code_search" and path:
-                            # Code search matched a different layout (e.g. skills/foo/SKILL.md)
+                        # No .claude/skills directory found.
+                        cs_path = code_search_paths.get(full)
+                        if cs_path:
+                            # Code-search saw a SKILL.md at a non-standard path;
+                            # emit single unverified repo item pointing at it.
                             items.append(
                                 {
                                     "source": "github",
-                                    "title": f"{full}: {path}",
-                                    "url": _build_skill_url(full, path, branch),
-                                    "meta": f"⭐ {stars} • {description[:80]}",
+                                    "title": full,
+                                    "url": _build_skill_url(full, cs_path, branch),
+                                    "meta": _skills_meta_line(stars, [], description),
                                     "verified": False,
-                                    "skill_path": path,
+                                    "skill_path": cs_path,
                                     "repo_full_name": full,
                                     "stars": stars,
                                     "pushed_at": pushed_at,
+                                    "skills": [],
+                                    "skills_count": 0,
                                 }
                             )
-                        # else: topic/desc-search candidate without .claude/skills — drop
+                        # else: topic/desc-search candidate without skills dir — drop
                         continue
 
-                    # 200 OK: enumerate one item per skill directory, once per repo.
-                    if full in produced_repos:
-                        continue
-                    produced_repos.add(full)
+                    # 200 OK: build ONE repo item listing all skill dirs.
                     if not dirs:
                         # .claude/skills exists but empty — skip
                         continue
-                    skill_count = len(dirs)
-                    for skill_name in dirs:
-                        dir_path = f".claude/skills/{skill_name}"
-                        items.append(
-                            {
-                                "source": "github",
-                                "title": f"{full}: {skill_name}",
-                                "url": _build_skill_dir_url(full, dir_path, branch),
-                                "meta": f"⭐ {stars} • {skill_count} skills",
-                                "verified": True,
-                                "skill_path": dir_path,
-                                "repo_full_name": full,
-                                "stars": stars,
-                                "pushed_at": pushed_at,
-                            }
-                        )
-                else:
-                    # No verification — emit raw candidate.
-                    title_tail = path or "(repo)"
+                    skills_list = [
+                        {
+                            "name": name,
+                            "path": f".claude/skills/{name}",
+                            "url": _build_skill_dir_url(full, f".claude/skills/{name}", branch),
+                        }
+                        for name in dirs
+                    ]
                     items.append(
                         {
                             "source": "github",
-                            "title": f"{full}: {title_tail}",
-                            "url": _build_skill_url(full, path, branch) if path else (cand.get("repo_html_url") or f"https://github.com/{full}"),
-                            "meta": f"⭐ {stars} • {description[:80]}",
-                            "verified": False,
-                            "skill_path": path,
+                            "title": full,
+                            "url": skills_dir_url,
+                            "meta": _skills_meta_line(stars, skills_list, description),
+                            "verified": True,
+                            "skill_path": ".claude/skills",
                             "repo_full_name": full,
                             "stars": stars,
                             "pushed_at": pushed_at,
+                            "skills": skills_list,
+                            "skills_count": len(skills_list),
+                        }
+                    )
+                else:
+                    # No verification — emit a single unverified repo item.
+                    cs_path = code_search_paths.get(full)
+                    url = _build_skill_url(full, cs_path, branch) if cs_path else repo_html
+                    items.append(
+                        {
+                            "source": "github",
+                            "title": full,
+                            "url": url,
+                            "meta": _skills_meta_line(stars, [], description),
+                            "verified": False,
+                            "skill_path": cs_path or ".claude/skills",
+                            "repo_full_name": full,
+                            "stars": stars,
+                            "pushed_at": pushed_at,
+                            "skills": [],
+                            "skills_count": 0,
                         }
                     )
             except Exception as exc:
