@@ -1,11 +1,19 @@
 # demo-repository
 
 ## Project Overview
-Container repo housing automation utilities. Current active feature: **trendwatch** —
-daily GitHub Actions job that scans for **new Claude Code Skills** (in the format
-`.claude/skills/<name>/SKILL.md`) across GitHub (code search + topic search), Reddit
-(with keyword post-filter), and X/Threads (disabled by default), runs Claude analysis,
-and posts a scored Telegram digest with test plans.
+Container repo housing automation utilities. Two active tracking pipelines:
+
+1. **trendwatch** — daily GitHub Actions job (09:00 UTC) that scans for **new
+   Claude Code Skills** (`.claude/skills/<name>/SKILL.md`) across GitHub
+   (code search + topic search), Reddit (with keyword post-filter), and
+   X/Threads (disabled by default), runs Claude analysis, and posts a scored
+   Telegram digest.
+2. **workflows** — second pipeline (12:00 UTC) that scans for **ready-made n8n
+   and Make workflows** (JSON files importable directly) across GitHub
+   (n8n + Make topics, code search for workflow JSON signatures) and Reddit.
+   Reuses trendwatch primitives (`analyzer`, `state`, `skill_db`,
+   `telegram_client`, `index_writer`, `links`, `report`) and writes all
+   artifacts to `digests/workflows/`. Same Telegram chat as skills.
 
 ## Key Files
 | File | Purpose |
@@ -25,18 +33,28 @@ and posts a scored Telegram digest with test plans.
 | `trendwatch/config.py` | Keywords, subreddits, source toggles, `GITHUB_CODE_QUERIES`, `REDDIT_KEYWORDS_FILTER`, `VERIFY_GITHUB_SKILLS` |
 | `trendwatch/requirements.txt` | `requests`, `anthropic>=0.40` |
 | `.github/workflows/trendwatch.yml` | Daily cron 09:00 UTC + commit-back of `digests/` |
+| `.github/workflows/workflows.yml` | Daily cron 12:00 UTC + commit-back of `digests/workflows/` |
 | `digests/` | Committed daily reports (`YYYY-MM-DD.md`), `state.json`, `recommended.json`, `watchlist.json`, `index/` |
+| `workflows/workflows.py` | Workflows orchestrator (n8n + Make pipeline) — reuses trendwatch primitives via import |
+| `workflows/config.py` | Workflows keywords, topics, code queries, subs, paths under `digests/workflows/`, `CATEGORIES`, `TOOLS` |
+| `workflows/prompts.py` | Workflows SYSTEM_PROMPT (Russian, cached) — n8n/Make-focused schema |
+| `workflows/normalizer.py` | Cross-source aggregation with workflow-specific `KNOWN_TOOLS` (wraps `trendwatch.normalizer`) |
+| `workflows/sources/{n8n_github,make_github,reddit}.py` | Per-source fetchers; both GitHub fetchers share `_github_common.py` |
+| `digests/workflows/` | Workflows-pipeline reports (`YYYY-MM-DD.md`), `state.json`, `recommended.json`, `watchlist.json`, `index/{all,by_category,by_tool,by_month}` |
 | `api/telegram.py` | Vercel serverless webhook for the interactive Telegram bot (`/start`, `/list`, `/categories`, `/months`) |
 | `requirements.txt` (root) | Vercel deploy deps (`requests`) — separate from `trendwatch/requirements.txt` |
 | `vercel.json`, `.vercelignore`, `bot-README.md` | Vercel deploy config + Russian deploy guide |
 | `index.html` / `package.json` | Legacy GitHub demo files |
 
 ## Commands
-- `pip install -r trendwatch/requirements.txt` — install deps
+- `pip install -r trendwatch/requirements.txt` — install deps (shared between pipelines)
 - `python trendwatch/get_chat_id.py` — print chat_ids that messaged the bot
-- `python trendwatch/trendwatch.py` — full pipeline (analyzer + Telegram)
-- `python trendwatch/trendwatch.py --dry-run` — fetch + print, no API calls
-- `python trendwatch/trendwatch.py --no-analyzer` — links-only fallback (no Anthropic)
+- `python trendwatch/trendwatch.py` — skills pipeline (analyzer + Telegram)
+- `python trendwatch/trendwatch.py --dry-run` — skills fetch + print, no API calls
+- `python trendwatch/trendwatch.py --no-analyzer` — skills links-only fallback
+- `python workflows/workflows.py` — workflows pipeline (analyzer + Telegram)
+- `python workflows/workflows.py --dry-run` — workflows fetch + print, no API calls
+- `python workflows/workflows.py --no-analyzer` — workflows links-only fallback
 
 ## Secrets (GitHub repository secrets)
 - `APIFY_API_TOKEN` — Apify token for X/Threads scrapers
@@ -59,5 +77,7 @@ and posts a scored Telegram digest with test plans.
 - GitHub items are grouped by repo (one digest entry per `repo_full_name`, all skill folders listed in `skills`/`skills_count`).
 - Dedupe filter: repos already shown earlier are dropped unless they gained ≥5 stars or have `has_new_skills`. If everything is filtered out → short "no new items" Telegram message (marker `[NO_NEW_ITEMS]`); state is still saved.
 - Persistent skill DB: repos promoted to `top_test` are saved to `digests/recommended.json` and EXCLUDED from future digests forever (one-shot recommendation). `top_watch` repos are saved to `digests/watchlist.json` with `signal_to_wait` + baseline metrics; on subsequent runs they graduate back into `top_test` when `delta_stars ≥ 5`, `delta_skills_count ≥ 1`, or `cross_source_count` grew. Watchlist items expire after 30 days. Markdown indexes regenerated to `digests/index/` and linked in the Telegram footer.
+- Workflows pipeline runs at **12:00 UTC** (skills at 09:00) and uses the **SAME Telegram chat** as skills — separate header (`⚙️ Daily Workflow Radar`). All workflows data lives in `digests/workflows/` and never mixes with the skills DB. The workflows index adds a `by_tool/` grouping (n8n / make / other) on top of the standard all / by_category / by_month layout.
+- Reuse over duplication: `workflows/` imports `trendwatch.{state,skill_db,analyzer,telegram_client,index_writer,links,report,normalizer}` and passes path/category/tool kwargs. The only workflows-specific code is fetchers, prompts, normalizer vocabulary, and the orchestrator.
 
 <!-- updated-by-superflow:2026-05-14 -->

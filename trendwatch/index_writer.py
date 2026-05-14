@@ -174,8 +174,40 @@ def _write_month(month_key: str, entries: list[dict], path: str) -> None:
     _write(path, lines)
 
 
-def write_indexes(recommended_db: dict, base_dir: str = "digests/index") -> dict:
-    """Write all index Markdown files. Returns paths summary for logging."""
+def _write_tool(tool: str, entries: list[dict], path: str) -> None:
+    lines = [
+        f"# Recommended — tool: {tool}",
+        "",
+        f"Total: {len(entries)}",
+        "",
+    ]
+    if entries:
+        lines.extend(_table_header())
+        for entry in _sorted_newest_first(entries):
+            lines.append(_table_row(entry))
+    else:
+        lines.append("_No entries for this tool yet._")
+    _write(path, lines)
+
+
+def write_indexes(
+    recommended_db: dict,
+    base_dir: str = "digests/index",
+    categories: tuple[str, ...] | None = None,
+    tools: tuple[str, ...] | None = None,
+    default_category: str = "general_skill",
+) -> dict:
+    """Write all index Markdown files. Returns paths summary for logging.
+
+    ``categories`` overrides the canonical CATEGORIES list (used by the
+    workflows pipeline which has its own category set).
+
+    ``tools`` enables a ``by_tool/`` directory — one file per tool (e.g.
+    ``n8n``, ``make``, ``other``). Entries are grouped by their ``tool``
+    field. When ``None`` (default), the by_tool dir is not written —
+    backwards compatible with the original skill-pipeline call sites.
+    """
+    cats: tuple[str, ...] = tuple(categories) if categories else CATEGORIES
     skills_map = (recommended_db or {}).get("skills", {}) or {}
     entries = [v for v in skills_map.values() if isinstance(v, dict)]
 
@@ -186,16 +218,16 @@ def write_indexes(recommended_db: dict, base_dir: str = "digests/index") -> dict
     by_cat_paths: list[str] = []
     by_category: dict[str, list[dict]] = defaultdict(list)
     for entry in entries:
-        cat = entry.get("category") or "general_skill"
+        cat = entry.get("category") or default_category
         by_category[cat].append(entry)
-    # Always write the four canonical categories so the links are stable
-    for cat in CATEGORIES:
+    # Always write the canonical categories so the links are stable
+    for cat in cats:
         cat_path = os.path.join(by_cat_dir, f"{cat}.md")
         _write_category(cat, by_category.get(cat, []), cat_path)
         by_cat_paths.append(cat_path)
     # Plus any extra categories that showed up
     for cat, items in by_category.items():
-        if cat in CATEGORIES:
+        if cat in cats:
             continue
         cat_path = os.path.join(by_cat_dir, f"{cat}.md")
         _write_category(cat, items, cat_path)
@@ -213,11 +245,32 @@ def write_indexes(recommended_db: dict, base_dir: str = "digests/index") -> dict
         _write_month(month_key, month_entries, month_path)
         by_month_paths.append(month_path)
 
-    return {
+    by_tool_paths: list[str] = []
+    if tools:
+        by_tool_dir = os.path.join(base_dir, "by_tool")
+        by_tool: dict[str, list[dict]] = defaultdict(list)
+        for entry in entries:
+            t = (entry.get("tool") or "other").lower()
+            by_tool[t].append(entry)
+        for t in tools:
+            tool_path = os.path.join(by_tool_dir, f"{t}.md")
+            _write_tool(t, by_tool.get(t, []), tool_path)
+            by_tool_paths.append(tool_path)
+        for t, items in by_tool.items():
+            if t in tools:
+                continue
+            tool_path = os.path.join(by_tool_dir, f"{t}.md")
+            _write_tool(t, items, tool_path)
+            by_tool_paths.append(tool_path)
+
+    result = {
         "all": all_path,
         "by_category": by_cat_paths,
         "by_month": by_month_paths,
     }
+    if tools:
+        result["by_tool"] = by_tool_paths
+    return result
 
 
 __all__ = ["write_indexes", "CATEGORIES"]

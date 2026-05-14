@@ -28,10 +28,21 @@ def _resolve_repo(repo_full_name: str | None) -> str:
     return DEFAULT_REPO
 
 
+WORKFLOWS_CATEGORIES = (
+    "marketing_workflow",
+    "sales_workflow",
+    "data_workflow",
+    "devops_workflow",
+    "content_workflow",
+    "general_workflow",
+)
+WORKFLOWS_TOOLS = ("n8n", "make", "other")
+
+
 def build_index_links(
     repo_full_name: str | None = None, branch: str = DEFAULT_BRANCH
 ) -> dict:
-    """Return a dict of public links to the index files."""
+    """Return a dict of public links to the skills index files."""
     repo = _resolve_repo(repo_full_name)
     base_blob = f"https://github.com/{repo}/blob/{branch}/digests/index"
     base_tree = f"https://github.com/{repo}/tree/{branch}/digests/index"
@@ -44,8 +55,55 @@ def build_index_links(
     }
 
 
-def build_footer(repo_full_name: str | None = None, branch: str = DEFAULT_BRANCH) -> str:
-    """Compose a short plain-text footer with index links for Telegram."""
+def build_workflows_index_links(
+    repo_full_name: str | None = None, branch: str = DEFAULT_BRANCH
+) -> dict:
+    """Return a dict of public links to the workflows index files."""
+    repo = _resolve_repo(repo_full_name)
+    base_blob = f"https://github.com/{repo}/blob/{branch}/digests/workflows/index"
+    base_tree = f"https://github.com/{repo}/tree/{branch}/digests/workflows/index"
+    return {
+        "all": f"{base_blob}/all.md",
+        "by_category": {
+            cat: f"{base_blob}/by_category/{cat}.md"
+            for cat in WORKFLOWS_CATEGORIES
+        },
+        "by_tool": {
+            t: f"{base_blob}/by_tool/{t}.md" for t in WORKFLOWS_TOOLS
+        },
+        "by_month": f"{base_tree}/by_month",
+    }
+
+
+def build_footer(
+    repo_full_name: str | None = None,
+    branch: str = DEFAULT_BRANCH,
+    category: str = "skills",
+) -> str:
+    """Compose a short plain-text footer with index links for Telegram.
+
+    ``category`` selects which set of indexes to link: ``"skills"`` (default,
+    points at ``digests/index``) or ``"workflows"`` (points at
+    ``digests/workflows/index`` and adds a by-tool block).
+    """
+    if category == "workflows":
+        links = build_workflows_index_links(
+            repo_full_name=repo_full_name, branch=branch
+        )
+        lines = [
+            "",
+            "\U0001f5c2 База рекомендованных workflows:",
+            f"\U0001f517 Все: {links['all']}",
+            f"\U0001f4c5 По месяцам: {links['by_month']}",
+            "⚙️ По инструменту:",
+        ]
+        for tool, url in links["by_tool"].items():
+            lines.append(f"  • {tool}: {url}")
+        lines.append("\U0001f3f7 По категориям:")
+        for cat, url in links["by_category"].items():
+            lines.append(f"  • {cat}: {url}")
+        return "\n".join(lines)
+
     links = build_index_links(repo_full_name=repo_full_name, branch=branch)
     lines = [
         "",
@@ -59,4 +117,12 @@ def build_footer(repo_full_name: str | None = None, branch: str = DEFAULT_BRANCH
     return "\n".join(lines)
 
 
-__all__ = ["build_index_links", "build_footer", "DEFAULT_REPO", "DEFAULT_BRANCH"]
+__all__ = [
+    "build_index_links",
+    "build_workflows_index_links",
+    "build_footer",
+    "DEFAULT_REPO",
+    "DEFAULT_BRANCH",
+    "WORKFLOWS_CATEGORIES",
+    "WORKFLOWS_TOOLS",
+]
