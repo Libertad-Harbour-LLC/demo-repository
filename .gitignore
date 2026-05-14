@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Superflow (workflow tooling — not part of feature deliverable)
+.superflow-state.json
+.superflow/
+.par-evidence.json
+.worktrees/
+.claude/

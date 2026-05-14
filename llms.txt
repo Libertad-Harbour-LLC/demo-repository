@@ -1,0 +1,27 @@
+# demo-repository
+
+> Container repo housing automation utilities. Current active feature: trendwatch — daily GitHub Actions job that scans GitHub, Reddit, X, and Threads for AI marketing / vibe-coding news and posts a digest of links to a Telegram bot.
+
+## Source
+- trendwatch/trendwatch.py: Orchestrator — fans out to each source, composes the digest, sends via Telegram.
+- trendwatch/config.py: Keywords, GitHub topics, subreddits, per-source toggles and caps, Apify actor slugs.
+- trendwatch/telegram_client.py: MarkdownV2 message builder + chunked sender for `sendMessage`.
+- trendwatch/get_chat_id.py: One-shot helper — prints chat ids from recent bot updates.
+- trendwatch/sources/github.py: Public GitHub Search API (topics × time window).
+- trendwatch/sources/reddit.py: Public Reddit JSON endpoints (per-subreddit, score filter).
+- trendwatch/sources/twitter.py: Apify run-sync (`apidojo~tweet-scraper` by default).
+- trendwatch/sources/threads.py: Apify run-sync (`apify~threads-scraper` by default).
+
+## Configuration
+- trendwatch/requirements.txt: Python deps (`requests`).
+- .github/workflows/trendwatch.yml: Daily cron 09:00 UTC + manual dispatch; wires `APIFY_API_TOKEN`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `GITHUB_TOKEN`.
+
+## Documentation
+- README.md: Legacy GitHub demo readme.
+- CLAUDE.md: Claude Code instructions for this repo.
+- trendwatch/README.md: trendwatch setup (BotFather → chat_id → secrets → enable workflow) + troubleshooting.
+
+## Legacy
+- index.html, package.json: Original demo files, not used by trendwatch.
+
+<!-- updated-by-superflow:2026-05-14 -->
