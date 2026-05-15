@@ -1,0 +1,87 @@
+{
+  "skills": {
+    "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "final_score": 7.3,
+      "first_recommended": "2026-05-15",
+      "metric": "Качество замечаний code review (полнота, конкретность), время генерации release notes vs ручное написание",
+      "promoted_from_watch": false,
+      "repo_full_name": "anyproto/anytype-ts",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "commit-push",
+        "dark-mode-check",
+        "linear",
+        "qa-engineer",
+        "release-notes",
+        "typescript-code-review",
+        "update-docs"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/anyproto/anytype-ts --branch develop",
+        "Скопировать нужные папки: cp -r anytype-ts/.claude/skills/typescript-code-review .claude/skills/ в свой TypeScript-проект",
+        "Запустить Claude Code в корне своего проекта",
+        "Тест-промт: 'Используй skill typescript-code-review для анализа файла src/index.ts и дай обратную связь по стилю и потенциальным ошибкам'",
+        "Дополнительно протестировать release-notes: 'Сгенерируй release notes для изменений в последних 5 коммитах'"
+      ],
+      "title": "anyproto/anytype-ts",
+      "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills"
+    },
+    "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "final_score": 7.0,
+      "first_recommended": "2026-05-15",
+      "metric": "Находит ли Claude Code реальные multi-tenant/payment уязвимости, которые он пропускал без skill; количество false-positives",
+      "promoted_from_watch": false,
+      "repo_full_name": "doccker/cc-use-exp",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 16,
+      "skills_in_repo": [
+        "api-design-safety",
+        "bash-style",
+        "field-mapping-safety",
+        "frontend-dev",
+        "go-dev",
+        "java-dev",
+        "multi-tenant-safety",
+        "ops-safety",
+        "payment-callback-safety",
+        "python-dev",
+        "redis-safety",
+        "refactor-safety",
+        "ruanzhu",
+        "size-check",
+        "storage-url-safety",
+        "ui-ux-pro-max"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/doccker/cc-use-exp",
+        "Скопировать нужный skill, например: cp -r cc-use-exp/.claude/skills/multi-tenant-safety .claude/skills/ в свой SaaS-проект",
+        "Запустить Claude Code в проекте",
+        "Тест-промт: 'Используй skill multi-tenant-safety: проверь функцию getUserData() — не пропускает ли она данные между тенантами?'",
+        "Дополнительно: протестировать payment-callback-safety на любом webhook-обработчике"
+      ],
+      "title": "doccker/cc-use-exp",
+      "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills"
+    }
+  }
+}

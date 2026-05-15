@@ -1,0 +1,20 @@
+{
+  "items": {
+    "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills": {
+      "added_date": "2026-05-15",
+      "category": "general_skill",
+      "expires_at": "2026-06-14",
+      "last_checked": "2026-05-15",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 25,
+        "stars": 4
+      },
+      "repo_full_name": "HsuanYuLee/polaris",
+      "signal_to_wait": "Рост звёзд с текущих 4 до хотя бы 20+ за 3 дня; появление форков или упоминаний на Reddit/HN; обновление репо с реальной документацией об использовании",
+      "title": "HsuanYuLee/polaris",
+      "url": "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills",
+      "why_interesting": "25 skills — крупнейший набор в сегодняшней выборке, охватывает полный agile-цикл: от intake-triage и sprint-planning до standup, review-pr, visual-regression и memory-hygiene. Уникальны: codex-mcp-setup, memory-hygiene, verify-AC (acceptance criteria). Если качество SKILL.md на уровне — это потенциально лучший agile-toolkit для Claude Code."
+    }
+  }
+}

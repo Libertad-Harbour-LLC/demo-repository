@@ -1,5 +1,13 @@
 {
   "items": {
+    "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills": {
+      "first_seen": "2026-05-15T11:17:12Z",
+      "score": null,
+      "skills_count": 25,
+      "source": "github",
+      "stars": 4,
+      "title": "HsuanYuLee/polaris"
+    },
     "https://github.com/Murf-y/NetworkModelsVisualization/tree/main/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
       "score": null,
@@ -8,20 +16,12 @@
       "stars": 0,
       "title": "Murf-y/NetworkModelsVisualization"
     },
-    "https://github.com/ProfSynapse/Stampede/tree/main/.claude/skills": {
-      "first_seen": "2026-05-14T12:50:57Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github",
-      "stars": 0,
-      "title": "ProfSynapse/Stampede"
-    },
     "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
       "score": null,
       "skills_count": 7,
       "source": "github",
-      "stars": 7538,
+      "stars": 7543,
       "title": "anyproto/anytype-ts"
     },
     "https://github.com/atopile/atopile/tree/main/.claude/skills": {
@@ -32,13 +32,13 @@
       "stars": 3356,
       "title": "atopile/atopile"
     },
-    "https://github.com/bytebase/dbhub/tree/main/.claude/skills": {
-      "first_seen": "2026-05-14T12:50:57Z",
+    "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
+      "first_seen": "2026-05-15T11:17:12Z",
       "score": null,
-      "skills_count": 2,
+      "skills_count": 16,
       "source": "github",
-      "stars": 2752,
-      "title": "bytebase/dbhub"
+      "stars": 709,
+      "title": "doccker/cc-use-exp"
     },
     "https://github.com/halfwhey/claudraband/tree/master/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
@@ -56,20 +56,12 @@
       "stars": 2,
       "title": "jayli/block-proxy"
     },
-    "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
-      "first_seen": "2026-05-14T12:50:57Z",
-      "score": null,
-      "skills_count": 41,
-      "source": "github",
-      "stars": 195,
-      "title": "maslennikov-ig/claude-code-orchestrator-kit"
-    },
     "https://github.com/nativewind/nativewind/tree/main/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
       "score": null,
       "skills_count": 4,
       "source": "github",
-      "stars": 7826,
+      "stars": 7828,
       "title": "nativewind/nativewind"
     },
     "https://github.com/oysteinkrog/dotfiles/tree/master/.claude/skills": {
@@ -85,7 +77,7 @@
       "score": null,
       "skills_count": 39,
       "source": "github",
-      "stars": 108,
+      "stars": 109,
       "title": "pr-pm/prpm"
     },
     "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills": {
@@ -112,6 +104,14 @@
       "stars": 1,
       "title": "sverzijl/planning_latest"
     },
+    "https://github.com/vlados/lawdiff/tree/main/.claude/skills": {
+      "first_seen": "2026-05-15T11:17:12Z",
+      "score": null,
+      "skills_count": 5,
+      "source": "github",
+      "stars": 3,
+      "title": "vlados/lawdiff"
+    },
     "https://github.com/yanochka11/harness_bro/tree/main/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
       "score": null,
@@ -121,5 +121,5 @@
       "title": "yanochka11/harness_bro"
     }
   },
-  "last_run": "2026-05-14T12:50:57Z"
+  "last_run": "2026-05-15T11:17:12Z"
 }
