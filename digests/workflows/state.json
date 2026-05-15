@@ -1,0 +1,125 @@
+{
+  "items": {
+    "https://github.com/161sam/n8n-voice-ai": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 2,
+      "title": "161sam/n8n-voice-ai: Logging"
+    },
+    "https://github.com/FRWD789/n8nNewsLettre": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 0,
+      "title": "FRWD789/n8nNewsLettre: LAB2"
+    },
+    "https://github.com/GonchiJoshnaVardhanReddy/bug-bounty-agents": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "GonchiJoshnaVardhanReddy/bug-bounty-agents: n8n_pipeline"
+    },
+    "https://github.com/JeffersonMFti/JurisAI": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "JeffersonMFti/JurisAI: WF6_vigencia"
+    },
+    "https://github.com/N1rvana-git/channel-getstat": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 0,
+      "title": "N1rvana-git/channel-getstat: final_nodes"
+    },
+    "https://github.com/RafayRandhawa/AI-Oracle-Chatbot": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 0,
+      "title": "RafayRandhawa/AI-Oracle-Chatbot: updated!"
+    },
+    "https://github.com/akira-dev/n8n-workflows": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 0,
+      "title": "akira-dev/n8n-workflows: rag_chat_bot"
+    },
+    "https://github.com/antoninBr/talk-n8n-agent": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 8,
+      "title": "antoninBr/talk-n8n-agent: Chat"
+    },
+    "https://github.com/cstuncsik/n8n-env-test": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 0,
+      "title": "cstuncsik/n8n-env-test: 1042"
+    },
+    "https://github.com/fraserbrownirl/n8n-workflow-library": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 2,
+      "title": "fraserbrownirl/n8n-workflow-library: AI_agent_chat"
+    },
+    "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 0,
+      "title": "mesquitapetro-crypto/n8n-mcp-knowledge-base: serpbear-analytics-template"
+    },
+    "https://github.com/omkar-padhy/ContextIQ": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 0,
+      "title": "omkar-padhy/ContextIQ: n8n_drive"
+    },
+    "https://github.com/oxbshw/ultimate-n8n-ai-workflows": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 534,
+      "title": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot"
+    },
+    "https://github.com/soluckysummer/n8n_workflows": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1416,
+      "title": "soluckysummer/n8n_workflows: webhook_demo"
+    },
+    "https://github.com/thecloudstation/n8n-workflows": {
+      "first_seen": "2026-05-15T13:49:41Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 15,
+      "title": "thecloudstation/n8n-workflows: linkedin_Lead_scraper"
+    }
+  },
+  "last_run": "2026-05-15T13:49:41Z"
+}

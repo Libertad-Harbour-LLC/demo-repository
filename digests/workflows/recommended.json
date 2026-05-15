@@ -1,0 +1,36 @@
+{
+  "skills": {
+    "https://github.com/oxbshw/ultimate-n8n-ai-workflows": {
+      "category": "content_workflow",
+      "confidence": "high",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-15",
+      "metric": "Среднее время генерации резюме и точность (сравнение с ручным резюме)",
+      "promoted_from_watch": false,
+      "repo_full_name": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 7,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "summarizer-bot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке: https://raw.githubusercontent.com/oxbshw/ultimate-n8n-ai-workflows/main/workflows/ai-agents/summarizer-bot.json",
+        "Открыть n8n → Import Workflow → вставить JSON",
+        "Настроить credential для LLM-провайдера (OpenAI / Anthropic) в Settings → Credentials",
+        "Задать входной текст через тестовый trigger и запустить прогон",
+        "Проверить узел Output на наличие резюме"
+      ],
+      "title": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
+      "tool": "n8n",
+      "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
+    }
+  }
+}

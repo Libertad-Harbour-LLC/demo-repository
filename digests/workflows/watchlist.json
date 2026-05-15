@@ -1,0 +1,84 @@
+{
+  "items": {
+    "https://github.com/GonchiJoshnaVardhanReddy/bug-bounty-agents": {
+      "added_date": "2026-05-15",
+      "category": "general_skill",
+      "expires_at": "2026-06-14",
+      "last_checked": "2026-05-15",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 1
+      },
+      "repo_full_name": "GonchiJoshnaVardhanReddy/bug-bounty-agents: n8n_pipeline",
+      "signal_to_wait": "Рост звёзд, добавление README с описанием шагов и используемых инструментов (Burp, recon-инструменты)",
+      "title": "GonchiJoshnaVardhanReddy/bug-bounty-agents: n8n_pipeline",
+      "url": "https://github.com/GonchiJoshnaVardhanReddy/bug-bounty-agents",
+      "why_interesting": "Нишевый workflow для автоматизации bug bounty — редкий security use case для n8n. Потенциально ценен для security-инженеров."
+    },
+    "https://github.com/JeffersonMFti/JurisAI": {
+      "added_date": "2026-05-15",
+      "category": "general_skill",
+      "expires_at": "2026-06-14",
+      "last_checked": "2026-05-15",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 1
+      },
+      "repo_full_name": "JeffersonMFti/JurisAI: WF6_vigencia",
+      "signal_to_wait": "Описание на английском/португальском что именно делает WF6, рост до 5+ звёзд или cross-source упоминание",
+      "title": "JeffersonMFti/JurisAI: WF6_vigencia",
+      "url": "https://github.com/JeffersonMFti/JurisAI",
+      "why_interesting": "Legal AI workflow для бразильского юридического контекста (vigencia = проверка срока действия нормативных актов) — уникальная ниша автоматизации."
+    },
+    "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base": {
+      "added_date": "2026-05-15",
+      "category": "general_skill",
+      "expires_at": "2026-06-14",
+      "last_checked": "2026-05-15",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "mesquitapetro-crypto/n8n-mcp-knowledge-base: serpbear-analytics-template",
+      "signal_to_wait": "Появление README с инструкцией по подключению SerpBear API и рост звёзд",
+      "title": "mesquitapetro-crypto/n8n-mcp-knowledge-base: serpbear-analytics-template",
+      "url": "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base",
+      "why_interesting": "SerpBear — open-source rank tracker; workflow для аналитики SEO-данных из SerpBear интересен маркетологам с self-hosted стеком."
+    },
+    "https://github.com/soluckysummer/n8n_workflows": {
+      "added_date": "2026-05-15",
+      "category": "general_skill",
+      "expires_at": "2026-06-14",
+      "last_checked": "2026-05-15",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 1416
+      },
+      "repo_full_name": "soluckysummer/n8n_workflows: webhook_demo",
+      "signal_to_wait": "Появление дополнительных workflow в репозитории (сейчас workflow_count=1) или упоминание в Reddit/других источниках",
+      "title": "soluckysummer/n8n_workflows: webhook_demo",
+      "url": "https://github.com/soluckysummer/n8n_workflows",
+      "why_interesting": "1416 звёзд — один из самых высоко оценённых n8n-репозиториев в выборке; webhook_demo — базовая точка входа для понимания webhook-паттернов в n8n. Несмотря на тривиальность названия, такое количество звёзд говорит о реальном трафике."
+    },
+    "https://github.com/thecloudstation/n8n-workflows": {
+      "added_date": "2026-05-15",
+      "category": "general_skill",
+      "expires_at": "2026-06-14",
+      "last_checked": "2026-05-15",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 15
+      },
+      "repo_full_name": "thecloudstation/n8n-workflows: linkedin_Lead_scraper",
+      "signal_to_wait": "Рост звёзд до 30+, появление в Reddit/n8n-community или документация с примером настройки LinkedIn API/cookie",
+      "title": "thecloudstation/n8n-workflows: linkedin_Lead_scraper",
+      "url": "https://github.com/thecloudstation/n8n-workflows",
+      "why_interesting": "LinkedIn lead scraping — высококонвертирующий use case для B2B-продаж; workflow верифицирован и имеет прямую ссылку на JSON. 15 звёзд при одном workflow — умеренный сигнал."
+    }
+  }
+}
