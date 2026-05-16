@@ -417,28 +417,27 @@ def _render_page(
     return ("\n".join(lines), {"inline_keyboard": kb_rows})
 
 
-# === Top-level source picker ===
-def _top_menu_text() -> str:
-    return "*Trendwatch — базы рекомендаций*\n\nВыбери источник:"
+# === Screens ===
+# A Screen is a (text, inline_keyboard_or_None) tuple. Pure rendering: no
+# transport, no side effects. Sent or edited via deliver().
+Screen = tuple[str, dict | None]
 
 
-def _top_menu_keyboard() -> dict:
-    return {
+def screen_top_menu() -> Screen:
+    text = "*Trendwatch — базы рекомендаций*\n\nВыбери источник:"
+    kb = {
         "inline_keyboard": [
             [{"text": SOURCES["skills"]["label"], "callback_data": "src:skills:menu"}],
             [{"text": SOURCES["n8n"]["label"], "callback_data": "src:n8n:menu"}],
             [{"text": SOURCES["make"]["label"], "callback_data": "src:make:menu"}],
         ]
     }
+    return text, kb
 
 
-# === Per-source sub-menu ===
-def _source_menu_text(source_key: str) -> str:
-    return f"*{SOURCES[source_key]['header']}*\n\nВыбери что показать:"
-
-
-def _source_menu_keyboard(source_key: str) -> dict:
-    return {
+def screen_source_menu(source_key: str) -> Screen:
+    text = f"*{SOURCES[source_key]['header']}*\n\nВыбери что показать:"
+    kb = {
         "inline_keyboard": [
             [{"text": "📚 Весь список", "callback_data": f"src:{source_key}:list:0"}],
             [{"text": "🏷 По категории", "callback_data": f"src:{source_key}:categories"}],
@@ -446,11 +445,11 @@ def _source_menu_keyboard(source_key: str) -> dict:
             [{"text": "« Источник", "callback_data": "menu"}],
         ]
     }
+    return text, kb
 
 
-# === Index views (categories / months) ===
-def _build_categories_view(db: dict, source_key: str) -> tuple[str, dict]:
-    items = _all_items_sorted(db, source_key)
+def screen_categories(source_key: str) -> Screen:
+    items = _all_items_sorted(_fetch(source_key), source_key)
     default_cat = SOURCES[source_key]["default_category"]
     cat_labels: dict[str, str] = SOURCES[source_key]["categories"]
     cat_counts: dict[str, int] = {}
@@ -463,40 +462,25 @@ def _build_categories_view(db: dict, source_key: str) -> tuple[str, dict]:
         n = cat_counts.get(cat, 0)
         text += f"{label} — {n}\n"
         if n > 0:
-            rows.append(
-                [
-                    {
-                        "text": f"{label} ({n})",
-                        "callback_data": f"src:{source_key}:cat:{cat}:0",
-                    }
-                ]
-            )
+            rows.append([{"text": f"{label} ({n})", "callback_data": f"src:{source_key}:cat:{cat}:0"}])
     # Include any unknown categories that exist in data but not in labels
     for cat, n in cat_counts.items():
         if cat not in cat_labels and n > 0:
             label = cat or default_cat
             text += f"{label} — {n}\n"
-            rows.append(
-                [
-                    {
-                        "text": f"{label} ({n})",
-                        "callback_data": f"src:{source_key}:cat:{cat}:0",
-                    }
-                ]
-            )
+            rows.append([{"text": f"{label} ({n})", "callback_data": f"src:{source_key}:cat:{cat}:0"}])
     rows.append([{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}])
     rows.append([{"text": "« Источник", "callback_data": "menu"}])
     return text, {"inline_keyboard": rows}
 
 
-def _build_months_view(db: dict, source_key: str) -> tuple[str, dict]:
-    items = _all_items_sorted(db, source_key)
+def screen_months(source_key: str) -> Screen:
+    items = _all_items_sorted(_fetch(source_key), source_key)
     month_counts: dict[str, int] = {}
     for s in items:
         date = s.get("first_recommended", "") or ""
         if len(date) >= 7:
-            ym = date[:7]
-            month_counts[ym] = month_counts.get(ym, 0) + 1
+            month_counts[date[:7]] = month_counts.get(date[:7], 0) + 1
     if not month_counts:
         return (
             f"*{SOURCES[source_key]['header']}*\n\nПусто.",
@@ -507,33 +491,45 @@ def _build_months_view(db: dict, source_key: str) -> tuple[str, dict]:
                 ]
             },
         )
-    months_sorted = sorted(month_counts.keys(), reverse=True)
     rows: list[list[dict]] = []
     text = f"*{SOURCES[source_key]['header']} — по месяцам:*\n\n"
-    for ym in months_sorted:
+    for ym in sorted(month_counts.keys(), reverse=True):
         n = month_counts[ym]
         text += f"📅 {ym} — {n}\n"
-        rows.append(
-            [
-                {
-                    "text": f"{ym} ({n})",
-                    "callback_data": f"src:{source_key}:month:{ym}:0",
-                }
-            ]
-        )
+        rows.append([{"text": f"{ym} ({n})", "callback_data": f"src:{source_key}:month:{ym}:0"}])
     rows.append([{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}])
     rows.append([{"text": "« Источник", "callback_data": "menu"}])
     return text, {"inline_keyboard": rows}
 
 
-# === Render dispatcher (shared by send + edit paths) ===
-def render_page(source_key: str, view: View, page: int) -> tuple[str, dict]:
+def screen_page(source_key: str, view: View, page: int) -> Screen:
     """Render a paginated bot screen for ``view`` of ``source_key``."""
     items = _filter_for_view(
         _all_items_sorted(_fetch(source_key), source_key), view, source_key
     )
     return _render_page(
         items, page, _title_for_view(view, source_key), source_key, view.nav_token
+    )
+
+
+# === Transport adapter ===
+def deliver(
+    chat_id: int,
+    screen: Screen,
+    *,
+    edit_message_id: int | None = None,
+    reply_keyboard: dict | None = None,
+) -> dict:
+    """Send ``screen`` as a new message, or edit ``edit_message_id`` in place.
+
+    Telegram limitation: edited messages cannot change the persistent
+    reply_keyboard. ``reply_keyboard`` is honoured only on the send path.
+    """
+    text, inline = screen
+    if edit_message_id is not None:
+        return _edit_message(chat_id, edit_message_id, text, inline)
+    return _send_message(
+        chat_id, text, reply_markup=inline, reply_keyboard=reply_keyboard
     )
 
 
@@ -561,160 +557,53 @@ HELP_TEXT = (
 )
 
 
-# === Command handlers (send new message) ===
-# Every fresh send_message from a command attaches the persistent reply_keyboard
-# (alongside inline_keyboard when present, Telegram picks one — but the most
-# recent reply_keyboard stays visible client-side regardless).
-def handle_start(chat_id: int) -> None:
-    # Top-level picker uses inline_keyboard; we send a tiny preamble first
-    # with the reply_keyboard so the persistent bar is guaranteed visible,
-    # then the picker itself. To keep chat clean: send single message with
-    # inline_keyboard AND set reply_keyboard separately on a follow-up only
-    # if needed. Simpler: send picker with inline_keyboard; rely on a recent
-    # reply_keyboard message. Here we send the picker, then a no-op message
-    # would be noisy — instead attach reply_keyboard to the picker itself by
-    # sending the reply_keyboard first as a quick "menu set" message.
-    # Cleanest implementation: send picker with inline_keyboard; the
-    # reply_keyboard is delivered via a separate one-time setter message on
-    # /start so the bar is set once per session.
-    _send_message(chat_id, "Открываю меню…", reply_keyboard=_reply_keyboard())
-    _send_message(chat_id, _top_menu_text(), _top_menu_keyboard())
-
-
-def handle_help(chat_id: int) -> None:
-    _send_message(chat_id, HELP_TEXT, reply_keyboard=_reply_keyboard())
-
-
-def handle_source_menu(chat_id: int, source_key: str) -> None:
-    _send_message(
-        chat_id,
-        _source_menu_text(source_key),
-        _source_menu_keyboard(source_key),
-    )
-
-
-def handle_list(chat_id: int, source_key: str, page: int = 0) -> None:
-    text, kb = render_page(source_key, ALL_VIEW, page)
-    _send_message(chat_id, text, kb)
-
-
-def handle_categories(chat_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_categories_view(db, source_key)
-    _send_message(chat_id, text, kb)
-
-
-def handle_months(chat_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_months_view(db, source_key)
-    _send_message(chat_id, text, kb)
-
-
-# === Edit-in-place helpers (used by callback queries) ===
-def _edit_top_menu(chat_id: int, message_id: int) -> None:
-    _edit_message(chat_id, message_id, _top_menu_text(), _top_menu_keyboard())
-
-
-def _edit_source_menu(chat_id: int, message_id: int, source_key: str) -> None:
-    _edit_message(
-        chat_id, message_id, _source_menu_text(source_key), _source_menu_keyboard(source_key)
-    )
-
-
-def _edit_categories(chat_id: int, message_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_categories_view(db, source_key)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_months(chat_id: int, message_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_months_view(db, source_key)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_list(chat_id: int, message_id: int, source_key: str, page: int) -> None:
-    text, kb = render_page(source_key, ALL_VIEW, page)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_category(
-    chat_id: int, message_id: int, source_key: str, cat: str, page: int
-) -> None:
-    text, kb = render_page(source_key, category_view(cat), page)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_month(
-    chat_id: int, message_id: int, source_key: str, ym: str, page: int
-) -> None:
-    text, kb = render_page(source_key, month_view(ym), page)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-# === Callback handlers ===
+# === Inline-button callback routing ===
 def handle_callback(update: dict) -> None:
+    """Route a Telegram inline-keyboard tap to the right screen + edit_message_id."""
     cb = update["callback_query"]
     chat_id = cb["message"]["chat"]["id"]
-    message_id = cb["message"]["message_id"]
-    cb_id = cb["id"]
+    msg_id = cb["message"]["message_id"]
+    _answer_callback(cb["id"])
     data = cb.get("data", "") or ""
 
-    # Acknowledge fast (Telegram shows spinner otherwise).
-    _answer_callback(cb_id)
-
-    # Top-level picker
     if data == "menu":
-        _edit_top_menu(chat_id, message_id)
+        deliver(chat_id, screen_top_menu(), edit_message_id=msg_id)
         return
 
-    # Source-scoped routes: src:<source_key>:<action>[:<args>]
-    if data.startswith("src:"):
-        parts = data.split(":")
-        if len(parts) < 3:
-            return
-        source_key = parts[1]
-        if source_key not in VALID_SOURCES:
-            return
-        action = parts[2]
+    if not data.startswith("src:"):
+        return
+    parts = data.split(":")
+    if len(parts) < 3:
+        return
+    source_key = parts[1]
+    if source_key not in VALID_SOURCES:
+        return
+    action = parts[2]
 
-        if action == "menu":
-            _edit_source_menu(chat_id, message_id, source_key)
-            return
-        if action == "categories":
-            _edit_categories(chat_id, message_id, source_key)
-            return
-        if action == "months":
-            _edit_months(chat_id, message_id, source_key)
-            return
-        if action == "list":
-            # src:<source>:list:<page>
-            try:
-                page = int(parts[3]) if len(parts) >= 4 else 0
-            except ValueError:
-                page = 0
-            _edit_list(chat_id, message_id, source_key, page)
-            return
-        if action == "cat":
-            # src:<source>:cat:<cat>:<page>
-            if len(parts) >= 5:
-                cat = parts[3]
-                try:
-                    page = int(parts[4])
-                except ValueError:
-                    page = 0
-                _edit_category(chat_id, message_id, source_key, cat, page)
-            return
-        if action == "month":
-            # src:<source>:month:<YYYY-MM>:<page>
-            if len(parts) >= 5:
-                ym = parts[3]
-                try:
-                    page = int(parts[4])
-                except ValueError:
-                    page = 0
-                _edit_month(chat_id, message_id, source_key, ym, page)
-            return
+    if action == "menu":
+        deliver(chat_id, screen_source_menu(source_key), edit_message_id=msg_id)
+    elif action == "categories":
+        deliver(chat_id, screen_categories(source_key), edit_message_id=msg_id)
+    elif action == "months":
+        deliver(chat_id, screen_months(source_key), edit_message_id=msg_id)
+    elif action == "list":
+        page = _parse_page(parts, 3)
+        deliver(chat_id, screen_page(source_key, ALL_VIEW, page), edit_message_id=msg_id)
+    elif action == "cat" and len(parts) >= 5:
+        page = _parse_page(parts, 4)
+        deliver(chat_id, screen_page(source_key, category_view(parts[3]), page), edit_message_id=msg_id)
+    elif action == "month" and len(parts) >= 5:
+        page = _parse_page(parts, 4)
+        deliver(chat_id, screen_page(source_key, month_view(parts[3]), page), edit_message_id=msg_id)
+
+
+def _parse_page(parts: list[str], idx: int) -> int:
+    if len(parts) <= idx:
+        return 0
+    try:
+        return int(parts[idx])
+    except ValueError:
+        return 0
 
 
 # === Webhook dispatcher ===
@@ -730,51 +619,58 @@ def dispatch(update: dict) -> None:
     if not text:
         return
 
-    # === Persistent reply_keyboard button labels (sent as plain text) ===
-    # Match BEFORE slash-command handling so taps route correctly.
-    if text == "📚 Claude Skills":
-        handle_source_menu(chat_id, "skills")
-        return
-    if text == "⚙️ N8N Workflows":
-        handle_source_menu(chat_id, "n8n")
-        return
-    if text == "🧩 Make Workflows":
-        handle_source_menu(chat_id, "make")
+    # Persistent reply_keyboard taps come in as plain text — match before commands.
+    REPLY_BUTTON_TO_SOURCE = {
+        "📚 Claude Skills": "skills",
+        "⚙️ N8N Workflows": "n8n",
+        "🧩 Make Workflows": "make",
+    }
+    if text in REPLY_BUTTON_TO_SOURCE:
+        deliver(chat_id, screen_source_menu(REPLY_BUTTON_TO_SOURCE[text]))
         return
     if text == "📋 Меню":
-        handle_start(chat_id)
+        _handle_start(chat_id)
         return
     if text == "ℹ️ Помощь":
-        handle_help(chat_id)
+        deliver(chat_id, (HELP_TEXT, None), reply_keyboard=_reply_keyboard())
         return
 
     # Strip bot mention suffix (e.g. /start@MyBot)
-    cmd = text.split()[0] if text else ""
+    cmd = text.split()[0]
     if "@" in cmd:
         cmd = cmd.split("@", 1)[0]
-    if cmd == "/start" or cmd == "/menu":
-        handle_start(chat_id)
+    if cmd in ("/start", "/menu"):
+        _handle_start(chat_id)
     elif cmd == "/help":
-        handle_help(chat_id)
+        deliver(chat_id, (HELP_TEXT, None), reply_keyboard=_reply_keyboard())
     elif cmd == "/list":
-        # Backwards-compat: default to skills.
-        handle_list(chat_id, "skills", 0)
+        deliver(chat_id, screen_page("skills", ALL_VIEW, 0))  # legacy: defaults to skills
     elif cmd == "/categories":
-        handle_categories(chat_id, "skills")
+        deliver(chat_id, screen_categories("skills"))
     elif cmd == "/months":
-        handle_months(chat_id, "skills")
+        deliver(chat_id, screen_months("skills"))
     elif cmd == "/skills":
-        handle_source_menu(chat_id, "skills")
+        deliver(chat_id, screen_source_menu("skills"))
     elif cmd == "/n8n":
-        handle_source_menu(chat_id, "n8n")
+        deliver(chat_id, screen_source_menu("n8n"))
     elif cmd == "/make":
-        handle_source_menu(chat_id, "make")
+        deliver(chat_id, screen_source_menu("make"))
     else:
-        _send_message(
+        deliver(
             chat_id,
-            "Не понял команду. Жми кнопки внизу или /menu.",
+            ("Не понял команду. Жми кнопки внизу или /menu.", None),
             reply_keyboard=_reply_keyboard(),
         )
+
+
+def _handle_start(chat_id: int) -> None:
+    """``/start`` and the ``📋 Меню`` reply-button: set persistent keyboard, then show picker.
+
+    Two messages so the reply_keyboard is guaranteed visible (Telegram allows
+    only one reply_markup per message; the inline picker needs the second).
+    """
+    deliver(chat_id, ("Открываю меню…", None), reply_keyboard=_reply_keyboard())
+    deliver(chat_id, screen_top_menu())
 
 
 # === HTTP handler ===
