@@ -83,10 +83,14 @@ View for pagination: `"list"` (= `ALL_VIEW`), `"cat:<X>"`, `"month:<YYYY-MM>"`.
 **Byte-stable across releases** — inline keyboards live in user chat
 history indefinitely and fire whatever string was baked at send time.
 
-**Route** — a parsed `callback_data` string. Format:
-`src:<source>:<action>[:<args>]` or the bare `menu` for the top picker.
-Parsed inline in `handle_callback` (still flat — candidate #5 for future
-deepening).
+**Route** — a parsed `callback_data` string. Sealed sum type with nine
+kinds: `top_menu`, `source_menu`, `categories`, `months`, `list`,
+`category`, `month`, `item`, `explain`. Constructed only via
+`Route.parse(callback_data)`, which returns `None` on any malformed or
+unknown-source input (the webhook then silently no-ops). Wire format is
+`src:<source>:<action>[:<args>]` or the bare `menu` — **byte-stable
+across releases** since inline keyboards persist in chat history
+indefinitely. `handle_callback` is a pure dispatch on `route.kind`.
 
 **Page** — zero-based pagination index within a View's filtered Items.
 PAGE_SIZE = 5. Pagination buttons encode `<route>:<page>` in
