@@ -277,56 +277,94 @@ def _format_item_line(item: dict, source_key: str) -> str:
     return f"• {status_prefix}{tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
 
 
-# === Item selection ===
-def _normalize_watch_item(entry: dict) -> dict:
-    """Map a watchlist.json entry to the shape ``_format_item_line`` expects.
+# === Items ===
+# A sorted, tool-filtered list of recommended + watchlist Items for one Source.
+# See CONTEXT.md for "Item", "Status", "Source".
+@dataclass(frozen=True, eq=False)
+class Items:
+    """All Items the bot can show for one Source, after dedupe + tool filter + sort.
 
-    Watchlist entries use ``added_date`` instead of ``first_recommended`` and
-    lack scoring fields — we just copy what's there and tag with ``_status``.
+    Construct via ``Items.load(source_key)`` — handles both file reads (recommended
+    + watchlist), Status tagging, dedupe by URL (recommended wins), tool filter,
+    and stable sort. Filters return a new Items; the type is immutable in spirit
+    (``eq=False`` skips auto-hash; the underlying list isn't hashable).
+
+    Behaves as a sequence: ``len(items)``, ``items[i]``, ``items[a:b]``,
+    ``for it in items``.
     """
-    out = dict(entry)
-    out["_status"] = "watch"
-    if "first_recommended" not in out and "added_date" in out:
-        out["first_recommended"] = out["added_date"]
-    return out
+    _items: list[dict]
+    source_key: str
 
+    @classmethod
+    def load(cls, source_key: str) -> "Items":
+        rec_items = list((_fetch(source_key).get("skills") or {}).values())
+        rec_urls = {i.get("url") for i in rec_items if i.get("url")}
+        watch_items = [
+            cls._tag_watch(e)
+            for e in (_fetch_watchlist(source_key).get("items") or {}).values()
+            if isinstance(e, dict) and e.get("url") not in rec_urls
+        ]
+        merged = cls._apply_tool_filter(rec_items + watch_items, source_key)
+        merged.sort(
+            key=lambda s: (s.get("first_recommended", ""), s.get("title", "")),
+            reverse=True,
+        )
+        return cls(_items=merged, source_key=source_key)
 
-def _all_items_sorted(db: dict, source_key: str) -> list[dict]:
-    """Merge recommended + watchlist items for a source.
+    @staticmethod
+    def _tag_watch(entry: dict) -> dict:
+        """Map a watchlist entry into the recommended-shape vocabulary the bot expects."""
+        out = dict(entry)
+        out["_status"] = "watch"
+        if "first_recommended" not in out and "added_date" in out:
+            out["first_recommended"] = out["added_date"]
+        return out
 
-    Recommended items take precedence: if a URL appears in both files (e.g.
-    a watch item that just graduated), only the recommended version is shown.
-    Watch items render with a 👀 prefix.
-    """
-    rec_items = list((db.get("skills") or {}).values())
-    rec_urls = {i.get("url") for i in rec_items if i.get("url")}
+    @staticmethod
+    def _apply_tool_filter(items: list[dict], source_key: str) -> list[dict]:
+        """Workflows-side tool filter. Watch entries from older pipeline runs
+        lack a ``tool`` field — surface those only under the "n8n" bucket.
+        """
+        tool_filter = SOURCES[source_key].tool_filter
+        if tool_filter is None:
+            return items
 
-    watch_db = _fetch_watchlist(source_key)
-    watch_items = [
-        _normalize_watch_item(e)
-        for e in (watch_db.get("items") or {}).values()
-        if isinstance(e, dict) and e.get("url") not in rec_urls
-    ]
-
-    items = rec_items + watch_items
-    tool_filter = SOURCES[source_key].tool_filter
-    if tool_filter is not None:
-        # Watchlist entries written by older pipeline runs lack a `tool`
-        # field. Surface those only under the "n8n" bucket (workflows
-        # pipeline defaults to n8n; Make watchlist is empty in practice).
-        def _matches(i: dict) -> bool:
+        def matches(i: dict) -> bool:
             t = i.get("tool")
             if t == tool_filter:
                 return True
-            if i.get("_status") == "watch" and not t and tool_filter == "n8n":
-                return True
-            return False
-        items = [i for i in items if _matches(i)]
-    items.sort(
-        key=lambda s: (s.get("first_recommended", ""), s.get("title", "")),
-        reverse=True,
-    )
-    return items
+            return i.get("_status") == "watch" and not t and tool_filter == "n8n"
+
+        return [i for i in items if matches(i)]
+
+    def filter_by_category(self, cat: str) -> "Items":
+        default_cat = SOURCES[self.source_key].default_category
+        return Items(
+            _items=[s for s in self._items if s.get("category", default_cat) == cat],
+            source_key=self.source_key,
+        )
+
+    def filter_by_month(self, ym: str) -> "Items":
+        return Items(
+            _items=[s for s in self._items if (s.get("first_recommended") or "")[:7] == ym],
+            source_key=self.source_key,
+        )
+
+    def filter_for_view(self, view: "View") -> "Items":
+        if view.kind == "category":
+            return self.filter_by_category(view.arg)
+        if view.kind == "month":
+            return self.filter_by_month(view.arg)
+        return self
+
+    def __len__(self) -> int:
+        return len(self._items)
+
+    def __iter__(self):
+        return iter(self._items)
+
+    def __getitem__(self, idx):
+        return self._items[idx]
 
 
 # === Views ===
@@ -353,15 +391,6 @@ def category_view(cat: str) -> View:
 
 def month_view(ym: str) -> View:
     return View(kind="month", nav_token=f"month:{ym}", arg=ym)
-
-
-def _filter_for_view(items: list[dict], view: View, source_key: str) -> list[dict]:
-    if view.kind == "category":
-        default_cat = SOURCES[source_key].default_category
-        return [s for s in items if s.get("category", default_cat) == view.arg]
-    if view.kind == "month":
-        return [s for s in items if (s.get("first_recommended") or "")[:7] == view.arg]
-    return items
 
 
 def _title_for_view(view: View, source_key: str) -> str:
@@ -466,7 +495,7 @@ def screen_source_menu(source_key: str) -> Screen:
 
 
 def screen_categories(source_key: str) -> Screen:
-    items = _all_items_sorted(_fetch(source_key), source_key)
+    items = Items.load(source_key)
     default_cat = SOURCES[source_key].default_category
     cat_labels: dict[str, str] = SOURCES[source_key].categories
     cat_counts: dict[str, int] = {}
@@ -492,7 +521,7 @@ def screen_categories(source_key: str) -> Screen:
 
 
 def screen_months(source_key: str) -> Screen:
-    items = _all_items_sorted(_fetch(source_key), source_key)
+    items = Items.load(source_key)
     month_counts: dict[str, int] = {}
     for s in items:
         date = s.get("first_recommended", "") or ""
@@ -521,9 +550,7 @@ def screen_months(source_key: str) -> Screen:
 
 def screen_page(source_key: str, view: View, page: int) -> Screen:
     """Render a paginated bot screen for ``view`` of ``source_key``."""
-    items = _filter_for_view(
-        _all_items_sorted(_fetch(source_key), source_key), view, source_key
-    )
+    items = Items.load(source_key).filter_for_view(view)
     return _render_page(
         items, page, _title_for_view(view, source_key), source_key, view.nav_token
     )
@@ -576,45 +603,53 @@ HELP_TEXT = (
 
 # === Inline-button callback routing ===
 def handle_callback(update: dict) -> None:
-    """Route a Telegram inline-keyboard tap to the right screen + edit_message_id."""
+    """Route a Telegram inline-keyboard tap to the right Screen.
+
+    All routes end in ``show(screen)`` — a closure that binds chat_id and the
+    message_id to edit. This keeps the routing rhythm focused on
+    ``action → Screen`` and pulls Telegram transport out of the if/elif.
+
+    Route table is intentionally an if/elif chain rather than a dict: the six
+    actions have heterogeneous signatures (0–2 args after the action token) and
+    a uniform-table would just hide that behind ``*args`` indirection.
+    """
     cb = update["callback_query"]
     chat_id = cb["message"]["chat"]["id"]
     msg_id = cb["message"]["message_id"]
     _answer_callback(cb["id"])
     data = cb.get("data", "") or ""
 
-    if data == "menu":
-        deliver(chat_id, screen_top_menu(), edit_message_id=msg_id)
-        return
+    def show(screen: Screen) -> None:
+        deliver(chat_id, screen, edit_message_id=msg_id)
 
+    if data == "menu":
+        show(screen_top_menu())
+        return
     if not data.startswith("src:"):
         return
     parts = data.split(":")
     if len(parts) < 3:
         return
-    source_key = parts[1]
+    source_key, action = parts[1], parts[2]
     if source_key not in VALID_SOURCES:
         return
-    action = parts[2]
 
     if action == "menu":
-        deliver(chat_id, screen_source_menu(source_key), edit_message_id=msg_id)
+        show(screen_source_menu(source_key))
     elif action == "categories":
-        deliver(chat_id, screen_categories(source_key), edit_message_id=msg_id)
+        show(screen_categories(source_key))
     elif action == "months":
-        deliver(chat_id, screen_months(source_key), edit_message_id=msg_id)
+        show(screen_months(source_key))
     elif action == "list":
-        page = _parse_page(parts, 3)
-        deliver(chat_id, screen_page(source_key, ALL_VIEW, page), edit_message_id=msg_id)
+        show(screen_page(source_key, ALL_VIEW, _parse_page(parts, 3)))
     elif action == "cat" and len(parts) >= 5:
-        page = _parse_page(parts, 4)
-        deliver(chat_id, screen_page(source_key, category_view(parts[3]), page), edit_message_id=msg_id)
+        show(screen_page(source_key, category_view(parts[3]), _parse_page(parts, 4)))
     elif action == "month" and len(parts) >= 5:
-        page = _parse_page(parts, 4)
-        deliver(chat_id, screen_page(source_key, month_view(parts[3]), page), edit_message_id=msg_id)
+        show(screen_page(source_key, month_view(parts[3]), _parse_page(parts, 4)))
 
 
 def _parse_page(parts: list[str], idx: int) -> int:
+    """Parse a 0-based page index out of ``parts[idx]``, defaulting to 0."""
     if len(parts) <= idx:
         return 0
     try:

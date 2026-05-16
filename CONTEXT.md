@@ -20,8 +20,15 @@ tool. Registered in `SOURCES` at the top of `api/telegram.py`.
 in `digests/<source>/recommended.json` under the `skills` key, includes
 scoring, category, skill list, etc.) or a **watch item** (lives in
 `watchlist.json` under `items` with `signal_to_wait` + `metric_baseline`).
-Both schemas converge in the bot via `_normalize_watch_item`. Identified
-by `url` (primary key).
+Both schemas converge in the bot via `Items._tag_watch`. Identified by
+`url` (primary key).
+
+**Items** (plural) — the loaded, deduped (recommended wins over watch on
+URL collision), tool-filtered, sorted collection of Items for one Source.
+Built via `Items.load(source_key)`; supports `len()`, `iter()`, slicing,
+plus `filter_by_category`, `filter_by_month`, `filter_for_view`. Filter
+methods return a new Items (immutable chain). Source identity is carried
+on the instance so chained filters know the Source they came from.
 
 **Status** — an Item's lifecycle state, set by the bot at merge time, not
 stored: `recommended` (default) or `watch`. Watch items render with a 👀
