@@ -603,45 +603,53 @@ HELP_TEXT = (
 
 # === Inline-button callback routing ===
 def handle_callback(update: dict) -> None:
-    """Route a Telegram inline-keyboard tap to the right screen + edit_message_id."""
+    """Route a Telegram inline-keyboard tap to the right Screen.
+
+    All routes end in ``show(screen)`` — a closure that binds chat_id and the
+    message_id to edit. This keeps the routing rhythm focused on
+    ``action → Screen`` and pulls Telegram transport out of the if/elif.
+
+    Route table is intentionally an if/elif chain rather than a dict: the six
+    actions have heterogeneous signatures (0–2 args after the action token) and
+    a uniform-table would just hide that behind ``*args`` indirection.
+    """
     cb = update["callback_query"]
     chat_id = cb["message"]["chat"]["id"]
     msg_id = cb["message"]["message_id"]
     _answer_callback(cb["id"])
     data = cb.get("data", "") or ""
 
-    if data == "menu":
-        deliver(chat_id, screen_top_menu(), edit_message_id=msg_id)
-        return
+    def show(screen: Screen) -> None:
+        deliver(chat_id, screen, edit_message_id=msg_id)
 
+    if data == "menu":
+        show(screen_top_menu())
+        return
     if not data.startswith("src:"):
         return
     parts = data.split(":")
     if len(parts) < 3:
         return
-    source_key = parts[1]
+    source_key, action = parts[1], parts[2]
     if source_key not in VALID_SOURCES:
         return
-    action = parts[2]
 
     if action == "menu":
-        deliver(chat_id, screen_source_menu(source_key), edit_message_id=msg_id)
+        show(screen_source_menu(source_key))
     elif action == "categories":
-        deliver(chat_id, screen_categories(source_key), edit_message_id=msg_id)
+        show(screen_categories(source_key))
     elif action == "months":
-        deliver(chat_id, screen_months(source_key), edit_message_id=msg_id)
+        show(screen_months(source_key))
     elif action == "list":
-        page = _parse_page(parts, 3)
-        deliver(chat_id, screen_page(source_key, ALL_VIEW, page), edit_message_id=msg_id)
+        show(screen_page(source_key, ALL_VIEW, _parse_page(parts, 3)))
     elif action == "cat" and len(parts) >= 5:
-        page = _parse_page(parts, 4)
-        deliver(chat_id, screen_page(source_key, category_view(parts[3]), page), edit_message_id=msg_id)
+        show(screen_page(source_key, category_view(parts[3]), _parse_page(parts, 4)))
     elif action == "month" and len(parts) >= 5:
-        page = _parse_page(parts, 4)
-        deliver(chat_id, screen_page(source_key, month_view(parts[3]), page), edit_message_id=msg_id)
+        show(screen_page(source_key, month_view(parts[3]), _parse_page(parts, 4)))
 
 
 def _parse_page(parts: list[str], idx: int) -> int:
+    """Parse a 0-based page index out of ``parts[idx]``, defaulting to 0."""
     if len(parts) <= idx:
         return 0
     try:
