@@ -42,8 +42,23 @@ Factories: `ALL_VIEW`, `category_view(cat)`, `month_view(ym)`.
 
 **Screen** — a `(text, inline_keyboard_or_None)` tuple. Pure rendering
 result: no transport, no side effects. Built by `screen_top_menu`,
-`screen_source_menu`, `screen_categories`, `screen_months`, `screen_page`.
-A Screen is what `deliver` sends to Telegram.
+`screen_source_menu`, `screen_categories`, `screen_months`, `screen_page`,
+`screen_item`. A Screen is what `deliver` sends to Telegram.
+
+**Detail screen** — `screen_item(source_key, url_id)`. Full per-Item view:
+category, score, full skills_in_repo, test_steps, metric, description.
+For watch Items: signal_to_wait + why_interesting + baseline metrics.
+Reached via `[📋 N]` buttons in any paginated list. Back navigation
+returns to the unfiltered list (page 0) — the original filter/page
+context isn't preserved (would inflate callback_data past Telegram's
+64-byte limit).
+
+**url_id** — 8-char sha1 prefix of an Item's URL. Used inside
+`callback_data` as a compact stable identifier when `repo_full_name` is
+either too long (workflows pipeline stores `"owner/repo: wf-name"`
+which exceeds Telegram's 64-byte callback limit) or contains a colon
+that would collide with our `:` delimiter. Built by `_url_id(url)`,
+reverse-looked-up by `Items.find_by_url_id(uid)`.
 
 **deliver** — the single transport adapter. Takes a Screen and either
 sends it as a new Telegram message or edits an existing one

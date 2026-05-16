@@ -8,6 +8,7 @@ Supports three data sources: Claude Skills, n8n Workflows, Make Workflows.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import sys
@@ -274,7 +275,8 @@ def _format_item_line(item: dict, source_key: str) -> str:
     cat = item.get("category", "")
     cat_labels = SOURCES[source_key].categories
     cat_str = f" • {cat_labels.get(cat, cat)}" if cat else ""
-    return f"• {status_prefix}{tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
+    # No leading bullet — caller prefixes with its own marker ("N." for paginated lists).
+    return f"{status_prefix}{tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
 
 
 # === Items ===
@@ -357,6 +359,13 @@ class Items:
             return self.filter_by_month(view.arg)
         return self
 
+    def find_by_url_id(self, uid: str) -> dict | None:
+        """Look up a single Item by its short URL hash. None if not found."""
+        for item in self._items:
+            if _url_id(item.get("url") or "") == uid:
+                return item
+        return None
+
     def __len__(self) -> int:
         return len(self._items)
 
@@ -365,6 +374,16 @@ class Items:
 
     def __getitem__(self, idx):
         return self._items[idx]
+
+
+def _url_id(url: str) -> str:
+    """Short stable identifier for an Item URL — fits in Telegram's 64-byte
+    callback_data limit even when repo_full_name is too long. 8 hex chars
+    from sha1; collision space is ~16M which is plenty for our DB scale.
+    """
+    if not url:
+        return ""
+    return hashlib.sha1(url.encode("utf-8")).hexdigest()[:8]
 
 
 # === Views ===
@@ -391,6 +410,111 @@ def category_view(cat: str) -> View:
 
 def month_view(ym: str) -> View:
     return View(kind="month", nav_token=f"month:{ym}", arg=ym)
+
+
+def _format_detail_recommended(item: dict, source_key: str) -> str:
+    """Multi-section Markdown body for the item-detail screen (recommended item)."""
+    title = _md_escape(item.get("title") or item.get("repo_full_name") or "?")
+    url = item.get("url") or ""
+    cat_labels = SOURCES[source_key].categories
+    cat = item.get("category") or ""
+    cat_label = cat_labels.get(cat, cat or SOURCES[source_key].default_category)
+
+    lines = [f"📚 *{title}*", ""]
+    lines.append(f"🏷 Категория: {cat_label}")
+    if first := item.get("first_recommended"):
+        lines.append(f"📅 Добавлен: {first}")
+
+    meta_parts: list[str] = []
+    stars = item.get("stars")
+    if isinstance(stars, int):
+        meta_parts.append(f"⭐ {stars}")
+    score = item.get("final_score")
+    if isinstance(score, (int, float)) and not isinstance(score, bool):
+        meta_parts.append(f"📊 score {score}")
+    if conf := item.get("confidence"):
+        meta_parts.append(f"confidence {conf}")
+    if meta_parts:
+        lines.append(" • ".join(meta_parts))
+
+    if desc := item.get("description"):
+        lines.append("")
+        lines.append("📝 " + _md_escape(desc))
+
+    skills_in_repo = item.get("skills_in_repo") or []
+    if skills_in_repo:
+        lines.append("")
+        n = len(skills_in_repo)
+        label = "workflows" if item.get("tool") else "skills"
+        lines.append(f"📦 {label.capitalize()} внутри ({n}):")
+        for s in skills_in_repo[:15]:
+            lines.append(f"• {_md_escape(str(s))}")
+        if n > 15:
+            lines.append(f"… ещё {n - 15}")
+
+    test_steps = item.get("test_steps") or []
+    if test_steps:
+        lines.append("")
+        lines.append("🧪 Шаги тестирования:")
+        for i, step in enumerate(test_steps, 1):
+            lines.append(f"{i}. {_md_escape(str(step))}")
+
+    if metric := item.get("metric"):
+        lines.append("")
+        lines.append(f"📈 Метрика: {_md_escape(metric)}")
+
+    if url:
+        lines.append("")
+        lines.append(f"🔗 [Открыть в GitHub]({url})")
+
+    return "\n".join(lines)
+
+
+def _format_detail_watch(item: dict, source_key: str) -> str:
+    """Multi-section Markdown body for a watch item."""
+    title = _md_escape(item.get("title") or item.get("repo_full_name") or "?")
+    url = item.get("url") or ""
+    cat_labels = SOURCES[source_key].categories
+    cat = item.get("category") or ""
+    cat_label = cat_labels.get(cat, cat or SOURCES[source_key].default_category)
+
+    lines = [f"👀 *{title}*", ""]
+    lines.append("📍 Статус: На наблюдении")
+    lines.append(f"🏷 Категория: {cat_label}")
+    if added := item.get("added_date"):
+        suffix = f" (истекает {item['expires_at']})" if item.get("expires_at") else ""
+        lines.append(f"📅 Добавлен: {added}{suffix}")
+    if last := item.get("last_checked"):
+        lines.append(f"📍 Последняя проверка: {last}")
+
+    if why := item.get("why_interesting"):
+        lines.append("")
+        lines.append("💡 Почему интересно:")
+        lines.append(_md_escape(why))
+
+    if signal := item.get("signal_to_wait"):
+        lines.append("")
+        lines.append("🎯 Сигнал ожидания:")
+        lines.append(_md_escape(signal))
+
+    baseline = item.get("metric_baseline") or {}
+    base_lines: list[str] = []
+    if isinstance(baseline.get("stars"), int):
+        base_lines.append(f"• ⭐ stars: {baseline['stars']}")
+    if isinstance(baseline.get("skills_count"), int):
+        base_lines.append(f"• 📦 skills: {baseline['skills_count']}")
+    if isinstance(baseline.get("cross_source_count"), int):
+        base_lines.append(f"• 🔗 sources: {baseline['cross_source_count']}")
+    if base_lines:
+        lines.append("")
+        lines.append("📊 Baseline-метрики:")
+        lines.extend(base_lines)
+
+    if url:
+        lines.append("")
+        lines.append(f"🔗 [Открыть в GitHub]({url})")
+
+    return "\n".join(lines)
 
 
 def _title_for_view(view: View, source_key: str) -> str:
@@ -437,8 +561,19 @@ def _render_page(
         return (f"*{title}*\n\nПусто.", kb)
 
     lines = [f"*{title}* — стр. {page+1}/{total_pages} ({total} всего)\n"]
-    for s in chunk:
-        lines.append(_format_item_line(s, source_key))
+    for i, s in enumerate(chunk, 1):
+        # Render with a numeric prefix matching the [📋 N] button below.
+        lines.append(f"{i}. {_format_item_line(s, source_key)}")
+
+    # Detail-screen entry: one button per item on this page. `_url_id` keeps
+    # callback_data short and stable even for long repo_full_name values.
+    detail_row = [
+        {
+            "text": f"📋 {i}",
+            "callback_data": f"src:{source_key}:item:{_url_id(s.get('url') or '')}",
+        }
+        for i, s in enumerate(chunk, 1)
+    ]
 
     nav: list[dict] = []
     if page > 0:
@@ -455,7 +590,7 @@ def _render_page(
                 "callback_data": f"src:{source_key}:{nav_token}:{page+1}",
             }
         )
-    kb_rows: list[list[dict]] = []
+    kb_rows: list[list[dict]] = [detail_row]
     if nav:
         kb_rows.append(nav)
     kb_rows.append([{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}])
@@ -556,6 +691,31 @@ def screen_page(source_key: str, view: View, page: int) -> Screen:
     )
 
 
+def screen_item(source_key: str, uid: str) -> Screen:
+    """Detail screen for one Item, looked up by short URL hash.
+
+    Back navigation: ``« К списку`` jumps to the first page of the Source's
+    ``all`` view — the previous filter/page context isn't preserved in the
+    callback chain (would inflate callback_data past Telegram's 64-byte limit).
+    """
+    item = Items.load(source_key).find_by_url_id(uid)
+    if item is None:
+        text = "Айтем не найден — возможно, удалён из базы."
+    elif item.get("_status") == "watch":
+        text = _format_detail_watch(item, source_key)
+    else:
+        text = _format_detail_recommended(item, source_key)
+
+    kb = {
+        "inline_keyboard": [
+            [{"text": "« К списку", "callback_data": f"src:{source_key}:list:0"}],
+            [{"text": "« Меню источника", "callback_data": f"src:{source_key}:menu"}],
+            [{"text": "« Источник", "callback_data": "menu"}],
+        ]
+    }
+    return text, kb
+
+
 # === Transport adapter ===
 def deliver(
     chat_id: int,
@@ -646,6 +806,8 @@ def handle_callback(update: dict) -> None:
         show(screen_page(source_key, category_view(parts[3]), _parse_page(parts, 4)))
     elif action == "month" and len(parts) >= 5:
         show(screen_page(source_key, month_view(parts[3]), _parse_page(parts, 4)))
+    elif action == "item" and len(parts) >= 4:
+        show(screen_item(source_key, parts[3]))
 
 
 def _parse_page(parts: list[str], idx: int) -> int:
