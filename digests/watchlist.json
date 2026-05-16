@@ -4,7 +4,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-15",
+      "last_checked": "2026-05-16",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 25,
@@ -15,6 +15,22 @@
       "title": "HsuanYuLee/polaris",
       "url": "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills",
       "why_interesting": "25 skills — крупнейший набор в сегодняшней выборке, охватывает полный agile-цикл: от intake-triage и sprint-planning до standup, review-pr, visual-regression и memory-hygiene. Уникальны: codex-mcp-setup, memory-hygiene, verify-AC (acceptance criteria). Если качество SKILL.md на уровне — это потенциально лучший agile-toolkit для Claude Code."
+    },
+    "https://github.com/abhay-rana/create-modern-react/tree/main/.claude/skills": {
+      "added_date": "2026-05-16",
+      "category": "general_skill",
+      "expires_at": "2026-06-15",
+      "last_checked": "2026-05-16",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 8,
+        "stars": 2
+      },
+      "repo_full_name": "abhay-rana/create-modern-react",
+      "signal_to_wait": "Рост звёзд до ≥10, появление в дополнительных источниках (Reddit/Twitter), или подтверждение что autoskill действительно генерирует SKILL.md автоматически",
+      "title": "abhay-rana/create-modern-react",
+      "url": "https://github.com/abhay-rana/create-modern-react/tree/main/.claude/skills",
+      "why_interesting": "8 React-специфичных skills (react-best-practices, ui-ux-pro-max, frontend-design, agent-browser, autoskill) — редкая React-ориентированная коллекция. Интересен skill autoskill, судя по названию — автоматическое создание новых skills."
     }
   }
 }

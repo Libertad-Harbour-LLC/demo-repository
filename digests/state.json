@@ -1,13 +1,5 @@
 {
   "items": {
-    "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills": {
-      "first_seen": "2026-05-15T11:17:12Z",
-      "score": null,
-      "skills_count": 25,
-      "source": "github",
-      "stars": 4,
-      "title": "HsuanYuLee/polaris"
-    },
     "https://github.com/Murf-y/NetworkModelsVisualization/tree/main/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
       "score": null,
@@ -15,6 +7,22 @@
       "source": "github",
       "stars": 0,
       "title": "Murf-y/NetworkModelsVisualization"
+    },
+    "https://github.com/ProfSynapse/Stampede/tree/main/.claude/skills": {
+      "first_seen": "2026-05-16T10:11:25Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github",
+      "stars": 0,
+      "title": "ProfSynapse/Stampede"
+    },
+    "https://github.com/abhay-rana/create-modern-react/tree/main/.claude/skills": {
+      "first_seen": "2026-05-16T10:11:25Z",
+      "score": null,
+      "skills_count": 8,
+      "source": "github",
+      "stars": 2,
+      "title": "abhay-rana/create-modern-react"
     },
     "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
@@ -29,16 +37,16 @@
       "score": null,
       "skills_count": 21,
       "source": "github",
-      "stars": 3356,
+      "stars": 3357,
       "title": "atopile/atopile"
     },
-    "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
-      "first_seen": "2026-05-15T11:17:12Z",
+    "https://github.com/daloopa/investing/tree/main/.claude/skills": {
+      "first_seen": "2026-05-16T10:11:25Z",
       "score": null,
-      "skills_count": 16,
+      "skills_count": 23,
       "source": "github",
-      "stars": 709,
-      "title": "doccker/cc-use-exp"
+      "stars": 466,
+      "title": "daloopa/investing"
     },
     "https://github.com/halfwhey/claudraband/tree/master/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
@@ -56,12 +64,20 @@
       "stars": 2,
       "title": "jayli/block-proxy"
     },
+    "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
+      "first_seen": "2026-05-16T10:11:25Z",
+      "score": null,
+      "skills_count": 41,
+      "source": "github",
+      "stars": 196,
+      "title": "maslennikov-ig/claude-code-orchestrator-kit"
+    },
     "https://github.com/nativewind/nativewind/tree/main/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
       "score": null,
       "skills_count": 4,
       "source": "github",
-      "stars": 7828,
+      "stars": 7830,
       "title": "nativewind/nativewind"
     },
     "https://github.com/oysteinkrog/dotfiles/tree/master/.claude/skills": {
@@ -71,14 +87,6 @@
       "source": "github",
       "stars": 0,
       "title": "oysteinkrog/dotfiles"
-    },
-    "https://github.com/pr-pm/prpm/tree/main/.claude/skills": {
-      "first_seen": "2026-05-14T12:50:57Z",
-      "score": null,
-      "skills_count": 39,
-      "source": "github",
-      "stars": 109,
-      "title": "pr-pm/prpm"
     },
     "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
@@ -104,14 +112,6 @@
       "stars": 1,
       "title": "sverzijl/planning_latest"
     },
-    "https://github.com/vlados/lawdiff/tree/main/.claude/skills": {
-      "first_seen": "2026-05-15T11:17:12Z",
-      "score": null,
-      "skills_count": 5,
-      "source": "github",
-      "stars": 3,
-      "title": "vlados/lawdiff"
-    },
     "https://github.com/yanochka11/harness_bro/tree/main/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
       "score": null,
@@ -121,5 +121,5 @@
       "title": "yanochka11/harness_bro"
     }
   },
-  "last_run": "2026-05-15T11:17:12Z"
+  "last_run": "2026-05-16T10:11:25Z"
 }

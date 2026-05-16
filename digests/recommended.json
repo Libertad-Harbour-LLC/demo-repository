@@ -37,6 +37,58 @@
       "title": "anyproto/anytype-ts",
       "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills"
     },
+    "https://github.com/daloopa/investing/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "final_score": 8.5,
+      "first_recommended": "2026-05-16",
+      "metric": "Насколько полна и структурирована DCF/earnings модель без дополнительных подсказок",
+      "promoted_from_watch": false,
+      "repo_full_name": "daloopa/investing",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 23,
+      "skills_in_repo": [
+        "build-model",
+        "bull-bear",
+        "capital-allocation",
+        "comp-sheet",
+        "comps",
+        "dcf",
+        "earnings-flash",
+        "earnings-prep",
+        "earnings",
+        "guidance-tracker",
+        "ib-deck",
+        "industry",
+        "inflection",
+        "initiate",
+        "meta-skill",
+        "precedent-transactions",
+        "research-note",
+        "setup",
+        "supply-chain",
+        "tearsheet",
+        "unit-economics",
+        "update",
+        "working-capital"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/daloopa/investing.git",
+        "Скопировать нужный skill: cp -r investing/.claude/skills/dcf /ваш-проект/.claude/skills/dcf",
+        "Открыть Claude Code в вашем проекте и написать: 'Используй skill dcf для анализа компании [название] с данными: Revenue X, EBITDA Y, FCF Z'",
+        "Проверить, что Claude Code подхватил SKILL.md и сформировал структурированную DCF-модель"
+      ],
+      "title": "daloopa/investing",
+      "url": "https://github.com/daloopa/investing/tree/main/.claude/skills"
+    },
     "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -82,6 +134,55 @@
       ],
       "title": "doccker/cc-use-exp",
       "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills"
+    },
+    "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-16",
+      "metric": "Качество структурированного отчёта по дебагу и полнота замечаний в code-review по сравнению с базовым промтом без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "maslennikov-ig/claude-code-orchestrator-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "algorithmic-art",
+        "artifacts-builder",
+        "code-review",
+        "changelog-generator",
+        "git-commit-helper",
+        "systematic-debugging",
+        "senior-architect",
+        "senior-devops",
+        "senior-prompt-engineer",
+        "security-health-inline",
+        "deps-health-inline",
+        "webapp-testing",
+        "ui-design-system",
+        "ux-researcher-designer",
+        "run-quality-gate",
+        "parse-error-logs",
+        "rollback-changes",
+        "frontend-aesthetics",
+        "format-commit-message",
+        "process-issues"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/maslennikov-ig/claude-code-orchestrator-kit.git",
+        "Скопировать нужные skills: cp -r claude-code-orchestrator-kit/.claude/skills/systematic-debugging /ваш-проект/.claude/skills/ && cp -r claude-code-orchestrator-kit/.claude/skills/code-review /ваш-проект/.claude/skills/",
+        "Открыть Claude Code в проекте и написать: 'Запусти systematic-debugging для функции [X] — она возвращает неправильный результат при входных данных Y'",
+        "Затем протестировать code-review: 'Проведи code-review последнего коммита'"
+      ],
+      "title": "maslennikov-ig/claude-code-orchestrator-kit",
+      "url": "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills"
     }
   }
 }
