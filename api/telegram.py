@@ -12,8 +12,9 @@ import json
 import os
 import sys
 import time
+from dataclasses import dataclass
 from http.server import BaseHTTPRequestHandler
-from typing import Any
+from typing import Any, Literal
 
 import requests
 
@@ -311,13 +312,52 @@ def _all_items_sorted(db: dict, source_key: str) -> list[dict]:
     return items
 
 
-def _filter_by_category(items: list[dict], cat: str, source_key: str) -> list[dict]:
-    default_cat = SOURCES[source_key]["default_category"]
-    return [s for s in items if s.get("category", default_cat) == cat]
+# === Views ===
+# A View selects what to show on a paginated screen. `nav_token` is the
+# callback-data suffix used for pagination (`src:<source>:<nav_token>:<page>`)
+# and MUST stay byte-identical across releases — inline keyboards live in user
+# chat history indefinitely and fire the exact string they were built with.
+ViewKind = Literal["all", "category", "month"]
 
 
-def _filter_by_month(items: list[dict], ym: str) -> list[dict]:
-    return [s for s in items if (s.get("first_recommended") or "")[:7] == ym]
+@dataclass(frozen=True)
+class View:
+    kind: ViewKind
+    nav_token: str
+    arg: str | None = None  # category slug for "category"; YYYY-MM for "month"
+
+
+ALL_VIEW = View(kind="all", nav_token="list")
+
+
+def category_view(cat: str) -> View:
+    return View(kind="category", nav_token=f"cat:{cat}", arg=cat)
+
+
+def month_view(ym: str) -> View:
+    return View(kind="month", nav_token=f"month:{ym}", arg=ym)
+
+
+def _filter_for_view(items: list[dict], view: View, source_key: str) -> list[dict]:
+    if view.kind == "category":
+        default_cat = SOURCES[source_key]["default_category"]
+        return [s for s in items if s.get("category", default_cat) == view.arg]
+    if view.kind == "month":
+        return [s for s in items if (s.get("first_recommended") or "")[:7] == view.arg]
+    return items
+
+
+def _title_for_view(view: View, source_key: str) -> str:
+    header = SOURCES[source_key]["header"]
+    if view.kind == "category":
+        cat_labels = SOURCES[source_key]["categories"]
+        label = cat_labels.get(
+            view.arg, view.arg or SOURCES[source_key]["default_category"]
+        )
+        return f"{header} — {label}"
+    if view.kind == "month":
+        return f"{header} — 📅 {view.arg}"
+    return f"Все — {header}"
 
 
 # === Page rendering ===
@@ -486,28 +526,15 @@ def _build_months_view(db: dict, source_key: str) -> tuple[str, dict]:
     return text, {"inline_keyboard": rows}
 
 
-# === Render dispatchers (shared by send + edit paths) ===
-def _render_list_page(source_key: str, page: int) -> tuple[str, dict]:
-    db = _fetch(source_key)
-    items = _all_items_sorted(db, source_key)
-    title = f"Все — {SOURCES[source_key]['header']}"
-    return _render_page(items, page, title, source_key, "list")
-
-
-def _render_category_page(source_key: str, cat: str, page: int) -> tuple[str, dict]:
-    db = _fetch(source_key)
-    items = _filter_by_category(_all_items_sorted(db, source_key), cat, source_key)
-    cat_labels = SOURCES[source_key]["categories"]
-    label = cat_labels.get(cat, cat or SOURCES[source_key]["default_category"])
-    title = f"{SOURCES[source_key]['header']} — {label}"
-    return _render_page(items, page, title, source_key, f"cat:{cat}")
-
-
-def _render_month_page(source_key: str, ym: str, page: int) -> tuple[str, dict]:
-    db = _fetch(source_key)
-    items = _filter_by_month(_all_items_sorted(db, source_key), ym)
-    title = f"{SOURCES[source_key]['header']} — 📅 {ym}"
-    return _render_page(items, page, title, source_key, f"month:{ym}")
+# === Render dispatcher (shared by send + edit paths) ===
+def render_page(source_key: str, view: View, page: int) -> tuple[str, dict]:
+    """Render a paginated bot screen for ``view`` of ``source_key``."""
+    items = _filter_for_view(
+        _all_items_sorted(_fetch(source_key), source_key), view, source_key
+    )
+    return _render_page(
+        items, page, _title_for_view(view, source_key), source_key, view.nav_token
+    )
 
 
 # === Static help text ===
@@ -567,7 +594,7 @@ def handle_source_menu(chat_id: int, source_key: str) -> None:
 
 
 def handle_list(chat_id: int, source_key: str, page: int = 0) -> None:
-    text, kb = _render_list_page(source_key, page)
+    text, kb = render_page(source_key, ALL_VIEW, page)
     _send_message(chat_id, text, kb)
 
 
@@ -607,21 +634,21 @@ def _edit_months(chat_id: int, message_id: int, source_key: str) -> None:
 
 
 def _edit_list(chat_id: int, message_id: int, source_key: str, page: int) -> None:
-    text, kb = _render_list_page(source_key, page)
+    text, kb = render_page(source_key, ALL_VIEW, page)
     _edit_message(chat_id, message_id, text, kb)
 
 
 def _edit_category(
     chat_id: int, message_id: int, source_key: str, cat: str, page: int
 ) -> None:
-    text, kb = _render_category_page(source_key, cat, page)
+    text, kb = render_page(source_key, category_view(cat), page)
     _edit_message(chat_id, message_id, text, kb)
 
 
 def _edit_month(
     chat_id: int, message_id: int, source_key: str, ym: str, page: int
 ) -> None:
-    text, kb = _render_month_page(source_key, ym, page)
+    text, kb = render_page(source_key, month_view(ym), page)
     _edit_message(chat_id, message_id, text, kb)
 
 
