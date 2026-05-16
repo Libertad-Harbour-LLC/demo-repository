@@ -11,4 +11,9 @@ venv/
 .superflow/
 .par-evidence.json
 .worktrees/
-.claude/
+# Ignore everything in .claude/ (session state, local settings) except the
+# skills/ subtree, which holds project-level skill artifacts that SHOULD be
+# committed. The `/*` form is required for the `!` negation to apply to
+# subdirectories — `.claude/` would exclude the dir itself.
+.claude/*
+!.claude/skills/
