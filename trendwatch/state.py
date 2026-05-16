@@ -153,7 +153,11 @@ def compute_deltas(
 def save_state(
     items_by_source: dict[str, list[dict]], path: str = DEFAULT_PATH
 ) -> None:
-    """Persist a fresh snapshot, preserving ``first_seen`` for known items."""
+    """Persist a fresh snapshot, preserving ``first_seen`` for known items.
+
+    Other top-level keys in the existing state file (e.g. ``last_sent_date``)
+    are preserved as-is so idempotency markers survive a state-save.
+    """
     prev = load_state(path)
     prev_items = prev.get("items", {}) or {}
     now = _now_iso()
@@ -175,7 +179,32 @@ def save_state(
                 "skills_count": skills_count,
                 "first_seen": first_seen,
             }
-    snapshot: dict[str, Any] = {"last_run": now, "items": new_items}
+    snapshot: dict[str, Any] = dict(prev)
+    snapshot["last_run"] = now
+    snapshot["items"] = new_items
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+
+def _today_utc() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def was_sent_today(path: str = DEFAULT_PATH) -> bool:
+    """Return True if the pipeline already sent a Telegram digest today.
+
+    Used as an idempotency guard: protects the Anthropic API budget when the
+    workflow is re-triggered manually (workflow_dispatch retries, CI reruns).
+    """
+    data = load_state(path)
+    return data.get("last_sent_date") == _today_utc()
+
+
+def mark_sent_today(path: str = DEFAULT_PATH) -> None:
+    """Record today's date as the last successful Telegram send."""
+    data = load_state(path)
+    data["last_sent_date"] = _today_utc()
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2, sort_keys=True)

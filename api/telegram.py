@@ -31,6 +31,7 @@ SOURCES: dict[str, dict[str, Any]] = {
     "skills": {
         "label": "📚 Claude Skills",
         "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/recommended.json",
+        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/watchlist.json",
         "categories": {
             "marketing_skill": "📈 Marketing",
             "vibe_coding_skill": "💻 Vibe coding",
@@ -44,6 +45,7 @@ SOURCES: dict[str, dict[str, Any]] = {
     "n8n": {
         "label": "⚙️ N8N Workflows",
         "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
+        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
         "categories": {
             "marketing_workflow": "📈 Marketing",
             "sales_workflow": "💰 Sales",
@@ -59,6 +61,7 @@ SOURCES: dict[str, dict[str, Any]] = {
     "make": {
         "label": "🧩 Make Workflows",
         "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
+        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
         "categories": {
             "marketing_workflow": "📈 Marketing",
             "sales_workflow": "💰 Sales",
@@ -79,10 +82,8 @@ VALID_SOURCES = set(SOURCES.keys())
 _cache: dict[str, tuple[float, dict]] = {}
 
 
-def _fetch(source_key: str) -> dict:
-    if source_key not in SOURCES:
-        return {"skills": {}}
-    url = SOURCES[source_key]["url"]
+def _fetch_url(url: str, empty: dict) -> dict:
+    """GET a JSON URL with a short in-process cache. Returns ``empty`` on miss."""
     now = time.time()
     cached = _cache.get(url)
     if cached is not None and now - cached[0] < CACHE_TTL_SECONDS:
@@ -92,11 +93,28 @@ def _fetch(source_key: str) -> dict:
         if resp.status_code == 200:
             data = resp.json()
         else:
-            data = {"skills": {}}
+            data = dict(empty)
     except Exception:
-        data = cached[1] if cached is not None else {"skills": {}}
+        data = cached[1] if cached is not None else dict(empty)
     _cache[url] = (now, data)
     return data
+
+
+def _fetch(source_key: str) -> dict:
+    """Fetch the recommended-skills DB for a source."""
+    if source_key not in SOURCES:
+        return {"skills": {}}
+    return _fetch_url(SOURCES[source_key]["url"], {"skills": {}})
+
+
+def _fetch_watchlist(source_key: str) -> dict:
+    """Fetch the watchlist DB for a source (separate file, separate schema)."""
+    if source_key not in SOURCES:
+        return {"items": {}}
+    url = SOURCES[source_key].get("watchlist_url")
+    if not url:
+        return {"items": {}}
+    return _fetch_url(url, {"items": {}})
 
 
 # === Telegram API helpers ===
@@ -201,6 +219,7 @@ def _format_item_line(item: dict, source_key: str) -> str:
     tool_prefix = ""
     if isinstance(tool, str) and tool:
         tool_prefix = f"[{tool}] "
+    status_prefix = "👀 " if item.get("_status") == "watch" else ""
 
     # Workflows have a `workflows` array; skills have `skills_in_repo` (or `skills`).
     sub_items = (
@@ -237,15 +256,54 @@ def _format_item_line(item: dict, source_key: str) -> str:
     cat = item.get("category", "")
     cat_labels = SOURCES[source_key]["categories"]
     cat_str = f" • {cat_labels.get(cat, cat)}" if cat else ""
-    return f"• {tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
+    return f"• {status_prefix}{tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
 
 
 # === Item selection ===
+def _normalize_watch_item(entry: dict) -> dict:
+    """Map a watchlist.json entry to the shape ``_format_item_line`` expects.
+
+    Watchlist entries use ``added_date`` instead of ``first_recommended`` and
+    lack scoring fields — we just copy what's there and tag with ``_status``.
+    """
+    out = dict(entry)
+    out["_status"] = "watch"
+    if "first_recommended" not in out and "added_date" in out:
+        out["first_recommended"] = out["added_date"]
+    return out
+
+
 def _all_items_sorted(db: dict, source_key: str) -> list[dict]:
-    items = list((db.get("skills") or {}).values())
+    """Merge recommended + watchlist items for a source.
+
+    Recommended items take precedence: if a URL appears in both files (e.g.
+    a watch item that just graduated), only the recommended version is shown.
+    Watch items render with a 👀 prefix.
+    """
+    rec_items = list((db.get("skills") or {}).values())
+    rec_urls = {i.get("url") for i in rec_items if i.get("url")}
+
+    watch_db = _fetch_watchlist(source_key)
+    watch_items = [
+        _normalize_watch_item(e)
+        for e in (watch_db.get("items") or {}).values()
+        if isinstance(e, dict) and e.get("url") not in rec_urls
+    ]
+
+    items = rec_items + watch_items
     tool_filter = SOURCES[source_key]["tool_filter"]
     if tool_filter is not None:
-        items = [i for i in items if i.get("tool") == tool_filter]
+        # Watchlist entries written by older pipeline runs lack a `tool`
+        # field. Surface those only under the "n8n" bucket (workflows
+        # pipeline defaults to n8n; Make watchlist is empty in practice).
+        def _matches(i: dict) -> bool:
+            t = i.get("tool")
+            if t == tool_filter:
+                return True
+            if i.get("_status") == "watch" and not t and tool_filter == "n8n":
+                return True
+            return False
+        items = [i for i in items if _matches(i)]
     items.sort(
         key=lambda s: (s.get("first_recommended", ""), s.get("title", "")),
         reverse=True,

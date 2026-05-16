@@ -146,6 +146,7 @@ decision:
   ],
   "top_watch": [
     {"name": "<owner/repo>: <wf>", "tool": "n8n|make|other",
+     "category": "marketing_workflow|sales_workflow|data_workflow|devops_workflow|content_workflow|general_workflow",
      "url": "ОБЯЗАТЕЛЬНО", "json_url": "...", "source": "...",
      "why_interesting": "...", "signal_to_wait": "..."}
   ],
@@ -205,6 +206,10 @@ URL — это plain text без markdown-обёртки. Если `json_url` о
 Каждая строка в блоке начинается с тэга `[n8n]` или `[make]` или `[other]`
 (значение `tool` элемента) — это помогает читателю фильтровать.
 
+ВАЖНО: блок `🗑 Пропустить:` в Telegram НЕ выводится — `top_skip` нужен только
+в JSON для Markdown-отчёта и self-check. В Telegram пиши только блоки
+«Готовые к импорту», «Понаблюдать», «Лучший workflow дня».
+
 ⚙️ Daily Workflow Radar — YYYY-MM-DD
 
 Главное:
@@ -221,10 +226,6 @@ URL — это plain text без markdown-обёртки. Если `json_url` о
 🔗 <json_url>
 2. [make] <owner/repo> — <какой сигнал ждать>
 🔗 <json_url>
-
-🗑 Пропустить:
-1. [n8n] <owner/repo> — <причина>
-🔗 <url>
 
 🎯 Лучший workflow дня:
 [<tool>] <owner/repo>: <workflow-name> + 3-5 шагов установки

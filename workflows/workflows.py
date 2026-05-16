@@ -26,7 +26,6 @@ if _ROOT not in sys.path:
 
 from trendwatch import analyzer  # noqa: E402
 from trendwatch import index_writer  # noqa: E402
-from trendwatch import links  # noqa: E402
 from trendwatch import report  # noqa: E402
 from trendwatch import skill_db  # noqa: E402
 from trendwatch import state  # noqa: E402
@@ -156,7 +155,9 @@ def _write_report(analysis: dict, date: str) -> str:
     return path
 
 
-def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
+def run(
+    dry_run: bool = False, no_analyzer: bool = False, force: bool = False
+) -> int:
     bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
 
@@ -168,6 +169,11 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
                 file=sys.stderr,
             )
             return 1
+
+    # Idempotency guard: skip if a digest was already sent today.
+    if not dry_run and not force and state.was_sent_today(path=config.STATE_PATH):
+        print("[ALREADY_SENT_TODAY] workflows digest already sent today, skipping")
+        return 0
 
     items_by_source = _fetch_all()
     counts = " ".join(f"{k}={len(v)}" for k, v in items_by_source.items())
@@ -244,7 +250,6 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
             "уже были в предыдущих дайджестах без значимого роста.\n\n"
             f"\U0001f4ca Источников проверено: {', '.join(items_by_source.keys())}"
         )
-        msg += "\n\n" + links.build_footer(category="workflows")
         try:
             telegram_client.send_text(msg, bot_token, chat_id)
         except Exception as exc:
@@ -259,6 +264,10 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
             skill_db.save_watchlist(watchlist_db, path=config.WATCHLIST_PATH)
         except Exception as exc:
             print(f"[workflows] watchlist save failed: {exc}", file=sys.stderr)
+        try:
+            state.mark_sent_today(path=config.STATE_PATH)
+        except Exception as exc:
+            print(f"[workflows] mark_sent failed: {exc}", file=sys.stderr)
         print("[WORKFLOWS_NO_NEW_ITEMS]")
         print(summary)
         return 0
@@ -336,7 +345,11 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
             skill_db.remove_from_watchlist(watchlist_db, list(to_remove))
 
         added_watch = skill_db.add_to_watchlist(
-            watchlist_db, top_watch_items, date, baseline_map
+            watchlist_db,
+            top_watch_items,
+            date,
+            baseline_map,
+            default_category="general_workflow",
         )
         if added_watch:
             print(
@@ -370,16 +383,17 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
     except Exception as exc:
         print(f"[workflows] report write failed: {exc}", file=sys.stderr)
 
-    telegram_text = telegram_text.rstrip() + "\n\n" + links.build_footer(
-        category="workflows"
-    )
-
     try:
         telegram_client.send_text(telegram_text, bot_token, chat_id)
     except Exception as exc:
         print(f"[workflows] telegram send_text failed: {exc}", file=sys.stderr)
         print(summary)
         return 1
+
+    try:
+        state.mark_sent_today(path=config.STATE_PATH)
+    except Exception as exc:
+        print(f"[workflows] mark_sent failed: {exc}", file=sys.stderr)
 
     print("[WORKFLOWS_ANALYSIS_OK]")
     print(summary)
@@ -398,8 +412,15 @@ def main() -> int:
         action="store_true",
         help="Skip LLM analysis and state I/O; send the legacy link digest",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Bypass the once-per-day idempotency guard (for manual reruns).",
+    )
     args = parser.parse_args()
-    return run(dry_run=args.dry_run, no_analyzer=args.no_analyzer)
+    return run(
+        dry_run=args.dry_run, no_analyzer=args.no_analyzer, force=args.force
+    )
 
 
 if __name__ == "__main__":

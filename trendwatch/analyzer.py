@@ -171,7 +171,31 @@ def analyze(
     if missing:
         raise AnalyzerError(f"analysis missing required keys: {missing}")
 
+    # Defensive cleanup: even though the system prompt forbids the
+    # "🗑 Пропустить" Telegram block, the model occasionally emits it
+    # anyway from prompt-cache memory. Strip it post-hoc so users never see
+    # the skip section in the daily digest.
+    summary = parsed.get("telegram_summary")
+    if isinstance(summary, str) and summary:
+        parsed["telegram_summary"] = _strip_skip_block(summary)
+
     return parsed
+
+
+_SKIP_BLOCK_RE = re.compile(
+    r"^\s*\U0001f5d1[^\n]*\n(?:(?!^\s*(?:\U0001f680|\U0001f525|\U0001f440|"
+    r"\U0001f3af|\U0001f4ca|⚠️|⚙️|\U0001f4a1)).*\n?)*",
+    re.MULTILINE,
+)
+
+
+def _strip_skip_block(summary: str) -> str:
+    """Remove the legacy "🗑 Пропустить:" block from a telegram_summary.
+
+    Matches the 🗑 header line and every following line until the next
+    section header (one of the emoji bullets used in our templates).
+    """
+    return _SKIP_BLOCK_RE.sub("", summary).rstrip() + "\n"
 
 
 __all__ = ["analyze", "AnalyzerError", "DEFAULT_MODEL"]
