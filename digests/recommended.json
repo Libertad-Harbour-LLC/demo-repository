@@ -67,6 +67,7 @@
     "https://github.com/JetBrains/ideavim/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
+      "description": "IdeaVim — Vim-движок для IDE от JetBrains (плагин для IntelliJ-платформы, эмулирующий поведение Vim в редакторе).",
       "final_score": 8.2,
       "first_recommended": "2026-05-16",
       "metric": "Сколько времени сэкономлено на подготовке changelog/PR-описания vs ручной работы",
@@ -140,6 +141,7 @@
     "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
+      "description": "Official Anytype client for macOS, Linux, and Windows.",
       "final_score": 7.3,
       "first_recommended": "2026-05-15",
       "metric": "Качество замечаний code review (полнота, конкретность), время генерации release notes vs ручное написание",
@@ -172,8 +174,7 @@
         "Дополнительно протестировать release-notes: 'Сгенерируй release notes для изменений в последних 5 коммитах'"
       ],
       "title": "anyproto/anytype-ts",
-      "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills",
-      "description": "Official Anytype client for macOS, Linux, and Windows."
+      "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills"
     },
     "https://github.com/coreyhaines31/marketingskills/tree/main/skills": {
       "added_manually": true,
@@ -237,6 +238,7 @@
     "https://github.com/daloopa/investing/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "high",
+      "description": "Финансово-аналитический набор скилов от Daloopa для работы с инвестиционными данными в Claude Code.",
       "final_score": 8.5,
       "first_recommended": "2026-05-16",
       "metric": "Насколько полна и структурирована DCF/earnings модель без дополнительных подсказок",
@@ -284,12 +286,12 @@
         "Проверить, что Claude Code подхватил SKILL.md и сформировал структурированную DCF-модель"
       ],
       "title": "daloopa/investing",
-      "url": "https://github.com/daloopa/investing/tree/main/.claude/skills",
-      "description": "Финансово-аналитический набор скилов от Daloopa для работы с инвестиционными данными в Claude Code."
+      "url": "https://github.com/daloopa/investing/tree/main/.claude/skills"
     },
     "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
+      "description": "Layered configuration templates that make Claude Code, Gemini CLI, Codex, and Cursor work out of the box — distilled from a decade of daily development practice.",
       "final_score": 7.0,
       "first_recommended": "2026-05-15",
       "metric": "Находит ли Claude Code реальные multi-tenant/payment уязвимости, которые он пропускал без skill; количество false-positives",
@@ -331,8 +333,7 @@
         "Дополнительно: протестировать payment-callback-safety на любом webhook-обработчике"
       ],
       "title": "doccker/cc-use-exp",
-      "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills",
-      "description": "Layered configuration templates that make Claude Code, Gemini CLI, Codex, and Cursor work out of the box — distilled from a decade of daily development practice."
+      "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills"
     },
     "https://github.com/egerev/superflow": {
       "added_manually": true,
@@ -357,6 +358,7 @@
     "https://github.com/flowglad/flowglad/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
+      "description": "Open-source платёжный провайдер с нулём вебхуков — альтернативная инфраструктура для подписок и платежей (TypeScript, Next.js).",
       "final_score": 7.1,
       "first_recommended": "2026-05-16",
       "metric": "Качество review-комментариев (специфичность для проекта) и процент успешно исправленных CI-чеков с первой попытки",
@@ -428,6 +430,7 @@
     "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
+      "description": "Turn Claude Code into a production powerhouse: 33+ AI agents automate bug fixing, security scanning, and dependency management. 19 slash commands, 6 MCP configs, quality gates, health monitoring.",
       "final_score": 7.2,
       "first_recommended": "2026-05-16",
       "metric": "Качество структурированного отчёта по дебагу и полнота замечаний в code-review по сравнению с базовым промтом без skill",
@@ -472,8 +475,7 @@
         "Затем протестировать code-review: 'Проведи code-review последнего коммита'"
       ],
       "title": "maslennikov-ig/claude-code-orchestrator-kit",
-      "url": "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills",
-      "description": "Turn Claude Code into a production powerhouse: 33+ AI agents automate bug fixing, security scanning, and dependency management. 19 slash commands, 6 MCP configs, quality gates, health monitoring."
+      "url": "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills"
     },
     "https://github.com/mattpocock/skills": {
       "added_manually": true,
