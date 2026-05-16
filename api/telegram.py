@@ -22,6 +22,10 @@ import requests
 # === Constants ===
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 WEBHOOK_SECRET = os.environ.get("TELEGRAM_WEBHOOK_SECRET", "")
+# Optional — gates the "🤖 Объясни простыми словами" button on detail screens.
+# Checked here (not via importing api.llm) so cold-start doesn't pay the
+# anthropic import cost when the feature is disabled.
+LLM_ENABLED = bool(os.environ.get("ANTHROPIC_API_KEY"))
 REPO = os.environ.get("BOT_REPO", "Libertad-Harbour-LLC/demo-repository")
 BRANCH = os.environ.get("BOT_BRANCH", "main")
 CACHE_TTL_SECONDS = 60
@@ -706,13 +710,16 @@ def screen_item(source_key: str, uid: str) -> Screen:
     else:
         text = _format_detail_recommended(item, source_key)
 
-    kb = {
-        "inline_keyboard": [
-            [{"text": "« К списку", "callback_data": f"src:{source_key}:list:0"}],
-            [{"text": "« Меню источника", "callback_data": f"src:{source_key}:menu"}],
-            [{"text": "« Источник", "callback_data": "menu"}],
-        ]
-    }
+    rows: list[list[dict]] = []
+    if LLM_ENABLED and item is not None:
+        rows.append([{
+            "text": "🤖 Объясни простыми словами",
+            "callback_data": f"src:{source_key}:explain:{uid}",
+        }])
+    rows.append([{"text": "« К списку", "callback_data": f"src:{source_key}:list:0"}])
+    rows.append([{"text": "« Меню источника", "callback_data": f"src:{source_key}:menu"}])
+    rows.append([{"text": "« Источник", "callback_data": "menu"}])
+    kb = {"inline_keyboard": rows}
     return text, kb
 
 
@@ -808,6 +815,10 @@ def handle_callback(update: dict) -> None:
         show(screen_page(source_key, month_view(parts[3]), _parse_page(parts, 4)))
     elif action == "item" and len(parts) >= 4:
         show(screen_item(source_key, parts[3]))
+    elif action == "explain" and len(parts) >= 4:
+        # Agentic feature: separate code path (sends a NEW message rather than
+        # editing the detail screen so context stays visible above).
+        handle_explain(chat_id, source_key, parts[3])
 
 
 def _parse_page(parts: list[str], idx: int) -> int:
@@ -818,6 +829,32 @@ def _parse_page(parts: list[str], idx: int) -> int:
         return int(parts[idx])
     except ValueError:
         return 0
+
+
+def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
+    """[🤖 Объясни простыми словами] agentic handler.
+
+    Looks up the Item by url_id, calls the LLM, and sends the explanation as a
+    NEW message (not an edit) so the detail screen stays visible above. Any
+    LLM failure (missing key, timeout, empty response) → fallback message;
+    the handler never raises into the webhook.
+    """
+    # Lazy import — anthropic SDK shouldn't load on every callback cold-start,
+    # only when this code path actually runs.
+    from api.llm import explain_item
+
+    item = Items.load(source_key).find_by_url_id(uid)
+    if item is None:
+        deliver(chat_id, ("Айтем не найден — возможно, удалён из базы.", None))
+        return
+    text = explain_item(item, source_key)
+    if not text:
+        deliver(
+            chat_id,
+            ("Не удалось получить объяснение. Попробуйте позже.", None),
+        )
+        return
+    deliver(chat_id, (text, None))
 
 
 # === Webhook dispatcher ===
