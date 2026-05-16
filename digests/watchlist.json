@@ -1,5 +1,21 @@
 {
   "items": {
+    "https://github.com/Dullu9/10x-Outreach-Skill/tree/main/.claude/skills": {
+      "added_date": "2026-05-16",
+      "category": "marketing_skill",
+      "expires_at": "2026-06-15",
+      "last_checked": "2026-05-16",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 27,
+        "stars": 1
+      },
+      "repo_full_name": "Dullu9/10x-Outreach-Skill",
+      "signal_to_wait": "Сейчас 1 звезда и нет внешних упоминаний — подождать появления ≥5 звёзд или упоминаний на Reddit/Twitter, а также убедиться что SKILL.md в каждой папке содержательны, а не пустышки",
+      "title": "Dullu9/10x-Outreach-Skill",
+      "url": "https://github.com/Dullu9/10x-Outreach-Skill/tree/main/.claude/skills",
+      "why_interesting": "Самый объёмный набор skills за день — 27 штук для полного outreach-цикла: email-composer, linkedin-adapter, instagram-adapter, twitter-adapter, campaign-executor, reply-generator, analytics и т.д. Потенциально мощный marketing-комбайн для sales/growth команд"
+    },
     "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills": {
       "added_date": "2026-05-15",
       "category": "general_skill",

@@ -64,6 +64,41 @@
       "title": "AgriciDaniel/claude-seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/tree/main/skills"
     },
+    "https://github.com/JetBrains/ideavim/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "final_score": 8.2,
+      "first_recommended": "2026-05-16",
+      "metric": "Сколько времени сэкономлено на подготовке changelog/PR-описания vs ручной работы",
+      "promoted_from_watch": false,
+      "repo_full_name": "JetBrains/ideavim",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "changelog",
+        "doc-sync",
+        "extensions-api-migration",
+        "git-workflow",
+        "issues-deduplication",
+        "tests-maintenance"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/JetBrains/ideavim.git и перейти в .claude/skills/",
+        "Скопировать нужный skill (например git-workflow или changelog) в .claude/skills/ своего проекта",
+        "Запустить Claude Code в своём плагинном или open-source проекте",
+        "Дать промт: 'Используй skill git-workflow — подготовь PR с changelog для последних изменений'"
+      ],
+      "title": "JetBrains/ideavim",
+      "url": "https://github.com/JetBrains/ideavim/tree/master/.claude/skills"
+    },
     "https://github.com/alchaincyf/nuwa-skill": {
       "added_manually": true,
       "category": "general_skill",
@@ -333,6 +368,39 @@
       "test_steps": [],
       "title": "egerev/superflow",
       "url": "https://github.com/egerev/superflow"
+    },
+    "https://github.com/flowglad/flowglad/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "final_score": 7.1,
+      "first_recommended": "2026-05-16",
+      "metric": "Качество review-комментариев (специфичность для проекта) и процент успешно исправленных CI-чеков с первой попытки",
+      "promoted_from_watch": false,
+      "repo_full_name": "flowglad/flowglad",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "contextual-review",
+        "pm",
+        "refactor",
+        "resolve-checks"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/flowglad/flowglad.git",
+        "Скопировать .claude/skills/contextual-review/ и .claude/skills/resolve-checks/ в свой проект",
+        "Запустить Claude Code и дать промт: 'Сделай contextual-review последнего PR в контексте нашего проекта'",
+        "Затем проверить resolve-checks: 'Посмотри на упавшие CI-чеки и предложи фиксы используя skill resolve-checks'"
+      ],
+      "title": "flowglad/flowglad",
+      "url": "https://github.com/flowglad/flowglad/tree/main/.claude/skills"
     },
     "https://github.com/garrytan/gstack": {
       "added_manually": true,

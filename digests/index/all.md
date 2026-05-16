@@ -1,6 +1,6 @@
 # Recommended Claude Skills — all time
 
-Total: 17
+Total: 19
 
 ## May 2026
 
@@ -9,16 +9,18 @@ Total: 17
 | 2026-05-16 | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) |  |  |  | manual | — |
 | 2026-05-16 | [obra/superpowers](https://github.com/obra/superpowers) |  |  |  | manual | — |
 | 2026-05-16 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |  |  |  | manual | — |
-| 2026-05-16 | [mattpocock/skills](https://github.com/mattpocock/skills) |  |  |  | manual | — |
+| 2026-05-16 | [mattpocock/skills](https://github.com/mattpocock/skills) | caveman, diagnose, edit-article, +17 more |  |  | manual | — |
 | 2026-05-16 | [maslennikov-ig/claude-code-orchestrator-kit](https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills) | algorithmic-art, artifacts-builder, code-review, +17 more |  | 7.2 | high | Клонировать: git clone https://github.com/maslennikov-ig/claude-code-orchestrator-kit.git |
 | 2026-05-16 | [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) | get-shit-done | 62568 |  | manual | — |
 | 2026-05-16 | [garrytan/gstack](https://github.com/garrytan/gstack) |  |  |  | manual | — |
+| 2026-05-16 | [flowglad/flowglad](https://github.com/flowglad/flowglad/tree/main/.claude/skills) | contextual-review, pm, refactor, +1 more |  | 7.1 | high | git clone https://github.com/flowglad/flowglad.git |
 | 2026-05-16 | [egerev/superflow](https://github.com/egerev/superflow) | superflow | 31 |  | manual | — |
 | 2026-05-16 | [daloopa/investing](https://github.com/daloopa/investing/tree/main/.claude/skills) | build-model, bull-bear, capital-allocation, +20 more |  | 8.5 | high | Клонировать: git clone https://github.com/daloopa/investing.git |
 | 2026-05-16 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills/tree/main/skills) | ab-testing, ad-creative, ads, +37 more | 28957 |  | manual | — |
 | 2026-05-16 | [asklokesh/claudeskill-loki-mode](https://github.com/asklokesh/claudeskill-loki-mode) |  |  |  | manual | — |
 | 2026-05-16 | [anthropics/claude-code: frontend-design plugin](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) | frontend-design | 124140 |  | manual | — |
 | 2026-05-16 | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill) |  |  |  | manual | — |
+| 2026-05-16 | [JetBrains/ideavim](https://github.com/JetBrains/ideavim/tree/master/.claude/skills) | changelog, doc-sync, extensions-api-migration, +3 more |  | 8.2 | high | git clone https://github.com/JetBrains/ideavim.git и перейти в .claude/skills/ |
 | 2026-05-16 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo/tree/main/skills) | seo-audit, seo-backlinks, seo-cluster, +22 more | 6644 |  | manual | — |
 | 2026-05-16 | [199-biotechnologies/claude-deep-research-skill](https://github.com/199-biotechnologies/claude-deep-research-skill) | claude-deep-research | 683 |  | manual | — |
 | 2026-05-15 | [doccker/cc-use-exp](https://github.com/doccker/cc-use-exp/tree/main/.claude/skills) | api-design-safety, bash-style, field-mapping-safety, +13 more |  | 7.0 | high | git clone https://github.com/doccker/cc-use-exp |
