@@ -140,12 +140,15 @@ def add_to_watchlist(
     items: Iterable[dict],
     date: str,
     current_metrics_by_url: dict[str, dict] | None = None,
+    default_category: str = "general_skill",
 ) -> list[str]:
     """Persist ``top_watch`` items to the watchlist DB.
 
     ``current_metrics_by_url`` maps each item's URL to a baseline metrics
     dict ({stars, skills_count, cross_source_count}). Items already on the
-    watchlist are skipped. Returns the URLs newly added.
+    watchlist are skipped. ``default_category`` is used when the item lacks
+    one — workflows pipeline passes ``general_workflow`` so categories stay
+    consistent with the workflows enum. Returns the URLs newly added.
     """
     items_db = db.setdefault("items", {})
     added: list[str] = []
@@ -159,11 +162,11 @@ def add_to_watchlist(
         if not url or url in items_db:
             continue
         baseline = metrics_lookup.get(url) or {}
-        items_db[url] = {
+        entry = {
             "repo_full_name": _repo_full_name(it),
             "title": it.get("name") or _repo_full_name(it),
             "url": url,
-            "category": it.get("category") or "general_skill",
+            "category": it.get("category") or default_category,
             "added_date": date,
             "signal_to_wait": it.get("signal_to_wait") or "",
             "metric_baseline": {
@@ -175,6 +178,10 @@ def add_to_watchlist(
             "last_checked": date,
             "expires_at": expires,
         }
+        tool = it.get("tool")
+        if isinstance(tool, str) and tool:
+            entry["tool"] = tool.lower()
+        items_db[url] = entry
         added.append(url)
     return added
 

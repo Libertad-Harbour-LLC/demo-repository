@@ -30,7 +30,6 @@ try:
 
     from . import analyzer
     from . import index_writer
-    from . import links
     from . import normalizer
     from . import report
     from . import skill_db
@@ -45,7 +44,6 @@ except ImportError:
 
     import analyzer
     import index_writer
-    import links
     import normalizer
     import report
     import skill_db
@@ -172,7 +170,9 @@ def _baseline_metrics(items_with_deltas: list[dict]) -> dict[str, dict]:
     return out
 
 
-def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
+def run(
+    dry_run: bool = False, no_analyzer: bool = False, force: bool = False
+) -> int:
     bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
 
@@ -184,6 +184,12 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
                 file=sys.stderr,
             )
             return 1
+
+    # Idempotency guard: skip if a digest was already sent today. Protects
+    # the Anthropic API budget against manual workflow_dispatch retries.
+    if not dry_run and not force and state.was_sent_today():
+        print("[ALREADY_SENT_TODAY] skills digest already sent today, skipping")
+        return 0
 
     items_by_source = _fetch_all()
     counts = " ".join(f"{k}={len(v)}" for k, v in items_by_source.items())
@@ -260,8 +266,6 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
             "уже были в предыдущих дайджестах без значимого роста.\n\n"
             f"\U0001f4ca Источников проверено: {', '.join(items_by_source.keys())}"
         )
-        # Append index links footer so the user can browse the DB.
-        msg += "\n\n" + links.build_footer()
         try:
             telegram_client.send_text(msg, bot_token, chat_id)
         except Exception as exc:
@@ -278,6 +282,10 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
             skill_db.save_watchlist(watchlist_db)
         except Exception as exc:
             print(f"[trendwatch] watchlist save failed: {exc}", file=sys.stderr)
+        try:
+            state.mark_sent_today()
+        except Exception as exc:
+            print(f"[trendwatch] mark_sent failed: {exc}", file=sys.stderr)
         print("[NO_NEW_ITEMS]")
         print(summary)
         return 0
@@ -405,15 +413,17 @@ def run(dry_run: bool = False, no_analyzer: bool = False) -> int:
     except Exception as exc:
         print(f"[trendwatch] report write failed: {exc}", file=sys.stderr)
 
-    # Append index links footer.
-    telegram_text = telegram_text.rstrip() + "\n\n" + links.build_footer()
-
     try:
         telegram_client.send_text(telegram_text, bot_token, chat_id)
     except Exception as exc:
         print(f"[trendwatch] telegram send_text failed: {exc}", file=sys.stderr)
         print(summary)
         return 1
+
+    try:
+        state.mark_sent_today()
+    except Exception as exc:
+        print(f"[trendwatch] mark_sent failed: {exc}", file=sys.stderr)
 
     print("[ANALYSIS_OK]")
     print(summary)
@@ -432,8 +442,15 @@ def main() -> int:
         action="store_true",
         help="Skip LLM analysis and state I/O; send the legacy link digest",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Bypass the once-per-day idempotency guard (for manual reruns).",
+    )
     args = parser.parse_args()
-    return run(dry_run=args.dry_run, no_analyzer=args.no_analyzer)
+    return run(
+        dry_run=args.dry_run, no_analyzer=args.no_analyzer, force=args.force
+    )
 
 
 if __name__ == "__main__":
