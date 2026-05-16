@@ -53,6 +53,18 @@ returns to the unfiltered list (page 0) — the original filter/page
 context isn't preserved (would inflate callback_data past Telegram's
 64-byte limit).
 
+**Explain** — `[🤖 Объясни простыми словами]` button on the Detail screen.
+Single-shot Anthropic call (`api/llm.py` → `explain_item`); produces a
+3-5 sentence plain-Russian explanation of the Item. Sent as a NEW
+Telegram message so the Detail screen stays visible above. Gated by
+`LLM_ENABLED` (i.e. `ANTHROPIC_API_KEY` env var) — button hidden if
+the key isn't set. Failure mode (timeout / 5xx / empty response):
+fallback message "Не удалось получить объяснение." The system prompt
+is cacheable; Item content goes through the user message wrapped in
+`<item>...</item>` and treated as data (mitigates prompt injection
+from pipeline-supplied descriptions). Per `agents-best-practices`
+MVP guidance: answer-only autonomy, no tool loop.
+
 **url_id** — 8-char sha1 prefix of an Item's URL. Used inside
 `callback_data` as a compact stable identifier when `repo_full_name` is
 either too long (workflows pipeline stores `"owner/repo: wf-name"`
