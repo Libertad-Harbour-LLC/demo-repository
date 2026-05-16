@@ -26,55 +26,72 @@ BRANCH = os.environ.get("BOT_BRANCH", "main")
 CACHE_TTL_SECONDS = 60
 PAGE_SIZE = 5  # items per page
 
-# Source registry: each source has a URL, category labels, optional tool filter,
-# and a display header.
-SOURCES: dict[str, dict[str, Any]] = {
-    "skills": {
-        "label": "📚 Claude Skills",
-        "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/recommended.json",
-        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/watchlist.json",
-        "categories": {
-            "marketing_skill": "📈 Marketing",
-            "vibe_coding_skill": "💻 Vibe coding",
-            "ai_content_skill": "🎨 AI content",
-            "general_skill": "🔧 General",
-        },
-        "tool_filter": None,
-        "header": "Claude Skills",
-        "default_category": "general_skill",
-    },
-    "n8n": {
-        "label": "⚙️ N8N Workflows",
-        "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
-        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
-        "categories": {
-            "marketing_workflow": "📈 Marketing",
-            "sales_workflow": "💰 Sales",
-            "data_workflow": "📊 Data",
-            "devops_workflow": "🛠 DevOps",
-            "content_workflow": "🎨 Content",
-            "general_workflow": "🔧 General",
-        },
-        "tool_filter": "n8n",
-        "header": "N8N Workflows",
-        "default_category": "general_workflow",
-    },
-    "make": {
-        "label": "🧩 Make Workflows",
-        "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
-        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
-        "categories": {
-            "marketing_workflow": "📈 Marketing",
-            "sales_workflow": "💰 Sales",
-            "data_workflow": "📊 Data",
-            "devops_workflow": "🛠 DevOps",
-            "content_workflow": "🎨 Content",
-            "general_workflow": "🔧 General",
-        },
-        "tool_filter": "make",
-        "header": "Make Workflows",
-        "default_category": "general_workflow",
-    },
+# Source registry — see CONTEXT.md for the term definition.
+@dataclass(frozen=True, eq=False)
+class Source:
+    """A logical data namespace served by the bot.
+
+    Field types are enforced at construction (typed_dict-free). Adding a new
+    Source = construct one instance below; no string-key drift. ``eq=False``
+    skips auto-__hash__ (categories is a dict, so default hashing would fail);
+    Source identity in practice is the SOURCES dict key.
+    """
+    key: str
+    label: str        # button text shown on reply_keyboard + top picker
+    header: str       # screen title
+    url: str          # public recommended.json
+    watchlist_url: str  # public watchlist.json
+    categories: dict[str, str]  # category slug → display label
+    default_category: str
+    tool_filter: str | None  # None for skills; "n8n" / "make" for workflows
+
+
+_SKILLS_CATS = {
+    "marketing_skill": "📈 Marketing",
+    "vibe_coding_skill": "💻 Vibe coding",
+    "ai_content_skill": "🎨 AI content",
+    "general_skill": "🔧 General",
+}
+_WORKFLOW_CATS = {
+    "marketing_workflow": "📈 Marketing",
+    "sales_workflow": "💰 Sales",
+    "data_workflow": "📊 Data",
+    "devops_workflow": "🛠 DevOps",
+    "content_workflow": "🎨 Content",
+    "general_workflow": "🔧 General",
+}
+
+SOURCES: dict[str, Source] = {
+    "skills": Source(
+        key="skills",
+        label="📚 Claude Skills",
+        header="Claude Skills",
+        url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/recommended.json",
+        watchlist_url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/watchlist.json",
+        categories=_SKILLS_CATS,
+        default_category="general_skill",
+        tool_filter=None,
+    ),
+    "n8n": Source(
+        key="n8n",
+        label="⚙️ N8N Workflows",
+        header="N8N Workflows",
+        url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
+        watchlist_url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
+        categories=_WORKFLOW_CATS,
+        default_category="general_workflow",
+        tool_filter="n8n",
+    ),
+    "make": Source(
+        key="make",
+        label="🧩 Make Workflows",
+        header="Make Workflows",
+        url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
+        watchlist_url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
+        categories=_WORKFLOW_CATS,
+        default_category="general_workflow",
+        tool_filter="make",
+    ),
 }
 
 VALID_SOURCES = set(SOURCES.keys())
@@ -105,14 +122,14 @@ def _fetch(source_key: str) -> dict:
     """Fetch the recommended-skills DB for a source."""
     if source_key not in SOURCES:
         return {"skills": {}}
-    return _fetch_url(SOURCES[source_key]["url"], {"skills": {}})
+    return _fetch_url(SOURCES[source_key].url, {"skills": {}})
 
 
 def _fetch_watchlist(source_key: str) -> dict:
     """Fetch the watchlist DB for a source (separate file, separate schema)."""
     if source_key not in SOURCES:
         return {"items": {}}
-    url = SOURCES[source_key].get("watchlist_url")
+    url = SOURCES[source_key].watchlist_url
     if not url:
         return {"items": {}}
     return _fetch_url(url, {"items": {}})
@@ -255,7 +272,7 @@ def _format_item_line(item: dict, source_key: str) -> str:
         else ""
     )
     cat = item.get("category", "")
-    cat_labels = SOURCES[source_key]["categories"]
+    cat_labels = SOURCES[source_key].categories
     cat_str = f" • {cat_labels.get(cat, cat)}" if cat else ""
     return f"• {status_prefix}{tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
 
@@ -292,7 +309,7 @@ def _all_items_sorted(db: dict, source_key: str) -> list[dict]:
     ]
 
     items = rec_items + watch_items
-    tool_filter = SOURCES[source_key]["tool_filter"]
+    tool_filter = SOURCES[source_key].tool_filter
     if tool_filter is not None:
         # Watchlist entries written by older pipeline runs lack a `tool`
         # field. Surface those only under the "n8n" bucket (workflows
@@ -340,7 +357,7 @@ def month_view(ym: str) -> View:
 
 def _filter_for_view(items: list[dict], view: View, source_key: str) -> list[dict]:
     if view.kind == "category":
-        default_cat = SOURCES[source_key]["default_category"]
+        default_cat = SOURCES[source_key].default_category
         return [s for s in items if s.get("category", default_cat) == view.arg]
     if view.kind == "month":
         return [s for s in items if (s.get("first_recommended") or "")[:7] == view.arg]
@@ -348,11 +365,11 @@ def _filter_for_view(items: list[dict], view: View, source_key: str) -> list[dic
 
 
 def _title_for_view(view: View, source_key: str) -> str:
-    header = SOURCES[source_key]["header"]
+    header = SOURCES[source_key].header
     if view.kind == "category":
-        cat_labels = SOURCES[source_key]["categories"]
+        cat_labels = SOURCES[source_key].categories
         label = cat_labels.get(
-            view.arg, view.arg or SOURCES[source_key]["default_category"]
+            view.arg, view.arg or SOURCES[source_key].default_category
         )
         return f"{header} — {label}"
     if view.kind == "month":
@@ -427,16 +444,16 @@ def screen_top_menu() -> Screen:
     text = "*Trendwatch — базы рекомендаций*\n\nВыбери источник:"
     kb = {
         "inline_keyboard": [
-            [{"text": SOURCES["skills"]["label"], "callback_data": "src:skills:menu"}],
-            [{"text": SOURCES["n8n"]["label"], "callback_data": "src:n8n:menu"}],
-            [{"text": SOURCES["make"]["label"], "callback_data": "src:make:menu"}],
+            [{"text": SOURCES["skills"].label, "callback_data": "src:skills:menu"}],
+            [{"text": SOURCES["n8n"].label, "callback_data": "src:n8n:menu"}],
+            [{"text": SOURCES["make"].label, "callback_data": "src:make:menu"}],
         ]
     }
     return text, kb
 
 
 def screen_source_menu(source_key: str) -> Screen:
-    text = f"*{SOURCES[source_key]['header']}*\n\nВыбери что показать:"
+    text = f"*{SOURCES[source_key].header}*\n\nВыбери что показать:"
     kb = {
         "inline_keyboard": [
             [{"text": "📚 Весь список", "callback_data": f"src:{source_key}:list:0"}],
@@ -450,13 +467,13 @@ def screen_source_menu(source_key: str) -> Screen:
 
 def screen_categories(source_key: str) -> Screen:
     items = _all_items_sorted(_fetch(source_key), source_key)
-    default_cat = SOURCES[source_key]["default_category"]
-    cat_labels: dict[str, str] = SOURCES[source_key]["categories"]
+    default_cat = SOURCES[source_key].default_category
+    cat_labels: dict[str, str] = SOURCES[source_key].categories
     cat_counts: dict[str, int] = {}
     for s in items:
         c = s.get("category", default_cat)
         cat_counts[c] = cat_counts.get(c, 0) + 1
-    text = f"*Категории {SOURCES[source_key]['header']}:*\n\n"
+    text = f"*Категории {SOURCES[source_key].header}:*\n\n"
     rows: list[list[dict]] = []
     for cat, label in cat_labels.items():
         n = cat_counts.get(cat, 0)
@@ -483,7 +500,7 @@ def screen_months(source_key: str) -> Screen:
             month_counts[date[:7]] = month_counts.get(date[:7], 0) + 1
     if not month_counts:
         return (
-            f"*{SOURCES[source_key]['header']}*\n\nПусто.",
+            f"*{SOURCES[source_key].header}*\n\nПусто.",
             {
                 "inline_keyboard": [
                     [{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}],
@@ -492,7 +509,7 @@ def screen_months(source_key: str) -> Screen:
             },
         )
     rows: list[list[dict]] = []
-    text = f"*{SOURCES[source_key]['header']} — по месяцам:*\n\n"
+    text = f"*{SOURCES[source_key].header} — по месяцам:*\n\n"
     for ym in sorted(month_counts.keys(), reverse=True):
         n = month_counts[ym]
         text += f"📅 {ym} — {n}\n"
