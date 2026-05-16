@@ -12,8 +12,9 @@ import json
 import os
 import sys
 import time
+from dataclasses import dataclass
 from http.server import BaseHTTPRequestHandler
-from typing import Any
+from typing import Any, Literal
 
 import requests
 
@@ -25,55 +26,72 @@ BRANCH = os.environ.get("BOT_BRANCH", "main")
 CACHE_TTL_SECONDS = 60
 PAGE_SIZE = 5  # items per page
 
-# Source registry: each source has a URL, category labels, optional tool filter,
-# and a display header.
-SOURCES: dict[str, dict[str, Any]] = {
-    "skills": {
-        "label": "📚 Claude Skills",
-        "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/recommended.json",
-        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/watchlist.json",
-        "categories": {
-            "marketing_skill": "📈 Marketing",
-            "vibe_coding_skill": "💻 Vibe coding",
-            "ai_content_skill": "🎨 AI content",
-            "general_skill": "🔧 General",
-        },
-        "tool_filter": None,
-        "header": "Claude Skills",
-        "default_category": "general_skill",
-    },
-    "n8n": {
-        "label": "⚙️ N8N Workflows",
-        "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
-        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
-        "categories": {
-            "marketing_workflow": "📈 Marketing",
-            "sales_workflow": "💰 Sales",
-            "data_workflow": "📊 Data",
-            "devops_workflow": "🛠 DevOps",
-            "content_workflow": "🎨 Content",
-            "general_workflow": "🔧 General",
-        },
-        "tool_filter": "n8n",
-        "header": "N8N Workflows",
-        "default_category": "general_workflow",
-    },
-    "make": {
-        "label": "🧩 Make Workflows",
-        "url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
-        "watchlist_url": f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
-        "categories": {
-            "marketing_workflow": "📈 Marketing",
-            "sales_workflow": "💰 Sales",
-            "data_workflow": "📊 Data",
-            "devops_workflow": "🛠 DevOps",
-            "content_workflow": "🎨 Content",
-            "general_workflow": "🔧 General",
-        },
-        "tool_filter": "make",
-        "header": "Make Workflows",
-        "default_category": "general_workflow",
-    },
+# Source registry — see CONTEXT.md for the term definition.
+@dataclass(frozen=True, eq=False)
+class Source:
+    """A logical data namespace served by the bot.
+
+    Field types are enforced at construction (typed_dict-free). Adding a new
+    Source = construct one instance below; no string-key drift. ``eq=False``
+    skips auto-__hash__ (categories is a dict, so default hashing would fail);
+    Source identity in practice is the SOURCES dict key.
+    """
+    key: str
+    label: str        # button text shown on reply_keyboard + top picker
+    header: str       # screen title
+    url: str          # public recommended.json
+    watchlist_url: str  # public watchlist.json
+    categories: dict[str, str]  # category slug → display label
+    default_category: str
+    tool_filter: str | None  # None for skills; "n8n" / "make" for workflows
+
+
+_SKILLS_CATS = {
+    "marketing_skill": "📈 Marketing",
+    "vibe_coding_skill": "💻 Vibe coding",
+    "ai_content_skill": "🎨 AI content",
+    "general_skill": "🔧 General",
+}
+_WORKFLOW_CATS = {
+    "marketing_workflow": "📈 Marketing",
+    "sales_workflow": "💰 Sales",
+    "data_workflow": "📊 Data",
+    "devops_workflow": "🛠 DevOps",
+    "content_workflow": "🎨 Content",
+    "general_workflow": "🔧 General",
+}
+
+SOURCES: dict[str, Source] = {
+    "skills": Source(
+        key="skills",
+        label="📚 Claude Skills",
+        header="Claude Skills",
+        url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/recommended.json",
+        watchlist_url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/watchlist.json",
+        categories=_SKILLS_CATS,
+        default_category="general_skill",
+        tool_filter=None,
+    ),
+    "n8n": Source(
+        key="n8n",
+        label="⚙️ N8N Workflows",
+        header="N8N Workflows",
+        url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
+        watchlist_url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
+        categories=_WORKFLOW_CATS,
+        default_category="general_workflow",
+        tool_filter="n8n",
+    ),
+    "make": Source(
+        key="make",
+        label="🧩 Make Workflows",
+        header="Make Workflows",
+        url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/recommended.json",
+        watchlist_url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/workflows/watchlist.json",
+        categories=_WORKFLOW_CATS,
+        default_category="general_workflow",
+        tool_filter="make",
+    ),
 }
 
 VALID_SOURCES = set(SOURCES.keys())
@@ -104,14 +122,14 @@ def _fetch(source_key: str) -> dict:
     """Fetch the recommended-skills DB for a source."""
     if source_key not in SOURCES:
         return {"skills": {}}
-    return _fetch_url(SOURCES[source_key]["url"], {"skills": {}})
+    return _fetch_url(SOURCES[source_key].url, {"skills": {}})
 
 
 def _fetch_watchlist(source_key: str) -> dict:
     """Fetch the watchlist DB for a source (separate file, separate schema)."""
     if source_key not in SOURCES:
         return {"items": {}}
-    url = SOURCES[source_key].get("watchlist_url")
+    url = SOURCES[source_key].watchlist_url
     if not url:
         return {"items": {}}
     return _fetch_url(url, {"items": {}})
@@ -254,7 +272,7 @@ def _format_item_line(item: dict, source_key: str) -> str:
         else ""
     )
     cat = item.get("category", "")
-    cat_labels = SOURCES[source_key]["categories"]
+    cat_labels = SOURCES[source_key].categories
     cat_str = f" • {cat_labels.get(cat, cat)}" if cat else ""
     return f"• {status_prefix}{tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
 
@@ -291,7 +309,7 @@ def _all_items_sorted(db: dict, source_key: str) -> list[dict]:
     ]
 
     items = rec_items + watch_items
-    tool_filter = SOURCES[source_key]["tool_filter"]
+    tool_filter = SOURCES[source_key].tool_filter
     if tool_filter is not None:
         # Watchlist entries written by older pipeline runs lack a `tool`
         # field. Surface those only under the "n8n" bucket (workflows
@@ -311,13 +329,52 @@ def _all_items_sorted(db: dict, source_key: str) -> list[dict]:
     return items
 
 
-def _filter_by_category(items: list[dict], cat: str, source_key: str) -> list[dict]:
-    default_cat = SOURCES[source_key]["default_category"]
-    return [s for s in items if s.get("category", default_cat) == cat]
+# === Views ===
+# A View selects what to show on a paginated screen. `nav_token` is the
+# callback-data suffix used for pagination (`src:<source>:<nav_token>:<page>`)
+# and MUST stay byte-identical across releases — inline keyboards live in user
+# chat history indefinitely and fire the exact string they were built with.
+ViewKind = Literal["all", "category", "month"]
 
 
-def _filter_by_month(items: list[dict], ym: str) -> list[dict]:
-    return [s for s in items if (s.get("first_recommended") or "")[:7] == ym]
+@dataclass(frozen=True)
+class View:
+    kind: ViewKind
+    nav_token: str
+    arg: str | None = None  # category slug for "category"; YYYY-MM for "month"
+
+
+ALL_VIEW = View(kind="all", nav_token="list")
+
+
+def category_view(cat: str) -> View:
+    return View(kind="category", nav_token=f"cat:{cat}", arg=cat)
+
+
+def month_view(ym: str) -> View:
+    return View(kind="month", nav_token=f"month:{ym}", arg=ym)
+
+
+def _filter_for_view(items: list[dict], view: View, source_key: str) -> list[dict]:
+    if view.kind == "category":
+        default_cat = SOURCES[source_key].default_category
+        return [s for s in items if s.get("category", default_cat) == view.arg]
+    if view.kind == "month":
+        return [s for s in items if (s.get("first_recommended") or "")[:7] == view.arg]
+    return items
+
+
+def _title_for_view(view: View, source_key: str) -> str:
+    header = SOURCES[source_key].header
+    if view.kind == "category":
+        cat_labels = SOURCES[source_key].categories
+        label = cat_labels.get(
+            view.arg, view.arg or SOURCES[source_key].default_category
+        )
+        return f"{header} — {label}"
+    if view.kind == "month":
+        return f"{header} — 📅 {view.arg}"
+    return f"Все — {header}"
 
 
 # === Page rendering ===
@@ -377,28 +434,27 @@ def _render_page(
     return ("\n".join(lines), {"inline_keyboard": kb_rows})
 
 
-# === Top-level source picker ===
-def _top_menu_text() -> str:
-    return "*Trendwatch — базы рекомендаций*\n\nВыбери источник:"
+# === Screens ===
+# A Screen is a (text, inline_keyboard_or_None) tuple. Pure rendering: no
+# transport, no side effects. Sent or edited via deliver().
+Screen = tuple[str, dict | None]
 
 
-def _top_menu_keyboard() -> dict:
-    return {
+def screen_top_menu() -> Screen:
+    text = "*Trendwatch — базы рекомендаций*\n\nВыбери источник:"
+    kb = {
         "inline_keyboard": [
-            [{"text": SOURCES["skills"]["label"], "callback_data": "src:skills:menu"}],
-            [{"text": SOURCES["n8n"]["label"], "callback_data": "src:n8n:menu"}],
-            [{"text": SOURCES["make"]["label"], "callback_data": "src:make:menu"}],
+            [{"text": SOURCES["skills"].label, "callback_data": "src:skills:menu"}],
+            [{"text": SOURCES["n8n"].label, "callback_data": "src:n8n:menu"}],
+            [{"text": SOURCES["make"].label, "callback_data": "src:make:menu"}],
         ]
     }
+    return text, kb
 
 
-# === Per-source sub-menu ===
-def _source_menu_text(source_key: str) -> str:
-    return f"*{SOURCES[source_key]['header']}*\n\nВыбери что показать:"
-
-
-def _source_menu_keyboard(source_key: str) -> dict:
-    return {
+def screen_source_menu(source_key: str) -> Screen:
+    text = f"*{SOURCES[source_key].header}*\n\nВыбери что показать:"
+    kb = {
         "inline_keyboard": [
             [{"text": "📚 Весь список", "callback_data": f"src:{source_key}:list:0"}],
             [{"text": "🏷 По категории", "callback_data": f"src:{source_key}:categories"}],
@@ -406,60 +462,45 @@ def _source_menu_keyboard(source_key: str) -> dict:
             [{"text": "« Источник", "callback_data": "menu"}],
         ]
     }
+    return text, kb
 
 
-# === Index views (categories / months) ===
-def _build_categories_view(db: dict, source_key: str) -> tuple[str, dict]:
-    items = _all_items_sorted(db, source_key)
-    default_cat = SOURCES[source_key]["default_category"]
-    cat_labels: dict[str, str] = SOURCES[source_key]["categories"]
+def screen_categories(source_key: str) -> Screen:
+    items = _all_items_sorted(_fetch(source_key), source_key)
+    default_cat = SOURCES[source_key].default_category
+    cat_labels: dict[str, str] = SOURCES[source_key].categories
     cat_counts: dict[str, int] = {}
     for s in items:
         c = s.get("category", default_cat)
         cat_counts[c] = cat_counts.get(c, 0) + 1
-    text = f"*Категории {SOURCES[source_key]['header']}:*\n\n"
+    text = f"*Категории {SOURCES[source_key].header}:*\n\n"
     rows: list[list[dict]] = []
     for cat, label in cat_labels.items():
         n = cat_counts.get(cat, 0)
         text += f"{label} — {n}\n"
         if n > 0:
-            rows.append(
-                [
-                    {
-                        "text": f"{label} ({n})",
-                        "callback_data": f"src:{source_key}:cat:{cat}:0",
-                    }
-                ]
-            )
+            rows.append([{"text": f"{label} ({n})", "callback_data": f"src:{source_key}:cat:{cat}:0"}])
     # Include any unknown categories that exist in data but not in labels
     for cat, n in cat_counts.items():
         if cat not in cat_labels and n > 0:
             label = cat or default_cat
             text += f"{label} — {n}\n"
-            rows.append(
-                [
-                    {
-                        "text": f"{label} ({n})",
-                        "callback_data": f"src:{source_key}:cat:{cat}:0",
-                    }
-                ]
-            )
+            rows.append([{"text": f"{label} ({n})", "callback_data": f"src:{source_key}:cat:{cat}:0"}])
     rows.append([{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}])
     rows.append([{"text": "« Источник", "callback_data": "menu"}])
     return text, {"inline_keyboard": rows}
 
 
-def _build_months_view(db: dict, source_key: str) -> tuple[str, dict]:
-    items = _all_items_sorted(db, source_key)
+def screen_months(source_key: str) -> Screen:
+    items = _all_items_sorted(_fetch(source_key), source_key)
     month_counts: dict[str, int] = {}
     for s in items:
         date = s.get("first_recommended", "") or ""
         if len(date) >= 7:
-            ym = date[:7]
-            month_counts[ym] = month_counts.get(ym, 0) + 1
+            month_counts[date[:7]] = month_counts.get(date[:7], 0) + 1
     if not month_counts:
         return (
-            f"*{SOURCES[source_key]['header']}*\n\nПусто.",
+            f"*{SOURCES[source_key].header}*\n\nПусто.",
             {
                 "inline_keyboard": [
                     [{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}],
@@ -467,47 +508,46 @@ def _build_months_view(db: dict, source_key: str) -> tuple[str, dict]:
                 ]
             },
         )
-    months_sorted = sorted(month_counts.keys(), reverse=True)
     rows: list[list[dict]] = []
-    text = f"*{SOURCES[source_key]['header']} — по месяцам:*\n\n"
-    for ym in months_sorted:
+    text = f"*{SOURCES[source_key].header} — по месяцам:*\n\n"
+    for ym in sorted(month_counts.keys(), reverse=True):
         n = month_counts[ym]
         text += f"📅 {ym} — {n}\n"
-        rows.append(
-            [
-                {
-                    "text": f"{ym} ({n})",
-                    "callback_data": f"src:{source_key}:month:{ym}:0",
-                }
-            ]
-        )
+        rows.append([{"text": f"{ym} ({n})", "callback_data": f"src:{source_key}:month:{ym}:0"}])
     rows.append([{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}])
     rows.append([{"text": "« Источник", "callback_data": "menu"}])
     return text, {"inline_keyboard": rows}
 
 
-# === Render dispatchers (shared by send + edit paths) ===
-def _render_list_page(source_key: str, page: int) -> tuple[str, dict]:
-    db = _fetch(source_key)
-    items = _all_items_sorted(db, source_key)
-    title = f"Все — {SOURCES[source_key]['header']}"
-    return _render_page(items, page, title, source_key, "list")
+def screen_page(source_key: str, view: View, page: int) -> Screen:
+    """Render a paginated bot screen for ``view`` of ``source_key``."""
+    items = _filter_for_view(
+        _all_items_sorted(_fetch(source_key), source_key), view, source_key
+    )
+    return _render_page(
+        items, page, _title_for_view(view, source_key), source_key, view.nav_token
+    )
 
 
-def _render_category_page(source_key: str, cat: str, page: int) -> tuple[str, dict]:
-    db = _fetch(source_key)
-    items = _filter_by_category(_all_items_sorted(db, source_key), cat, source_key)
-    cat_labels = SOURCES[source_key]["categories"]
-    label = cat_labels.get(cat, cat or SOURCES[source_key]["default_category"])
-    title = f"{SOURCES[source_key]['header']} — {label}"
-    return _render_page(items, page, title, source_key, f"cat:{cat}")
+# === Transport adapter ===
+def deliver(
+    chat_id: int,
+    screen: Screen,
+    *,
+    edit_message_id: int | None = None,
+    reply_keyboard: dict | None = None,
+) -> dict:
+    """Send ``screen`` as a new message, or edit ``edit_message_id`` in place.
 
-
-def _render_month_page(source_key: str, ym: str, page: int) -> tuple[str, dict]:
-    db = _fetch(source_key)
-    items = _filter_by_month(_all_items_sorted(db, source_key), ym)
-    title = f"{SOURCES[source_key]['header']} — 📅 {ym}"
-    return _render_page(items, page, title, source_key, f"month:{ym}")
+    Telegram limitation: edited messages cannot change the persistent
+    reply_keyboard. ``reply_keyboard`` is honoured only on the send path.
+    """
+    text, inline = screen
+    if edit_message_id is not None:
+        return _edit_message(chat_id, edit_message_id, text, inline)
+    return _send_message(
+        chat_id, text, reply_markup=inline, reply_keyboard=reply_keyboard
+    )
 
 
 # === Static help text ===
@@ -534,160 +574,53 @@ HELP_TEXT = (
 )
 
 
-# === Command handlers (send new message) ===
-# Every fresh send_message from a command attaches the persistent reply_keyboard
-# (alongside inline_keyboard when present, Telegram picks one — but the most
-# recent reply_keyboard stays visible client-side regardless).
-def handle_start(chat_id: int) -> None:
-    # Top-level picker uses inline_keyboard; we send a tiny preamble first
-    # with the reply_keyboard so the persistent bar is guaranteed visible,
-    # then the picker itself. To keep chat clean: send single message with
-    # inline_keyboard AND set reply_keyboard separately on a follow-up only
-    # if needed. Simpler: send picker with inline_keyboard; rely on a recent
-    # reply_keyboard message. Here we send the picker, then a no-op message
-    # would be noisy — instead attach reply_keyboard to the picker itself by
-    # sending the reply_keyboard first as a quick "menu set" message.
-    # Cleanest implementation: send picker with inline_keyboard; the
-    # reply_keyboard is delivered via a separate one-time setter message on
-    # /start so the bar is set once per session.
-    _send_message(chat_id, "Открываю меню…", reply_keyboard=_reply_keyboard())
-    _send_message(chat_id, _top_menu_text(), _top_menu_keyboard())
-
-
-def handle_help(chat_id: int) -> None:
-    _send_message(chat_id, HELP_TEXT, reply_keyboard=_reply_keyboard())
-
-
-def handle_source_menu(chat_id: int, source_key: str) -> None:
-    _send_message(
-        chat_id,
-        _source_menu_text(source_key),
-        _source_menu_keyboard(source_key),
-    )
-
-
-def handle_list(chat_id: int, source_key: str, page: int = 0) -> None:
-    text, kb = _render_list_page(source_key, page)
-    _send_message(chat_id, text, kb)
-
-
-def handle_categories(chat_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_categories_view(db, source_key)
-    _send_message(chat_id, text, kb)
-
-
-def handle_months(chat_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_months_view(db, source_key)
-    _send_message(chat_id, text, kb)
-
-
-# === Edit-in-place helpers (used by callback queries) ===
-def _edit_top_menu(chat_id: int, message_id: int) -> None:
-    _edit_message(chat_id, message_id, _top_menu_text(), _top_menu_keyboard())
-
-
-def _edit_source_menu(chat_id: int, message_id: int, source_key: str) -> None:
-    _edit_message(
-        chat_id, message_id, _source_menu_text(source_key), _source_menu_keyboard(source_key)
-    )
-
-
-def _edit_categories(chat_id: int, message_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_categories_view(db, source_key)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_months(chat_id: int, message_id: int, source_key: str) -> None:
-    db = _fetch(source_key)
-    text, kb = _build_months_view(db, source_key)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_list(chat_id: int, message_id: int, source_key: str, page: int) -> None:
-    text, kb = _render_list_page(source_key, page)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_category(
-    chat_id: int, message_id: int, source_key: str, cat: str, page: int
-) -> None:
-    text, kb = _render_category_page(source_key, cat, page)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-def _edit_month(
-    chat_id: int, message_id: int, source_key: str, ym: str, page: int
-) -> None:
-    text, kb = _render_month_page(source_key, ym, page)
-    _edit_message(chat_id, message_id, text, kb)
-
-
-# === Callback handlers ===
+# === Inline-button callback routing ===
 def handle_callback(update: dict) -> None:
+    """Route a Telegram inline-keyboard tap to the right screen + edit_message_id."""
     cb = update["callback_query"]
     chat_id = cb["message"]["chat"]["id"]
-    message_id = cb["message"]["message_id"]
-    cb_id = cb["id"]
+    msg_id = cb["message"]["message_id"]
+    _answer_callback(cb["id"])
     data = cb.get("data", "") or ""
 
-    # Acknowledge fast (Telegram shows spinner otherwise).
-    _answer_callback(cb_id)
-
-    # Top-level picker
     if data == "menu":
-        _edit_top_menu(chat_id, message_id)
+        deliver(chat_id, screen_top_menu(), edit_message_id=msg_id)
         return
 
-    # Source-scoped routes: src:<source_key>:<action>[:<args>]
-    if data.startswith("src:"):
-        parts = data.split(":")
-        if len(parts) < 3:
-            return
-        source_key = parts[1]
-        if source_key not in VALID_SOURCES:
-            return
-        action = parts[2]
+    if not data.startswith("src:"):
+        return
+    parts = data.split(":")
+    if len(parts) < 3:
+        return
+    source_key = parts[1]
+    if source_key not in VALID_SOURCES:
+        return
+    action = parts[2]
 
-        if action == "menu":
-            _edit_source_menu(chat_id, message_id, source_key)
-            return
-        if action == "categories":
-            _edit_categories(chat_id, message_id, source_key)
-            return
-        if action == "months":
-            _edit_months(chat_id, message_id, source_key)
-            return
-        if action == "list":
-            # src:<source>:list:<page>
-            try:
-                page = int(parts[3]) if len(parts) >= 4 else 0
-            except ValueError:
-                page = 0
-            _edit_list(chat_id, message_id, source_key, page)
-            return
-        if action == "cat":
-            # src:<source>:cat:<cat>:<page>
-            if len(parts) >= 5:
-                cat = parts[3]
-                try:
-                    page = int(parts[4])
-                except ValueError:
-                    page = 0
-                _edit_category(chat_id, message_id, source_key, cat, page)
-            return
-        if action == "month":
-            # src:<source>:month:<YYYY-MM>:<page>
-            if len(parts) >= 5:
-                ym = parts[3]
-                try:
-                    page = int(parts[4])
-                except ValueError:
-                    page = 0
-                _edit_month(chat_id, message_id, source_key, ym, page)
-            return
+    if action == "menu":
+        deliver(chat_id, screen_source_menu(source_key), edit_message_id=msg_id)
+    elif action == "categories":
+        deliver(chat_id, screen_categories(source_key), edit_message_id=msg_id)
+    elif action == "months":
+        deliver(chat_id, screen_months(source_key), edit_message_id=msg_id)
+    elif action == "list":
+        page = _parse_page(parts, 3)
+        deliver(chat_id, screen_page(source_key, ALL_VIEW, page), edit_message_id=msg_id)
+    elif action == "cat" and len(parts) >= 5:
+        page = _parse_page(parts, 4)
+        deliver(chat_id, screen_page(source_key, category_view(parts[3]), page), edit_message_id=msg_id)
+    elif action == "month" and len(parts) >= 5:
+        page = _parse_page(parts, 4)
+        deliver(chat_id, screen_page(source_key, month_view(parts[3]), page), edit_message_id=msg_id)
+
+
+def _parse_page(parts: list[str], idx: int) -> int:
+    if len(parts) <= idx:
+        return 0
+    try:
+        return int(parts[idx])
+    except ValueError:
+        return 0
 
 
 # === Webhook dispatcher ===
@@ -703,51 +636,58 @@ def dispatch(update: dict) -> None:
     if not text:
         return
 
-    # === Persistent reply_keyboard button labels (sent as plain text) ===
-    # Match BEFORE slash-command handling so taps route correctly.
-    if text == "📚 Claude Skills":
-        handle_source_menu(chat_id, "skills")
-        return
-    if text == "⚙️ N8N Workflows":
-        handle_source_menu(chat_id, "n8n")
-        return
-    if text == "🧩 Make Workflows":
-        handle_source_menu(chat_id, "make")
+    # Persistent reply_keyboard taps come in as plain text — match before commands.
+    REPLY_BUTTON_TO_SOURCE = {
+        "📚 Claude Skills": "skills",
+        "⚙️ N8N Workflows": "n8n",
+        "🧩 Make Workflows": "make",
+    }
+    if text in REPLY_BUTTON_TO_SOURCE:
+        deliver(chat_id, screen_source_menu(REPLY_BUTTON_TO_SOURCE[text]))
         return
     if text == "📋 Меню":
-        handle_start(chat_id)
+        _handle_start(chat_id)
         return
     if text == "ℹ️ Помощь":
-        handle_help(chat_id)
+        deliver(chat_id, (HELP_TEXT, None), reply_keyboard=_reply_keyboard())
         return
 
     # Strip bot mention suffix (e.g. /start@MyBot)
-    cmd = text.split()[0] if text else ""
+    cmd = text.split()[0]
     if "@" in cmd:
         cmd = cmd.split("@", 1)[0]
-    if cmd == "/start" or cmd == "/menu":
-        handle_start(chat_id)
+    if cmd in ("/start", "/menu"):
+        _handle_start(chat_id)
     elif cmd == "/help":
-        handle_help(chat_id)
+        deliver(chat_id, (HELP_TEXT, None), reply_keyboard=_reply_keyboard())
     elif cmd == "/list":
-        # Backwards-compat: default to skills.
-        handle_list(chat_id, "skills", 0)
+        deliver(chat_id, screen_page("skills", ALL_VIEW, 0))  # legacy: defaults to skills
     elif cmd == "/categories":
-        handle_categories(chat_id, "skills")
+        deliver(chat_id, screen_categories("skills"))
     elif cmd == "/months":
-        handle_months(chat_id, "skills")
+        deliver(chat_id, screen_months("skills"))
     elif cmd == "/skills":
-        handle_source_menu(chat_id, "skills")
+        deliver(chat_id, screen_source_menu("skills"))
     elif cmd == "/n8n":
-        handle_source_menu(chat_id, "n8n")
+        deliver(chat_id, screen_source_menu("n8n"))
     elif cmd == "/make":
-        handle_source_menu(chat_id, "make")
+        deliver(chat_id, screen_source_menu("make"))
     else:
-        _send_message(
+        deliver(
             chat_id,
-            "Не понял команду. Жми кнопки внизу или /menu.",
+            ("Не понял команду. Жми кнопки внизу или /menu.", None),
             reply_keyboard=_reply_keyboard(),
         )
+
+
+def _handle_start(chat_id: int) -> None:
+    """``/start`` and the ``📋 Меню`` reply-button: set persistent keyboard, then show picker.
+
+    Two messages so the reply_keyboard is guaranteed visible (Telegram allows
+    only one reply_markup per message; the inline picker needs the second).
+    """
+    deliver(chat_id, ("Открываю меню…", None), reply_keyboard=_reply_keyboard())
+    deliver(chat_id, screen_top_menu())
 
 
 # === HTTP handler ===
