@@ -491,6 +491,10 @@ def _format_detail_watch(item: dict, source_key: str) -> str:
     if last := item.get("last_checked"):
         lines.append(f"📍 Последняя проверка: {last}")
 
+    if desc := item.get("description"):
+        lines.append("")
+        lines.append("📝 " + _md_escape(desc))
+
     if why := item.get("why_interesting"):
         lines.append("")
         lines.append("💡 Почему интересно:")
