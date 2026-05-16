@@ -11,6 +11,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import random
 import sys
 import time
 from dataclasses import dataclass
@@ -631,6 +632,7 @@ def screen_source_menu(source_key: str) -> Screen:
             [{"text": "📚 Весь список", "callback_data": f"src:{source_key}:list:0"}],
             [{"text": "🏷 По категории", "callback_data": f"src:{source_key}:categories"}],
             [{"text": "📅 По месяцу", "callback_data": f"src:{source_key}:months"}],
+            [{"text": "🎲 Случайный", "callback_data": f"src:{source_key}:random"}],
             [{"text": "« Источник", "callback_data": "menu"}],
         ]
     }
@@ -727,6 +729,123 @@ def screen_item(source_key: str, uid: str) -> Screen:
     return text, kb
 
 
+SEARCH_RESULT_LIMIT = 10
+
+
+def screen_random(source_key: str) -> Screen:
+    """Pick one Item from the source uniformly at random; render its detail.
+
+    Empty source → friendly message + source-menu back button. The detail
+    screen for the picked Item already provides full navigation.
+    """
+    items = Items.load(source_key)
+    if len(items) == 0:
+        kb = {"inline_keyboard": [
+            [{"text": "« Меню источника", "callback_data": f"src:{source_key}:menu"}],
+        ]}
+        return (f"*{SOURCES[source_key].header}*\n\nПусто.", kb)
+    chosen = random.choice(list(items))
+    return screen_item(source_key, _url_id(chosen.get("url") or ""))
+
+
+def screen_search(query: str) -> Screen:
+    """Substring search across all Sources. Caps at SEARCH_RESULT_LIMIT.
+
+    Matches case-insensitive against title, repo_full_name, description,
+    and skills_in_repo entries. Results are listed with a source-tag prefix
+    and one [📋 N] detail button per result. No pagination — refine the
+    query to narrow.
+    """
+    q = (query or "").strip().lower()
+    if not q:
+        return (
+            "Пустой запрос. Пример: `/search seo`",
+            {"inline_keyboard": [[{"text": "« Меню", "callback_data": "menu"}]]},
+        )
+
+    hits: list[tuple[str, dict]] = []  # (source_key, item)
+    for source_key in SOURCES:
+        for it in Items.load(source_key):
+            haystack = " ".join([
+                str(it.get("title") or ""),
+                str(it.get("repo_full_name") or ""),
+                str(it.get("description") or ""),
+                " ".join(str(s) for s in (it.get("skills_in_repo") or [])),
+            ]).lower()
+            if q in haystack:
+                hits.append((source_key, it))
+
+    if not hits:
+        return (
+            f"По запросу *{_md_escape(query)}* ничего не нашлось.",
+            {"inline_keyboard": [[{"text": "« Меню", "callback_data": "menu"}]]},
+        )
+
+    total = len(hits)
+    shown = hits[:SEARCH_RESULT_LIMIT]
+    source_emoji = {"skills": "📚", "n8n": "⚙️", "make": "🧩"}
+
+    head = f"🔎 *Поиск:* `{_md_escape(query)}` — найдено {total}"
+    if total > SEARCH_RESULT_LIMIT:
+        head += f", показаны первые {SEARCH_RESULT_LIMIT}"
+    lines = [head, ""]
+    detail_row: list[dict] = []
+    for i, (source_key, it) in enumerate(shown, 1):
+        tag = source_emoji.get(source_key, "•")
+        lines.append(f"{i}. {tag} {_format_item_line(it, source_key)}")
+        detail_row.append({
+            "text": f"📋 {i}",
+            "callback_data": f"src:{source_key}:item:{_url_id(it.get('url') or '')}",
+        })
+
+    kb = {"inline_keyboard": [detail_row, [{"text": "« Меню", "callback_data": "menu"}]]}
+    return ("\n".join(lines), kb)
+
+
+def screen_stats() -> Screen:
+    """Counts per Source, last update date, watch totals. Pure read of JSONs."""
+    lines = ["📊 *Состояние баз*", ""]
+    source_emoji = {"skills": "📚", "n8n": "⚙️", "make": "🧩"}
+    for source_key, source in SOURCES.items():
+        rec = list(_fetch(source_key).get("skills", {}).values())
+        watch = list(_fetch_watchlist(source_key).get("items", {}).values())
+        # Tool filter is applied for fairness with what the user sees in /list.
+        rec_in_view = Items._apply_tool_filter(rec, source_key)
+        watch_in_view = Items._apply_tool_filter(watch, source_key)
+        last = max(
+            (it.get("first_recommended", "") for it in rec_in_view if it.get("first_recommended")),
+            default="—",
+        )
+        tag = source_emoji.get(source_key, "•")
+        lines.append(
+            f"{tag} *{source.header}*: {len(rec_in_view)} рекомендованных, "
+            f"{len(watch_in_view)} 👀 на наблюдении\n  последнее: {last}"
+        )
+
+    kb = {"inline_keyboard": [[{"text": "« Меню", "callback_data": "menu"}]]}
+    return ("\n".join(lines), kb)
+
+
+def pick_random_anywhere() -> tuple[str, dict] | None:
+    """Pick a random recommended Item from any Source. None if all empty."""
+    pool: list[tuple[str, dict]] = []
+    for source_key in SOURCES:
+        for it in Items.load(source_key):
+            pool.append((source_key, it))
+    if not pool:
+        return None
+    return random.choice(pool)
+
+
+def find_item_anywhere(uid: str) -> tuple[str, dict] | None:
+    """Locate an Item by url_id across all Sources (for deep links)."""
+    for source_key in SOURCES:
+        it = Items.load(source_key).find_by_url_id(uid)
+        if it is not None:
+            return (source_key, it)
+    return None
+
+
 # === Transport adapter ===
 def deliver(
     chat_id: int,
@@ -765,6 +884,9 @@ HELP_TEXT = (
     "Команды:\n"
     "/start, /menu — главное меню\n"
     "/skills, /n8n, /make — открыть нужный источник\n"
+    "/search <текст> — поиск по всем базам\n"
+    "/random — случайная рекомендация\n"
+    "/stats — счётчики по базам\n"
     "/list, /categories, /months — устаревший доступ к skills\n"
     "/help — это сообщение\n"
     "\n"
@@ -786,6 +908,7 @@ RouteKind = Literal[
     "month",        # src:<source>:month:<ym>[:<page>]
     "item",         # src:<source>:item:<url_id>
     "explain",      # src:<source>:explain:<url_id>
+    "random",       # src:<source>:random — pick & open a random Item
 ]
 
 
@@ -818,7 +941,7 @@ class Route:
         if source_key not in VALID_SOURCES:
             return None
 
-        if action in ("menu", "categories", "months"):
+        if action in ("menu", "categories", "months", "random"):
             kind: RouteKind = "source_menu" if action == "menu" else action  # type: ignore[assignment]
             return cls(kind=kind, source_key=source_key)
         if action == "list":
@@ -886,6 +1009,8 @@ def handle_callback(update: dict) -> None:
         show(screen_page(src, month_view(route.arg), route.page))
     elif route.kind == "item":
         show(screen_item(src, route.arg))
+    elif route.kind == "random":
+        show(screen_random(src))
     elif route.kind == "explain":
         # Agentic feature: separate code path (sends a NEW message rather than
         # editing the detail screen so context stays visible above).
@@ -948,10 +1073,21 @@ def dispatch(update: dict) -> None:
         return
 
     # Strip bot mention suffix (e.g. /start@MyBot)
-    cmd = text.split()[0]
+    parts = text.split(maxsplit=1)
+    cmd = parts[0]
+    arg = parts[1] if len(parts) > 1 else ""
     if "@" in cmd:
         cmd = cmd.split("@", 1)[0]
     if cmd in ("/start", "/menu"):
+        # Deep link: t.me/<bot>?start=item_<url_id> → jump straight to detail
+        if arg.startswith("item_"):
+            uid = arg[len("item_"):]
+            found = find_item_anywhere(uid)
+            if found is not None:
+                source_key, _ = found
+                deliver(chat_id, screen_item(source_key, uid),
+                        reply_keyboard=_reply_keyboard())
+                return
         _handle_start(chat_id)
     elif cmd == "/help":
         deliver(chat_id, (HELP_TEXT, None), reply_keyboard=_reply_keyboard())
@@ -967,6 +1103,17 @@ def dispatch(update: dict) -> None:
         deliver(chat_id, screen_source_menu("n8n"))
     elif cmd == "/make":
         deliver(chat_id, screen_source_menu("make"))
+    elif cmd == "/search":
+        deliver(chat_id, screen_search(arg))
+    elif cmd == "/random":
+        picked = pick_random_anywhere()
+        if picked is None:
+            deliver(chat_id, ("Базы пусты.", None))
+        else:
+            source_key, item = picked
+            deliver(chat_id, screen_item(source_key, _url_id(item.get("url") or "")))
+    elif cmd == "/stats":
+        deliver(chat_id, screen_stats())
     else:
         deliver(
             chat_id,
