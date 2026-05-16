@@ -4,7 +4,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-15",
+      "last_checked": "2026-05-16",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -20,7 +20,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-15",
+      "last_checked": "2026-05-16",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -32,11 +32,27 @@
       "url": "https://github.com/JeffersonMFti/JurisAI",
       "why_interesting": "Legal AI workflow для бразильского юридического контекста (vigencia = проверка срока действия нормативных актов) — уникальная ниша автоматизации."
     },
+    "https://github.com/Katacha1537/n8n-backups": {
+      "added_date": "2026-05-16",
+      "category": "general_skill",
+      "expires_at": "2026-06-15",
+      "last_checked": "2026-05-16",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "Katacha1537/n8n-backups: Clinic.AI",
+      "signal_to_wait": "Появление описания функциональности (запись пациентов? диагностика? CRM?), рост звёзд, или README с инструкцией",
+      "title": "Katacha1537/n8n-backups: Clinic.AI",
+      "url": "https://github.com/Katacha1537/n8n-backups",
+      "why_interesting": "Workflow для медицинской клиники с AI — нишевый и потенциально интересный кейс автоматизации записи пациентов или обработки запросов. Verified JSON."
+    },
     "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base": {
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-15",
+      "last_checked": "2026-05-16",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -48,11 +64,27 @@
       "url": "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base",
       "why_interesting": "SerpBear — open-source rank tracker; workflow для аналитики SEO-данных из SerpBear интересен маркетологам с self-hosted стеком."
     },
+    "https://github.com/solmorth/discord_ai_agent": {
+      "added_date": "2026-05-16",
+      "category": "general_skill",
+      "expires_at": "2026-06-15",
+      "last_checked": "2026-05-16",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "solmorth/discord_ai_agent: RAG Agent",
+      "signal_to_wait": "Появление описания используемых нод (vector store, LLM), рост звёзд ≥3, или дополнительные упоминания в сообществе",
+      "title": "solmorth/discord_ai_agent: RAG Agent",
+      "url": "https://github.com/solmorth/discord_ai_agent",
+      "why_interesting": "RAG-агент для Discord на n8n — актуальная тема для команд, желающих добавить AI-ответчик к своему серверу. Verified JSON, упоминается как 'RAG Agent' что предполагает работу с векторной БД и LLM."
+    },
     "https://github.com/soluckysummer/n8n_workflows": {
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-15",
+      "last_checked": "2026-05-16",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -68,7 +100,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-15",
+      "last_checked": "2026-05-16",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -79,6 +111,22 @@
       "title": "thecloudstation/n8n-workflows: linkedin_Lead_scraper",
       "url": "https://github.com/thecloudstation/n8n-workflows",
       "why_interesting": "LinkedIn lead scraping — высококонвертирующий use case для B2B-продаж; workflow верифицирован и имеет прямую ссылку на JSON. 15 звёзд при одном workflow — умеренный сигнал."
+    },
+    "https://github.com/umair842/ghl-n8n-ai-lead-automation-laverton": {
+      "added_date": "2026-05-16",
+      "category": "general_skill",
+      "expires_at": "2026-06-15",
+      "last_checked": "2026-05-16",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "umair842/ghl-n8n-ai-lead-automation-laverton: 5-Follow-Up",
+      "signal_to_wait": "Рост звёзд ≥3, появление README с описанием переменных GHL API и инструкцией по настройке, или упоминание в Reddit/community",
+      "title": "umair842/ghl-n8n-ai-lead-automation-laverton: 5-Follow-Up",
+      "url": "https://github.com/umair842/ghl-n8n-ai-lead-automation-laverton",
+      "why_interesting": "Интеграция GoHighLevel (GHL) с n8n для AI-автоматизации follow-up по лидам — популярная задача в сфере локального маркетинга. Verified JSON, специфичный для реального бизнес-кейса (Laverton). Если внутри реализован AI-ответчик поверх GHL webhook, это редкая и ценная связка."
     }
   }
 }
