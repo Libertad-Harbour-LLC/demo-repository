@@ -61,6 +61,10 @@ Container repo housing automation utilities. Two active tracking pipelines:
 - `TELEGRAM_BOT_TOKEN` — bot token from @BotFather
 - `TELEGRAM_CHAT_ID` — destination chat for digests
 - `ANTHROPIC_API_KEY` — Claude API key from console.anthropic.com
+  (**also required in Vercel env vars** if you use the bot — gates the
+  `🤖 Объясни простыми словами` button; without it the button is hidden.
+  Check current state at `GET https://<vercel-url>/api/telegram` →
+  `llm_enabled` field in the JSON response.)
 
 ## Vercel bot env vars (set in Vercel project → Settings → Environment Variables)
 - `TELEGRAM_BOT_TOKEN` — same bot token as the cron pipeline

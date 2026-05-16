@@ -142,6 +142,7 @@ decision:
      "url": "ОБЯЗАТЕЛЬНО — на .claude/skills папку репо или сам репо, НЕ на твит",
      "source": "github|reddit|twitter|threads",
      "skills_in_repo": ["имена skills внутри репо (из item.skills[].name)"],
+     "description": "ОБЯЗАТЕЛЬНО — 1-2 нейтральных предложения о репо для карточки в боте (что это, для кого). Без эмодзи, без markdown, без призывов «попробуй». Если данных мало — опиши хотя бы тему и язык/стек по названию.",
      "what": "что делает репо/skills (можно выделить один конкретный skill)",
      "problem": "какую боль решает", "why_growing": "почему растёт сегодня",
      "evidence": "ссылки/числа из данных (stars, verified, skills_count, кросс-источники)",
@@ -156,6 +157,7 @@ decision:
     {"name": "<owner/repo>",
      "category": "marketing_skill|vibe_coding_skill|ai_content_skill|general_skill",
      "url": "ОБЯЗАТЕЛЬНО — на репо/папку skills", "source": "...",
+     "description": "ОБЯЗАТЕЛЬНО — 1-2 нейтральных предложения о репо для карточки в боте. Те же правила, что в top_test.description.",
      "why_interesting": "...", "signal_to_wait": "..."}
   ],
   "top_skip": [

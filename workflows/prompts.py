@@ -133,6 +133,7 @@ decision:
      "docs_url": "ссылка на README/описание",
      "source": "github_n8n|github_make|reddit_n8n|...",
      "skills_in_repo": ["имена workflows внутри репо (из item.workflows[].name)"],
+     "description": "ОБЯЗАТЕЛЬНО — 1-2 нейтральных предложения о workflow/репо для карточки в боте (что это, для кого). Без эмодзи, без markdown, без призывов «попробуй». Если данных мало — опиши хотя бы тему и tool.",
      "what": "что делает workflow",
      "problem": "какую боль решает", "why_growing": "почему растёт сегодня",
      "evidence": "ссылки/числа (stars, verified, workflow_count, кросс-источники)",
@@ -148,6 +149,7 @@ decision:
     {"name": "<owner/repo>: <wf>", "tool": "n8n|make|other",
      "category": "marketing_workflow|sales_workflow|data_workflow|devops_workflow|content_workflow|general_workflow",
      "url": "ОБЯЗАТЕЛЬНО", "json_url": "...", "source": "...",
+     "description": "ОБЯЗАТЕЛЬНО — 1-2 нейтральных предложения о workflow/репо для карточки в боте. Те же правила, что в top_test.description.",
      "why_interesting": "...", "signal_to_wait": "..."}
   ],
   "top_skip": [

@@ -30,7 +30,8 @@
       ],
       "title": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
       "tool": "n8n",
-      "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
+      "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows",
+      "description": "Крупнейшая open-source библиотека из 3400+ готовых n8n AI-воркфлоу — для импорта, расширения и переиспользования (одиночный summarizer-bot воркфлоу из этой коллекции)."
     }
   }
 }

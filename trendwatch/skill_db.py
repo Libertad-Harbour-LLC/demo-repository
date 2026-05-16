@@ -118,6 +118,7 @@ def add_to_recommended(
             "title": it.get("name") or _repo_full_name(it),
             "url": url,
             "category": it.get("category") or "general_skill",
+            "description": it.get("description") or "",
             "skills_in_repo": list(it.get("skills_in_repo") or []),
             "skills_count": len(it.get("skills_in_repo") or []),
             "stars": it.get("stars"),
@@ -167,6 +168,7 @@ def add_to_watchlist(
             "title": it.get("name") or _repo_full_name(it),
             "url": url,
             "category": it.get("category") or default_category,
+            "description": it.get("description") or "",
             "added_date": date,
             "signal_to_wait": it.get("signal_to_wait") or "",
             "metric_baseline": {

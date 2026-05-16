@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '0 9 * * *'
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Bypass once-per-day idempotency (re-send today even if already sent)'
+        type: boolean
+        default: false
 jobs:
   digest:
     runs-on: ubuntu-latest
@@ -14,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r trendwatch/requirements.txt
-      - run: python trendwatch/trendwatch.py
+      - run: python trendwatch/trendwatch.py ${{ inputs.force && '--force' || '' }}
         env:
           APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

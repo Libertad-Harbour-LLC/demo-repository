@@ -179,7 +179,41 @@ def analyze(
     if isinstance(summary, str) and summary:
         parsed["telegram_summary"] = _strip_skip_block(summary)
 
+    _backfill_descriptions(parsed)
+
     return parsed
+
+
+def _backfill_descriptions(parsed: dict) -> None:
+    """Ensure every top_test / top_watch entry has a non-empty description.
+
+    The bot's detail screen renders ``description`` as the primary
+    human-readable card. If the LLM ignores the schema requirement, we log
+    a warning per entry and fall back to ``what`` / ``why_interesting`` /
+    repo name so the bot card is never blank.
+    """
+    for bucket in ("top_test", "top_watch"):
+        items = parsed.get(bucket)
+        if not isinstance(items, list):
+            continue
+        for it in items:
+            if not isinstance(it, dict):
+                continue
+            desc = it.get("description")
+            if isinstance(desc, str) and desc.strip():
+                continue
+            fallback = (
+                (it.get("what") if bucket == "top_test" else it.get("why_interesting"))
+                or it.get("name")
+                or ""
+            )
+            it["description"] = (fallback or "").strip()
+            print(
+                f"[trendwatch.analyzer] WARN missing description in "
+                f"{bucket} entry name={it.get('name')!r} — "
+                f"backfilled from {'what' if bucket == 'top_test' else 'why_interesting'}",
+                file=sys.stderr,
+            )
 
 
 _SKIP_BLOCK_RE = re.compile(

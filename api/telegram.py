@@ -491,6 +491,10 @@ def _format_detail_watch(item: dict, source_key: str) -> str:
     if last := item.get("last_checked"):
         lines.append(f"📍 Последняя проверка: {last}")
 
+    if desc := item.get("description"):
+        lines.append("")
+        lines.append("📝 " + _md_escape(desc))
+
     if why := item.get("why_interesting"):
         lines.append("")
         lines.append("💡 Почему интересно:")
@@ -768,57 +772,70 @@ HELP_TEXT = (
 )
 
 
-# === Inline-button callback routing ===
-def handle_callback(update: dict) -> None:
-    """Route a Telegram inline-keyboard tap to the right Screen.
+# === Route ===
+# A parsed callback_data string. See CONTEXT.md → "Route".
+# Wire format is byte-stable across releases — inline keyboards live in user
+# chat history indefinitely and fire whatever string was baked at send time.
+RouteKind = Literal[
+    "top_menu",     # bare "menu"
+    "source_menu",  # src:<source>:menu
+    "categories",   # src:<source>:categories
+    "months",       # src:<source>:months
+    "list",         # src:<source>:list[:<page>]
+    "category",     # src:<source>:cat:<slug>[:<page>]
+    "month",        # src:<source>:month:<ym>[:<page>]
+    "item",         # src:<source>:item:<url_id>
+    "explain",      # src:<source>:explain:<url_id>
+]
 
-    All routes end in ``show(screen)`` — a closure that binds chat_id and the
-    message_id to edit. This keeps the routing rhythm focused on
-    ``action → Screen`` and pulls Telegram transport out of the if/elif.
 
-    Route table is intentionally an if/elif chain rather than a dict: the six
-    actions have heterogeneous signatures (0–2 args after the action token) and
-    a uniform-table would just hide that behind ``*args`` indirection.
+@dataclass(frozen=True)
+class Route:
+    """Parsed inline-button callback target.
+
+    ``source_key`` is None only for ``top_menu``. ``arg`` carries the
+    payload that depends on ``kind``: category slug, ``YYYY-MM`` month,
+    or url_id. ``page`` defaults to 0 for non-paginated kinds.
+
+    Construct via ``Route.parse(data)`` — never instantiate by hand from
+    user input.
     """
-    cb = update["callback_query"]
-    chat_id = cb["message"]["chat"]["id"]
-    msg_id = cb["message"]["message_id"]
-    _answer_callback(cb["id"])
-    data = cb.get("data", "") or ""
+    kind: RouteKind
+    source_key: str | None
+    arg: str | None = None
+    page: int = 0
 
-    def show(screen: Screen) -> None:
-        deliver(chat_id, screen, edit_message_id=msg_id)
+    @classmethod
+    def parse(cls, data: str) -> "Route | None":
+        if data == "menu":
+            return cls(kind="top_menu", source_key=None)
+        if not data.startswith("src:"):
+            return None
+        parts = data.split(":")
+        if len(parts) < 3:
+            return None
+        source_key, action = parts[1], parts[2]
+        if source_key not in VALID_SOURCES:
+            return None
 
-    if data == "menu":
-        show(screen_top_menu())
-        return
-    if not data.startswith("src:"):
-        return
-    parts = data.split(":")
-    if len(parts) < 3:
-        return
-    source_key, action = parts[1], parts[2]
-    if source_key not in VALID_SOURCES:
-        return
-
-    if action == "menu":
-        show(screen_source_menu(source_key))
-    elif action == "categories":
-        show(screen_categories(source_key))
-    elif action == "months":
-        show(screen_months(source_key))
-    elif action == "list":
-        show(screen_page(source_key, ALL_VIEW, _parse_page(parts, 3)))
-    elif action == "cat" and len(parts) >= 5:
-        show(screen_page(source_key, category_view(parts[3]), _parse_page(parts, 4)))
-    elif action == "month" and len(parts) >= 5:
-        show(screen_page(source_key, month_view(parts[3]), _parse_page(parts, 4)))
-    elif action == "item" and len(parts) >= 4:
-        show(screen_item(source_key, parts[3]))
-    elif action == "explain" and len(parts) >= 4:
-        # Agentic feature: separate code path (sends a NEW message rather than
-        # editing the detail screen so context stays visible above).
-        handle_explain(chat_id, source_key, parts[3])
+        if action in ("menu", "categories", "months"):
+            kind: RouteKind = "source_menu" if action == "menu" else action  # type: ignore[assignment]
+            return cls(kind=kind, source_key=source_key)
+        if action == "list":
+            return cls(kind="list", source_key=source_key, page=_parse_page(parts, 3))
+        if action == "cat" and len(parts) >= 4:
+            return cls(
+                kind="category", source_key=source_key,
+                arg=parts[3], page=_parse_page(parts, 4),
+            )
+        if action == "month" and len(parts) >= 4:
+            return cls(
+                kind="month", source_key=source_key,
+                arg=parts[3], page=_parse_page(parts, 4),
+            )
+        if action in ("item", "explain") and len(parts) >= 4:
+            return cls(kind=action, source_key=source_key, arg=parts[3])  # type: ignore[arg-type]
+        return None
 
 
 def _parse_page(parts: list[str], idx: int) -> int:
@@ -829,6 +846,50 @@ def _parse_page(parts: list[str], idx: int) -> int:
         return int(parts[idx])
     except ValueError:
         return 0
+
+
+# === Inline-button callback routing ===
+def handle_callback(update: dict) -> None:
+    """Route a Telegram inline-keyboard tap to the right Screen.
+
+    Parses ``callback_data`` into a typed :class:`Route`, then dispatches on
+    ``route.kind``. All Screen-returning kinds end in ``show(screen)`` — a
+    closure that binds chat_id and the message_id to edit. ``explain`` is
+    the lone side-effect kind: it sends a NEW message rather than editing.
+    """
+    cb = update["callback_query"]
+    chat_id = cb["message"]["chat"]["id"]
+    msg_id = cb["message"]["message_id"]
+    _answer_callback(cb["id"])
+
+    route = Route.parse(cb.get("data", "") or "")
+    if route is None:
+        return
+
+    def show(screen: Screen) -> None:
+        deliver(chat_id, screen, edit_message_id=msg_id)
+
+    src = route.source_key
+    if route.kind == "top_menu":
+        show(screen_top_menu())
+    elif route.kind == "source_menu":
+        show(screen_source_menu(src))
+    elif route.kind == "categories":
+        show(screen_categories(src))
+    elif route.kind == "months":
+        show(screen_months(src))
+    elif route.kind == "list":
+        show(screen_page(src, ALL_VIEW, route.page))
+    elif route.kind == "category":
+        show(screen_page(src, category_view(route.arg), route.page))
+    elif route.kind == "month":
+        show(screen_page(src, month_view(route.arg), route.page))
+    elif route.kind == "item":
+        show(screen_item(src, route.arg))
+    elif route.kind == "explain":
+        # Agentic feature: separate code path (sends a NEW message rather than
+        # editing the detail screen so context stays visible above).
+        handle_explain(chat_id, src, route.arg)
 
 
 def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
@@ -950,8 +1011,19 @@ class handler(BaseHTTPRequestHandler):  # noqa: N801 (required name by Vercel)
         self.wfile.write(b"OK")
 
     def do_GET(self):  # noqa: N802
-        # Health check
+        # Health check — surfaces config state so missing Vercel env vars
+        # (especially ANTHROPIC_API_KEY for the explain button) are visible
+        # without digging through function logs.
+        body = json.dumps({
+            "alive": True,
+            "bot_token_set": bool(BOT_TOKEN),
+            "webhook_secret_set": bool(WEBHOOK_SECRET),
+            "llm_enabled": LLM_ENABLED,
+            "llm_model": os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001") if LLM_ENABLED else None,
+            "repo": REPO,
+            "branch": BRANCH,
+        }).encode()
         self.send_response(200)
-        self.send_header("Content-type", "text/plain")
+        self.send_header("Content-type", "application/json")
         self.end_headers()
-        self.wfile.write(b"trendwatch bot is alive")
+        self.wfile.write(body)

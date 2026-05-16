@@ -103,7 +103,7 @@
       "added_manually": true,
       "category": "general_skill",
       "confidence": "manual",
-      "description": "",
+      "description": "Distill how anyone thinks — mental models, decision heuristics, expression DNA — into a reusable Claude skill.",
       "final_score": null,
       "first_recommended": "2026-05-16",
       "metric": "",
@@ -172,25 +172,8 @@
         "Дополнительно протестировать release-notes: 'Сгенерируй release notes для изменений в последних 5 коммитах'"
       ],
       "title": "anyproto/anytype-ts",
-      "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills"
-    },
-    "https://github.com/asklokesh/claudeskill-loki-mode": {
-      "added_manually": true,
-      "category": "vibe_coding_skill",
-      "confidence": "manual",
-      "description": "",
-      "final_score": null,
-      "first_recommended": "2026-05-16",
-      "metric": "",
-      "promoted_from_watch": false,
-      "repo_full_name": "asklokesh/claudeskill-loki-mode",
-      "scores": {},
-      "skills_count": 0,
-      "skills_in_repo": [],
-      "stars": null,
-      "test_steps": [],
-      "title": "asklokesh/claudeskill-loki-mode",
-      "url": "https://github.com/asklokesh/claudeskill-loki-mode"
+      "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills",
+      "description": "Official Anytype client for macOS, Linux, and Windows."
     },
     "https://github.com/coreyhaines31/marketingskills/tree/main/skills": {
       "added_manually": true,
@@ -301,7 +284,8 @@
         "Проверить, что Claude Code подхватил SKILL.md и сформировал структурированную DCF-модель"
       ],
       "title": "daloopa/investing",
-      "url": "https://github.com/daloopa/investing/tree/main/.claude/skills"
+      "url": "https://github.com/daloopa/investing/tree/main/.claude/skills",
+      "description": "Финансово-аналитический набор скилов от Daloopa для работы с инвестиционными данными в Claude Code."
     },
     "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -347,13 +331,14 @@
         "Дополнительно: протестировать payment-callback-safety на любом webhook-обработчике"
       ],
       "title": "doccker/cc-use-exp",
-      "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills"
+      "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills",
+      "description": "Layered configuration templates that make Claude Code, Gemini CLI, Codex, and Cursor work out of the box — distilled from a decade of daily development practice."
     },
     "https://github.com/egerev/superflow": {
       "added_manually": true,
       "category": "vibe_coding_skill",
       "confidence": "manual",
-      "description": "",
+      "description": "Skill-набор для оркестрации многошаговых задач в Claude Code (Superflow).",
       "final_score": null,
       "first_recommended": "2026-05-16",
       "metric": "",
@@ -406,7 +391,7 @@
       "added_manually": true,
       "category": "vibe_coding_skill",
       "confidence": "manual",
-      "description": "",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA.",
       "final_score": null,
       "first_recommended": "2026-05-16",
       "metric": "",
@@ -487,7 +472,8 @@
         "Затем протестировать code-review: 'Проведи code-review последнего коммита'"
       ],
       "title": "maslennikov-ig/claude-code-orchestrator-kit",
-      "url": "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills"
+      "url": "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills",
+      "description": "Turn Claude Code into a production powerhouse: 33+ AI agents automate bug fixing, security scanning, and dependency management. 19 slash commands, 6 MCP configs, quality gates, health monitoring."
     },
     "https://github.com/mattpocock/skills": {
       "added_manually": true,
@@ -532,7 +518,7 @@
       "added_manually": true,
       "category": "vibe_coding_skill",
       "confidence": "manual",
-      "description": "",
+      "description": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
       "final_score": null,
       "first_recommended": "2026-05-16",
       "metric": "",
@@ -550,7 +536,7 @@
       "added_manually": true,
       "category": "general_skill",
       "confidence": "manual",
-      "description": "",
+      "description": "An agentic skills framework & software development methodology that works.",
       "final_score": null,
       "first_recommended": "2026-05-16",
       "metric": "",
@@ -568,7 +554,7 @@
       "added_manually": true,
       "category": "ai_content_skill",
       "confidence": "manual",
-      "description": "",
+      "description": "Create beautiful slides on the web using Claude's frontend skills.",
       "final_score": null,
       "first_recommended": "2026-05-16",
       "metric": "",
