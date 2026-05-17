@@ -282,8 +282,9 @@ def run(
             system_prompt=WORKFLOWS_SYSTEM_PROMPT,
         )
     except Exception as exc:
+        msg = f"{type(exc).__name__}: {exc}"
         print(
-            f"[workflows] analyzer failed: {exc}; falling back to link digest",
+            f"[workflows] analyzer failed: {msg}; falling back to link digest",
             file=sys.stderr,
         )
         try:
@@ -292,6 +293,14 @@ def run(
             print(f"[workflows] telegram fallback failed: {exc2}", file=sys.stderr)
             print(summary)
             return 1
+        try:
+            telegram_client.send_text(
+                f"⚠️ Workflow LLM-анализ упал, отправлены плоские ссылки.\n"
+                f"Причина: {msg[:300]}",
+                bot_token, chat_id,
+            )
+        except Exception as exc2:
+            print(f"[workflows] reason-note send failed: {exc2}", file=sys.stderr)
         print("[WORKFLOWS_FALLBACK] LLM analysis failed, sent link list.")
         print(summary)
         return 0

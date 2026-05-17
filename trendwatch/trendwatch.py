@@ -50,6 +50,36 @@ except ImportError:
     import state
 
 
+def _fallback_with_reason(
+    exc: Exception, items_by_source, bot_token: str, chat_id: str, summary: str
+) -> int:
+    """Send the plain-link fallback, then a short error-cause note so the
+    failure is visible in Telegram (not buried in Actions stderr).
+    Returns the exit code the orchestrator should use.
+    """
+    msg = f"{type(exc).__name__}: {exc}"
+    print(
+        f"[trendwatch] analyzer failed: {msg}; falling back to link digest",
+        file=sys.stderr,
+    )
+    try:
+        telegram_client.send_digest(items_by_source, bot_token, chat_id)
+    except Exception as exc2:
+        print(f"[trendwatch] telegram fallback failed: {exc2}", file=sys.stderr)
+        print(summary)
+        return 1
+    try:
+        telegram_client.send_text(
+            f"⚠️ LLM-анализ упал, отправлены плоские ссылки.\nПричина: {msg[:300]}",
+            bot_token, chat_id,
+        )
+    except Exception as exc2:
+        print(f"[trendwatch] reason-note send failed: {exc2}", file=sys.stderr)
+    print("[FALLBACK_LINKS] LLM analysis failed, sent link list.")
+    print(summary)
+    return 0
+
+
 def _is_worth_showing(item: dict) -> bool:
     """Dedupe filter: include items only if new, gained skills, or grew ≥5 stars."""
     if item.get("is_new", True):
@@ -305,35 +335,13 @@ def run(
                 normalized, filtered_items, period=period, date=date
             )
         except Exception as exc:
-            print(
-                f"[trendwatch] analyzer failed: {exc}; falling back to link digest",
-                file=sys.stderr,
+            return _fallback_with_reason(
+                exc, items_by_source, bot_token, chat_id, summary
             )
-            try:
-                telegram_client.send_digest(items_by_source, bot_token, chat_id)
-            except Exception as exc2:
-                print(
-                    f"[trendwatch] telegram fallback failed: {exc2}", file=sys.stderr
-                )
-                print(summary)
-                return 1
-            print("[FALLBACK_LINKS] LLM analysis failed, sent link list.")
-            print(summary)
-            return 0
     except Exception as exc:
-        print(
-            f"[trendwatch] analyzer failed: {exc}; falling back to link digest",
-            file=sys.stderr,
+        return _fallback_with_reason(
+            exc, items_by_source, bot_token, chat_id, summary
         )
-        try:
-            telegram_client.send_digest(items_by_source, bot_token, chat_id)
-        except Exception as exc2:
-            print(f"[trendwatch] telegram fallback failed: {exc2}", file=sys.stderr)
-            print(summary)
-            return 1
-        print("[FALLBACK_LINKS] LLM analysis failed, sent link list.")
-        print(summary)
-        return 0
 
     # Surface graduates in the rendered Markdown report too.
     analysis.setdefault("graduated_from_watch", graduates)
