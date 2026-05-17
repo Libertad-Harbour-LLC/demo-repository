@@ -143,7 +143,18 @@ def explain_item(item: dict, source_key: str) -> tuple[str | None, str | None]:
             messages=[{"role": "user", "content": user_msg}],
         )
     except Exception as e:
-        msg = f"{type(e).__name__}: {e}"
+        # APIConnectionError wraps the underlying httpx exception; the
+        # public repr is just "Connection error." which hides the cause
+        # (DNS / TLS / IPv6 / firewall). Walk __cause__/__context__ to
+        # surface the real network error.
+        chain: list[str] = [f"{type(e).__name__}: {e}"]
+        inner: BaseException | None = e.__cause__ or e.__context__
+        seen: set[int] = {id(e)}
+        while inner is not None and id(inner) not in seen:
+            seen.add(id(inner))
+            chain.append(f"{type(inner).__name__}: {inner}")
+            inner = inner.__cause__ or inner.__context__
+        msg = " ← ".join(chain)
         print(f"[llm] API call failed: {msg}", file=sys.stderr)
         return None, msg
 
