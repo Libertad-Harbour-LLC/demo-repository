@@ -17,8 +17,11 @@ from __future__ import annotations
 import os
 import sys
 
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-MODEL = os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001")
+# .strip() defends against trailing whitespace/newline in the env var —
+# Vercel's UI textarea preserves a trailing \n on paste, which httpx
+# rejects as "Illegal header value" before any network call.
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+MODEL = os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001").strip()
 TIMEOUT_SECONDS = 8.0  # Vercel function timeout is 10s; leave headroom for I/O.
 
 # System prompt is the cacheable part — same bytes across every call. Keep it
