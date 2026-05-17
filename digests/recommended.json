@@ -64,6 +64,31 @@
       "title": "AgriciDaniel/claude-seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/tree/main/skills"
     },
+    "https://github.com/DenisSergeevitch/agents-best-practices": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Provider-neutral Agent Skill для проектирования агентских харнессов (Claude Code, Codex, OpenAI-compatible). Покрывает архитектуру агентских циклов, дизайн tools, permissions, system prompts, planning, контекст-компакцию, memory, MCP-коннекторы, observability, evals, prompt caching и safety.",
+      "final_score": null,
+      "first_recommended": "2026-05-17",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "DenisSergeevitch/agents-best-practices",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agents-best-practices"
+      ],
+      "stars": 577,
+      "test_steps": [
+        "git clone https://github.com/DenisSergeevitch/agents-best-practices.git",
+        "mkdir -p ~/.claude/skills",
+        "mv agents-best-practices ~/.claude/skills/agents-best-practices",
+        "В Claude Code попроси спроектировать MVP-агент — скилл должен подсказывать архитектурные решения по своим reference-главам"
+      ],
+      "title": "DenisSergeevitch/agents-best-practices",
+      "url": "https://github.com/DenisSergeevitch/agents-best-practices"
+    },
     "https://github.com/JetBrains/ideavim/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
