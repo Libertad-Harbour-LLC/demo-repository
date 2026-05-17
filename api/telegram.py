@@ -35,6 +35,30 @@ LLM_ENABLED = bool(os.environ.get("ANTHROPIC_API_KEY", "").strip())
 REPO = os.environ.get("BOT_REPO", "Libertad-Harbour-LLC/demo-repository").strip()
 BRANCH = os.environ.get("BOT_BRANCH", "main").strip()
 CACHE_TTL_SECONDS = 60
+
+# Allow-list of Telegram user IDs that may interact with this bot.
+# Override at deploy time with BOT_ADMIN_IDS="111,222"; the defaults below
+# match the two admins who receive daily digests in the linked chat.
+# Anyone outside the list gets a single "private bot" reply and no
+# further response — Share deep-links also dead-end here.
+_DEFAULT_ADMIN_IDS = {481077485, 576554290}
+
+
+def _parse_admin_ids(raw: str) -> set[int]:
+    out: set[int] = set()
+    for tok in raw.split(","):
+        tok = tok.strip()
+        if not tok:
+            continue
+        try:
+            out.add(int(tok))
+        except ValueError:
+            continue
+    return out
+
+
+_admin_env = _parse_admin_ids(os.environ.get("BOT_ADMIN_IDS", ""))
+ADMIN_IDS: set[int] = _admin_env or _DEFAULT_ADMIN_IDS
 PAGE_SIZE = 5  # items per page
 
 # Source registry — see CONTEXT.md for the term definition.
@@ -1303,7 +1327,64 @@ def _send_plain(chat_id: int, text: str) -> dict:
 
 
 # === Webhook dispatcher ===
+def _from_user_id(update: dict) -> int | None:
+    """Extract the Telegram user id from any update shape we handle."""
+    for key in ("callback_query", "message", "edited_message"):
+        section = update.get(key)
+        if isinstance(section, dict):
+            user = section.get("from") or {}
+            uid = user.get("id")
+            if isinstance(uid, int):
+                return uid
+    return None
+
+
+def _from_chat_id(update: dict) -> int | None:
+    """Extract a chat_id we can reply to, from any update shape."""
+    cb = update.get("callback_query")
+    if isinstance(cb, dict):
+        msg = cb.get("message") or {}
+        chat = msg.get("chat") or {}
+        if isinstance(chat.get("id"), int):
+            return chat["id"]
+    for key in ("message", "edited_message"):
+        msg = update.get(key)
+        if isinstance(msg, dict):
+            chat = msg.get("chat") or {}
+            if isinstance(chat.get("id"), int):
+                return chat["id"]
+    return None
+
+
+def is_admin(user_id: int | None) -> bool:
+    return user_id is not None and user_id in ADMIN_IDS
+
+
+PRIVATE_BOT_MESSAGE = (
+    "🔒 Это приватный бот.\n\n"
+    "Доступ только у владельцев. Если ты считаешь, что должен иметь доступ — "
+    "напиши тому, кто дал тебе ссылку."
+)
+
+
 def dispatch(update: dict) -> None:
+    # Access gate: only admins may interact with anything. Non-admins get a
+    # single polite reply (callback taps get the answerCallbackQuery toast)
+    # and no further processing. Deep-link shares (/start item_<uid>) also
+    # dead-end here — Share buttons are usable but recipients can't read.
+    user_id = _from_user_id(update)
+    if not is_admin(user_id):
+        log_event("access.denied", user_id=user_id,
+                  kind="callback" if "callback_query" in update else "message")
+        cb = update.get("callback_query")
+        if isinstance(cb, dict):
+            _answer_callback(cb.get("id", ""), text="🔒 Приватный бот")
+            return
+        chat_id = _from_chat_id(update)
+        if chat_id is not None:
+            _send_plain(chat_id, PRIVATE_BOT_MESSAGE)
+        return
+
     if "callback_query" in update:
         handle_callback(update)
         return
@@ -1434,6 +1515,8 @@ class handler(BaseHTTPRequestHandler):  # noqa: N801 (required name by Vercel)
             "webhook_secret_set": bool(WEBHOOK_SECRET),
             "llm_enabled": LLM_ENABLED,
             "llm_model": os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001") if LLM_ENABLED else None,
+            "admin_count": len(ADMIN_IDS),
+            "admins_from_env": bool(_admin_env),
             "repo": REPO,
             "branch": BRANCH,
         }).encode()
