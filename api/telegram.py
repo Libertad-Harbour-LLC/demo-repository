@@ -1022,25 +1022,46 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
 
     Looks up the Item by url_id, calls the LLM, and sends the explanation as a
     NEW message (not an edit) so the detail screen stays visible above. Any
-    LLM failure (missing key, timeout, empty response) → fallback message;
-    the handler never raises into the webhook.
+    failure path — missing key, network, Markdown parse rejection, even an
+    unexpected exception in the LLM module — surfaces a visible message;
+    the handler never silently no-ops.
     """
-    # Lazy import — anthropic SDK shouldn't load on every callback cold-start,
-    # only when this code path actually runs.
-    from api.llm import explain_item
+    try:
+        # Lazy import — anthropic SDK shouldn't load on every callback cold-start,
+        # only when this code path actually runs.
+        from api.llm import explain_item
 
-    item = Items.load(source_key).find_by_url_id(uid)
-    if item is None:
-        deliver(chat_id, ("Айтем не найден — возможно, удалён из базы.", None))
-        return
-    text, error = explain_item(item, source_key)
-    if not text:
-        deliver(
-            chat_id,
-            (f"Не удалось получить объяснение.\nПричина: {error}", None),
-        )
-        return
-    deliver(chat_id, (text, None))
+        item = Items.load(source_key).find_by_url_id(uid)
+        if item is None:
+            _send_plain(chat_id, "Айтем не найден — возможно, удалён из базы.")
+            return
+        text, error = explain_item(item, source_key)
+        if not text:
+            _send_plain(
+                chat_id,
+                f"Не удалось получить объяснение.\nПричина: {error or 'неизвестна'}",
+            )
+            return
+        # Successful explanations are plain prose; send without Markdown so
+        # any stray * / _ / [ from the LLM output never trips Telegram's parser.
+        _send_plain(chat_id, text)
+    except Exception as e:
+        # Surface unexpected failures (import error, bug in our code, etc.)
+        # so we see them in Telegram instead of having the webhook return 200
+        # with the error buried in Vercel stderr.
+        _send_plain(chat_id, f"Внутренняя ошибка в handle_explain: {type(e).__name__}: {e}")
+
+
+def _send_plain(chat_id: int, text: str) -> dict:
+    """Send a Telegram message with parse_mode disabled — used for
+    diagnostic / LLM-output paths where Markdown escaping would be brittle.
+    """
+    return _tg(
+        "sendMessage",
+        chat_id=chat_id,
+        text=text,
+        disable_web_page_preview=True,
+    )
 
 
 # === Webhook dispatcher ===
