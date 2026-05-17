@@ -1,0 +1,33 @@
+name: setup-bot-commands
+# Registers the bot's slash-command list with Telegram so the / autocomplete
+# in the chat shows /whatsnew, /search, etc. Run once after each time the
+# command list changes — Telegram caches the result indefinitely.
+on:
+  workflow_dispatch:
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setMyCommands
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          set -euo pipefail
+          response=$(curl -sS -X POST \
+            "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/setMyCommands" \
+            -H "Content-Type: application/json" \
+            -d '{"commands":[
+              {"command":"start","description":"Главное меню"},
+              {"command":"menu","description":"Главное меню"},
+              {"command":"skills","description":"Claude Skills"},
+              {"command":"n8n","description":"N8N Workflows"},
+              {"command":"make","description":"Make Workflows"},
+              {"command":"search","description":"Поиск по всем базам"},
+              {"command":"random","description":"Случайная рекомендация"},
+              {"command":"whatsnew","description":"Что нового за 2 дня"},
+              {"command":"stats","description":"Счётчики по базам"},
+              {"command":"help","description":"Помощь"}
+            ]}')
+          echo "Telegram response: $response"
+          # Fail the job loudly if Telegram returned ok:false
+          echo "$response" | grep -q '"ok":true' || { echo "setMyCommands failed"; exit 1; }
