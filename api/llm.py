@@ -15,6 +15,7 @@ fallback message — this module never raises into the webhook.
 from __future__ import annotations
 
 import os
+import re
 import sys
 
 # .strip() defends against trailing whitespace/newline in the env var —
@@ -23,6 +24,44 @@ import sys
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 MODEL = os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001").strip()
 TIMEOUT_SECONDS = 8.0  # Vercel function timeout is 10s; leave headroom for I/O.
+
+# Hard cap on item description chars going into the prompt — bounds context
+# cost for outliers and limits the prompt-injection surface area.
+DESC_MAX_CHARS = 600
+
+# Common prompt-injection openers we silently drop from item.description
+# before it ever reaches the model. Real defence is the <item> wrapping +
+# system-prompt rule; this is defence-in-depth so a hostile GitHub repo
+# description doesn't even land in the context window.
+_INJECTION_RE = re.compile(
+    r"(?i)\b(?:ignore|disregard|forget)\s+(?:all\s+|the\s+)?"
+    r"(?:previous|prior|above|preceding)\b[^\n.]*[\n.]?"
+)
+
+# Secrets stripped from anything that may land in a user-visible error
+# string (Telegram fallback message). Order matters: most specific first.
+_SECRET_PATTERNS = [
+    (re.compile(r"sk-ant-[A-Za-z0-9_\-]{8,}"), "sk-ant-***"),
+    (re.compile(r"\b\d{8,12}:[A-Za-z0-9_\-]{30,}\b"), "<telegram-token>"),
+]
+
+
+def _mask_secrets(s: str) -> str:
+    """Replace any known secret pattern in `s` with a placeholder."""
+    out = s
+    for pat, repl in _SECRET_PATTERNS:
+        out = pat.sub(repl, out)
+    return out
+
+
+def _sanitize_description(desc: str) -> str:
+    """Lightly clean an untrusted item description before it enters the
+    model context: drop injection-pattern openers and hard-cap length.
+    """
+    cleaned = _INJECTION_RE.sub("", desc).strip()
+    if len(cleaned) > DESC_MAX_CHARS:
+        cleaned = cleaned[:DESC_MAX_CHARS].rstrip() + "…"
+    return cleaned
 
 # System prompt is the cacheable part — same bytes across every call. Keep it
 # stable. Per agents-best-practices/references/prompt-caching-and-cost.md:
@@ -71,7 +110,7 @@ def _format_item_for_llm(item: dict, source_key: str) -> str:
     lines.append(f"Название: {item.get('title') or item.get('repo_full_name') or ''}")
     lines.append(f"Категория: {cat_label}")
     if desc := item.get("description"):
-        lines.append(f"Описание: {desc}")
+        lines.append(f"Описание: {_sanitize_description(str(desc))}")
 
     skills = item.get("skills_in_repo") or []
     if skills:
@@ -157,7 +196,7 @@ def explain_item(item: dict, source_key: str) -> tuple[str | None, str | None]:
             seen.add(id(inner))
             chain.append(f"{type(inner).__name__}: {inner}")
             inner = inner.__cause__ or inner.__context__
-        msg = " ← ".join(chain)
+        msg = _mask_secrets(" ← ".join(chain))
         print(f"[llm] API call failed: {msg}", file=sys.stderr)
         return None, msg
 
@@ -180,4 +219,16 @@ def explain_item(item: dict, source_key: str) -> tuple[str | None, str | None]:
     if not text:
         stop = getattr(resp, "stop_reason", "?")
         return None, f"пустой ответ от модели (stop_reason={stop})"
+    # Output guardrail: if the model starts with a refusal / instruction-following
+    # marker, the description likely tried prompt injection. Surface a clean
+    # fallback rather than the compromised text.
+    head = text.lower().lstrip()[:80]
+    refusal_markers = (
+        "i cannot", "i can't", "i'm sorry", "i am sorry",
+        "ignore previous", "as instructed", "i have been told",
+        "не могу", "извини", "я не могу",
+    )
+    if any(head.startswith(m) for m in refusal_markers):
+        print(f"[llm] WARN output looks like refusal/injection: {head!r}", file=sys.stderr)
+        return None, "модель вернула отказ или признаки prompt-injection — пропускаю"
     return text, None
