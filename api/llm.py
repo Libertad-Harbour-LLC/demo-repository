@@ -95,23 +95,30 @@ def _format_item_for_llm(item: dict, source_key: str) -> str:
     return "\n".join(lines)
 
 
-def explain_item(item: dict, source_key: str) -> str | None:
-    """Single-shot Anthropic call. Returns plain-Russian explanation or None.
+def explain_item(item: dict, source_key: str) -> tuple[str | None, str | None]:
+    """Single-shot Anthropic call.
 
-    Failure modes (all return None, logged to stderr):
+    Returns ``(text, error)`` where exactly one is non-None:
+    - ``(text, None)`` on success
+    - ``(None, "human-readable cause")`` on any failure
+
+    Failure modes (all return None text + non-None error, also logged
+    to stderr):
     - ANTHROPIC_API_KEY env var not set
     - anthropic SDK not installed
     - API call raises (timeout, 5xx, network)
     - Response has no text block
     """
     if not ANTHROPIC_API_KEY:
-        print("[llm] ANTHROPIC_API_KEY not set — skipping", file=sys.stderr)
-        return None
+        msg = "ANTHROPIC_API_KEY не задан"
+        print(f"[llm] {msg} — skipping", file=sys.stderr)
+        return None, msg
     try:
         import anthropic
     except ImportError:
-        print("[llm] anthropic SDK not installed", file=sys.stderr)
-        return None
+        msg = "anthropic SDK не установлен на Vercel"
+        print(f"[llm] {msg}", file=sys.stderr)
+        return None, msg
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY, timeout=TIMEOUT_SECONDS)
     item_block = _format_item_for_llm(item, source_key)
@@ -136,8 +143,9 @@ def explain_item(item: dict, source_key: str) -> str | None:
             messages=[{"role": "user", "content": user_msg}],
         )
     except Exception as e:
-        print(f"[llm] API call failed: {type(e).__name__}: {e}", file=sys.stderr)
-        return None
+        msg = f"{type(e).__name__}: {e}"
+        print(f"[llm] API call failed: {msg}", file=sys.stderr)
+        return None, msg
 
     try:
         u = resp.usage
@@ -155,4 +163,7 @@ def explain_item(item: dict, source_key: str) -> str | None:
         b.text for b in (resp.content or []) if getattr(b, "type", None) == "text"
     ]
     text = "\n".join(text_chunks).strip()
-    return text or None
+    if not text:
+        stop = getattr(resp, "stop_reason", "?")
+        return None, f"пустой ответ от модели (stop_reason={stop})"
+    return text, None

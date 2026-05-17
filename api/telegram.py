@@ -1033,11 +1033,11 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
     if item is None:
         deliver(chat_id, ("Айтем не найден — возможно, удалён из базы.", None))
         return
-    text = explain_item(item, source_key)
+    text, error = explain_item(item, source_key)
     if not text:
         deliver(
             chat_id,
-            ("Не удалось получить объяснение. Попробуйте позже.", None),
+            (f"Не удалось получить объяснение.\nПричина: {error}", None),
         )
         return
     deliver(chat_id, (text, None))
