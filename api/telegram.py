@@ -21,14 +21,17 @@ from typing import Any, Literal
 import requests
 
 # === Constants ===
-BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-WEBHOOK_SECRET = os.environ.get("TELEGRAM_WEBHOOK_SECRET", "")
+# .strip() defends against trailing whitespace/newline in env vars
+# (Vercel's textarea preserves a trailing \n on paste, which httpx
+# rejects as "Illegal header value" before any network call).
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+WEBHOOK_SECRET = os.environ.get("TELEGRAM_WEBHOOK_SECRET", "").strip()
 # Optional — gates the "🤖 Объясни простыми словами" button on detail screens.
 # Checked here (not via importing api.llm) so cold-start doesn't pay the
 # anthropic import cost when the feature is disabled.
-LLM_ENABLED = bool(os.environ.get("ANTHROPIC_API_KEY"))
-REPO = os.environ.get("BOT_REPO", "Libertad-Harbour-LLC/demo-repository")
-BRANCH = os.environ.get("BOT_BRANCH", "main")
+LLM_ENABLED = bool(os.environ.get("ANTHROPIC_API_KEY", "").strip())
+REPO = os.environ.get("BOT_REPO", "Libertad-Harbour-LLC/demo-repository").strip()
+BRANCH = os.environ.get("BOT_BRANCH", "main").strip()
 CACHE_TTL_SECONDS = 60
 PAGE_SIZE = 5  # items per page
 
