@@ -146,6 +146,19 @@ def _fetch_watchlist(source_key: str) -> dict:
     return _fetch_url(url, {"items": {}})
 
 
+# === Structured logging ===
+# One JSON line per event to stderr. Vercel function logs are searchable
+# with `grep | jq` after the fact; keeps the wire format machine-readable
+# without bringing in an external metrics sink. Always best-effort —
+# logging must never raise into the webhook.
+def log_event(event: str, **fields: Any) -> None:
+    try:
+        record = {"event": event, "ts": time.time(), **fields}
+        print(json.dumps(record, ensure_ascii=False, default=str), file=sys.stderr)
+    except Exception:
+        pass
+
+
 # === Telegram API helpers ===
 def _tg(method: str, **payload) -> dict:
     if not BOT_TOKEN:
@@ -1177,9 +1190,16 @@ def handle_callback(update: dict) -> None:
     msg_id = cb["message"]["message_id"]
     _answer_callback(cb["id"])
 
-    route = Route.parse(cb.get("data", "") or "")
+    raw = cb.get("data", "") or ""
+    route = Route.parse(raw)
     if route is None:
+        log_event("callback.unparsed", raw=raw[:80])
         return
+    log_event(
+        "callback",
+        kind=route.kind, src=route.source_key,
+        page=route.page, has_arg=bool(route.arg),
+    )
 
     def show(screen: Screen) -> None:
         deliver(chat_id, screen, edit_message_id=msg_id)
@@ -1224,6 +1244,7 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
     unexpected exception in the LLM module — surfaces a visible message;
     the handler never silently no-ops.
     """
+    started = time.time()
     try:
         # Lazy import — anthropic SDK shouldn't load on every callback cold-start,
         # only when this code path actually runs.
@@ -1231,10 +1252,16 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
 
         item = Items.load(source_key).find_by_url_id(uid)
         if item is None:
+            log_event("explain.not_found", src=source_key, uid=uid)
             _send_plain(chat_id, "Айтем не найден — возможно, удалён из базы.")
             return
         text, error = explain_item(item, source_key)
+        elapsed_ms = int((time.time() - started) * 1000)
         if not text:
+            log_event(
+                "explain.fail", src=source_key, uid=uid,
+                ms=elapsed_ms, error=(error or "unknown")[:200],
+            )
             _send_plain(
                 chat_id,
                 _mask_secrets(
@@ -1242,6 +1269,10 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
                 ),
             )
             return
+        log_event(
+            "explain.ok", src=source_key, uid=uid,
+            ms=elapsed_ms, chars=len(text),
+        )
         # Successful explanations are plain prose; send without Markdown so
         # any stray * / _ / [ from the LLM output never trips Telegram's parser.
         _send_plain(chat_id, text)
@@ -1249,6 +1280,8 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
         # Surface unexpected failures (import error, bug in our code, etc.)
         # so we see them in Telegram instead of having the webhook return 200
         # with the error buried in Vercel stderr.
+        log_event("explain.crash", src=source_key, uid=uid,
+                  exc_type=type(e).__name__, exc=str(e)[:200])
         try:
             from api.llm import _mask_secrets as _m
             safe = _m(f"{type(e).__name__}: {e}")
@@ -1304,6 +1337,10 @@ def dispatch(update: dict) -> None:
     arg = parts[1] if len(parts) > 1 else ""
     if "@" in cmd:
         cmd = cmd.split("@", 1)[0]
+    if cmd.startswith("/"):
+        # has_arg only (not the arg itself — search queries can leak intent
+        # if logged verbatim, and they're not needed for usage analytics)
+        log_event("command", cmd=cmd, has_arg=bool(arg))
     if cmd in ("/start", "/menu"):
         # Deep link: t.me/<bot>?start=item_<url_id> → jump straight to detail
         if arg.startswith("item_"):
@@ -1370,6 +1407,7 @@ class handler(BaseHTTPRequestHandler):  # noqa: N801 (required name by Vercel)
                     "X-Telegram-Bot-Api-Secret-Token", ""
                 )
                 if received != WEBHOOK_SECRET:
+                    log_event("webhook.auth_fail")
                     self.send_response(401)
                     self.end_headers()
                     return
@@ -1378,7 +1416,8 @@ class handler(BaseHTTPRequestHandler):  # noqa: N801 (required name by Vercel)
             update = json.loads(body or b"{}")
             dispatch(update)
         except Exception as e:
-            print(f"[bot] error: {e}", file=sys.stderr)
+            log_event("webhook.crash",
+                      exc_type=type(e).__name__, exc=str(e)[:200])
         # Always 200 so Telegram does not retry.
         self.send_response(200)
         self.send_header("Content-type", "text/plain")
