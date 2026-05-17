@@ -1227,7 +1227,7 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
     try:
         # Lazy import — anthropic SDK shouldn't load on every callback cold-start,
         # only when this code path actually runs.
-        from api.llm import explain_item
+        from api.llm import _mask_secrets, explain_item
 
         item = Items.load(source_key).find_by_url_id(uid)
         if item is None:
@@ -1237,7 +1237,9 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
         if not text:
             _send_plain(
                 chat_id,
-                f"Не удалось получить объяснение.\nПричина: {error or 'неизвестна'}",
+                _mask_secrets(
+                    f"Не удалось получить объяснение.\nПричина: {error or 'неизвестна'}"
+                ),
             )
             return
         # Successful explanations are plain prose; send without Markdown so
@@ -1247,7 +1249,12 @@ def handle_explain(chat_id: int, source_key: str, uid: str) -> None:
         # Surface unexpected failures (import error, bug in our code, etc.)
         # so we see them in Telegram instead of having the webhook return 200
         # with the error buried in Vercel stderr.
-        _send_plain(chat_id, f"Внутренняя ошибка в handle_explain: {type(e).__name__}: {e}")
+        try:
+            from api.llm import _mask_secrets as _m
+            safe = _m(f"{type(e).__name__}: {e}")
+        except Exception:
+            safe = f"{type(e).__name__}: ***"
+        _send_plain(chat_id, f"Внутренняя ошибка в handle_explain: {safe}")
 
 
 def _send_plain(chat_id: int, text: str) -> dict:
