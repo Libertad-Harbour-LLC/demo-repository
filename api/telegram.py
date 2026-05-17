@@ -12,9 +12,11 @@ import hashlib
 import json
 import os
 import random
+import re
 import sys
 import time
 from dataclasses import dataclass
+from datetime import date, timedelta
 from http.server import BaseHTTPRequestHandler
 from typing import Any, Literal
 
@@ -725,6 +727,12 @@ def screen_item(source_key: str, uid: str) -> Screen:
             "text": "🤖 Объясни простыми словами",
             "callback_data": f"src:{source_key}:explain:{uid}",
         }])
+    if item is not None:
+        rows.append([
+            {"text": "📋 Поставить", "callback_data": f"src:{source_key}:setup:{uid}"},
+            {"text": "🎯 Похожие", "callback_data": f"src:{source_key}:similar:{uid}"},
+        ])
+        rows.append([{"text": "🔗 Поделиться", "callback_data": f"src:{source_key}:share:{uid}"}])
     rows.append([{"text": "« К списку", "callback_data": f"src:{source_key}:list:0"}])
     rows.append([{"text": "« Меню источника", "callback_data": f"src:{source_key}:menu"}])
     rows.append([{"text": "« Источник", "callback_data": "menu"}])
@@ -849,6 +857,183 @@ def find_item_anywhere(uid: str) -> tuple[str, dict] | None:
     return None
 
 
+_bot_username_cache: list[str | None] = [None]  # list for mutability across calls
+
+
+def bot_username() -> str | None:
+    """Resolve the bot's @username (without the @).
+
+    Order: BOT_USERNAME env var → cached getMe result → fresh getMe call.
+    None only if env is unset, getMe fails, and we have no cache. The
+    in-process cache persists across invocations of the same warm Vercel
+    function instance; cold starts pay one extra getMe.
+    """
+    env_val = os.environ.get("BOT_USERNAME", "").strip()
+    if env_val:
+        return env_val
+    if _bot_username_cache[0]:
+        return _bot_username_cache[0]
+    r = _tg("getMe")
+    if r.get("ok"):
+        u = ((r.get("result") or {}).get("username") or "").strip()
+        if u:
+            _bot_username_cache[0] = u
+            return u
+    return None
+
+
+def _repo_clone_url(item_url: str) -> str:
+    """Strip /tree/... so the URL becomes a clone-ready repo root."""
+    return re.sub(r"/tree/.*$", "", item_url or "")
+
+
+def screen_share(source_key: str, uid: str) -> Screen:
+    """Render a copy-pasteable t.me deep-link for one Item."""
+    username = bot_username()
+    if not username:
+        text = (
+            "🔗 *Поделиться*\n\n"
+            "Не удалось определить @username бота (getMe вернул ошибку). "
+            "Задай переменную `BOT_USERNAME` в Vercel env vars."
+        )
+    else:
+        link = f"https://t.me/{username}?start=item_{uid}"
+        text = (
+            "🔗 *Поделиться этим айтемом*\n\n"
+            "Скопируй и отправь:\n"
+            f"`{link}`\n\n"
+            "У получателя бот сразу откроет детальный экран."
+        )
+    kb = {"inline_keyboard": [
+        [{"text": "« Назад к айтему", "callback_data": f"src:{source_key}:item:{uid}"}],
+    ]}
+    return text, kb
+
+
+def screen_setup(source_key: str, uid: str) -> Screen:
+    """Render an install snippet appropriate for the Source's tool."""
+    item = Items.load(source_key).find_by_url_id(uid)
+    if item is None:
+        return ("Айтем не найден.", {"inline_keyboard": [
+            [{"text": "« К списку", "callback_data": f"src:{source_key}:list:0"}],
+        ]})
+
+    url = item.get("url") or ""
+    if source_key == "skills":
+        clone = _repo_clone_url(url)
+        if clone and not clone.endswith(".git"):
+            clone_git = f"{clone}.git"
+        else:
+            clone_git = clone or "<url>"
+        # Inferring repo dir name from the URL last path segment
+        repo_dir = clone.rstrip("/").split("/")[-1] if clone else "<repo>"
+        text = (
+            "📋 *Как поставить skill*\n\n"
+            "```\n"
+            f"git clone {clone_git}\n"
+            f"mkdir -p ~/.claude/skills\n"
+            f"cp -r {repo_dir}/.claude/skills/* ~/.claude/skills/\n"
+            "```\n"
+            "После этого Claude Code сам подхватит SKILL.md из этих папок."
+        )
+    else:  # n8n / make workflows
+        json_url = item.get("json_url") or url
+        tool = item.get("tool") or source_key
+        target = "n8n" if tool == "n8n" else "Make"
+        text = (
+            f"📋 *Как поставить workflow ({target})*\n\n"
+            f"1. Скачай JSON:\n`{json_url}`\n"
+            f"2. В {target} → Import → выбери файл\n"
+            "3. Настрой credentials/переменные окружения\n"
+            "4. Запусти тестовый прогон по `test_steps` со страницы айтема"
+        )
+
+    kb = {"inline_keyboard": [
+        [{"text": "« Назад к айтему", "callback_data": f"src:{source_key}:item:{uid}"}],
+    ]}
+    return text, kb
+
+
+SIMILAR_LIMIT = 5
+
+
+def screen_similar(source_key: str, uid: str) -> Screen:
+    """List up to SIMILAR_LIMIT same-category Items (excluding the current one)."""
+    items = Items.load(source_key)
+    current = items.find_by_url_id(uid)
+    if current is None:
+        return ("Айтем не найден.", {"inline_keyboard": [
+            [{"text": "« К списку", "callback_data": f"src:{source_key}:list:0"}],
+        ]})
+
+    cat = current.get("category") or SOURCES[source_key].default_category
+    cat_label = SOURCES[source_key].categories.get(cat, cat)
+    siblings = [
+        s for s in items.filter_by_category(cat)
+        if _url_id(s.get("url") or "") != uid
+    ][:SIMILAR_LIMIT]
+
+    if not siblings:
+        text = f"🎯 *Похожие в категории {cat_label}*\n\nБольше ничего нет."
+        kb = {"inline_keyboard": [
+            [{"text": "« Назад к айтему", "callback_data": f"src:{source_key}:item:{uid}"}],
+        ]}
+        return text, kb
+
+    lines = [f"🎯 *Похожие в категории {cat_label}*", ""]
+    detail_row: list[dict] = []
+    for i, s in enumerate(siblings, 1):
+        lines.append(f"{i}. {_format_item_line(s, source_key)}")
+        detail_row.append({
+            "text": f"📋 {i}",
+            "callback_data": f"src:{source_key}:item:{_url_id(s.get('url') or '')}",
+        })
+
+    kb = {"inline_keyboard": [
+        detail_row,
+        [{"text": "« Назад к айтему", "callback_data": f"src:{source_key}:item:{uid}"}],
+    ]}
+    return "\n".join(lines), kb
+
+
+WHATSNEW_WINDOW_DAYS = 2
+
+
+def screen_whatsnew() -> Screen:
+    """Cross-source list of Items added in the last WHATSNEW_WINDOW_DAYS days.
+
+    Compares against ``first_recommended`` (UTC date string). Newest first.
+    """
+    cutoff = (date.today() - timedelta(days=WHATSNEW_WINDOW_DAYS)).isoformat()
+    hits: list[tuple[str, dict]] = []
+    for source_key in SOURCES:
+        for it in Items.load(source_key):
+            if (it.get("first_recommended") or "") >= cutoff:
+                hits.append((source_key, it))
+
+    if not hits:
+        return (
+            f"📰 За последние {WHATSNEW_WINDOW_DAYS} дня ничего нового в базах.",
+            {"inline_keyboard": [[{"text": "« Меню", "callback_data": "menu"}]]},
+        )
+
+    hits.sort(key=lambda h: (h[1].get("first_recommended", ""), h[1].get("title", "")), reverse=True)
+    source_emoji = {"skills": "📚", "n8n": "⚙️", "make": "🧩"}
+
+    lines = [f"📰 *Что нового за {WHATSNEW_WINDOW_DAYS} дня* — {len(hits)}", ""]
+    detail_row: list[dict] = []
+    for i, (source_key, it) in enumerate(hits[:10], 1):
+        tag = source_emoji.get(source_key, "•")
+        lines.append(f"{i}. {tag} {_format_item_line(it, source_key)}")
+        detail_row.append({
+            "text": f"📋 {i}",
+            "callback_data": f"src:{source_key}:item:{_url_id(it.get('url') or '')}",
+        })
+
+    kb = {"inline_keyboard": [detail_row, [{"text": "« Меню", "callback_data": "menu"}]]}
+    return ("\n".join(lines), kb)
+
+
 # === Transport adapter ===
 def deliver(
     chat_id: int,
@@ -889,6 +1074,7 @@ HELP_TEXT = (
     "/skills, /n8n, /make — открыть нужный источник\n"
     "/search <текст> — поиск по всем базам\n"
     "/random — случайная рекомендация\n"
+    "/whatsnew — что добавилось за последние 2 дня\n"
     "/stats — счётчики по базам\n"
     "/list, /categories, /months — устаревший доступ к skills\n"
     "/help — это сообщение\n"
@@ -912,6 +1098,9 @@ RouteKind = Literal[
     "item",         # src:<source>:item:<url_id>
     "explain",      # src:<source>:explain:<url_id>
     "random",       # src:<source>:random — pick & open a random Item
+    "share",        # src:<source>:share:<url_id> — print t.me deep link
+    "setup",        # src:<source>:setup:<url_id> — print install snippet
+    "similar",      # src:<source>:similar:<url_id> — list same-category items
 ]
 
 
@@ -959,7 +1148,7 @@ class Route:
                 kind="month", source_key=source_key,
                 arg=parts[3], page=_parse_page(parts, 4),
             )
-        if action in ("item", "explain") and len(parts) >= 4:
+        if action in ("item", "explain", "share", "setup", "similar") and len(parts) >= 4:
             return cls(kind=action, source_key=source_key, arg=parts[3])  # type: ignore[arg-type]
         return None
 
@@ -1014,6 +1203,12 @@ def handle_callback(update: dict) -> None:
         show(screen_item(src, route.arg))
     elif route.kind == "random":
         show(screen_random(src))
+    elif route.kind == "share":
+        show(screen_share(src, route.arg))
+    elif route.kind == "setup":
+        show(screen_setup(src, route.arg))
+    elif route.kind == "similar":
+        show(screen_similar(src, route.arg))
     elif route.kind == "explain":
         # Agentic feature: separate code path (sends a NEW message rather than
         # editing the detail screen so context stays visible above).
@@ -1138,6 +1333,8 @@ def dispatch(update: dict) -> None:
             deliver(chat_id, screen_item(source_key, _url_id(item.get("url") or "")))
     elif cmd == "/stats":
         deliver(chat_id, screen_stats())
+    elif cmd == "/whatsnew":
+        deliver(chat_id, screen_whatsnew())
     else:
         deliver(
             chat_id,
