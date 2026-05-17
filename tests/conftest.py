@@ -14,3 +14,6 @@ if str(ROOT) not in sys.path:
 os.environ.setdefault("TELEGRAM_BOT_TOKEN", "test-token")
 os.environ.setdefault("BOT_REPO", "Libertad-Harbour-LLC/demo-repository")
 os.environ.setdefault("BOT_BRANCH", "main")
+# Fake admin id so test_access can pick one via next(iter(ADMIN_IDS)).
+# Production reads real IDs from BOT_ADMIN_IDS in Vercel env vars.
+os.environ.setdefault("BOT_ADMIN_IDS", "111111111")

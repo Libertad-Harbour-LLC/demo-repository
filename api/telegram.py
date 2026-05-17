@@ -37,13 +37,10 @@ BRANCH = os.environ.get("BOT_BRANCH", "main").strip()
 CACHE_TTL_SECONDS = 60
 
 # Allow-list of Telegram user IDs that may interact with this bot.
-# Override at deploy time with BOT_ADMIN_IDS="111,222"; the defaults below
-# match the two admins who receive daily digests in the linked chat.
-# Anyone outside the list gets a single "private bot" reply and no
-# further response — Share deep-links also dead-end here.
-_DEFAULT_ADMIN_IDS = {481077485, 576554290}
-
-
+# Set BOT_ADMIN_IDS="111,222" in Vercel env vars. If unset, ADMIN_IDS is
+# empty and the bot rejects everyone — fail-closed by design, so a
+# misconfigured deploy never leaks data to strangers. Verify config via
+# GET /api/telegram → "admin_count" field.
 def _parse_admin_ids(raw: str) -> set[int]:
     out: set[int] = set()
     for tok in raw.split(","):
@@ -57,8 +54,7 @@ def _parse_admin_ids(raw: str) -> set[int]:
     return out
 
 
-_admin_env = _parse_admin_ids(os.environ.get("BOT_ADMIN_IDS", ""))
-ADMIN_IDS: set[int] = _admin_env or _DEFAULT_ADMIN_IDS
+ADMIN_IDS: set[int] = _parse_admin_ids(os.environ.get("BOT_ADMIN_IDS", ""))
 PAGE_SIZE = 5  # items per page
 
 # Source registry — see CONTEXT.md for the term definition.
@@ -1516,7 +1512,6 @@ class handler(BaseHTTPRequestHandler):  # noqa: N801 (required name by Vercel)
             "llm_enabled": LLM_ENABLED,
             "llm_model": os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001") if LLM_ENABLED else None,
             "admin_count": len(ADMIN_IDS),
-            "admins_from_env": bool(_admin_env),
             "repo": REPO,
             "branch": BRANCH,
         }).encode()
