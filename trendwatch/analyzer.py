@@ -21,7 +21,13 @@ except ImportError:
     from prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
 
 DEFAULT_MODEL = "claude-sonnet-4-6"
-DEFAULT_MAX_TOKENS = 12000
+# PR #17 added a required `description` field to top_test/top_watch entries.
+# For 15 candidates with full rankings + top_test + top_watch + top_skip +
+# best_pick + telegram_summary + metadata, observed output drifted above
+# 12K — the analyzer raised "Response truncated by max_tokens" and the
+# orchestrator fell through to [FALLBACK_LINKS]. Bumped to 20K, well under
+# Sonnet 4.6's per-call output ceiling and ~$0.06 extra per worst-case run.
+DEFAULT_MAX_TOKENS = 20000
 REQUIRED_KEYS = ("telegram_summary", "rankings", "metadata")
 
 _FENCE_RE = re.compile(r"^\s*```(?:json)?\s*|\s*```\s*$", re.MULTILINE)
