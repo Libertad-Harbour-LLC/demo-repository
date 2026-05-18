@@ -40,13 +40,20 @@ from workflows.sources.reddit import fetch_reddit  # noqa: E402
 
 
 def _is_worth_showing(item: dict) -> bool:
-    """Dedupe: include items that are new, gained workflows, or grew ≥5 stars."""
+    """Dedupe: include items that are new, gained workflows, grew ≥5 stars,
+    or have absolute stars ≥100 (high-star repos always re-evaluated by the
+    LLM — otherwise a 1k-star automation repo seen once with zero daily
+    growth would silently vanish from analysis forever).
+    """
     if item.get("is_new", True):
         return True
     if item.get("has_new_skills"):
         return True
     delta = item.get("delta_stars") or 0
     if isinstance(delta, int) and delta >= 5:
+        return True
+    stars = item.get("stars") or 0
+    if isinstance(stars, int) and stars >= 100:
         return True
     return False
 
@@ -178,6 +185,7 @@ def run(
     items_by_source = _fetch_all()
     counts = " ".join(f"{k}={len(v)}" for k, v in items_by_source.items())
     summary = f"[workflows] {counts}"
+    print(f"[PHASE:FETCH] {counts}", file=sys.stderr)
 
     date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     period = "24h"
@@ -241,7 +249,14 @@ def run(
     for g in graduates:
         g["graduated_from_watch"] = True
 
+    pre_worth_count = len(items_with_deltas)
     filtered_items = [it for it in items_with_deltas if _is_worth_showing(it)]
+    print(
+        f"[PHASE:FILTER] after_is_recommended={pre_worth_count} "
+        f"after_is_worth_showing={len(filtered_items)} "
+        f"graduates={len(graduates)}",
+        file=sys.stderr,
+    )
 
     if not filtered_items and not graduates:
         msg = (
