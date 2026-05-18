@@ -85,3 +85,61 @@ def test_every_watch_renders_detail():
         text = _format_detail_watch(item, source_key)
         assert isinstance(text, str) and text, item.get("repo_full_name")
         assert len(text) < TELEGRAM_MSG_LIMIT
+
+
+# --- Markdown safety on category labels -----------------------------------
+
+def test_unknown_category_slug_escaped_in_line():
+    """Real production bug: a watch item under n8n source carrying
+    category='general_skill' (skill enum, not workflow enum) would render
+    the bare slug into a Markdown message, with the unmatched underscore
+    breaking Telegram's parser → 400 → silent no-op. _safe_cat_label
+    must escape the fallback path."""
+    from api.telegram import _format_item_line
+    item = {
+        "title": "owner/repo",
+        "url": "https://github.com/owner/repo",
+        "category": "general_skill",  # legacy skill slug in n8n source
+    }
+    line = _format_item_line(item, "n8n")
+    # Underscore must be escaped — never appear unescaped in Markdown text
+    assert "general_skill" not in line
+    assert "general\\_skill" in line
+
+
+def test_known_category_label_not_double_escaped():
+    """Known workflow categories return human labels (no escape needed)."""
+    from api.telegram import _format_item_line
+    item = {
+        "title": "owner/repo",
+        "url": "https://github.com/owner/repo",
+        "category": "marketing_workflow",
+    }
+    line = _format_item_line(item, "n8n")
+    # Human label is "📈 Marketing" — emoji + word, no underscore
+    assert "📈 Marketing" in line
+
+
+def test_safe_cat_label_handles_none_slug():
+    """Missing category falls back to source default — must be label-mapped."""
+    from api.telegram import _safe_cat_label
+    out = _safe_cat_label("n8n", None)
+    assert "_workflow" not in out  # must hit the label map
+    assert "🔧" in out or "General" in out  # default is general_workflow → 🔧 General
+
+
+def test_render_page_with_legacy_category_does_not_blow_up():
+    """Wider smoke: a page rendering with an unknown-slug item should
+    produce text containing only escaped underscores. End-to-end."""
+    from api.telegram import _render_page, ALL_VIEW
+    items = [{
+        "title": "owner/repo",
+        "url": "https://github.com/owner/repo",
+        "category": "general_skill",
+    }]
+    text, _kb = _render_page(items, page=0, title="Test", source_key="n8n", nav_token="list")
+    # No unescaped underscore (single \ in a raw string is the escape)
+    import re
+    unescaped = re.findall(r"(?<!\\)_", text)
+    # _md_escape produces `\_` so unescaped count should be 0
+    assert unescaped == [], f"Unescaped underscores found: {unescaped}"
