@@ -264,6 +264,26 @@ def _answer_callback(callback_id: str, text: str = "") -> dict:
 
 
 # === Formatting ===
+def _safe_cat_label(source_key: str, slug: str | None) -> str:
+    """Return a Telegram-Markdown-safe category label.
+
+    If ``slug`` is in the source's known label map, return the human label
+    (no escaping needed — labels are author-controlled and known-clean).
+    Otherwise fall back to the slug itself with ``_md_escape`` applied —
+    raw slugs like ``general_skill`` contain an underscore that Telegram's
+    legacy Markdown parser would interpret as italic, silently 400-ing the
+    whole message.
+
+    Empty / None ``slug`` → the source's default category.
+    """
+    cat_labels = SOURCES[source_key].categories
+    default = SOURCES[source_key].default_category
+    actual = slug or default
+    if actual in cat_labels:
+        return cat_labels[actual]
+    return _md_escape(actual)
+
+
 def _md_escape(text: str) -> str:
     # Legacy Markdown: escape chars Telegram's parser chokes on inside link text / bold.
     return (
@@ -316,8 +336,7 @@ def _format_item_line(item: dict, source_key: str) -> str:
         else ""
     )
     cat = item.get("category", "")
-    cat_labels = SOURCES[source_key].categories
-    cat_str = f" • {cat_labels.get(cat, cat)}" if cat else ""
+    cat_str = f" • {_safe_cat_label(source_key, cat)}" if cat else ""
     # No leading bullet — caller prefixes with its own marker ("N." for paginated lists).
     return f"{status_prefix}{tool_prefix}[{name}]({url}){sub_str}{stars_str}{score_str}{cat_str}"
 
@@ -459,9 +478,7 @@ def _format_detail_recommended(item: dict, source_key: str) -> str:
     """Multi-section Markdown body for the item-detail screen (recommended item)."""
     title = _md_escape(item.get("title") or item.get("repo_full_name") or "?")
     url = item.get("url") or ""
-    cat_labels = SOURCES[source_key].categories
-    cat = item.get("category") or ""
-    cat_label = cat_labels.get(cat, cat or SOURCES[source_key].default_category)
+    cat_label = _safe_cat_label(source_key, item.get("category"))
 
     lines = [f"📚 *{title}*", ""]
     lines.append(f"🏷 Категория: {cat_label}")
@@ -517,9 +534,7 @@ def _format_detail_watch(item: dict, source_key: str) -> str:
     """Multi-section Markdown body for a watch item."""
     title = _md_escape(item.get("title") or item.get("repo_full_name") or "?")
     url = item.get("url") or ""
-    cat_labels = SOURCES[source_key].categories
-    cat = item.get("category") or ""
-    cat_label = cat_labels.get(cat, cat or SOURCES[source_key].default_category)
+    cat_label = _safe_cat_label(source_key, item.get("category"))
 
     lines = [f"👀 *{title}*", ""]
     lines.append("📍 Статус: На наблюдении")
@@ -567,11 +582,7 @@ def _format_detail_watch(item: dict, source_key: str) -> str:
 def _title_for_view(view: View, source_key: str) -> str:
     header = SOURCES[source_key].header
     if view.kind == "category":
-        cat_labels = SOURCES[source_key].categories
-        label = cat_labels.get(
-            view.arg, view.arg or SOURCES[source_key].default_category
-        )
-        return f"{header} — {label}"
+        return f"{header} — {_safe_cat_label(source_key, view.arg)}"
     if view.kind == "month":
         return f"{header} — 📅 {view.arg}"
     return f"Все — {header}"
@@ -692,12 +703,14 @@ def screen_categories(source_key: str) -> Screen:
         text += f"{label} — {n}\n"
         if n > 0:
             rows.append([{"text": f"{label} ({n})", "callback_data": f"src:{source_key}:cat:{cat}:0"}])
-    # Include any unknown categories that exist in data but not in labels
+    # Include any unknown categories that exist in data but not in labels.
+    # Body goes through Markdown — escape the raw slug to avoid unmatched
+    # underscores tripping the parser. Button text is plain (no escape).
     for cat, n in cat_counts.items():
         if cat not in cat_labels and n > 0:
-            label = cat or default_cat
-            text += f"{label} — {n}\n"
-            rows.append([{"text": f"{label} ({n})", "callback_data": f"src:{source_key}:cat:{cat}:0"}])
+            raw = cat or default_cat
+            text += f"{_md_escape(raw)} — {n}\n"
+            rows.append([{"text": f"{raw} ({n})", "callback_data": f"src:{source_key}:cat:{cat}:0"}])
     rows.append([{"text": "« Меню", "callback_data": f"src:{source_key}:menu"}])
     rows.append([{"text": "« Источник", "callback_data": "menu"}])
     return text, {"inline_keyboard": rows}
@@ -1000,7 +1013,7 @@ def screen_similar(source_key: str, uid: str) -> Screen:
         ]})
 
     cat = current.get("category") or SOURCES[source_key].default_category
-    cat_label = SOURCES[source_key].categories.get(cat, cat)
+    cat_label = _safe_cat_label(source_key, cat)
     siblings = [
         s for s in items.filter_by_category(cat)
         if _url_id(s.get("url") or "") != uid
