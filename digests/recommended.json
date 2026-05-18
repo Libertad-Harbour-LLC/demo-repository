@@ -201,6 +201,33 @@
       "title": "anyproto/anytype-ts",
       "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills"
     },
+    "https://github.com/atopile/atopile/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "general_skill",
+      "confidence": "manual",
+      "description": "Проектирование печатных плат кодом — software-like reuse, валидация, версионирование и коллаборация для hardware/EDA. 21 skill внутри (agent-summary, agent, ato-language и др.) учат Claude Code писать спецификации электроники на языке ato.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "atopile/atopile",
+      "scores": {},
+      "skills_count": 21,
+      "skills_in_repo": [
+        "agent-summary",
+        "agent",
+        "ato-language"
+      ],
+      "stars": 3357,
+      "test_steps": [
+        "git clone https://github.com/atopile/atopile.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r atopile/.claude/skills/* ~/.claude/skills/",
+        "В Claude Code попросить спроектировать простой делитель напряжения на ato — skill должен дать корректный синтаксис"
+      ],
+      "title": "atopile/atopile",
+      "url": "https://github.com/atopile/atopile/tree/main/.claude/skills"
+    },
     "https://github.com/coreyhaines31/marketingskills/tree/main/skills": {
       "added_manually": true,
       "category": "marketing_skill",
@@ -540,6 +567,58 @@
       "test_steps": [],
       "title": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills"
+    },
+    "https://github.com/mksglu/context-mode/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Оптимизация контекстного окна для AI-кодинг агентов — sandbox для tool output, сжатие на 98%. Поддерживает 15 платформ (Claude Code, Codex, Cursor, Copilot, Zed и др.). Skill `context-mode-ops` подключает оптимизатор внутрь Claude Code.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "mksglu/context-mode",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "context-mode-ops"
+      ],
+      "stars": 14948,
+      "test_steps": [
+        "git clone https://github.com/mksglu/context-mode.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r context-mode/.claude/skills/* ~/.claude/skills/",
+        "В Claude Code запустить тяжёлый поиск (grep/find по большому проекту) — output должен сжаться, контекст не съесться"
+      ],
+      "title": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode/tree/main/.claude/skills"
+    },
+    "https://github.com/nativewind/nativewind/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Tailwind CSS для React Native — utility-first стили в мобильных приложениях. Skills внутри (add-test, architecture, debug-nw и др.) помогают Claude Code писать тесты, понимать архитектуру библиотеки и дебажить специфику NativeWind.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "nativewind/nativewind",
+      "scores": {},
+      "skills_count": 4,
+      "skills_in_repo": [
+        "add-test",
+        "architecture",
+        "debug-nw"
+      ],
+      "stars": 7833,
+      "test_steps": [
+        "git clone https://github.com/nativewind/nativewind.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r nativewind/.claude/skills/* ~/.claude/skills/",
+        "В Claude Code открыть React Native проект с NativeWind и попросить добавить тест компонента — skill должен подсказать корректный паттерн"
+      ],
+      "title": "nativewind/nativewind",
+      "url": "https://github.com/nativewind/nativewind/tree/main/.claude/skills"
     },
     "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill": {
       "added_manually": true,
