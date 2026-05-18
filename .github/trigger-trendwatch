@@ -1,0 +1,4 @@
+# Trigger file for trendwatch workflow.
+# Modifying this file pushes a commit to .github/trigger-trendwatch
+# which triggers the trendwatch workflow with --force.
+# Last trigger: 2026-05-18 (initial)
