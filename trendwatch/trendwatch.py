@@ -99,13 +99,20 @@ def _fallback_with_reason(
 
 
 def _is_worth_showing(item: dict) -> bool:
-    """Dedupe filter: include items only if new, gained skills, or grew ≥5 stars."""
+    """Dedupe filter: include items only if new, gained skills, grew ≥5 stars,
+    or absolute stars ≥500 (high-star repos always get re-evaluated by the
+    LLM even without delta — otherwise a 7k-star repo seen once with zero
+    daily growth would silently never reach the analyzer again).
+    """
     if item.get("is_new", True):
         return True
     if item.get("has_new_skills"):
         return True
     delta = item.get("delta_stars") or 0
     if isinstance(delta, int) and delta >= 5:
+        return True
+    stars = item.get("stars") or 0
+    if isinstance(stars, int) and stars >= 500:
         return True
     return False
 
