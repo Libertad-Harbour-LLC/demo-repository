@@ -3,6 +3,7 @@
     "https://github.com/oxbshw/ultimate-n8n-ai-workflows": {
       "category": "content_workflow",
       "confidence": "high",
+      "description": "Крупнейшая open-source библиотека из 3400+ готовых n8n AI-воркфлоу — для импорта, расширения и переиспользования (одиночный summarizer-bot воркфлоу из этой коллекции).",
       "final_score": 6.7,
       "first_recommended": "2026-05-15",
       "metric": "Среднее время генерации резюме и точность (сравнение с ручным резюме)",
@@ -30,8 +31,7 @@
       ],
       "title": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
       "tool": "n8n",
-      "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows",
-      "description": "Крупнейшая open-source библиотека из 3400+ готовых n8n AI-воркфлоу — для импорта, расширения и переиспользования (одиночный summarizer-bot воркфлоу из этой коллекции)."
+      "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
     }
   }
 }

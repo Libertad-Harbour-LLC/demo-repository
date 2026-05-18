@@ -48,6 +48,42 @@
       "url": "https://github.com/Katacha1537/n8n-backups",
       "why_interesting": "Workflow для медицинской клиники с AI — нишевый и потенциально интересный кейс автоматизации записи пациентов или обработки запросов. Verified JSON."
     },
+    "https://github.com/RZ-Logic/jobsignal-engine": {
+      "added_date": "2026-05-18",
+      "category": "general_workflow",
+      "description": "Репозиторий с названием jobsignal-engine содержит workflow 06-alerter. По имени предполагается система мониторинга и алертов, связанная с сигналами о вакансиях или рыночными сигналами. Подробное описание в данных отсутствует.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 7
+      },
+      "repo_full_name": "RZ-Logic/jobsignal-engine: 06-alerter",
+      "signal_to_wait": "Появление README с описанием источников данных и инструкцией; рост звёзд; появление дополнительных workflow в репо.",
+      "title": "RZ-Logic/jobsignal-engine: 06-alerter",
+      "tool": "n8n",
+      "url": "https://github.com/RZ-Logic/jobsignal-engine",
+      "why_interesting": "Интригующее название (job signal + alerter) предполагает автоматизацию мониторинга вакансий или торговых сигналов с оповещениями. Свежий push (апрель 2026). 7 звёзд при отсутствии описания — слабый, но любопытный сигнал."
+    },
+    "https://github.com/RogerPugaRuiz/uptime-ai-notifier": {
+      "added_date": "2026-05-18",
+      "category": "devops_workflow",
+      "description": "Репозиторий uptime-ai-notifier содержит два versioned n8n-workflow (v1.0.0 и v3.0.0), судя по названию — мониторинг uptime с AI-уведомлениями. Инструкции по настройке в данных отсутствуют.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 2,
+        "stars": 0
+      },
+      "repo_full_name": "RogerPugaRuiz/uptime-ai-notifier: v1.0.0",
+      "signal_to_wait": "Добавление README с описанием как настроить AI-нотификации и источник uptime-данных; появление звёзд; второй push в 2026.",
+      "title": "RogerPugaRuiz/uptime-ai-notifier: v1.0.0",
+      "tool": "n8n",
+      "url": "https://github.com/RogerPugaRuiz/uptime-ai-notifier",
+      "why_interesting": "Versioned workflow (v1 и v3) указывает на активное развитие. Uptime-мониторинг с AI-нотификациями — практичный DevOps use case. Нулевые звёзды при интересной концепции."
+    },
     "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base": {
       "added_date": "2026-05-15",
       "category": "general_skill",
