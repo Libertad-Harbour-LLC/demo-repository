@@ -54,6 +54,37 @@ def _mask_secrets(s: str) -> str:
     return out
 
 
+# Module-level ring buffer of the last N explain_item calls' usage.
+# Persists across invocations of the same warm Vercel function instance.
+# Cold starts reset it — that's fine, the healthcheck just shows recent
+# behavior. Telemetry, not source-of-truth.
+_CACHE_HISTORY_LIMIT = 20
+_cache_history: list[tuple[int, int]] = []  # [(cache_create, cache_read), ...]
+
+
+def _record_cache_metrics(cache_create: int, cache_read: int) -> None:
+    _cache_history.append((cache_create, cache_read))
+    if len(_cache_history) > _CACHE_HISTORY_LIMIT:
+        del _cache_history[0]
+
+
+def cache_hit_ratio() -> float | None:
+    """Cache read / (read + create) over the last N explain_item calls.
+
+    None if no calls yet. 1.0 = perfect cache hits, 0.0 = no cache at all.
+    Below ~0.5 typically means the system prompt has drifted (someone
+    edited it and invalidated the cache).
+    """
+    if not _cache_history:
+        return None
+    total_read = sum(r for _c, r in _cache_history)
+    total_create = sum(c for c, _r in _cache_history)
+    denom = total_read + total_create
+    if denom == 0:
+        return None
+    return round(total_read / denom, 3)
+
+
 def _sanitize_description(desc: str) -> str:
     """Lightly clean an untrusted item description before it enters the
     model context: drop injection-pattern openers and hard-cap length.
@@ -202,13 +233,15 @@ def explain_item(item: dict, source_key: str) -> tuple[str | None, str | None]:
 
     try:
         u = resp.usage
+        cache_create = getattr(u, "cache_creation_input_tokens", 0) or 0
+        cache_read = getattr(u, "cache_read_input_tokens", 0) or 0
         print(
             f"[llm] explain_item model={MODEL} "
             f"input={u.input_tokens} output={u.output_tokens} "
-            f"cache_create={getattr(u, 'cache_creation_input_tokens', 0)} "
-            f"cache_read={getattr(u, 'cache_read_input_tokens', 0)}",
+            f"cache_create={cache_create} cache_read={cache_read}",
             file=sys.stderr,
         )
+        _record_cache_metrics(cache_create, cache_read)
     except Exception:
         pass
 

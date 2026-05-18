@@ -1505,12 +1505,23 @@ class handler(BaseHTTPRequestHandler):  # noqa: N801 (required name by Vercel)
         # Health check — surfaces config state so missing Vercel env vars
         # (especially ANTHROPIC_API_KEY for the explain button) are visible
         # without digging through function logs.
+        # cache_hit_ratio is only meaningful if explain_item has been
+        # exercised this process lifetime — read it lazily so the
+        # api.llm import (and the anthropic SDK with it) isn't loaded
+        # on every cold-start healthcheck.
+        cache_ratio: float | None = None
+        try:
+            from api.llm import cache_hit_ratio as _chr
+            cache_ratio = _chr()
+        except Exception:
+            pass
         body = json.dumps({
             "alive": True,
             "bot_token_set": bool(BOT_TOKEN),
             "webhook_secret_set": bool(WEBHOOK_SECRET),
             "llm_enabled": LLM_ENABLED,
             "llm_model": os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001") if LLM_ENABLED else None,
+            "llm_cache_hit_ratio_last20": cache_ratio,
             "admin_count": len(ADMIN_IDS),
             "repo": REPO,
             "branch": BRANCH,

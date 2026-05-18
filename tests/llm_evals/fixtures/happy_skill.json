@@ -1,0 +1,15 @@
+{
+  "title": "anthropics/claude-code",
+  "repo_full_name": "anthropics/claude-code",
+  "category": "vibe_coding_skill",
+  "description": "Official Claude Code CLI from Anthropic. The agentic coding tool that lives in your terminal — understands your codebase, helps you code faster through natural language commands.",
+  "skills_in_repo": ["agent-loop", "tool-design", "context-mgmt"],
+  "stars": 124140,
+  "test_steps": [
+    "Install via npm: npm install -g @anthropic-ai/claude-code",
+    "Run in any project: claude",
+    "Ask a code question or give a task"
+  ],
+  "metric": "Скорость и качество выполнения coding-задач vs ручной работы",
+  "url": "https://github.com/anthropics/claude-code"
+}

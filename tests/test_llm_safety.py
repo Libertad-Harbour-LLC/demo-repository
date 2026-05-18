@@ -61,3 +61,49 @@ def test_sanitize_hard_caps_length():
 def test_sanitize_preserves_short_text():
     s = "Universal SEO skill for Claude Code."
     assert _sanitize_description(s) == s
+
+
+# --- cache_hit_ratio (ring-buffer telemetry) ----------------------------
+
+def test_cache_ratio_empty_returns_none():
+    import api.llm as llm
+    llm._cache_history.clear()
+    assert llm.cache_hit_ratio() is None
+
+
+def test_cache_ratio_all_read_is_one():
+    import api.llm as llm
+    llm._cache_history.clear()
+    llm._record_cache_metrics(cache_create=0, cache_read=1000)
+    llm._record_cache_metrics(cache_create=0, cache_read=500)
+    assert llm.cache_hit_ratio() == 1.0
+
+
+def test_cache_ratio_all_create_is_zero():
+    import api.llm as llm
+    llm._cache_history.clear()
+    llm._record_cache_metrics(cache_create=1000, cache_read=0)
+    assert llm.cache_hit_ratio() == 0.0
+
+
+def test_cache_ratio_mixed():
+    import api.llm as llm
+    llm._cache_history.clear()
+    llm._record_cache_metrics(cache_create=200, cache_read=800)  # 80% hit
+    assert llm.cache_hit_ratio() == 0.8
+
+
+def test_cache_ratio_ring_buffer_drops_old():
+    import api.llm as llm
+    llm._cache_history.clear()
+    for _ in range(50):
+        llm._record_cache_metrics(cache_create=10, cache_read=90)
+    # buffer caps at _CACHE_HISTORY_LIMIT (20)
+    assert len(llm._cache_history) == llm._CACHE_HISTORY_LIMIT
+
+
+def test_cache_ratio_zero_tokens_returns_none():
+    import api.llm as llm
+    llm._cache_history.clear()
+    llm._record_cache_metrics(cache_create=0, cache_read=0)
+    assert llm.cache_hit_ratio() is None
