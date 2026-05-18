@@ -13,7 +13,7 @@
       "score": null,
       "skills_count": 6,
       "source": "github",
-      "stars": 10198,
+      "stars": 10197,
       "title": "JetBrains/ideavim"
     },
     "https://github.com/Murf-y/NetworkModelsVisualization/tree/main/.claude/skills": {
@@ -37,7 +37,7 @@
       "score": null,
       "skills_count": 7,
       "source": "github",
-      "stars": 7544,
+      "stars": 7546,
       "title": "anyproto/anytype-ts"
     },
     "https://github.com/atopile/atopile/tree/main/.claude/skills": {
@@ -61,7 +61,7 @@
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 281,
+      "stars": 282,
       "title": "halfwhey/claudraband"
     },
     "https://github.com/jayli/block-proxy/tree/main/.claude/skills": {
@@ -77,7 +77,7 @@
       "score": null,
       "skills_count": 4,
       "source": "github",
-      "stars": 7831,
+      "stars": 7833,
       "title": "nativewind/nativewind"
     },
     "https://github.com/oysteinkrog/dotfiles/tree/master/.claude/skills": {
@@ -88,13 +88,13 @@
       "stars": 0,
       "title": "oysteinkrog/dotfiles"
     },
-    "https://github.com/pegregenerate417/claude-rules/tree/main/.claude/skills": {
-      "first_seen": "2026-05-16T23:34:27Z",
+    "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills": {
+      "first_seen": "2026-05-18T00:09:04Z",
       "score": null,
-      "skills_count": 1,
+      "skills_count": 6,
       "source": "github",
-      "stars": 2,
-      "title": "pegregenerate417/claude-rules"
+      "stars": 0,
+      "title": "rish2jain/paperresearchagent"
     },
     "https://github.com/sheinsight/spack/tree/main/.claude/skills": {
       "first_seen": "2026-05-14T12:50:57Z",
@@ -121,6 +121,6 @@
       "title": "yanochka11/harness_bro"
     }
   },
-  "last_run": "2026-05-16T23:34:27Z",
-  "last_sent_date": "2026-05-16"
+  "last_run": "2026-05-18T00:09:04Z",
+  "last_sent_date": "2026-05-18"
 }

@@ -4,7 +4,7 @@
       "added_date": "2026-05-16",
       "category": "marketing_skill",
       "expires_at": "2026-06-15",
-      "last_checked": "2026-05-16",
+      "last_checked": "2026-05-18",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 27,
@@ -20,7 +20,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-16",
+      "last_checked": "2026-05-18",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 25,
@@ -36,7 +36,7 @@
       "added_date": "2026-05-16",
       "category": "general_skill",
       "expires_at": "2026-06-15",
-      "last_checked": "2026-05-16",
+      "last_checked": "2026-05-18",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 8,
@@ -47,6 +47,23 @@
       "title": "abhay-rana/create-modern-react",
       "url": "https://github.com/abhay-rana/create-modern-react/tree/main/.claude/skills",
       "why_interesting": "8 React-специфичных skills (react-best-practices, ui-ux-pro-max, frontend-design, agent-browser, autoskill) — редкая React-ориентированная коллекция. Интересен skill autoskill, судя по названию — автоматическое создание новых skills."
+    },
+    "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills": {
+      "added_date": "2026-05-18",
+      "category": "general_skill",
+      "description": "Репозиторий содержит 6 Claude Skills для работы с AWS-сервисами (EKS, SageMaker, Prescriptive Guidance) и NVIDIA-платформами (API, NeMo, NIM). Предназначен для разработчиков, использующих Claude Code в проектах на облачной инфраструктуре AWS и ML-стеке NVIDIA.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 6,
+        "stars": 0
+      },
+      "repo_full_name": "rish2jain/paperresearchagent",
+      "signal_to_wait": "Появление хотя бы 5 звёзд, упоминание в Reddit/HN/X, или активный push в репозиторий после ноября 2025 (сейчас последний push — 2025-11-06, что указывает на заброшенность)",
+      "title": "rish2jain/paperresearchagent",
+      "url": "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills",
+      "why_interesting": "Верифицированный репозиторий с 6 специализированными skills под конкретные enterprise-платформы (AWS + NVIDIA). Такой набор редок — большинство репо содержат 1-2 общих skill. Потенциально полезен для ML-инженеров и DevOps-специалистов, работающих с этими стеками."
     }
   }
 }
