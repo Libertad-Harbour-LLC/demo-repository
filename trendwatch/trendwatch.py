@@ -50,6 +50,22 @@ except ImportError:
     import state
 
 
+def _api_key_fingerprint() -> str:
+    """Return a safe, human-comparable fingerprint of the API key in env so
+    the user can match it against the key shown in Anthropic console without
+    the actual secret ever reaching Telegram.
+    """
+    raw = os.environ.get("ANTHROPIC_API_KEY", "")
+    stripped = raw.strip()
+    if not stripped:
+        return "<empty>"
+    # Anthropic console shows the last 4 chars of each key. Match that
+    # format. Also surface len + whether there was whitespace polluting
+    # the env var — the most common cause of 401 here.
+    pollution = " (had whitespace)" if raw != stripped else ""
+    return f"len={len(stripped)} ...{stripped[-4:]}{pollution}"
+
+
 def _fallback_with_reason(
     exc: Exception, items_by_source, bot_token: str, chat_id: str, summary: str
 ) -> int:
@@ -68,11 +84,13 @@ def _fallback_with_reason(
         print(f"[trendwatch] telegram fallback failed: {exc2}", file=sys.stderr)
         print(summary)
         return 1
+    note = (
+        f"⚠️ LLM-анализ упал, отправлены плоские ссылки.\n"
+        f"Причина: {msg[:300]}\n"
+        f"Ключ: {_api_key_fingerprint()}"
+    )
     try:
-        telegram_client.send_text(
-            f"⚠️ LLM-анализ упал, отправлены плоские ссылки.\nПричина: {msg[:300]}",
-            bot_token, chat_id,
-        )
+        telegram_client.send_text(note, bot_token, chat_id)
     except Exception as exc2:
         print(f"[trendwatch] reason-note send failed: {exc2}", file=sys.stderr)
     print("[FALLBACK_LINKS] LLM analysis failed, sent link list.")

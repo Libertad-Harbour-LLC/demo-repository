@@ -104,9 +104,20 @@ def analyze(
         data_json=json.dumps(blob, ensure_ascii=False),
     )
 
+    # Read explicitly and .strip() — GH Actions / Vercel UI may preserve a
+    # trailing newline on paste which httpx rejects as "Illegal header
+    # value", and an extra space silently maps to a different (invalid)
+    # key value at Anthropic, yielding 401 invalid x-api-key.
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not api_key:
+        raise AnalyzerError(
+            "ANTHROPIC_API_KEY env var not set in this runner — "
+            "check GitHub repo Settings → Secrets and variables → Actions"
+        )
+
     try:
-        client = anthropic.Anthropic()
-    except Exception as exc:  # missing API key, bad env, etc.
+        client = anthropic.Anthropic(api_key=api_key)
+    except Exception as exc:
         raise AnalyzerError(f"failed to construct Anthropic client: {exc}") from exc
 
     try:
