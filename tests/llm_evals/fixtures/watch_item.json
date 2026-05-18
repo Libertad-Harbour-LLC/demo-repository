@@ -1,0 +1,11 @@
+{
+  "title": "growing/skill",
+  "repo_full_name": "growing/skill",
+  "category": "vibe_coding_skill",
+  "_status": "watch",
+  "why_interesting": "Свежий repo с интересной концепцией agent-loop debugging, но пока 0 звёзд и нет упоминаний в сообществе.",
+  "signal_to_wait": "Появление 5+ звёзд или упоминание в Reddit/HN",
+  "skills_in_repo": ["debug-agent-loop"],
+  "stars": 0,
+  "url": "https://github.com/growing/skill"
+}
