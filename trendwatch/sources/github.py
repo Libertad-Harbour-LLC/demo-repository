@@ -70,7 +70,12 @@ def _build_skill_dir_url(full_name: str, dir_path: str, branch: str | None = Non
 
 
 def _code_search(queries: list[str], since_date: str) -> list[dict]:
-    """Return raw candidates from code search across all queries."""
+    """Return raw candidates from code search across all queries.
+
+    Sorted by `indexed` (most recently indexed by GitHub first) so we surface
+    NEW SKILL.md files added in the last 24h, not the same top-relevance
+    cache day after day. Up to 100 per query × 2 pages = 200 max per query.
+    """
     if not os.environ.get("GITHUB_TOKEN"):
         print(
             "[trendwatch.github] GITHUB_TOKEN missing — code search disabled, "
@@ -80,63 +85,84 @@ def _code_search(queries: list[str], since_date: str) -> list[dict]:
         return []
     out: list[dict] = []
     for q in queries or []:
-        try:
-            data = _safe_get(
-                CODE_SEARCH_URL, params={"q": q, "per_page": 20}
-            )
-            if not data or data == RATE_LIMITED:
-                continue
-            for it in data.get("items", []) or []:
-                repo = it.get("repository") or {}
-                full_name = repo.get("full_name")
-                path = it.get("path")
-                if not full_name or not path:
-                    continue
-                out.append(
-                    {
-                        "repo_full_name": full_name,
-                        "skill_path": path,
-                        "repo_html_url": repo.get("html_url") or f"https://github.com/{full_name}",
-                        "description": repo.get("description") or "",
-                        "_from": "code_search",
-                    }
+        for page in (1, 2):
+            try:
+                data = _safe_get(
+                    CODE_SEARCH_URL,
+                    params={
+                        "q": q,
+                        "per_page": 100,
+                        "page": page,
+                        "sort": "indexed",
+                        "order": "desc",
+                    },
                 )
-        except Exception as exc:
-            print(f"[trendwatch:github:code_search] {q!r}: {exc}", file=sys.stderr)
-            continue
+                if not data or data == RATE_LIMITED:
+                    break
+                items = data.get("items", []) or []
+                if not items:
+                    break
+                for it in items:
+                    repo = it.get("repository") or {}
+                    full_name = repo.get("full_name")
+                    path = it.get("path")
+                    if not full_name or not path:
+                        continue
+                    out.append(
+                        {
+                            "repo_full_name": full_name,
+                            "skill_path": path,
+                            "repo_html_url": repo.get("html_url") or f"https://github.com/{full_name}",
+                            "description": repo.get("description") or "",
+                            "_from": "code_search",
+                        }
+                    )
+                if len(items) < 100:
+                    break
+            except Exception as exc:
+                print(f"[trendwatch:github:code_search] {q!r} p{page}: {exc}", file=sys.stderr)
+                break
     return out
 
 
 def _topic_search(topics: list[str], since_date: str) -> list[dict]:
+    """Two passes per topic:
+    - sort=stars: surfaces popular skill repos (regardless of recent push)
+    - sort=updated: surfaces fresh activity (regardless of star count)
+    Removed the pushed:> filter — was hiding popular but rarely-updated repos.
+    """
     out: list[dict] = []
     for topic in topics or []:
-        try:
-            q = f"topic:{topic} pushed:>{since_date}"
-            data = _safe_get(
-                REPO_SEARCH_URL,
-                params={"q": q, "sort": "updated", "order": "desc", "per_page": 20},
-            )
-            if not data:
-                continue
-            for repo in data.get("items", []) or []:
-                full_name = repo.get("full_name")
-                if not full_name:
-                    continue
-                out.append(
-                    {
-                        "repo_full_name": full_name,
-                        "skill_path": "",  # unknown until verification
-                        "repo_html_url": repo.get("html_url") or f"https://github.com/{full_name}",
-                        "description": repo.get("description") or "",
-                        "stars": repo.get("stargazers_count") or 0,
-                        "pushed_at": repo.get("pushed_at") or "",
-                        "default_branch": repo.get("default_branch") or "main",
-                        "_from": "topic_search",
-                    }
+        for sort_mode in ("stars", "updated"):
+            try:
+                data = _safe_get(
+                    REPO_SEARCH_URL,
+                    params={
+                        "q": f"topic:{topic}",
+                        "sort": sort_mode, "order": "desc", "per_page": 50,
+                    },
                 )
-        except Exception as exc:
-            print(f"[trendwatch:github:topic_search] {topic!r}: {exc}", file=sys.stderr)
-            continue
+                if not data:
+                    continue
+                for repo in data.get("items", []) or []:
+                    full_name = repo.get("full_name")
+                    if not full_name:
+                        continue
+                    out.append(
+                        {
+                            "repo_full_name": full_name,
+                            "skill_path": "",  # unknown until verification
+                            "repo_html_url": repo.get("html_url") or f"https://github.com/{full_name}",
+                            "description": repo.get("description") or "",
+                            "stars": repo.get("stargazers_count") or 0,
+                            "pushed_at": repo.get("pushed_at") or "",
+                            "default_branch": repo.get("default_branch") or "main",
+                            "_from": f"topic_search:{sort_mode}",
+                        }
+                    )
+            except Exception as exc:
+                print(f"[trendwatch:github:topic_search] {topic!r}/{sort_mode}: {exc}", file=sys.stderr)
+                continue
     return out
 
 

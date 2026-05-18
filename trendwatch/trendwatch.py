@@ -112,7 +112,7 @@ def _is_worth_showing(item: dict) -> bool:
     if isinstance(delta, int) and delta >= 5:
         return True
     stars = item.get("stars") or 0
-    if isinstance(stars, int) and stars >= 500:
+    if isinstance(stars, int) and stars >= 100:
         return True
     return False
 

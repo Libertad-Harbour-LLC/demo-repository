@@ -39,22 +39,22 @@ def test_star_delta_5_passes():
 
 def test_star_delta_below_5_with_low_stars_filtered():
     f = _load_filter()
-    assert f({"is_new": False, "delta_stars": 1, "stars": 100}) is False
+    assert f({"is_new": False, "delta_stars": 1, "stars": 50}) is False
 
 
 def test_high_star_repo_always_passes():
-    """500+ stars → always re-evaluated by the LLM, even without delta.
+    """100+ stars → always re-evaluated by the LLM, even without delta.
     Otherwise a 7k-star repo that we saw once with zero daily growth
     would silently vanish from analysis forever.
     """
     f = _load_filter()
-    assert f({"is_new": False, "delta_stars": 0, "stars": 500}) is True
+    assert f({"is_new": False, "delta_stars": 0, "stars": 100}) is True
     assert f({"is_new": False, "delta_stars": 0, "stars": 7833}) is True
 
 
 def test_below_threshold_stale_repo_filtered():
     f = _load_filter()
-    assert f({"is_new": False, "delta_stars": 0, "stars": 499}) is False
+    assert f({"is_new": False, "delta_stars": 0, "stars": 99}) is False
 
 
 def test_missing_fields_treated_as_new():
