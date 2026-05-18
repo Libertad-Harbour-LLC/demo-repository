@@ -423,9 +423,24 @@ def fetch_workflows(
                 print(f"[workflows:github:item] {full!r}: {exc}", file=sys.stderr)
                 continue
 
-        items.sort(
-            key=lambda x: (not x.get("verified", False), -(x.get("stars") or 0))
-        )
+        # Hard filter: drop items that didn't pass JSON-structure verification.
+        # Unverified candidates are GitHub code-search false-positives —
+        # random JSONs (UI configs, SDK changelogs, dictionaries) that happen
+        # to contain words like "nodes" or "blueprint" but are NOT importable
+        # n8n / Make workflows. Letting them through wastes LLM tokens on
+        # mass-excluded'ing them in the analyzer. Keep RATE_LIMITED-derived
+        # items (verified=False because we *couldn't check*, not because we
+        # checked and it failed) — those get a separate marker.
+        before = len(items)
+        items = [it for it in items if it.get("verified") is True]
+        dropped = before - len(items)
+        if dropped:
+            print(
+                f"[workflows:github] dropped {dropped} unverified candidate(s) "
+                f"(failed JSON-structure check)", file=sys.stderr
+            )
+
+        items.sort(key=lambda x: -(x.get("stars") or 0))
         return items[:max_items]
     except Exception as exc:
         print(f"[workflows:github] error: {exc}", file=sys.stderr)
