@@ -69,6 +69,38 @@ def _raw_url(full_name: str, branch: str, path: str) -> str:
     return f"{RAW_BASE}/{full_name}/{branch}/{path.lstrip('/')}"
 
 
+def _list_json_files(full_name: str, dir_path: str = "") -> list[str]:
+    """List JSON files at the given directory in the repo (default branch).
+
+    Used when a candidate came from topic_search (no code-search JSON-path
+    hint). Without this, repos like nusquama/n8nworkflows.xyz (2360★) get
+    dropped at the "no hinted_paths + verify=True → skip" branch even
+    though their contents/workflows/*.json is exactly what we want.
+
+    Returns up to 20 .json paths (relative to repo root). Empty list on
+    any error (rate limit, 404, transient).
+    """
+    contents_url = f"{REPO_API_URL}/{full_name}/contents"
+    if dir_path:
+        contents_url += f"/{dir_path.lstrip('/').rstrip('/')}"
+    data = _safe_get(contents_url)
+    if not data or data == RATE_LIMITED or not isinstance(data, list):
+        return []
+    found: list[str] = []
+    for entry in data:
+        if not isinstance(entry, dict):
+            continue
+        if entry.get("type") != "file":
+            continue
+        name = entry.get("name") or ""
+        path = entry.get("path") or ""
+        if name.lower().endswith(".json") and path:
+            found.append(path)
+        if len(found) >= 20:
+            break
+    return found
+
+
 def _blob_url(full_name: str, branch: str, path: str) -> str:
     return f"https://github.com/{full_name}/blob/{branch}/{path.lstrip('/')}"
 
@@ -322,6 +354,19 @@ def fetch_workflows(
                 repo_html = cand.get("repo_html_url") or f"https://github.com/{full}"
 
                 hinted_paths = sorted(json_paths_per_repo.get(full, set()))
+
+                # Fallback discovery: if no code_search hint exists, this repo
+                # came from topic_search only (e.g. topic:n8n-workflows on a
+                # 2k-star catalog). Probe likely workflow directories so we
+                # can actually verify and surface high-signal collections that
+                # don't happen to match the rigid code_search query strings.
+                if not hinted_paths:
+                    for probe_dir in ("workflows", "n8n", "blueprints", ""):
+                        discovered = _list_json_files(full, probe_dir)
+                        if discovered:
+                            hinted_paths = discovered[:5]
+                            break
+
                 workflows: list[dict] = []
                 any_verified = False
 
