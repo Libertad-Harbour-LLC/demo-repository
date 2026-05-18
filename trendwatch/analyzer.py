@@ -197,6 +197,8 @@ def analyze(
         parsed["telegram_summary"] = _strip_skip_block(summary)
 
     _backfill_descriptions(parsed)
+    _audit_promotion_coverage(parsed, items_with_deltas)
+    _inject_also_considered_tail(parsed, items_with_deltas)
 
     return parsed
 
@@ -238,6 +240,88 @@ _SKIP_BLOCK_RE = re.compile(
     r"\U0001f3af|\U0001f4ca|⚠️|⚙️|\U0001f4a1)).*\n?)*",
     re.MULTILINE,
 )
+
+
+ALSO_CONSIDERED_MIN_STARS = 500
+ALSO_CONSIDERED_LIMIT = 5
+
+
+def _audit_promotion_coverage(parsed: dict, items_with_deltas: list[dict]) -> None:
+    """WARN if the analyzer effectively dropped the whole input pool.
+
+    When the fetcher returned ≥5 candidates but only 0–1 land in
+    top_test/top_watch, the daily digest looks empty even though there
+    were inputs. Loud stderr line so the next time it happens, we see it
+    without re-deriving from the report.
+    """
+    n_inputs = len(items_with_deltas or [])
+    n_promoted = (
+        len(parsed.get("top_test") or [])
+        + len(parsed.get("top_watch") or [])
+    )
+    if n_inputs >= 5 and n_promoted <= 1:
+        print(
+            f"[trendwatch.analyzer] WARN low promotion coverage: "
+            f"inputs={n_inputs} promoted={n_promoted} — analyzer dropped "
+            f"most of the pool; check whether system prompt is too strict",
+            file=sys.stderr,
+        )
+
+
+def _inject_also_considered_tail(parsed: dict, items_with_deltas: list[dict]) -> None:
+    """Guarantee visibility of high-star inputs that didn't make top_test/top_watch.
+
+    If the LLM left them in `excluded` / `top_skip` (or didn't mention
+    them), append a "🔍 Также рассмотрены" tail to telegram_summary
+    listing up to ALSO_CONSIDERED_LIMIT of them sorted by stars. Code
+    enforces this regardless of whether the model followed the template
+    instructions — repeated failures become code, not prompt advice.
+    """
+    summary = parsed.get("telegram_summary")
+    if not isinstance(summary, str) or not summary.strip():
+        return
+
+    # URLs already shown in top_test / top_watch / best_pick — never re-tail.
+    shown_urls: set[str] = set()
+    for bucket in ("top_test", "top_watch"):
+        for it in parsed.get(bucket) or []:
+            if isinstance(it, dict) and it.get("url"):
+                shown_urls.add(it["url"])
+    best = parsed.get("best_pick")
+    if isinstance(best, dict) and best.get("url"):
+        shown_urls.add(best["url"])
+
+    # Candidates: high-star inputs not already shown.
+    candidates = [
+        it for it in (items_with_deltas or [])
+        if isinstance(it, dict)
+        and isinstance(it.get("stars"), int)
+        and it["stars"] >= ALSO_CONSIDERED_MIN_STARS
+        and it.get("url") not in shown_urls
+    ]
+    if not candidates:
+        return
+
+    # If the model already emitted a 🔍 section, trust it.
+    if "🔍" in summary:
+        return
+
+    candidates.sort(key=lambda it: it.get("stars", 0), reverse=True)
+    lines = ["", "🔍 Также рассмотрены, но не продвинуты:"]
+    for it in candidates[:ALSO_CONSIDERED_LIMIT]:
+        name = it.get("repo_full_name") or it.get("name") or "?"
+        stars = it.get("stars", 0)
+        url = it.get("url") or ""
+        lines.append(f"• {name} — ⭐ {stars}")
+        if url:
+            lines.append(f"  🔗 {url}")
+
+    parsed["telegram_summary"] = summary.rstrip() + "\n" + "\n".join(lines) + "\n"
+    print(
+        f"[trendwatch.analyzer] injected 'Также рассмотрены' tail with "
+        f"{min(len(candidates), ALSO_CONSIDERED_LIMIT)} items",
+        file=sys.stderr,
+    )
 
 
 def _strip_skip_block(summary: str) -> str:
