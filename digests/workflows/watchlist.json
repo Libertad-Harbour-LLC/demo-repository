@@ -1,5 +1,23 @@
 {
   "items": {
+    "https://github.com/Drift-Sphere/reddit-leads-tracker": {
+      "added_date": "2026-05-18",
+      "category": "marketing_workflow",
+      "description": "Make-blueprint для мониторинга Reddit через RSS с целью поиска лидов. Простой workflow, отслеживающий посты по ключевым словам и агрегирующий потенциальных клиентов.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 2,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "Drift-Sphere/reddit-leads-tracker: Integration RSS.blueprint",
+      "signal_to_wait": "Появление звёзд (хотя бы 5) или упоминание в Reddit r/Entrepreneur или r/SaaS",
+      "title": "Drift-Sphere/reddit-leads-tracker: Integration RSS.blueprint",
+      "tool": "make",
+      "url": "https://github.com/Drift-Sphere/reddit-leads-tracker",
+      "why_interesting": "Единственный Make-workflow с практической sales-задачей и cross_source_count=2. Ноль звёзд, но идея конкретная и импортируемый JSON есть."
+    },
     "https://github.com/GonchiJoshnaVardhanReddy/bug-bounty-agents": {
       "added_date": "2026-05-15",
       "category": "general_skill",
@@ -48,6 +66,42 @@
       "url": "https://github.com/Katacha1537/n8n-backups",
       "why_interesting": "Workflow для медицинской клиники с AI — нишевый и потенциально интересный кейс автоматизации записи пациентов или обработки запросов. Verified JSON."
     },
+    "https://github.com/MinaSaad1/n8n-data-analyst-agent": {
+      "added_date": "2026-05-18",
+      "category": "data_workflow",
+      "description": "Мультиагентная система для анализа данных в n8n: главный агент, SQL-исполнитель, генератор графиков, поиск по схеме БД и утренний брифинг. Предназначена для аналитиков данных и BI-команд.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 5,
+        "stars": 3
+      },
+      "repo_full_name": "MinaSaad1/n8n-data-analyst-agent: 5-workflow data analyst",
+      "signal_to_wait": "Рост звёзд до 20+ или появление демо/README с примерами запросов",
+      "title": "MinaSaad1/n8n-data-analyst-agent: 5-workflow data analyst",
+      "tool": "n8n",
+      "url": "https://github.com/MinaSaad1/n8n-data-analyst-agent",
+      "why_interesting": "5 связанных workflow для полного data analyst pipeline — редкая комплектность. Включает NL-to-SQL и chart generation. Только 3 звезды, но архитектура интересная."
+    },
+    "https://github.com/MohamedMamdouh18/Find-Me-Job": {
+      "added_date": "2026-05-18",
+      "category": "data_workflow",
+      "description": "Набор из 3 n8n-workflow для автоматического поиска вакансий: скрейпинг LinkedIn, RemoteOK и главный оркестрирующий workflow. Предназначен для соискателей или рекрутеров, которые хотят автоматически собирать подходящие вакансии.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 3,
+        "stars": 15
+      },
+      "repo_full_name": "MohamedMamdouh18/Find-Me-Job: LinkedIn + RemoteOK Scraping",
+      "signal_to_wait": "Рост звёзд до 30+ или появление в Reddit-постах о job automation",
+      "title": "MohamedMamdouh18/Find-Me-Job: LinkedIn + RemoteOK Scraping",
+      "tool": "n8n",
+      "url": "https://github.com/MohamedMamdouh18/Find-Me-Job",
+      "why_interesting": "Практичная задача (поиск работы), 3 взаимосвязанных workflow с чёткой структурой sub-workflow, верифицированы, push в апреле 2026. 15 звёзд — небольшой, но есть органический интерес."
+    },
     "https://github.com/RZ-Logic/jobsignal-engine": {
       "added_date": "2026-05-18",
       "category": "general_workflow",
@@ -83,6 +137,24 @@
       "tool": "n8n",
       "url": "https://github.com/RogerPugaRuiz/uptime-ai-notifier",
       "why_interesting": "Versioned workflow (v1 и v3) указывает на активное развитие. Uptime-мониторинг с AI-нотификациями — практичный DevOps use case. Нулевые звёзды при интересной концепции."
+    },
+    "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
+      "added_date": "2026-05-18",
+      "category": "data_workflow",
+      "description": "n8n-workflow для OCR-парсинга счетов и документов через Gemini AI с автоматической записью данных в Google Sheets. Актуален для бухгалтерских и финансовых команд, обрабатывающих большой объём входящих документов.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 2,
+        "skills_count": 1,
+        "stars": 3
+      },
+      "repo_full_name": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration",
+      "signal_to_wait": "Рост звёзд до 15+ или появление в Reddit r/n8n",
+      "title": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration",
+      "tool": "n8n",
+      "url": "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration",
+      "why_interesting": "Push сегодня (2026-05-18), cross_source_count=2 — упомянут в двух местах из данных. Gemini AI OCR — актуальный стек. Только 3 звезды, но активность сегодня."
     },
     "https://github.com/adamhaley/megyk-automations": {
       "added_date": "2026-05-18",
@@ -138,6 +210,24 @@
       "url": "https://github.com/dntnqlssoRj/ChurnRadar",
       "why_interesting": "Тематика churn-алертов редко встречается в публичных n8n-репозиториях. Имя файла содержательное, verified JSON, push в мае 2026. Высокий потенциал бизнес-ценности при минимальных усилиях на тест."
     },
+    "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram": {
+      "added_date": "2026-05-18",
+      "category": "content_workflow",
+      "description": "n8n-workflow для генерации AI-видео через Seedance и автоматической публикации на TikTok, YouTube и Instagram одновременно. Ориентирован на контент-мейкеров и маркетологов, работающих с короткими видео.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 15
+      },
+      "repo_full_name": "hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram",
+      "signal_to_wait": "Рост звёзд до 50+ или публикация туториала/видео об этом workflow",
+      "title": "hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram",
+      "tool": "n8n",
+      "url": "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram",
+      "why_interesting": "Уникальное сочетание: AI video generation (Seedance) + мультиплатформенная публикация в одном workflow. Novelty высокая. 15 звёзд при свежем контенте."
+    },
     "https://github.com/jakobball/insurance-receipt-automation": {
       "added_date": "2026-05-18",
       "category": "general_workflow",
@@ -155,6 +245,24 @@
       "tool": "n8n",
       "url": "https://github.com/jakobball/insurance-receipt-automation",
       "why_interesting": "Нишевый и редкий use case — автоматизация документооборота в страховании. Имя файла и репозитория содержательны, JSON верифицирован."
+    },
+    "https://github.com/masteranime/n8n-claude-skills": {
+      "added_date": "2026-05-18",
+      "category": "sales_workflow",
+      "description": "n8n-workflow для интеграции платёжной системы Stripe с WhatsApp через Twilio с fallback-логикой при сбоях. Полезен для e-commerce и SaaS-бизнесов, принимающих платежи и уведомляющих клиентов через WhatsApp.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 26
+      },
+      "repo_full_name": "masteranime/n8n-claude-skills: stripe-whatsapp-twilio-fallback",
+      "signal_to_wait": "Рост звёзд до 50+ или упоминание в сообществах WhatsApp business automation",
+      "title": "masteranime/n8n-claude-skills: stripe-whatsapp-twilio-fallback",
+      "tool": "n8n",
+      "url": "https://github.com/masteranime/n8n-claude-skills",
+      "why_interesting": "Stripe + WhatsApp + Twilio в одном workflow — практичная комбинация для e-commerce. Push в апреле 2026. 26 звёзд."
     },
     "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base": {
       "added_date": "2026-05-15",

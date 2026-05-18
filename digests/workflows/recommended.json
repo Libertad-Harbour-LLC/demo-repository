@@ -1,5 +1,112 @@
 {
   "skills": {
+    "https://github.com/enescingoz/awesome-n8n-templates": {
+      "category": "marketing_workflow",
+      "confidence": "high",
+      "description": "Репозиторий с 22 261 звездой содержит workflow для AI-генерации изображений продуктов. Один верифицированный JSON-файл, пригодный для немедленного импорта в n8n. Подходит для e-commerce и маркетинговых команд, которым нужна быстрая визуализация продуктов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-18",
+      "metric": "Качество и скорость генерации изображения продукта",
+      "promoted_from_watch": false,
+      "repo_full_name": "enescingoz/awesome-n8n-templates: AI product imagines",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 7,
+        "utility": 6
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "AI product imagines"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 'AI product imagines.json' по прямой ссылке",
+        "Импортировать в n8n через File → Import from file",
+        "Настроить credential для image-generation API (OpenAI или другой)",
+        "Подготовить тестовое описание продукта",
+        "Запустить workflow и проверить сгенерированное изображение"
+      ],
+      "title": "enescingoz/awesome-n8n-templates: AI product imagines",
+      "tool": "n8n",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates"
+    },
+    "https://github.com/freddy-schuetz/n8n-claw": {
+      "category": "devops_workflow",
+      "confidence": "high",
+      "description": "Набор из 5 n8n-workflow для управления агентами: менеджер библиотеки агентов, браузерный агент, проверка бэкграунда, форма для credentials и нотификации об ошибках. Репозиторий обновлён сегодня (18 мая 2026), что говорит об активной разработке.",
+      "final_score": 7.9,
+      "first_recommended": "2026-05-18",
+      "metric": "Количество агентов в библиотеке и процент ошибок, перехваченных error-notification workflow",
+      "promoted_from_watch": false,
+      "repo_full_name": "freddy-schuetz/n8n-claw: agent-library-manager + 4 агентных workflow",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "agent-library-manager",
+        "background-checker",
+        "browser-use",
+        "credential-form",
+        "error-notification"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать agent-library-manager.json по прямой ссылке",
+        "Импортировать в n8n через File → Import from file",
+        "Изучить node-граф: понять структуру хранилища агентов",
+        "Настроить необходимые credentials (зависит от конкретного агента)",
+        "Запустить тестовый сценарий — добавить тестового агента в библиотеку"
+      ],
+      "title": "freddy-schuetz/n8n-claw: agent-library-manager + 4 агентных workflow",
+      "tool": "n8n",
+      "url": "https://github.com/freddy-schuetz/n8n-claw"
+    },
+    "https://github.com/lucaswalter/n8n-ai-automations": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "Коллекция из 5 n8n-workflow на базе AI: Gmail-агент, сбор новостей, генератор рассылок, пайплайн скрейпинга и специализированный агент для авторемонтного бизнеса. Репозиторий ориентирован на малый и средний бизнес, которому нужна автоматизация коммуникаций и контента без написания кода.",
+      "final_score": 8.1,
+      "first_recommended": "2026-05-18",
+      "metric": "Количество писем, обработанных автоматически без ручного вмешательства",
+      "promoted_from_watch": false,
+      "repo_full_name": "lucaswalter/n8n-ai-automations: ai_gmail_agent + 4 других AI-workflow",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "ai_gmail_agent",
+        "ai_news_data_ingestion",
+        "ai_newsletter_generator",
+        "ai_scraping_pipeline",
+        "auto_repair_shop_gmail_agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON, например ai_gmail_agent.json по прямой ссылке",
+        "В n8n: File → Import from file → выбрать JSON",
+        "Настроить Google OAuth credential для Gmail-ноды",
+        "Подключить OpenAI API key в AI-нодах",
+        "Запустить тестовый прогон с тестовым письмом в Inbox"
+      ],
+      "title": "lucaswalter/n8n-ai-automations: ai_gmail_agent + 4 других AI-workflow",
+      "tool": "n8n",
+      "url": "https://github.com/lucaswalter/n8n-ai-automations"
+    },
     "https://github.com/oxbshw/ultimate-n8n-ai-workflows": {
       "category": "content_workflow",
       "confidence": "high",
@@ -32,6 +139,43 @@
       "title": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
       "tool": "n8n",
       "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
+    },
+    "https://github.com/theaiautomators/insights-lm-public": {
+      "category": "content_workflow",
+      "confidence": "high",
+      "description": "Система InsightsLM — набор из 5 n8n-workflow для создания AI-подкастов и работы с контентом: извлечение текста, генерация структуры записной книжки, чат с материалами и автоматическая генерация подкастных эпизодов. Рассчитан на медиа-команды, исследователей и контент-мейкеров.",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-18",
+      "metric": "Время от загрузки документа до готового подкаст-эпизода",
+      "promoted_from_watch": false,
+      "repo_full_name": "theaiautomators/insights-lm-public: InsightsLM (5 workflow)",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "Import_Insights_LM_Workflows",
+        "InsightsLM___Chat",
+        "InsightsLM___Extract_Text",
+        "InsightsLM___Generate_Notebook_Details",
+        "InsightsLM___Podcast_Generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Начать с Import_Insights_LM_Workflows.json — он импортирует остальные workflow автоматически",
+        "Настроить AI-провайдера (OpenAI или совместимый) в credentials",
+        "Загрузить тестовый документ через InsightsLM___Extract_Text",
+        "Запустить InsightsLM___Generate_Notebook_Details для структурирования",
+        "Запустить InsightsLM___Podcast_Generation и проверить вывод"
+      ],
+      "title": "theaiautomators/insights-lm-public: InsightsLM (5 workflow)",
+      "tool": "n8n",
+      "url": "https://github.com/theaiautomators/insights-lm-public"
     }
   }
 }
