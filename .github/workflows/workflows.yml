@@ -3,8 +3,14 @@ on:
   schedule:
     - cron: '0 12 * * *'   # 12:00 UTC daily
   workflow_dispatch:
-    # Manual runs ALWAYS bypass once-per-day idempotency — they're
-    # intentional by definition, no checkbox to forget.
+    # Manual runs ALWAYS bypass once-per-day idempotency.
+  push:
+    branches: [main]
+    paths:
+      - '.github/trigger-workflows'
+    # Touch .github/trigger-workflows → run pipeline with --force.
+    # paths-scoped so digest commit-back to digests/workflows/** never
+    # re-triggers (no loop).
 jobs:
   digest:
     runs-on: ubuntu-latest
@@ -16,7 +22,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r trendwatch/requirements.txt
-      - run: python workflows/workflows.py ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
+      - run: python workflows/workflows.py ${{ github.event_name != 'schedule' && '--force' || '' }}
         env:
           APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

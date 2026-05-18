@@ -20,22 +20,33 @@ GITHUB_TOPICS_N8N = [
     "n8n-workflows",
     "n8n-template",
     "n8n-templates",
+    "n8n-automation",
+    "n8n-nodes",
+    "automation",
 ]
 GITHUB_TOPICS_MAKE = [
     "make-blueprint",
     "make-template",
     "integromat",
     "integromat-blueprint",
+    "make-automation",
+    "make-scenarios",
+    "no-code-automation",
 ]
 
 # Code-search queries that find workflow JSON files
 GITHUB_CODE_QUERIES_N8N = [
     'path:workflows extension:json "nodes" "connections"',
     'extension:json "n8n" "credentials"',
+    'extension:json "nodes" "connections" "n8n-nodes-base"',
+    'path:n8n extension:json "workflow"',
+    'filename:workflow.json "n8n"',
 ]
 GITHUB_CODE_QUERIES_MAKE = [
     'extension:json "blueprint" "scenario"',
     'path:blueprints extension:json "modules"',
+    'extension:json "make" "scenario" "modules"',
+    'filename:blueprint.json',
 ]
 
 REDDIT_SUBREDDITS = [
@@ -61,7 +72,7 @@ SOURCES = {
     "reddit": True,
 }
 
-MAX_ITEMS_PER_SOURCE = 15
+MAX_ITEMS_PER_SOURCE = 50  # was 15 — too aggressive, hid most candidates from the LLM
 
 # Verification: for n8n, fetch the JSON and check it has "nodes" and "connections" keys.
 # For Make, check for "blueprint"/"flow" structure. Skip verification if file is too big.

@@ -1,0 +1,4 @@
+# Trigger file for workflows pipeline.
+# Modifying this file pushes a commit to .github/trigger-workflows
+# which fires the workflows-pipeline GH Action with --force.
+# Last trigger: 2026-05-18 (initial)
