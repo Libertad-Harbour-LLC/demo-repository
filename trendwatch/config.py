@@ -17,11 +17,16 @@ GITHUB_TOPICS = [
     "claude-skills",
     "claude-code-skill",
     "claude-code-skills",
+    "claude-code",
+    "anthropic-claude",
+    "agent-skill",
 ]
 
 GITHUB_CODE_QUERIES = [
     'path:.claude/skills filename:SKILL.md',
     'path:skills filename:SKILL.md "claude"',
+    'filename:SKILL.md "name:" "description:"',  # YAML-frontmatter skills at root or any depth
+    'path:.claude filename:SKILL.md',
 ]
 
 REDDIT_SUBREDDITS = [
@@ -49,7 +54,7 @@ SOURCES = {
     "threads": False,   # disabled per Sprint 3
 }
 
-MAX_ITEMS_PER_SOURCE = 15
+MAX_ITEMS_PER_SOURCE = 50  # was 15 — too aggressive, hid most candidates from the LLM
 
 VERIFY_GITHUB_SKILLS = True  # if True, hit the repo's /.claude/skills/ path to confirm
 
