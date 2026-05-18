@@ -65,6 +65,57 @@
       "url": "https://github.com/abhay-rana/create-modern-react/tree/main/.claude/skills",
       "why_interesting": "8 React-специфичных skills (react-best-practices, ui-ux-pro-max, frontend-design, agent-browser, autoskill) — редкая React-ориентированная коллекция. Интересен skill autoskill, судя по названию — автоматическое создание новых skills."
     },
+    "https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills": {
+      "added_date": "2026-05-18",
+      "category": "vibe_coding_skill",
+      "description": "Репозиторий Flutter/mobile проекта с 113 skills, большинство из которых — конкретные решения DevOps-проблем (GKE, Fastly, ClickHouse, ArgoCD, Cloud Run). Представляет собой базу знаний реальных production-инцидентов в виде skills.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 113,
+        "stars": 248
+      },
+      "repo_full_name": "divinevideo/divine-mobile",
+      "signal_to_wait": "Проверить вручную содержимое 2-3 skills: если они содержат реальные runbook-решения — может стать отдельной категорией devops_skill; ждать подтверждения utility",
+      "title": "divinevideo/divine-mobile",
+      "url": "https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills",
+      "why_interesting": "113 skills с очень конкретными названиями (fastly-compute-deployment-debugging, clickhouse-nip33-addressable-dedup) — уникальный паттерн 'база знаний инцидентов как Claude Skills'"
+    },
+    "https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills": {
+      "added_date": "2026-05-18",
+      "category": "vibe_coding_skill",
+      "description": "Платформа nanoclaw с 48 skills для интеграции мессенджеров и инструментов в Claude Code: Telegram, WhatsApp, Slack, Discord, Linear, Google Calendar, iMessage и другие. Позволяет добавлять новые интеграции через единую skill-структуру.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 48,
+        "stars": 28973
+      },
+      "repo_full_name": "nanocoai/nanoclaw",
+      "signal_to_wait": "Ждать подтверждения от community (Reddit/Discord), что add-* skills действительно работают в production; проверить, требуют ли они дополнительной инфраструктуры nanoclaw",
+      "title": "nanocoai/nanoclaw",
+      "url": "https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills",
+      "why_interesting": "Уникальная ниша: skills для добавления интеграций (add-telegram, add-slack, add-gmail-tool) — ни один другой репо сегодня не покрывает эту область; 28973 звёзд"
+    },
+    "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills": {
+      "added_date": "2026-05-18",
+      "category": "vibe_coding_skill",
+      "description": "Набор из 8 skills для Elixir/Phoenix разработки: session-анализ, skill-мониторинг, changelog, plugin-dev-workflow. Редкая специализация под Elixir/Phoenix стек в Claude Skills экосистеме.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 8,
+        "stars": 322
+      },
+      "repo_full_name": "oliver-kriska/claude-elixir-phoenix",
+      "signal_to_wait": "Ждать роста звёзд или появления в Elixir/Phoenix community обсуждениях",
+      "title": "oliver-kriska/claude-elixir-phoenix",
+      "url": "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills",
+      "why_interesting": "Единственный Elixir-специфичный репо в снимке; 322 звезды, недавно обновлён; session-trends и skill-monitor — нестандартные и потенциально полезные skills"
+    },
     "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills": {
       "added_date": "2026-05-18",
       "category": "general_skill",
@@ -81,6 +132,40 @@
       "title": "rish2jain/paperresearchagent",
       "url": "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills",
       "why_interesting": "Верифицированный репозиторий с 6 специализированными skills под конкретные enterprise-платформы (AWS + NVIDIA). Такой набор редок — большинство репо содержат 1-2 общих skill. Потенциально полезен для ML-инженеров и DevOps-специалистов, работающих с этими стеками."
+    },
+    "https://github.com/ruvnet/ruflo/tree/main/.claude/skills": {
+      "added_date": "2026-05-18",
+      "category": "vibe_coding_skill",
+      "description": "Репозиторий с 39 skills для advanced agent orchestration: agentdb, swarm coordination, hive-mind, SPARC-методология, GitHub workflow automation и MCP optimization. Ориентирован на разработчиков, строящих многоагентные системы на базе Claude Code.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 39,
+        "stars": 52403
+      },
+      "repo_full_name": "ruvnet/ruflo",
+      "signal_to_wait": "Ждать: появление delta_stars > 0 или упоминания в Reddit/Twitter подтвердит реальный трекшн; стоит проверить качество SKILL.md файлов вручную перед рекомендацией к тестированию",
+      "title": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo/tree/main/.claude/skills",
+      "why_interesting": "52403 звёзд и 39 skills с уникальными паттернами (agentdb-vector-search, hive-mind-advanced, sparc-methodology) — нет аналогов в сегодняшнем снимке; активно обновляется (pushed сегодня)"
+    },
+    "https://github.com/xiaolai/vmark/tree/main/.claude/skills": {
+      "added_date": "2026-05-18",
+      "category": "vibe_coding_skill",
+      "description": "Репозиторий с 19 skills для Tauri/React разработки: tauri-app-dev, rust-tauri-backend, mcp-dev, css-design-tdd, react-app-dev. Специализирован под кросс-платформенную desktop-разработку.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 19,
+        "stars": 335
+      },
+      "repo_full_name": "xiaolai/vmark",
+      "signal_to_wait": "Ждать активности от Tauri community или роста звёзд; проверить совместимость skills с Tauri v2",
+      "title": "xiaolai/vmark",
+      "url": "https://github.com/xiaolai/vmark/tree/main/.claude/skills",
+      "why_interesting": "Tauri-специфичные skills (tauri-v2-integration, tauri-mcp-test-runner) уникальны для экосистемы; 335 звёзд, недавно обновлён"
     }
   }
 }

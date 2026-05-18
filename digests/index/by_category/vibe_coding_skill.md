@@ -1,11 +1,15 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 13
+Total: 17
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-18 | [rtk-ai/rtk](https://github.com/rtk-ai/rtk/tree/develop/.claude/skills) | code-simplifier, design-patterns, issue-triage, +9 more |  | 8.5 | high | git clone https://github.com/rtk-ai/rtk -b develop && cp -r rtk/.claude/skills/pr-review /your-project/.claude/skills/ |
 | 2026-05-18 | [nativewind/nativewind](https://github.com/nativewind/nativewind/tree/main/.claude/skills) | add-test, architecture, debug-nw | 7833 |  | manual | git clone https://github.com/nativewind/nativewind.git |
 | 2026-05-18 | [mksglu/context-mode](https://github.com/mksglu/context-mode/tree/main/.claude/skills) | context-mode-ops | 14948 |  | manual | git clone https://github.com/mksglu/context-mode.git |
+| 2026-05-18 | [decebals/claude-code-java](https://github.com/decebals/claude-code-java/tree/main/.claude/skills) | api-contract-review, architecture-review, changelog-generator, +15 more |  | 8.0 | high | git clone https://github.com/decebals/claude-code-java && cp -r claude-code-java/.claude/skills/java-code-review /you... |
+| 2026-05-18 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/.claude/skills) | everything-claude-code |  | 8.5 | high | git clone https://github.com/affaan-m/everything-claude-code && cp -r everything-claude-code/.claude/skills/everythin... |
+| 2026-05-18 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills) | adopt, architecture-decision, architecture-review, +70 more |  | 7.5 | high | git clone https://github.com/Donchitos/Claude-Code-Game-Studios && cp -r Claude-Code-Game-Studios/.claude/skills/spri... |
 | 2026-05-17 | [DenisSergeevitch/agents-best-practices](https://github.com/DenisSergeevitch/agents-best-practices) | agents-best-practices | 577 |  | manual | git clone https://github.com/DenisSergeevitch/agents-best-practices.git |
 | 2026-05-16 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |  |  |  | manual | — |
 | 2026-05-16 | [mattpocock/skills](https://github.com/mattpocock/skills) | caveman, diagnose, edit-article, +17 more |  |  | manual | — |
