@@ -227,6 +227,56 @@
       "title": "JetBrains/ideavim",
       "url": "https://github.com/JetBrains/ideavim/tree/master/.claude/skills"
     },
+    "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Claude Code toolkit: агенты, команды, skills, правила и хуки — всё для продуктивной разработки. Альтернатива affaan-m с другим уклоном.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "WorldFlowAI/everything-claude-code",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "everything-claude-code"
+      ],
+      "stars": 34,
+      "test_steps": [
+        "git clone https://github.com/WorldFlowAI/everything-claude-code.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r everything-claude-code/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "WorldFlowAI/everything-claude-code",
+      "url": "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills"
+    },
+    "https://github.com/addyosmani/agent-skills/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Production-grade engineering skills для AI-кодинг агентов. От Addy Osmani (Google Chrome) — набор паттернов для serious-разработки с агентами.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "addyosmani/agent-skills",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent-skills"
+      ],
+      "stars": 43288,
+      "test_steps": [
+        "git clone https://github.com/addyosmani/agent-skills.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r agent-skills/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills/tree/main/.claude/skills"
+    },
     "https://github.com/affaan-m/everything-claude-code/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -344,6 +394,31 @@
       "title": "alchaincyf/nuwa-skill",
       "url": "https://github.com/alchaincyf/nuwa-skill"
     },
+    "https://github.com/alirezarezvani/claude-skills/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "general_skill",
+      "confidence": "manual",
+      "description": "Мега-коллекция 313+ Claude Code skills и agent-плагинов. Совместима с Claude Code, Codex, Gemini, Cursor и др. Покрывает почти любой use case.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "alirezarezvani/claude-skills",
+      "scores": {},
+      "skills_count": 313,
+      "skills_in_repo": [
+        "claude-skills"
+      ],
+      "stars": 15358,
+      "test_steps": [
+        "git clone https://github.com/alirezarezvani/claude-skills.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r claude-skills/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "alirezarezvani/claude-skills",
+      "url": "https://github.com/alirezarezvani/claude-skills/tree/main/.claude/skills"
+    },
     "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -428,6 +503,31 @@
       ],
       "title": "atopile/atopile",
       "url": "https://github.com/atopile/atopile/tree/main/.claude/skills"
+    },
+    "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "ai_content_skill",
+      "confidence": "manual",
+      "description": "15 Claude prompt skills для AI-видео-генерации через Seedance 2.0 × Higgsfield. Готовые промт-паттерны для разных стилей видео.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "beshuaxian/higgsfield-seedance2-jineng",
+      "scores": {},
+      "skills_count": 15,
+      "skills_in_repo": [
+        "higgsfield-seedance2-jineng"
+      ],
+      "stars": 508,
+      "test_steps": [
+        "git clone https://github.com/beshuaxian/higgsfield-seedance2-jineng.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r higgsfield-seedance2-jineng/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "beshuaxian/higgsfield-seedance2-jineng",
+      "url": "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills"
     },
     "https://github.com/coreyhaines31/marketingskills/tree/main/skills": {
       "added_manually": true,
@@ -689,6 +789,31 @@
       "title": "flowglad/flowglad",
       "url": "https://github.com/flowglad/flowglad/tree/main/.claude/skills"
     },
+    "https://github.com/garrytan/gbrain/tree/master/.claude/skills": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Garry Tan's Opinionated OpenClaw/Hermes Agent Brain — расширение его более раннего gstack. Полный набор инструкций для агентского харнесса от инвестора YC.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "garrytan/gbrain",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "gbrain"
+      ],
+      "stars": 17106,
+      "test_steps": [
+        "git clone https://github.com/garrytan/gbrain.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r gbrain/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain/tree/master/.claude/skills"
+    },
     "https://github.com/garrytan/gstack": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -726,6 +851,31 @@
       "test_steps": [],
       "title": "gsd-build/get-shit-done",
       "url": "https://github.com/gsd-build/get-shit-done"
+    },
+    "https://github.com/hugohe3/ppt-master/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "ai_content_skill",
+      "confidence": "manual",
+      "description": "AI генерит нативно редактируемые PPTX из любого документа — настоящий PowerPoint, не картинки. Skill подключает генератор презентаций в Claude Code.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "hugohe3/ppt-master",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ppt-master"
+      ],
+      "stars": 18093,
+      "test_steps": [
+        "git clone https://github.com/hugohe3/ppt-master.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r ppt-master/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "hugohe3/ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master/tree/main/.claude/skills"
     },
     "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -841,6 +991,31 @@
       "title": "mksglu/context-mode",
       "url": "https://github.com/mksglu/context-mode/tree/main/.claude/skills"
     },
+    "https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Один CLAUDE.md файл, который улучшает поведение Claude Code, основан на наблюдениях Andrej Karpathy о типичных ошибках LLM при кодинге. Самый звёздный single-file skill в экосистеме.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "multica-ai/andrej-karpathy-skills",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "andrej-karpathy-skills"
+      ],
+      "stars": 135765,
+      "test_steps": [
+        "git clone https://github.com/multica-ai/andrej-karpathy-skills.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r andrej-karpathy-skills/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills"
+    },
     "https://github.com/nativewind/nativewind/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -904,6 +1079,31 @@
       "title": "obra/superpowers",
       "url": "https://github.com/obra/superpowers"
     },
+    "https://github.com/pbakaus/impeccable/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "ai_content_skill",
+      "confidence": "manual",
+      "description": "Дизайн-язык, делающий AI-харнесс лучше в дизайне. Эталонные UI/UX skills от Paul Bakaus для генерации визуала через Claude Code.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "pbakaus/impeccable",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "impeccable"
+      ],
+      "stars": 28606,
+      "test_steps": [
+        "git clone https://github.com/pbakaus/impeccable.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r impeccable/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable/tree/main/.claude/skills"
+    },
     "https://github.com/rtk-ai/rtk/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -944,6 +1144,81 @@
       ],
       "title": "rtk-ai/rtk",
       "url": "https://github.com/rtk-ai/rtk/tree/develop/.claude/skills"
+    },
+    "https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "marketing_skill",
+      "confidence": "manual",
+      "description": "Claude Code skills для роста на LinkedIn: пишут пост-формат как человек, генерят креативы, оптимизируют тайминг публикаций.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "sergebulaev/linkedin-skills",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "linkedin-skills"
+      ],
+      "stars": 89,
+      "test_steps": [
+        "git clone https://github.com/sergebulaev/linkedin-skills.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r linkedin-skills/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "sergebulaev/linkedin-skills",
+      "url": "https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "general_skill",
+      "confidence": "manual",
+      "description": "Persistent context across sessions для AI-агентов: захватывает что агент делал, сжимает AI и подсовывает обратно в будущие сессии. Поддержка Claude Code, Codex, Gemini, Hermes, Copilot и др.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "thedotmack/claude-mem",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "claude-mem"
+      ],
+      "stars": 76571,
+      "test_steps": [
+        "git clone https://github.com/thedotmack/claude-mem.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r claude-mem/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills"
+    },
+    "https://github.com/yamadashy/repomix/tree/main/.claude/skills": {
+      "added_manually": true,
+      "category": "vibe_coding_skill",
+      "confidence": "manual",
+      "description": "Упаковывает весь репозиторий в один AI-friendly файл для скармливания в Claude/GPT. Skill даёт Claude Code команды для pack/unpack контекста проекта.",
+      "final_score": null,
+      "first_recommended": "2026-05-18",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "yamadashy/repomix",
+      "scores": {},
+      "skills_count": 1,
+      "skills_in_repo": [
+        "repomix"
+      ],
+      "stars": 25048,
+      "test_steps": [
+        "git clone https://github.com/yamadashy/repomix.git",
+        "mkdir -p ~/.claude/skills",
+        "cp -r repomix/.claude/skills/* ~/.claude/skills/",
+        "Открыть Claude Code в проекте и дать тестовый промт по теме skill"
+      ],
+      "title": "yamadashy/repomix",
+      "url": "https://github.com/yamadashy/repomix/tree/main/.claude/skills"
     },
     "https://github.com/zarazhangrui/frontend-slides": {
       "added_manually": true,
