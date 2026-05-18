@@ -264,4 +264,46 @@ def explain_item(item: dict, source_key: str) -> tuple[str | None, str | None]:
     if any(head.startswith(m) for m in refusal_markers):
         print(f"[llm] WARN output looks like refusal/injection: {head!r}", file=sys.stderr)
         return None, "модель вернула отказ или признаки prompt-injection — пропускаю"
+
+    text = _validate_explanation_output(text, item)
     return text, None
+
+
+# Hard cap on the chars we ever forward from the LLM to Telegram. The
+# system prompt asks for 3-5 sentences (~600 chars). max_tokens=400
+# enforces an upper bound at the API level, but tokens != chars. 1500
+# is well below Telegram's 4096 limit yet generous enough that a
+# legitimate 5-sentence answer is never truncated.
+EXPLANATION_MAX_CHARS = 1500
+
+# Strip any URL the model emits — the system prompt forbids citing URLs
+# (the detail screen above already has a "🔗 Открыть в GitHub" button),
+# and any URL in the output is either a hallucination or smuggled from
+# the description. Either way we'd rather not forward it.
+_URL_RE = re.compile(r"https?://\S+")
+
+
+def _validate_explanation_output(text: str, item: dict) -> str:
+    """Final-stage output guardrail. Returns sanitized text (always
+    non-empty — refusal markers are handled by the caller before this).
+
+    Rules:
+    - Strip any http(s) URL — model isn't supposed to cite URLs at all.
+    - Hard char cap at EXPLANATION_MAX_CHARS; cut at the last sentence
+      boundary inside the budget if possible, else hard-truncate with "…".
+    """
+    cleaned = _URL_RE.sub("", text).strip()
+    # Collapse any double-spaces created by URL stripping.
+    cleaned = re.sub(r"  +", " ", cleaned)
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+
+    if len(cleaned) <= EXPLANATION_MAX_CHARS:
+        return cleaned
+
+    # Cut at last sentence boundary inside the budget.
+    cut = cleaned[:EXPLANATION_MAX_CHARS]
+    for sep in (". ", ".\n", "! ", "? "):
+        idx = cut.rfind(sep)
+        if idx > EXPLANATION_MAX_CHARS // 2:
+            return cut[: idx + 1].rstrip() + "…"
+    return cut.rstrip() + "…"
