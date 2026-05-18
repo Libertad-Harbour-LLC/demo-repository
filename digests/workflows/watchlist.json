@@ -84,6 +84,78 @@
       "url": "https://github.com/RogerPugaRuiz/uptime-ai-notifier",
       "why_interesting": "Versioned workflow (v1 и v3) указывает на активное развитие. Uptime-мониторинг с AI-нотификациями — практичный DevOps use case. Нулевые звёзды при интересной концепции."
     },
+    "https://github.com/adamhaley/megyk-automations": {
+      "added_date": "2026-05-18",
+      "category": "marketing_workflow",
+      "description": "Набор из 2 workflow для email-drip кампаний и маркировки экспортированных контактов в n8n. Ориентирован на маркетологов, автоматизирующих email-последовательности.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 2,
+        "stars": 0
+      },
+      "repo_full_name": "adamhaley/megyk-automations: EmailDrip",
+      "signal_to_wait": "Появление звёзд, README с описанием email-провайдера и логики сегментации, упоминание в Reddit/r/n8n.",
+      "title": "adamhaley/megyk-automations: EmailDrip",
+      "tool": "n8n",
+      "url": "https://github.com/adamhaley/megyk-automations",
+      "why_interesting": "EmailDrip — понятная и востребованная задача. Push в мае 2026, два верифицированных JSON. Имена файлов содержательные."
+    },
+    "https://github.com/bionicop/n8n-seo-flow": {
+      "added_date": "2026-05-18",
+      "category": "marketing_workflow",
+      "description": "Workflow для SEO-автоматизации в n8n. Подходит для контент-маркетологов и SEO-специалистов, которые хотят автоматизировать рутинные задачи анализа или публикации.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "bionicop/n8n-seo-flow: seo-flow",
+      "signal_to_wait": "Появление звёзд или README с описанием шагов workflow; упоминание в SEO или n8n сообществах.",
+      "title": "bionicop/n8n-seo-flow: seo-flow",
+      "tool": "n8n",
+      "url": "https://github.com/bionicop/n8n-seo-flow",
+      "why_interesting": "Имя репозитория и файла однозначно описывают задачу. Verified JSON, push январь 2026. SEO-автоматизация — высокий бизнес-спрос."
+    },
+    "https://github.com/dntnqlssoRj/ChurnRadar": {
+      "added_date": "2026-05-18",
+      "category": "sales_workflow",
+      "description": "Workflow для автоматического оповещения об оттоке клиентов (churn alert) через n8n. Ориентирован на SaaS-компании и продуктовые команды, которым важно оперативно реагировать на признаки ухода пользователей.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 1
+      },
+      "repo_full_name": "dntnqlssoRj/ChurnRadar: churn_alert",
+      "signal_to_wait": "Появление звёзд (хотя бы 5+), добавление README с описанием триггеров и источников данных, упоминание на Reddit.",
+      "title": "dntnqlssoRj/ChurnRadar: churn_alert",
+      "tool": "n8n",
+      "url": "https://github.com/dntnqlssoRj/ChurnRadar",
+      "why_interesting": "Тематика churn-алертов редко встречается в публичных n8n-репозиториях. Имя файла содержательное, verified JSON, push в мае 2026. Высокий потенциал бизнес-ценности при минимальных усилиях на тест."
+    },
+    "https://github.com/jakobball/insurance-receipt-automation": {
+      "added_date": "2026-05-18",
+      "category": "general_workflow",
+      "description": "Workflow для автоматической валидации страховых квитанций в n8n. Подходит страховым компаниям или брокерам, которым нужна автоматизация проверки документов.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "jakobball/insurance-receipt-automation: Validator",
+      "signal_to_wait": "Появление звёзд или описания логики валидации; упоминание в fintech/insurtech сообществах.",
+      "title": "jakobball/insurance-receipt-automation: Validator",
+      "tool": "n8n",
+      "url": "https://github.com/jakobball/insurance-receipt-automation",
+      "why_interesting": "Нишевый и редкий use case — автоматизация документооборота в страховании. Имя файла и репозитория содержательны, JSON верифицирован."
+    },
     "https://github.com/mesquitapetro-crypto/n8n-mcp-knowledge-base": {
       "added_date": "2026-05-15",
       "category": "general_skill",
