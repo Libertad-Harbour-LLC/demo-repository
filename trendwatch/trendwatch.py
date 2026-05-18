@@ -249,6 +249,7 @@ def run(
     items_by_source = _fetch_all()
     counts = " ".join(f"{k}={len(v)}" for k, v in items_by_source.items())
     summary = f"[trendwatch] {counts}"
+    print(f"[PHASE:FETCH] {counts}", file=sys.stderr)
 
     date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     period = "24h"
@@ -312,7 +313,14 @@ def run(
         # trigger already set by check_watchlist_graduates
 
     # Dedupe filter: drop items that were already shown without material change.
+    pre_worth_count = len(items_with_deltas)
     filtered_items = [it for it in items_with_deltas if _is_worth_showing(it)]
+    print(
+        f"[PHASE:FILTER] after_is_recommended={pre_worth_count} "
+        f"after_is_worth_showing={len(filtered_items)} "
+        f"graduates={len(graduates)}",
+        file=sys.stderr,
+    )
 
     if not filtered_items and not graduates:
         msg = (
