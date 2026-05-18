@@ -1,0 +1,35 @@
+name: cleanup
+# Weekly garbage-collection for digests/recommended.json + digests/workflows/recommended.json.
+# Drops items with final_score < 4 AND first_recommended older than 30d
+# AND NOT added_manually. Retired entries appended to digests/retired.json
+# (and the workflows counterpart) as an audit trail.
+on:
+  schedule:
+    - cron: '0 6 * * 0'   # Sundays 06:00 UTC (well before the daily trendwatch 09:00)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry-run (print what would be removed, no commit)'
+        type: boolean
+        default: false
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run cleanup
+        run: python scripts/cleanup_db.py ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Commit retired entries
+        if: ${{ success() && !inputs.dry_run }}
+        run: |
+          git config user.name "cleanup-bot"
+          git config user.email "cleanup@users.noreply.github.com"
+          git add digests/ || true
+          git diff --cached --quiet || git commit -m "chore: weekly DB cleanup $(date -u +%Y-%m-%d)"
+          git pull --rebase origin "${GITHUB_REF_NAME}" || true
+          git push
