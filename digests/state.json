@@ -1,13 +1,5 @@
 {
   "items": {
-    "https://github.com/Dullu9/10x-Outreach-Skill/tree/main/.claude/skills": {
-      "first_seen": "2026-05-16T23:34:27Z",
-      "score": null,
-      "skills_count": 27,
-      "source": "github",
-      "stars": 1,
-      "title": "Dullu9/10x-Outreach-Skill"
-    },
     "https://github.com/JetBrains/ideavim/tree/master/.claude/skills": {
       "first_seen": "2026-05-16T23:34:27Z",
       "score": null,
@@ -23,6 +15,14 @@
       "source": "github",
       "stars": 0,
       "title": "Murf-y/NetworkModelsVisualization"
+    },
+    "https://github.com/ProfSynapse/Stampede/tree/main/.claude/skills": {
+      "first_seen": "2026-05-18T00:32:50Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github",
+      "stars": 0,
+      "title": "ProfSynapse/Stampede"
     },
     "https://github.com/abhay-rana/create-modern-react/tree/main/.claude/skills": {
       "first_seen": "2026-05-16T10:11:25Z",
@@ -121,6 +121,6 @@
       "title": "yanochka11/harness_bro"
     }
   },
-  "last_run": "2026-05-18T00:09:04Z",
+  "last_run": "2026-05-18T00:32:50Z",
   "last_sent_date": "2026-05-18"
 }

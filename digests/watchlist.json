@@ -32,6 +32,23 @@
       "url": "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills",
       "why_interesting": "25 skills — крупнейший набор в сегодняшней выборке, охватывает полный agile-цикл: от intake-triage и sprint-planning до standup, review-pr, visual-regression и memory-hygiene. Уникальны: codex-mcp-setup, memory-hygiene, verify-AC (acceptance criteria). Если качество SKILL.md на уровне — это потенциально лучший agile-toolkit для Claude Code."
     },
+    "https://github.com/ProfSynapse/Stampede/tree/main/.claude/skills": {
+      "added_date": "2026-05-18",
+      "category": "general_skill",
+      "description": "Репозиторий ProfSynapse/Stampede содержит один верифицированный Claude Skill с именем 'stampede'. Судя по названию и автору (ProfSynapse известен AI-промпт-инструментами), skill, вероятно, связан с оркестрацией или массовым запуском задач, однако подробностей без чтения SKILL.md нет.",
+      "expires_at": "2026-06-17",
+      "last_checked": "2026-05-18",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "ProfSynapse/Stampede",
+      "signal_to_wait": "Рост звёзд от 0 до хотя бы 5, появление упоминаний в Reddit или Twitter, обновление репо после 2026-04-08.",
+      "title": "ProfSynapse/Stampede",
+      "url": "https://github.com/ProfSynapse/Stampede/tree/main/.claude/skills",
+      "why_interesting": "Verified=True означает, что .claude/skills/stampede/SKILL.md реально существует в репо. Автор ProfSynapse имеет репутацию в AI-промпт-сообществе. Skill новый (first_seen 2026-05-18)."
+    },
     "https://github.com/abhay-rana/create-modern-react/tree/main/.claude/skills": {
       "added_date": "2026-05-16",
       "category": "general_skill",

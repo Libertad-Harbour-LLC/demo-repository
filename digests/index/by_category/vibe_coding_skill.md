@@ -1,9 +1,11 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 11
+Total: 13
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-18 | [nativewind/nativewind](https://github.com/nativewind/nativewind/tree/main/.claude/skills) | add-test, architecture, debug-nw | 7833 |  | manual | git clone https://github.com/nativewind/nativewind.git |
+| 2026-05-18 | [mksglu/context-mode](https://github.com/mksglu/context-mode/tree/main/.claude/skills) | context-mode-ops | 14948 |  | manual | git clone https://github.com/mksglu/context-mode.git |
 | 2026-05-17 | [DenisSergeevitch/agents-best-practices](https://github.com/DenisSergeevitch/agents-best-practices) | agents-best-practices | 577 |  | manual | git clone https://github.com/DenisSergeevitch/agents-best-practices.git |
 | 2026-05-16 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |  |  |  | manual | — |
 | 2026-05-16 | [mattpocock/skills](https://github.com/mattpocock/skills) | caveman, diagnose, edit-article, +17 more |  |  | manual | — |
