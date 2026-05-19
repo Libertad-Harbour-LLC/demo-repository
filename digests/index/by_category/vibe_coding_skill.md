@@ -1,14 +1,23 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 17
+Total: 26
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-19 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo/tree/main/.claude/skills) | agentdb-advanced, agentdb-learning, agentdb-memory-patterns, +36 more |  | 8.5 | high | git clone https://github.com/ruvnet/ruflo.git && cp -r ruflo/.claude/skills/sparc-methodology <ваш-проект>/.claude/sk... |
+| 2026-05-19 | [oliver-kriska/claude-elixir-phoenix](https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills) | cc-changelog, docs-check, plugin-dev-workflow, +5 more |  | 6.7 | medium | git clone https://github.com/oliver-kriska/claude-elixir-phoenix.git && cp -r claude-elixir-phoenix/.claude/skills/se... |
+| 2026-05-19 | [medusajs/medusa](https://github.com/medusajs/medusa/tree/develop/.claude/skills) | reviewing-prs, triaging-issues, writing-docs, +3 more |  | 7.1 | high | git clone https://github.com/medusajs/medusa.git -b develop && cp -r medusa/.claude/skills/reviewing-prs <ваш-проект>... |
+| 2026-05-19 | [affaan-m/ECC](https://github.com/affaan-m/ECC/tree/main/.claude/skills/everything-claude-code) | everything-claude-code |  | 7.4 | high | git clone https://github.com/affaan-m/ECC.git && cp -r ECC/.claude/skills/everything-claude-code <ваш-проект>/.claude... |
+| 2026-05-18 | [yamadashy/repomix](https://github.com/yamadashy/repomix/tree/main/.claude/skills) | repomix | 25048 |  | manual | git clone https://github.com/yamadashy/repomix.git |
 | 2026-05-18 | [rtk-ai/rtk](https://github.com/rtk-ai/rtk/tree/develop/.claude/skills) | code-simplifier, design-patterns, issue-triage, +9 more |  | 8.5 | high | git clone https://github.com/rtk-ai/rtk -b develop && cp -r rtk/.claude/skills/pr-review /your-project/.claude/skills/ |
 | 2026-05-18 | [nativewind/nativewind](https://github.com/nativewind/nativewind/tree/main/.claude/skills) | add-test, architecture, debug-nw | 7833 |  | manual | git clone https://github.com/nativewind/nativewind.git |
+| 2026-05-18 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills) | andrej-karpathy-skills | 135765 |  | manual | git clone https://github.com/multica-ai/andrej-karpathy-skills.git |
 | 2026-05-18 | [mksglu/context-mode](https://github.com/mksglu/context-mode/tree/main/.claude/skills) | context-mode-ops | 14948 |  | manual | git clone https://github.com/mksglu/context-mode.git |
+| 2026-05-18 | [garrytan/gbrain](https://github.com/garrytan/gbrain/tree/master/.claude/skills) | gbrain | 17106 |  | manual | git clone https://github.com/garrytan/gbrain.git |
 | 2026-05-18 | [decebals/claude-code-java](https://github.com/decebals/claude-code-java/tree/main/.claude/skills) | api-contract-review, architecture-review, changelog-generator, +15 more |  | 8.0 | high | git clone https://github.com/decebals/claude-code-java && cp -r claude-code-java/.claude/skills/java-code-review /you... |
 | 2026-05-18 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/.claude/skills) | everything-claude-code |  | 8.5 | high | git clone https://github.com/affaan-m/everything-claude-code && cp -r everything-claude-code/.claude/skills/everythin... |
+| 2026-05-18 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills/tree/main/.claude/skills) | agent-skills | 43288 |  | manual | git clone https://github.com/addyosmani/agent-skills.git |
+| 2026-05-18 | [WorldFlowAI/everything-claude-code](https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills) | everything-claude-code | 34 |  | manual | git clone https://github.com/WorldFlowAI/everything-claude-code.git |
 | 2026-05-18 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills) | adopt, architecture-decision, architecture-review, +70 more |  | 7.5 | high | git clone https://github.com/Donchitos/Claude-Code-Game-Studios && cp -r Claude-Code-Game-Studios/.claude/skills/spri... |
 | 2026-05-17 | [DenisSergeevitch/agents-best-practices](https://github.com/DenisSergeevitch/agents-best-practices) | agents-best-practices | 577 |  | manual | git clone https://github.com/DenisSergeevitch/agents-best-practices.git |
 | 2026-05-16 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |  |  |  | manual | — |

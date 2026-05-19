@@ -277,6 +277,36 @@
       "title": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills/tree/main/.claude/skills"
     },
+    "https://github.com/affaan-m/ECC/tree/main/.claude/skills/everything-claude-code": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Everything Claude Code (ECC) — репозиторий с единым skill everything-claude-code, аккумулирующим best practices работы с Claude Code. Новый репо с аномально высоким числом звёзд (186k), появившийся сегодня.",
+      "final_score": 7.4,
+      "first_recommended": "2026-05-19",
+      "metric": "Claude демонстрирует расширенное понимание возможностей Claude Code и применяет best practices из SKILL.md",
+      "promoted_from_watch": false,
+      "repo_full_name": "affaan-m/ECC",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "everything-claude-code"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/affaan-m/ECC.git && cp -r ECC/.claude/skills/everything-claude-code <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code: claude",
+        "Промт: 'Покажи, что умеет skill everything-claude-code и дай пример его использования'"
+      ],
+      "title": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC/tree/main/.claude/skills/everything-claude-code"
+    },
     "https://github.com/affaan-m/everything-claude-code/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -966,6 +996,41 @@
       "title": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills"
     },
+    "https://github.com/medusajs/medusa/tree/develop/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Medusa — популярный open-source e-commerce framework (33k звёзд) с 6 Claude Skills для workflow разработки: review PR, триаж issues, написание документации, release notes, TSDoc и туториалов. Skills появились в снимке сегодня.",
+      "final_score": 7.1,
+      "first_recommended": "2026-05-19",
+      "metric": "Claude выдаёт структурированный code review с категориями замечаний, соответствующий стандартам Medusa",
+      "promoted_from_watch": false,
+      "repo_full_name": "medusajs/medusa",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "reviewing-prs",
+        "triaging-issues",
+        "writing-docs",
+        "writing-releases",
+        "writing-tsdocs",
+        "writing-tutorials"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/medusajs/medusa.git -b develop && cp -r medusa/.claude/skills/reviewing-prs <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в проекте с открытым PR: claude",
+        "Промт: 'Используй reviewing-prs skill для review этого PR: <ссылка на PR или diff>'"
+      ],
+      "title": "medusajs/medusa",
+      "url": "https://github.com/medusajs/medusa/tree/develop/.claude/skills"
+    },
     "https://github.com/mksglu/context-mode/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -1015,6 +1080,55 @@
       ],
       "title": "multica-ai/andrej-karpathy-skills",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Nanoclaw — платформа с 48 Claude Skills для добавления интеграций мессенджеров и инструментов в Claude Code: Telegram, WhatsApp, Slack, Discord, Linear, Google Calendar, iMessage и другие. Каждый add-* skill содержит инструкции по подключению конкретной интеграции.",
+      "final_score": 7.9,
+      "first_recommended": "2026-05-19",
+      "metric": "Claude выдаёт корректный пошаговый план интеграции Telegram с конкретными командами и переменными окружения",
+      "promoted_from_watch": false,
+      "repo_full_name": "nanocoai/nanoclaw",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "add-telegram",
+        "add-slack",
+        "add-discord",
+        "add-github",
+        "add-gmail-tool",
+        "add-gcal-tool",
+        "add-linear",
+        "add-whatsapp",
+        "add-whatsapp-cloud",
+        "add-signal",
+        "add-imessage",
+        "add-vercel",
+        "add-ollama-tool",
+        "claw",
+        "setup",
+        "debug",
+        "customize",
+        "update-skills",
+        "manage-channels",
+        "migrate-nanoclaw"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/nanocoai/nanoclaw.git && cp -r nanoclaw/.claude/skills/add-telegram <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code: claude",
+        "Попросить Claude: 'Используй skill add-telegram, чтобы подключить Telegram-бота к этому проекту'"
+      ],
+      "title": "nanocoai/nanoclaw",
+      "url": "https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills"
     },
     "https://github.com/nativewind/nativewind/tree/main/.claude/skills": {
       "added_manually": true,
@@ -1078,6 +1192,43 @@
       "test_steps": [],
       "title": "obra/superpowers",
       "url": "https://github.com/obra/superpowers"
+    },
+    "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Набор из 8 Claude Skills для Elixir/Phoenix разработки: анализ сессий (session-scan, session-deep-dive, session-trends), мониторинг skills, changelog и plugin workflow. Единственный Elixir-специфичный репо в сегодняшнем снимке.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-19",
+      "metric": "Claude корректно сканирует историю сессии и выявляет повторяющиеся паттерны работы",
+      "promoted_from_watch": false,
+      "repo_full_name": "oliver-kriska/claude-elixir-phoenix",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "cc-changelog",
+        "docs-check",
+        "plugin-dev-workflow",
+        "promote",
+        "session-deep-dive",
+        "session-scan",
+        "session-trends",
+        "skill-monitor"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/oliver-kriska/claude-elixir-phoenix.git && cp -r claude-elixir-phoenix/.claude/skills/session-scan <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в Elixir-проекте: claude",
+        "Промт: 'Используй session-scan skill для анализа текущей сессии и выяви паттерны в моих запросах'"
+      ],
+      "title": "oliver-kriska/claude-elixir-phoenix",
+      "url": "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills"
     },
     "https://github.com/pbakaus/impeccable/tree/main/.claude/skills": {
       "added_manually": true,
@@ -1145,6 +1296,104 @@
       "title": "rtk-ai/rtk",
       "url": "https://github.com/rtk-ai/rtk/tree/develop/.claude/skills"
     },
+    "https://github.com/ruvnet/ruflo/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий ruflo содержит 39 Claude Skills для продвинутой agent orchestration: управление памятью агентов через agentdb, swarm-координация, SPARC-методология, GitHub workflow automation и MCP-оптимизация. Ориентирован на разработчиков, строящих многоагентные системы на базе Claude Code.",
+      "final_score": 8.5,
+      "first_recommended": "2026-05-19",
+      "metric": "Claude корректно применяет SPARC-шаги (Specification, Pseudocode, Architecture, Refinement, Completion) при планировании задачи",
+      "promoted_from_watch": false,
+      "repo_full_name": "ruvnet/ruflo",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 39,
+      "skills_in_repo": [
+        "agentdb-advanced",
+        "agentdb-learning",
+        "agentdb-memory-patterns",
+        "agentdb-optimization",
+        "agentdb-vector-search",
+        "agentic-jujutsu",
+        "browser",
+        "dual-mode",
+        "flow-nexus-neural",
+        "flow-nexus-platform",
+        "flow-nexus-swarm",
+        "github-code-review",
+        "github-multi-repo",
+        "github-project-management",
+        "github-release-management",
+        "github-workflow-automation",
+        "hive-mind-advanced",
+        "hooks-automation",
+        "pair-programming",
+        "performance-analysis",
+        "reasoningbank-agentdb",
+        "reasoningbank-intelligence",
+        "skill-builder",
+        "sparc-methodology",
+        "stream-chain",
+        "swarm-advanced",
+        "swarm-orchestration",
+        "v3-cli-modernization",
+        "v3-core-implementation",
+        "v3-ddd-architecture",
+        "v3-integration-deep",
+        "v3-mcp-optimization",
+        "v3-memory-unification",
+        "v3-performance-optimization",
+        "v3-security-overhaul",
+        "v3-swarm-coordination",
+        "verification-quality",
+        "worker-benchmarks",
+        "worker-integration"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/ruvnet/ruflo.git && cp -r ruflo/.claude/skills/sparc-methodology <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в вашем проекте: claude",
+        "Протестировать skill: 'Используй sparc-methodology для планирования новой фичи X'"
+      ],
+      "title": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo/tree/main/.claude/skills"
+    },
+    "https://github.com/santifer/career-ops/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Репозиторий career-ops содержит один skill для управления карьерными операциями через Claude Code. С 45k звёзд и ростом +652 за сутки — один из самых быстрорастущих репо в сегодняшнем снимке.",
+      "final_score": 7.9,
+      "first_recommended": "2026-05-19",
+      "metric": "Claude выдаёт конкретный список изменений резюме с обоснованием под требования вакансии",
+      "promoted_from_watch": false,
+      "repo_full_name": "santifer/career-ops",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "career-ops"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/santifer/career-ops.git && cp -r career-ops/.claude/skills/career-ops <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code: claude",
+        "Промт: 'Используй career-ops skill для адаптации моего резюме под вакансию Senior Software Engineer в компании X'"
+      ],
+      "title": "santifer/career-ops",
+      "url": "https://github.com/santifer/career-ops/tree/main/.claude/skills"
+    },
     "https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "marketing_skill",
@@ -1169,6 +1418,61 @@
       ],
       "title": "sergebulaev/linkedin-skills",
       "url": "https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/staskh/trading_skills/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Набор из 26 Claude Skills для торговли акциями и опционами: интеграция с Interactive Brokers (IB), анализ греков, опционных цепочек, сканеры PMCC и бычьих паттернов, insider trading мониторинг. Ориентирован на трейдеров, использующих IB API.",
+      "final_score": 7.6,
+      "first_recommended": "2026-05-19",
+      "metric": "Claude корректно объясняет Delta, Gamma, Theta, Vega для заданного опциона с практическими выводами",
+      "promoted_from_watch": false,
+      "repo_full_name": "staskh/trading_skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 26,
+      "skills_in_repo": [
+        "earnings-calendar",
+        "fundamentals",
+        "greeks",
+        "ib-account",
+        "ib-collar",
+        "ib-create-consolidated-report",
+        "ib-find-short-roll",
+        "ib-option-chain",
+        "ib-pmcc-advisor",
+        "ib-portfolio-action-report",
+        "ib-portfolio",
+        "ib-report-delta-adjusted-notional-exposure",
+        "ib-stop-loss",
+        "ib-trades-history",
+        "insider-trading",
+        "news-sentiment",
+        "option-chain",
+        "price-history",
+        "report-stock",
+        "risk-assessment",
+        "scanner-bullish",
+        "scanner-pmcc",
+        "spread-analysis",
+        "stock-quote",
+        "technical-analysis",
+        "whale-hunting"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/staskh/trading_skills.git && cp -r trading_skills/.claude/skills/greeks <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code: claude",
+        "Тест: 'Используй greeks skill, чтобы объяснить текущие Greeks для колл-опциона AAPL со страйком 200 и экспирацией через 30 дней'"
+      ],
+      "title": "staskh/trading_skills",
+      "url": "https://github.com/staskh/trading_skills/tree/main/.claude/skills"
     },
     "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills": {
       "added_manually": true,

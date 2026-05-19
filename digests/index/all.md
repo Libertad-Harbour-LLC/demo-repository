@@ -1,18 +1,36 @@
 # Recommended Claude Skills — all time
 
-Total: 27
+Total: 45
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-19 | [staskh/trading_skills](https://github.com/staskh/trading_skills/tree/main/.claude/skills) | earnings-calendar, fundamentals, greeks, +23 more |  | 7.6 | medium | git clone https://github.com/staskh/trading_skills.git && cp -r trading_skills/.claude/skills/greeks <ваш-проект>/.cl... |
+| 2026-05-19 | [santifer/career-ops](https://github.com/santifer/career-ops/tree/main/.claude/skills) | career-ops |  | 7.9 | high | git clone https://github.com/santifer/career-ops.git && cp -r career-ops/.claude/skills/career-ops <ваш-проект>/.clau... |
+| 2026-05-19 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo/tree/main/.claude/skills) | agentdb-advanced, agentdb-learning, agentdb-memory-patterns, +36 more |  | 8.5 | high | git clone https://github.com/ruvnet/ruflo.git && cp -r ruflo/.claude/skills/sparc-methodology <ваш-проект>/.claude/sk... |
+| 2026-05-19 | [oliver-kriska/claude-elixir-phoenix](https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills) | cc-changelog, docs-check, plugin-dev-workflow, +5 more |  | 6.7 | medium | git clone https://github.com/oliver-kriska/claude-elixir-phoenix.git && cp -r claude-elixir-phoenix/.claude/skills/se... |
+| 2026-05-19 | [nanocoai/nanoclaw](https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills) | add-telegram, add-slack, add-discord, +17 more |  | 7.9 | high | git clone https://github.com/nanocoai/nanoclaw.git && cp -r nanoclaw/.claude/skills/add-telegram <ваш-проект>/.claude... |
+| 2026-05-19 | [medusajs/medusa](https://github.com/medusajs/medusa/tree/develop/.claude/skills) | reviewing-prs, triaging-issues, writing-docs, +3 more |  | 7.1 | high | git clone https://github.com/medusajs/medusa.git -b develop && cp -r medusa/.claude/skills/reviewing-prs <ваш-проект>... |
+| 2026-05-19 | [affaan-m/ECC](https://github.com/affaan-m/ECC/tree/main/.claude/skills/everything-claude-code) | everything-claude-code |  | 7.4 | high | git clone https://github.com/affaan-m/ECC.git && cp -r ECC/.claude/skills/everything-claude-code <ваш-проект>/.claude... |
+| 2026-05-18 | [yamadashy/repomix](https://github.com/yamadashy/repomix/tree/main/.claude/skills) | repomix | 25048 |  | manual | git clone https://github.com/yamadashy/repomix.git |
+| 2026-05-18 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem/tree/main/.claude/skills) | claude-mem | 76571 |  | manual | git clone https://github.com/thedotmack/claude-mem.git |
+| 2026-05-18 | [sergebulaev/linkedin-skills](https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills) | linkedin-skills | 89 |  | manual | git clone https://github.com/sergebulaev/linkedin-skills.git |
 | 2026-05-18 | [rtk-ai/rtk](https://github.com/rtk-ai/rtk/tree/develop/.claude/skills) | code-simplifier, design-patterns, issue-triage, +9 more |  | 8.5 | high | git clone https://github.com/rtk-ai/rtk -b develop && cp -r rtk/.claude/skills/pr-review /your-project/.claude/skills/ |
+| 2026-05-18 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable/tree/main/.claude/skills) | impeccable | 28606 |  | manual | git clone https://github.com/pbakaus/impeccable.git |
 | 2026-05-18 | [nativewind/nativewind](https://github.com/nativewind/nativewind/tree/main/.claude/skills) | add-test, architecture, debug-nw | 7833 |  | manual | git clone https://github.com/nativewind/nativewind.git |
+| 2026-05-18 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills) | andrej-karpathy-skills | 135765 |  | manual | git clone https://github.com/multica-ai/andrej-karpathy-skills.git |
 | 2026-05-18 | [mksglu/context-mode](https://github.com/mksglu/context-mode/tree/main/.claude/skills) | context-mode-ops | 14948 |  | manual | git clone https://github.com/mksglu/context-mode.git |
+| 2026-05-18 | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master/tree/main/.claude/skills) | ppt-master | 18093 |  | manual | git clone https://github.com/hugohe3/ppt-master.git |
+| 2026-05-18 | [garrytan/gbrain](https://github.com/garrytan/gbrain/tree/master/.claude/skills) | gbrain | 17106 |  | manual | git clone https://github.com/garrytan/gbrain.git |
 | 2026-05-18 | [decebals/claude-code-java](https://github.com/decebals/claude-code-java/tree/main/.claude/skills) | api-contract-review, architecture-review, changelog-generator, +15 more |  | 8.0 | high | git clone https://github.com/decebals/claude-code-java && cp -r claude-code-java/.claude/skills/java-code-review /you... |
+| 2026-05-18 | [beshuaxian/higgsfield-seedance2-jineng](https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills) | higgsfield-seedance2-jineng | 508 |  | manual | git clone https://github.com/beshuaxian/higgsfield-seedance2-jineng.git |
 | 2026-05-18 | [atopile/atopile](https://github.com/atopile/atopile/tree/main/.claude/skills) | agent-summary, agent, ato-language | 3357 |  | manual | git clone https://github.com/atopile/atopile.git |
+| 2026-05-18 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills/tree/main/.claude/skills) | claude-skills | 15358 |  | manual | git clone https://github.com/alirezarezvani/claude-skills.git |
 | 2026-05-18 | [ai-analyst-lab/ai-analyst](https://github.com/ai-analyst-lab/ai-analyst/tree/main/.claude/skills) | TEMPLATE, analysis-design-spec, archaeology, +37 more |  | 8.1 | high | git clone https://github.com/ai-analyst-lab/ai-analyst && cp -r ai-analyst/.claude/skills/data-profiling /your-projec... |
 | 2026-05-18 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/.claude/skills) | everything-claude-code |  | 8.5 | high | git clone https://github.com/affaan-m/everything-claude-code && cp -r everything-claude-code/.claude/skills/everythin... |
+| 2026-05-18 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills/tree/main/.claude/skills) | agent-skills | 43288 |  | manual | git clone https://github.com/addyosmani/agent-skills.git |
+| 2026-05-18 | [WorldFlowAI/everything-claude-code](https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills) | everything-claude-code | 34 |  | manual | git clone https://github.com/WorldFlowAI/everything-claude-code.git |
 | 2026-05-18 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills) | adopt, architecture-decision, architecture-review, +70 more |  | 7.5 | high | git clone https://github.com/Donchitos/Claude-Code-Game-Studios && cp -r Claude-Code-Game-Studios/.claude/skills/spri... |
 | 2026-05-17 | [DenisSergeevitch/agents-best-practices](https://github.com/DenisSergeevitch/agents-best-practices) | agents-best-practices | 577 |  | manual | git clone https://github.com/DenisSergeevitch/agents-best-practices.git |
 | 2026-05-16 | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) |  |  |  | manual | — |
