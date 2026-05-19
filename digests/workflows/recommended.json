@@ -176,6 +176,39 @@
       "title": "theaiautomators/insights-lm-public: InsightsLM (5 workflow)",
       "tool": "n8n",
       "url": "https://github.com/theaiautomators/insights-lm-public"
+    },
+    "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow от Webline India: по данным сделки из Zoho CRM генерирует персонализированные рекомендации по контенту с помощью GPT-4o-mini и отправляет их через Gmail. Подходит sales-командам, которые хотят автоматизировать follow-up и подготовку материалов для сделок.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-19",
+      "metric": "Количество автоматически отправленных персонализированных писем за сессию / время экономии на ручной подготовке",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: Personalized Deal Content via Zoho CRM + GPT-4o-mini + Gmail",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json по json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить credentials: Zoho CRM OAuth2, OpenAI API key, Gmail OAuth2",
+        "Запустить тестовый прогон с тестовой сделкой из Zoho CRM",
+        "Проверить входящее письмо в Gmail с рекомендациями"
+      ],
+      "title": "weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: Personalized Deal Content via Zoho CRM + GPT-4o-mini + Gmail",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
     }
   }
 }
