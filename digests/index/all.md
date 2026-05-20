@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 45
+Total: 51
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-20 | [zenyrae123/claude-data-analysis-ultra-main](https://github.com/zenyrae123/claude-data-analysis-ultra-main/tree/main/.claude/skills) | ab-testing-analyzer, attribution-analysis-modeling, content-analysis, +8 more |  | 7.2 | medium | git clone https://github.com/zenyrae123/claude-data-analysis-ultra-main.git |
+| 2026-05-20 | [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills) | agent-browser, presentation, time-skill, +2 more |  | 7.2 | high | git clone https://github.com/shanraisshan/claude-code-best-practice.git |
+| 2026-05-20 | [opendatadiscovery/odd-team](https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills) | code-walk, concepts, coverage, +17 more |  | 6.5 | medium | git clone https://github.com/opendatadiscovery/odd-team.git |
+| 2026-05-20 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills) | banner-design, brand, design-system, +4 more |  | 7.8 | high | git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git |
+| 2026-05-20 | [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi/tree/main/.claude/skills) | architecture, bump-version, fix-issues, +9 more |  | 7.6 | high | git clone https://github.com/iOfficeAI/AionUi.git |
+| 2026-05-20 | [affaan-m/ECC](https://github.com/affaan-m/ECC/tree/main/.claude/skills) | everything-claude-code |  | 8.1 | high | git clone https://github.com/affaan-m/ECC.git |
 | 2026-05-19 | [staskh/trading_skills](https://github.com/staskh/trading_skills/tree/main/.claude/skills) | earnings-calendar, fundamentals, greeks, +23 more |  | 7.6 | medium | git clone https://github.com/staskh/trading_skills.git && cp -r trading_skills/.claude/skills/greeks <ваш-проект>/.cl... |
 | 2026-05-19 | [santifer/career-ops](https://github.com/santifer/career-ops/tree/main/.claude/skills) | career-ops |  | 7.9 | high | git clone https://github.com/santifer/career-ops.git && cp -r career-ops/.claude/skills/career-ops <ваш-проект>/.clau... |
 | 2026-05-19 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo/tree/main/.claude/skills) | agentdb-advanced, agentdb-learning, agentdb-memory-patterns, +36 more |  | 8.5 | high | git clone https://github.com/ruvnet/ruflo.git && cp -r ruflo/.claude/skills/sparc-methodology <ваш-проект>/.claude/sk... |

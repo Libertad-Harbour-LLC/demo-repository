@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 26
+Total: 30
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-20 | [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills) | agent-browser, presentation, time-skill, +2 more |  | 7.2 | high | git clone https://github.com/shanraisshan/claude-code-best-practice.git |
+| 2026-05-20 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills) | banner-design, brand, design-system, +4 more |  | 7.8 | high | git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git |
+| 2026-05-20 | [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi/tree/main/.claude/skills) | architecture, bump-version, fix-issues, +9 more |  | 7.6 | high | git clone https://github.com/iOfficeAI/AionUi.git |
+| 2026-05-20 | [affaan-m/ECC](https://github.com/affaan-m/ECC/tree/main/.claude/skills) | everything-claude-code |  | 8.1 | high | git clone https://github.com/affaan-m/ECC.git |
 | 2026-05-19 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo/tree/main/.claude/skills) | agentdb-advanced, agentdb-learning, agentdb-memory-patterns, +36 more |  | 8.5 | high | git clone https://github.com/ruvnet/ruflo.git && cp -r ruflo/.claude/skills/sparc-methodology <ваш-проект>/.claude/sk... |
 | 2026-05-19 | [oliver-kriska/claude-elixir-phoenix](https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills) | cc-changelog, docs-check, plugin-dev-workflow, +5 more |  | 6.7 | medium | git clone https://github.com/oliver-kriska/claude-elixir-phoenix.git && cp -r claude-elixir-phoenix/.claude/skills/se... |
 | 2026-05-19 | [medusajs/medusa](https://github.com/medusajs/medusa/tree/develop/.claude/skills) | reviewing-prs, triaging-issues, writing-docs, +3 more |  | 7.1 | high | git clone https://github.com/medusajs/medusa.git -b develop && cp -r medusa/.claude/skills/reviewing-prs <ваш-проект>... |

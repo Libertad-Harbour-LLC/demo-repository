@@ -277,6 +277,36 @@
       "title": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills/tree/main/.claude/skills"
     },
+    "https://github.com/affaan-m/ECC/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий ECC (Everything Claude Code) содержит один комплексный skill с обширным набором инструкций для работы с Claude Code. Ориентирован на разработчиков, которые хотят получить максимум от Claude Code в своём проекте.",
+      "final_score": 8.1,
+      "first_recommended": "2026-05-20",
+      "metric": "Качество и полнота предложений по рефакторингу по сравнению с базовым Claude Code без skills",
+      "promoted_from_watch": false,
+      "repo_full_name": "affaan-m/ECC",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 10,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "everything-claude-code"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/affaan-m/ECC.git",
+        "Скопировать папку .claude/skills/everything-claude-code/ в корень своего проекта: cp -r ECC/.claude/skills/everything-claude-code/ ./.claude/skills/",
+        "Открыть Claude Code в своём проекте и дать промт: 'Проанализируй структуру этого проекта и предложи план рефакторинга с учётом best practices'"
+      ],
+      "title": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC/tree/main/.claude/skills"
+    },
     "https://github.com/affaan-m/ECC/tree/main/.claude/skills/everything-claude-code": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -907,6 +937,47 @@
       "title": "hugohe3/ppt-master",
       "url": "https://github.com/hugohe3/ppt-master/tree/main/.claude/skills"
     },
+    "https://github.com/iOfficeAI/AionUi/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий AionUi содержит 12 production-ориентированных skills для автоматизации CI/CD-задач: управление PR, версионирование, интеграция с Sentry, i18n и тестирование. Ориентирован на команды, активно использующие GitHub workflow.",
+      "final_score": 7.6,
+      "first_recommended": "2026-05-20",
+      "metric": "Качество автоматически сгенерированного описания PR и полнота code review комментариев",
+      "promoted_from_watch": false,
+      "repo_full_name": "iOfficeAI/AionUi",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "architecture",
+        "bump-version",
+        "fix-issues",
+        "fix-sentry",
+        "i18n",
+        "oss-pr",
+        "pr-automation",
+        "pr-fix",
+        "pr-review",
+        "pr-ship",
+        "pr-verify",
+        "testing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/iOfficeAI/AionUi.git",
+        "Скопировать pr-skills: cp -r AionUi/.claude/skills/pr-review/ ./.claude/skills/ && cp -r AionUi/.claude/skills/pr-automation/ ./.claude/skills/",
+        "В проекте с открытыми PR дать промт: 'Проведи code review для текущих изменений и создай pull request с описанием'"
+      ],
+      "title": "iOfficeAI/AionUi",
+      "url": "https://github.com/iOfficeAI/AionUi/tree/main/.claude/skills"
+    },
     "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -1175,6 +1246,42 @@
       "title": "nextlevelbuilder/ui-ux-pro-max-skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
     },
+    "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Коллекция из 7 UI/UX-ориентированных skills для Claude Code: от работы с design system до создания баннеров и слайдов. Репозиторий ориентирован на front-end разработчиков и дизайнеров, работающих с Claude Code.",
+      "final_score": 7.8,
+      "first_recommended": "2026-05-20",
+      "metric": "Соответствие сгенерированного компонента design system conventions и качество CSS/стилей",
+      "promoted_from_watch": false,
+      "repo_full_name": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "banner-design",
+        "brand",
+        "design-system",
+        "design",
+        "slides",
+        "ui-styling",
+        "ui-ux-pro-max"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+        "Скопировать нужные skills: cp -r ui-ux-pro-max-skill/.claude/skills/design-system/ ./.claude/skills/ && cp -r ui-ux-pro-max-skill/.claude/skills/ui-styling/ ./.claude/skills/",
+        "Открыть Claude Code в front-end проекте и дать промт: 'Создай компонент кнопки согласно design system с вариантами primary, secondary и disabled'"
+      ],
+      "title": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills"
+    },
     "https://github.com/obra/superpowers": {
       "added_manually": true,
       "category": "general_skill",
@@ -1229,6 +1336,55 @@
       ],
       "title": "oliver-kriska/claude-elixir-phoenix",
       "url": "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills"
+    },
+    "https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий команды OpenDataDiscovery с 20 skills для управления data-платформой: навигация по кодовой базе, code coverage, документирование ADR, triage задач и управление батч-процессами. Судя по названию организации, ориентирован на data engineering и data discovery.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-20",
+      "metric": "Полнота и точность обнаруженных архитектурных решений по сравнению с ручным анализом",
+      "promoted_from_watch": false,
+      "repo_full_name": "opendatadiscovery/odd-team",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "code-walk",
+        "concepts",
+        "coverage",
+        "doc-gap-check",
+        "enrich",
+        "enumerate",
+        "find-implicit-adrs",
+        "implement",
+        "log-issue",
+        "navigate",
+        "next-batch",
+        "orient",
+        "probe-define",
+        "probe-run",
+        "probe",
+        "review",
+        "scan",
+        "status",
+        "test-coverage",
+        "triage"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/opendatadiscovery/odd-team.git",
+        "Скопировать skills: cp -r odd-team/.claude/skills/find-implicit-adrs/ ./.claude/skills/ && cp -r odd-team/.claude/skills/doc-gap-check/ ./.claude/skills/",
+        "В data-проекте с кодовой базой дать промт: 'Найди неявные архитектурные решения (implicit ADRs) в этом проекте и задокументируй их'"
+      ],
+      "title": "opendatadiscovery/odd-team",
+      "url": "https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills"
     },
     "https://github.com/pbakaus/impeccable/tree/main/.claude/skills": {
       "added_manually": true,
@@ -1419,6 +1575,40 @@
       "title": "sergebulaev/linkedin-skills",
       "url": "https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills"
     },
+    "https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий с 5 разнообразными skills: браузерный агент, создание презентаций, time-management skill и два weather-ориентированных skill. Позиционируется как коллекция best practices для Claude Code.",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-20",
+      "metric": "Структурированность и полнота сгенерированной презентации, соответствие формату",
+      "promoted_from_watch": false,
+      "repo_full_name": "shanraisshan/claude-code-best-practice",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "agent-browser",
+        "presentation",
+        "time-skill",
+        "weather-fetcher",
+        "weather-svg-creator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/shanraisshan/claude-code-best-practice.git",
+        "Скопировать skill: cp -r claude-code-best-practice/.claude/skills/presentation/ ./.claude/skills/",
+        "Дать промт: 'Создай презентацию из 5 слайдов по теме архитектуры микросервисов с ключевыми паттернами'"
+      ],
+      "title": "shanraisshan/claude-code-best-practice",
+      "url": "https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills"
+    },
     "https://github.com/staskh/trading_skills/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -1541,6 +1731,46 @@
       "test_steps": [],
       "title": "zarazhangrui/frontend-slides",
       "url": "https://github.com/zarazhangrui/frontend-slides"
+    },
+    "https://github.com/zenyrae123/claude-data-analysis-ultra-main/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Новый репозиторий с 11 data-аналитическими skills для Claude Code: A/B-тесты, воронки, LTV, RFM-сегментация, retention и рекомендательные системы. Ориентирован на продуктовых аналитиков и data scientists.",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-20",
+      "metric": "Глубина и корректность аналитики по сравнению с базовым Claude Code без skills",
+      "promoted_from_watch": false,
+      "repo_full_name": "zenyrae123/claude-data-analysis-ultra-main",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 4,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 11,
+      "skills_in_repo": [
+        "ab-testing-analyzer",
+        "attribution-analysis-modeling",
+        "content-analysis",
+        "data-exploration-visualization",
+        "funnel-analysis",
+        "growth-model-analyzer",
+        "ltv-predictor",
+        "recommender-system",
+        "regression-analysis-modeling",
+        "retention-analysis",
+        "rfm-customer-segmentation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/zenyrae123/claude-data-analysis-ultra-main.git",
+        "Скопировать skills: cp -r claude-data-analysis-ultra-main/.claude/skills/ab-testing-analyzer/ ./.claude/skills/ && cp -r claude-data-analysis-ultra-main/.claude/skills/rfm-customer-segmentation/ ./.claude/skills/",
+        "Дать Claude Code CSV с данными о транзакциях клиентов и промт: 'Выполни RFM-сегментацию клиентов на основе этих данных и предложи стратегии для каждого сегмента'"
+      ],
+      "title": "zenyrae123/claude-data-analysis-ultra-main",
+      "url": "https://github.com/zenyrae123/claude-data-analysis-ultra-main/tree/main/.claude/skills"
     }
   }
 }
