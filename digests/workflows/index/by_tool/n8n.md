@@ -1,9 +1,10 @@
 # Recommended — tool: n8n
 
-Total: 6
+Total: 7
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-20 | [Danitilahun/n8n-workflow-templates: 5 шаблонов (Telegram, TOTP, Bitwarden, GoogleSheets+Typeform, Twitter)](https://github.com/Danitilahun/n8n-workflow-templates) | 0001_Telegram_Schedule_Automation_Scheduled, 0002_Manual_Totp_Automation_Triggered, 0003_Bitwarden_Automate, +2 more |  | 7.5 | high | Скачать нужный JSON из папки workflows/ (например, 0001_Telegram_Schedule_Automation_Scheduled.json) |
 | 2026-05-19 | [weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: Personalized Deal Content via Zoho CRM + GPT-4o-mini + Gmail](https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail) | main |  | 6.8 | medium | Скачать main.json по json_url |
 | 2026-05-18 | [theaiautomators/insights-lm-public: InsightsLM (5 workflow)](https://github.com/theaiautomators/insights-lm-public) | Import_Insights_LM_Workflows, InsightsLM___Chat, InsightsLM___Extract_Text, +2 more |  | 7.2 | high | Начать с Import_Insights_LM_Workflows.json — он импортирует остальные workflow автоматически |
 | 2026-05-18 | [lucaswalter/n8n-ai-automations: ai_gmail_agent + 4 других AI-workflow](https://github.com/lucaswalter/n8n-ai-automations) | ai_gmail_agent, ai_news_data_ingestion, ai_newsletter_generator, +2 more |  | 8.1 | high | Скачать нужный JSON, например ai_gmail_agent.json по прямой ссылке |
