@@ -37,6 +37,184 @@
       "tool": "n8n",
       "url": "https://github.com/Danitilahun/n8n-workflow-templates"
     },
+    "https://github.com/DragonJAR/n8n-workflows-esp": {
+      "category": "content_workflow",
+      "confidence": "high",
+      "description": "Репозиторий DragonJAR содержит 5 готовых n8n-workflow на испанском языке: Telegram-тьютор китайского языка, генератор аудио-саммари WordPress-постов, трекер крипторынка через CoinGecko/Discord, конвертер скриптов в Instagram Reels и автодобавление событий в Google Calendar.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-21",
+      "metric": "Качество и скорость генерации урока в ответ на сообщение пользователя",
+      "promoted_from_watch": false,
+      "repo_full_name": "DragonJAR/n8n-workflows-esp: Telegram Chinese Tutor + 4 more",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "00486-telegram-chinese-tutor",
+        "00851-3028-from-community-Generate-upload-an-audio-summary-of-a-WordPress-or",
+        "04154-Track-crypto-market-gainers-losers-with-CoinGecko-and-Discord-bot",
+        "04157-Transforming-scripts-into-engaging-Instagram-Reels-with-Blotato-featuring",
+        "04805-Add-a-event-to-Google-Calendar-automatically"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужный workflow (например, 00486-telegram-chinese-tutor.json)",
+        "Скачать JSON и импортировать в n8n",
+        "Подключить Telegram Bot Token в credentials",
+        "Настроить AI-провайдера (OpenAI или аналог) для генерации уроков",
+        "Отправить тестовое сообщение боту и проверить ответ"
+      ],
+      "title": "DragonJAR/n8n-workflows-esp: Telegram Chinese Tutor + 4 more",
+      "tool": "n8n",
+      "url": "https://github.com/DragonJAR/n8n-workflows-esp"
+    },
+    "https://github.com/Endgame-Labs/mechanizer": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "Коллекция из 5 Make-сценариев для автоматизации B2B продаж: AI SDR для исходящих контактов, аудит здоровья аккаунта, генерация планов аккаунта, интервенция при риске оттока и гигиена сделок в CRM. Подходит для revenue operations и sales-команд.",
+      "final_score": 7.3,
+      "first_recommended": "2026-05-21",
+      "metric": "Количество обработанных аккаунтов за прогон, процент отправленных аутрич-сообщений без ошибок",
+      "promoted_from_watch": false,
+      "repo_full_name": "Endgame-Labs/mechanizer: AI SDR + Sales Scenarios",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "account-health-audit-machine",
+        "account-plan-generation-machine",
+        "ai-sdr-outbound-machine",
+        "consumption-renewal-intervention-machine",
+        "deal-hygiene-machine"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON ai-sdr-outbound-machine/make/scenario.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Подключить CRM-интеграцию (HubSpot/Salesforce) и email-провайдера",
+        "Настроить входные данные: список аккаунтов или ICP-критерии",
+        "Запустить тестовый прогон на 3–5 аккаунтах"
+      ],
+      "title": "Endgame-Labs/mechanizer: AI SDR + Sales Scenarios",
+      "tool": "make",
+      "url": "https://github.com/Endgame-Labs/mechanizer"
+    },
+    "https://github.com/ceyre-boop/email-automation": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "Набор из 5 Make-сценариев для полного цикла обработки входящей почты: триаж, автоответы, дайджест, алерты об ошибках и еженедельный отчёт. Подходит для команд поддержки и операционных менеджеров.",
+      "final_score": 7.0,
+      "first_recommended": "2026-05-21",
+      "metric": "Процент писем корректно классифицированных на этапе триажа; время до автоответа",
+      "promoted_from_watch": false,
+      "repo_full_name": "ceyre-boop/email-automation: 5-Phase Email Triage Pipeline",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "phase1_triage_scenario",
+        "phase2_reply_scenario",
+        "phase3_digest_scenario",
+        "phase4_error_alert_scenario",
+        "phase5_weekly_digest_scenario"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать phase1_triage_scenario.json",
+        "Импортировать в Make через Import Blueprint",
+        "Подключить email-аккаунт (Gmail/Outlook) через Make credentials",
+        "Настроить правила триажа (ключевые слова, отправители)",
+        "Запустить на тестовом почтовом ящике с 10+ письмами"
+      ],
+      "title": "ceyre-boop/email-automation: 5-Phase Email Triage Pipeline",
+      "tool": "make",
+      "url": "https://github.com/ceyre-boop/email-automation"
+    },
+    "https://github.com/djeknet/n8n-master-workflows": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "Готовый n8n-workflow для создания AI-агента на базе Google Gemini с персистентной памятью между сессиями. Рассчитан на разработчиков и операционные команды, которые хотят быстро запустить conversational AI-агента.",
+      "final_score": 7.7,
+      "first_recommended": "2026-05-21",
+      "metric": "Корректность воспроизведения контекста из предыдущих сообщений в новой сессии",
+      "promoted_from_watch": false,
+      "repo_full_name": "djeknet/n8n-master-workflows: Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке выше",
+        "Импортировать в n8n через Workflows → Import from file",
+        "Подключить Google Gemini credentials (OAuth2 или API key)",
+        "Настроить узел памяти (выбрать тип: Simple Memory или внешнее хранилище)",
+        "Отправить тестовое сообщение и убедиться, что агент помнит предыдущий контекст"
+      ],
+      "title": "djeknet/n8n-master-workflows: Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory",
+      "tool": "n8n",
+      "url": "https://github.com/djeknet/n8n-master-workflows"
+    },
+    "https://github.com/eliassaoe/n8nworkflows": {
+      "category": "sales_workflow",
+      "confidence": "high",
+      "description": "Репозиторий содержит два готовых n8n-workflow для скрейпинга LinkedIn через LinkFinderAI: первый собирает профили/лиды, второй — дополнительный вариант обработки. Подойдёт командам продаж и лидген-специалистам.",
+      "final_score": 8.1,
+      "first_recommended": "2026-05-21",
+      "metric": "Количество успешно собранных профилей за прогон, процент заполненных полей (email, должность, компания)",
+      "promoted_from_watch": false,
+      "repo_full_name": "eliassaoe/n8nworkflows: linkedin-scraper-linkfinderai",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "linkedin-scraper-linkfinderai",
+        "linkedin-workflow3716"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/eliassaoe/n8nworkflows/main/linkedin-scraper-linkfinderai.json",
+        "Импортировать в n8n через меню Workflows → Import from file",
+        "Настроить credentials: LinkFinderAI API key",
+        "Указать список LinkedIn URL или поисковый запрос в стартовом узле",
+        "Запустить тестовый прогон на 5–10 профилях и проверить выходные данные"
+      ],
+      "title": "eliassaoe/n8nworkflows: linkedin-scraper-linkfinderai",
+      "tool": "n8n",
+      "url": "https://github.com/eliassaoe/n8nworkflows"
+    },
     "https://github.com/enescingoz/awesome-n8n-templates": {
       "category": "marketing_workflow",
       "confidence": "high",
