@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 51
+Total: 57
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-21 | [webiny/webiny-js](https://github.com/webiny/webiny-js/tree/next/.claude/skills) | backend-developer, grill-me, prd-to-plan, +4 more |  | 7.1 | high | git clone https://github.com/webiny/webiny-js -b next && cp -r webiny-js/.claude/skills/prd-to-plan /your-project/.cl... |
+| 2026-05-21 | [slopus/happy](https://github.com/slopus/happy/tree/main/.claude/skills) | agent-browser, terminal-emulator |  | 7.9 | high | git clone https://github.com/slopus/happy && cp -r happy/.claude/skills/agent-browser /your-project/.claude/skills/ |
+| 2026-05-21 | [microsoft/debugpy](https://github.com/microsoft/debugpy/tree/main/.claude/skills) | click, django, flask, +4 more |  | 6.8 | high | git clone https://github.com/microsoft/debugpy && cp -r debugpy/.claude/skills/pytest /your-python-project/.claude/sk... |
+| 2026-05-21 | [fzyzcjy/flutter_rust_bridge](https://github.com/fzyzcjy/flutter_rust_bridge/tree/master/.claude/skills) | frb-add-contributor, frb-cargokit-dev, frb-cargokit, +11 more |  | 7.4 | high | git clone https://github.com/fzyzcjy/flutter_rust_bridge && cp -r flutter_rust_bridge/.claude/skills/frb-fix-ci /your... |
+| 2026-05-21 | [ben-manes/caffeine](https://github.com/ben-manes/caffeine/tree/master/.claude/skills) | audit-adversarial-input, audit-adversarial, audit-arithmetic, +22 more |  | 8.1 | high | git clone https://github.com/ben-manes/caffeine && cp -r caffeine/.claude/skills/audit-jmm /your-java-project/.claude... |
+| 2026-05-21 | [JCodesMore/ai-website-cloner-template](https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills) | clone-website |  | 7.9 | high | git clone https://github.com/JCodesMore/ai-website-cloner-template && cp -r ai-website-cloner-template/.claude/skills... |
 | 2026-05-20 | [zenyrae123/claude-data-analysis-ultra-main](https://github.com/zenyrae123/claude-data-analysis-ultra-main/tree/main/.claude/skills) | ab-testing-analyzer, attribution-analysis-modeling, content-analysis, +8 more |  | 7.2 | medium | git clone https://github.com/zenyrae123/claude-data-analysis-ultra-main.git |
 | 2026-05-20 | [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills) | agent-browser, presentation, time-skill, +2 more |  | 7.2 | high | git clone https://github.com/shanraisshan/claude-code-best-practice.git |
 | 2026-05-20 | [opendatadiscovery/odd-team](https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills) | code-walk, concepts, coverage, +17 more |  | 6.5 | medium | git clone https://github.com/opendatadiscovery/odd-team.git |

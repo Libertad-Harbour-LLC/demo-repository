@@ -191,6 +191,36 @@
       "title": "Donchitos/Claude-Code-Game-Studios",
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills"
     },
+    "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Шаблон-репозиторий для клонирования дизайна веб-сайтов с помощью Claude Code. Содержит skill clone-website, который инструктирует Claude анализировать визуальный дизайн существующего сайта и воспроизводить его структуру и стилистику.",
+      "final_score": 7.9,
+      "first_recommended": "2026-05-21",
+      "metric": "Степень визуального сходства результата с оригиналом и время до рабочего чернового макета",
+      "promoted_from_watch": false,
+      "repo_full_name": "JCodesMore/ai-website-cloner-template",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "clone-website"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/JCodesMore/ai-website-cloner-template && cp -r ai-website-cloner-template/.claude/skills/clone-website /your-project/.claude/skills/",
+        "Запустить Claude Code в пустом frontend-проекте",
+        "Ввести промпт: 'Используй skill clone-website — склонируй дизайн сайта https://example.com в HTML/CSS/JS'"
+      ],
+      "title": "JCodesMore/ai-website-cloner-template",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills"
+    },
     "https://github.com/JetBrains/ideavim/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -564,6 +594,60 @@
       "title": "atopile/atopile",
       "url": "https://github.com/atopile/atopile/tree/main/.claude/skills"
     },
+    "https://github.com/ben-manes/caffeine/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий популярной Java-библиотеки кэширования Caffeine (17k звёзд), содержит 25 специализированных SKILL.md для глубокого аудита Java-кода — от проверки безопасности потоков (JMM, linearizability, liveness) до анализа производительности и покрытия тестами. Ориентирован на разработчиков, работающих с высоконагруженными Java/JVM-системами.",
+      "final_score": 8.1,
+      "first_recommended": "2026-05-21",
+      "metric": "Количество реально найденных потенциальных JMM/threading дефектов по сравнению с ручным review",
+      "promoted_from_watch": false,
+      "repo_full_name": "ben-manes/caffeine",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 25,
+      "skills_in_repo": [
+        "audit-adversarial-input",
+        "audit-adversarial",
+        "audit-arithmetic",
+        "audit-build-ci",
+        "audit-contract-drift",
+        "audit-correctness-proof",
+        "audit-coverage-gaps",
+        "audit-exception-safety",
+        "audit-feature-interaction",
+        "audit-iteration",
+        "audit-jmm",
+        "audit-lifecycle",
+        "audit-linearizability",
+        "audit-liveness",
+        "audit-map-contract",
+        "audit-memory-retention",
+        "audit-performance",
+        "audit-reentrancy",
+        "audit-serialization",
+        "audit-sibling-divergence",
+        "audit-subsystem-safety",
+        "audit-temporal-walk",
+        "review-change",
+        "sim-analyze",
+        "sim-compare"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/ben-manes/caffeine && cp -r caffeine/.claude/skills/audit-jmm /your-java-project/.claude/skills/",
+        "Запустить Claude Code в вашем Java-проекте",
+        "Ввести промпт: 'Используй skill audit-jmm — проверь файл [ConcurrentCache.java] на нарушения Java Memory Model и happens-before отношений'"
+      ],
+      "title": "ben-manes/caffeine",
+      "url": "https://github.com/ben-manes/caffeine/tree/master/.claude/skills"
+    },
     "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "ai_content_skill",
@@ -849,6 +933,49 @@
       "title": "flowglad/flowglad",
       "url": "https://github.com/flowglad/flowglad/tree/main/.claude/skills"
     },
+    "https://github.com/fzyzcjy/flutter_rust_bridge/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий flutter_rust_bridge (5.2k звёзд) — библиотека для связи Flutter и Rust. Содержит 14 специализированных skills для полного CI/CD-цикла разработки: от code generation и debugging до подготовки PR и написания changelog. Ориентирован на maintainer-команды Flutter/Rust проектов.",
+      "final_score": 7.4,
+      "first_recommended": "2026-05-21",
+      "metric": "Время диагностики и исправления CI-ошибки с skill vs без него",
+      "promoted_from_watch": false,
+      "repo_full_name": "fzyzcjy/flutter_rust_bridge",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 14,
+      "skills_in_repo": [
+        "frb-add-contributor",
+        "frb-cargokit-dev",
+        "frb-cargokit",
+        "frb-code-generation",
+        "frb-debugging",
+        "frb-develop-feature",
+        "frb-docker",
+        "frb-fix-ci",
+        "frb-fix-merge-conflict",
+        "frb-issue-to-green-pr",
+        "frb-lint",
+        "frb-prepare-pr",
+        "frb-test",
+        "frb-write-changelog"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/fzyzcjy/flutter_rust_bridge && cp -r flutter_rust_bridge/.claude/skills/frb-fix-ci /your-flutter-rust-project/.claude/skills/",
+        "Запустить Claude Code в Flutter+Rust проекте с упавшим CI",
+        "Ввести промпт: 'Используй skill frb-fix-ci — проанализируй упавший CI-лог и предложи исправления'"
+      ],
+      "title": "fzyzcjy/flutter_rust_bridge",
+      "url": "https://github.com/fzyzcjy/flutter_rust_bridge/tree/master/.claude/skills"
+    },
     "https://github.com/garrytan/gbrain/tree/master/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -1101,6 +1228,42 @@
       ],
       "title": "medusajs/medusa",
       "url": "https://github.com/medusajs/medusa/tree/develop/.claude/skills"
+    },
+    "https://github.com/microsoft/debugpy/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Microsoft debugpy (2.4k звёзд) — Python debugger. Содержит 7 skills, каждый из которых представляет собой контекстный помощник по популярной Python-библиотеке: django, flask, pytest, numpy, requests, click, jinja2. Предназначен для Python-разработчиков, которым нужна быстрая помощь в работе с этими фреймворками.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-21",
+      "metric": "Качество сгенерированных тестов и соответствие pytest best practices vs генерация без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "microsoft/debugpy",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "click",
+        "django",
+        "flask",
+        "jinja2",
+        "numpy",
+        "pytest",
+        "requests"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/microsoft/debugpy && cp -r debugpy/.claude/skills/pytest /your-python-project/.claude/skills/",
+        "Запустить Claude Code в Python-проекте с тестами",
+        "Ввести промпт: 'Используй skill pytest — напиши тесты для функции [название] с покрытием edge cases, используя pytest fixtures и parametrize'"
+      ],
+      "title": "microsoft/debugpy",
+      "url": "https://github.com/microsoft/debugpy/tree/main/.claude/skills"
     },
     "https://github.com/mksglu/context-mode/tree/main/.claude/skills": {
       "added_manually": true,
@@ -1609,6 +1772,37 @@
       "title": "shanraisshan/claude-code-best-practice",
       "url": "https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills"
     },
+    "https://github.com/slopus/happy/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий slopus/happy (21k звёзд) содержит два skills для Claude Code: agent-browser для управления браузером в агентном режиме и terminal-emulator для работы с терминалом. Проект ориентирован на автоматизацию browser-based и командных задач через AI-агент.",
+      "final_score": 7.9,
+      "first_recommended": "2026-05-21",
+      "metric": "Успешность выполнения browser-задачи без ручного вмешательства и точность извлечённых данных",
+      "promoted_from_watch": false,
+      "repo_full_name": "slopus/happy",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "agent-browser",
+        "terminal-emulator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/slopus/happy && cp -r happy/.claude/skills/agent-browser /your-project/.claude/skills/",
+        "Запустить Claude Code в проекте, где нужна браузерная автоматизация",
+        "Ввести промпт: 'Используй skill agent-browser — открой https://news.ycombinator.com и собери заголовки топ-10 постов'"
+      ],
+      "title": "slopus/happy",
+      "url": "https://github.com/slopus/happy/tree/main/.claude/skills"
+    },
     "https://github.com/staskh/trading_skills/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -1688,6 +1882,42 @@
       ],
       "title": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills"
+    },
+    "https://github.com/webiny/webiny-js/tree/next/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Webiny (7.9k звёзд) — open-source headless CMS на Node.js/React. Содержит 7 skills для полного product-development цикла: от написания PRD (write-a-prd) и планирования (prd-to-plan) до backend-разработки, тестирования и метаskill для создания новых skills (webiny-skill-creator).",
+      "final_score": 7.1,
+      "first_recommended": "2026-05-21",
+      "metric": "Качество и детализация сгенерированного плана, применимость задач к реальному проекту",
+      "promoted_from_watch": false,
+      "repo_full_name": "webiny/webiny-js",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "backend-developer",
+        "grill-me",
+        "prd-to-plan",
+        "preflight",
+        "tester",
+        "webiny-skill-creator",
+        "write-a-prd"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/webiny/webiny-js -b next && cp -r webiny-js/.claude/skills/prd-to-plan /your-project/.claude/skills/",
+        "Запустить Claude Code в вашем проекте с готовым PRD-документом",
+        "Ввести промпт: 'Используй skill prd-to-plan — преобразуй этот PRD [вставить текст] в детальный план разработки с задачами и приоритетами'"
+      ],
+      "title": "webiny/webiny-js",
+      "url": "https://github.com/webiny/webiny-js/tree/next/.claude/skills"
     },
     "https://github.com/yamadashy/repomix/tree/main/.claude/skills": {
       "added_manually": true,
