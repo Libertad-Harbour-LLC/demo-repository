@@ -111,6 +111,39 @@
       "tool": "make",
       "url": "https://github.com/Endgame-Labs/mechanizer"
     },
+    "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "Workflow для n8n, автоматизирующий распознавание и парсинг счетов-фактур и документов с помощью Gemini AI OCR с последующей записью структурированных данных в Google Sheets. Полезен бухгалтерам, финансовым командам и операционным менеджерам, обрабатывающим большой поток документов.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-22",
+      "metric": "Точность извлечения полей (% корректно распознанных полей из 10 тестовых счетов)",
+      "promoted_from_watch": false,
+      "repo_full_name": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json с https://raw.githubusercontent.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration/main/main.json",
+        "Импортировать в n8n через Import workflow",
+        "Настроить Gemini AI API credential (Google AI Studio key)",
+        "Настроить Google Sheets credential (OAuth2) и указать целевую таблицу",
+        "Подать тестовый PDF-счёт и проверить результат в Google Sheets"
+      ],
+      "title": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main",
+      "tool": "n8n",
+      "url": "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration"
+    },
     "https://github.com/ceyre-boop/email-automation": {
       "category": "general_workflow",
       "confidence": "medium",
@@ -322,6 +355,39 @@
       "tool": "n8n",
       "url": "https://github.com/lucaswalter/n8n-ai-automations"
     },
+    "https://github.com/lynote-ai/humanize-text": {
+      "category": "content_workflow",
+      "confidence": "high",
+      "description": "Workflow для n8n, преобразующий AI-сгенерированный текст в более естественный, человекоподобный стиль. Подходит командам, публикующим контент с помощью LLM и желающим снизить детектируемость AI-текста.",
+      "final_score": 7.6,
+      "first_recommended": "2026-05-22",
+      "metric": "AI-detection score до и после обработки (например, % вероятности AI по GPTZero)",
+      "promoted_from_watch": false,
+      "repo_full_name": "lynote-ai/humanize-text: humanize_standard",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "humanize_standard"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть https://raw.githubusercontent.com/lynote-ai/humanize-text/main/n8n/humanize_standard.json и скачать JSON",
+        "Импортировать JSON через n8n: Settings → Import workflow",
+        "Настроить credentials для используемого LLM-провайдера (OpenAI или аналог)",
+        "Подать тестовый AI-текст на вход workflow и запустить",
+        "Сравнить входной и выходной текст, проверить через AI-детектор (Originality.ai или GPTZero)"
+      ],
+      "title": "lynote-ai/humanize-text: humanize_standard",
+      "tool": "n8n",
+      "url": "https://github.com/lynote-ai/humanize-text"
+    },
     "https://github.com/oxbshw/ultimate-n8n-ai-workflows": {
       "category": "content_workflow",
       "confidence": "high",
@@ -354,6 +420,43 @@
       "title": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
       "tool": "n8n",
       "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
+    },
+    "https://github.com/sinabarimd/reputation-engine": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Набор из 5 взаимосвязанных n8n-workflow для автоматизированного управления репутацией: исследование тем, генерация контента, публикация, поглощение медиа и измерение результатов. Ориентирован на бренды и маркетологов, строящих автономный контент-пайплайн.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-22",
+      "metric": "Количество автоматически опубликованных материалов в неделю и охват (impressions) по measurement-agent",
+      "promoted_from_watch": false,
+      "repo_full_name": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "content-generator",
+        "content-publisher",
+        "content-research-agent",
+        "measurement-agent",
+        "media-ingestion-agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 5 JSON из папки workflows репозитория",
+        "Импортировать workflow по порядку: сначала media-ingestion-agent, затем content-research-agent, content-generator, content-publisher, measurement-agent",
+        "Настроить credentials: API LLM, target publishing platform (LinkedIn/Twitter/etc), analytics endpoint",
+        "Запустить media-ingestion-agent с тестовой темой для проверки цепочки",
+        "Проверить выходные данные каждого агента последовательно"
+      ],
+      "title": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
+      "tool": "n8n",
+      "url": "https://github.com/sinabarimd/reputation-engine"
     },
     "https://github.com/theaiautomators/insights-lm-public": {
       "category": "content_workflow",

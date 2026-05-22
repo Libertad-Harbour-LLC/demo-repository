@@ -1,9 +1,12 @@
 # Recommended — tool: n8n
 
-Total: 10
+Total: 13
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-22 | [sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent](https://github.com/sinabarimd/reputation-engine) | content-generator, content-publisher, content-research-agent, +2 more |  | 6.8 | medium | Скачать все 5 JSON из папки workflows репозитория |
+| 2026-05-22 | [lynote-ai/humanize-text: humanize_standard](https://github.com/lynote-ai/humanize-text) | humanize_standard |  | 7.6 | high | Открыть https://raw.githubusercontent.com/lynote-ai/humanize-text/main/n8n/humanize_standard.json и скачать JSON |
+| 2026-05-22 | [abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main](https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration) | main |  | 6.8 | medium | Скачать main.json с https://raw.githubusercontent.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-a... |
 | 2026-05-21 | [eliassaoe/n8nworkflows: linkedin-scraper-linkfinderai](https://github.com/eliassaoe/n8nworkflows) | linkedin-scraper-linkfinderai, linkedin-workflow3716 |  | 8.1 | high | Скачать JSON: https://raw.githubusercontent.com/eliassaoe/n8nworkflows/main/linkedin-scraper-linkfinderai.json |
 | 2026-05-21 | [djeknet/n8n-master-workflows: Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory](https://github.com/djeknet/n8n-master-workflows) | Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory |  | 7.7 | high | Скачать JSON по ссылке выше |
 | 2026-05-21 | [DragonJAR/n8n-workflows-esp: Telegram Chinese Tutor + 4 more](https://github.com/DragonJAR/n8n-workflows-esp) | 00486-telegram-chinese-tutor, 00851-3028-from-community-Generate-upload-an-audio-summary-of-a-WordPress-or, 04154-Track-crypto-market-gainers-losers-with-CoinGecko-and-Discord-bot, +2 more |  | 6.7 | high | Выбрать нужный workflow (например, 00486-telegram-chinese-tutor.json) |
