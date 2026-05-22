@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 14
+Total: 15
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-22 | [composio-community/open-claude-cowork](https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills) | brand-guidelines, remotion-best-practices |  | 6.7 | high | git clone https://github.com/composio-community/open-claude-cowork.git && cp -r open-claude-cowork/.claude/skills/rem... |
 | 2026-05-20 | [zenyrae123/claude-data-analysis-ultra-main](https://github.com/zenyrae123/claude-data-analysis-ultra-main/tree/main/.claude/skills) | ab-testing-analyzer, attribution-analysis-modeling, content-analysis, +8 more |  | 7.2 | medium | git clone https://github.com/zenyrae123/claude-data-analysis-ultra-main.git |
 | 2026-05-20 | [opendatadiscovery/odd-team](https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills) | code-walk, concepts, coverage, +17 more |  | 6.5 | medium | git clone https://github.com/opendatadiscovery/odd-team.git |
 | 2026-05-19 | [staskh/trading_skills](https://github.com/staskh/trading_skills/tree/main/.claude/skills) | earnings-calendar, fundamentals, greeks, +23 more |  | 7.6 | medium | git clone https://github.com/staskh/trading_skills.git && cp -r trading_skills/.claude/skills/greeks <ваш-проект>/.cl... |

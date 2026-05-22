@@ -1,11 +1,15 @@
 # Recommended Claude Skills — all time
 
-Total: 57
+Total: 61
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-22 | [luongnv89/claude-howto](https://github.com/luongnv89/claude-howto/tree/main/.claude/skills) | lesson-quiz, self-assessment |  | 8.1 | high | git clone https://github.com/luongnv89/claude-howto.git && cp -r claude-howto/.claude/skills/lesson-quiz .claude/skil... |
+| 2026-05-22 | [composio-community/open-claude-cowork](https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills) | brand-guidelines, remotion-best-practices |  | 6.7 | high | git clone https://github.com/composio-community/open-claude-cowork.git && cp -r open-claude-cowork/.claude/skills/rem... |
+| 2026-05-22 | [KhazP/vibe-coding-prompt-template](https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills) | vibe-agents, vibe-build, vibe-prd, +3 more |  | 7.3 | high | git clone https://github.com/KhazP/vibe-coding-prompt-template.git && cp -r vibe-coding-prompt-template/.claude/skill... |
+| 2026-05-22 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills) | release-skills |  | 6.5 | high | git clone https://github.com/JimLiu/baoyu-skills.git && cp -r baoyu-skills/.claude/skills/release-skills .claude/skills/ |
 | 2026-05-21 | [webiny/webiny-js](https://github.com/webiny/webiny-js/tree/next/.claude/skills) | backend-developer, grill-me, prd-to-plan, +4 more |  | 7.1 | high | git clone https://github.com/webiny/webiny-js -b next && cp -r webiny-js/.claude/skills/prd-to-plan /your-project/.cl... |
 | 2026-05-21 | [slopus/happy](https://github.com/slopus/happy/tree/main/.claude/skills) | agent-browser, terminal-emulator |  | 7.9 | high | git clone https://github.com/slopus/happy && cp -r happy/.claude/skills/agent-browser /your-project/.claude/skills/ |
 | 2026-05-21 | [microsoft/debugpy](https://github.com/microsoft/debugpy/tree/main/.claude/skills) | click, django, flask, +4 more |  | 6.8 | high | git clone https://github.com/microsoft/debugpy && cp -r debugpy/.claude/skills/pytest /your-python-project/.claude/sk... |

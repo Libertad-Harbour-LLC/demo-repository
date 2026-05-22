@@ -257,6 +257,71 @@
       "title": "JetBrains/ideavim",
       "url": "https://github.com/JetBrains/ideavim/tree/master/.claude/skills"
     },
+    "https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий с одним skill release-skills для автоматизации процесса релиза в Claude Code. Репозиторий набирает звёзды быстрее других в выборке — 19159 звёзд с delta +105 за сутки, что указывает на активное распространение в сообществе.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-22",
+      "metric": "Качество сгенерированного changelog; корректность предлагаемых шагов релиза",
+      "promoted_from_watch": false,
+      "repo_full_name": "JimLiu/baoyu-skills",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 8,
+        "utility": 6
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "release-skills"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/JimLiu/baoyu-skills.git && cp -r baoyu-skills/.claude/skills/release-skills .claude/skills/",
+        "Запустить Claude Code в проекте с git-историей и несколькими коммитами",
+        "Дать промт: 'Используй release-skills skill: подготовь релиз версии 1.2.0 — сгенерируй changelog на основе коммитов с последнего тега'"
+      ],
+      "title": "JimLiu/baoyu-skills",
+      "url": "https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Шаблонный репозиторий с набором из 6 skills для полного цикла vibe-coding в Claude Code: от исследования и составления PRD до технического дизайна, сборки, агентов и управления workflow. Рассчитан на разработчиков, ведущих проекты в стиле AI-assisted development.",
+      "final_score": 7.3,
+      "first_recommended": "2026-05-22",
+      "metric": "Насколько skills помогают структурировать работу над проектом; связность между разными skills цикла",
+      "promoted_from_watch": false,
+      "repo_full_name": "KhazP/vibe-coding-prompt-template",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "vibe-agents",
+        "vibe-build",
+        "vibe-prd",
+        "vibe-research",
+        "vibe-techdesign",
+        "vibe-workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/KhazP/vibe-coding-prompt-template.git && cp -r vibe-coding-prompt-template/.claude/skills/* .claude/skills/",
+        "Запустить Claude Code в новом или существующем проекте",
+        "Дать промт: 'Используй vibe-prd skill: помоги составить PRD для [описание вашего проекта]', затем продолжить с vibe-techdesign"
+      ],
+      "title": "KhazP/vibe-coding-prompt-template",
+      "url": "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills"
+    },
     "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -672,6 +737,37 @@
       ],
       "title": "beshuaxian/higgsfield-seedance2-jineng",
       "url": "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills"
+    },
+    "https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Репозиторий от Composio community с двумя skills для творческих и видео-проектов: brand-guidelines (соблюдение правил бренда при генерации контента) и remotion-best-practices (лучшие практики при работе с Remotion — React-фреймворком для видео). Подходит командам, создающим медиаконтент с помощью Claude Code.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-22",
+      "metric": "Точность рекомендаций по Remotion API и структуре компонентов; применимость brand-guidelines к реальному контенту",
+      "promoted_from_watch": false,
+      "repo_full_name": "composio-community/open-claude-cowork",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "brand-guidelines",
+        "remotion-best-practices"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/composio-community/open-claude-cowork.git && cp -r open-claude-cowork/.claude/skills/remotion-best-practices .claude/skills/",
+        "Запустить Claude Code в Remotion-проекте (или создать новый: npx create-video@latest)",
+        "Дать промт: 'Используй remotion-best-practices skill: проверь этот компонент на соответствие лучшим практикам Remotion и предложи улучшения'"
+      ],
+      "title": "composio-community/open-claude-cowork",
+      "url": "https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills"
     },
     "https://github.com/coreyhaines31/marketingskills/tree/main/skills": {
       "added_manually": true,
@@ -1104,6 +1200,37 @@
       ],
       "title": "iOfficeAI/AionUi",
       "url": "https://github.com/iOfficeAI/AionUi/tree/main/.claude/skills"
+    },
+    "https://github.com/luongnv89/claude-howto/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий с обучающим контентом по Claude Code, содержащий два skills для образовательного процесса: генерации тест-вопросов по пройденному материалу и самооценки прогресса обучения. Ориентирован на тех, кто изучает Claude Code или обучает других.",
+      "final_score": 8.1,
+      "first_recommended": "2026-05-22",
+      "metric": "Качество и релевантность сгенерированных тест-вопросов; соответствие вопросов содержанию материала",
+      "promoted_from_watch": false,
+      "repo_full_name": "luongnv89/claude-howto",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "lesson-quiz",
+        "self-assessment"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/luongnv89/claude-howto.git && cp -r claude-howto/.claude/skills/lesson-quiz .claude/skills/ && cp -r claude-howto/.claude/skills/self-assessment .claude/skills/",
+        "Запустить Claude Code в любом проекте с README или документацией",
+        "Дать промт: 'Используй skill lesson-quiz: прочитай README этого проекта и составь 5 вопросов для проверки понимания'"
+      ],
+      "title": "luongnv89/claude-howto",
+      "url": "https://github.com/luongnv89/claude-howto/tree/main/.claude/skills"
     },
     "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
