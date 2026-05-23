@@ -4,7 +4,7 @@
       "added_date": "2026-05-16",
       "category": "marketing_skill",
       "expires_at": "2026-06-15",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 27,
@@ -20,7 +20,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 25,
@@ -32,12 +32,29 @@
       "url": "https://github.com/HsuanYuLee/polaris/tree/main/.claude/skills",
       "why_interesting": "25 skills — крупнейший набор в сегодняшней выборке, охватывает полный agile-цикл: от intake-triage и sprint-planning до standup, review-pr, visual-regression и memory-hygiene. Уникальны: codex-mcp-setup, memory-hygiene, verify-AC (acceptance criteria). Если качество SKILL.md на уровне — это потенциально лучший agile-toolkit для Claude Code."
     },
+    "https://github.com/LazarStumbov/autonomous-trading-system/tree/main/.claude/skills": {
+      "added_date": "2026-05-23",
+      "category": "general_skill",
+      "description": "Репозиторий автономной торговой системы с 10 Claude Skills для трейдинга: сканирование рынка, исполнение сделок, мониторинг новостей, risk-check, анализ TradingView. Новый репозиторий, появился сегодня.",
+      "expires_at": "2026-06-22",
+      "last_checked": "2026-05-23",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 10,
+        "stars": 0
+      },
+      "repo_full_name": "LazarStumbov/autonomous-trading-system",
+      "signal_to_wait": "Рост звёзд от 0 до 5+, появление второго источника (Reddit/HN), или активные коммиты с детализированными SKILL.md — подтвердят реальное использование",
+      "title": "LazarStumbov/autonomous-trading-system",
+      "url": "https://github.com/LazarStumbov/autonomous-trading-system/tree/main/.claude/skills",
+      "why_interesting": "Уникальная ниша — finance/trading skills для Claude Code. Набор включает execute-trade, market-scan, risk-check, polymarket-bet, news-monitor — нетипичная область для skill-экосистемы."
+    },
     "https://github.com/ProfSynapse/Stampede/tree/main/.claude/skills": {
       "added_date": "2026-05-18",
       "category": "general_skill",
       "description": "Репозиторий ProfSynapse/Stampede содержит один верифицированный Claude Skill с именем 'stampede'. Судя по названию и автору (ProfSynapse известен AI-промпт-инструментами), skill, вероятно, связан с оркестрацией или массовым запуском задач, однако подробностей без чтения SKILL.md нет.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -54,7 +71,7 @@
       "category": "vibe_coding_skill",
       "description": "Новый репозиторий с двумя skills для DevOps-задач: openapi-sync (синхронизация OpenAPI спецификаций) и tech-debt-review (ревью технического долга). Активно создавался сегодня, пока без звёзд.",
       "expires_at": "2026-06-21",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -71,7 +88,7 @@
       "category": "general_skill",
       "description": "Репозиторий с одним skill process-builder для построения описаний процессов. Репозиторий активно обновлялся сегодня (pushed_at 2026-05-22), имеет 801 звезду. Предположительно связан с автоматизацией бизнес-процессов.",
       "expires_at": "2026-06-21",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -87,7 +104,7 @@
       "added_date": "2026-05-16",
       "category": "general_skill",
       "expires_at": "2026-06-15",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 8,
@@ -104,7 +121,7 @@
       "category": "vibe_coding_skill",
       "description": "Репозиторий Appwrite (56k звёзд) — open-source backend-as-a-service платформа. Содержит 2 skills: patch-release-checklist и pr-workflow для стандартизации процессов выпуска патчей и работы с PR в крупном OSS-проекте.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -121,7 +138,7 @@
       "category": "vibe_coding_skill",
       "description": "Kubeli содержит 15 Claude Skills вокруг концепции OpenSpec: управление изменениями спецификаций API (apply, archive, bulk-archive, continue, explore, verify), refactor и software-design-review. Оригинальный workflow для spec-driven разработки.",
       "expires_at": "2026-06-18",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 15,
@@ -138,7 +155,7 @@
       "category": "vibe_coding_skill",
       "description": "Репозиторий Flutter/mobile проекта с 113 skills, большинство из которых — конкретные решения DevOps-проблем (GKE, Fastly, ClickHouse, ArgoCD, Cloud Run). Представляет собой базу знаний реальных production-инцидентов в виде skills.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 113,
@@ -155,7 +172,7 @@
       "category": "marketing_skill",
       "description": "Новый репозиторий с 8 skills для публикации видеоконтента в социальных сетях: правила публикации для Instagram, Threads, X, YouTube, автоматическая разбивка туториалов на страницы, pipeline публикации и стиль войсовера. Нацелен на авторов, создающих обучающий видеоконтент.",
       "expires_at": "2026-06-21",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 8,
@@ -172,7 +189,7 @@
       "category": "vibe_coding_skill",
       "description": "Новый репозиторий с 6 skills для управления контекстом Claude Code: onboarding, remember, forget, wrap и help-me. Ориентирован на улучшение работы с долгосрочным контекстом в сессиях Claude Code.",
       "expires_at": "2026-06-19",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 6,
@@ -189,7 +206,7 @@
       "category": "vibe_coding_skill",
       "description": "Mngr от imbue-ai содержит 24 skills для управления проектом через Claude Code: fix-issue, triage-backlog, identify-inconsistencies, identify-outdated-docstrings, sync-tutorial-to-e2e-tests, writing-specs. Производственный инструмент от AI-компании.",
       "expires_at": "2026-06-18",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 24,
@@ -206,7 +223,7 @@
       "category": "general_skill",
       "description": "Kalfa содержит 18 Claude Skills для бизнес-операций: marketing, sales, SEO, deep-research, ecommerce, finance, consulting, customer-success. Новый репо сегодня с 252 звёздами, широкий охват бизнес-функций.",
       "expires_at": "2026-06-18",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 18,
@@ -223,7 +240,7 @@
       "category": "vibe_coding_skill",
       "description": "Репозиторий linq2db (3.3k звёзд) — популярная .NET ORM. Содержит 19 skills, включая уникальный набор knowledge-base skills (kb-ask, kb-build, kb-refresh, kb-status) для работы с базой знаний проекта, а также audit-claude, find-issues, session-reflect. Ориентирован на .NET-разработчиков.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 19,
@@ -235,12 +252,46 @@
       "url": "https://github.com/linq2db/linq2db/tree/master/.claude/skills",
       "why_interesting": "19 skills с уникальным паттерном Knowledge Base (kb-*) — редкий подход к организации долгосрочной памяти проекта через Claude Code. audit-claude skill для аудита самого Claude — мета-интересно"
     },
+    "https://github.com/mpolatcan/codehub/tree/main/.claude/skills": {
+      "added_date": "2026-05-23",
+      "category": "vibe_coding_skill",
+      "description": "Репозиторий с 4 практичными CLI/DevOps skills для Claude Code: add-cli, lint-fix, release-cut, runtime-rebuild. Новый репозиторий, появился сегодня, push в день публикации.",
+      "expires_at": "2026-06-22",
+      "last_checked": "2026-05-23",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 4,
+        "stars": 1
+      },
+      "repo_full_name": "mpolatcan/codehub",
+      "signal_to_wait": "Первые звёзды (≥5) и/или детализированные SKILL.md с реальными инструкциями, а не placeholder-контентом",
+      "title": "mpolatcan/codehub",
+      "url": "https://github.com/mpolatcan/codehub/tree/main/.claude/skills",
+      "why_interesting": "Компактный набор конкретных DevOps-ориентированных skills с понятными именами. lint-fix и release-cut — потенциально высокоутилитарные skills для повседневного использования."
+    },
+    "https://github.com/mylee04/code-notify/tree/main/.claude/skills": {
+      "added_date": "2026-05-23",
+      "category": "vibe_coding_skill",
+      "description": "Репозиторий с 2 Claude Skills: cross-platform и shell-scripting. 228 звёзд, без роста за сутки, последний push в апреле 2026.",
+      "expires_at": "2026-06-22",
+      "last_checked": "2026-05-23",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 2,
+        "stars": 228
+      },
+      "repo_full_name": "mylee04/code-notify",
+      "signal_to_wait": "Новый push или рост звёзд — подтверждение активной поддержки",
+      "title": "mylee04/code-notify",
+      "url": "https://github.com/mylee04/code-notify/tree/main/.claude/skills",
+      "why_interesting": "228 звёзд при всего 2 skills — хороший сигнал качества контента. shell-scripting skill может быть полезен широкой аудитории."
+    },
     "https://github.com/mysticaltech/terraform-hcloud-kube-hetzner/tree/master/.claude/skills": {
       "added_date": "2026-05-21",
       "category": "general_skill",
       "description": "Форк популярного Terraform-модуля для Kubernetes на Hetzner Cloud (3.8k звёзд). Содержит 7 skills для DevOps-workflow: fix-issue, kh-assistant (специфичный для kube-hetzner ассистент), prepare-release, review-pr, sync-docs, test-changes, triage-issue.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 7,
@@ -257,7 +308,7 @@
       "category": "vibe_coding_skill",
       "description": "Continuous-Claude-v3 — крупнейший по числу skills репо в снимке: 111 skills для agent continuity, parallel agents, math, research, TDD и многого другого. 3775 звёзд, но pushed_at в январе 2026.",
       "expires_at": "2026-06-18",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 111,
@@ -274,7 +325,7 @@
       "category": "vibe_coding_skill",
       "description": "Репозиторий с 5 разнообразными skills: генератор changelog, drawnote (заметки/схемы), softcopyright (работа с лицензиями), thread-manager и tidymydesktop. Подходит для разработчиков, ищущих вспомогательные утилиты для ежедневной работы.",
       "expires_at": "2026-06-21",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 5,
@@ -286,12 +337,29 @@
       "url": "https://github.com/peterfei/ai-agent-team/tree/main/.claude/skills",
       "why_interesting": "365 звёзд, новый в выборке, 5 разных skills покрывают нестандартные задачи (tidymydesktop, drawnote). Интересная диверсификация полезных утилит"
     },
+    "https://github.com/phykn/loopy/tree/main/.claude/skills": {
+      "added_date": "2026-05-23",
+      "category": "vibe_coding_skill",
+      "description": "Новый репозиторий с 2 skills: loopy и loopy-compose, появился сегодня. Судя по названию, посвящён паттернам цикличного/iterative выполнения задач в Claude Code.",
+      "expires_at": "2026-06-22",
+      "last_checked": "2026-05-23",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 2,
+        "stars": 0
+      },
+      "repo_full_name": "phykn/loopy",
+      "signal_to_wait": "Первые звёзды и читаемый SKILL.md с реальной логикой",
+      "title": "phykn/loopy",
+      "url": "https://github.com/phykn/loopy/tree/main/.claude/skills",
+      "why_interesting": "Концепция loopy-compose (композиция цикличных процессов) может быть оригинальным подходом к агентным задачам. Нулевые звёзды — ранний сигнал."
+    },
     "https://github.com/rish2jain/paperresearchagent/tree/master/.claude/skills": {
       "added_date": "2026-05-18",
       "category": "general_skill",
       "description": "Репозиторий содержит 6 Claude Skills для работы с AWS-сервисами (EKS, SageMaker, Prescriptive Guidance) и NVIDIA-платформами (API, NeMo, NIM). Предназначен для разработчиков, использующих Claude Code в проектах на облачной инфраструктуре AWS и ML-стеке NVIDIA.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 6,
@@ -308,7 +376,7 @@
       "category": "vibe_coding_skill",
       "description": "Новый репозиторий с skill ui-preview для Claude Code. Судя по названию, предназначен для генерации превью UI-компонентов непосредственно в процессе разработки с Claude Code.",
       "expires_at": "2026-06-19",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -325,7 +393,7 @@
       "category": "vibe_coding_skill",
       "description": "Vm0 содержит 9 Claude Skills для разработки: code-quality, database-development, tech-debt, feature-switch, testing, cli-design, ccstate. Новый репо сегодня с 1112 звёздами.",
       "expires_at": "2026-06-18",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 9,
@@ -342,7 +410,7 @@
       "category": "vibe_coding_skill",
       "description": "Репозиторий warp-drive (3.1k звёзд) — data layer для Ember.js. Содержит 2 skills: ast-grep и ast-grep-codemods для AST-based поиска и автоматических кодовых трансформаций. Полезен для проектов, требующих масштабного рефакторинга через AST.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -359,7 +427,7 @@
       "category": "marketing_skill",
       "description": "Новый репозиторий с единственным ASO (App Store Optimization) skill для Claude Code. Ориентирован на мобильных разработчиков и маркетологов, занимающихся оптимизацией приложений в App Store и Google Play.",
       "expires_at": "2026-06-19",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -376,7 +444,7 @@
       "category": "vibe_coding_skill",
       "description": "Репозиторий с 19 skills для Tauri/React разработки: tauri-app-dev, rust-tauri-backend, mcp-dev, css-design-tdd, react-app-dev. Специализирован под кросс-платформенную desktop-разработку.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-05-22",
+      "last_checked": "2026-05-23",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 19,

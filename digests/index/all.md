@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 61
+Total: 64
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-23 | [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3/tree/main/.claude/skills) | agent-context-isolation, agent-orchestration, agentic-workflow, +10 more |  | 7.7 | high | git clone https://github.com/parcadei/Continuous-Claude-v3 && cp -r Continuous-Claude-v3/.claude/skills/tdd /your-pro... |
+| 2026-05-23 | [ngocsangyem/MeowKit](https://github.com/ngocsangyem/MeowKit/tree/main/.claude/skills) | jira, jira-issue, jira-bulk, +11 more |  | 6.7 | medium | git clone https://github.com/ngocsangyem/MeowKit && cp -r MeowKit/.claude/skills/jira /your-project/.claude/skills/ &... |
+| 2026-05-23 | [a5c-ai/babysitter](https://github.com/a5c-ai/babysitter/tree/main/.claude/skills) | process-builder |  | 6.5 | high | git clone https://github.com/a5c-ai/babysitter && cp -r babysitter/.claude/skills/process-builder /your-project/.clau... |
 | 2026-05-22 | [luongnv89/claude-howto](https://github.com/luongnv89/claude-howto/tree/main/.claude/skills) | lesson-quiz, self-assessment |  | 8.1 | high | git clone https://github.com/luongnv89/claude-howto.git && cp -r claude-howto/.claude/skills/lesson-quiz .claude/skil... |
 | 2026-05-22 | [composio-community/open-claude-cowork](https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills) | brand-guidelines, remotion-best-practices |  | 6.7 | high | git clone https://github.com/composio-community/open-claude-cowork.git && cp -r open-claude-cowork/.claude/skills/rem... |
 | 2026-05-22 | [KhazP/vibe-coding-prompt-template](https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills) | vibe-agents, vibe-build, vibe-prd, +3 more |  | 7.3 | high | git clone https://github.com/KhazP/vibe-coding-prompt-template.git && cp -r vibe-coding-prompt-template/.claude/skill... |

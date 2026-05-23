@@ -347,6 +347,36 @@
       "title": "WorldFlowAI/everything-claude-code",
       "url": "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills"
     },
+    "https://github.com/a5c-ai/babysitter/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий с одним Claude Skill — process-builder — для построения и управления процессами в Claude Code. Имеет 803 звезды и активно обновлялся сегодня.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-23",
+      "metric": "Структурированность и полнота сгенерированного описания процесса по сравнению с обычным промптом",
+      "promoted_from_watch": false,
+      "repo_full_name": "a5c-ai/babysitter",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "process-builder"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/a5c-ai/babysitter && cp -r babysitter/.claude/skills/process-builder /your-project/.claude/skills/",
+        "Открыть Claude Code в проекте",
+        "Попросить: 'Используй process-builder, опиши процесс деплоя нашего приложения' — проверить качество документации"
+      ],
+      "title": "a5c-ai/babysitter",
+      "url": "https://github.com/a5c-ai/babysitter/tree/main/.claude/skills"
+    },
     "https://github.com/addyosmani/agent-skills/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -1572,6 +1602,49 @@
       "title": "nextlevelbuilder/ui-ux-pro-max-skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills"
     },
+    "https://github.com/ngocsangyem/MeowKit/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с 101 Claude Skill, охватывающий Jira/Confluence-интеграции, frontend-разработку (React, Vue, Angular, TypeScript) и QA-инструменты. Появился сегодня, активно обновлялся в день публикации.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-23",
+      "metric": "Правильность заполнения полей Jira-тикета и количество уточняющих вопросов от Claude",
+      "promoted_from_watch": false,
+      "repo_full_name": "ngocsangyem/MeowKit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 14,
+      "skills_in_repo": [
+        "jira",
+        "jira-issue",
+        "jira-bulk",
+        "jira-estimator",
+        "confluence",
+        "confluence-page",
+        "confluence-search",
+        "playwright-cli",
+        "react-patterns",
+        "typescript",
+        "vue",
+        "angular",
+        "vulnerability-scanner",
+        "skill-creator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/ngocsangyem/MeowKit && cp -r MeowKit/.claude/skills/jira /your-project/.claude/skills/ && cp -r MeowKit/.claude/skills/jira-issue /your-project/.claude/skills/",
+        "Открыть Claude Code в проекте, связанном с Jira",
+        "Попросить Claude создать Jira-задачу по описанию баги: 'Используй skill jira-issue, создай тикет для [описание проблемы]' — проверить, что skill задаёт правильные поля"
+      ],
+      "title": "ngocsangyem/MeowKit",
+      "url": "https://github.com/ngocsangyem/MeowKit/tree/main/.claude/skills"
+    },
     "https://github.com/obra/superpowers": {
       "added_manually": true,
       "category": "general_skill",
@@ -1675,6 +1748,48 @@
       ],
       "title": "opendatadiscovery/odd-team",
       "url": "https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills"
+    },
+    "https://github.com/parcadei/Continuous-Claude-v3/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий содержит 111 Claude Skills для агентных рабочих процессов, разработки и кодирования. Ориентирован на разработчиков, использующих Claude Code в сложных multi-agent и CI/CD сценариях.",
+      "final_score": 7.7,
+      "first_recommended": "2026-05-23",
+      "metric": "Качество и полнота сгенерированных тестов по сравнению с обычным промптом без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "parcadei/Continuous-Claude-v3",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 13,
+      "skills_in_repo": [
+        "agent-context-isolation",
+        "agent-orchestration",
+        "agentic-workflow",
+        "parallel-agents",
+        "tdd",
+        "debug",
+        "refactor",
+        "research",
+        "review",
+        "recall",
+        "commit",
+        "security",
+        "skill-developer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/parcadei/Continuous-Claude-v3 && cp -r Continuous-Claude-v3/.claude/skills/tdd /your-project/.claude/skills/",
+        "Открыть Claude Code в вашем проекте",
+        "Написать в чате: /skill tdd — попросить написать тесты для существующей функции и проверить, что Claude следует TDD-инструкциям из SKILL.md"
+      ],
+      "title": "parcadei/Continuous-Claude-v3",
+      "url": "https://github.com/parcadei/Continuous-Claude-v3/tree/main/.claude/skills"
     },
     "https://github.com/pbakaus/impeccable/tree/main/.claude/skills": {
       "added_manually": true,

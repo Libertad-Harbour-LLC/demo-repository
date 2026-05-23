@@ -1,27 +1,27 @@
 {
   "items": {
+    "https://github.com/1shooperman/shooperman-claude-plugins/tree/main/.claude/skills": {
+      "first_seen": "2026-05-23T10:28:07Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github",
+      "stars": 0,
+      "title": "1shooperman/shooperman-claude-plugins"
+    },
     "https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills": {
       "first_seen": "2026-05-18T02:08:04Z",
       "score": null,
       "skills_count": 73,
       "source": "github",
-      "stars": 19604,
+      "stars": 19676,
       "title": "Donchitos/Claude-Code-Game-Studios"
-    },
-    "https://github.com/IgnatRozhkoTR/governed-workflow/tree/main/.claude/skills": {
-      "first_seen": "2026-05-22T11:45:39Z",
-      "score": null,
-      "skills_count": 2,
-      "source": "github",
-      "stars": 8,
-      "title": "IgnatRozhkoTR/governed-workflow"
     },
     "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills": {
       "first_seen": "2026-05-18T02:08:04Z",
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 15291,
+      "stars": 15340,
       "title": "JCodesMore/ai-website-cloner-template"
     },
     "https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills": {
@@ -29,7 +29,7 @@
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 19159,
+      "stars": 19245,
       "title": "JimLiu/baoyu-skills"
     },
     "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills": {
@@ -37,23 +37,31 @@
       "score": null,
       "skills_count": 6,
       "source": "github",
-      "stars": 2396,
+      "stars": 2403,
       "title": "KhazP/vibe-coding-prompt-template"
     },
-    "https://github.com/Qredence/fleet-pi/tree/main/.claude/skills": {
-      "first_seen": "2026-05-22T11:45:39Z",
+    "https://github.com/LazarStumbov/autonomous-trading-system/tree/main/.claude/skills": {
+      "first_seen": "2026-05-23T10:28:07Z",
+      "score": null,
+      "skills_count": 10,
+      "source": "github",
+      "stars": 0,
+      "title": "LazarStumbov/autonomous-trading-system"
+    },
+    "https://github.com/MrPippi/MJP-Claude-Skills/tree/main/.claude/skills": {
+      "first_seen": "2026-05-23T10:28:07Z",
       "score": null,
       "skills_count": 2,
       "source": "github",
-      "stars": 3,
-      "title": "Qredence/fleet-pi"
+      "stars": 1,
+      "title": "MrPippi/MJP-Claude-Skills"
     },
     "https://github.com/a5c-ai/babysitter/tree/main/.claude/skills": {
       "first_seen": "2026-05-22T11:45:39Z",
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 801,
+      "stars": 803,
       "title": "a5c-ai/babysitter"
     },
     "https://github.com/affaan-m/ECC/tree/main/.claude/skills": {
@@ -61,23 +69,23 @@
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 188379,
+      "stars": 188697,
       "title": "affaan-m/ECC"
     },
-    "https://github.com/aware-aeco/aware/tree/main/.claude/skills": {
-      "first_seen": "2026-05-22T11:45:39Z",
+    "https://github.com/aitit-inc/lead-ace/tree/develop/.claude/skills": {
+      "first_seen": "2026-05-23T10:28:07Z",
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 0,
-      "title": "aware-aeco/aware"
+      "stars": 1,
+      "title": "aitit-inc/lead-ace"
     },
     "https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills": {
       "first_seen": "2026-05-18T02:08:04Z",
       "score": null,
       "skills_count": 2,
       "source": "github",
-      "stars": 4183,
+      "stars": 4187,
       "title": "composio-community/open-claude-cowork"
     },
     "https://github.com/decebals/claude-code-java/tree/main/.claude/skills": {
@@ -85,7 +93,7 @@
       "score": null,
       "skills_count": 18,
       "source": "github",
-      "stars": 583,
+      "stars": 585,
       "title": "decebals/claude-code-java"
     },
     "https://github.com/elrufaiforexfx22-creator/claudecode-video-maker/tree/main/.claude/skills": {
@@ -101,7 +109,7 @@
       "score": null,
       "skills_count": 12,
       "source": "github",
-      "stars": 26152,
+      "stars": 26212,
       "title": "iOfficeAI/AionUi"
     },
     "https://github.com/kongshan001/kanban-framework/tree/main/.claude/skills": {
@@ -125,7 +133,7 @@
       "score": null,
       "skills_count": 2,
       "source": "github",
-      "stars": 33807,
+      "stars": 33901,
       "title": "luongnv89/claude-howto"
     },
     "https://github.com/mksglu/context-mode/tree/main/.claude/skills": {
@@ -133,8 +141,16 @@
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 15386,
+      "stars": 15459,
       "title": "mksglu/context-mode"
+    },
+    "https://github.com/mpolatcan/codehub/tree/main/.claude/skills": {
+      "first_seen": "2026-05-23T10:28:07Z",
+      "score": null,
+      "skills_count": 4,
+      "source": "github",
+      "stars": 1,
+      "title": "mpolatcan/codehub"
     },
     "https://github.com/mylee04/code-notify/tree/main/.claude/skills": {
       "first_seen": "2026-05-22T11:45:39Z",
@@ -147,9 +163,9 @@
     "https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills": {
       "first_seen": "2026-05-18T02:08:04Z",
       "score": null,
-      "skills_count": 48,
+      "skills_count": 49,
       "source": "github",
-      "stars": 29243,
+      "stars": 29295,
       "title": "nanocoai/nanoclaw"
     },
     "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills": {
@@ -157,15 +173,23 @@
       "score": null,
       "skills_count": 7,
       "source": "github",
-      "stars": 81554,
+      "stars": 81837,
       "title": "nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    "https://github.com/ngocsangyem/MeowKit/tree/main/.claude/skills": {
+      "first_seen": "2026-05-23T10:28:07Z",
+      "score": null,
+      "skills_count": 101,
+      "source": "github",
+      "stars": 14,
+      "title": "ngocsangyem/MeowKit"
     },
     "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills": {
       "first_seen": "2026-05-22T11:45:39Z",
       "score": null,
       "skills_count": 8,
       "source": "github",
-      "stars": 338,
+      "stars": 340,
       "title": "oliver-kriska/claude-elixir-phoenix"
     },
     "https://github.com/parcadei/Continuous-Claude-v3/tree/main/.claude/skills": {
@@ -173,7 +197,7 @@
       "score": null,
       "skills_count": 111,
       "source": "github",
-      "stars": 3781,
+      "stars": 3780,
       "title": "parcadei/Continuous-Claude-v3"
     },
     "https://github.com/peterfei/ai-agent-team/tree/main/.claude/skills": {
@@ -184,12 +208,20 @@
       "stars": 365,
       "title": "peterfei/ai-agent-team"
     },
+    "https://github.com/phykn/loopy/tree/main/.claude/skills": {
+      "first_seen": "2026-05-23T10:28:07Z",
+      "score": null,
+      "skills_count": 2,
+      "source": "github",
+      "stars": 0,
+      "title": "phykn/loopy"
+    },
     "https://github.com/rtk-ai/rtk/tree/develop/.claude/skills": {
       "first_seen": "2026-05-18T02:08:04Z",
       "score": null,
       "skills_count": 12,
       "source": "github",
-      "stars": 52655,
+      "stars": 53020,
       "title": "rtk-ai/rtk"
     },
     "https://github.com/ruvnet/ruflo/tree/main/.claude/skills": {
@@ -197,7 +229,7 @@
       "score": null,
       "skills_count": 39,
       "source": "github",
-      "stars": 54062,
+      "stars": 54291,
       "title": "ruvnet/ruflo"
     },
     "https://github.com/santifer/career-ops/tree/main/.claude/skills": {
@@ -205,7 +237,7 @@
       "score": null,
       "skills_count": 1,
       "source": "github",
-      "stars": 46615,
+      "stars": 46769,
       "title": "santifer/career-ops"
     },
     "https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills": {
@@ -213,7 +245,7 @@
       "score": null,
       "skills_count": 5,
       "source": "github",
-      "stars": 54377,
+      "stars": 54505,
       "title": "shanraisshan/claude-code-best-practice"
     },
     "https://github.com/slopus/happy/tree/main/.claude/skills": {
@@ -221,18 +253,10 @@
       "score": null,
       "skills_count": 2,
       "source": "github",
-      "stars": 21046,
+      "stars": 21064,
       "title": "slopus/happy"
-    },
-    "https://github.com/xemoe/skills-lector/tree/main/.claude/skills": {
-      "first_seen": "2026-05-22T11:45:39Z",
-      "score": null,
-      "skills_count": 2,
-      "source": "github",
-      "stars": 0,
-      "title": "xemoe/skills-lector"
     }
   },
-  "last_run": "2026-05-22T11:45:39Z",
-  "last_sent_date": "2026-05-22"
+  "last_run": "2026-05-23T10:28:07Z",
+  "last_sent_date": "2026-05-23"
 }
