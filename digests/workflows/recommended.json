@@ -37,6 +37,39 @@
       "tool": "n8n",
       "url": "https://github.com/Danitilahun/n8n-workflow-templates"
     },
+    "https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "Workflow для n8n, автоматизирующий обработку сбоев при продлении платежей: AI-анализ причины ошибки, создание Jira-тикета и отправка Slack-алерта. Подходит для команд поддержки и биллинг-операций.",
+      "final_score": 6.6,
+      "first_recommended": "2026-05-23",
+      "metric": "Jira-тикет создан и Slack-сообщение отправлено в течение 30 секунд после симулированного сбоя",
+      "promoted_from_watch": false,
+      "repo_full_name": "Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json по прямой ссылке",
+        "Импортировать в n8n через Import Workflow",
+        "Проверить ноды: AI-нода (OpenAI/Anthropic), Jira, Slack",
+        "Настроить credentials: Jira API token, Slack Bot token, AI API key",
+        "Симулировать сбой платежа и проверить создание тикета и алерта"
+      ],
+      "title": "Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main",
+      "tool": "n8n",
+      "url": "https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts"
+    },
     "https://github.com/DragonJAR/n8n-workflows-esp": {
       "category": "content_workflow",
       "confidence": "high",
@@ -247,6 +280,43 @@
       "title": "eliassaoe/n8nworkflows: linkedin-scraper-linkfinderai",
       "tool": "n8n",
       "url": "https://github.com/eliassaoe/n8nworkflows"
+    },
+    "https://github.com/emretasss/AI-Workflow-Hub-2000-": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "AI-Workflow-Hub-2000- — коллекция из 5 готовых n8n-workflow: расписание Telegram-уведомлений, TOTP-автоматизация, работа с Bitwarden, синхронизация Typeform с Google Sheets и публикация в Twitter. Репозиторий набрал 256 звёзд.",
+      "final_score": 6.6,
+      "first_recommended": "2026-05-23",
+      "metric": "Успешная отправка Telegram-сообщения по расписанию / корректная запись в Google Sheets",
+      "promoted_from_watch": false,
+      "repo_full_name": "emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "0001_Telegram_Schedule_Automation_Scheduled",
+        "0002_Manual_Totp_Automation_Triggered",
+        "0003_Bitwarden_Automate",
+        "0004_GoogleSheets_Typeform_Automate_Triggered",
+        "0005_Manual_Twitter_Create_Triggered"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужный workflow из репо (например, 0001_Telegram_Schedule_Automation_Scheduled.json)",
+        "Скачать JSON по прямой ссылке с raw.githubusercontent.com",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить Telegram Bot credentials (токен бота)",
+        "Установить расписание и выполнить тестовый запуск"
+      ],
+      "title": "emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows",
+      "tool": "n8n",
+      "url": "https://github.com/emretasss/AI-Workflow-Hub-2000-"
     },
     "https://github.com/enescingoz/awesome-n8n-templates": {
       "category": "marketing_workflow",
@@ -494,6 +564,43 @@
       "title": "theaiautomators/insights-lm-public: InsightsLM (5 workflow)",
       "tool": "n8n",
       "url": "https://github.com/theaiautomators/insights-lm-public"
+    },
+    "https://github.com/traylorre/openclaw-mac": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "Репозиторий openclaw-mac содержит 5 n8n-workflow для devops-автоматизации: запуск действий, мониторинг активности, обновление конфигураций, обработка ошибок и обнаружение RSS-фидов. Предназначен для команд, автоматизирующих рутинные операции в инфраструктуре.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-23",
+      "metric": "Количество успешно выполненных action-runner прогонов без ошибок",
+      "promoted_from_watch": false,
+      "repo_full_name": "traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 7,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "action-runner",
+        "activity-query",
+        "config-update",
+        "error-handler",
+        "feed-discovery"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON action-runner.json по прямой ссылке",
+        "Импортировать в n8n через меню Import Workflow",
+        "Проверить node-граф: убедиться в наличии триггера и action-нод",
+        "Настроить необходимые credentials (если требуются)",
+        "Запустить тестовый прогон с тестовыми данными"
+      ],
+      "title": "traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery",
+      "tool": "n8n",
+      "url": "https://github.com/traylorre/openclaw-mac"
     },
     "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
       "category": "sales_workflow",

@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 15
+Total: 18
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-23 | [traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery](https://github.com/traylorre/openclaw-mac) | action-runner, activity-query, config-update, +2 more |  | 6.8 | medium | Скачать JSON action-runner.json по прямой ссылке |
+| 2026-05-23 | [emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows](https://github.com/emretasss/AI-Workflow-Hub-2000-) | 0001_Telegram_Schedule_Automation_Scheduled, 0002_Manual_Totp_Automation_Triggered, 0003_Bitwarden_Automate, +2 more |  | 6.6 | high | Выбрать нужный workflow из репо (например, 0001_Telegram_Schedule_Automation_Scheduled.json) |
+| 2026-05-23 | [Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main](https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts) | main |  | 6.6 | medium | Скачать main.json по прямой ссылке |
 | 2026-05-22 | [sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent](https://github.com/sinabarimd/reputation-engine) | content-generator, content-publisher, content-research-agent, +2 more |  | 6.8 | medium | Скачать все 5 JSON из папки workflows репозитория |
 | 2026-05-22 | [lynote-ai/humanize-text: humanize_standard](https://github.com/lynote-ai/humanize-text) | humanize_standard |  | 7.6 | high | Открыть https://raw.githubusercontent.com/lynote-ai/humanize-text/main/n8n/humanize_standard.json и скачать JSON |
 | 2026-05-22 | [abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main](https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration) | main |  | 6.8 | medium | Скачать main.json с https://raw.githubusercontent.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-a... |
