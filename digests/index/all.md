@@ -1,11 +1,13 @@
 # Recommended Claude Skills — all time
 
-Total: 64
+Total: 66
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-24 | [vm0-ai/vm0](https://github.com/vm0-ai/vm0/tree/main/.claude/skills) | ccstate, cli-design, code-quality, +6 more |  | 8.1 | high | git clone https://github.com/vm0-ai/vm0 && cp -r vm0/.claude/skills/code-quality <ваш_проект>/.claude/skills/ |
+| 2026-05-24 | [TheGoatPsy/claude-code-for-social-scientists](https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills) | agentic-session-debugger, ai-disclosure-auditor, apa-doi-verifier, +7 more |  | 6.5 | medium | git clone https://github.com/TheGoatPsy/claude-code-for-social-scientists && cp -r .claude/skills/apa-doi-verifier <в... |
 | 2026-05-23 | [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3/tree/main/.claude/skills) | agent-context-isolation, agent-orchestration, agentic-workflow, +10 more |  | 7.7 | high | git clone https://github.com/parcadei/Continuous-Claude-v3 && cp -r Continuous-Claude-v3/.claude/skills/tdd /your-pro... |
 | 2026-05-23 | [ngocsangyem/MeowKit](https://github.com/ngocsangyem/MeowKit/tree/main/.claude/skills) | jira, jira-issue, jira-bulk, +11 more |  | 6.7 | medium | git clone https://github.com/ngocsangyem/MeowKit && cp -r MeowKit/.claude/skills/jira /your-project/.claude/skills/ &... |
 | 2026-05-23 | [a5c-ai/babysitter](https://github.com/a5c-ai/babysitter/tree/main/.claude/skills) | process-builder |  | 6.5 | high | git clone https://github.com/a5c-ai/babysitter && cp -r babysitter/.claude/skills/process-builder /your-project/.clau... |

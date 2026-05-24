@@ -322,6 +322,45 @@
       "title": "KhazP/vibe-coding-prompt-template",
       "url": "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills"
     },
+    "https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Набор из 10 Claude Skills, разработанных специально для социальных учёных и исследователей: проверка APA/DOI-ссылок, IRB/этические протоколы, работа с двуязычными материалами, triage академической литературы. Уникальная нишевая коллекция без аналогов в данных.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-24",
+      "metric": "Точность выявления ошибок в APA-цитатах и полезность IRB-checklist по сравнению с ручной проверкой",
+      "promoted_from_watch": false,
+      "repo_full_name": "TheGoatPsy/claude-code-for-social-scientists",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "agentic-session-debugger",
+        "ai-disclosure-auditor",
+        "apa-doi-verifier",
+        "bilingual-booklet-pairing",
+        "ethics-irb-ai-protocol",
+        "memory-vault-architect",
+        "rebuttal-traceability-matrix",
+        "regional-access-workflow",
+        "repo-release-integrity-check",
+        "social-science-literature-triage"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/TheGoatPsy/claude-code-for-social-scientists && cp -r .claude/skills/apa-doi-verifier <ваш_проект>/.claude/skills/",
+        "Открыть Claude Code и передать текст с несколькими цитатами APA",
+        "Промт: 'Check all APA citations and DOI links in this text for correctness using the apa-doi-verifier skill' — затем протестировать ethics-irb-ai-protocol с описанием исследования"
+      ],
+      "title": "TheGoatPsy/claude-code-for-social-scientists",
+      "url": "https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills"
+    },
     "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -2124,6 +2163,44 @@
       ],
       "title": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills"
+    },
+    "https://github.com/vm0-ai/vm0/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "vm0 — репозиторий с набором из 9 Claude Skills для разработчиков, охватывающих качество кода, тестирование, управление техдолгом, работу с базами данных и соглашения о коммитах. Ориентирован на команды и инженеров, использующих Claude Code как coding-ассистента.",
+      "final_score": 8.1,
+      "first_recommended": "2026-05-24",
+      "metric": "Насколько предложения Claude Code улучшились по специфичности и соответствию стандартам после добавления skills vs без них",
+      "promoted_from_watch": false,
+      "repo_full_name": "vm0-ai/vm0",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "ccstate",
+        "cli-design",
+        "code-quality",
+        "commit",
+        "database-development",
+        "feature-switch",
+        "project-principles",
+        "tech-debt",
+        "testing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/vm0-ai/vm0 && cp -r vm0/.claude/skills/code-quality <ваш_проект>/.claude/skills/",
+        "Открыть Claude Code в вашем проекте",
+        "Промт: 'Review this file for code quality issues and suggest improvements following the project principles skill' — затем проверить tech-debt skill отдельным промтом"
+      ],
+      "title": "vm0-ai/vm0",
+      "url": "https://github.com/vm0-ai/vm0/tree/main/.claude/skills"
     },
     "https://github.com/webiny/webiny-js/tree/next/.claude/skills": {
       "category": "vibe_coding_skill",
