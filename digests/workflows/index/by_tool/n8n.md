@@ -1,9 +1,11 @@
 # Recommended — tool: n8n
 
-Total: 16
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-24 | [thecloudstation/n8n-workflows: linkedin_Lead_scraper + content-generator](https://github.com/thecloudstation/n8n-workflows) | content-generator, linkedin_Lead_scraper |  | 6.6 | medium | Скачать linkedin_Lead_scraper.json: https://raw.githubusercontent.com/thecloudstation/n8n-workflows/main/workflows/li... |
+| 2026-05-24 | [oxbshw/Open-Workflow-Library: summarizer-bot](https://github.com/oxbshw/Open-Workflow-Library) | summarizer-bot |  | 6.7 | high | Скачать JSON по ссылке: https://raw.githubusercontent.com/oxbshw/Open-Workflow-Library/main/workflows/ai-agents/summa... |
 | 2026-05-23 | [traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery](https://github.com/traylorre/openclaw-mac) | action-runner, activity-query, config-update, +2 more |  | 6.8 | medium | Скачать JSON action-runner.json по прямой ссылке |
 | 2026-05-23 | [emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows](https://github.com/emretasss/AI-Workflow-Hub-2000-) | 0001_Telegram_Schedule_Automation_Scheduled, 0002_Manual_Totp_Automation_Triggered, 0003_Bitwarden_Automate, +2 more |  | 6.6 | high | Выбрать нужный workflow из репо (например, 0001_Telegram_Schedule_Automation_Scheduled.json) |
 | 2026-05-23 | [Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main](https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts) | main |  | 6.6 | medium | Скачать main.json по прямой ссылке |

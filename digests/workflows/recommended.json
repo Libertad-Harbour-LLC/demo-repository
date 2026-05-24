@@ -458,6 +458,39 @@
       "tool": "n8n",
       "url": "https://github.com/lynote-ai/humanize-text"
     },
+    "https://github.com/oxbshw/Open-Workflow-Library": {
+      "category": "content_workflow",
+      "confidence": "high",
+      "description": "Open-Workflow-Library — публичная библиотека n8n-workflow с AI-агентом summarizer-bot, который автоматически суммаризирует входящий контент. Репозиторий имеет 538 звёзд и получил свежий push 24 мая 2026 года.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-24",
+      "metric": "Качество и скорость суммаризации: время выполнения workflow + точность резюме по контрольному тексту",
+      "promoted_from_watch": false,
+      "repo_full_name": "oxbshw/Open-Workflow-Library: summarizer-bot",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 7,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "summarizer-bot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке: https://raw.githubusercontent.com/oxbshw/Open-Workflow-Library/main/workflows/ai-agents/summarizer-bot.json",
+        "Открыть n8n → Import Workflow → вставить JSON",
+        "Проверить node-граф: убедиться в наличии AI/LLM-ноды и входного триггера",
+        "Настроить credentials для LLM-провайдера (OpenAI или аналог) в Settings → Credentials",
+        "Запустить тестовый прогон с коротким тестовым текстом и проверить вывод"
+      ],
+      "title": "oxbshw/Open-Workflow-Library: summarizer-bot",
+      "tool": "n8n",
+      "url": "https://github.com/oxbshw/Open-Workflow-Library"
+    },
     "https://github.com/oxbshw/ultimate-n8n-ai-workflows": {
       "category": "content_workflow",
       "confidence": "high",
@@ -564,6 +597,40 @@
       "title": "theaiautomators/insights-lm-public: InsightsLM (5 workflow)",
       "tool": "n8n",
       "url": "https://github.com/theaiautomators/insights-lm-public"
+    },
+    "https://github.com/thecloudstation/n8n-workflows": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "Репозиторий thecloudstation содержит два n8n-workflow: скрапер лидов из LinkedIn и генератор контента. Оба JSON верифицированы и доступны для прямого импорта.",
+      "final_score": 6.6,
+      "first_recommended": "2026-05-24",
+      "metric": "Количество успешно собранных лидов за прогон и полнота полей (имя, должность, компания, email если доступен)",
+      "promoted_from_watch": false,
+      "repo_full_name": "thecloudstation/n8n-workflows: linkedin_Lead_scraper + content-generator",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "content-generator",
+        "linkedin_Lead_scraper"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать linkedin_Lead_scraper.json: https://raw.githubusercontent.com/thecloudstation/n8n-workflows/main/workflows/linkedin_Lead_scraper.json",
+        "Импортировать в n8n через Import Workflow",
+        "Проверить node-граф на наличие HTTP Request / LinkedIn-нод и выходного хранилища",
+        "Настроить LinkedIn-credentials или Cookie/Session если используется неофициальный метод",
+        "Запустить на небольшом списке URL и проверить выходные данные"
+      ],
+      "title": "thecloudstation/n8n-workflows: linkedin_Lead_scraper + content-generator",
+      "tool": "n8n",
+      "url": "https://github.com/thecloudstation/n8n-workflows"
     },
     "https://github.com/traylorre/openclaw-mac": {
       "category": "devops_workflow",
