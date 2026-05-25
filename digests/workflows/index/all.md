@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 20
+Total: 23
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-25 | [jreyesr/n8n-nodes-tesseractjs: sample_workflow](https://github.com/jreyesr/n8n-nodes-tesseractjs) | sample_workflow |  | 6.5 | high | Скачать JSON: https://raw.githubusercontent.com/jreyesr/n8n-nodes-tesseractjs/master/sample_workflow.json |
+| 2026-05-25 | [Edublackk/self-correcting-rag-chatbot: n8n_workflow](https://github.com/Edublackk/self-correcting-rag-chatbot) | n8n_workflow |  | 6.6 | medium | Скачать JSON: https://raw.githubusercontent.com/Edublackk/self-correcting-rag-chatbot/main/workflows/n8n_workflow.json |
+| 2026-05-25 | [AntonioPhilip/AlertFlow: uptime_kuma_alert](https://github.com/AntonioPhilip/AlertFlow) | uptime_kuma_alert |  | 6.3 | medium | Скачать JSON: https://raw.githubusercontent.com/AntonioPhilip/AlertFlow/main/uptime_kuma_alert.json |
 | 2026-05-24 | [thecloudstation/n8n-workflows: linkedin_Lead_scraper + content-generator](https://github.com/thecloudstation/n8n-workflows) | content-generator, linkedin_Lead_scraper |  | 6.6 | medium | Скачать linkedin_Lead_scraper.json: https://raw.githubusercontent.com/thecloudstation/n8n-workflows/main/workflows/li... |
 | 2026-05-24 | [oxbshw/Open-Workflow-Library: summarizer-bot](https://github.com/oxbshw/Open-Workflow-Library) | summarizer-bot |  | 6.7 | high | Скачать JSON по ссылке: https://raw.githubusercontent.com/oxbshw/Open-Workflow-Library/main/workflows/ai-agents/summa... |
 | 2026-05-23 | [traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery](https://github.com/traylorre/openclaw-mac) | action-runner, activity-query, config-update, +2 more |  | 6.8 | medium | Скачать JSON action-runner.json по прямой ссылке |

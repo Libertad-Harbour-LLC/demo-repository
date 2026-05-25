@@ -1,5 +1,38 @@
 {
   "skills": {
+    "https://github.com/AntonioPhilip/AlertFlow": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для обработки алертов от Uptime Kuma: принимает вебхук при падении/восстановлении сервиса и маршрутизирует уведомления в нужные каналы. Полезен командам, использующим Uptime Kuma для мониторинга и желающим расширить логику уведомлений.",
+      "final_score": 6.3,
+      "first_recommended": "2026-05-25",
+      "metric": "Время от события в Uptime Kuma до получения уведомления в целевом канале; процент доставленных алертов",
+      "promoted_from_watch": false,
+      "repo_full_name": "AntonioPhilip/AlertFlow: uptime_kuma_alert",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "uptime_kuma_alert"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/AntonioPhilip/AlertFlow/main/uptime_kuma_alert.json",
+        "Импортировать в n8n через Import from file",
+        "Активировать workflow и скопировать URL вебхука из узла Webhook",
+        "В Uptime Kuma: Notifications → Add → Webhook → вставить URL",
+        "Симулировать падение сервиса в Uptime Kuma и проверить получение алерта"
+      ],
+      "title": "AntonioPhilip/AlertFlow: uptime_kuma_alert",
+      "tool": "n8n",
+      "url": "https://github.com/AntonioPhilip/AlertFlow"
+    },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "category": "general_workflow",
       "confidence": "high",
@@ -106,6 +139,39 @@
       "title": "DragonJAR/n8n-workflows-esp: Telegram Chinese Tutor + 4 more",
       "tool": "n8n",
       "url": "https://github.com/DragonJAR/n8n-workflows-esp"
+    },
+    "https://github.com/Edublackk/self-correcting-rag-chatbot": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "Готовый n8n-workflow для RAG-чатбота с механизмом самокоррекции: при низкой уверенности модели workflow автоматически перезапрашивает контекст и уточняет ответ. Подходит разработчикам и командам, строящим внутренние AI-помощники на основе собственных документов.",
+      "final_score": 6.6,
+      "first_recommended": "2026-05-25",
+      "metric": "Процент ответов без галлюцинаций при тестовом наборе из 10 вопросов; число итераций коррекции на запрос",
+      "promoted_from_watch": false,
+      "repo_full_name": "Edublackk/self-correcting-rag-chatbot: n8n_workflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/Edublackk/self-correcting-rag-chatbot/main/workflows/n8n_workflow.json",
+        "Открыть n8n → Workflows → Import from file → выбрать скачанный JSON",
+        "Настроить credentials: LLM-провайдер (OpenAI/Anthropic) и векторная БД (Pinecone/Qdrant/pgvector)",
+        "Загрузить тестовые документы в векторную БД",
+        "Отправить тестовый вопрос через чат-интерфейс и проверить лог итераций коррекции"
+      ],
+      "title": "Edublackk/self-correcting-rag-chatbot: n8n_workflow",
+      "tool": "n8n",
+      "url": "https://github.com/Edublackk/self-correcting-rag-chatbot"
     },
     "https://github.com/Endgame-Labs/mechanizer": {
       "category": "sales_workflow",
@@ -387,6 +453,39 @@
       "title": "freddy-schuetz/n8n-claw: agent-library-manager + 4 агентных workflow",
       "tool": "n8n",
       "url": "https://github.com/freddy-schuetz/n8n-claw"
+    },
+    "https://github.com/jreyesr/n8n-nodes-tesseractjs": {
+      "category": "data_workflow",
+      "confidence": "high",
+      "description": "Образцовый workflow для n8n-узла TesseractJS, демонстрирующий OCR (распознавание текста из изображений) прямо в пайплайне. Репозиторий включает кастомный n8n-узел на базе Tesseract.js и готовый сценарий для извлечения текста из изображений без внешних API.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-25",
+      "metric": "Точность распознавания текста на тестовом наборе из 5 изображений; время обработки одного изображения",
+      "promoted_from_watch": false,
+      "repo_full_name": "jreyesr/n8n-nodes-tesseractjs: sample_workflow",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 7,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "sample_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/jreyesr/n8n-nodes-tesseractjs/master/sample_workflow.json",
+        "Установить кастомный узел: в n8n Settings → Community Nodes → установить n8n-nodes-tesseractjs",
+        "Импортировать sample_workflow.json через n8n → Import from file",
+        "Подготовить тестовое изображение с текстом (PNG/JPG)",
+        "Запустить workflow вручную, передав изображение, и проверить распознанный текст в выводе"
+      ],
+      "title": "jreyesr/n8n-nodes-tesseractjs: sample_workflow",
+      "tool": "n8n",
+      "url": "https://github.com/jreyesr/n8n-nodes-tesseractjs"
     },
     "https://github.com/lucaswalter/n8n-ai-automations": {
       "category": "general_workflow",
