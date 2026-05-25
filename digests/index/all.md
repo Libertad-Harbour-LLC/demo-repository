@@ -1,11 +1,19 @@
 # Recommended Claude Skills — all time
 
-Total: 66
+Total: 74
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-25 | [vinzenz/prd-breakdown-execute](https://github.com/vinzenz/prd-breakdown-execute/tree/main/.claude/skills) | breakdown-analyze-prd, breakdown-generate-tasks, breakdown-plan-layers, +12 more |  | 6.9 | high | git clone https://github.com/vinzenz/prd-breakdown-execute.git и скопировать всю папку .claude/skills/ в свой проект |
+| 2026-05-25 | [theodo-group/debug-that](https://github.com/theodo-group/debug-that/tree/main/.claude/skills) | debug-that |  | 6.8 | high | git clone https://github.com/theodo-group/debug-that.git и скопировать .claude/skills/debug-that/ в свой проект |
+| 2026-05-25 | [petenelson/wp-rest-api-log](https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills) | 10up-block-development, 10up-block-extensions, 10up-block-patterns, +14 more |  | 7.0 | high | git clone https://github.com/petenelson/wp-rest-api-log.git и скопировать .claude/skills/10up-block-development/ и .c... |
+| 2026-05-25 | [minicoohei/ai-agent-camp](https://github.com/minicoohei/ai-agent-camp/tree/main/.claude/skills) | ab-test-setup, agent-designer, analytics-tracking, +45 more |  | 7.5 | high | git clone https://github.com/minicoohei/ai-agent-camp.git |
+| 2026-05-25 | [alleneubank/claude-code](https://github.com/alleneubank/claude-code/tree/main/.claude/skills) | atlas-best-practices, axe-ios-simulator, git-best-practices, +12 more |  | 6.8 | high | git clone https://github.com/alleneubank/claude-code.git и скопировать skills нужного стека, например .claude/skills/... |
+| 2026-05-25 | [akiselev/ghidra-cli](https://github.com/akiselev/ghidra-cli/tree/master/.claude/skills) | ghidra-cli, ilspy-cli |  | 7.5 | high | Установить Ghidra (https://ghidra-sre.org/) или ILSpy локально |
+| 2026-05-25 | [ClickHouse/pg_stat_ch](https://github.com/ClickHouse/pg_stat_ch/tree/main/.claude/skills) | cpp-header-template, cpp-naming-check, cpp-review, +2 more |  | 7.2 | high | git clone https://github.com/ClickHouse/pg_stat_ch.git и скопировать .claude/skills/cpp-review/ и .claude/skills/goog... |
+| 2026-05-25 | [Chorus-AIDLC/Chorus](https://github.com/Chorus-AIDLC/Chorus/tree/main/.claude/skills) | blog, openspec-apply-change, openspec-archive-change, +5 more |  | 7.9 | high | git clone https://github.com/Chorus-AIDLC/Chorus.git |
 | 2026-05-24 | [vm0-ai/vm0](https://github.com/vm0-ai/vm0/tree/main/.claude/skills) | ccstate, cli-design, code-quality, +6 more |  | 8.1 | high | git clone https://github.com/vm0-ai/vm0 && cp -r vm0/.claude/skills/code-quality <ваш_проект>/.claude/skills/ |
 | 2026-05-24 | [TheGoatPsy/claude-code-for-social-scientists](https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills) | agentic-session-debugger, ai-disclosure-auditor, apa-doi-verifier, +7 more |  | 6.5 | medium | git clone https://github.com/TheGoatPsy/claude-code-for-social-scientists && cp -r .claude/skills/apa-doi-verifier <в... |
 | 2026-05-23 | [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3/tree/main/.claude/skills) | agent-context-isolation, agent-orchestration, agentic-workflow, +10 more |  | 7.7 | high | git clone https://github.com/parcadei/Continuous-Claude-v3 && cp -r Continuous-Claude-v3/.claude/skills/tdd /your-pro... |

@@ -64,6 +64,77 @@
       "title": "AgriciDaniel/claude-seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/tree/main/skills"
     },
+    "https://github.com/Chorus-AIDLC/Chorus/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Chorus — репозиторий с 8 специализированными skills для управления OpenAPI-спецификациями и рабочими процессами разработки. Предназначен для команд, работающих с API-first подходом и нуждающихся в автоматизации PR-workflow и релизов.",
+      "final_score": 7.9,
+      "first_recommended": "2026-05-25",
+      "metric": "Корректно ли Claude формирует структурированное предложение изменения в OpenAPI-спеке без ручных инструкций",
+      "promoted_from_watch": false,
+      "repo_full_name": "Chorus-AIDLC/Chorus",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "blog",
+        "openspec-apply-change",
+        "openspec-archive-change",
+        "openspec-explore",
+        "openspec-propose",
+        "plugin-maintenance",
+        "pr-workflow",
+        "release"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Chorus-AIDLC/Chorus.git",
+        "скопировать папку .claude/skills/openspec-propose/ в свой проект с OpenAPI-спецификацией",
+        "запустить Claude Code и попросить: 'Используй skill openspec-propose, чтобы предложить изменение в endpoint /users — добавить поле email'"
+      ],
+      "title": "Chorus-AIDLC/Chorus",
+      "url": "https://github.com/Chorus-AIDLC/Chorus/tree/main/.claude/skills"
+    },
+    "https://github.com/ClickHouse/pg_stat_ch/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий ClickHouse с 5 skills для C++ разработки: проверка именования, code review по Google C++ Style Guide, создание заголовочных файлов по шаблону и управление релизами. Подходит для любого C++ проекта.",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-25",
+      "metric": "Находит ли Claude нарушения стайлгайда, которые не поймает clang-tidy без custom конфига",
+      "promoted_from_watch": false,
+      "repo_full_name": "ClickHouse/pg_stat_ch",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "cpp-header-template",
+        "cpp-naming-check",
+        "cpp-review",
+        "create-new-release",
+        "google-cpp-style"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/ClickHouse/pg_stat_ch.git и скопировать .claude/skills/cpp-review/ и .claude/skills/google-cpp-style/ в свой C++ проект",
+        "Запустить Claude Code в директории с C++ кодом",
+        "Дать промт: 'Проведи cpp-review этого файла [filename.cpp] на соответствие Google C++ Style Guide'"
+      ],
+      "title": "ClickHouse/pg_stat_ch",
+      "url": "https://github.com/ClickHouse/pg_stat_ch/tree/main/.claude/skills"
+    },
     "https://github.com/DenisSergeevitch/agents-best-practices": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -600,6 +671,37 @@
       "title": "ai-analyst-lab/ai-analyst",
       "url": "https://github.com/ai-analyst-lab/ai-analyst/tree/main/.claude/skills"
     },
+    "https://github.com/akiselev/ghidra-cli/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий содержит два skill для интеграции Claude Code с инструментами реверс-инжиниринга: Ghidra (дизассемблер NSA) и ILSpy (декомпилятор .NET). Ориентирован на security-исследователей и разработчиков, анализирующих бинарный код.",
+      "final_score": 7.5,
+      "first_recommended": "2026-05-25",
+      "metric": "Корректно ли Claude формирует CLI-команды для Ghidra headless и интерпретирует вывод",
+      "promoted_from_watch": false,
+      "repo_full_name": "akiselev/ghidra-cli",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "ghidra-cli",
+        "ilspy-cli"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить Ghidra (https://ghidra-sre.org/) или ILSpy локально",
+        "git clone https://github.com/akiselev/ghidra-cli.git и скопировать .claude/skills/ghidra-cli/ в свой проект",
+        "В Claude Code: 'Используй ghidra-cli skill, чтобы открыть [бинарный файл] и найти все функции с именем main'"
+      ],
+      "title": "akiselev/ghidra-cli",
+      "url": "https://github.com/akiselev/ghidra-cli/tree/master/.claude/skills"
+    },
     "https://github.com/alchaincyf/nuwa-skill": {
       "added_manually": true,
       "category": "general_skill",
@@ -642,6 +744,50 @@
       ],
       "title": "alirezarezvani/claude-skills",
       "url": "https://github.com/alirezarezvani/claude-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/alleneubank/claude-code/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Коллекция из 26 best-practice skills для различных стеков: Python, Go, TypeScript, React, Zig, Nix, Playwright, iOS. Также включает git workflow skills (worktree, rebase). Универсальный набор для polyglot-разработчиков.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-25",
+      "metric": "Дают ли skills более специфичные рекомендации, чем generic Claude без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "alleneubank/claude-code",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "atlas-best-practices",
+        "axe-ios-simulator",
+        "git-best-practices",
+        "git-rebase-sync",
+        "git-worktree-tidy",
+        "go-best-practices",
+        "ios-device-toolkit",
+        "nix-best-practices",
+        "playwright-best-practices",
+        "python-best-practices",
+        "react-best-practices",
+        "testing-best-practices",
+        "typescript-best-practices",
+        "zig-best-practices",
+        "web-fetch"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/alleneubank/claude-code.git и скопировать skills нужного стека, например .claude/skills/python-best-practices/ или .claude/skills/typescript-best-practices/",
+        "Запустить Claude Code в своём проекте",
+        "Попросить: 'Проверь этот файл [filename] на соответствие best practices для Python/TypeScript и предложи улучшения'"
+      ],
+      "title": "alleneubank/claude-code",
+      "url": "https://github.com/alleneubank/claude-code/tree/main/.claude/skills"
     },
     "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design": {
       "added_manually": true,
@@ -1461,6 +1607,83 @@
       "title": "microsoft/debugpy",
       "url": "https://github.com/microsoft/debugpy/tree/main/.claude/skills"
     },
+    "https://github.com/minicoohei/ai-agent-camp/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Крупнейшая коллекция из 98 Claude Skills, охватывающая маркетинг, аналитику данных, видео, контент, SEO, управление задачами и разработку. Репозиторий позиционируется как лагерь по изучению AI-агентов с широким набором готовых skills.",
+      "final_score": 7.5,
+      "first_recommended": "2026-05-25",
+      "metric": "Насколько skill даёт структурированный, специфичный вывод по сравнению с обычным промтом без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "minicoohei/ai-agent-camp",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 48,
+      "skills_in_repo": [
+        "ab-test-setup",
+        "agent-designer",
+        "analytics-tracking",
+        "article-writer",
+        "bigquery-auth",
+        "code-reviewer",
+        "content-creator",
+        "content-optimizer",
+        "csv-analyzer",
+        "data-analyst",
+        "data-visualization",
+        "diagram-generator",
+        "email-sequence",
+        "exploratory-data-analysis",
+        "feature-spec",
+        "gcp-auth",
+        "gslides-creator",
+        "interactive-dashboard-builder",
+        "jupyter-to-marimo",
+        "launch-strategy",
+        "marketing-planner",
+        "marketing-psychology",
+        "matplotlib",
+        "meeting-notes-summarizer",
+        "pdf-compressor",
+        "plotly",
+        "pm-toolkit",
+        "post-publisher",
+        "pptx-creator",
+        "pricing-strategy",
+        "programmatic-seo",
+        "proofreading-agent",
+        "referral-program",
+        "seo-audit",
+        "slack-search",
+        "slack-task-manager",
+        "social-content",
+        "sql-queries",
+        "statistical-analysis",
+        "storyboard-generator",
+        "tdd-guide",
+        "test-planner",
+        "tmux-session-manager",
+        "tutorial-generator",
+        "ui-ux-pro-max",
+        "video-scriptwriter",
+        "viral-short-video",
+        "youtube-clipper"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/minicoohei/ai-agent-camp.git",
+        "скопировать к себе конкретный skill, например .claude/skills/seo-audit/ или .claude/skills/data-analyst/",
+        "запустить Claude Code и написать: 'Проведи SEO-аудит этой страницы [вставить URL/контент]' или 'Проанализируй этот CSV с данными продаж'"
+      ],
+      "title": "minicoohei/ai-agent-camp",
+      "url": "https://github.com/minicoohei/ai-agent-camp/tree/main/.claude/skills"
+    },
     "https://github.com/mksglu/context-mode/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -1855,6 +2078,52 @@
       "title": "pbakaus/impeccable",
       "url": "https://github.com/pbakaus/impeccable/tree/main/.claude/skills"
     },
+    "https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Коллекция из 17 WordPress-специфичных skills от агентства 10up, покрывающих разработку блоков, плагинов, тем, тестирование, производительность и scaffolding. Предназначена для WordPress-разработчиков, использующих стандарты 10up.",
+      "final_score": 7.0,
+      "first_recommended": "2026-05-25",
+      "metric": "Генерирует ли Claude валидный блок по 10up-стандартам с правильной структурой файлов",
+      "promoted_from_watch": false,
+      "repo_full_name": "petenelson/wp-rest-api-log",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 17,
+      "skills_in_repo": [
+        "10up-block-development",
+        "10up-block-extensions",
+        "10up-block-patterns",
+        "10up-block-themes",
+        "10up-commit-messages",
+        "10up-css",
+        "10up-inner-blocks",
+        "10up-interactivity-api",
+        "10up-performance",
+        "10up-plugin-development",
+        "10up-project-triage",
+        "10up-router",
+        "10up-scaffold",
+        "10up-testing",
+        "10up-toolkit",
+        "10up-wp-framework",
+        "ignite-wp"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/petenelson/wp-rest-api-log.git и скопировать .claude/skills/10up-block-development/ и .claude/skills/10up-plugin-development/ в свой WP-проект",
+        "Запустить Claude Code в директории WordPress-плагина",
+        "Дать промт: 'Создай новый Gutenberg блок для отображения testimonials, используя 10up-block-development skill'"
+      ],
+      "title": "petenelson/wp-rest-api-log",
+      "url": "https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills"
+    },
     "https://github.com/rtk-ai/rtk/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -2163,6 +2432,80 @@
       ],
       "title": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills"
+    },
+    "https://github.com/theodo-group/debug-that/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий известной консалтинговой компании Theodo с одним специализированным skill для структурированной отладки кода. Предназначен для разработчиков, которым нужен систематический подход к дебаггингу.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-25",
+      "metric": "Предлагает ли Claude более структурированный анализ причин ошибки (гипотезы, проверки, решения) по сравнению с обычным запросом",
+      "promoted_from_watch": false,
+      "repo_full_name": "theodo-group/debug-that",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "debug-that"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/theodo-group/debug-that.git и скопировать .claude/skills/debug-that/ в свой проект",
+        "Запустить Claude Code при наличии реального бага",
+        "Написать: 'debug-that: [описание ошибки + стек трейс]' и сравнить качество анализа с обычным Claude"
+      ],
+      "title": "theodo-group/debug-that",
+      "url": "https://github.com/theodo-group/debug-that/tree/main/.claude/skills"
+    },
+    "https://github.com/vinzenz/prd-breakdown-execute/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий с 15 skills для разбивки PRD (Product Requirements Document) на задачи и последовательного их выполнения. Автоматизирует цикл analyze-plan-execute для продуктовой разработки.",
+      "final_score": 6.9,
+      "first_recommended": "2026-05-25",
+      "metric": "Насколько задачи, сгенерированные из PRD, конкретны и выполнимы за 1 сессию Claude Code",
+      "promoted_from_watch": false,
+      "repo_full_name": "vinzenz/prd-breakdown-execute",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "breakdown-analyze-prd",
+        "breakdown-generate-tasks",
+        "breakdown-plan-layers",
+        "breakdown-review-tasks",
+        "breakdown",
+        "crd-context-update",
+        "crd-impact-analysis",
+        "crd-investigate",
+        "crd",
+        "execute-batch",
+        "execute-layer",
+        "execute-merge",
+        "execute-task",
+        "execute-verify",
+        "execute"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/vinzenz/prd-breakdown-execute.git и скопировать всю папку .claude/skills/ в свой проект",
+        "Подготовить файл PRD.md с описанием фичи",
+        "В Claude Code: 'Используй breakdown-analyze-prd skill, чтобы проанализировать PRD.md и затем breakdown-generate-tasks, чтобы создать список задач'"
+      ],
+      "title": "vinzenz/prd-breakdown-execute",
+      "url": "https://github.com/vinzenz/prd-breakdown-execute/tree/main/.claude/skills"
     },
     "https://github.com/vm0-ai/vm0/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
