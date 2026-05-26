@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 6
+Total: 7
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-26 | [MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss](https://github.com/MohElshamy1994/n8n-course-Projetcs) | 39-GPT-Oss |  | 6.5 | high | Скачать JSON: https://raw.githubusercontent.com/MohElshamy1994/n8n-course-Projetcs/main/workflows/39-GPT-Oss.json |
 | 2026-05-23 | [emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows](https://github.com/emretasss/AI-Workflow-Hub-2000-) | 0001_Telegram_Schedule_Automation_Scheduled, 0002_Manual_Totp_Automation_Triggered, 0003_Bitwarden_Automate, +2 more |  | 6.6 | high | Выбрать нужный workflow из репо (например, 0001_Telegram_Schedule_Automation_Scheduled.json) |
 | 2026-05-23 | [Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main](https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts) | main |  | 6.6 | medium | Скачать main.json по прямой ссылке |
 | 2026-05-21 | [djeknet/n8n-master-workflows: Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory](https://github.com/djeknet/n8n-master-workflows) | Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory |  | 7.7 | high | Скачать JSON по ссылке выше |

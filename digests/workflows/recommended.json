@@ -210,6 +210,39 @@
       "tool": "make",
       "url": "https://github.com/Endgame-Labs/mechanizer"
     },
+    "https://github.com/MohElshamy1994/n8n-course-Projetcs": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "Репозиторий курсовых проектов по n8n с 697 звёздами; содержит workflow 39-GPT-Oss, связанный с интеграцией GPT и открытых источников данных. Полезен как учебный пример построения AI-агентов в n8n.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-26",
+      "metric": "Корректность ответа GPT на тестовый запрос через workflow",
+      "promoted_from_watch": false,
+      "repo_full_name": "MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss",
+      "scores": {
+        "business_impact": 5,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 8,
+        "utility": 6
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "39-GPT-Oss"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/MohElshamy1994/n8n-course-Projetcs/main/workflows/39-GPT-Oss.json",
+        "Импортировать в n8n через Import Workflow",
+        "Изучить node-граф для понимания структуры AI-агента",
+        "Настроить OpenAI credentials",
+        "Запустить тестовый прогон с тестовым промптом"
+      ],
+      "title": "MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss",
+      "tool": "n8n",
+      "url": "https://github.com/MohElshamy1994/n8n-course-Projetcs"
+    },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
       "confidence": "medium",
@@ -454,6 +487,39 @@
       "tool": "n8n",
       "url": "https://github.com/freddy-schuetz/n8n-claw"
     },
+    "https://github.com/inthecyber-group/securityonion-n8n-workflows": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "Workflow для n8n, интегрированный с Security Onion: запрашивает информацию о CVE-уязвимостях и выводит структурированные данные об угрозах. Предназначен для security-команд, использующих Security Onion для мониторинга инфраструктуры.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-26",
+      "metric": "Время от появления CVE до получения структурированного алерта",
+      "promoted_from_watch": false,
+      "repo_full_name": "inthecyber-group/securityonion-n8n-workflows: CVE_Info",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "CVE_Info"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/inthecyber-group/securityonion-n8n-workflows/main/workflows/CVE_Info.json",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить HTTP Request credentials или API-ключ для CVE-источника",
+        "Запустить тестовый прогон с тестовым CVE ID (например CVE-2024-1234)",
+        "Проверить выходные данные на корректность структуры"
+      ],
+      "title": "inthecyber-group/securityonion-n8n-workflows: CVE_Info",
+      "tool": "n8n",
+      "url": "https://github.com/inthecyber-group/securityonion-n8n-workflows"
+    },
     "https://github.com/jreyesr/n8n-nodes-tesseractjs": {
       "category": "data_workflow",
       "confidence": "high",
@@ -486,6 +552,39 @@
       "title": "jreyesr/n8n-nodes-tesseractjs: sample_workflow",
       "tool": "n8n",
       "url": "https://github.com/jreyesr/n8n-nodes-tesseractjs"
+    },
+    "https://github.com/kingler/n8n_agent": {
+      "category": "devops_workflow",
+      "confidence": "high",
+      "description": "Workflow для n8n, который автоматически создаёт резервные копии всех workflow из вашего n8n-инстанса и коммитит их в GitHub-репозиторий. Полезен для команд и соло-разработчиков, которым важна версионность автоматизаций.",
+      "final_score": 6.6,
+      "first_recommended": "2026-05-26",
+      "metric": "Наличие актуальных JSON-файлов в GitHub-репо после каждого запуска",
+      "promoted_from_watch": false,
+      "repo_full_name": "kingler/n8n_agent: back_up_your_n8n_workflows_to_github",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow:back_up_your_n8n_workflows_to_github"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/kingler/n8n_agent/main/workflows/workflow:back_up_your_n8n_workflows_to_github.json",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить n8n API credentials (URL инстанса + API key)",
+        "Настроить GitHub credentials (Personal Access Token с правами repo)",
+        "Запустить тестовый прогон и проверить появление файлов в целевом репо"
+      ],
+      "title": "kingler/n8n_agent: back_up_your_n8n_workflows_to_github",
+      "tool": "n8n",
+      "url": "https://github.com/kingler/n8n_agent"
     },
     "https://github.com/lucaswalter/n8n-ai-automations": {
       "category": "general_workflow",

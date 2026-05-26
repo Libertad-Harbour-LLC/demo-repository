@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 23
+Total: 26
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-26 | [kingler/n8n_agent: back_up_your_n8n_workflows_to_github](https://github.com/kingler/n8n_agent) | workflow:back_up_your_n8n_workflows_to_github |  | 6.6 | high | Скачать JSON: https://raw.githubusercontent.com/kingler/n8n_agent/main/workflows/workflow:back_up_your_n8n_workflows_... |
+| 2026-05-26 | [inthecyber-group/securityonion-n8n-workflows: CVE_Info](https://github.com/inthecyber-group/securityonion-n8n-workflows) | CVE_Info |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/inthecyber-group/securityonion-n8n-workflows/main/workflows/CVE_Info.... |
+| 2026-05-26 | [MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss](https://github.com/MohElshamy1994/n8n-course-Projetcs) | 39-GPT-Oss |  | 6.5 | high | Скачать JSON: https://raw.githubusercontent.com/MohElshamy1994/n8n-course-Projetcs/main/workflows/39-GPT-Oss.json |
 | 2026-05-25 | [jreyesr/n8n-nodes-tesseractjs: sample_workflow](https://github.com/jreyesr/n8n-nodes-tesseractjs) | sample_workflow |  | 6.5 | high | Скачать JSON: https://raw.githubusercontent.com/jreyesr/n8n-nodes-tesseractjs/master/sample_workflow.json |
 | 2026-05-25 | [Edublackk/self-correcting-rag-chatbot: n8n_workflow](https://github.com/Edublackk/self-correcting-rag-chatbot) | n8n_workflow |  | 6.6 | medium | Скачать JSON: https://raw.githubusercontent.com/Edublackk/self-correcting-rag-chatbot/main/workflows/n8n_workflow.json |
 | 2026-05-25 | [AntonioPhilip/AlertFlow: uptime_kuma_alert](https://github.com/AntonioPhilip/AlertFlow) | uptime_kuma_alert |  | 6.3 | medium | Скачать JSON: https://raw.githubusercontent.com/AntonioPhilip/AlertFlow/main/uptime_kuma_alert.json |
