@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 50
+Total: 53
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-27 | [mattgierhart/PRD-driven-context-engineering](https://github.com/mattgierhart/PRD-driven-context-engineering/tree/main/.claude/skills) | SKILL_TEMPLATE, ghm-gate-check, ghm-harvest, +30 more |  | 7.6 | medium | Клонировать репо: git clone https://github.com/mattgierhart/PRD-driven-context-engineering.git |
+| 2026-05-27 | [imbue-ai/mngr](https://github.com/imbue-ai/mngr/tree/main/.claude/skills) | asciinema-demos, convert-github-issues-to-fixmes, create-fixmes, +21 more |  | 7.5 | medium | Клонировать репо: git clone https://github.com/imbue-ai/mngr.git |
+| 2026-05-27 | [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills/tree/main/.claude/skills) | aframe-webxr, animated-component-libraries, animejs, +20 more |  | 6.5 | medium | Клонировать репо: git clone https://github.com/freshtechbro/claudedesignskills.git |
 | 2026-05-25 | [vinzenz/prd-breakdown-execute](https://github.com/vinzenz/prd-breakdown-execute/tree/main/.claude/skills) | breakdown-analyze-prd, breakdown-generate-tasks, breakdown-plan-layers, +12 more |  | 6.9 | high | git clone https://github.com/vinzenz/prd-breakdown-execute.git и скопировать всю папку .claude/skills/ в свой проект |
 | 2026-05-25 | [theodo-group/debug-that](https://github.com/theodo-group/debug-that/tree/main/.claude/skills) | debug-that |  | 6.8 | high | git clone https://github.com/theodo-group/debug-that.git и скопировать .claude/skills/debug-that/ в свой проект |
 | 2026-05-25 | [petenelson/wp-rest-api-log](https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills) | 10up-block-development, 10up-block-extensions, 10up-block-patterns, +14 more |  | 7.0 | high | git clone https://github.com/petenelson/wp-rest-api-log.git и скопировать .claude/skills/10up-block-development/ и .c... |

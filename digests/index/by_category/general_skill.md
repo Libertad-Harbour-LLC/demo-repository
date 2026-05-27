@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 17
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-27 | [marketcalls/vectorbt-backtesting-skills](https://github.com/marketcalls/vectorbt-backtesting-skills/tree/master/.claude/skills) | backtest, optimize, quick-stats, +3 more |  | 7.1 | medium | Клонировать репо: git clone https://github.com/marketcalls/vectorbt-backtesting-skills.git |
 | 2026-05-25 | [minicoohei/ai-agent-camp](https://github.com/minicoohei/ai-agent-camp/tree/main/.claude/skills) | ab-test-setup, agent-designer, analytics-tracking, +45 more |  | 7.5 | high | git clone https://github.com/minicoohei/ai-agent-camp.git |
 | 2026-05-24 | [TheGoatPsy/claude-code-for-social-scientists](https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills) | agentic-session-debugger, ai-disclosure-auditor, apa-doi-verifier, +7 more |  | 6.5 | medium | git clone https://github.com/TheGoatPsy/claude-code-for-social-scientists && cp -r .claude/skills/apa-doi-verifier <в... |
 | 2026-05-22 | [composio-community/open-claude-cowork](https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills) | brand-guidelines, remotion-best-practices |  | 6.7 | high | git clone https://github.com/composio-community/open-claude-cowork.git && cp -r open-claude-cowork/.claude/skills/rem... |
