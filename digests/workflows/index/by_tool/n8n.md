@@ -1,9 +1,12 @@
 # Recommended — tool: n8n
 
-Total: 24
+Total: 27
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-27 | [ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: Invoice Parser](https://github.com/ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration) | main |  | 6.5 | medium | Скачать main.json из репо |
+| 2026-05-27 | [Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator](https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing) | main |  | 6.2 | medium | Скачать main.json из репо |
+| 2026-05-27 | [Nijamudin/automated-business-analysis-workflow: Business Analysis Workflow - AI Marketing Hub](https://github.com/Nijamudin/automated-business-analysis-workflow) | Business Analysis Workflow - AI Marketing Hub, Business Analysis Workflow Tools - AI Marketing Hub |  | 6.5 | medium | Скачать JSON: Business Analysis Workflow - AI Marketing Hub.json из репо |
 | 2026-05-26 | [kingler/n8n_agent: back_up_your_n8n_workflows_to_github](https://github.com/kingler/n8n_agent) | workflow:back_up_your_n8n_workflows_to_github |  | 6.6 | high | Скачать JSON: https://raw.githubusercontent.com/kingler/n8n_agent/main/workflows/workflow:back_up_your_n8n_workflows_... |
 | 2026-05-26 | [inthecyber-group/securityonion-n8n-workflows: CVE_Info](https://github.com/inthecyber-group/securityonion-n8n-workflows) | CVE_Info |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/inthecyber-group/securityonion-n8n-workflows/main/workflows/CVE_Info.... |
 | 2026-05-26 | [MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss](https://github.com/MohElshamy1994/n8n-course-Projetcs) | 39-GPT-Oss |  | 6.5 | high | Скачать JSON: https://raw.githubusercontent.com/MohElshamy1994/n8n-course-Projetcs/main/workflows/39-GPT-Oss.json |

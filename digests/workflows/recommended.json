@@ -243,6 +243,73 @@
       "tool": "n8n",
       "url": "https://github.com/MohElshamy1994/n8n-course-Projetcs"
     },
+    "https://github.com/Nijamudin/automated-business-analysis-workflow": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "Репозиторий содержит два n8n-workflow для автоматизированного бизнес-анализа с AI-агентом, ориентированных на маркетинговые задачи. Подходит для аналитиков и маркетологов, которым нужен готовый конвейер сбора и анализа данных с использованием AI.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-27",
+      "metric": "Время генерации одного бизнес-анализа; качество и полнота выходного отчёта",
+      "promoted_from_watch": false,
+      "repo_full_name": "Nijamudin/automated-business-analysis-workflow: Business Analysis Workflow - AI Marketing Hub",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "Business Analysis Workflow - AI Marketing Hub",
+        "Business Analysis Workflow Tools - AI Marketing Hub"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: Business Analysis Workflow - AI Marketing Hub.json из репо",
+        "Импортировать в n8n через Import > From File",
+        "Настроить credentials для AI-провайдера (OpenAI/Anthropic) и целевых источников данных",
+        "Импортировать второй файл Business Analysis Workflow Tools и связать с основным",
+        "Запустить тестовый прогон с тестовой компанией/рынком и проверить выходной отчёт"
+      ],
+      "title": "Nijamudin/automated-business-analysis-workflow: Business Analysis Workflow - AI Marketing Hub",
+      "tool": "n8n",
+      "url": "https://github.com/Nijamudin/automated-business-analysis-workflow"
+    },
+    "https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической валидации deep links мобильного приложения при открытии GitHub Pull Request. Предназначен для mobile-разработчиков и DevOps-инженеров, которые хотят автоматизировать QA-проверки в CI-пайплайне.",
+      "final_score": 6.2,
+      "first_recommended": "2026-05-27",
+      "metric": "Процент PR с автоматически проверенными deep links; время от открытия PR до появления результата",
+      "promoted_from_watch": false,
+      "repo_full_name": "Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json из репо",
+        "Импортировать в n8n через Import > From File",
+        "Настроить GitHub credentials (Personal Access Token с правами на repo и pr)",
+        "Указать репозиторий для мониторинга в параметрах Webhook-ноды",
+        "Открыть тестовый PR с deep link и проверить появление автоматического комментария"
+      ],
+      "title": "Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator",
+      "tool": "n8n",
+      "url": "https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing"
+    },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
       "confidence": "medium",
@@ -449,6 +516,39 @@
       "title": "enescingoz/awesome-n8n-templates: AI product imagines",
       "tool": "n8n",
       "url": "https://github.com/enescingoz/awesome-n8n-templates"
+    },
+    "https://github.com/ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического OCR-парсинга инвойсов и документов с помощью Google Gemini AI и сохранения результатов в Google Sheets. Подходит для бухгалтеров, финансистов и любого бизнеса с большим объёмом входящих документов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-27",
+      "metric": "Точность извлечения полей (поставщик, сумма, дата); время обработки одного инвойса",
+      "promoted_from_watch": false,
+      "repo_full_name": "ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: Invoice Parser",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json из репо",
+        "Импортировать в n8n через Import > From File",
+        "Настроить Google Gemini API credentials и Google Sheets OAuth",
+        "Указать ID целевой Google Sheets таблицы в параметрах workflow",
+        "Загрузить тестовый инвойс (PDF или изображение) и запустить прогон"
+      ],
+      "title": "ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: Invoice Parser",
+      "tool": "n8n",
+      "url": "https://github.com/ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration"
     },
     "https://github.com/freddy-schuetz/n8n-claw": {
       "category": "devops_workflow",
