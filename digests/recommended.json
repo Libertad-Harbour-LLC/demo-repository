@@ -432,6 +432,44 @@
       "title": "TheGoatPsy/claude-code-for-social-scientists",
       "url": "https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills"
     },
+    "https://github.com/TypedDevs/bashunit/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий bashunit — фреймворк для unit-тестирования bash-скриптов (411 звёзд). Содержит 9 Claude Skills, покрывающих полный цикл разработки: от TDD-цикла и добавления утверждений до создания PR, релиза и проверки покрытия.",
+      "final_score": 7.8,
+      "first_recommended": "2026-05-28",
+      "metric": "Claude Code корректно следует TDD-циклу: создаёт failing test, реализует функцию, делает тест зелёным",
+      "promoted_from_watch": false,
+      "repo_full_name": "TypedDevs/bashunit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "add-assertion",
+        "check-coverage",
+        "commit",
+        "fix-test",
+        "gh-issue",
+        "pr",
+        "pre-release",
+        "release",
+        "tdd-cycle"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/TypedDevs/bashunit && cp -r .claude/skills/tdd-cycle ~/.claude/skills/ (или в .claude/skills/ своего проекта)",
+        "Открыть Claude Code в проекте с bash-скриптами",
+        "Написать промт: 'Use tdd-cycle skill to add a new test for function X in script.sh'"
+      ],
+      "title": "TypedDevs/bashunit",
+      "url": "https://github.com/TypedDevs/bashunit/tree/main/.claude/skills"
+    },
     "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -847,6 +885,37 @@
       "title": "anyproto/anytype-ts",
       "url": "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills"
     },
+    "https://github.com/appwrite/appwrite/tree/1.9.x/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Appwrite — open-source backend-as-a-service платформа (56k+ звёзд). Содержит 2 Claude Skills: patch-release-checklist и pr-workflow, разработанных командой Appwrite для стандартизации процессов выпуска патчей и работы с PR.",
+      "final_score": 7.6,
+      "first_recommended": "2026-05-28",
+      "metric": "Claude Code последовательно выполняет шаги чеклиста, не пропуская критические этапы релиза",
+      "promoted_from_watch": false,
+      "repo_full_name": "appwrite/appwrite",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "patch-release-checklist",
+        "pr-workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/appwrite/appwrite -b 1.9.x && cp -r .claude/skills/patch-release-checklist .claude/skills/pr-workflow /your-project/.claude/skills/",
+        "Открыть Claude Code в репозитории с OSS-проектом",
+        "Промт: 'Use patch-release-checklist skill to prepare release 1.2.3'"
+      ],
+      "title": "appwrite/appwrite",
+      "url": "https://github.com/appwrite/appwrite/tree/1.9.x/.claude/skills"
+    },
     "https://github.com/atopile/atopile/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "general_skill",
@@ -1197,6 +1266,44 @@
       ],
       "title": "decebals/claude-code-java",
       "url": "https://github.com/decebals/claude-code-java/tree/main/.claude/skills"
+    },
+    "https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий divine-mobile (252 звезды) содержит 113 Claude Skills — крупнейший на сегодня knowledge base конкретных инженерных проблем. Skills охватывают Flutter, ClickHouse, GCS, Fastly Compute, Nostr-протокол, Cloud Run, PostgreSQL, Riverpod и другие технологии.",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-28",
+      "metric": "Claude Code применяет знание из SKILL.md и точно диагностирует/решает проблему без общих советов",
+      "promoted_from_watch": false,
+      "repo_full_name": "divinevideo/divine-mobile",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "flutter-startup-network-blocking",
+        "fastly-compute-deployment-debugging",
+        "clickhouse-aggregatingmergetree-state-merge",
+        "git-separate-tangled-changes-into-prs",
+        "oauth-pkce-sessionstorage-lost-on-redirect",
+        "riverpod-infinite-rebuild-loop",
+        "plan",
+        "review-before-commit",
+        "pr-summary"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/divinevideo/divine-mobile && выбрать 2-3 релевантных skills (например, riverpod-infinite-rebuild-loop для Flutter или oauth-pkce-sessionstorage-lost-on-redirect для web)",
+        "Скопировать выбранные skills в .claude/skills/ своего проекта",
+        "Промт по конкретной проблеме: 'I have a Riverpod provider that rebuilds infinitely — use riverpod-infinite-rebuild-loop skill to diagnose'"
+      ],
+      "title": "divinevideo/divine-mobile",
+      "url": "https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills"
     },
     "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -1577,6 +1684,49 @@
       ],
       "title": "imbue-ai/mngr",
       "url": "https://github.com/imbue-ai/mngr/tree/main/.claude/skills"
+    },
+    "https://github.com/lifinance/contracts/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Репозиторий LI.FI contracts (204 звезды) — Solidity smart contracts для cross-chain bridge протокола. Содержит 14 Claude Skills для автоматизации Web3 development workflow: от анализа транзакций до управления сетями и аудитами.",
+      "final_score": 7.0,
+      "first_recommended": "2026-05-28",
+      "metric": "Claude Code следует Web3-специфичному workflow, выдаёт структурированный анализ транзакции или корректные шаги добавления сети",
+      "promoted_from_watch": false,
+      "repo_full_name": "lifinance/contracts",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 14,
+      "skills_in_repo": [
+        "add-audit",
+        "add-network",
+        "add-new-rule",
+        "analyze-tx",
+        "analyze-unverified-contract",
+        "check-open-prs",
+        "creating-user-stories",
+        "deprecate-contract",
+        "deprecate-network",
+        "post-pr-for-review",
+        "pr-ready",
+        "request-dev-funds",
+        "review-bounty-report",
+        "start-linear-ticket"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/lifinance/contracts && cp -r .claude/skills/analyze-tx .claude/skills/analyze-unverified-contract /your-web3-project/.claude/skills/",
+        "Открыть Claude Code в Solidity/Hardhat/Foundry проекте",
+        "Промт: 'Use analyze-tx skill to investigate transaction 0x...' или 'Use add-network skill to add Arbitrum support'"
+      ],
+      "title": "lifinance/contracts",
+      "url": "https://github.com/lifinance/contracts/tree/main/.claude/skills"
     },
     "https://github.com/luongnv89/claude-howto/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -1995,6 +2145,45 @@
       "title": "multica-ai/andrej-karpathy-skills",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills"
     },
+    "https://github.com/mx-space/core/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий mx-space/core (531 звезда) — NestJS/TypeScript backend для blogging platform. Содержит 10 Claude Skills для автоматизации разработки: от генерации модулей и E2E-тестов до миграций PostgreSQL и code review.",
+      "final_score": 6.6,
+      "first_recommended": "2026-05-28",
+      "metric": "Claude Code генерирует Zod-схемы и API-код, соответствующий конвенциям mx-space, а не generic NestJS-шаблонам",
+      "promoted_from_watch": false,
+      "repo_full_name": "mx-space/core",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "api-conventions",
+        "create-e2e-test",
+        "create-module",
+        "mx-migration-author",
+        "mx-pg-controller-migration",
+        "mx-review",
+        "mxs-cli-ai-author",
+        "release-core",
+        "run-test",
+        "zod-patterns"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/mx-space/core && cp -r .claude/skills/zod-patterns .claude/skills/api-conventions /your-nestjs-project/.claude/skills/",
+        "Открыть Claude Code в NestJS-проекте",
+        "Промт: 'Use zod-patterns skill to add validation schema for UserCreateDto' или 'Use api-conventions to review this controller'"
+      ],
+      "title": "mx-space/core",
+      "url": "https://github.com/mx-space/core/tree/master/.claude/skills"
+    },
     "https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "high",
@@ -2384,6 +2573,38 @@
       ],
       "title": "petenelson/wp-rest-api-log",
       "url": "https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills"
+    },
+    "https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий tantivy — высокопроизводительный Rust full-text search engine (15k+ звёзд). Содержит 3 Claude Skills для автоматизации рутинных задач: rationalize-deps, simple-pr, update-changelog.",
+      "final_score": 7.4,
+      "first_recommended": "2026-05-28",
+      "metric": "Claude Code предлагает конкретные изменения в Cargo.toml: удаление дублей, замену тяжёлых зависимостей, выравнивание версий",
+      "promoted_from_watch": false,
+      "repo_full_name": "quickwit-oss/tantivy",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "rationalize-deps",
+        "simple-pr",
+        "update-changelog"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/quickwit-oss/tantivy && cp -r .claude/skills/rationalize-deps /your-rust-project/.claude/skills/",
+        "Открыть Claude Code в Rust-проекте с Cargo.toml",
+        "Промт: 'Use rationalize-deps skill to review and optimize dependencies in Cargo.toml'"
+      ],
+      "title": "quickwit-oss/tantivy",
+      "url": "https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills"
     },
     "https://github.com/rtk-ai/rtk/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",

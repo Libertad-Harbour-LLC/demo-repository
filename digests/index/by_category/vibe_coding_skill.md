@@ -1,9 +1,14 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 53
+Total: 58
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-28 | [quickwit-oss/tantivy](https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills) | rationalize-deps, simple-pr, update-changelog |  | 7.4 | high | git clone https://github.com/quickwit-oss/tantivy && cp -r .claude/skills/rationalize-deps /your-rust-project/.claude... |
+| 2026-05-28 | [mx-space/core](https://github.com/mx-space/core/tree/master/.claude/skills) | api-conventions, create-e2e-test, create-module, +7 more |  | 6.6 | high | git clone https://github.com/mx-space/core && cp -r .claude/skills/zod-patterns .claude/skills/api-conventions /your-... |
+| 2026-05-28 | [divinevideo/divine-mobile](https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills) | flutter-startup-network-blocking, fastly-compute-deployment-debugging, clickhouse-aggregatingmergetree-state-merge, +6 more |  | 7.2 | high | git clone https://github.com/divinevideo/divine-mobile && выбрать 2-3 релевантных skills (например, riverpod-infinite... |
+| 2026-05-28 | [appwrite/appwrite](https://github.com/appwrite/appwrite/tree/1.9.x/.claude/skills) | patch-release-checklist, pr-workflow |  | 7.6 | high | git clone https://github.com/appwrite/appwrite -b 1.9.x && cp -r .claude/skills/patch-release-checklist .claude/skill... |
+| 2026-05-28 | [TypedDevs/bashunit](https://github.com/TypedDevs/bashunit/tree/main/.claude/skills) | add-assertion, check-coverage, commit, +6 more |  | 7.8 | high | git clone https://github.com/TypedDevs/bashunit && cp -r .claude/skills/tdd-cycle ~/.claude/skills/ (или в .claude/sk... |
 | 2026-05-27 | [mattgierhart/PRD-driven-context-engineering](https://github.com/mattgierhart/PRD-driven-context-engineering/tree/main/.claude/skills) | SKILL_TEMPLATE, ghm-gate-check, ghm-harvest, +30 more |  | 7.6 | medium | Клонировать репо: git clone https://github.com/mattgierhart/PRD-driven-context-engineering.git |
 | 2026-05-27 | [imbue-ai/mngr](https://github.com/imbue-ai/mngr/tree/main/.claude/skills) | asciinema-demos, convert-github-issues-to-fixmes, create-fixmes, +21 more |  | 7.5 | medium | Клонировать репо: git clone https://github.com/imbue-ai/mngr.git |
 | 2026-05-27 | [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills/tree/main/.claude/skills) | aframe-webxr, animated-component-libraries, animejs, +20 more |  | 6.5 | medium | Клонировать репо: git clone https://github.com/freshtechbro/claudedesignskills.git |
