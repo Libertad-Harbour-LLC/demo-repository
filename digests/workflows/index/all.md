@@ -1,11 +1,18 @@
 # Recommended Claude Skills — all time
 
-Total: 29
+Total: 36
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-28 | [zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)](https://github.com/zengfr/n8n-workflow-all-templates) | 9280_Event_Ticketing_Backend__Auto_QR_Tickets_with_Google_Sheets___Gmail, 10236_AI-Powered_n8n_Release_Notes_Summary_Notifications_via_Gmail_with_GPT-5-Mini |  | 6.5 | medium | Скачать JSON файл 9280_Event_Ticketing_Backend... |
+| 2026-05-28 | [workfloows/workfloows-tutorials: invoice-ocr-assistant-mindee](https://github.com/workfloows/workfloows-tutorials) | invoice-ocr-assistant-mindee, stock-portfolio-tracker-alpha-vantage |  | 7.2 | medium | Скачать invoice-ocr-assistant-mindee.json |
+| 2026-05-28 | [traversaal-ai/agents-in-action: blog_post_agent_webhook](https://github.com/traversaal-ai/agents-in-action) | blog_post_agent_webhook |  | 6.5 | high | Скачать blog_post_agent_webhook.json |
+| 2026-05-28 | [splx-ai/agentic-radar: multi_agent (Multi-Agent Database System)](https://github.com/splx-ai/agentic-radar) | multi_agent |  | 7.3 | high | Скачать JSON по ссылке json_url |
+| 2026-05-28 | [ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports](https://github.com/ritik-prog/n8n-automation-templates-5000) | auto-generate-healthcare-compliance-reports, create-automated-event-marketing-workflows, generate-support-cost-analysis-reports |  | 7.0 | high | Скачать auto-generate-healthcare-compliance-reports.json |
+| 2026-05-28 | [kossakovsky/n8n-install: Building Your First WhatsApp Chatbot](https://github.com/kossakovsky/n8n-install) | Building Your First WhatsApp Chatbot, Send a ChatGPT email reply and save responses to Google Sheets |  | 7.3 | high | Скачать JSON Building Your First WhatsApp Chatbot.json |
+| 2026-05-28 | [ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)](https://github.com/ScraperNode/awesome-n8n-templates) | workflow (Find Company LinkedIn URLs via Apify + Google Sheets) |  | 7.2 | medium | Скачать workflow.json |
 | 2026-05-27 | [ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: Invoice Parser](https://github.com/ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration) | main |  | 6.5 | medium | Скачать main.json из репо |
 | 2026-05-27 | [Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator](https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing) | main |  | 6.2 | medium | Скачать main.json из репо |
 | 2026-05-27 | [Nijamudin/automated-business-analysis-workflow: Business Analysis Workflow - AI Marketing Hub](https://github.com/Nijamudin/automated-business-analysis-workflow) | Business Analysis Workflow - AI Marketing Hub, Business Analysis Workflow Tools - AI Marketing Hub |  | 6.5 | medium | Скачать JSON: Business Analysis Workflow - AI Marketing Hub.json из репо |

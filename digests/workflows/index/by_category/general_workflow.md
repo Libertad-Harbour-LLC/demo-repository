@@ -1,9 +1,12 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 7
+Total: 10
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-28 | [zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)](https://github.com/zengfr/n8n-workflow-all-templates) | 9280_Event_Ticketing_Backend__Auto_QR_Tickets_with_Google_Sheets___Gmail, 10236_AI-Powered_n8n_Release_Notes_Summary_Notifications_via_Gmail_with_GPT-5-Mini |  | 6.5 | medium | Скачать JSON файл 9280_Event_Ticketing_Backend... |
+| 2026-05-28 | [ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports](https://github.com/ritik-prog/n8n-automation-templates-5000) | auto-generate-healthcare-compliance-reports, create-automated-event-marketing-workflows, generate-support-cost-analysis-reports |  | 7.0 | high | Скачать auto-generate-healthcare-compliance-reports.json |
+| 2026-05-28 | [kossakovsky/n8n-install: Building Your First WhatsApp Chatbot](https://github.com/kossakovsky/n8n-install) | Building Your First WhatsApp Chatbot, Send a ChatGPT email reply and save responses to Google Sheets |  | 7.3 | high | Скачать JSON Building Your First WhatsApp Chatbot.json |
 | 2026-05-26 | [MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss](https://github.com/MohElshamy1994/n8n-course-Projetcs) | 39-GPT-Oss |  | 6.5 | high | Скачать JSON: https://raw.githubusercontent.com/MohElshamy1994/n8n-course-Projetcs/main/workflows/39-GPT-Oss.json |
 | 2026-05-23 | [emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows](https://github.com/emretasss/AI-Workflow-Hub-2000-) | 0001_Telegram_Schedule_Automation_Scheduled, 0002_Manual_Totp_Automation_Triggered, 0003_Bitwarden_Automate, +2 more |  | 6.6 | high | Выбрать нужный workflow из репо (например, 0001_Telegram_Schedule_Automation_Scheduled.json) |
 | 2026-05-23 | [Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main](https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts) | main |  | 6.6 | medium | Скачать main.json по прямой ссылке |

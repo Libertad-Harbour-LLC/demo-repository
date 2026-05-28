@@ -310,6 +310,39 @@
       "tool": "n8n",
       "url": "https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing"
     },
+    "https://github.com/ScraperNode/awesome-n8n-templates": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического поиска LinkedIn URL компаний по списку из Google Sheets с использованием Apify. Предназначен для маркетологов и sales-команд, занимающихся лидогенерацией.",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-28",
+      "metric": "Процент компаний, для которых найден LinkedIn URL (целевой показатель >70%)",
+      "promoted_from_watch": false,
+      "repo_full_name": "ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow (Find Company LinkedIn URLs via Apify + Google Sheets)"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow.json",
+        "Импортировать в n8n",
+        "Настроить Google Sheets credentials (OAuth2)",
+        "Добавить Apify API Key в credentials",
+        "Запустить workflow с тестовым списком из 5 компаний"
+      ],
+      "title": "ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)",
+      "tool": "n8n",
+      "url": "https://github.com/ScraperNode/awesome-n8n-templates"
+    },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
       "confidence": "medium",
@@ -686,6 +719,40 @@
       "tool": "n8n",
       "url": "https://github.com/kingler/n8n_agent"
     },
+    "https://github.com/kossakovsky/n8n-install": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "Репозиторий содержит два практических n8n workflow: WhatsApp-чатбот и ChatGPT email-ответчик с сохранением в Google Sheets. Подходит для начинающих и тех, кто строит первые мессенджер-интеграции.",
+      "final_score": 7.3,
+      "first_recommended": "2026-05-28",
+      "metric": "Входящее WhatsApp-сообщение вызывает автоответ в течение 5 секунд",
+      "promoted_from_watch": false,
+      "repo_full_name": "kossakovsky/n8n-install: Building Your First WhatsApp Chatbot",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "Building Your First WhatsApp Chatbot",
+        "Send a ChatGPT email reply and save responses to Google Sheets"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON Building Your First WhatsApp Chatbot.json",
+        "Импортировать в n8n через Import from file",
+        "Настроить WhatsApp Business API credentials (Meta Developer account)",
+        "Указать webhook URL в настройках WhatsApp Business",
+        "Отправить тестовое сообщение и проверить автоответ"
+      ],
+      "title": "kossakovsky/n8n-install: Building Your First WhatsApp Chatbot",
+      "tool": "n8n",
+      "url": "https://github.com/kossakovsky/n8n-install"
+    },
     "https://github.com/lucaswalter/n8n-ai-automations": {
       "category": "general_workflow",
       "confidence": "high",
@@ -822,6 +889,41 @@
       "tool": "n8n",
       "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
     },
+    "https://github.com/ritik-prog/n8n-automation-templates-5000": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "Репозиторий с 3 продвинутыми n8n workflow: генерация compliance-отчётов для здравоохранения, автоматизация event-маркетинга и анализ затрат на поддержку. Ориентирован на enterprise и regulated industries.",
+      "final_score": 7.0,
+      "first_recommended": "2026-05-28",
+      "metric": "Отчёт сгенерирован и доставлен получателям без ручного вмешательства",
+      "promoted_from_watch": false,
+      "repo_full_name": "ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "auto-generate-healthcare-compliance-reports",
+        "create-automated-event-marketing-workflows",
+        "generate-support-cost-analysis-reports"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать auto-generate-healthcare-compliance-reports.json",
+        "Импортировать в n8n",
+        "Просмотреть node-граф для понимания источников данных",
+        "Настроить credentials для источника данных (Google Sheets / БД)",
+        "Запустить с тестовым набором данных"
+      ],
+      "title": "ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports",
+      "tool": "n8n",
+      "url": "https://github.com/ritik-prog/n8n-automation-templates-5000"
+    },
     "https://github.com/sinabarimd/reputation-engine": {
       "category": "content_workflow",
       "confidence": "medium",
@@ -858,6 +960,39 @@
       "title": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
       "tool": "n8n",
       "url": "https://github.com/sinabarimd/reputation-engine"
+    },
+    "https://github.com/splx-ai/agentic-radar": {
+      "category": "data_workflow",
+      "confidence": "high",
+      "description": "Репозиторий agentic-radar от splx-ai содержит n8n workflow для многоагентной системы работы с базами данных. Предназначен для разработчиков и инженеров, строящих AI-агентные пайплайны с доступом к данным.",
+      "final_score": 7.3,
+      "first_recommended": "2026-05-28",
+      "metric": "Успешный ответ агента на запрос к БД без ошибок выполнения",
+      "promoted_from_watch": false,
+      "repo_full_name": "splx-ai/agentic-radar: multi_agent (Multi-Agent Database System)",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "multi_agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Открыть n8n, перейти в Workflows → Import from file",
+        "Загрузить multi_agent.json",
+        "Настроить credentials для БД (PostgreSQL/MySQL) и OpenAI API",
+        "Запустить тестовый прогон с тестовым запросом к агенту"
+      ],
+      "title": "splx-ai/agentic-radar: multi_agent (Multi-Agent Database System)",
+      "tool": "n8n",
+      "url": "https://github.com/splx-ai/agentic-radar"
     },
     "https://github.com/theaiautomators/insights-lm-public": {
       "category": "content_workflow",
@@ -930,6 +1065,39 @@
       "tool": "n8n",
       "url": "https://github.com/thecloudstation/n8n-workflows"
     },
+    "https://github.com/traversaal-ai/agents-in-action": {
+      "category": "content_workflow",
+      "confidence": "high",
+      "description": "n8n workflow-агент для автоматической генерации блог-постов, запускаемый через webhook. Часть репозитория traversaal-ai с примерами AI-агентов в действии.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-28",
+      "metric": "Получение готового текста блог-поста в ответе на webhook-запрос",
+      "promoted_from_watch": false,
+      "repo_full_name": "traversaal-ai/agents-in-action: blog_post_agent_webhook",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "blog_post_agent_webhook"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать blog_post_agent_webhook.json",
+        "Импортировать в n8n",
+        "Настроить OpenAI API credentials",
+        "Активировать workflow (webhook станет активным)",
+        "Отправить POST-запрос на webhook URL с JSON {\"topic\": \"тест\"}"
+      ],
+      "title": "traversaal-ai/agents-in-action: blog_post_agent_webhook",
+      "tool": "n8n",
+      "url": "https://github.com/traversaal-ai/agents-in-action"
+    },
     "https://github.com/traylorre/openclaw-mac": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -999,6 +1167,74 @@
       "title": "weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: Personalized Deal Content via Zoho CRM + GPT-4o-mini + Gmail",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
+    },
+    "https://github.com/workfloows/workfloows-tutorials": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "Репозиторий содержит два n8n workflow: OCR-обработка счетов через Mindee API с сохранением в Notion, и трекер портфеля акций через Alpha Vantage. Предназначен для финансовых операций и бухгалтерии.",
+      "final_score": 7.2,
+      "first_recommended": "2026-05-28",
+      "metric": "Точность извлечения полей счёта (поставщик, сумма, дата) — целевой показатель >90%",
+      "promoted_from_watch": false,
+      "repo_full_name": "workfloows/workfloows-tutorials: invoice-ocr-assistant-mindee",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "invoice-ocr-assistant-mindee",
+        "stock-portfolio-tracker-alpha-vantage"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать invoice-ocr-assistant-mindee.json",
+        "Импортировать в n8n",
+        "Создать Mindee API аккаунт и получить API Key",
+        "Подключить Notion через n8n credentials (Integration Token)",
+        "Загрузить тестовый PDF счёт и запустить workflow"
+      ],
+      "title": "workfloows/workfloows-tutorials: invoice-ocr-assistant-mindee",
+      "tool": "n8n",
+      "url": "https://github.com/workfloows/workfloows-tutorials"
+    },
+    "https://github.com/zengfr/n8n-workflow-all-templates": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "Репозиторий содержит два n8n workflow: система продажи билетов с автогенерацией QR-кодов через Google Sheets и Gmail, а также AI-уведомления о релизах n8n через GPT-5-Mini. Подходит для организаторов событий и DevOps-команд.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-28",
+      "metric": "Участник получает email с QR-кодом в течение 30 секунд после регистрации",
+      "promoted_from_watch": false,
+      "repo_full_name": "zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "9280_Event_Ticketing_Backend__Auto_QR_Tickets_with_Google_Sheets___Gmail",
+        "10236_AI-Powered_n8n_Release_Notes_Summary_Notifications_via_Gmail_with_GPT-5-Mini"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON файл 9280_Event_Ticketing_Backend...",
+        "Импортировать в n8n",
+        "Настроить Google Sheets и Gmail credentials",
+        "Создать тестовую таблицу с регистрациями",
+        "Запустить workflow и проверить получение QR-кода на email"
+      ],
+      "title": "zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)",
+      "tool": "n8n",
+      "url": "https://github.com/zengfr/n8n-workflow-all-templates"
     }
   }
 }
