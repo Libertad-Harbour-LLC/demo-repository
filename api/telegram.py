@@ -89,12 +89,15 @@ _SKILLS_CATS = {
     "general_skill": "🔧 Общее",
 }
 _WORKFLOW_CATS = {
-    "marketing_workflow": "📈 Marketing",
-    "sales_workflow": "💰 Sales",
-    "data_workflow": "📊 Data",
+    "marketing_workflow": "📈 Маркетинг",
+    "sales_workflow": "💰 Продажи",
+    "content_workflow": "✍️ Контент",
+    "video_workflow": "🎬 Видео",
+    "photo_workflow": "📸 Фото и картинки",
+    "web_workflow": "🌐 Веб и сайты",
+    "data_workflow": "📊 Данные",
     "devops_workflow": "🛠 DevOps",
-    "content_workflow": "🎨 Content",
-    "general_workflow": "🔧 General",
+    "general_workflow": "🔧 Общее",
 }
 
 SOURCES: dict[str, Source] = {

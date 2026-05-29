@@ -116,8 +116,9 @@ def test_known_category_label_not_double_escaped():
         "category": "marketing_workflow",
     }
     line = _format_item_line(item, "n8n")
-    # Human label is "📈 Marketing" — emoji + word, no underscore
-    assert "📈 Marketing" in line
+    # Human label is "📈 Маркетинг" — emoji + word, no raw slug / underscore
+    assert "📈 Маркетинг" in line
+    assert "marketing_workflow" not in line
 
 
 def test_safe_cat_label_handles_none_slug():
