@@ -35,6 +35,7 @@ GITHUB_CODE_QUERIES = [
     'filename:SKILL.md video OR youtube OR shorts OR subtitle',
     'filename:SKILL.md image OR photo OR design OR presentation OR slides',
     'filename:SKILL.md website OR landing OR frontend OR webflow',
+    'filename:SKILL.md agent OR chatbot OR bot OR assistant',
 ]
 
 REDDIT_SUBREDDITS = [
@@ -60,6 +61,7 @@ REDDIT_SUBREDDITS = [
     "nocode",
     "copywriting",
     "Blogging",
+    "chatbots",
 ]
 
 REDDIT_KEYWORDS_FILTER = [

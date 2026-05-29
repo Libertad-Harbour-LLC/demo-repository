@@ -48,6 +48,7 @@ GITHUB_CODE_QUERIES_N8N = [
     'extension:json "nodes" "connections" content OR social OR blog',
     'extension:json "nodes" "connections" video OR youtube OR image',
     'extension:json "nodes" "connections" website OR webhook OR wordpress',
+    'extension:json "nodes" "connections" bot OR chatbot OR agent OR telegram OR discord',
 ]
 GITHUB_CODE_QUERIES_MAKE = [
     'extension:json "blueprint" "scenario"',
@@ -58,6 +59,7 @@ GITHUB_CODE_QUERIES_MAKE = [
     'extension:json "modules" marketing OR social OR content',
     'extension:json "modules" video OR image OR youtube',
     'extension:json "modules" website OR wordpress OR shopify',
+    'extension:json "modules" bot OR chatbot OR agent OR telegram',
 ]
 
 REDDIT_SUBREDDITS = [
@@ -80,6 +82,8 @@ REDDIT_SUBREDDITS = [
     "webdev",
     "NewTubers",
     "ecommerce",
+    "AI_Agents",
+    "chatbots",
 ]
 REDDIT_KEYWORDS_FILTER = [
     "workflow",
