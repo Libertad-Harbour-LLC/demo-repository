@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 58
+Total: 62
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-29 | [viclafouch/mui-otp-input](https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills) | deep-dive, react-useeffect, update-deps, +1 more |  | 6.8 | medium | git clone https://github.com/viclafouch/mui-otp-input && cd mui-otp-input |
+| 2026-05-29 | [pr-pm/prpm](https://github.com/pr-pm/prpm/tree/main/.claude/skills) | adding-new-ai-format, agent-builder, aws-beanstalk-expert, +22 more |  | 8.0 | medium | git clone https://github.com/pr-pm/prpm && cd prpm |
+| 2026-05-29 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip/tree/master/.claude/skills/design-guide) | design-guide |  | 7.8 | high | git clone https://github.com/paperclipai/paperclip && cd paperclip |
+| 2026-05-29 | [nicepkg/ai-workflow](https://github.com/nicepkg/ai-workflow/tree/main/.claude/skills) | add-new-skills-to-workflow, legacy-to-ai-ready, remove-old-skills-from-workflow, +4 more |  | 7.3 | medium | git clone https://github.com/nicepkg/ai-workflow && cd ai-workflow |
 | 2026-05-28 | [quickwit-oss/tantivy](https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills) | rationalize-deps, simple-pr, update-changelog |  | 7.4 | high | git clone https://github.com/quickwit-oss/tantivy && cp -r .claude/skills/rationalize-deps /your-rust-project/.claude... |
 | 2026-05-28 | [mx-space/core](https://github.com/mx-space/core/tree/master/.claude/skills) | api-conventions, create-e2e-test, create-module, +7 more |  | 6.6 | high | git clone https://github.com/mx-space/core && cp -r .claude/skills/zod-patterns .claude/skills/api-conventions /your-... |
 | 2026-05-28 | [divinevideo/divine-mobile](https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills) | flutter-startup-network-blocking, fastly-compute-deployment-debugging, clickhouse-aggregatingmergetree-state-merge, +6 more |  | 7.2 | high | git clone https://github.com/divinevideo/divine-mobile && выбрать 2-3 релевантных skills (например, riverpod-infinite... |

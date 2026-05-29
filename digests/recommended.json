@@ -2357,6 +2357,42 @@
       "title": "ngocsangyem/MeowKit",
       "url": "https://github.com/ngocsangyem/MeowKit/tree/main/.claude/skills"
     },
+    "https://github.com/nicepkg/ai-workflow/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "ai-workflow — репозиторий с 7 meta-skills для Claude Code, позволяющими управлять самими skills: создавать новые, добавлять/удалять из воркфлоу, скачивать сторонние. Ориентирован на разработчиков, которые хотят автоматизировать управление Claude Skills в своих проектах.",
+      "final_score": 7.3,
+      "first_recommended": "2026-05-29",
+      "metric": "Время создания нового SKILL.md с нуля vs вручную; качество структуры сгенерированного skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "nicepkg/ai-workflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "add-new-skills-to-workflow",
+        "legacy-to-ai-ready",
+        "remove-old-skills-from-workflow",
+        "resource-scout",
+        "skill-creator",
+        "skill-downloader",
+        "workflow-creator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/nicepkg/ai-workflow && cd ai-workflow",
+        "скопировать .claude/skills/skill-creator/ в свой тестовый проект",
+        "запустить Claude Code и написать: 'Используй skill-creator: создай новый skill для автоматического форматирования commit-сообщений'"
+      ],
+      "title": "nicepkg/ai-workflow",
+      "url": "https://github.com/nicepkg/ai-workflow/tree/main/.claude/skills"
+    },
     "https://github.com/obra/superpowers": {
       "added_manually": true,
       "category": "general_skill",
@@ -2460,6 +2496,36 @@
       ],
       "title": "opendatadiscovery/odd-team",
       "url": "https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills"
+    },
+    "https://github.com/paperclipai/paperclip/tree/master/.claude/skills/design-guide": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "paperclip — крупный open-source проект (68k звёзд) с одним Claude Skill: design-guide. Судя по названию, skill содержит гайдлайны по дизайну UI-компонентов, которые Claude Code подхватывает автоматически при работе в этом репо.",
+      "final_score": 7.8,
+      "first_recommended": "2026-05-29",
+      "metric": "Соответствие сгенерированного компонента design-guide: правильные токены, паттерны, именование",
+      "promoted_from_watch": false,
+      "repo_full_name": "paperclipai/paperclip",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 9,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "design-guide"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/paperclipai/paperclip && cd paperclip",
+        "убедиться, что .claude/skills/design-guide/SKILL.md существует и прочитать его содержимое",
+        "открыть Claude Code и попросить: 'Создай новый UI-компонент согласно design-guide skill'"
+      ],
+      "title": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip/tree/master/.claude/skills/design-guide"
     },
     "https://github.com/parcadei/Continuous-Claude-v3/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -2573,6 +2639,60 @@
       ],
       "title": "petenelson/wp-rest-api-log",
       "url": "https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills"
+    },
+    "https://github.com/pr-pm/prpm/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "prpm — репозиторий-коллекция из 39 Claude Skills, охватывающих создание агентов, hook-файлов, команд и правил для Claude Code, Cursor, Kiro, Windsurf и других IDE-ассистентов. Ориентирован на разработчиков, которые хотят ускорить настройку AI-воркфлоу в своих проектах.",
+      "final_score": 8.0,
+      "first_recommended": "2026-05-29",
+      "metric": "Скорость и качество генерации готового агента/команды по сравнению с ручным написанием CLAUDE.md",
+      "promoted_from_watch": false,
+      "repo_full_name": "pr-pm/prpm",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 25,
+      "skills_in_repo": [
+        "adding-new-ai-format",
+        "agent-builder",
+        "aws-beanstalk-expert",
+        "beanstalk-deploy",
+        "claude-hook-writer",
+        "creating-agents-md",
+        "creating-claude-agents",
+        "creating-claude-commands",
+        "creating-claude-hooks",
+        "creating-claude-rules",
+        "creating-cursor-rules-skill",
+        "creating-kiro-agents",
+        "creating-skills",
+        "documentation-standards",
+        "github-actions-testing",
+        "human-writing",
+        "integrating-stripe-webhooks",
+        "karen-repo-reviewer",
+        "npm-trusted-publishing",
+        "postgres-migrations",
+        "pulumi-troubleshooting",
+        "self-improving",
+        "slash-command-builder",
+        "thoroughness",
+        "typescript-type-safety"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/pr-pm/prpm && cd prpm",
+        "скопировать папку .claude/skills/creating-claude-agents/ в свой проект под .claude/skills/",
+        "открыть Claude Code в своём проекте и написать: 'Используй skill creating-claude-agents: создай агента для code review'"
+      ],
+      "title": "pr-pm/prpm",
+      "url": "https://github.com/pr-pm/prpm/tree/main/.claude/skills"
     },
     "https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -2944,6 +3064,39 @@
       ],
       "title": "theodo-group/debug-that",
       "url": "https://github.com/theodo-group/debug-that/tree/main/.claude/skills"
+    },
+    "https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "mui-otp-input — библиотека React-компонента OTP-ввода для Material UI. Содержит 4 Claude Skills: deep-dive (глубокий анализ кода), react-useeffect (паттерны useEffect), update-deps (обновление зависимостей), web-design-guidelines. Полезна разработчикам React/MUI-проектов.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-29",
+      "metric": "Количество найденных и корректно исправленных useEffect-антипаттернов в тестовом React-проекте",
+      "promoted_from_watch": false,
+      "repo_full_name": "viclafouch/mui-otp-input",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "deep-dive",
+        "react-useeffect",
+        "update-deps",
+        "web-design-guidelines"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/viclafouch/mui-otp-input && cd mui-otp-input",
+        "скопировать .claude/skills/react-useeffect/ в свой React-проект под .claude/skills/",
+        "открыть Claude Code и написать: 'Проверь использование useEffect в src/ и исправь антипаттерны согласно react-useeffect skill'"
+      ],
+      "title": "viclafouch/mui-otp-input",
+      "url": "https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills"
     },
     "https://github.com/vinzenz/prd-breakdown-execute/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
