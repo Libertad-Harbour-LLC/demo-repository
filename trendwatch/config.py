@@ -27,14 +27,39 @@ GITHUB_CODE_QUERIES = [
     'path:skills filename:SKILL.md "claude"',
     'filename:SKILL.md "name:" "description:"',  # YAML-frontmatter skills at root or any depth
     'path:.claude filename:SKILL.md',
+    # Domain-targeted SKILL.md queries — counter the coding bias by directly
+    # surfacing non-coding skills (marketing, content, video, photo, web, design)
+    # that the popularity sort would otherwise truncate below dev-tool repos.
+    'filename:SKILL.md marketing OR seo OR copywriting',
+    'filename:SKILL.md content OR blog OR newsletter OR social',
+    'filename:SKILL.md video OR youtube OR shorts OR subtitle',
+    'filename:SKILL.md image OR photo OR design OR presentation OR slides',
+    'filename:SKILL.md website OR landing OR frontend OR webflow',
 ]
 
 REDDIT_SUBREDDITS = [
+    # Claude / AI / coding communities
     "ClaudeAI",
     "ChatGPTCoding",
     "AI_Agents",
     "cursor",
     "LocalLLaMA",
+    # Domain communities — broaden discovery beyond coding. The
+    # REDDIT_KEYWORDS_FILTER below still keeps only skill-related posts,
+    # so these surface Claude-skill discussion in non-dev niches without
+    # flooding the digest with generic posts.
+    "marketing",
+    "SEO",
+    "content_marketing",
+    "socialmedia",
+    "Entrepreneur",
+    "NewTubers",
+    "VideoEditing",
+    "webdev",
+    "web_design",
+    "nocode",
+    "copywriting",
+    "Blogging",
 ]
 
 REDDIT_KEYWORDS_FILTER = [
@@ -54,7 +79,9 @@ SOURCES = {
     "threads": False,   # disabled per Sprint 3
 }
 
-MAX_ITEMS_PER_SOURCE = 50  # was 15 — too aggressive, hid most candidates from the LLM
+MAX_ITEMS_PER_SOURCE = 80  # was 50 — gave more headroom so low-star niche
+# (marketing/content/video/photo/web/design) skills survive the star-sort
+# truncation instead of being crowded out by high-star dev-tool repos.
 
 VERIFY_GITHUB_SKILLS = True  # if True, hit the repo's /.claude/skills/ path to confirm
 

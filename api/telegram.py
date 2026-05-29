@@ -78,10 +78,15 @@ class Source:
 
 
 _SKILLS_CATS = {
-    "marketing_skill": "📈 Marketing",
-    "vibe_coding_skill": "💻 Vibe coding",
-    "ai_content_skill": "🎨 AI content",
-    "general_skill": "🔧 General",
+    "marketing_skill": "📈 Маркетинг",
+    "content_skill": "✍️ Контент",
+    "video_skill": "🎬 Видео",
+    "photo_skill": "📸 Фото и картинки",
+    "design_skill": "🎨 Дизайн и презентации",
+    "webdev_skill": "🌐 Веб-разработка",
+    "vibe_coding_skill": "💻 Кодинг",
+    "ai_content_skill": "🤖 AI-генерация",
+    "general_skill": "🔧 Общее",
 }
 _WORKFLOW_CATS = {
     "marketing_workflow": "📈 Marketing",
