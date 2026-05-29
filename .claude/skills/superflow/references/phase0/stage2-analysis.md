@@ -1,0 +1,303 @@
+# Phase 0 — Stage 2: Analysis
+<!-- Stage 2, Todos: dispatch 5 agents, wait, cross-check synthesis -->
+
+```bash
+# Event emission preloader — idempotent, runs at top of every phase doc bash usage.
+# Tries (in order): already-sourced sf_emit → local tools/sf-emit.sh → runtime-aware paths → no-op.
+# Also restores SUPERFLOW_RUN_ID from state if unset.
+if ! command -v sf_emit >/dev/null 2>&1; then
+  for _sf_path in \
+      "./tools/sf-emit.sh" \
+      "$HOME/.claude/skills/superflow/tools/sf-emit.sh" \
+      "$HOME/.codex/skills/superflow/tools/sf-emit.sh" \
+      "$HOME/.agents/skills/superflow/tools/sf-emit.sh"; do
+    if [ -f "$_sf_path" ]; then source "$_sf_path"; break; fi
+  done
+  command -v sf_emit >/dev/null 2>&1 || sf_emit() { return 0; }
+fi
+if [ -z "${SUPERFLOW_RUN_ID:-}" ] && [ -f .superflow-state.json ]; then
+  SUPERFLOW_RUN_ID=$(python3 -c 'import json; print(json.load(open(".superflow-state.json")).get("context",{}).get("run_id",""))' 2>/dev/null)
+  [ -n "$SUPERFLOW_RUN_ID" ] && export SUPERFLOW_RUN_ID
+fi
+# If run_id still unavailable after best-effort restore, install no-op to avoid set -e aborts
+if [ -z "${SUPERFLOW_RUN_ID:-}" ]; then
+  sf_emit() { return 0; }
+fi
+```
+
+Runs after Stage 1 confirms `$PREFLIGHT`. Dispatches 5 parallel specialized agents to audit the codebase, then cross-checks findings for consistency. Output is an internal evidence bundle saved to state for Stage 3.
+
+**All documentation output in English.** Communicate with the user in their language.
+
+---
+
+## Stage Structure
+
+```
+Stage 2: "Analysis"
+  Todos:
+  - "Read $PREFLIGHT from state file"
+  - "Dispatch architecture agent"
+  - "Dispatch code quality agent"
+  - "Dispatch security agent (Codex or Claude)"
+  - "Dispatch DevOps agent"
+  - "Dispatch documentation agent"
+  - "Wait for all agents"
+  - "Cross-check synthesis"
+  - "Save evidence bundle to state"
+```
+
+If Telegram MCP available (`mcp__plugin_telegram_telegram__reply` tool is present), send at stage start:
+```
+mcp__plugin_telegram_telegram__reply(chat_id: <chat_id from context>, text: "Analyzing your project...")
+```
+
+TaskCreate at stage start:
+```
+TaskCreate(
+  title: "Phase 0 — Stage 2: Analysis",
+  todos: [
+    "Read $PREFLIGHT from state file",
+    "Dispatch architecture agent",
+    "Dispatch code quality agent",
+    "Dispatch security agent (Codex or Claude)",
+    "Dispatch DevOps agent",
+    "Dispatch documentation agent",
+    "Wait for all agents",
+    "Cross-check synthesis",
+    "Save evidence bundle to state"
+  ]
+)
+```
+
+---
+
+## Step 1: Read $PREFLIGHT from State File
+
+Context compaction may have erased earlier variables. Always reload from disk:
+
+```bash
+python3 -c "import json; s=json.load(open('.superflow-state.json')); print(json.dumps(s.get('context',{}).get('preflight',{}), indent=2))"
+```
+
+This gives `$PREFLIGHT` with: stack, framework, team_size, ci, experience, formatters, etc.
+
+---
+
+## Step 2: Update Stage in State
+
+```bash
+python3 -c "
+import json, datetime
+s = json.load(open('.superflow-state.json'))
+s['stage'] = 'analysis'
+s['stage_index'] = 1
+s['last_updated'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+json.dump(s, open('.superflow-state.json', 'w'), indent=2)
+"
+sf_emit stage.start stage=analysis phase:int=0
+```
+
+---
+
+## Step 3: Dispatch 5 Parallel Agents
+
+All five agents launch simultaneously with `run_in_background: true`. Include `$PREFLIGHT` in every prompt so agents adjust depth to the project's stack and team context.
+
+Before dispatching each agent, emit a dispatch event and capture its ID for correlation. After each agent returns, emit a complete event. Repeat this pair for all 5 agents:
+
+```bash
+# Pattern for each agent (repeat per agent, substituting agent_type, task, model):
+AGENT_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+SF_PARENT_ID="$AGENT_ID" sf_emit agent.dispatch agent_type=deep-analyst task="Phase 0: architecture analysis" model=opus
+# Agent() call here (run_in_background: true)
+# After agent returns:
+sf_emit agent.complete role=architecture-analyst agent_id="$AGENT_ID"
+# On failure instead: sf_emit agent.fail role=architecture-analyst agent_id="$AGENT_ID"
+```
+
+### Agent 1 — Architecture (deep-analyst)
+
+```
+Agent(
+  subagent_type: "deep-analyst",
+  run_in_background: true,
+  description: "Architecture analysis",
+  prompt: """
+ultrathink. You are auditing the architecture of this project.
+Context from preflight: $PREFLIGHT
+
+Mandatory checks — show evidence (file path, line count, code snippet) for every finding:
+1. List all top-level directories with file counts and total LOC per directory.
+2. Identify frameworks/libraries by reading actual `import`/`require` statements.
+   NEVER guess from directory names — grep for imports explicitly.
+3. Map the data model: list all DB models/schemas with field counts.
+4. Find architecture violations: does business logic import from adapters/infrastructure?
+   List every violation as file:line with the offending import.
+5. Identify the top 10 largest files by LOC — these are refactoring candidates.
+6. Map key entry points (API routes, CLI commands, event handlers).
+
+Return a structured evidence bundle in JSON:
+{"stack":"...","framework":"...","top_dirs":[...],"violations":[...],"largest_files":[...],"entry_points":[...]}
+"""
+)
+```
+
+### Agent 2 — Code Quality (deep-analyst)
+
+```
+Agent(
+  subagent_type: "deep-analyst",
+  run_in_background: true,
+  description: "Code quality analysis",
+  prompt: """
+ultrathink. You are auditing code quality.
+Context from preflight: $PREFLIGHT
+
+Mandatory checks — show evidence for every finding:
+1. List ALL files >500 LOC with exact line counts.
+2. Find all TODO/FIXME/HACK/XXX comments — total count and top 10 locations.
+3. Count test files vs source files — calculate the ratio.
+4. Find source files with NO corresponding test file.
+5. Check for code duplication: find functions/components with similar names or logic across modules. List each pair with file:line. Focus on utility functions, validation logic, and data transformations — these are duplicated most often.
+6. Check linter config exists and is enforced (pre-commit hooks, CI checks).
+7. Find dead code: unused imports, unreachable functions, orphaned event handlers, components with zero references. Use project tooling if available (knip, ts-prune, vulture). Trace call chains — dead code often hides behind 2-3 levels of indirection.
+8. Check for type redefinition: search for types/interfaces that duplicate auto-generated types (*.generated.ts, *.d.ts, __generated__/, Prisma types, GraphQL types, OpenAPI schemas). Red flags: `as unknown as`, `as any` casts, interface names that shadow generated ones. List each redefinition with file:line and the original generated type it duplicates.
+
+Adjust depth for team context: if solo+beginner flag basics (missing linter, zero tests);
+if team, flag shared conventions and coverage gaps.
+
+Return structured JSON evidence bundle.
+"""
+)
+```
+
+### Agent 3 — Security (Codex preferred, Claude fallback)
+
+**If Codex is available** (check by running `which codex 2>/dev/null`):
+
+```bash
+$TIMEOUT_CMD 600 codex exec --full-auto -m gpt-5.5 -c model_reasoning_effort=high "$(cat prompts/codex/audit.md)" 2>&1
+```
+
+Run in background (shell background: append `&`, capture PID). Codex focus: hardcoded secrets, injection vectors, dependency CVEs, CI/CD security gaps.
+
+**If Codex is NOT available**, dispatch Claude instead:
+
+```
+Agent(
+  subagent_type: "deep-analyst",
+  run_in_background: true,
+  description: "Security audit",
+  prompt: """
+ultrathink. [Read and follow prompts/security-audit.md]
+Context from preflight: $PREFLIGHT
+Perform a full security audit. Focus: hardcoded secrets, injection risks,
+dependency vulnerabilities, .env exposure, insecure defaults.
+Show evidence (file:line) for every finding. Severity: CRITICAL/HIGH/MEDIUM/LOW.
+Return structured JSON evidence bundle.
+"""
+)
+```
+
+### Agent 4 — DevOps (fast-implementer)
+
+DevOps checks are mechanical — file existence, config patterns. Sonnet is sufficient.
+
+```
+Agent(
+  subagent_type: "fast-implementer",
+  run_in_background: true,
+  description: "DevOps analysis",
+  prompt: """
+You are auditing DevOps and infrastructure configuration.
+Context from preflight: $PREFLIGHT
+
+Mandatory checks — show evidence for every finding:
+1. Docker Compose: count services, flag `latest` image tags, check volume mounts.
+2. CI/CD: list all .github/workflows/*.yml files and what each tests/deploys.
+3. Deploy script: does it run migrations? Rollback steps? Health checks?
+4. Security scanning: is dependabot/renovate/CodeQL configured?
+5. Backup strategy: any evidence of DB backup procedures?
+6. Environment management: .env.example exists? Secrets in .env committed?
+7. .gitignore completeness: check for common misses (.env, __pycache__,
+   node_modules, .worktrees/, *.log, dist/, build/).
+
+Return structured JSON evidence bundle.
+"""
+)
+```
+
+### Agent 5 — Documentation (deep-analyst)
+
+```
+Agent(
+  subagent_type: "deep-analyst",
+  run_in_background: true,
+  description: "Documentation analysis",
+  prompt: """
+ultrathink. You are auditing documentation quality and freshness.
+Context from preflight: $PREFLIGHT
+
+Mandatory checks — show evidence for every finding:
+1. List all documentation files with last-modified dates (use git log).
+2. Compare README claims against actual project state (verify commands, setup steps).
+3. If llms.txt exists: count entries vs actual source directories — coverage %.
+4. If CLAUDE.md exists: verify every documented path exists; test commands are runnable.
+5. Check for stale references: grep for file paths in docs, verify each exists on disk.
+6. API documentation: auto-generated or manual? Is it current?
+
+IMPORTANT: Verify framework names match what you see in actual import statements —
+never accept a name that is only in a directory name or comment.
+
+Return structured JSON evidence bundle.
+"""
+)
+```
+
+---
+
+## Step 4: Wait for All Agents
+
+Do not proceed until all 5 agents complete. If a Codex background process was launched, wait for its PID with `wait $CODEX_PID`.
+
+---
+
+## Step 5: Cross-Check Synthesis
+
+After all agents complete:
+
+1. **Framework name consistency** — do Architecture, Documentation, and Code Quality agents agree on the stack/framework? If any agent named the framework differently, re-read the relevant source file imports to resolve.
+2. **File count consistency** — do LOC counts and file lists align across agents? Note discrepancies.
+3. **Security deduplication** — if both Codex and a Claude security agent ran, merge findings (keep highest severity per finding, deduplicate).
+4. **Compose evidence bundle** — a single dict with keys: `architecture`, `code_quality`, `security`, `devops`, `documentation`, plus a `discrepancies` list (empty if none).
+
+---
+
+## Step 6: Save Evidence Bundle to State
+
+```bash
+python3 -c "
+import json, datetime
+s = json.load(open('.superflow-state.json'))
+s['context']['analysis'] = $EVIDENCE_BUNDLE_JSON
+s['last_updated'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+json.dump(s, open('.superflow-state.json', 'w'), indent=2)
+"
+```
+
+The bundle is **not shown to the user yet** — Stage 3 (Proposal) reads it and composes the health report.
+
+---
+
+## Completion
+
+```bash
+sf_emit stage.end stage=analysis phase:int=0
+```
+
+```
+TaskUpdate(id: <task_id>, status: "completed")
+```
+
+Proceed to Stage 3: re-read `references/phase0/stage3-report.md`.

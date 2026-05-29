@@ -17,6 +17,11 @@ from typing import Iterable
 
 CATEGORIES = (
     "marketing_skill",
+    "content_skill",
+    "video_skill",
+    "photo_skill",
+    "design_skill",
+    "webdev_skill",
     "vibe_coding_skill",
     "ai_content_skill",
     "general_skill",

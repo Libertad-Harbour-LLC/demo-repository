@@ -13,6 +13,11 @@ DEFAULT_BRANCH = "main"
 
 CATEGORIES = (
     "marketing_skill",
+    "content_skill",
+    "video_skill",
+    "photo_skill",
+    "design_skill",
+    "webdev_skill",
     "vibe_coding_skill",
     "ai_content_skill",
     "general_skill",
@@ -31,9 +36,12 @@ def _resolve_repo(repo_full_name: str | None) -> str:
 WORKFLOWS_CATEGORIES = (
     "marketing_workflow",
     "sales_workflow",
+    "content_workflow",
+    "video_workflow",
+    "photo_workflow",
+    "web_workflow",
     "data_workflow",
     "devops_workflow",
-    "content_workflow",
     "general_workflow",
 )
 WORKFLOWS_TOOLS = ("n8n", "make", "other")

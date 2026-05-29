@@ -60,15 +60,34 @@ top_watch/top_skip/best_pick — это РЕПО, не отдельный skill.
 Твоя работа: отсеять НЕ-skills, ранжировать оставшихся, скорить, отобрать что
 тестировать, собрать дайджест.
 
-==== КАТЕГОРИИ ====
-- marketing_skill — SEO, growth, копирайт, контент-дистрибуция, ad ops
-- vibe_coding_skill — IDE/coding-assistant skills (рефактор, дебаг,
-  скаффолдинг, code review, тест-генерация)
-- ai_content_skill — генерация контента (текст, видео-скрипт, image-prompt,
-  audio)
-- general_skill — всё остальное, что подходит под формат Claude Skill, но не
-  попадает в три категории выше (DevOps-skill, research-skill, data-skill и
-  т.п.)
+==== КАТЕГОРИИ (выбери РОВНО одну из enum) ====
+Claude Skills бывают НЕ только про код. Тебе будет попадаться много
+не-кодинговых skills (маркетинг, контент, видео, фото, веб, дизайн) —
+оценивай и категоризируй их НАРАВНЕ с кодинговыми. Не считай кодинг
+категорией по умолчанию.
+- marketing_skill — SEO, growth, реклама/ad ops, email/CRM, аналитика
+  маркетинга, лидогенерация, продающий копирайт
+- content_skill — ведение и производство контента: контент-фабрики, SMM,
+  блоги, рассылки, копирайтинг, сценарии и план постов, рерайт
+- video_skill — всё про видео: сценарии, монтаж, субтитры, YouTube/Shorts/
+  Reels, описания/теги, идеи роликов
+- photo_skill — фото и изображения: генерация картинок (image-prompt),
+  обработка/ретушь, продуктовые фото, визуальные ассеты
+- design_skill — дизайн и презентации: слайды/презентации (decks, pitch),
+  графика, UI/UX, брендинг, оформление
+- webdev_skill — разработка сайтов и веба: лендинги, фронтенд, вёрстка,
+  CMS, no-code сайты, веб-SEO
+- vibe_coding_skill — кодинг-ассистент: рефактор, дебаг, скаффолдинг,
+  code review, генерация тестов, бэкенд/инфра-код
+- ai_content_skill — generic/мультимодальная AI-генерация контента, которая
+  НЕ ложится явно в content/video/photo. Используй только если конкретный
+  доменный bucket не подходит.
+- general_skill — всё остальное в формате Claude Skill, что не попадает в
+  категории выше (research, data, devops, security, productivity и т.п.)
+
+ПРАВИЛО МАРШРУТИЗАЦИИ: сначала пробуй конкретный доменный bucket
+(marketing/content/video/photo/design/webdev/vibe_coding). `general_skill` и
+`ai_content_skill` — только когда доменная категория реально не подходит.
 
 ==== ПРЕДЛОЖЕНИЕ НОВОЙ КАТЕГОРИИ (semi-auto) ====
 Поле `category` ОБЯЗАНО быть одним из четырёх enum-значений выше. Но если ты
@@ -106,6 +125,17 @@ decision:
 - watch    — 4.5 ≤ final_score < 6.5 ИЛИ confidence=low с потенциалом
 - skip     — final_score < 4.5 ИЛИ noise_risk ≥ 8
 
+==== РАЗНООБРАЗИЕ ДОМЕНОВ (анти-перекос) ====
+Если во входных данных есть skills из РАЗНЫХ доменов — дайджест ОБЯЗАН это
+отражать. НЕ заполняй top_test/top_watch одними кодинг-репозиториями, когда
+рядом есть достойные marketing/content/video/photo/design/webdev skills.
+- При близком final_score предпочитай разнообразие категорий: старайся, чтобы
+  из одной категории было не более ~половины пунктов блока.
+- Низкие звёзды у нишевого не-кодингового skill — НЕ повод занижать оценку или
+  слать в skip. Дев-репозитории популярнее по своей природе; оценивай по
+  utility/testability и реальной пользе, а не по популярности в дев-сообществе.
+- Не повышай noise_risk только за то, что skill про маркетинг/контент/видео.
+
 ==== ИСКЛЮЧЕНИЯ (положить в `excluded`) ====
 - not_a_skill: кандидат не является Claude Skill (это просто AI-проект,
   библиотека, агент-фреймворк, voice-assistant, observability-тулза и т.п.).
@@ -132,7 +162,7 @@ decision:
   "executive_summary": "3-5 предложений, развёрнутая картина",
   "rankings": [
     {"rank": 1, "skill": "<owner/repo>",
-     "category": "marketing_skill|vibe_coding_skill|ai_content_skill|general_skill",
+     "category": "marketing_skill|content_skill|video_skill|photo_skill|design_skill|webdev_skill|vibe_coding_skill|ai_content_skill|general_skill",
      "suggested_category": "опционально — slug новой категории, если 4 не подходят (напр. data_skill, devops_skill)",
      "scores": {"novelty": 0-10, "traction": 0-10, "utility": 0-10,
                 "testability": 0-10, "business_impact": 0-10, "noise_risk": 0-10},
@@ -143,7 +173,7 @@ decision:
   ],
   "top_test": [
     {"name": "<owner/repo>",
-     "category": "marketing_skill|vibe_coding_skill|ai_content_skill|general_skill",
+     "category": "marketing_skill|content_skill|video_skill|photo_skill|design_skill|webdev_skill|vibe_coding_skill|ai_content_skill|general_skill",
      "url": "ОБЯЗАТЕЛЬНО — на .claude/skills папку репо или сам репо, НЕ на твит",
      "source": "github|reddit|twitter|threads",
      "skills_in_repo": ["имена skills внутри репо (из item.skills[].name)"],
@@ -160,7 +190,7 @@ decision:
   ],
   "top_watch": [
     {"name": "<owner/repo>",
-     "category": "marketing_skill|vibe_coding_skill|ai_content_skill|general_skill",
+     "category": "marketing_skill|content_skill|video_skill|photo_skill|design_skill|webdev_skill|vibe_coding_skill|ai_content_skill|general_skill",
      "url": "ОБЯЗАТЕЛЬНО — на репо/папку skills", "source": "...",
      "description": "ОБЯЗАТЕЛЬНО — 1-2 нейтральных предложения о репо для карточки в боте. Те же правила, что в top_test.description.",
      "why_interesting": "...", "signal_to_wait": "..."}

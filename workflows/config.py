@@ -41,20 +41,49 @@ GITHUB_CODE_QUERIES_N8N = [
     'extension:json "nodes" "connections" "n8n-nodes-base"',
     'path:n8n extension:json "workflow"',
     'filename:workflow.json "n8n"',
+    # Domain-targeted — counter the devops/data bias by directly surfacing
+    # marketing/content/video/photo/web n8n workflows that the popularity
+    # sort would otherwise truncate below infra/automation repos.
+    'extension:json "nodes" "connections" marketing OR seo OR leads',
+    'extension:json "nodes" "connections" content OR social OR blog',
+    'extension:json "nodes" "connections" video OR youtube OR image',
+    'extension:json "nodes" "connections" website OR webhook OR wordpress',
+    'extension:json "nodes" "connections" bot OR chatbot OR agent OR telegram OR discord',
 ]
 GITHUB_CODE_QUERIES_MAKE = [
     'extension:json "blueprint" "scenario"',
     'path:blueprints extension:json "modules"',
     'extension:json "make" "scenario" "modules"',
     'filename:blueprint.json',
+    # Domain-targeted Make blueprints (see n8n note above).
+    'extension:json "modules" marketing OR social OR content',
+    'extension:json "modules" video OR image OR youtube',
+    'extension:json "modules" website OR wordpress OR shopify',
+    'extension:json "modules" bot OR chatbot OR agent OR telegram',
 ]
 
 REDDIT_SUBREDDITS = [
+    # Automation / no-code communities
     "n8n",
     "MakeAutomations",
     "integromat",
     "automation",
     "nocode",
+    # Domain communities — broaden discovery beyond devops/data automation.
+    # REDDIT_KEYWORDS_FILTER still keeps only workflow/template/json posts, so
+    # these surface domain-specific automations without flooding the digest.
+    "marketing",
+    "socialmedia",
+    "content_marketing",
+    "SEO",
+    "Entrepreneur",
+    "smallbusiness",
+    "SaaS",
+    "webdev",
+    "NewTubers",
+    "ecommerce",
+    "AI_Agents",
+    "chatbots",
 ]
 REDDIT_KEYWORDS_FILTER = [
     "workflow",
@@ -72,7 +101,9 @@ SOURCES = {
     "reddit": True,
 }
 
-MAX_ITEMS_PER_SOURCE = 50  # was 15 — too aggressive, hid most candidates from the LLM
+MAX_ITEMS_PER_SOURCE = 80  # was 50 — gave more headroom so low-star niche
+# (marketing/content/video/photo/web) workflows survive the star-sort
+# truncation instead of being crowded out by high-star devops/automation repos.
 
 # Verification: for n8n, fetch the JSON and check it has "nodes" and "connections" keys.
 # For Make, check for "blueprint"/"flow" structure. Skip verification if file is too big.
@@ -91,9 +122,12 @@ DIGEST_DIR = DATA_DIR  # daily YYYY-MM-DD.md goes here
 CATEGORIES = (
     "marketing_workflow",
     "sales_workflow",
+    "content_workflow",
+    "video_workflow",
+    "photo_workflow",
+    "web_workflow",
     "data_workflow",
     "devops_workflow",
-    "content_workflow",
     "general_workflow",
 )
 

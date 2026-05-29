@@ -78,18 +78,26 @@ class Source:
 
 
 _SKILLS_CATS = {
-    "marketing_skill": "📈 Marketing",
-    "vibe_coding_skill": "💻 Vibe coding",
-    "ai_content_skill": "🎨 AI content",
-    "general_skill": "🔧 General",
+    "marketing_skill": "📈 Маркетинг",
+    "content_skill": "✍️ Контент",
+    "video_skill": "🎬 Видео",
+    "photo_skill": "📸 Фото и картинки",
+    "design_skill": "🎨 Дизайн и презентации",
+    "webdev_skill": "🌐 Веб-разработка",
+    "vibe_coding_skill": "💻 Кодинг",
+    "ai_content_skill": "🤖 AI-генерация",
+    "general_skill": "🔧 Общее",
 }
 _WORKFLOW_CATS = {
-    "marketing_workflow": "📈 Marketing",
-    "sales_workflow": "💰 Sales",
-    "data_workflow": "📊 Data",
+    "marketing_workflow": "📈 Маркетинг",
+    "sales_workflow": "💰 Продажи",
+    "content_workflow": "✍️ Контент",
+    "video_workflow": "🎬 Видео",
+    "photo_workflow": "📸 Фото и картинки",
+    "web_workflow": "🌐 Веб и сайты",
+    "data_workflow": "📊 Данные",
     "devops_workflow": "🛠 DevOps",
-    "content_workflow": "🎨 Content",
-    "general_workflow": "🔧 General",
+    "general_workflow": "🔧 Общее",
 }
 
 SOURCES: dict[str, Source] = {
