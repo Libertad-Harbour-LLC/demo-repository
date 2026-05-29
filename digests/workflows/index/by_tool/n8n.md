@@ -1,9 +1,12 @@
 # Recommended — tool: n8n
 
-Total: 34
+Total: 37
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-29 | [akahappygit/AI-Lead-Generation-Automation: Lead Scraper](https://github.com/akahappygit/AI-Lead-Generation-Automation) | Lead Scraper |  | 6.7 | medium | Скачать Lead Scraper.json из папки workflows/ |
+| 2026-05-29 | [MinaSaad1/n8n-data-analyst-agent: 01-main-agent](https://github.com/MinaSaad1/n8n-data-analyst-agent) | 01-main-agent, 02-sub-run-sql-capped, 03-sub-generate-chart, +2 more |  | 7.0 | medium | Скачать все 5 JSON из папки workflows/ репозитория |
+| 2026-05-29 | [JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia](https://github.com/JeffersonMFti/agente-dra-julia-advocacia) | dra-julia-agente-ia-advocacia, dra-julia-agente-ia-advocacia.v1.bak |  | 6.5 | medium | Скачать dra-julia-agente-ia-advocacia.json из папки workflows/ |
 | 2026-05-28 | [zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)](https://github.com/zengfr/n8n-workflow-all-templates) | 9280_Event_Ticketing_Backend__Auto_QR_Tickets_with_Google_Sheets___Gmail, 10236_AI-Powered_n8n_Release_Notes_Summary_Notifications_via_Gmail_with_GPT-5-Mini |  | 6.5 | medium | Скачать JSON файл 9280_Event_Ticketing_Backend... |
 | 2026-05-28 | [workfloows/workfloows-tutorials: invoice-ocr-assistant-mindee](https://github.com/workfloows/workfloows-tutorials) | invoice-ocr-assistant-mindee, stock-portfolio-tracker-alpha-vantage |  | 7.2 | medium | Скачать invoice-ocr-assistant-mindee.json |
 | 2026-05-28 | [traversaal-ai/agents-in-action: blog_post_agent_webhook](https://github.com/traversaal-ai/agents-in-action) | blog_post_agent_webhook |  | 6.5 | high | Скачать blog_post_agent_webhook.json |

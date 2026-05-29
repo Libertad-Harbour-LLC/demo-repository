@@ -210,6 +210,77 @@
       "tool": "make",
       "url": "https://github.com/Endgame-Labs/mechanizer"
     },
+    "https://github.com/JeffersonMFti/agente-dra-julia-advocacia": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "AI-агент для юридической практики (адвокатура), построенный на n8n. Автоматизирует взаимодействие с клиентами адвокатского бюро: приём запросов, первичные ответы и маршрутизация дел.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-29",
+      "metric": "Процент корректно обработанных клиентских запросов без вмешательства юриста",
+      "promoted_from_watch": false,
+      "repo_full_name": "JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "dra-julia-agente-ia-advocacia",
+        "dra-julia-agente-ia-advocacia.v1.bak"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать dra-julia-agente-ia-advocacia.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить credentials: AI-модель (OpenAI/Claude) и канал входящих сообщений (Telegram/WhatsApp/webhook)",
+        "Отправить тестовый запрос клиента и проверить ответ агента",
+        "Протестировать сценарий маршрутизации сложного запроса"
+      ],
+      "title": "JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia",
+      "tool": "n8n",
+      "url": "https://github.com/JeffersonMFti/agente-dra-julia-advocacia"
+    },
+    "https://github.com/MinaSaad1/n8n-data-analyst-agent": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "Мультиагентный data-analyst на n8n: набор из 5 взаимосвязанных workflow для выполнения SQL-запросов, генерации чартов, поиска по схеме БД и утренних брифингов. Подойдёт аналитикам и командам, которым нужен AI-агент поверх существующей базы данных.",
+      "final_score": 7.0,
+      "first_recommended": "2026-05-29",
+      "metric": "Количество успешно отвеченных SQL-вопросов без ошибок агента",
+      "promoted_from_watch": false,
+      "repo_full_name": "MinaSaad1/n8n-data-analyst-agent: 01-main-agent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "01-main-agent",
+        "02-sub-run-sql-capped",
+        "03-sub-generate-chart",
+        "04-sub-search-schema-docs",
+        "05-briefing-morning"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 5 JSON из папки workflows/ репозитория",
+        "Импортировать workflow поочерёдно в n8n через Import Workflow",
+        "Настроить credentials: подключение к БД (PostgreSQL/MySQL) и OpenAI API key",
+        "Запустить 01-main-agent с тестовым вопросом на языке",
+        "Проверить, что суб-агенты корректно вызываются и возвращают данные"
+      ],
+      "title": "MinaSaad1/n8n-data-analyst-agent: 01-main-agent",
+      "tool": "n8n",
+      "url": "https://github.com/MinaSaad1/n8n-data-analyst-agent"
+    },
     "https://github.com/MohElshamy1994/n8n-course-Projetcs": {
       "category": "general_workflow",
       "confidence": "high",
@@ -375,6 +446,39 @@
       "title": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main",
       "tool": "n8n",
       "url": "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration"
+    },
+    "https://github.com/akahappygit/AI-Lead-Generation-Automation": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматизированного сбора лидов с помощью AI. Предназначен для маркетологов и sales-команд, которым нужен потоковый скрепинг контактов без ручного труда.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-29",
+      "metric": "Количество собранных и валидированных лидов за один прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "akahappygit/AI-Lead-Generation-Automation: Lead Scraper",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Lead Scraper"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать Lead Scraper.json из папки workflows/",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить источник данных (URL или API) и credentials для AI-провайдера",
+        "Задать параметры фильтрации лидов",
+        "Запустить workflow и проверить выходной список контактов"
+      ],
+      "title": "akahappygit/AI-Lead-Generation-Automation: Lead Scraper",
+      "tool": "n8n",
+      "url": "https://github.com/akahappygit/AI-Lead-Generation-Automation"
     },
     "https://github.com/ceyre-boop/email-automation": {
       "category": "general_workflow",
