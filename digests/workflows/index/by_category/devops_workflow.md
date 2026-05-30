@@ -1,9 +1,10 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 6
+Total: 7
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-30 | [caioross/n8n_Workflows: github-ai-code-review](https://github.com/caioross/n8n_Workflows) | Backup_Youtube, EvolutionAPI_Live, Restore_Backup |  | 6.7 | medium | Скачать JSON нужного workflow (например, github-ai-code-review) из репо |
 | 2026-05-27 | [Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator](https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing) | main |  | 6.2 | medium | Скачать main.json из репо |
 | 2026-05-26 | [kingler/n8n_agent: back_up_your_n8n_workflows_to_github](https://github.com/kingler/n8n_agent) | workflow:back_up_your_n8n_workflows_to_github |  | 6.6 | high | Скачать JSON: https://raw.githubusercontent.com/kingler/n8n_agent/main/workflows/workflow:back_up_your_n8n_workflows_... |
 | 2026-05-26 | [inthecyber-group/securityonion-n8n-workflows: CVE_Info](https://github.com/inthecyber-group/securityonion-n8n-workflows) | CVE_Info |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/inthecyber-group/securityonion-n8n-workflows/main/workflows/CVE_Info.... |

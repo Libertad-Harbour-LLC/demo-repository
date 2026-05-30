@@ -1,9 +1,10 @@
 # Recommended — tool: n8n
 
-Total: 37
+Total: 38
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-30 | [caioross/n8n_Workflows: github-ai-code-review](https://github.com/caioross/n8n_Workflows) | Backup_Youtube, EvolutionAPI_Live, Restore_Backup |  | 6.7 | medium | Скачать JSON нужного workflow (например, github-ai-code-review) из репо |
 | 2026-05-29 | [akahappygit/AI-Lead-Generation-Automation: Lead Scraper](https://github.com/akahappygit/AI-Lead-Generation-Automation) | Lead Scraper |  | 6.7 | medium | Скачать Lead Scraper.json из папки workflows/ |
 | 2026-05-29 | [MinaSaad1/n8n-data-analyst-agent: 01-main-agent](https://github.com/MinaSaad1/n8n-data-analyst-agent) | 01-main-agent, 02-sub-run-sql-capped, 03-sub-generate-chart, +2 more |  | 7.0 | medium | Скачать все 5 JSON из папки workflows/ репозитория |
 | 2026-05-29 | [JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia](https://github.com/JeffersonMFti/agente-dra-julia-advocacia) | dra-julia-agente-ia-advocacia, dra-julia-agente-ia-advocacia.v1.bak |  | 6.5 | medium | Скачать dra-julia-agente-ia-advocacia.json из папки workflows/ |
