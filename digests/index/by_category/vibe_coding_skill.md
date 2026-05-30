@@ -1,9 +1,11 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 62
+Total: 64
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-30 | [dagster-io/erk](https://github.com/dagster-io/erk/tree/master/.claude/skills) | ci-iteration, cli-skill-creator, pr-feedback-classifier, +7 more |  | 6.5 | medium | git clone https://github.com/dagster-io/erk && cp -r erk/.claude/skills/pr-feedback-classifier ~/.claude/skills/ |
+| 2026-05-30 | [UKGovernmentBEIS/inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/.claude/skills) | build-repo-context, create-eval, ensure-test-coverage, +7 more |  | 7.6 | medium | git clone https://github.com/UKGovernmentBEIS/inspect_evals && cp -r inspect_evals/.claude/skills/ensure-test-coverag... |
 | 2026-05-29 | [viclafouch/mui-otp-input](https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills) | deep-dive, react-useeffect, update-deps, +1 more |  | 6.8 | medium | git clone https://github.com/viclafouch/mui-otp-input && cd mui-otp-input |
 | 2026-05-29 | [pr-pm/prpm](https://github.com/pr-pm/prpm/tree/main/.claude/skills) | adding-new-ai-format, agent-builder, aws-beanstalk-expert, +22 more |  | 8.0 | medium | git clone https://github.com/pr-pm/prpm && cd prpm |
 | 2026-05-29 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip/tree/master/.claude/skills/design-guide) | design-guide |  | 7.8 | high | git clone https://github.com/paperclipai/paperclip && cd paperclip |

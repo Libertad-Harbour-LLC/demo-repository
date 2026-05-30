@@ -393,6 +393,45 @@
       "title": "KhazP/vibe-coding-prompt-template",
       "url": "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills"
     },
+    "https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий InnoClaw от SpectrAI Initiative содержит 224 биомедицинских Claude Skill, охватывающих весь цикл drug discovery: от поиска белков и геномики до молекулярного докинга, клинических испытаний и ADMET-анализа. Ориентирован на биологов, фармацевтических исследователей и bioinformatics-специалистов.",
+      "final_score": 7.8,
+      "first_recommended": "2026-05-30",
+      "metric": "Количество активированных skills из 224; качество и структура ответа при биомедицинском запросе",
+      "promoted_from_watch": false,
+      "repo_full_name": "SpectrAI-Initiative/InnoClaw",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 10,
+        "testability": 7,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "admet_druglikeness_report",
+        "alphafold_structure_pipeline",
+        "drug_repurposing_screen",
+        "gene_to_drug_pipeline",
+        "molecular_docking_pipeline",
+        "protein_structure_analysis",
+        "clinical_trial_drug_profile",
+        "pubmed-article-search",
+        "paper-search",
+        "skill-creator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/SpectrAI-Initiative/InnoClaw && cp -r InnoClaw/.claude/skills/pubmed-article-search ~/.claude/skills/",
+        "Открыть Claude Code в любом проекте или пустой директории",
+        "Дать промт: 'Search PubMed for recent papers on KRAS G12C inhibitors published in 2025' — проверить, активируется ли skill и возвращает ли структурированные результаты"
+      ],
+      "title": "SpectrAI-Initiative/InnoClaw",
+      "url": "https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills"
+    },
     "https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -469,6 +508,45 @@
       ],
       "title": "TypedDevs/bashunit",
       "url": "https://github.com/TypedDevs/bashunit/tree/main/.claude/skills"
+    },
+    "https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий UK Government BEIS (оценки AI-моделей) содержит 17 Claude Skills для полного цикла разработки и поддержки eval-системы: от создания eval и обеспечения покрытия тестами до CI-maintenance, code review и подготовки релиза.",
+      "final_score": 7.6,
+      "first_recommended": "2026-05-30",
+      "metric": "Качество test coverage анализа; число найденных незакрытых случаев; применимость к произвольному Python/JS проекту",
+      "promoted_from_watch": false,
+      "repo_full_name": "UKGovernmentBEIS/inspect_evals",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "build-repo-context",
+        "create-eval",
+        "ensure-test-coverage",
+        "eval-quality-workflow",
+        "code-quality-fix-all",
+        "security-audit-eval",
+        "write-an-adr",
+        "prepare-release",
+        "read-eval-logs",
+        "investigate-dataset"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/UKGovernmentBEIS/inspect_evals && cp -r inspect_evals/.claude/skills/ensure-test-coverage ~/.claude/skills/",
+        "Открыть Claude Code в Python-проекте с тестами",
+        "Дать промт: 'Ensure test coverage for the authentication module' — проверить качество и полноту сгенерированных тестов"
+      ],
+      "title": "UKGovernmentBEIS/inspect_evals",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/.claude/skills"
     },
     "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills": {
       "added_manually": true,
@@ -1112,6 +1190,84 @@
       "title": "coreyhaines31/marketingskills",
       "url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills"
     },
+    "https://github.com/curiositech/some_claude_skills/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Большая открытая коллекция из 194 Claude Skills разных доменов: от фронтенд-разработки и дизайна до SEO, видео-продакшена, юридических инструментов и health-coaching. Репозиторий позиционируется как универсальный набор skills для разных специальностей.",
+      "final_score": 6.8,
+      "first_recommended": "2026-05-30",
+      "metric": "Релевантность ответа для Next.js 14+ app router; глубина понимания server vs client components",
+      "promoted_from_watch": false,
+      "repo_full_name": "curiositech/some_claude_skills",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "nextjs-app-router-expert",
+        "security-auditor",
+        "design-system-generator",
+        "seo-visibility-expert",
+        "playwright-e2e-tester",
+        "typescript-advanced-patterns",
+        "skill-creator",
+        "ai-video-production-master",
+        "design-critic",
+        "postgresql-optimization"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/curiositech/some_claude_skills && cp -r some_claude_skills/.claude/skills/nextjs-app-router-expert ~/.claude/skills/",
+        "Открыть Claude Code в Next.js проекте",
+        "Дать промт: 'Review my app router setup and suggest improvements for server components' — оценить глубину и актуальность рекомендаций"
+      ],
+      "title": "curiositech/some_claude_skills",
+      "url": "https://github.com/curiositech/some_claude_skills/tree/main/.claude/skills"
+    },
+    "https://github.com/dagster-io/erk/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий erk от команды Dagster (создателей data orchestration платформы) содержит 20 Claude Skills для разработки: CI итерации, создания CLI skills, классификации PR-фидбека, рефакторинга модулей и управления сессиями Claude Code. Показывает production-паттерны использования skills в реальной engineering-команде.",
+      "final_score": 6.5,
+      "first_recommended": "2026-05-30",
+      "metric": "Точность классификации PR комментариев (blocker/nitpick/suggestion); скорость обработки набора комментариев",
+      "promoted_from_watch": false,
+      "repo_full_name": "dagster-io/erk",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "ci-iteration",
+        "cli-skill-creator",
+        "pr-feedback-classifier",
+        "pr-operations",
+        "refac-module-to-subpackage",
+        "dignified-code-simplifier",
+        "erk-planning",
+        "session-inspector",
+        "rename-swarm",
+        "command-creator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/dagster-io/erk && cp -r erk/.claude/skills/pr-feedback-classifier ~/.claude/skills/",
+        "Открыть Claude Code в директории с PR diff или списком review комментариев",
+        "Дать промт: 'Classify these PR review comments by priority and type' с реальными комментариями — оценить категоризацию"
+      ],
+      "title": "dagster-io/erk",
+      "url": "https://github.com/dagster-io/erk/tree/master/.claude/skills"
+    },
     "https://github.com/daloopa/investing/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "high",
@@ -1684,6 +1840,45 @@
       ],
       "title": "imbue-ai/mngr",
       "url": "https://github.com/imbue-ai/mngr/tree/main/.claude/skills"
+    },
+    "https://github.com/komunite/kalfa/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий kalfa от komunite содержит 18 бизнес-ориентированных Claude Skills, покрывающих весь спектр операций компании: маркетинг, SEO, продажи, контент, email, ecommerce, финансы, консалтинг и глубокие исследования. Ориентирован на основателей стартапов и малый бизнес.",
+      "final_score": 6.9,
+      "first_recommended": "2026-05-30",
+      "metric": "Конкретность SEO-рекомендаций; наличие keyword research логики; применимость для реального сайта",
+      "promoted_from_watch": false,
+      "repo_full_name": "komunite/kalfa",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "marketing",
+        "seo",
+        "sales",
+        "content",
+        "email",
+        "social-media",
+        "ecommerce",
+        "finance",
+        "consulting",
+        "deep-research"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/komunite/kalfa && cp -r kalfa/.claude/skills/seo ~/.claude/skills/ && cp -r kalfa/.claude/skills/marketing ~/.claude/skills/",
+        "Открыть Claude Code в директории с контентом сайта или маркетинговыми материалами",
+        "Дать промт: 'Audit the SEO of this landing page and suggest keyword improvements' — оценить глубину SEO-анализа"
+      ],
+      "title": "komunite/kalfa",
+      "url": "https://github.com/komunite/kalfa/tree/main/.claude/skills"
     },
     "https://github.com/lifinance/contracts/tree/main/.claude/skills": {
       "category": "general_skill",

@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 19
+Total: 21
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-30 | [curiositech/some_claude_skills](https://github.com/curiositech/some_claude_skills/tree/main/.claude/skills) | nextjs-app-router-expert, security-auditor, design-system-generator, +7 more |  | 6.8 | medium | git clone https://github.com/curiositech/some_claude_skills && cp -r some_claude_skills/.claude/skills/nextjs-app-rou... |
+| 2026-05-30 | [SpectrAI-Initiative/InnoClaw](https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills) | admet_druglikeness_report, alphafold_structure_pipeline, drug_repurposing_screen, +7 more |  | 7.8 | medium | git clone https://github.com/SpectrAI-Initiative/InnoClaw && cp -r InnoClaw/.claude/skills/pubmed-article-search ~/.c... |
 | 2026-05-28 | [lifinance/contracts](https://github.com/lifinance/contracts/tree/main/.claude/skills) | add-audit, add-network, add-new-rule, +11 more |  | 7.0 | high | git clone https://github.com/lifinance/contracts && cp -r .claude/skills/analyze-tx .claude/skills/analyze-unverified... |
 | 2026-05-27 | [marketcalls/vectorbt-backtesting-skills](https://github.com/marketcalls/vectorbt-backtesting-skills/tree/master/.claude/skills) | backtest, optimize, quick-stats, +3 more |  | 7.1 | medium | Клонировать репо: git clone https://github.com/marketcalls/vectorbt-backtesting-skills.git |
 | 2026-05-25 | [minicoohei/ai-agent-camp](https://github.com/minicoohei/ai-agent-camp/tree/main/.claude/skills) | ab-test-setup, agent-designer, analytics-tracking, +45 more |  | 7.5 | high | git clone https://github.com/minicoohei/ai-agent-camp.git |
