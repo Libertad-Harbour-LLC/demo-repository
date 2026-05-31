@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 5
+Total: 6
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-31 | [Growthub-ai/growthub-local](https://github.com/Growthub-ai/growthub-local/tree/main/.claude/skills) | growthub-auth, growthub-cms-sdk-v1, growthub-creative-video-pipeline, +8 more |  | 7.1 | medium | Клонировать: git clone https://github.com/Growthub-ai/growthub-local.git |
 | 2026-05-30 | [komunite/kalfa](https://github.com/komunite/kalfa/tree/main/.claude/skills) | marketing, seo, sales, +7 more |  | 6.9 | medium | git clone https://github.com/komunite/kalfa && cp -r kalfa/.claude/skills/seo ~/.claude/skills/ && cp -r kalfa/.claud... |
 | 2026-05-27 | [debuglebowski/slayzone](https://github.com/debuglebowski/slayzone/tree/main/.claude/skills) | caveman-commit, caveman-review, caveman, +22 more |  | 6.5 | medium | Клонировать репо: git clone https://github.com/debuglebowski/slayzone.git |
 | 2026-05-18 | [sergebulaev/linkedin-skills](https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills) | linkedin-skills | 89 |  | manual | git clone https://github.com/sergebulaev/linkedin-skills.git |

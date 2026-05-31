@@ -262,6 +262,46 @@
       "title": "Donchitos/Claude-Code-Game-Studios",
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills"
     },
+    "https://github.com/Growthub-ai/growthub-local/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий growthub-local содержит 11 skills для маркетинговой платформы GrowthHub: от CMS SDK и маркетинг-оператора до видео-генерации и пайплайнов контента. Рассчитан на маркетинговые команды, использующие Claude Code для автоматизации growth-задач.",
+      "final_score": 7.1,
+      "first_recommended": "2026-05-31",
+      "metric": "Полнота и применимость сгенерированного контент-плана: наличие каналов, форматов, CTA.",
+      "promoted_from_watch": false,
+      "repo_full_name": "Growthub-ai/growthub-local",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 11,
+      "skills_in_repo": [
+        "growthub-auth",
+        "growthub-cms-sdk-v1",
+        "growthub-creative-video-pipeline",
+        "growthub-discover",
+        "growthub-kit-fork-authority",
+        "growthub-marketing-operator",
+        "growthub-pipeline-execute",
+        "growthub-t3code-harness",
+        "growthub-video-generation",
+        "growthub-worker-kits",
+        "growthub-workspace-helper"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/Growthub-ai/growthub-local.git",
+        "Скопировать .claude/skills/growthub-marketing-operator/ в свой маркетинговый проект",
+        "В Claude Code: 'Запусти growthub-marketing-operator для создания контент-плана на неделю для SaaS-продукта'"
+      ],
+      "title": "Growthub-ai/growthub-local",
+      "url": "https://github.com/Growthub-ai/growthub-local/tree/main/.claude/skills"
+    },
     "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -1021,6 +1061,39 @@
       "title": "atopile/atopile",
       "url": "https://github.com/atopile/atopile/tree/main/.claude/skills"
     },
+    "https://github.com/azukiazusa1/sapper-blog-app/tree/main/.claude/skills": {
+      "category": "content_skill",
+      "confidence": "medium",
+      "description": "Репозиторий sapper-blog-app — блог-приложение на Sapper/SvelteKit с 4 skills для работы с контентом: ревью статей, техническое ревью, перевод и Q&A. Подходит для контент-мейкеров и технических блогеров, работающих с Claude Code.",
+      "final_score": 7.1,
+      "first_recommended": "2026-05-31",
+      "metric": "Качество редакторских правок article-review skill — проверить конкретность замечаний, структуру вывода.",
+      "promoted_from_watch": false,
+      "repo_full_name": "azukiazusa1/sapper-blog-app",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "article-review",
+        "q",
+        "tech-review",
+        "translate"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/azukiazusa1/sapper-blog-app.git",
+        "Скопировать папки .claude/skills/article-review/ и .claude/skills/translate/ в свой контент-проект",
+        "В Claude Code: 'Используй article-review skill для проверки этой статьи: [вставить черновик статьи]'"
+      ],
+      "title": "azukiazusa1/sapper-blog-app",
+      "url": "https://github.com/azukiazusa1/sapper-blog-app/tree/main/.claude/skills"
+    },
     "https://github.com/ben-manes/caffeine/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -1189,6 +1262,42 @@
       "test_steps": [],
       "title": "coreyhaines31/marketingskills",
       "url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills"
+    },
+    "https://github.com/corvo007/MioSub/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий MioSub содержит 7 разнообразных skills: от разработки React-компонентов и Electron-приложений до копирайтинга, планирования видео-промо и гайдлайнов веб-дизайна. Это один из лучших примеров multi-domain skill-коллекции в одном репо.",
+      "final_score": 7.1,
+      "first_recommended": "2026-05-31",
+      "metric": "Качество кода компонента: соответствие React best practices из skill, наличие TypeScript-типов, структура файла.",
+      "promoted_from_watch": false,
+      "repo_full_name": "corvo007/MioSub",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "copywriting",
+        "electron-dev",
+        "react-component-dev",
+        "release-version",
+        "vercel-react-best-practices",
+        "video-promo-planning",
+        "web-design-guidelines"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/corvo007/MioSub.git",
+        "Скопировать .claude/skills/react-component-dev/ и .claude/skills/web-design-guidelines/ в свой проект",
+        "В Claude Code: 'Используй react-component-dev skill для создания компонента формы с валидацией'"
+      ],
+      "title": "corvo007/MioSub",
+      "url": "https://github.com/corvo007/MioSub/tree/main/.claude/skills"
     },
     "https://github.com/curiositech/some_claude_skills/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -1508,6 +1617,43 @@
       "title": "doccker/cc-use-exp",
       "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills"
     },
+    "https://github.com/doodledood/manifest-dev/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий manifest-dev содержит 8 skills, сфокусированных на prompt-инжиниринге и оптимизации работы Claude Code: автоматическая оптимизация промтов, сжатие контекста, синхронизация плагинов. Рассчитан на разработчиков, активно использующих Claude Code в ежедневной работе.",
+      "final_score": 7.6,
+      "first_recommended": "2026-05-31",
+      "metric": "Размер промта до и после оптимизации (в токенах), наличие learn-from-session — сохраняет ли Claude паттерны между сессиями.",
+      "promoted_from_watch": false,
+      "repo_full_name": "doodledood/manifest-dev",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "auto-optimize-prompt",
+        "compress-prompt",
+        "harden-task-file",
+        "learn-from-session",
+        "optimize-prompt-token-efficiency",
+        "review-prompt",
+        "sync-claude-code-plugins",
+        "sync-tools"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/doodledood/manifest-dev.git",
+        "Скопировать нужные папки из .claude/skills/ (например, optimize-prompt-token-efficiency и learn-from-session) в свой проект",
+        "В Claude Code запустить skill: 'Используй optimize-prompt-token-efficiency для оптимизации текущего CLAUDE.md'"
+      ],
+      "title": "doodledood/manifest-dev",
+      "url": "https://github.com/doodledood/manifest-dev/tree/main/.claude/skills"
+    },
     "https://github.com/egerev/superflow": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -1561,6 +1707,42 @@
       ],
       "title": "flowglad/flowglad",
       "url": "https://github.com/flowglad/flowglad/tree/main/.claude/skills"
+    },
+    "https://github.com/fmflurry/settings-opencode/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий settings-opencode содержит 7 архитектурных skills для Angular и .NET: clean architecture, DDD-паттерны, Transloco i18n, codemap-навигация. Рассчитан на разработчиков enterprise Angular/.NET приложений, использующих Claude Code для рефакторинга.",
+      "final_score": 6.7,
+      "first_recommended": "2026-05-31",
+      "metric": "Соблюдение слоёв clean architecture в сгенерированном коде — проверить разделение domain/application/infrastructure.",
+      "promoted_from_watch": false,
+      "repo_full_name": "fmflurry/settings-opencode",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "angular-clean-architecture",
+        "ddd-type-duplication-across-layers",
+        "dotnet-clean-architecture",
+        "learned-codemap-generator-hygiene",
+        "learned-codemap-jump-navigation-angular",
+        "transloco-testing-flat-keys",
+        "transloco"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/fmflurry/settings-opencode.git",
+        "Скопировать .claude/skills/angular-clean-architecture/ в Angular-проект",
+        "В Claude Code: 'Создай новый feature module для user-profile согласно angular-clean-architecture skill'"
+      ],
+      "title": "fmflurry/settings-opencode",
+      "url": "https://github.com/fmflurry/settings-opencode/tree/master/.claude/skills"
     },
     "https://github.com/freshtechbro/claudedesignskills/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

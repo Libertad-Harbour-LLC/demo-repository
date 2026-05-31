@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 64
+Total: 67
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-31 | [fmflurry/settings-opencode](https://github.com/fmflurry/settings-opencode/tree/master/.claude/skills) | angular-clean-architecture, ddd-type-duplication-across-layers, dotnet-clean-architecture, +4 more |  | 6.7 | medium | Клонировать: git clone https://github.com/fmflurry/settings-opencode.git |
+| 2026-05-31 | [doodledood/manifest-dev](https://github.com/doodledood/manifest-dev/tree/main/.claude/skills) | auto-optimize-prompt, compress-prompt, harden-task-file, +5 more |  | 7.6 | medium | Клонировать: git clone https://github.com/doodledood/manifest-dev.git |
+| 2026-05-31 | [corvo007/MioSub](https://github.com/corvo007/MioSub/tree/main/.claude/skills) | copywriting, electron-dev, react-component-dev, +4 more |  | 7.1 | medium | Клонировать: git clone https://github.com/corvo007/MioSub.git |
 | 2026-05-30 | [dagster-io/erk](https://github.com/dagster-io/erk/tree/master/.claude/skills) | ci-iteration, cli-skill-creator, pr-feedback-classifier, +7 more |  | 6.5 | medium | git clone https://github.com/dagster-io/erk && cp -r erk/.claude/skills/pr-feedback-classifier ~/.claude/skills/ |
 | 2026-05-30 | [UKGovernmentBEIS/inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/.claude/skills) | build-repo-context, create-eval, ensure-test-coverage, +7 more |  | 7.6 | medium | git clone https://github.com/UKGovernmentBEIS/inspect_evals && cp -r inspect_evals/.claude/skills/ensure-test-coverag... |
 | 2026-05-29 | [viclafouch/mui-otp-input](https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills) | deep-dive, react-useeffect, update-deps, +1 more |  | 6.8 | medium | git clone https://github.com/viclafouch/mui-otp-input && cd mui-otp-input |

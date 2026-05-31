@@ -1,11 +1,16 @@
 # Recommended Claude Skills — all time
 
-Total: 94
+Total: 99
 
 ## May 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-31 | [fmflurry/settings-opencode](https://github.com/fmflurry/settings-opencode/tree/master/.claude/skills) | angular-clean-architecture, ddd-type-duplication-across-layers, dotnet-clean-architecture, +4 more |  | 6.7 | medium | Клонировать: git clone https://github.com/fmflurry/settings-opencode.git |
+| 2026-05-31 | [doodledood/manifest-dev](https://github.com/doodledood/manifest-dev/tree/main/.claude/skills) | auto-optimize-prompt, compress-prompt, harden-task-file, +5 more |  | 7.6 | medium | Клонировать: git clone https://github.com/doodledood/manifest-dev.git |
+| 2026-05-31 | [corvo007/MioSub](https://github.com/corvo007/MioSub/tree/main/.claude/skills) | copywriting, electron-dev, react-component-dev, +4 more |  | 7.1 | medium | Клонировать: git clone https://github.com/corvo007/MioSub.git |
+| 2026-05-31 | [azukiazusa1/sapper-blog-app](https://github.com/azukiazusa1/sapper-blog-app/tree/main/.claude/skills) | article-review, q, tech-review, +1 more |  | 7.1 | medium | Клонировать: git clone https://github.com/azukiazusa1/sapper-blog-app.git |
+| 2026-05-31 | [Growthub-ai/growthub-local](https://github.com/Growthub-ai/growthub-local/tree/main/.claude/skills) | growthub-auth, growthub-cms-sdk-v1, growthub-creative-video-pipeline, +8 more |  | 7.1 | medium | Клонировать: git clone https://github.com/Growthub-ai/growthub-local.git |
 | 2026-05-30 | [komunite/kalfa](https://github.com/komunite/kalfa/tree/main/.claude/skills) | marketing, seo, sales, +7 more |  | 6.9 | medium | git clone https://github.com/komunite/kalfa && cp -r kalfa/.claude/skills/seo ~/.claude/skills/ && cp -r kalfa/.claud... |
 | 2026-05-30 | [dagster-io/erk](https://github.com/dagster-io/erk/tree/master/.claude/skills) | ci-iteration, cli-skill-creator, pr-feedback-classifier, +7 more |  | 6.5 | medium | git clone https://github.com/dagster-io/erk && cp -r erk/.claude/skills/pr-feedback-classifier ~/.claude/skills/ |
 | 2026-05-30 | [curiositech/some_claude_skills](https://github.com/curiositech/some_claude_skills/tree/main/.claude/skills) | nextjs-app-router-expert, security-auditor, design-system-generator, +7 more |  | 6.8 | medium | git clone https://github.com/curiositech/some_claude_skills && cp -r some_claude_skills/.claude/skills/nextjs-app-rou... |
