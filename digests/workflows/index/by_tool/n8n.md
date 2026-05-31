@@ -1,9 +1,13 @@
 # Recommended — tool: n8n
 
-Total: 38
+Total: 42
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-31 | [tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish](https://github.com/tinyfish-io/tinyfish-cookbook) | Web Research Agent via Tinyfish |  | 8.1 | high | Скачать JSON по ссылке json_url |
+| 2026-05-31 | [mehdreaming/tiktok-to-pinterest: TikTok → Pinterest](https://github.com/mehdreaming/tiktok-to-pinterest) | TikTok → Pinterest |  | 6.6 | medium | Скачать JSON по json_url |
+| 2026-05-31 | [kevorklepedjian1/Autonomous-SDR-System: ai-sdr](https://github.com/kevorklepedjian1/Autonomous-SDR-System) | ai-sdr |  | 7.0 | medium | Скачать ai-sdr.json по json_url |
+| 2026-05-31 | [agnellolucas/n8n-shopify-seo-product-image-optimizer: n8n-shopify-image-optimizer](https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer) | n8n-shopify-image-optimizer |  | 7.1 | medium | Скачать JSON по json_url |
 | 2026-05-30 | [caioross/n8n_Workflows: github-ai-code-review](https://github.com/caioross/n8n_Workflows) | Backup_Youtube, EvolutionAPI_Live, Restore_Backup |  | 6.7 | medium | Скачать JSON нужного workflow (например, github-ai-code-review) из репо |
 | 2026-05-29 | [akahappygit/AI-Lead-Generation-Automation: Lead Scraper](https://github.com/akahappygit/AI-Lead-Generation-Automation) | Lead Scraper |  | 6.7 | medium | Скачать Lead Scraper.json из папки workflows/ |
 | 2026-05-29 | [MinaSaad1/n8n-data-analyst-agent: 01-main-agent](https://github.com/MinaSaad1/n8n-data-analyst-agent) | 01-main-agent, 02-sub-run-sql-capped, 03-sub-generate-chart, +2 more |  | 7.0 | medium | Скачать все 5 JSON из папки workflows/ репозитория |

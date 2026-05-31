@@ -447,6 +447,39 @@
       "tool": "n8n",
       "url": "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration"
     },
+    "https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer": {
+      "category": "web_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической SEO-оптимизации изображений товаров в магазине Shopify. Предназначен для владельцев e-commerce магазинов, которые хотят улучшить позиции в поиске без ручного редактирования каждого товара.",
+      "final_score": 7.1,
+      "first_recommended": "2026-05-31",
+      "metric": "Количество обработанных товаров в час; до/после сравнение SEO-score изображений",
+      "promoted_from_watch": false,
+      "repo_full_name": "agnellolucas/n8n-shopify-seo-product-image-optimizer: n8n-shopify-image-optimizer",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n-shopify-image-optimizer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по json_url",
+        "Импортировать в n8n через Workflows → Import",
+        "Настроить Shopify API credentials (Admin API token)",
+        "Указать ID магазина и диапазон товаров для обработки",
+        "Запустить на тестовом наборе из 5-10 товаров"
+      ],
+      "title": "agnellolucas/n8n-shopify-seo-product-image-optimizer: n8n-shopify-image-optimizer",
+      "tool": "n8n",
+      "url": "https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer"
+    },
     "https://github.com/akahappygit/AI-Lead-Generation-Automation": {
       "category": "marketing_workflow",
       "confidence": "medium",
@@ -825,6 +858,39 @@
       "tool": "n8n",
       "url": "https://github.com/jreyesr/n8n-nodes-tesseractjs"
     },
+    "https://github.com/kevorklepedjian1/Autonomous-SDR-System": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автономной системы SDR (Sales Development Representative) на базе AI. Предназначен для B2B-команд, которые хотят автоматизировать первичный аутрич и квалификацию лидов без найма дополнительных SDR.",
+      "final_score": 7.0,
+      "first_recommended": "2026-05-31",
+      "metric": "Reply rate на первые письма; количество лидов, прошедших квалификацию автоматически",
+      "promoted_from_watch": false,
+      "repo_full_name": "kevorklepedjian1/Autonomous-SDR-System: ai-sdr",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-sdr"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-sdr.json по json_url",
+        "Импортировать в n8n",
+        "Настроить credentials для email (SMTP/SendGrid) и CRM (если есть)",
+        "Настроить AI-провайдера (OpenAI/Anthropic API key)",
+        "Запустить тест на 2-3 тестовых лида"
+      ],
+      "title": "kevorklepedjian1/Autonomous-SDR-System: ai-sdr",
+      "tool": "n8n",
+      "url": "https://github.com/kevorklepedjian1/Autonomous-SDR-System"
+    },
     "https://github.com/kingler/n8n_agent": {
       "category": "devops_workflow",
       "confidence": "high",
@@ -961,6 +1027,39 @@
       "title": "lynote-ai/humanize-text: humanize_standard",
       "tool": "n8n",
       "url": "https://github.com/lynote-ai/humanize-text"
+    },
+    "https://github.com/mehdreaming/tiktok-to-pinterest": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического репоста контента из TikTok в Pinterest. Подходит SMM-менеджерам и контент-криейторам, которые хотят расширить охват без дополнительных усилий по публикации.",
+      "final_score": 6.6,
+      "first_recommended": "2026-05-31",
+      "metric": "Количество автоматически созданных пинов; охват и вовлечённость на Pinterest",
+      "promoted_from_watch": false,
+      "repo_full_name": "mehdreaming/tiktok-to-pinterest: TikTok → Pinterest",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "TikTok → Pinterest"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по json_url",
+        "Импортировать в n8n",
+        "Настроить TikTok API credentials (или RSS/scraper-источник)",
+        "Настроить Pinterest API credentials",
+        "Запустить тестовый прогон с одним постом"
+      ],
+      "title": "mehdreaming/tiktok-to-pinterest: TikTok → Pinterest",
+      "tool": "n8n",
+      "url": "https://github.com/mehdreaming/tiktok-to-pinterest"
     },
     "https://github.com/oxbshw/Open-Workflow-Library": {
       "category": "content_workflow",
@@ -1203,6 +1302,39 @@
       "title": "thecloudstation/n8n-workflows: linkedin_Lead_scraper + content-generator",
       "tool": "n8n",
       "url": "https://github.com/thecloudstation/n8n-workflows"
+    },
+    "https://github.com/tinyfish-io/tinyfish-cookbook": {
+      "category": "data_workflow",
+      "confidence": "high",
+      "description": "Готовый n8n workflow для автоматического веб-исследования с использованием Tinyfish API. Подходит аналитикам, маркетологам и разработчикам, которым нужно быстро собирать структурированные данные из открытых источников.",
+      "final_score": 8.1,
+      "first_recommended": "2026-05-31",
+      "metric": "Время от запроса до получения структурированного ответа; полнота и точность собранных данных",
+      "promoted_from_watch": false,
+      "repo_full_name": "tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Web Research Agent via Tinyfish"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Открыть n8n, перейти в Workflows → Import from File",
+        "Загрузить скачанный JSON",
+        "Настроить Tinyfish API credentials (API-ключ из tinyfish.io)",
+        "Запустить тестовый прогон с тестовым запросом"
+      ],
+      "title": "tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish",
+      "tool": "n8n",
+      "url": "https://github.com/tinyfish-io/tinyfish-cookbook"
     },
     "https://github.com/traversaal-ai/agents-in-action": {
       "category": "content_workflow",

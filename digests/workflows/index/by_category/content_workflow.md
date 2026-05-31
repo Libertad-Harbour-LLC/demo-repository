@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 7
+Total: 8
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-05-31 | [mehdreaming/tiktok-to-pinterest: TikTok → Pinterest](https://github.com/mehdreaming/tiktok-to-pinterest) | TikTok → Pinterest |  | 6.6 | medium | Скачать JSON по json_url |
 | 2026-05-28 | [traversaal-ai/agents-in-action: blog_post_agent_webhook](https://github.com/traversaal-ai/agents-in-action) | blog_post_agent_webhook |  | 6.5 | high | Скачать blog_post_agent_webhook.json |
 | 2026-05-24 | [oxbshw/Open-Workflow-Library: summarizer-bot](https://github.com/oxbshw/Open-Workflow-Library) | summarizer-bot |  | 6.7 | high | Скачать JSON по ссылке: https://raw.githubusercontent.com/oxbshw/Open-Workflow-Library/main/workflows/ai-agents/summa... |
 | 2026-05-22 | [sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent](https://github.com/sinabarimd/reputation-engine) | content-generator, content-publisher, content-research-agent, +2 more |  | 6.8 | medium | Скачать все 5 JSON из папки workflows репозитория |
