@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 21
+Total: 22
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-01 | [ai4curation/ai-gene-review](https://github.com/ai4curation/ai-gene-review/tree/main/.claude/skills) | aigr-pr-review, annotation-reviewer, bioinformatics-analyzer, +8 more |  | 7.3 | high | Клонировать: git clone https://github.com/ai4curation/ai-gene-review && cp -r ai-gene-review/.claude/skills/bioinform... |
 | 2026-05-30 | [curiositech/some_claude_skills](https://github.com/curiositech/some_claude_skills/tree/main/.claude/skills) | nextjs-app-router-expert, security-auditor, design-system-generator, +7 more |  | 6.8 | medium | git clone https://github.com/curiositech/some_claude_skills && cp -r some_claude_skills/.claude/skills/nextjs-app-rou... |
 | 2026-05-30 | [SpectrAI-Initiative/InnoClaw](https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills) | admet_druglikeness_report, alphafold_structure_pipeline, drug_repurposing_screen, +7 more |  | 7.8 | medium | git clone https://github.com/SpectrAI-Initiative/InnoClaw && cp -r InnoClaw/.claude/skills/pubmed-article-search ~/.c... |
 | 2026-05-28 | [lifinance/contracts](https://github.com/lifinance/contracts/tree/main/.claude/skills) | add-audit, add-network, add-new-rule, +11 more |  | 7.0 | high | git clone https://github.com/lifinance/contracts && cp -r .claude/skills/analyze-tx .claude/skills/analyze-unverified... |

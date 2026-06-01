@@ -827,6 +827,46 @@
       "title": "ai-analyst-lab/ai-analyst",
       "url": "https://github.com/ai-analyst-lab/ai-analyst/tree/main/.claude/skills"
     },
+    "https://github.com/ai4curation/ai-gene-review/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Набор из 11 Claude Skills для автоматизации кураторства биологических данных и ревью генных аннотаций. Предназначен для биоинформатиков и исследователей в области геномики.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-01",
+      "metric": "Корректность анализа биологических данных, соответствие терминологии, качество выявленных аномалий",
+      "promoted_from_watch": false,
+      "repo_full_name": "ai4curation/ai-gene-review",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 11,
+      "skills_in_repo": [
+        "aigr-pr-review",
+        "annotation-reviewer",
+        "bioinformatics-analyzer",
+        "bioreason-predictions",
+        "pathway-inference-agent",
+        "core-function-synthesizer",
+        "reference-findings-summarizer",
+        "rule-reviewer",
+        "review",
+        "boss",
+        "pm"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/ai4curation/ai-gene-review && cp -r ai-gene-review/.claude/skills/bioinformatics-analyzer ai-gene-review/.claude/skills/annotation-reviewer /ваш-проект/.claude/skills/",
+        "Запустить Claude Code в проекте с биологическими данными (или тестовыми файлами GFF/TSV)",
+        "Дать промт: 'Используя bioinformatics-analyzer skill, проанализируй следующие данные о генной аннотации и выяви возможные ошибки: [вставить пример данных]'"
+      ],
+      "title": "ai4curation/ai-gene-review",
+      "url": "https://github.com/ai4curation/ai-gene-review/tree/main/.claude/skills"
+    },
     "https://github.com/akiselev/ghidra-cli/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -1674,6 +1714,43 @@
       "title": "egerev/superflow",
       "url": "https://github.com/egerev/superflow"
     },
+    "https://github.com/elrufaiforexfx22-creator/claudecode-video-maker/tree/main/.claude/skills": {
+      "category": "video_skill",
+      "confidence": "medium",
+      "description": "Набор из 8 Claude Skills для автоматизации производства и публикации обучающего видеоконтента в Instagram, YouTube, Threads и X. Ориентирован на создателей туториалов и контент-мейкеров.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-01",
+      "metric": "Соответствие сгенерированного контента правилам платформы, качество скрипта озвучки",
+      "promoted_from_watch": false,
+      "repo_full_name": "elrufaiforexfx22-creator/claudecode-video-maker",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "instagram-publishing-rules",
+        "threads-algorithm-rules",
+        "threads-publishing-rules",
+        "tutorial-auto-pagebreak",
+        "tutorial-publish-pipeline",
+        "tutorial-voiceover-style",
+        "x-publishing-rules",
+        "youtube-publishing-rules"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/elrufaiforexfx22-creator/claudecode-video-maker && cp -r claudecode-video-maker/.claude/skills/youtube-publishing-rules claudecode-video-maker/.claude/skills/tutorial-voiceover-style /ваш-проект/.claude/skills/",
+        "Запустить Claude Code в проекте с черновиком туториала",
+        "Дать промт: 'Используя youtube-publishing-rules и tutorial-voiceover-style skills, подготовь мой туториал [тема] для публикации на YouTube: заголовок, описание, теги и скрипт озвучки'"
+      ],
+      "title": "elrufaiforexfx22-creator/claudecode-video-maker",
+      "url": "https://github.com/elrufaiforexfx22-creator/claudecode-video-maker/tree/main/.claude/skills"
+    },
     "https://github.com/flowglad/flowglad/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -1882,6 +1959,36 @@
       "test_steps": [],
       "title": "garrytan/gstack",
       "url": "https://github.com/garrytan/gstack"
+    },
+    "https://github.com/github/gh-aw/tree/main/.claude/skills/playwright-cli": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий GitHub, содержащий skill playwright-cli для автоматизации браузерных тестов через Claude Code. Ориентирован на разработчиков, использующих Playwright в CI/CD.",
+      "final_score": 8.0,
+      "first_recommended": "2026-06-01",
+      "metric": "Качество и корректность сгенерированного Playwright-теста, соответствие CLI-флагам",
+      "promoted_from_watch": false,
+      "repo_full_name": "github/gh-aw",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "playwright-cli"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/github/gh-aw && cp -r gh-aw/.claude/skills/playwright-cli /ваш-проект/.claude/skills/",
+        "Запустить Claude Code в проекте с Playwright: claude",
+        "Дать промт: 'Используя playwright-cli skill, напиши E2E-тест для страницы /login — проверь форму входа и редирект после успешной авторизации'"
+      ],
+      "title": "github/gh-aw",
+      "url": "https://github.com/github/gh-aw/tree/main/.claude/skills/playwright-cli"
     },
     "https://github.com/gsd-build/get-shit-done": {
       "added_manually": true,
@@ -3102,6 +3209,50 @@
       ],
       "title": "quickwit-oss/tantivy",
       "url": "https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills"
+    },
+    "https://github.com/rjmurillo/ai-agents/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Большая коллекция из 71 Claude Skill для разработчиков: управление сессиями, ADR-документация, code review, безопасность, планирование, memory-менеджмент. Репозиторий ориентирован на опытных разработчиков и архитекторов.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-01",
+      "metric": "Работает ли session-init корректно, генерирует ли adr-generator структурированный ADR-документ",
+      "promoted_from_watch": false,
+      "repo_full_name": "rjmurillo/ai-agents",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "SkillForge",
+        "adr-generator",
+        "adr-review",
+        "security-detection",
+        "security-scan",
+        "threat-modeling",
+        "code-qualities-assessment",
+        "codebase-documenter",
+        "pr-comment-responder",
+        "spec-generator",
+        "requirements-interview",
+        "session-init",
+        "session-end",
+        "memory",
+        "merge-resolver"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/rjmurillo/ai-agents && скопировать нужные папки из .claude/skills/ в свой проект",
+        "Начать с трёх ключевых skills: cp -r ai-agents/.claude/skills/session-init ai-agents/.claude/skills/adr-generator ai-agents/.claude/skills/threat-modeling /ваш-проект/.claude/skills/",
+        "Запустить Claude Code и дать промт: 'Используя session-init skill, начни сессию работы над этим проектом; затем используй adr-generator для документирования решения об архитектуре API'"
+      ],
+      "title": "rjmurillo/ai-agents",
+      "url": "https://github.com/rjmurillo/ai-agents/tree/main/.claude/skills"
     },
     "https://github.com/rtk-ai/rtk/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
