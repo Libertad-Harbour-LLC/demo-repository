@@ -1,9 +1,13 @@
 # Recommended — tool: n8n
 
-Total: 42
+Total: 46
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-01 | [weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store](https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base) | WhatsApp AI Sales Agent using PDF Vector Store |  | 7.3 | medium | Скачать JSON по json_url |
+| 2026-06-01 | [shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR](https://github.com/shreyvaughn/claude-ai-sales-system) | Email_sequencing_SDR |  | 6.8 | medium | Скачать JSON по json_url |
+| 2026-06-01 | [Peaghan/n8n-ai-calendar-agent-webhook: Calendar Agent - Webhook](https://github.com/Peaghan/n8n-ai-calendar-agent-webhook) | Calendar Agent - Webhook |  | 6.5 | medium | Скачать JSON по json_url |
+| 2026-06-01 | [Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing](https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing) | Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing |  | 6.7 | medium | Скачать JSON по json_url |
 | 2026-05-31 | [tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish](https://github.com/tinyfish-io/tinyfish-cookbook) | Web Research Agent via Tinyfish |  | 8.1 | high | Скачать JSON по ссылке json_url |
 | 2026-05-31 | [mehdreaming/tiktok-to-pinterest: TikTok → Pinterest](https://github.com/mehdreaming/tiktok-to-pinterest) | TikTok → Pinterest |  | 6.6 | medium | Скачать JSON по json_url |
 | 2026-05-31 | [kevorklepedjian1/Autonomous-SDR-System: ai-sdr](https://github.com/kevorklepedjian1/Autonomous-SDR-System) | ai-sdr |  | 7.0 | medium | Скачать ai-sdr.json по json_url |

@@ -1,6 +1,15 @@
 # Recommended Claude Skills — all time
 
-Total: 44
+Total: 48
+
+## June 2026
+
+| Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
+|---|---|---|---|---|---|---|
+| 2026-06-01 | [weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store](https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base) | WhatsApp AI Sales Agent using PDF Vector Store |  | 7.3 | medium | Скачать JSON по json_url |
+| 2026-06-01 | [shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR](https://github.com/shreyvaughn/claude-ai-sales-system) | Email_sequencing_SDR |  | 6.8 | medium | Скачать JSON по json_url |
+| 2026-06-01 | [Peaghan/n8n-ai-calendar-agent-webhook: Calendar Agent - Webhook](https://github.com/Peaghan/n8n-ai-calendar-agent-webhook) | Calendar Agent - Webhook |  | 6.5 | medium | Скачать JSON по json_url |
+| 2026-06-01 | [Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing](https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing) | Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing |  | 6.7 | medium | Скачать JSON по json_url |
 
 ## May 2026
 

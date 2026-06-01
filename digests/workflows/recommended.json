@@ -244,6 +244,39 @@
       "tool": "n8n",
       "url": "https://github.com/JeffersonMFti/agente-dra-julia-advocacia"
     },
+    "https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для мониторинга доступности сервисов: при падении автоматически создаёт Jira-тикет и уведомляет нужного дежурного в Slack на основе on-call расписания. Полезен командам DevOps и SRE.",
+      "final_score": 6.7,
+      "first_recommended": "2026-06-01",
+      "metric": "Время от падения сервиса до создания Jira-тикета и Slack-уведомления",
+      "promoted_from_watch": false,
+      "repo_full_name": "Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по json_url",
+        "Импортировать в n8n",
+        "Настроить Jira API credentials (URL, email, API token)",
+        "Добавить Slack Bot Token с правами chat:write",
+        "Настроить URL мониторинга и on-call расписание, запустить тестовый алерт"
+      ],
+      "title": "Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing",
+      "tool": "n8n",
+      "url": "https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing"
+    },
     "https://github.com/MinaSaad1/n8n-data-analyst-agent": {
       "category": "data_workflow",
       "confidence": "medium",
@@ -347,6 +380,39 @@
       "title": "Nijamudin/automated-business-analysis-workflow: Business Analysis Workflow - AI Marketing Hub",
       "tool": "n8n",
       "url": "https://github.com/Nijamudin/automated-business-analysis-workflow"
+    },
+    "https://github.com/Peaghan/n8n-ai-calendar-agent-webhook": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "n8n AI-агент для управления Google Calendar через webhook: принимает текстовые команды, интерпретирует их с помощью AI и создаёт или изменяет события в календаре. Подходит для автоматизации планирования встреч через чат-боты или голосовые интерфейсы.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-01",
+      "metric": "Доля команд, корректно интерпретированных и выполненных без ошибок",
+      "promoted_from_watch": false,
+      "repo_full_name": "Peaghan/n8n-ai-calendar-agent-webhook: Calendar Agent - Webhook",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Calendar Agent - Webhook"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по json_url",
+        "Импортировать в n8n",
+        "Настроить Google Calendar OAuth2 credentials",
+        "Добавить OpenAI API key для AI-парсинга команд",
+        "Активировать webhook и отправить тестовый запрос вида 'Создай встречу завтра в 15:00'"
+      ],
+      "title": "Peaghan/n8n-ai-calendar-agent-webhook: Calendar Agent - Webhook",
+      "tool": "n8n",
+      "url": "https://github.com/Peaghan/n8n-ai-calendar-agent-webhook"
     },
     "https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing": {
       "category": "devops_workflow",
@@ -1162,6 +1228,39 @@
       "tool": "n8n",
       "url": "https://github.com/ritik-prog/n8n-automation-templates-5000"
     },
+    "https://github.com/shreyvaughn/claude-ai-sales-system": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматизации email-последовательностей SDR на базе Claude AI. Генерирует персонализированные цепочки писем для холодных продаж и отправляет их по расписанию.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-01",
+      "metric": "Open rate и reply rate по сгенерированным последовательностям",
+      "promoted_from_watch": false,
+      "repo_full_name": "shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Email_sequencing_SDR"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Добавить Anthropic API ключ для Claude",
+        "Подключить SMTP или Gmail credentials для отправки писем",
+        "Запустить с тестовым списком из 2-3 лидов и проверить сгенерированные письма"
+      ],
+      "title": "shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR",
+      "tool": "n8n",
+      "url": "https://github.com/shreyvaughn/claude-ai-sales-system"
+    },
     "https://github.com/sinabarimd/reputation-engine": {
       "category": "content_workflow",
       "confidence": "medium",
@@ -1405,6 +1504,39 @@
       "title": "traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery",
       "tool": "n8n",
       "url": "https://github.com/traylorre/openclaw-mac"
+    },
+    "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического ответа на вопросы покупателей через WhatsApp с использованием GPT-4o и базы знаний из PDF-документа. Предназначен для малого и среднего бизнеса, который хочет автоматизировать поддержку продаж без живого оператора.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-01",
+      "metric": "Процент вопросов, получивших автоматический ответ без эскалации",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "WhatsApp AI Sales Agent using PDF Vector Store"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить credentials: WhatsApp Business API (Twilio или 360dialog), OpenAI API key",
+        "Загрузить PDF с описанием продуктов в Vector Store (Pinecone или встроенный n8n)",
+        "Отправить тестовое сообщение в WhatsApp и проверить ответ"
+      ],
+      "title": "weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base"
     },
     "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
       "category": "sales_workflow",

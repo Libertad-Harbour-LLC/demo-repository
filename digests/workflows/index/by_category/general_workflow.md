@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 11
+Total: 12
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-01 | [Peaghan/n8n-ai-calendar-agent-webhook: Calendar Agent - Webhook](https://github.com/Peaghan/n8n-ai-calendar-agent-webhook) | Calendar Agent - Webhook |  | 6.5 | medium | Скачать JSON по json_url |
 | 2026-05-29 | [JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia](https://github.com/JeffersonMFti/agente-dra-julia-advocacia) | dra-julia-agente-ia-advocacia, dra-julia-agente-ia-advocacia.v1.bak |  | 6.5 | medium | Скачать dra-julia-agente-ia-advocacia.json из папки workflows/ |
 | 2026-05-28 | [zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)](https://github.com/zengfr/n8n-workflow-all-templates) | 9280_Event_Ticketing_Backend__Auto_QR_Tickets_with_Google_Sheets___Gmail, 10236_AI-Powered_n8n_Release_Notes_Summary_Notifications_via_Gmail_with_GPT-5-Mini |  | 6.5 | medium | Скачать JSON файл 9280_Event_Ticketing_Backend... |
 | 2026-05-28 | [ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports](https://github.com/ritik-prog/n8n-automation-templates-5000) | auto-generate-healthcare-compliance-reports, create-automated-event-marketing-workflows, generate-support-cost-analysis-reports |  | 7.0 | high | Скачать auto-generate-healthcare-compliance-reports.json |
