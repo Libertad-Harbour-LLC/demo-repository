@@ -614,6 +614,39 @@
       "tool": "n8n",
       "url": "https://github.com/caioross/n8n_Workflows"
     },
+    "https://github.com/castlen3/line-family-comment-bot": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "n8n-workflow для автоматической отправки комментариев в LINE Messaging API, нацеленный на семейные или групповые чат-сценарии. Репозиторий получил 62 звезды и обновлён сегодня, что говорит об активном использовании.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-02",
+      "metric": "Количество успешно отправленных сообщений в LINE за тестовый прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "castlen3/line-family-comment-bot: LINE_FAMILY_COMMENT_BOT.public",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 7,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "LINE_FAMILY_COMMENT_BOT.public"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке: https://raw.githubusercontent.com/castlen3/line-family-comment-bot/main/workflows/LINE_FAMILY_COMMENT_BOT.public.json",
+        "Импортировать JSON в n8n через меню Import Workflow",
+        "Настроить LINE Messaging API credentials (Channel Access Token, Channel Secret)",
+        "Проверить триггерный узел и указать целевой Group ID или User ID",
+        "Запустить тестовое выполнение и проверить доставку сообщения в LINE"
+      ],
+      "title": "castlen3/line-family-comment-bot: LINE_FAMILY_COMMENT_BOT.public",
+      "tool": "n8n",
+      "url": "https://github.com/castlen3/line-family-comment-bot"
+    },
     "https://github.com/ceyre-boop/email-automation": {
       "category": "general_workflow",
       "confidence": "medium",
