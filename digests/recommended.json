@@ -160,6 +160,40 @@
       "title": "DenisSergeevitch/agents-best-practices",
       "url": "https://github.com/DenisSergeevitch/agents-best-practices"
     },
+    "https://github.com/DoIT-Artificial-Intelligence/youtube-to-docs/tree/main/.claude/skills": {
+      "category": "video_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит набор Claude Skills для конвертации YouTube-видео в документацию и инфографику. Включает skills для извлечения знаний из видео, генерации структурированных документов и создания визуальных материалов на основе видеоконтента.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-02",
+      "metric": "Структурированность и полнота извлечённой документации из реального YouTube-видео",
+      "promoted_from_watch": false,
+      "repo_full_name": "DoIT-Artificial-Intelligence/youtube-to-docs",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "infographic",
+        "ks",
+        "scc",
+        "youtube-to-docs",
+        "ytt"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/DoIT-Artificial-Intelligence/youtube-to-docs.git",
+        "Скопировать нужные skills: cp -r youtube-to-docs/.claude/skills/youtube-to-docs/ ./.claude/skills/ && cp -r youtube-to-docs/.claude/skills/infographic/ ./.claude/skills/",
+        "В Claude Code ввести: 'Use the youtube-to-docs skill to convert this YouTube video into documentation: [URL видео]'"
+      ],
+      "title": "DoIT-Artificial-Intelligence/youtube-to-docs",
+      "url": "https://github.com/DoIT-Artificial-Intelligence/youtube-to-docs/tree/main/.claude/skills"
+    },
     "https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -432,6 +466,44 @@
       ],
       "title": "KhazP/vibe-coding-prompt-template",
       "url": "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills"
+    },
+    "https://github.com/OutSystems/docs-product/tree/master/.claude/skills": {
+      "category": "content_skill",
+      "confidence": "medium",
+      "description": "Официальный репозиторий документации OutSystems с набором из 9 Claude Skills для управления технической документацией. Skills охватывают весь цикл создания контента: от классификации типов материалов и целевой аудитории до автоматической проверки стиля и генерации диаграмм.",
+      "final_score": 6.7,
+      "first_recommended": "2026-06-02",
+      "metric": "Точность исправлений по стайлгайду и качество классификации контента по типу аудитории",
+      "promoted_from_watch": false,
+      "repo_full_name": "OutSystems/docs-product",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "content-creation-flow",
+        "coverage-type-classification",
+        "create-diagram",
+        "style-guide-fixer",
+        "suggest-visuals",
+        "summary-writer",
+        "tags-classification",
+        "target-audience-classification",
+        "validate-screenshots"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/OutSystems/docs-product.git",
+        "Скопировать skills: cp -r docs-product/.claude/skills/ ./.claude/skills/",
+        "В Claude Code протестировать style-guide-fixer: 'Use the style-guide-fixer skill to review and fix this documentation text: [текст документа]'"
+      ],
+      "title": "OutSystems/docs-product",
+      "url": "https://github.com/OutSystems/docs-product/tree/master/.claude/skills"
     },
     "https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -2932,6 +3004,55 @@
       "title": "oliver-kriska/claude-elixir-phoenix",
       "url": "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills"
     },
+    "https://github.com/opencue/cuecards/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Крупнейший skill-маркетплейс в выборке: 119 Claude Skills в одном репозитории, охватывающих SEO, карьерные инструменты, OSINT, безопасность, агентные паттерны, резюме, MCP-интеграции и многое другое. Скорее всего представляет собой сборник community-contributed skills под единым репо.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-02",
+      "metric": "Качество keyword clusters и рекомендаций по GEO-оптимизации; работоспособность skills из разных категорий",
+      "promoted_from_watch": false,
+      "repo_full_name": "opencue/cuecards",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "academic-cv-builder",
+        "agenticx-a2a-connector",
+        "agenticx-agent-builder",
+        "backlink-analyzer",
+        "career-changer-translator",
+        "clawsec-suite",
+        "content-gap-analysis",
+        "content-quality-auditor",
+        "entity-optimizer",
+        "generative-engine-optimization",
+        "keyword-research",
+        "linkedin-profile-optimizer",
+        "on-page-seo-auditor",
+        "resume-ats-optimizer",
+        "resume-tailor",
+        "seo-content-writer",
+        "technical-seo-checker",
+        "free-image-and-video-generation",
+        "osint-methodology",
+        "prompt-engineer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/opencue/cuecards.git",
+        "Выбрать 2-3 интересных skill и скопировать: cp -r cuecards/.claude/skills/keyword-research/ ./.claude/skills/ && cp -r cuecards/.claude/skills/generative-engine-optimization/ ./.claude/skills/",
+        "В Claude Code ввести: 'Use the keyword-research skill to find keywords for [тема/бизнес]' или 'Use the generative-engine-optimization skill to optimize this content for AI search engines'"
+      ],
+      "title": "opencue/cuecards",
+      "url": "https://github.com/opencue/cuecards/tree/main/.claude/skills"
+    },
     "https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -3123,6 +3244,40 @@
       ],
       "title": "petenelson/wp-rest-api-log",
       "url": "https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills"
+    },
+    "https://github.com/peterfei/ai-agent-team/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с набором из 5 универсальных Claude Skills для AI-агентной команды разработки. Включает skills для автогенерации changelog, управления тредами, работы с заметками и организации рабочего стола. Имеет наибольшее число звёзд среди всех репо в выборке.",
+      "final_score": 7.2,
+      "first_recommended": "2026-06-02",
+      "metric": "Качество и структура сгенерированного changelog по сравнению с ручным написанием",
+      "promoted_from_watch": false,
+      "repo_full_name": "peterfei/ai-agent-team",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "changelog-generator",
+        "drawnote",
+        "softcopyright",
+        "thread-manager",
+        "tidymydesktop"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/peterfei/ai-agent-team.git",
+        "Скопировать нужный skill: cp -r ai-agent-team/.claude/skills/changelog-generator/ ./.claude/skills/",
+        "В Claude Code в git-проекте ввести: 'Use the changelog-generator skill to generate a changelog from the last 10 commits'"
+      ],
+      "title": "peterfei/ai-agent-team",
+      "url": "https://github.com/peterfei/ai-agent-team/tree/main/.claude/skills"
     },
     "https://github.com/pr-pm/prpm/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -3744,6 +3899,36 @@
       "title": "webiny/webiny-js",
       "url": "https://github.com/webiny/webiny-js/tree/next/.claude/skills"
     },
+    "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills/aso": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит Claude Skill для App Store Optimization (ASO) — набор инструкций и промптов, помогающих оптимизировать описания, метаданные и ключевые слова мобильных приложений в App Store и Google Play. Ориентирован на разработчиков и маркетологов мобильных приложений.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-02",
+      "metric": "Качество и релевантность предложенных ключевых слов, описаний и метаданных по сравнению с ручной работой",
+      "promoted_from_watch": false,
+      "repo_full_name": "wsbs20/claude-code-aso-skill",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "aso"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/wsbs20/claude-code-aso-skill.git",
+        "Скопировать папку .claude/skills/aso/ в корень своего мобильного проекта: cp -r claude-code-aso-skill/.claude/skills/aso/ ./.claude/skills/",
+        "Открыть Claude Code в папке проекта и ввести промт: 'Use the aso skill to optimize the App Store listing for my app [описание приложения]'"
+      ],
+      "title": "wsbs20/claude-code-aso-skill",
+      "url": "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills/aso"
+    },
     "https://github.com/yamadashy/repomix/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -3768,6 +3953,59 @@
       ],
       "title": "yamadashy/repomix",
       "url": "https://github.com/yamadashy/repomix/tree/main/.claude/skills"
+    },
+    "https://github.com/zach-lloyd-dev/aaa-authority-acceleration/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 24 Claude Skills для контент-маркетинга и построения авторитета бренда. Skills покрывают полный цикл: аудит бренда, анализ конкурентов, генерацию тем, создание контент-календаря и управление доверием аудитории. Ориентирован на контент-стратегов и маркетологов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-02",
+      "metric": "Глубина анализа бренда и качество конкурентных инсайтов по сравнению с ручным анализом",
+      "promoted_from_watch": false,
+      "repo_full_name": "zach-lloyd-dev/aaa-authority-acceleration",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 24,
+      "skills_in_repo": [
+        "aaa-workflow",
+        "authority-engine",
+        "brand-discovery",
+        "competitor-analysis",
+        "competitor-gaps",
+        "competitor-hooks",
+        "competitor-structures",
+        "competitor-topics",
+        "content-calendar",
+        "content-review",
+        "content-to-airtable",
+        "deep-brand-intake",
+        "disgust-mapper",
+        "generate-topics",
+        "session-handoff",
+        "topic-to-matrix",
+        "trust-case-studies",
+        "trust-contrarian",
+        "trust-deep-dives",
+        "trust-frameworks",
+        "trust-metrics",
+        "trust-provenance",
+        "trust-signal-generator",
+        "voice-dna"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/zach-lloyd-dev/aaa-authority-acceleration.git",
+        "Скопировать skills: cp -r aaa-authority-acceleration/.claude/skills/brand-discovery/ ./.claude/skills/ && cp -r aaa-authority-acceleration/.claude/skills/competitor-analysis/ ./.claude/skills/",
+        "В Claude Code ввести: 'Use the brand-discovery skill to analyze my brand: [описание бизнеса/бренда]'"
+      ],
+      "title": "zach-lloyd-dev/aaa-authority-acceleration",
+      "url": "https://github.com/zach-lloyd-dev/aaa-authority-acceleration/tree/main/.claude/skills"
     },
     "https://github.com/zarazhangrui/frontend-slides": {
       "added_manually": true,

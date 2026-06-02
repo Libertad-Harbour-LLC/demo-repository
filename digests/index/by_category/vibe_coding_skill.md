@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 69
+Total: 70
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-02 | [peterfei/ai-agent-team](https://github.com/peterfei/ai-agent-team/tree/main/.claude/skills) | changelog-generator, drawnote, softcopyright, +2 more |  | 7.2 | medium | Клонировать: git clone https://github.com/peterfei/ai-agent-team.git |
 | 2026-06-01 | [rjmurillo/ai-agents](https://github.com/rjmurillo/ai-agents/tree/main/.claude/skills) | SkillForge, adr-generator, adr-review, +12 more |  | 7.4 | high | Клонировать репо: git clone https://github.com/rjmurillo/ai-agents && скопировать нужные папки из .claude/skills/ в с... |
 | 2026-06-01 | [github/gh-aw](https://github.com/github/gh-aw/tree/main/.claude/skills/playwright-cli) | playwright-cli |  | 8.0 | high | Клонировать репо: git clone https://github.com/github/gh-aw && cp -r gh-aw/.claude/skills/playwright-cli /ваш-проект/... |
 | 2026-05-31 | [fmflurry/settings-opencode](https://github.com/fmflurry/settings-opencode/tree/master/.claude/skills) | angular-clean-architecture, ddd-type-duplication-across-layers, dotnet-clean-architecture, +4 more |  | 6.7 | medium | Клонировать: git clone https://github.com/fmflurry/settings-opencode.git |

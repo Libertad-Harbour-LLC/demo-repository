@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 103
+Total: 109
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-02 | [zach-lloyd-dev/aaa-authority-acceleration](https://github.com/zach-lloyd-dev/aaa-authority-acceleration/tree/main/.claude/skills) | aaa-workflow, authority-engine, brand-discovery, +21 more |  | 6.5 | medium | Клонировать: git clone https://github.com/zach-lloyd-dev/aaa-authority-acceleration.git |
+| 2026-06-02 | [wsbs20/claude-code-aso-skill](https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills/aso) | aso |  | 7.1 | medium | Клонировать репо: git clone https://github.com/wsbs20/claude-code-aso-skill.git |
+| 2026-06-02 | [peterfei/ai-agent-team](https://github.com/peterfei/ai-agent-team/tree/main/.claude/skills) | changelog-generator, drawnote, softcopyright, +2 more |  | 7.2 | medium | Клонировать: git clone https://github.com/peterfei/ai-agent-team.git |
+| 2026-06-02 | [opencue/cuecards](https://github.com/opencue/cuecards/tree/main/.claude/skills) | academic-cv-builder, agenticx-a2a-connector, agenticx-agent-builder, +17 more |  | 7.1 | medium | Клонировать: git clone https://github.com/opencue/cuecards.git |
+| 2026-06-02 | [OutSystems/docs-product](https://github.com/OutSystems/docs-product/tree/master/.claude/skills) | content-creation-flow, coverage-type-classification, create-diagram, +6 more |  | 6.7 | medium | Клонировать: git clone https://github.com/OutSystems/docs-product.git |
+| 2026-06-02 | [DoIT-Artificial-Intelligence/youtube-to-docs](https://github.com/DoIT-Artificial-Intelligence/youtube-to-docs/tree/main/.claude/skills) | infographic, ks, scc, +2 more |  | 6.8 | medium | Клонировать: git clone https://github.com/DoIT-Artificial-Intelligence/youtube-to-docs.git |
 | 2026-06-01 | [rjmurillo/ai-agents](https://github.com/rjmurillo/ai-agents/tree/main/.claude/skills) | SkillForge, adr-generator, adr-review, +12 more |  | 7.4 | high | Клонировать репо: git clone https://github.com/rjmurillo/ai-agents && скопировать нужные папки из .claude/skills/ в с... |
 | 2026-06-01 | [github/gh-aw](https://github.com/github/gh-aw/tree/main/.claude/skills/playwright-cli) | playwright-cli |  | 8.0 | high | Клонировать репо: git clone https://github.com/github/gh-aw && cp -r gh-aw/.claude/skills/playwright-cli /ваш-проект/... |
 | 2026-06-01 | [elrufaiforexfx22-creator/claudecode-video-maker](https://github.com/elrufaiforexfx22-creator/claudecode-video-maker/tree/main/.claude/skills) | instagram-publishing-rules, threads-algorithm-rules, threads-publishing-rules, +5 more |  | 6.5 | medium | Клонировать: git clone https://github.com/elrufaiforexfx22-creator/claudecode-video-maker && cp -r claudecode-video-m... |
