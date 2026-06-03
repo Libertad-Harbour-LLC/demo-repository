@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 23
+Total: 24
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-03 | [cohen-liel/hivemind](https://github.com/cohen-liel/hivemind/tree/main/.claude/skills) | algorithmic-art, api-design, article-writing, +33 more |  | 7.5 | medium | git clone https://github.com/cohen-liel/hivemind && cp -r hivemind/.claude/skills/tdd-workflow /ваш-проект/.claude/sk... |
 | 2026-06-02 | [opencue/cuecards](https://github.com/opencue/cuecards/tree/main/.claude/skills) | academic-cv-builder, agenticx-a2a-connector, agenticx-agent-builder, +17 more |  | 7.1 | medium | Клонировать: git clone https://github.com/opencue/cuecards.git |
 | 2026-06-01 | [ai4curation/ai-gene-review](https://github.com/ai4curation/ai-gene-review/tree/main/.claude/skills) | aigr-pr-review, annotation-reviewer, bioinformatics-analyzer, +8 more |  | 7.3 | high | Клонировать: git clone https://github.com/ai4curation/ai-gene-review && cp -r ai-gene-review/.claude/skills/bioinform... |
 | 2026-05-30 | [curiositech/some_claude_skills](https://github.com/curiositech/some_claude_skills/tree/main/.claude/skills) | nextjs-app-router-expert, security-auditor, design-system-generator, +7 more |  | 6.8 | medium | git clone https://github.com/curiositech/some_claude_skills && cp -r some_claude_skills/.claude/skills/nextjs-app-rou... |

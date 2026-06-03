@@ -1285,6 +1285,71 @@
       "title": "beshuaxian/higgsfield-seedance2-jineng",
       "url": "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills"
     },
+    "https://github.com/cohen-liel/hivemind/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Крупнейшая на сегодня коллекция из 75 Claude Skills, охватывающая кодинг (FastAPI, React, Next.js, TypeScript), контент (article-writing, content-engine), дизайн (canvas-design, frontend-slides), инфраструктуру (docker, redis, s3) и бизнес (investor-materials, market-research). Создана как персональная библиотека навыков для продуктового разработчика.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-03",
+      "metric": "Качество сгенерированных тестов vs без skill; работоспособность skill-creator",
+      "promoted_from_watch": false,
+      "repo_full_name": "cohen-liel/hivemind",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 36,
+      "skills_in_repo": [
+        "algorithmic-art",
+        "api-design",
+        "article-writing",
+        "async-python",
+        "brand-guidelines",
+        "content-engine",
+        "docker-deployment",
+        "e2e-testing",
+        "email-service",
+        "fastapi-backend",
+        "frontend-design",
+        "frontend-slides",
+        "git-workflow",
+        "graphql-api",
+        "investor-materials",
+        "market-research",
+        "mcp-builder",
+        "mermaid-diagrams",
+        "mobile-react-native",
+        "nextjs-fullstack",
+        "postgres-database",
+        "prisma-orm",
+        "react-typescript",
+        "redis-caching",
+        "s3-file-storage",
+        "security-review",
+        "skill-creator",
+        "stripe-payments",
+        "tdd-workflow",
+        "tailwind-css",
+        "typescript-patterns",
+        "verification-loop",
+        "web-research",
+        "web-scraping",
+        "webapp-testing",
+        "websockets-realtime"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/cohen-liel/hivemind && cp -r hivemind/.claude/skills/tdd-workflow /ваш-проект/.claude/skills/",
+        "Запустить Claude Code в проекте с существующим кодом",
+        "Попросить Claude 'используй tdd-workflow для написания тестов к [модуль]'; дополнительно проверить skill-creator — попросить создать новый skill"
+      ],
+      "title": "cohen-liel/hivemind",
+      "url": "https://github.com/cohen-liel/hivemind/tree/main/.claude/skills"
+    },
     "https://github.com/composio-community/open-claude-cowork/tree/master/.claude/skills": {
       "category": "general_skill",
       "confidence": "high",
@@ -2031,6 +2096,42 @@
       "test_steps": [],
       "title": "garrytan/gstack",
       "url": "https://github.com/garrytan/gstack"
+    },
+    "https://github.com/getkyo/kyo/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Набор из 7 Claude Skills для работы с README-документацией в Scala-проекте Kyo. Skills покрывают полный цикл: анализ существующего README, анализ исходного кода, критика, черновик, редактирование и верификация. Подходит любому проекту, которому нужна качественная документация.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-03",
+      "metric": "Насколько сгенерированный README точно описывает реальную функциональность кода",
+      "promoted_from_watch": false,
+      "repo_full_name": "getkyo/kyo",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "readme-analyze-existing",
+        "readme-analyze-source",
+        "readme-critique",
+        "readme-draft",
+        "readme-edit",
+        "readme-verify",
+        "readme"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/getkyo/kyo && cp -r kyo/.claude/skills/readme-analyze-source /ваш-проект/.claude/skills/",
+        "Запустить Claude Code в проекте с существующим кодом (любой язык)",
+        "Попросить: 'используй readme-analyze-source чтобы проанализировать код и предложить структуру README'; затем применить readme-draft для генерации черновика"
+      ],
+      "title": "getkyo/kyo",
+      "url": "https://github.com/getkyo/kyo/tree/main/.claude/skills"
     },
     "https://github.com/github/gh-aw/tree/main/.claude/skills/playwright-cli": {
       "category": "vibe_coding_skill",
@@ -2948,6 +3049,37 @@
       ],
       "title": "nicepkg/ai-workflow",
       "url": "https://github.com/nicepkg/ai-workflow/tree/main/.claude/skills"
+    },
+    "https://github.com/obot-platform/obot/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий AI-агент платформы Obot (805 звезд) содержит 2 Claude Skills для автоматизации релизного процесса: генерация release notes и написание блог-поста о релизе. Полезны любому проекту, которому нужна автоматизация changelog и release communication.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-03",
+      "metric": "Насколько полно и правильно структурированы release notes; время подготовки vs ручной написание",
+      "promoted_from_watch": false,
+      "repo_full_name": "obot-platform/obot",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "draft-release-blog",
+        "draft-release"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/obot-platform/obot && cp -r obot/.claude/skills/draft-release /ваш-проект/.claude/skills/",
+        "Запустить Claude Code в проекте с git-историей",
+        "Попросить: 'используй skill draft-release чтобы подготовить release notes для изменений с последнего тега'"
+      ],
+      "title": "obot-platform/obot",
+      "url": "https://github.com/obot-platform/obot/tree/main/.claude/skills"
     },
     "https://github.com/obra/superpowers": {
       "added_manually": true,
@@ -3899,6 +4031,66 @@
       "title": "webiny/webiny-js",
       "url": "https://github.com/webiny/webiny-js/tree/next/.claude/skills"
     },
+    "https://github.com/withkynam/vibecode-pro-max-kit/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Коллекция из 31 Claude Skill для vibe-coding: покрывает весь рабочий цикл разработчика — от генерации контекста и планирования до отладки, публикации и security-аудита. Репозиторий ориентирован на разработчиков, использующих Claude Code как основной инструмент.",
+      "final_score": 7.9,
+      "first_recommended": "2026-06-03",
+      "metric": "Насколько skill автоматически структурирует ответ по сравнению с обычным промтом; скорость нахождения бага",
+      "promoted_from_watch": false,
+      "repo_full_name": "withkynam/vibecode-pro-max-kit",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 31,
+      "skills_in_repo": [
+        "vc-agent-browser",
+        "vc-audit-context",
+        "vc-audit-plans",
+        "vc-audit-vc",
+        "vc-autoresearch",
+        "vc-chrome-devtools",
+        "vc-context-engineering",
+        "vc-debug",
+        "vc-docs-seeker",
+        "vc-docs",
+        "vc-frontend-design",
+        "vc-generate-context",
+        "vc-generate-plan",
+        "vc-mcp-management",
+        "vc-merge-worktree",
+        "vc-predict",
+        "vc-preview",
+        "vc-problem-solving",
+        "vc-publish",
+        "vc-repomix",
+        "vc-scenario",
+        "vc-scout",
+        "vc-security",
+        "vc-sequential-thinking",
+        "vc-setup",
+        "vc-team",
+        "vc-tech-graph",
+        "vc-update",
+        "vc-watzup",
+        "vc-web-testing",
+        "vc-xia"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/withkynam/vibecode-pro-max-kit && cp -r vibecode-pro-max-kit/.claude/skills/vc-debug /ваш-проект/.claude/skills/",
+        "Запустить Claude Code в вашем проекте (claude или cursor с Claude)",
+        "Протестировать: попросить Claude 'используй skill vc-debug чтобы найти причину ошибки в [файл]', затем попробовать vc-generate-plan для нового фичи-запроса"
+      ],
+      "title": "withkynam/vibecode-pro-max-kit",
+      "url": "https://github.com/withkynam/vibecode-pro-max-kit/tree/main/.claude/skills"
+    },
     "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills/aso": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -3953,6 +4145,45 @@
       ],
       "title": "yamadashy/repomix",
       "url": "https://github.com/yamadashy/repomix/tree/main/.claude/skills"
+    },
+    "https://github.com/yomidenzel/BOS/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 10 Claude Skills для ведения бизнес-операций и продаж: воронка (funnel), привлечение трафика (traffic), офер (offer), онбординг клиентов (onboard), диагностика проблем (diagnosis). Репозиторий ориентирован на соло-предпринимателей и малый бизнес.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-03",
+      "metric": "Насколько структурированнее и конкретнее ответ по сравнению с обычным промтом про воронку продаж",
+      "promoted_from_watch": false,
+      "repo_full_name": "yomidenzel/BOS",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "chase",
+        "diagnosis",
+        "digestion",
+        "find",
+        "funnel",
+        "mindset",
+        "offer",
+        "onboard",
+        "organize",
+        "traffic"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/yomidenzel/BOS && cp -r BOS/.claude/skills/funnel /ваш-проект/.claude/skills/ && cp -r BOS/.claude/skills/offer /ваш-проект/.claude/skills/",
+        "Запустить Claude Code (или Claude.ai если skills поддерживаются) в контексте вашего бизнеса",
+        "Попросить: 'используй skill funnel чтобы описать воронку продаж для [ваш продукт]'; затем 'используй offer чтобы сформулировать оффер'"
+      ],
+      "title": "yomidenzel/BOS",
+      "url": "https://github.com/yomidenzel/BOS/tree/main/.claude/skills"
     },
     "https://github.com/zach-lloyd-dev/aaa-authority-acceleration/tree/main/.claude/skills": {
       "category": "marketing_skill",
