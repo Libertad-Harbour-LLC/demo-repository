@@ -579,6 +579,39 @@
       "tool": "n8n",
       "url": "https://github.com/akahappygit/AI-Lead-Generation-Automation"
     },
+    "https://github.com/anilrajrimal1/n8n-backups": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "Workflow для автоматического резервного копирования всех workflow из вашего n8n-инстанса в GitHub-репозиторий. Подходит командам, которым важна сохранность автоматизаций и версионирование изменений.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-03",
+      "metric": "Количество JSON-файлов в GitHub-репозитории после каждого прогона",
+      "promoted_from_watch": false,
+      "repo_full_name": "anilrajrimal1/n8n-backups: n8n-backup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n-backup"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import > From File",
+        "Настроить GitHub credentials (Personal Access Token) и указать целевой репозиторий",
+        "Настроить n8n API credentials (API Key вашего инстанса)",
+        "Запустить тестовый прогон вручную и проверить коммиты в GitHub"
+      ],
+      "title": "anilrajrimal1/n8n-backups: n8n-backup",
+      "tool": "n8n",
+      "url": "https://github.com/anilrajrimal1/n8n-backups"
+    },
     "https://github.com/caioross/n8n_Workflows": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -1570,6 +1603,105 @@
       "title": "weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base"
+    },
+    "https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "Workflow автоматизирует статический анализ безопасности Android APK-файлов через MobSF, формирует PDF-отчёт с AI-комментариями и сохраняет результат в Google Drive. Предназначен для команд мобильной разработки и QA.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-03",
+      "metric": "Время от загрузки APK до появления PDF-отчёта в Google Drive",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "APK Security Scanner & PDF Report Generator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import > From File",
+        "Развернуть MobSF локально или через Docker и получить API Key",
+        "Настроить Google Drive credentials (OAuth2) в n8n",
+        "Загрузить тестовый APK и запустить workflow вручную"
+      ],
+      "title": "weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive"
+    },
+    "https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Workflow автоматизирует полный цикл производства подкаста: генерирует сценарий через OpenAI, хранит эпизоды в Airtable и публикует аудио на Buzzsprout. Подходит для контент-команд и инди-подкастеров.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-03",
+      "metric": "Количество автоматически опубликованных эпизодов на Buzzsprout за месяц",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Automated Podcast Generation with n8n, OpenAI & Buzzsprout"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import > From File",
+        "Добавить OpenAI API Key для генерации текста и TTS",
+        "Добавить Airtable API Key и указать базу с эпизодами",
+        "Добавить Buzzsprout API Token и запустить тестовый прогон с тестовой темой"
+      ],
+      "title": "weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout"
+    },
+    "https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "Workflow объединяет данные о сделках из Zoho CRM с биржевыми котировками AlphaVantage, передаёт их в GPT-4 для прогнозирования и отправляет алерты в Slack. Предназначен для sales-команд, работающих с рыночно-зависимыми B2B-продажами.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-03",
+      "metric": "Количество Slack-алертов с прогнозами за тестовую неделю",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Forecast-Zoho-CRM-deals: n8n-workflow-template",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n-workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import > From File",
+        "Добавить Zoho CRM credentials (OAuth2)",
+        "Добавить AlphaVantage API Key",
+        "Добавить OpenAI API Key и Slack Bot Token, запустить тестовый прогон"
+      ],
+      "title": "weblineindia/n8n-Forecast-Zoho-CRM-deals: n8n-workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts"
     },
     "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
       "category": "sales_workflow",

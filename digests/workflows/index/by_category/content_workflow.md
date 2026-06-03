@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 8
+Total: 9
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-03 | [weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation](https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout) | Automated Podcast Generation with n8n, OpenAI & Buzzsprout |  | 6.8 | medium | Скачать JSON по ссылке json_url |
 | 2026-05-31 | [mehdreaming/tiktok-to-pinterest: TikTok → Pinterest](https://github.com/mehdreaming/tiktok-to-pinterest) | TikTok → Pinterest |  | 6.6 | medium | Скачать JSON по json_url |
 | 2026-05-28 | [traversaal-ai/agents-in-action: blog_post_agent_webhook](https://github.com/traversaal-ai/agents-in-action) | blog_post_agent_webhook |  | 6.5 | high | Скачать blog_post_agent_webhook.json |
 | 2026-05-24 | [oxbshw/Open-Workflow-Library: summarizer-bot](https://github.com/oxbshw/Open-Workflow-Library) | summarizer-bot |  | 6.7 | high | Скачать JSON по ссылке: https://raw.githubusercontent.com/oxbshw/Open-Workflow-Library/main/workflows/ai-agents/summa... |

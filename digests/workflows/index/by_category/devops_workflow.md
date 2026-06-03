@@ -1,9 +1,11 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 8
+Total: 10
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-03 | [weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator](https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive) | APK Security Scanner & PDF Report Generator |  | 6.8 | medium | Скачать JSON по ссылке json_url |
+| 2026-06-03 | [anilrajrimal1/n8n-backups: n8n-backup](https://github.com/anilrajrimal1/n8n-backups) | n8n-backup |  | 7.5 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-01 | [Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing](https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing) | Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing |  | 6.7 | medium | Скачать JSON по json_url |
 | 2026-05-30 | [caioross/n8n_Workflows: github-ai-code-review](https://github.com/caioross/n8n_Workflows) | Backup_Youtube, EvolutionAPI_Live, Restore_Backup |  | 6.7 | medium | Скачать JSON нужного workflow (например, github-ai-code-review) из репо |
 | 2026-05-27 | [Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator](https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing) | main |  | 6.2 | medium | Скачать main.json из репо |

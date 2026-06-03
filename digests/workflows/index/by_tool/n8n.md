@@ -1,9 +1,13 @@
 # Recommended — tool: n8n
 
-Total: 47
+Total: 51
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-03 | [weblineindia/n8n-Forecast-Zoho-CRM-deals: n8n-workflow-template](https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts) | n8n-workflow-template |  | 7.0 | medium | Скачать JSON по ссылке json_url |
+| 2026-06-03 | [weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation](https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout) | Automated Podcast Generation with n8n, OpenAI & Buzzsprout |  | 6.8 | medium | Скачать JSON по ссылке json_url |
+| 2026-06-03 | [weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator](https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive) | APK Security Scanner & PDF Report Generator |  | 6.8 | medium | Скачать JSON по ссылке json_url |
+| 2026-06-03 | [anilrajrimal1/n8n-backups: n8n-backup](https://github.com/anilrajrimal1/n8n-backups) | n8n-backup |  | 7.5 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-02 | [castlen3/line-family-comment-bot: LINE_FAMILY_COMMENT_BOT.public](https://github.com/castlen3/line-family-comment-bot) | LINE_FAMILY_COMMENT_BOT.public |  | 7.1 | high | Скачать JSON по ссылке: https://raw.githubusercontent.com/castlen3/line-family-comment-bot/main/workflows/LINE_FAMILY... |
 | 2026-06-01 | [weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store](https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base) | WhatsApp AI Sales Agent using PDF Vector Store |  | 7.3 | medium | Скачать JSON по json_url |
 | 2026-06-01 | [shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR](https://github.com/shreyvaughn/claude-ai-sales-system) | Email_sequencing_SDR |  | 6.8 | medium | Скачать JSON по json_url |

@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 6
+Total: 7
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-03 | [weblineindia/n8n-Forecast-Zoho-CRM-deals: n8n-workflow-template](https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts) | n8n-workflow-template |  | 7.0 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-01 | [weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store](https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base) | WhatsApp AI Sales Agent using PDF Vector Store |  | 7.3 | medium | Скачать JSON по json_url |
 | 2026-06-01 | [shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR](https://github.com/shreyvaughn/claude-ai-sales-system) | Email_sequencing_SDR |  | 6.8 | medium | Скачать JSON по json_url |
 | 2026-05-31 | [kevorklepedjian1/Autonomous-SDR-System: ai-sdr](https://github.com/kevorklepedjian1/Autonomous-SDR-System) | ai-sdr |  | 7.0 | medium | Скачать ai-sdr.json по json_url |
