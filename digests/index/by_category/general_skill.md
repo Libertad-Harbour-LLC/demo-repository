@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 24
+Total: 26
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-04 | [bankielewicz/DevForgeAI](https://github.com/bankielewicz/DevForgeAI/tree/main/.claude/skills) | advising-legal, assessing-entrepreneur, backend-architect-contract-spec, +40 more |  | 7.5 | medium | Клонировать репо: git clone https://github.com/bankielewicz/DevForgeAI.git |
+| 2026-06-04 | [ReinaMacCredy/maestro](https://github.com/ReinaMacCredy/maestro/tree/main/.claude/skills) | cli-for-agent, docs, gitnexus, +14 more |  | 7.1 | medium | Клонировать: git clone https://github.com/ReinaMacCredy/maestro.git |
 | 2026-06-03 | [cohen-liel/hivemind](https://github.com/cohen-liel/hivemind/tree/main/.claude/skills) | algorithmic-art, api-design, article-writing, +33 more |  | 7.5 | medium | git clone https://github.com/cohen-liel/hivemind && cp -r hivemind/.claude/skills/tdd-workflow /ваш-проект/.claude/sk... |
 | 2026-06-02 | [opencue/cuecards](https://github.com/opencue/cuecards/tree/main/.claude/skills) | academic-cv-builder, agenticx-a2a-connector, agenticx-agent-builder, +17 more |  | 7.1 | medium | Клонировать: git clone https://github.com/opencue/cuecards.git |
 | 2026-06-01 | [ai4curation/ai-gene-review](https://github.com/ai4curation/ai-gene-review/tree/main/.claude/skills) | aigr-pr-review, annotation-reviewer, bioinformatics-analyzer, +8 more |  | 7.3 | high | Клонировать: git clone https://github.com/ai4curation/ai-gene-review && cp -r ai-gene-review/.claude/skills/bioinform... |

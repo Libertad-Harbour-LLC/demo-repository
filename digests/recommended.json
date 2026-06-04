@@ -505,6 +505,52 @@
       "title": "OutSystems/docs-product",
       "url": "https://github.com/OutSystems/docs-product/tree/master/.claude/skills"
     },
+    "https://github.com/ReinaMacCredy/maestro/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий maestro предлагает 17 Claude Skills для оркестрации агентов: планирование миссий, CLI-автоматизация, построение MCP-серверов, валидация и промт-инжиниринг. Ориентирован на разработчиков, строящих многоагентные пайплайны с Claude Code.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-04",
+      "metric": "Структурированность плана миссии, использование паттернов из SKILL.md",
+      "promoted_from_watch": false,
+      "repo_full_name": "ReinaMacCredy/maestro",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 17,
+      "skills_in_repo": [
+        "cli-for-agent",
+        "docs",
+        "gitnexus",
+        "maestro:agent-base",
+        "maestro:blueprint",
+        "maestro:conduct",
+        "maestro:define-mission-skills",
+        "maestro:mission-planning",
+        "maestro:scrutiny-validator",
+        "maestro:user-testing-validator",
+        "maestro-dev",
+        "maestro-lifecycle-test",
+        "maestro-skill-author",
+        "maestro-v2-migration",
+        "mcp-builder",
+        "mcp-for-agents",
+        "prompt-leverage"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/ReinaMacCredy/maestro.git",
+        "Скопировать .claude/skills/maestro:mission-planning/ и .claude/skills/mcp-builder/ в свой проект",
+        "Дать промт: 'Используй skill maestro:mission-planning: разбей задачу «построить API авторизации» на агентные шаги'"
+      ],
+      "title": "ReinaMacCredy/maestro",
+      "url": "https://github.com/ReinaMacCredy/maestro/tree/main/.claude/skills"
+    },
     "https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -988,6 +1034,36 @@
       "title": "alchaincyf/nuwa-skill",
       "url": "https://github.com/alchaincyf/nuwa-skill"
     },
+    "https://github.com/alexei-led/ccgram/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий ccgram содержит один Claude Skill 'releasing', предназначенный для автоматизации процесса релизов в проектах под управлением Claude Code. Имеет 163 звезды, что указывает на активное сообщество вокруг основного проекта.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-04",
+      "metric": "Корректность сгенерированного changelog и release notes, соответствие git-конвенциям",
+      "promoted_from_watch": false,
+      "repo_full_name": "alexei-led/ccgram",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "releasing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/alexei-led/ccgram.git",
+        "Скопировать .claude/skills/releasing/ в .claude/skills/ своего проекта",
+        "Дать промт: 'Используй skill releasing: подготовь релиз v1.2.0 для этого проекта'"
+      ],
+      "title": "alexei-led/ccgram",
+      "url": "https://github.com/alexei-led/ccgram/tree/main/.claude/skills"
+    },
     "https://github.com/alirezarezvani/claude-skills/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "general_skill",
@@ -1205,6 +1281,78 @@
       ],
       "title": "azukiazusa1/sapper-blog-app",
       "url": "https://github.com/azukiazusa1/sapper-blog-app/tree/main/.claude/skills"
+    },
+    "https://github.com/bankielewicz/DevForgeAI/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий DevForgeAI содержит 43 Claude Skills для полного цикла продукта и стартапа: от spec-driven разработки и QA до бизнес-планирования, маркетинга и юридического консультирования. Ориентирован на технических основателей и команды, которые хотят вести разработку через спецификации.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-04",
+      "metric": "Качество сгенерированной спецификации и соответствие skill-инструкциям из SKILL.md",
+      "promoted_from_watch": false,
+      "repo_full_name": "bankielewicz/DevForgeAI",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 4,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 43,
+      "skills_in_repo": [
+        "advising-legal",
+        "assessing-entrepreneur",
+        "backend-architect-contract-spec",
+        "backend-architect-framework-patterns",
+        "backend-architect-implementation-patterns",
+        "building-team",
+        "coaching-entrepreneur",
+        "framework-rot-audit",
+        "github-incident-from-feedback",
+        "github-incident-from-rca",
+        "github-incident-from-recommendations",
+        "managing-finances",
+        "marketing-business",
+        "operating-business",
+        "planning-business",
+        "researching-market",
+        "spec-driven-agents",
+        "spec-driven-analytics",
+        "spec-driven-brainstorming",
+        "spec-driven-cc-guide",
+        "spec-driven-ci",
+        "spec-driven-collaboration",
+        "spec-driven-coverage",
+        "spec-driven-dev",
+        "spec-driven-development-architecture",
+        "spec-driven-documentation",
+        "spec-driven-feedback",
+        "spec-driven-ideation",
+        "spec-driven-lifecycle",
+        "spec-driven-mcp-converter",
+        "spec-driven-migration",
+        "spec-driven-qa-remediation",
+        "spec-driven-qa",
+        "spec-driven-rca",
+        "spec-driven-release",
+        "spec-driven-remediation",
+        "spec-driven-research",
+        "spec-driven-solution-architecture",
+        "spec-driven-stories",
+        "spec-driven-system-architecture",
+        "spec-driven-ui",
+        "spec-driven-w3-compliance",
+        "spec-driven-web-scraper-seo"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/bankielewicz/DevForgeAI.git",
+        "Скопировать нужные папки из .claude/skills/ в .claude/skills/ своего проекта (например, spec-driven-dev и spec-driven-qa)",
+        "Открыть Claude Code в своём проекте и дать промт: 'Используй skill spec-driven-dev: создай спецификацию для новой фичи авторизации через JWT'"
+      ],
+      "title": "bankielewicz/DevForgeAI",
+      "url": "https://github.com/bankielewicz/DevForgeAI/tree/main/.claude/skills"
     },
     "https://github.com/ben-manes/caffeine/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -2053,6 +2201,54 @@
       ],
       "title": "fzyzcjy/flutter_rust_bridge",
       "url": "https://github.com/fzyzcjy/flutter_rust_bridge/tree/master/.claude/skills"
+    },
+    "https://github.com/gaia-react/gaia/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий gaia-react/gaia предоставляет 19 Claude Skills для React-разработки: генерация компонентов, хуков, роутов, TDD, accessibility-исправления, Tailwind и Playwright. Подходит для команд, ведущих фронтенд на React + TypeScript.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-04",
+      "metric": "Соответствие сгенерированного компонента паттернам из SKILL.md (структура файла, импорты, TypeScript-типы)",
+      "promoted_from_watch": false,
+      "repo_full_name": "gaia-react/gaia",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 19,
+      "skills_in_repo": [
+        "a11y-fixes",
+        "eslint-fixes",
+        "gaia-handoff",
+        "gaia-pickup",
+        "gaia-wiki",
+        "gaia",
+        "new-component",
+        "new-hook",
+        "new-route",
+        "new-service",
+        "playwright-cli",
+        "react-code",
+        "release-notes",
+        "skeleton-loaders",
+        "tailwind",
+        "tdd",
+        "typescript",
+        "update-deps",
+        "update-gaia"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/gaia-react/gaia.git",
+        "Скопировать .claude/skills/new-component/ и .claude/skills/tdd/ в свой React-проект под .claude/skills/",
+        "Открыть Claude Code и дать промт: 'Используй skill new-component: создай компонент UserCard с пропсами name и avatar'"
+      ],
+      "title": "gaia-react/gaia",
+      "url": "https://github.com/gaia-react/gaia/tree/main/.claude/skills"
     },
     "https://github.com/garrytan/gbrain/tree/master/.claude/skills": {
       "added_manually": true,
@@ -3824,6 +4020,39 @@
       ],
       "title": "staskh/trading_skills",
       "url": "https://github.com/staskh/trading_skills/tree/main/.claude/skills"
+    },
+    "https://github.com/steve-magne/hookstack/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий hookstack содержит 4 Claude Skills для growth-маркетинга технических продуктов: анализ репозитория с точки зрения роста, коучинг по стратегии роста, написание outreach-сообщений и постов. Ориентирован на создателей open-source и стартап-маркетологов.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-04",
+      "metric": "Конкретность и применимость рекомендаций по росту, соответствие структуре из SKILL.md",
+      "promoted_from_watch": false,
+      "repo_full_name": "steve-magne/hookstack",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "analyze-repo",
+        "growth-coach",
+        "growth-outreach",
+        "growth-post"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/steve-magne/hookstack.git",
+        "Скопировать .claude/skills/analyze-repo/ в .claude/skills/ своего GitHub-проекта",
+        "Дать промт: 'Используй skill analyze-repo: проанализируй этот репозиторий и предложи 3 точки роста для привлечения контрибьюторов'"
+      ],
+      "title": "steve-magne/hookstack",
+      "url": "https://github.com/steve-magne/hookstack/tree/main/.claude/skills"
     },
     "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills": {
       "added_manually": true,

@@ -1,9 +1,11 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 73
+Total: 75
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-04 | [gaia-react/gaia](https://github.com/gaia-react/gaia/tree/main/.claude/skills) | a11y-fixes, eslint-fixes, gaia-handoff, +16 more |  | 7.5 | medium | Клонировать: git clone https://github.com/gaia-react/gaia.git |
+| 2026-06-04 | [alexei-led/ccgram](https://github.com/alexei-led/ccgram/tree/main/.claude/skills) | releasing |  | 6.5 | medium | Клонировать: git clone https://github.com/alexei-led/ccgram.git |
 | 2026-06-03 | [withkynam/vibecode-pro-max-kit](https://github.com/withkynam/vibecode-pro-max-kit/tree/main/.claude/skills) | vc-agent-browser, vc-audit-context, vc-audit-plans, +28 more |  | 7.9 | high | git clone https://github.com/withkynam/vibecode-pro-max-kit && cp -r vibecode-pro-max-kit/.claude/skills/vc-debug /ва... |
 | 2026-06-03 | [obot-platform/obot](https://github.com/obot-platform/obot/tree/main/.claude/skills) | draft-release-blog, draft-release |  | 6.8 | high | git clone https://github.com/obot-platform/obot && cp -r obot/.claude/skills/draft-release /ваш-проект/.claude/skills/ |
 | 2026-06-03 | [getkyo/kyo](https://github.com/getkyo/kyo/tree/main/.claude/skills) | readme-analyze-existing, readme-analyze-source, readme-critique, +4 more |  | 7.4 | high | git clone https://github.com/getkyo/kyo && cp -r kyo/.claude/skills/readme-analyze-source /ваш-проект/.claude/skills/ |
