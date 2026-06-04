@@ -244,6 +244,39 @@
       "tool": "n8n",
       "url": "https://github.com/JeffersonMFti/agente-dra-julia-advocacia"
     },
+    "https://github.com/KRYSPRODUCER/n8n-automation-youtube-transcription": {
+      "category": "video_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической транскрипции YouTube-видео с сохранением результата в Google Docs. Подходит контент-командам и создателям курсов, которым нужно быстро получать текстовую версию видеоматериалов.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-04",
+      "metric": "Время от запуска до появления текста транскрипции в Google Docs",
+      "promoted_from_watch": false,
+      "repo_full_name": "KRYSPRODUCER/n8n-automation-youtube-transcription: Youtube Transcribe_Comment to Docs",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Youtube Transcribe_Comment to Docs (2)"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Открыть n8n, перейти в Workflows → Import from file",
+        "Загрузить скачанный JSON-файл",
+        "Настроить credentials: YouTube API и Google Docs OAuth",
+        "Запустить workflow с тестовой ссылкой на YouTube-видео"
+      ],
+      "title": "KRYSPRODUCER/n8n-automation-youtube-transcription: Youtube Transcribe_Comment to Docs",
+      "tool": "n8n",
+      "url": "https://github.com/KRYSPRODUCER/n8n-automation-youtube-transcription"
+    },
     "https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -479,6 +512,39 @@
       "title": "ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)",
       "tool": "n8n",
       "url": "https://github.com/ScraperNode/awesome-n8n-templates"
+    },
+    "https://github.com/Tanishq60/n8n_nl2sql": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow, который принимает вопрос на естественном языке и преобразует его в SQL-запрос через LLM, затем выполняет запрос к базе данных. Полезен аналитикам и разработчикам, которым нужен быстрый доступ к данным без написания SQL вручную.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-04",
+      "metric": "Точность генерируемого SQL и время ответа на вопрос",
+      "promoted_from_watch": false,
+      "repo_full_name": "Tanishq60/n8n_nl2sql: nl2sql",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "nl2sql"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать nl2sql.json по ссылке json_url",
+        "Импортировать в n8n через Workflows → Import from file",
+        "Настроить credentials для LLM (OpenAI или аналог) и целевой БД",
+        "Ввести тестовый вопрос на естественном языке",
+        "Проверить, что сгенерированный SQL корректен и возвращает ожидаемые данные"
+      ],
+      "title": "Tanishq60/n8n_nl2sql: nl2sql",
+      "tool": "n8n",
+      "url": "https://github.com/Tanishq60/n8n_nl2sql"
     },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",

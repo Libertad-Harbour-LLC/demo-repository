@@ -1,11 +1,13 @@
 # Recommended Claude Skills — all time
 
-Total: 53
+Total: 55
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-04 | [Tanishq60/n8n_nl2sql: nl2sql](https://github.com/Tanishq60/n8n_nl2sql) | nl2sql |  | 6.6 | medium | Скачать nl2sql.json по ссылке json_url |
+| 2026-06-04 | [KRYSPRODUCER/n8n-automation-youtube-transcription: Youtube Transcribe_Comment to Docs](https://github.com/KRYSPRODUCER/n8n-automation-youtube-transcription) | Youtube Transcribe_Comment to Docs (2) |  | 6.6 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-03 | [weblineindia/n8n-Forecast-Zoho-CRM-deals: n8n-workflow-template](https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts) | n8n-workflow-template |  | 7.0 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-03 | [weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation](https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout) | Automated Podcast Generation with n8n, OpenAI & Buzzsprout |  | 6.8 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-03 | [weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator](https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive) | APK Security Scanner & PDF Report Generator |  | 6.8 | medium | Скачать JSON по ссылке json_url |
