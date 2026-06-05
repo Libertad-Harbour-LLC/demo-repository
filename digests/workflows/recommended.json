@@ -990,6 +990,39 @@
       "tool": "n8n",
       "url": "https://github.com/freddy-schuetz/n8n-claw"
     },
+    "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram": {
+      "category": "video_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для генерации коротких вирусных видео с помощью Seedance AI и автоматической загрузки на TikTok, YouTube и Instagram. Рассчитан на контент-мейкеров и маркетологов, которые хотят масштабировать производство видеоконтента.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-05",
+      "metric": "Число успешных загрузок видео на целевые платформы за прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram: AI Viral Video Generator",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Generate_AI_Viral_Videos_with_Seedance_and_Upload_to_TikTok__YouTube___Instagram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON из репозитория hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить Seedance API credentials и API-ключи для TikTok/YouTube/Instagram",
+        "Запустить тест с примером промпта для генерации видео",
+        "Проверить что видео сгенерировано и загружено хотя бы на одну платформу"
+      ],
+      "title": "hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram: AI Viral Video Generator",
+      "tool": "n8n",
+      "url": "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram"
+    },
     "https://github.com/inthecyber-group/securityonion-n8n-workflows": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -1429,6 +1462,40 @@
       "title": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
       "tool": "n8n",
       "url": "https://github.com/sinabarimd/reputation-engine"
+    },
+    "https://github.com/soluckysummer/n8n_workflows": {
+      "category": "content_workflow",
+      "confidence": "high",
+      "description": "Репозиторий содержит два n8n-workflow: n8nposter для автоматизации публикации постов и webhook_demo для демонстрации входящих вебхуков. Подходит тем, кто хочет автоматизировать контент-публикацию через n8n.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-05",
+      "metric": "Количество успешных публикаций за тестовый прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "soluckysummer/n8n_workflows: n8nposter",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 8,
+        "utility": 6
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "n8nposter",
+        "webhook_demo"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/soluckysummer/n8n_workflows/main/workflows/n8nposter.json",
+        "Импортировать в n8n через меню Import Workflow → Paste JSON",
+        "Настроить credentials (HTTP/webhook, при необходимости соцсети)",
+        "Запустить тестовый прогон с тестовым payload",
+        "Проверить вывод и скорректировать узлы под свой use-case"
+      ],
+      "title": "soluckysummer/n8n_workflows: n8nposter",
+      "tool": "n8n",
+      "url": "https://github.com/soluckysummer/n8n_workflows"
     },
     "https://github.com/splx-ai/agentic-radar": {
       "category": "data_workflow",
