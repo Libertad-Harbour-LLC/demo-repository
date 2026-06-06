@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 10
+Total: 11
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-06 | [STGime/posta-n8n-workflows: blog-to-linkedin-carousel](https://github.com/STGime/posta-n8n-workflows) | blog-to-linkedin-carousel, blog-to-social-media, product-launch-campaign, +1 more |  | 7.3 | medium | Скачать JSON: https://raw.githubusercontent.com/STGime/posta-n8n-workflows/main/workflows/blog-to-linkedin-carousel.json |
 | 2026-06-05 | [soluckysummer/n8n_workflows: n8nposter](https://github.com/soluckysummer/n8n_workflows) | n8nposter, webhook_demo |  | 6.8 | high | Скачать JSON: https://raw.githubusercontent.com/soluckysummer/n8n_workflows/main/workflows/n8nposter.json |
 | 2026-06-03 | [weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation](https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout) | Automated Podcast Generation with n8n, OpenAI & Buzzsprout |  | 6.8 | medium | Скачать JSON по ссылке json_url |
 | 2026-05-31 | [mehdreaming/tiktok-to-pinterest: TikTok → Pinterest](https://github.com/mehdreaming/tiktok-to-pinterest) | TikTok → Pinterest |  | 6.6 | medium | Скачать JSON по json_url |

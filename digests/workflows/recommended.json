@@ -1,5 +1,38 @@
 {
   "skills": {
+    "https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической квалификации входящих лидов с помощью AI и синхронизации результатов с CRM. Решение для команд продаж, которые хотят автоматически фильтровать и приоритизировать входящие запросы.",
+      "final_score": 7.2,
+      "first_recommended": "2026-06-06",
+      "metric": "Процент корректно квалифицированных лидов vs ручная оценка менеджера",
+      "promoted_from_watch": false,
+      "repo_full_name": "AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation: AI Lead Qualification Template",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "AI Lead Qualification Template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по адресу json_url",
+        "Импортировать в n8n через File → Import Workflow",
+        "Настроить credentials: OpenAI API key, CRM (HubSpot/Salesforce/Pipedrive)",
+        "Отправить тестовый лид через Webhook-триггер с примерными данными",
+        "Проверить результат квалификации в CRM и логах n8n"
+      ],
+      "title": "AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation: AI Lead Qualification Template",
+      "tool": "n8n",
+      "url": "https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation"
+    },
     "https://github.com/AntonioPhilip/AlertFlow": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -479,6 +512,42 @@
       "title": "Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator",
       "tool": "n8n",
       "url": "https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing"
+    },
+    "https://github.com/STGime/posta-n8n-workflows": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n-workflow для автоматической дистрибуции контента: конвертация блога в LinkedIn-карусель, кросспостинг в соцсети, запуск продуктовых кампаний и репостинг YouTube-видео. Подойдёт контент-маркетологам и SMM-специалистам.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-06",
+      "metric": "Количество успешно опубликованных LinkedIn-каруселей за неделю",
+      "promoted_from_watch": false,
+      "repo_full_name": "STGime/posta-n8n-workflows: blog-to-linkedin-carousel",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "blog-to-linkedin-carousel",
+        "blog-to-social-media",
+        "product-launch-campaign",
+        "youtube-to-social-media"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/STGime/posta-n8n-workflows/main/workflows/blog-to-linkedin-carousel.json",
+        "Импортировать в n8n через File → Import Workflow",
+        "Настроить credentials: LinkedIn OAuth2, RSS/HTTP-источник блога",
+        "Подставить тестовый URL блог-поста в триггерный узел",
+        "Запустить тестовый прогон и проверить сгенерированные слайды карусели"
+      ],
+      "title": "STGime/posta-n8n-workflows: blog-to-linkedin-carousel",
+      "tool": "n8n",
+      "url": "https://github.com/STGime/posta-n8n-workflows"
     },
     "https://github.com/ScraperNode/awesome-n8n-templates": {
       "category": "marketing_workflow",
@@ -1462,6 +1531,43 @@
       "title": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
       "tool": "n8n",
       "url": "https://github.com/sinabarimd/reputation-engine"
+    },
+    "https://github.com/slayerlux/n8n-llm-workflows": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "Коллекция из 5 n8n-workflow с нарастающей сложностью LLM-паттернов: от детерминированного суммаризатора текста до агентного чата с инструментами. Предназначена как для изучения, так и для прямого использования в продукте.",
+      "final_score": 6.7,
+      "first_recommended": "2026-06-06",
+      "metric": "Качество суммаризации (ROUGE-score или ручная оценка) и латентность ответа",
+      "promoted_from_watch": false,
+      "repo_full_name": "slayerlux/n8n-llm-workflows: LLM workflow pack",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "01-deterministic-text-summarizer",
+        "02-deterministic-url-summarizer",
+        "03-deterministic-url-qna",
+        "04-agentic-chat",
+        "05-agentic-url-tools"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/slayerlux/n8n-llm-workflows/main/workflows/01-deterministic-text-summarizer.json",
+        "Импортировать в n8n через File → Import Workflow",
+        "Добавить OpenAI или совместимый LLM credential",
+        "Подать текст в триггерный узел и запустить прогон",
+        "Проверить вывод суммаризатора, затем последовательно протестировать остальные 4 workflow"
+      ],
+      "title": "slayerlux/n8n-llm-workflows: LLM workflow pack",
+      "tool": "n8n",
+      "url": "https://github.com/slayerlux/n8n-llm-workflows"
     },
     "https://github.com/soluckysummer/n8n_workflows": {
       "category": "content_workflow",

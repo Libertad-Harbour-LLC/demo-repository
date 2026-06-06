@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 13
+Total: 14
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-06 | [slayerlux/n8n-llm-workflows: LLM workflow pack](https://github.com/slayerlux/n8n-llm-workflows) | 01-deterministic-text-summarizer, 02-deterministic-url-summarizer, 03-deterministic-url-qna, +2 more |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/slayerlux/n8n-llm-workflows/main/workflows/01-deterministic-text-summ... |
 | 2026-06-02 | [castlen3/line-family-comment-bot: LINE_FAMILY_COMMENT_BOT.public](https://github.com/castlen3/line-family-comment-bot) | LINE_FAMILY_COMMENT_BOT.public |  | 7.1 | high | Скачать JSON по ссылке: https://raw.githubusercontent.com/castlen3/line-family-comment-bot/main/workflows/LINE_FAMILY... |
 | 2026-06-01 | [Peaghan/n8n-ai-calendar-agent-webhook: Calendar Agent - Webhook](https://github.com/Peaghan/n8n-ai-calendar-agent-webhook) | Calendar Agent - Webhook |  | 6.5 | medium | Скачать JSON по json_url |
 | 2026-05-29 | [JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia](https://github.com/JeffersonMFti/agente-dra-julia-advocacia) | dra-julia-agente-ia-advocacia, dra-julia-agente-ia-advocacia.v1.bak |  | 6.5 | medium | Скачать dra-julia-agente-ia-advocacia.json из папки workflows/ |

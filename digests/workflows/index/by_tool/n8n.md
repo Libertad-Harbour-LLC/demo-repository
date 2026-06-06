@@ -1,9 +1,12 @@
 # Recommended — tool: n8n
 
-Total: 55
+Total: 58
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-06 | [slayerlux/n8n-llm-workflows: LLM workflow pack](https://github.com/slayerlux/n8n-llm-workflows) | 01-deterministic-text-summarizer, 02-deterministic-url-summarizer, 03-deterministic-url-qna, +2 more |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/slayerlux/n8n-llm-workflows/main/workflows/01-deterministic-text-summ... |
+| 2026-06-06 | [STGime/posta-n8n-workflows: blog-to-linkedin-carousel](https://github.com/STGime/posta-n8n-workflows) | blog-to-linkedin-carousel, blog-to-social-media, product-launch-campaign, +1 more |  | 7.3 | medium | Скачать JSON: https://raw.githubusercontent.com/STGime/posta-n8n-workflows/main/workflows/blog-to-linkedin-carousel.json |
+| 2026-06-06 | [AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation: AI Lead Qualification Template](https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation) | AI Lead Qualification Template |  | 7.2 | medium | Скачать JSON по адресу json_url |
 | 2026-06-05 | [soluckysummer/n8n_workflows: n8nposter](https://github.com/soluckysummer/n8n_workflows) | n8nposter, webhook_demo |  | 6.8 | high | Скачать JSON: https://raw.githubusercontent.com/soluckysummer/n8n_workflows/main/workflows/n8nposter.json |
 | 2026-06-05 | [hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram: AI Viral Video Generator](https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram) | Generate_AI_Viral_Videos_with_Seedance_and_Upload_to_TikTok__YouTube___Instagram |  | 6.6 | medium | Скачать JSON из репозитория hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram |
 | 2026-06-04 | [Tanishq60/n8n_nl2sql: nl2sql](https://github.com/Tanishq60/n8n_nl2sql) | nl2sql |  | 6.6 | medium | Скачать nl2sql.json по ссылке json_url |
