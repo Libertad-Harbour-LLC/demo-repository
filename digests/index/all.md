@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 119
+Total: 125
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-06 | [llama-farm/llamafarm](https://github.com/llama-farm/llamafarm/tree/main/.claude/skills) | cli-skills, code-review, commit-push-pr, +16 more |  | 7.5 | high | git clone https://github.com/llama-farm/llamafarm && cp -r .claude/skills/code-review .claude/skills/commit-push-pr .... |
+| 2026-06-06 | [linuxfoundation/crowd.dev](https://github.com/linuxfoundation/crowd.dev/tree/main/.claude/skills) | adr, commit, dco, +5 more |  | 8.2 | high | git clone https://github.com/linuxfoundation/crowd.dev && cp -r .claude/skills/commit .claude/skills/review-pr .claud... |
+| 2026-06-06 | [hashintel/hash](https://github.com/hashintel/hash/tree/main/.claude/skills) | ark-ui, documenting-rust-code, exploring-rust-crates, +11 more |  | 8.1 | high | git clone https://github.com/hashintel/hash && cp -r .claude/skills/documenting-rust-code .claude/skills/handling-rus... |
+| 2026-06-06 | [baekenough/oh-my-customcode](https://github.com/baekenough/oh-my-customcode/tree/develop/.claude/skills) | action-validator, adaptive-harness, adversarial-review, +26 more |  | 7.9 | medium | git clone https://github.com/baekenough/oh-my-customcode && cp -r .claude/skills/python-best-practices .claude/skills... |
+| 2026-06-06 | [Lambenthan/empiricalwiki](https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills) | ask, check, daily-arxiv, +26 more |  | 6.8 | medium | git clone https://github.com/Lambenthan/empiricalwiki && cp -r .claude/skills/daily-arxiv .claude/skills/paper-plan .... |
+| 2026-06-06 | [DavidROliverBA/ArchitectKB](https://github.com/DavidROliverBA/ArchitectKB/tree/main/.claude/skills) | adr, adr-report, architecture, +21 more |  | 7.7 | medium | git clone https://github.com/DavidROliverBA/ArchitectKB && cp -r .claude/skills/adr .claude/skills/c4-diagram .claude... |
 | 2026-06-04 | [steve-magne/hookstack](https://github.com/steve-magne/hookstack/tree/main/.claude/skills) | analyze-repo, growth-coach, growth-outreach, +1 more |  | 6.8 | medium | Клонировать: git clone https://github.com/steve-magne/hookstack.git |
 | 2026-06-04 | [gaia-react/gaia](https://github.com/gaia-react/gaia/tree/main/.claude/skills) | a11y-fixes, eslint-fixes, gaia-handoff, +16 more |  | 7.5 | medium | Клонировать: git clone https://github.com/gaia-react/gaia.git |
 | 2026-06-04 | [bankielewicz/DevForgeAI](https://github.com/bankielewicz/DevForgeAI/tree/main/.claude/skills) | advising-legal, assessing-entrepreneur, backend-architect-contract-spec, +40 more |  | 7.5 | medium | Клонировать репо: git clone https://github.com/bankielewicz/DevForgeAI.git |

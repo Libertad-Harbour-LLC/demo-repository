@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 75
+Total: 79
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-06 | [llama-farm/llamafarm](https://github.com/llama-farm/llamafarm/tree/main/.claude/skills) | cli-skills, code-review, commit-push-pr, +16 more |  | 7.5 | high | git clone https://github.com/llama-farm/llamafarm && cp -r .claude/skills/code-review .claude/skills/commit-push-pr .... |
+| 2026-06-06 | [linuxfoundation/crowd.dev](https://github.com/linuxfoundation/crowd.dev/tree/main/.claude/skills) | adr, commit, dco, +5 more |  | 8.2 | high | git clone https://github.com/linuxfoundation/crowd.dev && cp -r .claude/skills/commit .claude/skills/review-pr .claud... |
+| 2026-06-06 | [hashintel/hash](https://github.com/hashintel/hash/tree/main/.claude/skills) | ark-ui, documenting-rust-code, exploring-rust-crates, +11 more |  | 8.1 | high | git clone https://github.com/hashintel/hash && cp -r .claude/skills/documenting-rust-code .claude/skills/handling-rus... |
+| 2026-06-06 | [baekenough/oh-my-customcode](https://github.com/baekenough/oh-my-customcode/tree/develop/.claude/skills) | action-validator, adaptive-harness, adversarial-review, +26 more |  | 7.9 | medium | git clone https://github.com/baekenough/oh-my-customcode && cp -r .claude/skills/python-best-practices .claude/skills... |
 | 2026-06-04 | [gaia-react/gaia](https://github.com/gaia-react/gaia/tree/main/.claude/skills) | a11y-fixes, eslint-fixes, gaia-handoff, +16 more |  | 7.5 | medium | Клонировать: git clone https://github.com/gaia-react/gaia.git |
 | 2026-06-04 | [alexei-led/ccgram](https://github.com/alexei-led/ccgram/tree/main/.claude/skills) | releasing |  | 6.5 | medium | Клонировать: git clone https://github.com/alexei-led/ccgram.git |
 | 2026-06-03 | [withkynam/vibecode-pro-max-kit](https://github.com/withkynam/vibecode-pro-max-kit/tree/main/.claude/skills) | vc-agent-browser, vc-audit-context, vc-audit-plans, +28 more |  | 7.9 | high | git clone https://github.com/withkynam/vibecode-pro-max-kit && cp -r vibecode-pro-max-kit/.claude/skills/vc-debug /ва... |

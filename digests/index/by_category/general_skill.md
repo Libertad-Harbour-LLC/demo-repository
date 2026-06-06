@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 26
+Total: 28
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-06 | [Lambenthan/empiricalwiki](https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills) | ask, check, daily-arxiv, +26 more |  | 6.8 | medium | git clone https://github.com/Lambenthan/empiricalwiki && cp -r .claude/skills/daily-arxiv .claude/skills/paper-plan .... |
+| 2026-06-06 | [DavidROliverBA/ArchitectKB](https://github.com/DavidROliverBA/ArchitectKB/tree/main/.claude/skills) | adr, adr-report, architecture, +21 more |  | 7.7 | medium | git clone https://github.com/DavidROliverBA/ArchitectKB && cp -r .claude/skills/adr .claude/skills/c4-diagram .claude... |
 | 2026-06-04 | [bankielewicz/DevForgeAI](https://github.com/bankielewicz/DevForgeAI/tree/main/.claude/skills) | advising-legal, assessing-entrepreneur, backend-architect-contract-spec, +40 more |  | 7.5 | medium | Клонировать репо: git clone https://github.com/bankielewicz/DevForgeAI.git |
 | 2026-06-04 | [ReinaMacCredy/maestro](https://github.com/ReinaMacCredy/maestro/tree/main/.claude/skills) | cli-for-agent, docs, gitnexus, +14 more |  | 7.1 | medium | Клонировать: git clone https://github.com/ReinaMacCredy/maestro.git |
 | 2026-06-03 | [cohen-liel/hivemind](https://github.com/cohen-liel/hivemind/tree/main/.claude/skills) | algorithmic-art, api-design, article-writing, +33 more |  | 7.5 | medium | git clone https://github.com/cohen-liel/hivemind && cp -r hivemind/.claude/skills/tdd-workflow /ваш-проект/.claude/sk... |
