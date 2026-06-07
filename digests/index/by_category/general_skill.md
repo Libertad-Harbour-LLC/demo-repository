@@ -1,9 +1,12 @@
 # Recommended Claude Skills — general_skill
 
-Total: 28
+Total: 31
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-07 | [kv0906/pm-kit](https://github.com/kv0906/pm-kit/tree/main/.claude/skills) | daily, weekly, interview, +10 more |  | 7.4 | medium | git clone https://github.com/kv0906/pm-kit && cp -r .claude/skills/daily ~/.claude/skills/ (или весь набор) |
+| 2026-06-07 | [erp-mafia/swedish-accounting-skills](https://github.com/erp-mafia/swedish-accounting-skills/tree/main/.claude/skills) | swedish-accounting-compliance, swedish-vat, swedish-payroll, +5 more |  | 7.3 | medium | git clone https://github.com/erp-mafia/swedish-accounting-skills && cp -r .claude/skills/swedish-vat ~/.claude/skills/ |
+| 2026-06-07 | [Hello-QM/catgo-LRG](https://github.com/Hello-QM/catgo-LRG/tree/main/.claude/skills) | vasp-relax, vasp-band, vasp-dos, +7 more |  | 7.5 | medium | git clone https://github.com/Hello-QM/catgo-LRG && скопировать .claude/skills/vasp-relax в свой проект |
 | 2026-06-06 | [Lambenthan/empiricalwiki](https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills) | ask, check, daily-arxiv, +26 more |  | 6.8 | medium | git clone https://github.com/Lambenthan/empiricalwiki && cp -r .claude/skills/daily-arxiv .claude/skills/paper-plan .... |
 | 2026-06-06 | [DavidROliverBA/ArchitectKB](https://github.com/DavidROliverBA/ArchitectKB/tree/main/.claude/skills) | adr, adr-report, architecture, +21 more |  | 7.7 | medium | git clone https://github.com/DavidROliverBA/ArchitectKB && cp -r .claude/skills/adr .claude/skills/c4-diagram .claude... |
 | 2026-06-04 | [bankielewicz/DevForgeAI](https://github.com/bankielewicz/DevForgeAI/tree/main/.claude/skills) | advising-legal, assessing-entrepreneur, backend-architect-contract-spec, +40 more |  | 7.5 | medium | Клонировать репо: git clone https://github.com/bankielewicz/DevForgeAI.git |

@@ -64,6 +64,45 @@
       "title": "AgriciDaniel/claude-seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/tree/main/skills"
     },
+    "https://github.com/AsiaOstrich/universal-dev-standards/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Универсальная коллекция из 51 Claude Skill для разработчиков, охватывающая весь жизненный цикл: TDD/BDD, code review, security, API design, ADR, database migration, CI/CD, observability и SLO. Создана как language-agnostic набор стандартов для AI-ассистированной разработки.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-07",
+      "metric": "Полнота и actionability рекомендаций по сравнению с базовым Claude Code без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "AsiaOstrich/universal-dev-standards",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "tdd-assistant",
+        "bdd-assistant",
+        "code-review-assistant",
+        "security-assistant",
+        "api-design-assistant",
+        "adr-assistant",
+        "database-assistant",
+        "refactoring-assistant",
+        "ci-cd-assistant",
+        "observability-assistant"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/AsiaOstrich/universal-dev-standards && cp -r .claude/skills/tdd-assistant .claude/skills/security-assistant ~/.claude/skills/",
+        "Открыть Claude Code в любом проекте, промт: 'Используй skill tdd-assistant, напиши тесты для функции parseUserInput()'",
+        "Протестировать security-scan-assistant: 'Используй skill security-scan-assistant, проведи security review для этого API endpoint'"
+      ],
+      "title": "AsiaOstrich/universal-dev-standards",
+      "url": "https://github.com/AsiaOstrich/universal-dev-standards/tree/main/.claude/skills"
+    },
     "https://github.com/Chorus-AIDLC/Chorus/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -388,6 +427,45 @@
       ],
       "title": "Growthub-ai/growthub-local",
       "url": "https://github.com/Growthub-ai/growthub-local/tree/main/.claude/skills"
+    },
+    "https://github.com/Hello-QM/catgo-LRG/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий catgo-LRG — коллекция из 60 Claude Skills для вычислительной химии и материаловедения. Охватывает DFT-расчёты (VASP, Quantum ESPRESSO, CP2K), молекулярную динамику (LAMMPS), машинное обучение потенциалов (DeePMD) и анализ каталитических реакций.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-07",
+      "metric": "Корректность сгенерированных input-файлов и соответствие физическим параметрам",
+      "promoted_from_watch": false,
+      "repo_full_name": "Hello-QM/catgo-LRG",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 10,
+        "testability": 5,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "vasp-relax",
+        "vasp-band",
+        "vasp-dos",
+        "orca-opt",
+        "lammps",
+        "deepmd-train",
+        "gaussian",
+        "adsorption-energy",
+        "co2rr",
+        "volcano-plot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Hello-QM/catgo-LRG && скопировать .claude/skills/vasp-relax в свой проект",
+        "Открыть Claude Code в директории с VASP-расчётами (или тестовыми структурами), промт: 'Используй skill vasp-relax, подготовь INCAR и KPOINTS для релаксации структуры FCC-Cu'",
+        "Протестировать skill adsorption-energy: 'Рассчитай энергию адсорбции CO на поверхности Pt(111) используя skill adsorption-energy'"
+      ],
+      "title": "Hello-QM/catgo-LRG",
+      "url": "https://github.com/Hello-QM/catgo-LRG/tree/main/.claude/skills"
     },
     "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -2205,6 +2283,43 @@
       "title": "elrufaiforexfx22-creator/claudecode-video-maker",
       "url": "https://github.com/elrufaiforexfx22-creator/claudecode-video-maker/tree/main/.claude/skills"
     },
+    "https://github.com/erp-mafia/swedish-accounting-skills/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Специализированный набор из 12 Claude Skills для шведского бухучёта и налогового права. Покрывает НДС, расчёт заработной платы, годовое закрытие, подачу SRU-деклараций, налоговое планирование и соответствие BAS-плану счетов. Предназначен для бухгалтеров и ERP-разработчиков, работающих со шведскими компаниями.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-07",
+      "metric": "Точность ссылок на шведское законодательство и соответствие актуальным нормам (Skatteverket)",
+      "promoted_from_watch": false,
+      "repo_full_name": "erp-mafia/swedish-accounting-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 10,
+        "testability": 7,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "swedish-accounting-compliance",
+        "swedish-vat",
+        "swedish-payroll",
+        "swedish-tax-planning",
+        "swedish-financial-reporting",
+        "swedish-year-end-closing",
+        "swedish-sru-filing",
+        "swedish-invoice-compliance"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/erp-mafia/swedish-accounting-skills && cp -r .claude/skills/swedish-vat ~/.claude/skills/",
+        "Открыть Claude Code, промт: 'Используй skill swedish-vat, объясни правила НДС для B2B-услуг между шведской и немецкой компанией'",
+        "Протестировать skill swedish-year-end-closing: 'Используй skill swedish-year-end-closing, создай чеклист для закрытия финансового года малого ООО (AB)'"
+      ],
+      "title": "erp-mafia/swedish-accounting-skills",
+      "url": "https://github.com/erp-mafia/swedish-accounting-skills/tree/main/.claude/skills"
+    },
     "https://github.com/flowglad/flowglad/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -2750,6 +2865,48 @@
       "title": "komunite/kalfa",
       "url": "https://github.com/komunite/kalfa/tree/main/.claude/skills"
     },
+    "https://github.com/kv0906/pm-kit/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 32 Claude Skills для менеджеров продукта: охватывает ежедневные/еженедельные ритуалы, интеграцию с Jira, Linear, Notion, Obsidian, создание презентаций и документов, а также управление задачами и принятие решений.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-07",
+      "metric": "Экономия времени на подготовку PM-артефактов (стендап, отчёт, план интервью) по сравнению с ручным написанием",
+      "promoted_from_watch": false,
+      "repo_full_name": "kv0906/pm-kit",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 13,
+      "skills_in_repo": [
+        "daily",
+        "weekly",
+        "interview",
+        "jira",
+        "linear",
+        "notion",
+        "obsidian-cli",
+        "pptx",
+        "docx",
+        "pdf",
+        "skill-creator",
+        "excalidraw",
+        "mermaid-visualizer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/kv0906/pm-kit && cp -r .claude/skills/daily ~/.claude/skills/ (или весь набор)",
+        "Открыть Claude Code, промт: 'Используй skill daily, подготовь дейли-стендап для команды из 5 человек, прогресс: завершена задача X, блокер Y'",
+        "Протестировать skill interview: 'Используй skill interview для подготовки вопросов к пользовательскому интервью о задаче Z'"
+      ],
+      "title": "kv0906/pm-kit",
+      "url": "https://github.com/kv0906/pm-kit/tree/main/.claude/skills"
+    },
     "https://github.com/lifinance/contracts/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "high",
@@ -3132,6 +3289,43 @@
       "title": "medusajs/medusa",
       "url": "https://github.com/medusajs/medusa/tree/develop/.claude/skills"
     },
+    "https://github.com/microsoft/FluidFramework/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Microsoft FluidFramework — фреймворк для совместной работы в реальном времени (4927 звёзд). Содержит 8 Claude Skills для автоматизации PR-процессов, проверки API-изменений, CI-готовности и релизных пайплайнов — паттерны от крупной enterprise-команды.",
+      "final_score": 7.6,
+      "first_recommended": "2026-06-07",
+      "metric": "Насколько детально skill api-changes выявляет breaking changes по сравнению с ручным ревью",
+      "promoted_from_watch": false,
+      "repo_full_name": "microsoft/FluidFramework",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "api-changes",
+        "ci-readiness-check",
+        "fluid-pr-guide",
+        "fluid-pr",
+        "fluid-release",
+        "policy-check",
+        "review",
+        "trigger-pipelines-for-copilot-pr"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/microsoft/FluidFramework && cp -r .claude/skills/api-changes ~/.claude/skills/ (или в свой проект)",
+        "Открыть Claude Code в своём репо с публичным API, дать промт: 'Используй skill api-changes, проверь совместимость изменений в файле X'",
+        "Проверить skill review: 'Используй skill review, сделай code review для последних изменений в ветке'"
+      ],
+      "title": "microsoft/FluidFramework",
+      "url": "https://github.com/microsoft/FluidFramework/tree/main/.claude/skills"
+    },
     "https://github.com/microsoft/debugpy/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -3269,6 +3463,36 @@
       ],
       "title": "mksglu/context-mode",
       "url": "https://github.com/mksglu/context-mode/tree/main/.claude/skills"
+    },
+    "https://github.com/moshuying/pitchcraft/tree/main/.claude/skills": {
+      "category": "design_skill",
+      "confidence": "medium",
+      "description": "Репозиторий pitchcraft содержит один Claude Skill для создания питч-деков и презентационных материалов. Направлен на стартапы и предпринимателей, которым нужно быстро создавать инвестиционные презентации.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-07",
+      "metric": "Качество структуры pitch-deck по сравнению с известными шаблонами (YC, a16z)",
+      "promoted_from_watch": false,
+      "repo_full_name": "moshuying/pitchcraft",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "pitchcraft"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/moshuying/pitchcraft && cp -r .claude/skills/pitchcraft ~/.claude/skills/",
+        "Открыть Claude Code, промт: 'Используй skill pitchcraft, создай структуру pitch-deck для SaaS-стартапа в сфере EdTech, раунд pre-seed, $500K'",
+        "Проверить глубину: 'Используй skill pitchcraft, напиши слайд Problem/Solution для продукта X'"
+      ],
+      "title": "moshuying/pitchcraft",
+      "url": "https://github.com/moshuying/pitchcraft/tree/main/.claude/skills"
     },
     "https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills": {
       "added_manually": true,

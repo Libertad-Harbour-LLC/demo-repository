@@ -1,5 +1,7 @@
 # Recommended Claude Skills — design_skill
 
-Total: 0
+Total: 1
 
-_No skills in this category yet._
+| Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
+|---|---|---|---|---|---|---|
+| 2026-06-07 | [moshuying/pitchcraft](https://github.com/moshuying/pitchcraft/tree/main/.claude/skills) | pitchcraft |  | 7.0 | medium | git clone https://github.com/moshuying/pitchcraft && cp -r .claude/skills/pitchcraft ~/.claude/skills/ |

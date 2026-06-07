@@ -1,9 +1,11 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 79
+Total: 81
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-07 | [microsoft/FluidFramework](https://github.com/microsoft/FluidFramework/tree/main/.claude/skills) | api-changes, ci-readiness-check, fluid-pr-guide, +5 more |  | 7.6 | high | git clone https://github.com/microsoft/FluidFramework && cp -r .claude/skills/api-changes ~/.claude/skills/ (или в св... |
+| 2026-06-07 | [AsiaOstrich/universal-dev-standards](https://github.com/AsiaOstrich/universal-dev-standards/tree/main/.claude/skills) | tdd-assistant, bdd-assistant, code-review-assistant, +7 more |  | 7.4 | medium | git clone https://github.com/AsiaOstrich/universal-dev-standards && cp -r .claude/skills/tdd-assistant .claude/skills... |
 | 2026-06-06 | [llama-farm/llamafarm](https://github.com/llama-farm/llamafarm/tree/main/.claude/skills) | cli-skills, code-review, commit-push-pr, +16 more |  | 7.5 | high | git clone https://github.com/llama-farm/llamafarm && cp -r .claude/skills/code-review .claude/skills/commit-push-pr .... |
 | 2026-06-06 | [linuxfoundation/crowd.dev](https://github.com/linuxfoundation/crowd.dev/tree/main/.claude/skills) | adr, commit, dco, +5 more |  | 8.2 | high | git clone https://github.com/linuxfoundation/crowd.dev && cp -r .claude/skills/commit .claude/skills/review-pr .claud... |
 | 2026-06-06 | [hashintel/hash](https://github.com/hashintel/hash/tree/main/.claude/skills) | ark-ui, documenting-rust-code, exploring-rust-crates, +11 more |  | 8.1 | high | git clone https://github.com/hashintel/hash && cp -r .claude/skills/documenting-rust-code .claude/skills/handling-rus... |
