@@ -1,9 +1,10 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 9
+Total: 10
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-07 | [datawhalechina/handy-n8n: n8n_mcp](https://github.com/datawhalechina/handy-n8n) | n8n_mcp |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/datawhalechina/handy-n8n/main/workflows/c04/n8n_mcp.json |
 | 2026-06-04 | [Tanishq60/n8n_nl2sql: nl2sql](https://github.com/Tanishq60/n8n_nl2sql) | nl2sql |  | 6.6 | medium | Скачать nl2sql.json по ссылке json_url |
 | 2026-05-31 | [tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish](https://github.com/tinyfish-io/tinyfish-cookbook) | Web Research Agent via Tinyfish |  | 8.1 | high | Скачать JSON по ссылке json_url |
 | 2026-05-29 | [MinaSaad1/n8n-data-analyst-agent: 01-main-agent](https://github.com/MinaSaad1/n8n-data-analyst-agent) | 01-main-agent, 02-sub-run-sql-capped, 03-sub-generate-chart, +2 more |  | 7.0 | medium | Скачать все 5 JSON из папки workflows/ репозитория |
