@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 8
+Total: 9
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-08 | [duncan-buildroom/n8n-automations: Upwork-Scraper](https://github.com/duncan-buildroom/n8n-automations) | Upwork-Scraper |  | 7.3 | medium | Скачать JSON по ссылке: https://raw.githubusercontent.com/duncan-buildroom/n8n-automations/main/Upwork-Scraper/Upwork... |
 | 2026-06-06 | [AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation: AI Lead Qualification Template](https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation) | AI Lead Qualification Template |  | 7.2 | medium | Скачать JSON по адресу json_url |
 | 2026-06-03 | [weblineindia/n8n-Forecast-Zoho-CRM-deals: n8n-workflow-template](https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts) | n8n-workflow-template |  | 7.0 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-01 | [weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store](https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base) | WhatsApp AI Sales Agent using PDF Vector Store |  | 7.3 | medium | Скачать JSON по json_url |

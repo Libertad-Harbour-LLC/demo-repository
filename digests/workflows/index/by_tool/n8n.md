@@ -1,9 +1,10 @@
 # Recommended — tool: n8n
 
-Total: 59
+Total: 60
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-08 | [duncan-buildroom/n8n-automations: Upwork-Scraper](https://github.com/duncan-buildroom/n8n-automations) | Upwork-Scraper |  | 7.3 | medium | Скачать JSON по ссылке: https://raw.githubusercontent.com/duncan-buildroom/n8n-automations/main/Upwork-Scraper/Upwork... |
 | 2026-06-07 | [datawhalechina/handy-n8n: n8n_mcp](https://github.com/datawhalechina/handy-n8n) | n8n_mcp |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/datawhalechina/handy-n8n/main/workflows/c04/n8n_mcp.json |
 | 2026-06-06 | [slayerlux/n8n-llm-workflows: LLM workflow pack](https://github.com/slayerlux/n8n-llm-workflows) | 01-deterministic-text-summarizer, 02-deterministic-url-summarizer, 03-deterministic-url-qna, +2 more |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/slayerlux/n8n-llm-workflows/main/workflows/01-deterministic-text-summ... |
 | 2026-06-06 | [STGime/posta-n8n-workflows: blog-to-linkedin-carousel](https://github.com/STGime/posta-n8n-workflows) | blog-to-linkedin-carousel, blog-to-social-media, product-launch-campaign, +1 more |  | 7.3 | medium | Скачать JSON: https://raw.githubusercontent.com/STGime/posta-n8n-workflows/main/workflows/blog-to-linkedin-carousel.json |
