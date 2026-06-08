@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 81
+Total: 84
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-08 | [taewanu/pr-review-agent](https://github.com/taewanu/pr-review-agent/tree/main/.claude/skills) | diagnose, git-guardrails-claude-code, grill-with-docs, +7 more |  | 7.5 | medium | git clone https://github.com/taewanu/pr-review-agent && cp -r pr-review-agent/.claude/skills/git-guardrails-claude-co... |
+| 2026-06-08 | [syahiidkamil/Software-Engineer-AI-Agent-Atlas](https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas/tree/main/.claude/skills) | abstraction-power, algorithmic-art, canvas-design, +17 more |  | 7.9 | high | git clone https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas && cp -r Software-Engineer-AI-Agent-Atlas/... |
+| 2026-06-08 | [glenwille12/ios-developer-agents](https://github.com/glenwille12/ios-developer-agents/tree/master/.claude/skills) | ios-accessibility-validator, ios-app-store-validator, ios-security-auditor |  | 7.0 | medium | git clone https://github.com/glenwille12/ios-developer-agents && cp -r ios-developer-agents/.claude/skills/ios-access... |
 | 2026-06-07 | [microsoft/FluidFramework](https://github.com/microsoft/FluidFramework/tree/main/.claude/skills) | api-changes, ci-readiness-check, fluid-pr-guide, +5 more |  | 7.6 | high | git clone https://github.com/microsoft/FluidFramework && cp -r .claude/skills/api-changes ~/.claude/skills/ (или в св... |
 | 2026-06-07 | [AsiaOstrich/universal-dev-standards](https://github.com/AsiaOstrich/universal-dev-standards/tree/main/.claude/skills) | tdd-assistant, bdd-assistant, code-review-assistant, +7 more |  | 7.4 | medium | git clone https://github.com/AsiaOstrich/universal-dev-standards && cp -r .claude/skills/tdd-assistant .claude/skills... |
 | 2026-06-06 | [llama-farm/llamafarm](https://github.com/llama-farm/llamafarm/tree/main/.claude/skills) | cli-skills, code-review, commit-push-pr, +16 more |  | 7.5 | high | git clone https://github.com/llama-farm/llamafarm && cp -r .claude/skills/code-review .claude/skills/commit-push-pr .... |

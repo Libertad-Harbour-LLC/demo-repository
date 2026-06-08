@@ -2643,6 +2643,38 @@
       "title": "github/gh-aw",
       "url": "https://github.com/github/gh-aw/tree/main/.claude/skills/playwright-cli"
     },
+    "https://github.com/glenwille12/ios-developer-agents/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с тремя специализированными skills для iOS-разработки: валидация accessibility, проверка соответствия требованиям App Store и аудит безопасности. Ориентирован на iOS-разработчиков, готовящих приложение к релизу.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-08",
+      "metric": "Конкретность найденных accessibility-проблем и ссылки на Apple guidelines",
+      "promoted_from_watch": false,
+      "repo_full_name": "glenwille12/ios-developer-agents",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "ios-accessibility-validator",
+        "ios-app-store-validator",
+        "ios-security-auditor"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/glenwille12/ios-developer-agents && cp -r ios-developer-agents/.claude/skills/ios-accessibility-validator .claude/skills/ && cp -r ios-developer-agents/.claude/skills/ios-security-auditor .claude/skills/",
+        "Открыть Claude Code в iOS-проекте (Swift/Xcode)",
+        "Промпт: 'Используй skill ios-accessibility-validator, проверь ViewController.swift на соответствие WCAG 2.1 и Apple HIG accessibility guidelines'"
+      ],
+      "title": "glenwille12/ios-developer-agents",
+      "url": "https://github.com/glenwille12/ios-developer-agents/tree/master/.claude/skills"
+    },
     "https://github.com/gsd-build/get-shit-done": {
       "added_manually": true,
       "category": "general_skill",
@@ -4575,6 +4607,94 @@
       "title": "steve-magne/hookstack",
       "url": "https://github.com/steve-magne/hookstack/tree/main/.claude/skills"
     },
+    "https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий-коллекция из 20 Claude Skills для разработчиков, охватывающих PostgreSQL-оптимизацию, frontend-дизайн, работу с документами (PDF/DOCX/XLSX/PPTX), Playwright-тестирование, shadcn-компоненты и создание новых skills. Ориентирован на full-stack разработчиков, работающих с Supabase и React-стеком.",
+      "final_score": 7.9,
+      "first_recommended": "2026-06-08",
+      "metric": "Качество предложений по индексам и EXPLAIN-анализу vs без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "syahiidkamil/Software-Engineer-AI-Agent-Atlas",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "abstraction-power",
+        "algorithmic-art",
+        "canvas-design",
+        "docs-anthropic",
+        "docx",
+        "find-skills",
+        "frontend-design",
+        "human-writing",
+        "learning-from-mistakes",
+        "mcp-builder",
+        "pdf",
+        "playwright-cli",
+        "postgresql-code-review",
+        "postgresql-optimization",
+        "pptx",
+        "shadcn",
+        "skill-creator",
+        "supabase-postgres-best-practices",
+        "theme-factory",
+        "xlsx"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas && cp -r Software-Engineer-AI-Agent-Atlas/.claude/skills/postgresql-optimization .claude/skills/",
+        "Открыть Claude Code в проекте с PostgreSQL-схемой",
+        "Промпт: 'Используй skill postgresql-optimization, проанализируй этот запрос и предложи индексы: SELECT * FROM orders WHERE user_id=? AND status=?'"
+      ],
+      "title": "syahiidkamil/Software-Engineer-AI-Agent-Atlas",
+      "url": "https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas/tree/main/.claude/skills"
+    },
+    "https://github.com/taewanu/pr-review-agent/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с 10 skills для автоматизации PR-процесса в Claude Code: диагностика проблем, TDD-workflow, генерация issues/PRD из кода, git-гарды и архитектурный анализ. Подходит командам, использующим Claude Code для code review и технического долга.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-08",
+      "metric": "Количество и качество сгенерированных issues vs ручное ревью",
+      "promoted_from_watch": false,
+      "repo_full_name": "taewanu/pr-review-agent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "diagnose",
+        "git-guardrails-claude-code",
+        "grill-with-docs",
+        "handoff",
+        "improve-codebase-architecture",
+        "tdd",
+        "to-issues",
+        "to-prd",
+        "triage",
+        "zoom-out"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/taewanu/pr-review-agent && cp -r pr-review-agent/.claude/skills/git-guardrails-claude-code .claude/skills/ && cp -r pr-review-agent/.claude/skills/to-issues .claude/skills/",
+        "Открыть Claude Code в репозитории с открытыми PRs",
+        "Промпт: 'Используй skill to-issues, проанализируй изменения в этом PR и создай список GitHub Issues с приоритетами'"
+      ],
+      "title": "taewanu/pr-review-agent",
+      "url": "https://github.com/taewanu/pr-review-agent/tree/main/.claude/skills"
+    },
     "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "general_skill",
@@ -4840,6 +4960,36 @@
       ],
       "title": "withkynam/vibecode-pro-max-kit",
       "url": "https://github.com/withkynam/vibecode-pro-max-kit/tree/main/.claude/skills"
+    },
+    "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с одним специализированным skill для App Store Optimization (ASO) в Claude Code. Предназначен для мобильных разработчиков и маркетологов, работающих с продвижением приложений в App Store и Google Play.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-08",
+      "metric": "Наличие конкретных ключевых слов, структуры описания и соответствие гайдлайнам App Store",
+      "promoted_from_watch": false,
+      "repo_full_name": "wsbs20/claude-code-aso-skill",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "aso"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/wsbs20/claude-code-aso-skill && cp -r claude-code-aso-skill/.claude/skills/aso .claude/skills/",
+        "Открыть Claude Code в проекте мобильного приложения",
+        "Промпт: 'Используй skill aso, проанализируй текущее описание нашего приложения и предложи оптимизированный вариант для App Store в категории Productivity'"
+      ],
+      "title": "wsbs20/claude-code-aso-skill",
+      "url": "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills"
     },
     "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills/aso": {
       "category": "marketing_skill",
