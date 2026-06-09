@@ -1,9 +1,10 @@
 # Recommended — tool: n8n
 
-Total: 60
+Total: 61
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-09 | [wranngle/n8n: lead-enrichment-microservice + lead-intake-main](https://github.com/wranngle/n8n) | lead-enrichment-microservice, lead-intake-main |  | 6.6 | medium | Скачать lead-enrichment-microservice.json и lead-intake-main.json из папки workflows/ |
 | 2026-06-08 | [duncan-buildroom/n8n-automations: Upwork-Scraper](https://github.com/duncan-buildroom/n8n-automations) | Upwork-Scraper |  | 7.3 | medium | Скачать JSON по ссылке: https://raw.githubusercontent.com/duncan-buildroom/n8n-automations/main/Upwork-Scraper/Upwork... |
 | 2026-06-07 | [datawhalechina/handy-n8n: n8n_mcp](https://github.com/datawhalechina/handy-n8n) | n8n_mcp |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/datawhalechina/handy-n8n/main/workflows/c04/n8n_mcp.json |
 | 2026-06-06 | [slayerlux/n8n-llm-workflows: LLM workflow pack](https://github.com/slayerlux/n8n-llm-workflows) | 01-deterministic-text-summarizer, 02-deterministic-url-summarizer, 03-deterministic-url-qna, +2 more |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/slayerlux/n8n-llm-workflows/main/workflows/01-deterministic-text-summ... |

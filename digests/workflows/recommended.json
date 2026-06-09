@@ -2112,6 +2112,40 @@
       "tool": "n8n",
       "url": "https://github.com/workfloows/workfloows-tutorials"
     },
+    "https://github.com/wranngle/n8n": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "Репозиторий содержит два связанных n8n-workflow для лид-пайплайна: intake принимает входящие лиды, enrichment обогащает их данными. Подходит для sales-команд, которым нужна автоматическая обработка новых лидов без ручного ввода.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-09",
+      "metric": "Количество лидов, прошедших обогащение без ошибок за первый день",
+      "promoted_from_watch": false,
+      "repo_full_name": "wranngle/n8n: lead-enrichment-microservice + lead-intake-main",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "lead-enrichment-microservice",
+        "lead-intake-main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать lead-enrichment-microservice.json и lead-intake-main.json из папки workflows/",
+        "Импортировать оба JSON в n8n через меню Import Workflow",
+        "Настроить webhook-URL в lead-intake-main как точку входа",
+        "Добавить credentials для источника обогащения (Apollo/Clearbit/Hunter)",
+        "Отправить тестовый лид через webhook и проверить прохождение по обоим workflow"
+      ],
+      "title": "wranngle/n8n: lead-enrichment-microservice + lead-intake-main",
+      "tool": "n8n",
+      "url": "https://github.com/wranngle/n8n"
+    },
     "https://github.com/zengfr/n8n-workflow-all-templates": {
       "category": "general_workflow",
       "confidence": "medium",
