@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 84
+Total: 85
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-09 | [mylee04/code-notify](https://github.com/mylee04/code-notify/tree/main/.claude/skills) | cross-platform, shell-scripting |  | 7.0 | high | Клонировать: git clone https://github.com/mylee04/code-notify.git и скопировать обе папки .claude/skills/cross-platfo... |
 | 2026-06-08 | [taewanu/pr-review-agent](https://github.com/taewanu/pr-review-agent/tree/main/.claude/skills) | diagnose, git-guardrails-claude-code, grill-with-docs, +7 more |  | 7.5 | medium | git clone https://github.com/taewanu/pr-review-agent && cp -r pr-review-agent/.claude/skills/git-guardrails-claude-co... |
 | 2026-06-08 | [syahiidkamil/Software-Engineer-AI-Agent-Atlas](https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas/tree/main/.claude/skills) | abstraction-power, algorithmic-art, canvas-design, +17 more |  | 7.9 | high | git clone https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas && cp -r Software-Engineer-AI-Agent-Atlas/... |
 | 2026-06-08 | [glenwille12/ios-developer-agents](https://github.com/glenwille12/ios-developer-agents/tree/master/.claude/skills) | ios-accessibility-validator, ios-app-store-validator, ios-security-auditor |  | 7.0 | medium | git clone https://github.com/glenwille12/ios-developer-agents && cp -r ios-developer-agents/.claude/skills/ios-access... |

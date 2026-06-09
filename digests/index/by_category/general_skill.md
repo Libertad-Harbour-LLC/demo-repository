@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 31
+Total: 32
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-09 | [ergrelet/windiff](https://github.com/ergrelet/windiff/tree/master/.claude/skills/windiff-version-diff-analysis) | windiff-version-diff-analysis |  | 7.0 | high | Клонировать: git clone https://github.com/ergrelet/windiff.git и скопировать .claude/skills/windiff-version-diff-anal... |
 | 2026-06-07 | [kv0906/pm-kit](https://github.com/kv0906/pm-kit/tree/main/.claude/skills) | daily, weekly, interview, +10 more |  | 7.4 | medium | git clone https://github.com/kv0906/pm-kit && cp -r .claude/skills/daily ~/.claude/skills/ (или весь набор) |
 | 2026-06-07 | [erp-mafia/swedish-accounting-skills](https://github.com/erp-mafia/swedish-accounting-skills/tree/main/.claude/skills) | swedish-accounting-compliance, swedish-vat, swedish-payroll, +5 more |  | 7.3 | medium | git clone https://github.com/erp-mafia/swedish-accounting-skills && cp -r .claude/skills/swedish-vat ~/.claude/skills/ |
 | 2026-06-07 | [Hello-QM/catgo-LRG](https://github.com/Hello-QM/catgo-LRG/tree/main/.claude/skills) | vasp-relax, vasp-band, vasp-dos, +7 more |  | 7.5 | medium | git clone https://github.com/Hello-QM/catgo-LRG && скопировать .claude/skills/vasp-relax в свой проект |
