@@ -1,9 +1,10 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 10
+Total: 11
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-10 | [n8nKOR/n8n-shared-workflow: AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant](https://github.com/n8nKOR/n8n-shared-workflow) | 8tusZTTtcyaiznEG__AI_Powered_RAG_Chatbot_for_Your_Docs_+_Google_Drive_+_Gemini_+_Qdrant, Get Airtable data via AI and Obsidian Notes, 2585_workflow_2585, +2 more |  | 6.5 | medium | Скачать RAG Chatbot JSON по ссылке |
 | 2026-06-07 | [datawhalechina/handy-n8n: n8n_mcp](https://github.com/datawhalechina/handy-n8n) | n8n_mcp |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/datawhalechina/handy-n8n/main/workflows/c04/n8n_mcp.json |
 | 2026-06-04 | [Tanishq60/n8n_nl2sql: nl2sql](https://github.com/Tanishq60/n8n_nl2sql) | nl2sql |  | 6.6 | medium | Скачать nl2sql.json по ссылке json_url |
 | 2026-05-31 | [tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish](https://github.com/tinyfish-io/tinyfish-cookbook) | Web Research Agent via Tinyfish |  | 8.1 | high | Скачать JSON по ссылке json_url |

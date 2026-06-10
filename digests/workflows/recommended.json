@@ -66,6 +66,39 @@
       "tool": "n8n",
       "url": "https://github.com/AntonioPhilip/AlertFlow"
     },
+    "https://github.com/AntraTripathi74/AI-SDR": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow, реализующий функции AI SDR (Sales Development Representative): автоматическая обработка лидов, генерация персонализированных аутрич-сообщений и управление follow-up последовательностями. Ориентирован на B2B-продажи и команды роста.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-10",
+      "metric": "Количество обработанных лидов в час; процент ответов на AI-сгенерированные сообщения",
+      "promoted_from_watch": false,
+      "repo_full_name": "AntraTripathi74/AI-SDR: sdr",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "sdr"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/AntraTripathi74/AI-SDR/main/sdr.json",
+        "Импортировать в n8n",
+        "Изучить node-граф: определить используемые AI-модели и CRM-интеграции",
+        "Настроить credentials (OpenAI/другой LLM, email-провайдер или CRM)",
+        "Запустить тест с тестовым лидом и проверить сгенерированное сообщение"
+      ],
+      "title": "AntraTripathi74/AI-SDR: sdr",
+      "tool": "n8n",
+      "url": "https://github.com/AntraTripathi74/AI-SDR"
+    },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "category": "general_workflow",
       "confidence": "high",
@@ -447,6 +480,39 @@
       "tool": "n8n",
       "url": "https://github.com/Nijamudin/automated-business-analysis-workflow"
     },
+    "https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "Workflow из книги Packt Publishing по Incident Response, интегрирующий n8n с TheHive (платформой управления инцидентами) и Velociraptor (инструментом форензики). Предназначен для команд SOC и IR-специалистов, автоматизирующих реагирование на киберинциденты.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-10",
+      "metric": "Время от алерта в TheHive до запуска форензического сбора в Velociraptor",
+      "promoted_from_watch": false,
+      "repo_full_name": "PacktPublishing/Incident-Response-with-Threat-Intelligence: n8n_thehive_velociraptor_workflow",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n_thehive_velociraptor_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/PacktPublishing/Incident-Response-with-Threat-Intelligence/main/Chapter11/n8n_thehive_velociraptor_workflow.json",
+        "Импортировать в n8n через Workflows → Import from file",
+        "Проверить требуемые credentials: TheHive API key, Velociraptor API endpoint",
+        "Настроить тестовый алерт в TheHive для проверки триггера",
+        "Запустить workflow и убедиться, что Velociraptor получает задачу сбора данных"
+      ],
+      "title": "PacktPublishing/Incident-Response-with-Threat-Intelligence: n8n_thehive_velociraptor_workflow",
+      "tool": "n8n",
+      "url": "https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence"
+    },
     "https://github.com/Peaghan/n8n-ai-calendar-agent-webhook": {
       "category": "general_workflow",
       "confidence": "medium",
@@ -512,6 +578,39 @@
       "title": "Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: Deep Link Validator",
       "tool": "n8n",
       "url": "https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing"
+    },
+    "https://github.com/Repello-AI/Agent-Wiz": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "Репозиторий Agent-Wiz от Repello AI содержит пример n8n-workflow для взаимодействия со Spotify API через AI-агента. Является примером кода для фреймворка Agent-Wiz и демонстрирует, как строить AI-агентов поверх внешних API.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-10",
+      "metric": "Успешность распознавания и выполнения музыкальных команд через AI",
+      "promoted_from_watch": false,
+      "repo_full_name": "Repello-AI/Agent-Wiz: spotify",
+      "scores": {
+        "business_impact": 5,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 6
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "spotify"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/Repello-AI/Agent-Wiz/master/examples/code/n8n/spotify.json",
+        "Импортировать в n8n",
+        "Создать Spotify Developer App и получить Client ID + Secret",
+        "Настроить OAuth credentials для Spotify в n8n",
+        "Запустить тест с текстовым запросом (например, 'найди плейлист с джазом')"
+      ],
+      "title": "Repello-AI/Agent-Wiz: spotify",
+      "tool": "n8n",
+      "url": "https://github.com/Repello-AI/Agent-Wiz"
     },
     "https://github.com/STGime/posta-n8n-workflows": {
       "category": "content_workflow",
@@ -614,6 +713,39 @@
       "title": "Tanishq60/n8n_nl2sql: nl2sql",
       "tool": "n8n",
       "url": "https://github.com/Tanishq60/n8n_nl2sql"
+    },
+    "https://github.com/Trusera/ai-bom": {
+      "category": "sales_workflow",
+      "confidence": "high",
+      "description": "Репозиторий ai-bom от Trusera содержит n8n-workflow для автоматической скоринговки лидов с использованием AI. Предназначен для отделов продаж и RevOps-команд, которым нужно приоритизировать входящие лиды без ручного труда.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-10",
+      "metric": "Время скоринга одного лида; корреляция AI-скора с реальной конверсией",
+      "promoted_from_watch": false,
+      "repo_full_name": "Trusera/ai-bom: lead-scorer",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "lead-scorer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/Trusera/ai-bom/main/src/ai_bom/demo_data/workflows/lead-scorer.json",
+        "Открыть n8n, перейти в Workflows → Import from file, загрузить JSON",
+        "Настроить credentials для используемых нод (проверить node-граф на наличие AI/CRM-нод)",
+        "Запустить тестовый прогон с тестовым лидом через Manual trigger или входящий webhook",
+        "Проверить скоринговый результат в выходной ноде"
+      ],
+      "title": "Trusera/ai-bom: lead-scorer",
+      "tool": "n8n",
+      "url": "https://github.com/Trusera/ai-bom"
     },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
@@ -1431,6 +1563,39 @@
       "tool": "n8n",
       "url": "https://github.com/lynote-ai/humanize-text"
     },
+    "https://github.com/market-analyticx/seo-auditor-service": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического SEO-аудита веб-страниц или сайтов. Подходит для SEO-специалистов, маркетологов и агентств, которые хотят автоматизировать регулярные проверки технического SEO.",
+      "final_score": 6.7,
+      "first_recommended": "2026-06-10",
+      "metric": "Время аудита одной страницы; полнота охвата SEO-параметров в отчёте",
+      "promoted_from_watch": false,
+      "repo_full_name": "market-analyticx/seo-auditor-service: seo_auditor",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "seo_auditor"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/market-analyticx/seo-auditor-service/main/workflows/seo_auditor.json",
+        "Импортировать в n8n",
+        "Проверить node-граф на наличие HTTP Request нод и SEO-API (ScreamingFrog, Ahrefs, или собственный парсер)",
+        "Настроить входной URL для аудита",
+        "Запустить тест на тестовом сайте и получить отчёт"
+      ],
+      "title": "market-analyticx/seo-auditor-service: seo_auditor",
+      "tool": "n8n",
+      "url": "https://github.com/market-analyticx/seo-auditor-service"
+    },
     "https://github.com/mehdreaming/tiktok-to-pinterest": {
       "category": "content_workflow",
       "confidence": "medium",
@@ -1463,6 +1628,43 @@
       "title": "mehdreaming/tiktok-to-pinterest: TikTok → Pinterest",
       "tool": "n8n",
       "url": "https://github.com/mehdreaming/tiktok-to-pinterest"
+    },
+    "https://github.com/n8nKOR/n8n-shared-workflow": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "Корейский репозиторий с коллекцией n8n-workflow, включая RAG-чатбот на базе Google Drive, Gemini и Qdrant для ответов на вопросы по документам. Содержит также workflow для работы с Airtable через AI и Obsidian Notes.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-10",
+      "metric": "Точность ответов на вопросы по документам (relevance); время индексации",
+      "promoted_from_watch": false,
+      "repo_full_name": "n8nKOR/n8n-shared-workflow: AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "8tusZTTtcyaiznEG__AI_Powered_RAG_Chatbot_for_Your_Docs_+_Google_Drive_+_Gemini_+_Qdrant",
+        "Get Airtable data via AI and Obsidian Notes",
+        "2585_workflow_2585",
+        "3296",
+        "3672"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать RAG Chatbot JSON по ссылке",
+        "Импортировать в n8n",
+        "Настроить Google Drive credentials и Qdrant instance (cloud или self-hosted)",
+        "Добавить Gemini API key",
+        "Запустить workflow на тестовой папке с документами в Google Drive"
+      ],
+      "title": "n8nKOR/n8n-shared-workflow: AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant",
+      "tool": "n8n",
+      "url": "https://github.com/n8nKOR/n8n-shared-workflow"
     },
     "https://github.com/oxbshw/Open-Workflow-Library": {
       "category": "content_workflow",

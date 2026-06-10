@@ -1,9 +1,11 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 10
+Total: 12
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-10 | [Trusera/ai-bom: lead-scorer](https://github.com/Trusera/ai-bom) | lead-scorer |  | 7.3 | high | Скачать JSON: https://raw.githubusercontent.com/Trusera/ai-bom/main/src/ai_bom/demo_data/workflows/lead-scorer.json |
+| 2026-06-10 | [AntraTripathi74/AI-SDR: sdr](https://github.com/AntraTripathi74/AI-SDR) | sdr |  | 6.8 | medium | Скачать JSON: https://raw.githubusercontent.com/AntraTripathi74/AI-SDR/main/sdr.json |
 | 2026-06-09 | [wranngle/n8n: lead-enrichment-microservice + lead-intake-main](https://github.com/wranngle/n8n) | lead-enrichment-microservice, lead-intake-main |  | 6.6 | medium | Скачать lead-enrichment-microservice.json и lead-intake-main.json из папки workflows/ |
 | 2026-06-08 | [duncan-buildroom/n8n-automations: Upwork-Scraper](https://github.com/duncan-buildroom/n8n-automations) | Upwork-Scraper |  | 7.3 | medium | Скачать JSON по ссылке: https://raw.githubusercontent.com/duncan-buildroom/n8n-automations/main/Upwork-Scraper/Upwork... |
 | 2026-06-06 | [AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation: AI Lead Qualification Template](https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation) | AI Lead Qualification Template |  | 7.2 | medium | Скачать JSON по адресу json_url |

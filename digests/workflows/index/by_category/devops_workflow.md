@@ -1,9 +1,10 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 10
+Total: 11
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-10 | [PacktPublishing/Incident-Response-with-Threat-Intelligence: n8n_thehive_velociraptor_workflow](https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence) | n8n_thehive_velociraptor_workflow |  | 7.0 | medium | Скачать JSON: https://raw.githubusercontent.com/PacktPublishing/Incident-Response-with-Threat-Intelligence/main/Chapt... |
 | 2026-06-03 | [weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator](https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive) | APK Security Scanner & PDF Report Generator |  | 6.8 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-03 | [anilrajrimal1/n8n-backups: n8n-backup](https://github.com/anilrajrimal1/n8n-backups) | n8n-backup |  | 7.5 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-01 | [Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing](https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing) | Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing |  | 6.7 | medium | Скачать JSON по json_url |
