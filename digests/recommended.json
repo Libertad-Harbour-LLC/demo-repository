@@ -388,6 +388,91 @@
       "title": "Donchitos/Claude-Code-Game-Studios",
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills"
     },
+    "https://github.com/Dullu9/10x-Outreach-Skill/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 27 Claude Code skills для автоматизации B2B и B2C outreach-процессов: от компоузинга email и LinkedIn-охватов до управления кампаниями и SEO. Репозиторий ориентирован на маркетологов и sales-команды, использующих Claude Code как agentным инструментом.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-10",
+      "metric": "Качество и персонализация сгенерированного outreach-email vs написанного вручную; время на создание",
+      "promoted_from_watch": false,
+      "repo_full_name": "Dullu9/10x-Outreach-Skill",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "email-composer",
+        "linkedin-adapter",
+        "campaign-executor",
+        "reply-generator",
+        "discovery-engine",
+        "outreach-manager",
+        "seo-optimization",
+        "analytics",
+        "content-marketing",
+        "gmail-adapter",
+        "instagram-adapter",
+        "twitter-adapter",
+        "account-manager",
+        "template-manager",
+        "workflow-engine"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Dullu9/10x-Outreach-Skill.git && cp -r 10x-Outreach-Skill/.claude/skills/email-composer <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в рабочем проекте",
+        "Дать промт: 'Используй email-composer skill чтобы написать персонализированный cold outreach email для [описание целевого клиента]'"
+      ],
+      "title": "Dullu9/10x-Outreach-Skill",
+      "url": "https://github.com/Dullu9/10x-Outreach-Skill/tree/main/.claude/skills"
+    },
+    "https://github.com/FerroxLabs/wayland/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий содержит 12 верифицированных Claude Code skills для автоматизации полного PR-цикла: от ревью и фикса до шипинга, включая Sentry-интеграцию, i18n и архитектурное планирование. Ориентирован на инженеров, работающих с GitHub и активно использующих код-агентов.",
+      "final_score": 7.9,
+      "first_recommended": "2026-06-10",
+      "metric": "Качество и полнота автоматического ревью PR vs ручного; скорость получения фидбека",
+      "promoted_from_watch": false,
+      "repo_full_name": "FerroxLabs/wayland",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "architecture",
+        "bump-version",
+        "fix-issues",
+        "fix-sentry",
+        "i18n",
+        "oss-pr",
+        "pr-automation",
+        "pr-fix",
+        "pr-review",
+        "pr-ship",
+        "pr-verify",
+        "testing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/FerroxLabs/wayland.git && cp -r wayland/.claude/skills/pr-review <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в своём проекте с открытым PR",
+        "Дать промт: 'Используй skill pr-review для анализа последнего PR в этом репозитории и дай подробный отзыв'"
+      ],
+      "title": "FerroxLabs/wayland",
+      "url": "https://github.com/FerroxLabs/wayland/tree/main/.claude/skills"
+    },
     "https://github.com/Growthub-ai/growthub-local/tree/main/.claude/skills": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -655,6 +740,47 @@
       ],
       "title": "Lambenthan/empiricalwiki",
       "url": "https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills"
+    },
+    "https://github.com/OpenAnalystInc/10x-Content-Expert/tree/main/.claude/skills": {
+      "category": "content_skill",
+      "confidence": "medium",
+      "description": "Репозиторий из 30 Claude Code skills для контент-маркетинга и управления контентом, включая глубокую интеграцию с Canva API. Охватывает создание статей, email-копирайтинг, SMM, транскрибацию и работу с локальными файлами (docx, pdf, pptx, xlsx).",
+      "final_score": 6.9,
+      "first_recommended": "2026-06-10",
+      "metric": "Качество и структура сгенерированной статьи; соответствие SEO-требованиям; время создания",
+      "promoted_from_watch": false,
+      "repo_full_name": "OpenAnalystInc/10x-Content-Expert",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "blog-article-writer",
+        "brand-voice-manager",
+        "canva-content-generator",
+        "content-repurposer",
+        "email-copywriter",
+        "hook-generator",
+        "social-media-writer",
+        "nurture-sequence",
+        "canva-presentation",
+        "canva-video",
+        "content-analyzer",
+        "mega-transcriber"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/OpenAnalystInc/10x-Content-Expert.git && cp -r 10x-Content-Expert/.claude/skills/blog-article-writer <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в рабочем проекте",
+        "Дать промт: 'Используй blog-article-writer skill чтобы написать статью на тему [ваша тема] объёмом 1000 слов с SEO-структурой'"
+      ],
+      "title": "OpenAnalystInc/10x-Content-Expert",
+      "url": "https://github.com/OpenAnalystInc/10x-Content-Expert/tree/main/.claude/skills"
     },
     "https://github.com/OutSystems/docs-product/tree/master/.claude/skills": {
       "category": "content_skill",
@@ -2002,6 +2128,41 @@
       "title": "daloopa/investing",
       "url": "https://github.com/daloopa/investing/tree/main/.claude/skills"
     },
+    "https://github.com/deanwhitex/AIW2.0STACK/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Набор из 6 Claude Code skills для исследования ниш и компиляции контент-брифов с интеграцией Apify. Ориентирован на маркетологов и контент-стратегов, которым нужна автоматизированная цепочка от исследования ниши до готового брифа.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-10",
+      "metric": "Полнота и качество research-брифа; корректность работы Apify-интеграции",
+      "promoted_from_watch": false,
+      "repo_full_name": "deanwhitex/AIW2.0STACK",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "apify-niche-research",
+        "brief-compilation",
+        "deep-research-synthesis",
+        "niche-research-framework",
+        "setup-wizard-toolkit",
+        "template-capture-and-build"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/deanwhitex/AIW2.0STACK.git && cp -r AIW2.0STACK/.claude/skills/niche-research-framework <ваш-проект>/.claude/skills/",
+        "Получить Apify API-ключ (apify.com) и настроить переменную окружения APIFY_API_KEY",
+        "Запустить Claude Code и дать промт: 'Используй niche-research-framework skill чтобы исследовать нишу [ваша тема] и создай research-бриф'"
+      ],
+      "title": "deanwhitex/AIW2.0STACK",
+      "url": "https://github.com/deanwhitex/AIW2.0STACK/tree/main/.claude/skills"
+    },
     "https://github.com/debuglebowski/slayzone/tree/main/.claude/skills": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -2643,6 +2804,36 @@
       "title": "getkyo/kyo",
       "url": "https://github.com/getkyo/kyo/tree/main/.claude/skills"
     },
+    "https://github.com/github/gh-aw/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий от организации GitHub содержит skill playwright-cli для автоматизации браузерного тестирования через Playwright в связке с Claude Code. Подходит разработчикам, которым нужно интегрировать e2e-тестирование в агентный workflow.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-10",
+      "metric": "Успешное создание и запуск хотя бы одного работающего Playwright-теста без ручного написания кода",
+      "promoted_from_watch": false,
+      "repo_full_name": "github/gh-aw",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "playwright-cli"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/github/gh-aw.git && cp -r gh-aw/.claude/skills/playwright-cli <ваш-проект>/.claude/skills/",
+        "Убедиться, что Playwright установлен в проекте: npx playwright install",
+        "Запустить Claude Code и дать промт: 'Используй playwright-cli skill чтобы написать e2e-тест для главной страницы и запусти его'"
+      ],
+      "title": "github/gh-aw",
+      "url": "https://github.com/github/gh-aw/tree/main/.claude/skills"
+    },
     "https://github.com/github/gh-aw/tree/main/.claude/skills/playwright-cli": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -2887,6 +3078,36 @@
       ],
       "title": "imbue-ai/mngr",
       "url": "https://github.com/imbue-ai/mngr/tree/main/.claude/skills"
+    },
+    "https://github.com/jimmc414/Kosmos/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Kosmos содержит верифицированный skill kosmos-e2e-testing для автоматизации end-to-end тестирования через Claude Code. С 532 звёздами это один из наиболее популярных verified e2e-testing skills в текущей выборке.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-10",
+      "metric": "Количество успешно написанных и прошедших e2e-тестов; покрытие основных user flows",
+      "promoted_from_watch": false,
+      "repo_full_name": "jimmc414/Kosmos",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "kosmos-e2e-testing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/jimmc414/Kosmos.git && cp -r Kosmos/.claude/skills/kosmos-e2e-testing <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в проекте с существующим кодом",
+        "Дать промт: 'Используй kosmos-e2e-testing skill чтобы создать e2e-тесты для основного пользовательского сценария этого приложения'"
+      ],
+      "title": "jimmc414/Kosmos",
+      "url": "https://github.com/jimmc414/Kosmos/tree/master/.claude/skills"
     },
     "https://github.com/komunite/kalfa/tree/main/.claude/skills": {
       "category": "marketing_skill",
@@ -3780,6 +4001,36 @@
       ],
       "title": "nextlevelbuilder/ui-ux-pro-max-skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills"
+    },
+    "https://github.com/nexu-io/open-design/tree/main/.claude/skills": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Крупный open-source дизайн-проект (62 720 звёзд) с одним встроенным Claude Code skill — od-contribute, предназначенным для помощи контрибьюторам в навигации и работе с кодовой базой проекта. Skill встроен непосредственно в репозиторий проекта, а не является отдельной библиотекой.",
+      "final_score": 7.8,
+      "first_recommended": "2026-06-10",
+      "metric": "Claude Code корректно описывает структуру репозитория и предлагает валидный workflow для контрибьюта",
+      "promoted_from_watch": false,
+      "repo_full_name": "nexu-io/open-design",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 9,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "od-contribute"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/nexu-io/open-design.git && cd open-design",
+        "Запустить Claude Code прямо в клонированном репозитории — skill подхватится автоматически из .claude/skills/od-contribute",
+        "Дать промт: 'Используй od-contribute skill чтобы помочь мне сделать первый контрибьют — покажи структуру проекта и создай тестовый PR'"
+      ],
+      "title": "nexu-io/open-design",
+      "url": "https://github.com/nexu-io/open-design/tree/main/.claude/skills"
     },
     "https://github.com/ngocsangyem/MeowKit/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
