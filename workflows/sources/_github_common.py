@@ -15,44 +15,36 @@ from __future__ import annotations
 import json as _json
 import os
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 
 import requests
+
+from trendwatch.sources._http import (
+    CODE_SEARCH_PACING_SECONDS,
+    RATE_LIMITED,
+    build_github_headers,
+    get_json_with_backoff,
+)
 
 REPO_SEARCH_URL = "https://api.github.com/search/repositories"
 CODE_SEARCH_URL = "https://api.github.com/search/code"
 REPO_API_URL = "https://api.github.com/repos"
 RAW_BASE = "https://raw.githubusercontent.com"
 
-RATE_LIMITED = "RATE_LIMITED"
-
 
 def _headers() -> dict:
-    h = {
-        "Accept": "application/vnd.github+json",
-        "User-Agent": "workflows-trendwatch",
-    }
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        h["Authorization"] = f"Bearer {token}"
-    return h
+    return build_github_headers("workflows-trendwatch")
 
 
 def _safe_get(url: str, params: dict | None = None, timeout: int = 30):
-    try:
-        resp = requests.get(url, headers=_headers(), params=params, timeout=timeout)
-        if resp.status_code == 404:
-            return None
-        if (
-            resp.status_code == 403
-            and resp.headers.get("X-RateLimit-Remaining") == "0"
-        ):
-            return RATE_LIMITED
-        resp.raise_for_status()
-        return resp.json()
-    except Exception as exc:
-        print(f"[workflows:github] GET {url} failed: {exc}", file=sys.stderr)
-        return None
+    return get_json_with_backoff(
+        url,
+        headers=_headers(),
+        params=params,
+        timeout=timeout,
+        tag="workflows:github",
+    )
 
 
 def _repo_meta(full_name: str) -> dict:
@@ -142,54 +134,53 @@ def _fetch_json_capped(raw_url: str, max_bytes: int) -> dict | None:
 
 
 def _code_search(queries: list[str]) -> list[dict]:
-    if not os.environ.get("GITHUB_TOKEN"):
+    """One page of 100 per query, sorted by freshest-indexed, paced
+    CODE_SEARCH_PACING_SECONDS apart — code search allows only ~10
+    requests/min and back-to-back queries get every request 429'd
+    (observed in the 2026-06-11 production run).
+    """
+    if not (os.environ.get("GH_SEARCH_TOKEN") or os.environ.get("GITHUB_TOKEN")):
         print(
             "[workflows:github] GITHUB_TOKEN missing — code search disabled",
             file=sys.stderr,
         )
         return []
     out: list[dict] = []
-    for q in queries or []:
-        # sort=indexed → freshest indexed JSON first. per_page=100, 2 pages →
-        # up to 200 results per query instead of static top-20-by-relevance.
-        for page in (1, 2):
-            try:
-                data = _safe_get(
-                    CODE_SEARCH_URL,
-                    params={
-                        "q": q,
-                        "per_page": 100,
-                        "page": page,
-                        "sort": "indexed",
-                        "order": "desc",
-                    },
+    for i, q in enumerate(queries or []):
+        if i:
+            time.sleep(CODE_SEARCH_PACING_SECONDS)
+        try:
+            data = _safe_get(
+                CODE_SEARCH_URL,
+                params={
+                    "q": q,
+                    "per_page": 100,
+                    "page": 1,
+                    "sort": "indexed",
+                    "order": "desc",
+                },
+            )
+            if not data or data == RATE_LIMITED:
+                continue
+            for it in data.get("items", []) or []:
+                repo = it.get("repository") or {}
+                full_name = repo.get("full_name")
+                path = it.get("path")
+                if not full_name or not path or not path.endswith(".json"):
+                    continue
+                out.append(
+                    {
+                        "repo_full_name": full_name,
+                        "json_path": path,
+                        "repo_html_url": repo.get("html_url")
+                        or f"https://github.com/{full_name}",
+                        "description": repo.get("description") or "",
+                        "_from": "code_search",
+                    }
                 )
-                if not data or data == RATE_LIMITED:
-                    break
-                items = data.get("items", []) or []
-                if not items:
-                    break
-                for it in items:
-                    repo = it.get("repository") or {}
-                    full_name = repo.get("full_name")
-                    path = it.get("path")
-                    if not full_name or not path or not path.endswith(".json"):
-                        continue
-                    out.append(
-                        {
-                            "repo_full_name": full_name,
-                            "json_path": path,
-                            "repo_html_url": repo.get("html_url")
-                            or f"https://github.com/{full_name}",
-                            "description": repo.get("description") or "",
-                            "_from": "code_search",
-                        }
-                    )
-                if len(items) < 100:
-                    break
-            except Exception as exc:
-                print(f"[workflows:github:code] {q!r} p{page}: {exc}", file=sys.stderr)
-                break
+        except Exception as exc:
+            print(f"[workflows:github:code] {q!r}: {exc}", file=sys.stderr)
+            continue
     return out
 
 

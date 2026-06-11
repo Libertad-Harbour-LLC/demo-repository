@@ -31,6 +31,14 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional PAT with its own code-search quota - dodges the shared
+          # secondary rate limit that 429s code search on Actions runners.
+          GH_SEARCH_TOKEN: ${{ secrets.GH_SEARCH_TOKEN }}
+          # Reddit script-app creds (reddit.com/prefs/apps). Without them the
+          # public endpoint answers 403 Blocked from Actions IPs and the
+          # Reddit source contributes nothing.
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
       - name: Commit daily digest
         if: success()
         run: |

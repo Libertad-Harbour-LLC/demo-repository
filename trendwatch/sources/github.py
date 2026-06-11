@@ -12,9 +12,23 @@ GITHUB_TOKEN; for local dry-run set it manually (public_repo scope).
 """
 import os
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 
-import requests
+try:
+    from ._http import (
+        CODE_SEARCH_PACING_SECONDS,
+        RATE_LIMITED,
+        build_github_headers,
+        get_json_with_backoff,
+    )
+except ImportError:
+    from _http import (
+        CODE_SEARCH_PACING_SECONDS,
+        RATE_LIMITED,
+        build_github_headers,
+        get_json_with_backoff,
+    )
 
 REPO_SEARCH_URL = "https://api.github.com/search/repositories"
 CODE_SEARCH_URL = "https://api.github.com/search/code"
@@ -22,34 +36,17 @@ REPO_API_URL = "https://api.github.com/repos"
 
 
 def _headers() -> dict:
-    h = {
-        "Accept": "application/vnd.github+json",
-        "User-Agent": "trendwatch",
-    }
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        h["Authorization"] = f"Bearer {token}"
-    return h
-
-
-RATE_LIMITED = "RATE_LIMITED"
+    return build_github_headers("trendwatch")
 
 
 def _safe_get(url: str, params: dict | None = None, timeout: int = 30):
-    try:
-        resp = requests.get(url, headers=_headers(), params=params, timeout=timeout)
-        if resp.status_code == 404:
-            return None
-        if (
-            resp.status_code == 403
-            and resp.headers.get("X-RateLimit-Remaining") == "0"
-        ):
-            return RATE_LIMITED
-        resp.raise_for_status()
-        return resp.json()
-    except Exception as exc:
-        print(f"[trendwatch:github] GET {url} failed: {exc}", file=sys.stderr)
-        return None
+    return get_json_with_backoff(
+        url,
+        headers=_headers(),
+        params=params,
+        timeout=timeout,
+        tag="trendwatch:github",
+    )
 
 
 def _default_branch(full_name: str) -> str:
@@ -74,9 +71,15 @@ def _code_search(queries: list[str], since_date: str) -> list[dict]:
 
     Sorted by `indexed` (most recently indexed by GitHub first) so we surface
     NEW SKILL.md files added in the last 24h, not the same top-relevance
-    cache day after day. Up to 100 per query × 2 pages = 200 max per query.
+    cache day after day. One page of 100 per query — page 2 almost never
+    adds fresh items for a 24h window and doubles the request count against
+    code search's tight 10-requests/min budget.
+
+    Requests are paced CODE_SEARCH_PACING_SECONDS apart: the 2026-06-11 run
+    showed that firing queries back-to-back gets every single one 429'd and
+    the channel silently contributes zero candidates.
     """
-    if not os.environ.get("GITHUB_TOKEN"):
+    if not (os.environ.get("GH_SEARCH_TOKEN") or os.environ.get("GITHUB_TOKEN")):
         print(
             "[trendwatch.github] GITHUB_TOKEN missing — code search disabled, "
             "falling back to topic/description search only",
@@ -84,44 +87,40 @@ def _code_search(queries: list[str], since_date: str) -> list[dict]:
         )
         return []
     out: list[dict] = []
-    for q in queries or []:
-        for page in (1, 2):
-            try:
-                data = _safe_get(
-                    CODE_SEARCH_URL,
-                    params={
-                        "q": q,
-                        "per_page": 100,
-                        "page": page,
-                        "sort": "indexed",
-                        "order": "desc",
-                    },
+    for i, q in enumerate(queries or []):
+        if i:
+            time.sleep(CODE_SEARCH_PACING_SECONDS)
+        try:
+            data = _safe_get(
+                CODE_SEARCH_URL,
+                params={
+                    "q": q,
+                    "per_page": 100,
+                    "page": 1,
+                    "sort": "indexed",
+                    "order": "desc",
+                },
+            )
+            if not data or data == RATE_LIMITED:
+                continue
+            for it in data.get("items", []) or []:
+                repo = it.get("repository") or {}
+                full_name = repo.get("full_name")
+                path = it.get("path")
+                if not full_name or not path:
+                    continue
+                out.append(
+                    {
+                        "repo_full_name": full_name,
+                        "skill_path": path,
+                        "repo_html_url": repo.get("html_url") or f"https://github.com/{full_name}",
+                        "description": repo.get("description") or "",
+                        "_from": "code_search",
+                    }
                 )
-                if not data or data == RATE_LIMITED:
-                    break
-                items = data.get("items", []) or []
-                if not items:
-                    break
-                for it in items:
-                    repo = it.get("repository") or {}
-                    full_name = repo.get("full_name")
-                    path = it.get("path")
-                    if not full_name or not path:
-                        continue
-                    out.append(
-                        {
-                            "repo_full_name": full_name,
-                            "skill_path": path,
-                            "repo_html_url": repo.get("html_url") or f"https://github.com/{full_name}",
-                            "description": repo.get("description") or "",
-                            "_from": "code_search",
-                        }
-                    )
-                if len(items) < 100:
-                    break
-            except Exception as exc:
-                print(f"[trendwatch:github:code_search] {q!r} p{page}: {exc}", file=sys.stderr)
-                break
+        except Exception as exc:
+            print(f"[trendwatch:github:code_search] {q!r}: {exc}", file=sys.stderr)
+            continue
     return out
 
 
