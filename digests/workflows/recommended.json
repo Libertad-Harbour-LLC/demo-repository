@@ -846,6 +846,39 @@
       "tool": "n8n",
       "url": "https://github.com/akahappygit/AI-Lead-Generation-Automation"
     },
+    "https://github.com/alejandrosnz/srt-llm-translator": {
+      "category": "video_workflow",
+      "confidence": "medium",
+      "description": "Workflow для автоматического перевода SRT-файлов субтитров с помощью LLM через n8n. Предназначен для создателей видеоконтента, которым нужна быстрая локализация субтитров без ручного перевода.",
+      "final_score": 6.3,
+      "first_recommended": "2026-06-11",
+      "metric": "Время перевода 1 минуты субтитров; качество сравнить с Google Translate",
+      "promoted_from_watch": false,
+      "repo_full_name": "alejandrosnz/srt-llm-translator: n8n_workflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/alejandrosnz/srt-llm-translator/main/n8n/n8n_workflow.json",
+        "Импортировать в n8n через Settings → Import Workflow",
+        "Настроить credentials для OpenAI (или совместимого LLM) в узле перевода",
+        "Подать тестовый .srt файл через webhook или ручной запуск",
+        "Проверить выходной SRT на корректность перевода"
+      ],
+      "title": "alejandrosnz/srt-llm-translator: n8n_workflow",
+      "tool": "n8n",
+      "url": "https://github.com/alejandrosnz/srt-llm-translator"
+    },
     "https://github.com/anilrajrimal1/n8n-backups": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -2148,6 +2181,39 @@
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base"
     },
+    "https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive": {
+      "category": "video_workflow",
+      "confidence": "medium",
+      "description": "Workflow для автоматической генерации миниатюр из видеофайлов с помощью FFmpeg и сохранения результатов в Google Drive. Подходит для команд, работающих с большим объёмом видеоконтента и нуждающихся в автоматизации рутинных операций с файлами.",
+      "final_score": 6.3,
+      "first_recommended": "2026-06-11",
+      "metric": "Время обработки 1 видеофайла; наличие thumbnail в Google Drive",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive: main",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive/main/main.json",
+        "Импортировать в n8n через Settings → Import Workflow",
+        "Настроить Google Drive credentials (OAuth2) в соответствующем узле",
+        "Убедиться, что FFmpeg доступен в окружении n8n (self-hosted или docker с FFmpeg)",
+        "Запустить тестовый прогон с небольшим видеофайлом (< 10 МБ)"
+      ],
+      "title": "weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive: main",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive"
+    },
     "https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -2347,6 +2413,43 @@
       "title": "wranngle/n8n: lead-enrichment-microservice + lead-intake-main",
       "tool": "n8n",
       "url": "https://github.com/wranngle/n8n"
+    },
+    "https://github.com/yigitkonur/n8n-workflows-craft": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Набор из 5 n8n-workflow для автоматизации работы с Craft CMS: генерация контента с ИИ, AI-ресёрч агент, управление встречами, транскрибация аудио и генерация брендовых изображений. Предназначен для команд, использующих Craft CMS и желающих подключить ИИ-инструменты к своему контент-пайплайну.",
+      "final_score": 6.2,
+      "first_recommended": "2026-06-11",
+      "metric": "Успешное создание контент-записи в Craft CMS через AI-workflow",
+      "promoted_from_watch": false,
+      "repo_full_name": "yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "craft-ai-assistant-gen",
+        "craft-ai-research-agent",
+        "craft-appointment-manager",
+        "craft-audio-transcribe",
+        "craft-brand-image-gen"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON, например craft-ai-assistant-gen.json",
+        "Импортировать в n8n через Settings → Import Workflow",
+        "Настроить Craft CMS API credentials и OpenAI API key",
+        "Запустить workflow вручную с тестовым запросом на генерацию контента",
+        "Проверить созданный контент в Craft CMS admin panel"
+      ],
+      "title": "yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)",
+      "tool": "n8n",
+      "url": "https://github.com/yigitkonur/n8n-workflows-craft"
     },
     "https://github.com/zengfr/n8n-workflow-all-templates": {
       "category": "general_workflow",

@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 11
+Total: 12
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-11 | [yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)](https://github.com/yigitkonur/n8n-workflows-craft) | craft-ai-assistant-gen, craft-ai-research-agent, craft-appointment-manager, +2 more |  | 6.2 | medium | Скачать нужный JSON, например craft-ai-assistant-gen.json |
 | 2026-06-06 | [STGime/posta-n8n-workflows: blog-to-linkedin-carousel](https://github.com/STGime/posta-n8n-workflows) | blog-to-linkedin-carousel, blog-to-social-media, product-launch-campaign, +1 more |  | 7.3 | medium | Скачать JSON: https://raw.githubusercontent.com/STGime/posta-n8n-workflows/main/workflows/blog-to-linkedin-carousel.json |
 | 2026-06-05 | [soluckysummer/n8n_workflows: n8nposter](https://github.com/soluckysummer/n8n_workflows) | n8nposter, webhook_demo |  | 6.8 | high | Скачать JSON: https://raw.githubusercontent.com/soluckysummer/n8n_workflows/main/workflows/n8nposter.json |
 | 2026-06-03 | [weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation](https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout) | Automated Podcast Generation with n8n, OpenAI & Buzzsprout |  | 6.8 | medium | Скачать JSON по ссылке json_url |
