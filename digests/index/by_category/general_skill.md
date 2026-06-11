@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 32
+Total: 34
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-11 | [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills) | audit-reproducibility, capture-environment, checkpoint, +39 more |  | 8.5 | high | git clone https://github.com/pedrohcgs/claude-code-my-workflow && cp -r claude-code-my-workflow/.claude/skills/lit-re... |
+| 2026-06-11 | [joaquimscosta/arkhe-claude-plugins](https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills) | plugin-release-checker, skill-validator, sync-docs |  | 6.8 | medium | git clone https://github.com/joaquimscosta/arkhe-claude-plugins && cp -r arkhe-claude-plugins/.claude/skills/skill-va... |
 | 2026-06-09 | [ergrelet/windiff](https://github.com/ergrelet/windiff/tree/master/.claude/skills/windiff-version-diff-analysis) | windiff-version-diff-analysis |  | 7.0 | high | Клонировать: git clone https://github.com/ergrelet/windiff.git и скопировать .claude/skills/windiff-version-diff-anal... |
 | 2026-06-07 | [kv0906/pm-kit](https://github.com/kv0906/pm-kit/tree/main/.claude/skills) | daily, weekly, interview, +10 more |  | 7.4 | medium | git clone https://github.com/kv0906/pm-kit && cp -r .claude/skills/daily ~/.claude/skills/ (или весь набор) |
 | 2026-06-07 | [erp-mafia/swedish-accounting-skills](https://github.com/erp-mafia/swedish-accounting-skills/tree/main/.claude/skills) | swedish-accounting-compliance, swedish-vat, swedish-payroll, +5 more |  | 7.3 | medium | git clone https://github.com/erp-mafia/swedish-accounting-skills && cp -r .claude/skills/swedish-vat ~/.claude/skills/ |

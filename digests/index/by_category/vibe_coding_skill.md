@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 88
+Total: 89
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-11 | [ractive/hyalo](https://github.com/ractive/hyalo/tree/main/.claude/skills) | dogfood, hyalo-tidy, hyalo, +2 more |  | 6.9 | medium | git clone https://github.com/ractive/hyalo && cp -r hyalo/.claude/skills/review-rust ~/.claude/skills/ && cp -r hyalo... |
 | 2026-06-10 | [jimmc414/Kosmos](https://github.com/jimmc414/Kosmos/tree/master/.claude/skills) | kosmos-e2e-testing |  | 7.0 | high | git clone https://github.com/jimmc414/Kosmos.git && cp -r Kosmos/.claude/skills/kosmos-e2e-testing <ваш-проект>/.clau... |
 | 2026-06-10 | [github/gh-aw](https://github.com/github/gh-aw/tree/main/.claude/skills) | playwright-cli |  | 7.4 | high | git clone https://github.com/github/gh-aw.git && cp -r gh-aw/.claude/skills/playwright-cli <ваш-проект>/.claude/skills/ |
 | 2026-06-10 | [FerroxLabs/wayland](https://github.com/FerroxLabs/wayland/tree/main/.claude/skills) | architecture, bump-version, fix-issues, +9 more |  | 7.9 | high | git clone https://github.com/FerroxLabs/wayland.git && cp -r wayland/.claude/skills/pr-review <ваш-проект>/.claude/sk... |

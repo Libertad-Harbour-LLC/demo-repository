@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 144
+Total: 147
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-11 | [ractive/hyalo](https://github.com/ractive/hyalo/tree/main/.claude/skills) | dogfood, hyalo-tidy, hyalo, +2 more |  | 6.9 | medium | git clone https://github.com/ractive/hyalo && cp -r hyalo/.claude/skills/review-rust ~/.claude/skills/ && cp -r hyalo... |
+| 2026-06-11 | [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills) | audit-reproducibility, capture-environment, checkpoint, +39 more |  | 8.5 | high | git clone https://github.com/pedrohcgs/claude-code-my-workflow && cp -r claude-code-my-workflow/.claude/skills/lit-re... |
+| 2026-06-11 | [joaquimscosta/arkhe-claude-plugins](https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills) | plugin-release-checker, skill-validator, sync-docs |  | 6.8 | medium | git clone https://github.com/joaquimscosta/arkhe-claude-plugins && cp -r arkhe-claude-plugins/.claude/skills/skill-va... |
 | 2026-06-10 | [nexu-io/open-design](https://github.com/nexu-io/open-design/tree/main/.claude/skills) | od-contribute |  | 7.8 | high | git clone https://github.com/nexu-io/open-design.git && cd open-design |
 | 2026-06-10 | [jimmc414/Kosmos](https://github.com/jimmc414/Kosmos/tree/master/.claude/skills) | kosmos-e2e-testing |  | 7.0 | high | git clone https://github.com/jimmc414/Kosmos.git && cp -r Kosmos/.claude/skills/kosmos-e2e-testing <ваш-проект>/.clau... |
 | 2026-06-10 | [github/gh-aw](https://github.com/github/gh-aw/tree/main/.claude/skills) | playwright-cli |  | 7.4 | high | git clone https://github.com/github/gh-aw.git && cp -r gh-aw/.claude/skills/playwright-cli <ваш-проект>/.claude/skills/ |

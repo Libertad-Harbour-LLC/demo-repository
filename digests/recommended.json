@@ -3109,6 +3109,38 @@
       "title": "jimmc414/Kosmos",
       "url": "https://github.com/jimmc414/Kosmos/tree/master/.claude/skills"
     },
+    "https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с 3 meta-skills для управления экосистемой Claude Skills: валидация других skills, проверка готовности к релизу и синхронизация документации. Полезен разработчикам, создающим собственные skills-коллекции.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-11",
+      "metric": "Находит ли skill-validator реальные проблемы в SKILL.md (отсутствие описания, некорректная структура, missing examples)",
+      "promoted_from_watch": false,
+      "repo_full_name": "joaquimscosta/arkhe-claude-plugins",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "plugin-release-checker",
+        "skill-validator",
+        "sync-docs"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/joaquimscosta/arkhe-claude-plugins && cp -r arkhe-claude-plugins/.claude/skills/skill-validator ~/.claude/skills/",
+        "Открыть Claude Code в папке с любым существующим skill-репозиторием",
+        "Попросить: 'Use skill-validator to validate the SKILL.md in .claude/skills/my-skill/' и проверить, какие ошибки/предупреждения выдаст"
+      ],
+      "title": "joaquimscosta/arkhe-claude-plugins",
+      "url": "https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills"
+    },
     "https://github.com/komunite/kalfa/tree/main/.claude/skills": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -4392,6 +4424,77 @@
       "title": "pbakaus/impeccable",
       "url": "https://github.com/pbakaus/impeccable/tree/main/.claude/skills"
     },
+    "https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Коллекция из 52 Claude Skills для академических исследователей и преподавателей: работа с LaTeX/Quarto, R-код, репликационные пакеты, ответы рецензентам, литературный обзор, грант-proposal и проверка воспроизводимости. Ориентирована на экономистов и социальных учёных, работающих с Stata и R.",
+      "final_score": 8.5,
+      "first_recommended": "2026-06-11",
+      "metric": "Качество структурированного литературного обзора или отчёта о воспроизводимости по сравнению с обычным Claude без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "pedrohcgs/claude-code-my-workflow",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 42,
+      "skills_in_repo": [
+        "audit-reproducibility",
+        "capture-environment",
+        "checkpoint",
+        "coauthor-brief",
+        "compile-latex",
+        "data-analysis",
+        "data-management-plan",
+        "deep-audit",
+        "did-event-study",
+        "disclosure-check",
+        "extract-tikz",
+        "grant-proposal",
+        "humanize",
+        "interview-me",
+        "learn",
+        "lit-review",
+        "new-diagram",
+        "pedagogy-review",
+        "power-analysis",
+        "preregister",
+        "proofread",
+        "qa-quarto",
+        "r-package-check",
+        "replication-package",
+        "research-ideation",
+        "respond-to-eval",
+        "respond-to-referees",
+        "review-paper",
+        "review-r",
+        "scaffold-exercises",
+        "seven-pass-review",
+        "simulation-study",
+        "slide-excellence",
+        "stata-replication",
+        "submission-disclosures",
+        "syllabus",
+        "teach-from-paper",
+        "translate-to-quarto",
+        "triage-inbox",
+        "validate-bib",
+        "verify-claims",
+        "visual-audit"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/pedrohcgs/claude-code-my-workflow && cp -r claude-code-my-workflow/.claude/skills/lit-review ~/.claude/skills/",
+        "Открыть Claude Code в папке с научной статьёй или R-проектом",
+        "Ввести промт: 'Use lit-review skill to summarize related work for [тема]' или 'Use stata-replication to audit reproducibility of this do-file'"
+      ],
+      "title": "pedrohcgs/claude-code-my-workflow",
+      "url": "https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills"
+    },
     "https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -4557,6 +4660,40 @@
       ],
       "title": "quickwit-oss/tantivy",
       "url": "https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills"
+    },
+    "https://github.com/ractive/hyalo/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Небольшой репозиторий с 5 skills для Rust-разработки: code review специфично для Rust, security-audit и dogfood-тестирование. Предназначен для команд, использующих Rust в production.",
+      "final_score": 6.9,
+      "first_recommended": "2026-06-11",
+      "metric": "Глубина Rust-специфичных замечаний (ownership, lifetimes, unsafe) по сравнению со стандартным review",
+      "promoted_from_watch": false,
+      "repo_full_name": "ractive/hyalo",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "dogfood",
+        "hyalo-tidy",
+        "hyalo",
+        "review-rust",
+        "security-audit"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/ractive/hyalo && cp -r hyalo/.claude/skills/review-rust ~/.claude/skills/ && cp -r hyalo/.claude/skills/security-audit ~/.claude/skills/",
+        "Открыть Claude Code в любом Rust-проекте (можно взять публичный crate)",
+        "Попросить: 'Use review-rust skill to review src/lib.rs' и затем 'Use security-audit to check for unsafe blocks and potential vulnerabilities'"
+      ],
+      "title": "ractive/hyalo",
+      "url": "https://github.com/ractive/hyalo/tree/main/.claude/skills"
     },
     "https://github.com/rjmurillo/ai-agents/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
