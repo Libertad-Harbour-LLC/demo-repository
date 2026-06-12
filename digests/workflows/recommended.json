@@ -1662,6 +1662,43 @@
       "tool": "n8n",
       "url": "https://github.com/mehdreaming/tiktok-to-pinterest"
     },
+    "https://github.com/mhmdmnsor292003-arch/free-ai-tools": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Пять n8n-workflow для создания бесплатных AI-инструментов: ревью кода, генерация email-текстов и LinkedIn-постов, а также лендинги для этих инструментов. Ориентирован на разработчиков и маркетологов, желающих быстро развернуть AI-ассистентов через API.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-12",
+      "metric": "Качество сгенерированного контента (ручная оценка), время ответа API",
+      "promoted_from_watch": false,
+      "repo_full_name": "mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "ai-code-reviewer-api",
+        "ai-code-reviewer-landing-page",
+        "ai-email-writer-api",
+        "ai-email-writer-landing-page",
+        "ai-linkedin-post-generator-api"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например, ai-linkedin-post-generator-api.json)",
+        "Импортнуть в n8n через Import Workflow",
+        "Настроить credentials: OpenAI API key (или совместимый LLM)",
+        "Вызвать webhook-endpoint с тестовыми данными (текст кода или тема поста)",
+        "Проверить корректность сгенерированного контента в ответе"
+      ],
+      "title": "mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator",
+      "tool": "n8n",
+      "url": "https://github.com/mhmdmnsor292003-arch/free-ai-tools"
+    },
     "https://github.com/n8nKOR/n8n-shared-workflow": {
       "category": "data_workflow",
       "confidence": "medium",
@@ -2345,6 +2382,43 @@
       "title": "weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: Personalized Deal Content via Zoho CRM + GPT-4o-mini + Gmail",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
+    },
+    "https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "Набор из 5 n8n-workflow для автоматизации продаж через WhatsApp и Instagram: голосовой бот, реалтайм-скрапинг, follow-up цепочки и исходящий охват через Instagram. Подходит для малого бизнеса и команд продаж, работающих в мессенджерах.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-12",
+      "metric": "Время ответа на входящий WhatsApp-запрос, процент follow-up доставленных в срок",
+      "promoted_from_watch": false,
+      "repo_full_name": "wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "ASIC Miners - Complete with Scraping FIXED",
+        "Details to Document Generator",
+        "Follow-Up Automation",
+        "Follow-up Workflow - TESTING VERSION (2s + 5s)",
+        "Insta Outbound"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow из папки workflows/ репозитория",
+        "Импортнуть JSON в n8n через Import Workflow",
+        "Настроить credentials: WhatsApp Business API или Twilio, OpenAI API для голоса",
+        "Запустить тестовый прогон с тестовым номером WhatsApp",
+        "Проверить, что follow-up отправляется в нужный интервал"
+      ],
+      "title": "wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound",
+      "tool": "n8n",
+      "url": "https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping"
     },
     "https://github.com/workfloows/workfloows-tutorials": {
       "category": "data_workflow",

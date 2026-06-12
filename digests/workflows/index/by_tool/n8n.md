@@ -1,9 +1,11 @@
 # Recommended — tool: n8n
 
-Total: 70
+Total: 72
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-12 | [wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound](https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping) | ASIC Miners - Complete with Scraping FIXED, Details to Document Generator, Follow-Up Automation, +2 more |  | 7.0 | medium | Скачать JSON нужного workflow из папки workflows/ репозитория |
+| 2026-06-12 | [mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator](https://github.com/mhmdmnsor292003-arch/free-ai-tools) | ai-code-reviewer-api, ai-code-reviewer-landing-page, ai-email-writer-api, +2 more |  | 6.6 | medium | Скачать JSON нужного workflow (например, ai-linkedin-post-generator-api.json) |
 | 2026-06-11 | [yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)](https://github.com/yigitkonur/n8n-workflows-craft) | craft-ai-assistant-gen, craft-ai-research-agent, craft-appointment-manager, +2 more |  | 6.2 | medium | Скачать нужный JSON, например craft-ai-assistant-gen.json |
 | 2026-06-11 | [weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive: main](https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive) | main |  | 6.3 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and... |
 | 2026-06-11 | [alejandrosnz/srt-llm-translator: n8n_workflow](https://github.com/alejandrosnz/srt-llm-translator) | n8n_workflow |  | 6.3 | medium | Скачать JSON: https://raw.githubusercontent.com/alejandrosnz/srt-llm-translator/main/n8n/n8n_workflow.json |

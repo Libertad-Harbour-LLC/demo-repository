@@ -5,7 +5,7 @@
       "category": "data_workflow",
       "description": "Учебный репозиторий курса Fastcampus с двумя n8n-workflow: Mistral OCR для распознавания текста из документов и SlackBot для отправки результатов в Slack.",
       "expires_at": "2026-07-07",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -23,7 +23,7 @@
       "category": "web_workflow",
       "description": "Workflow для автоматизации публикации блог-постов в WordPress через n8n. Подходит для контент-команд и инди-блогеров, которые хотят автоматизировать регулярные публикации.",
       "expires_at": "2026-07-03",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -41,7 +41,7 @@
       "category": "devops_workflow",
       "description": "Workflow для n8n, интегрирующий уведомления Uptime Kuma с дополнительными каналами алертинга. Предназначен для DevOps-инженеров, мониторящих доступность сервисов.",
       "expires_at": "2026-06-22",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -59,7 +59,7 @@
       "category": "data_workflow",
       "description": "Workflow реализует Medallion-архитектуру ETL для финансовых данных в n8n. Предназначен для аналитиков и инженеров данных, строящих многоуровневые пайплайны обработки финансовых данных.",
       "expires_at": "2026-07-03",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -77,7 +77,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для автоматического сбора и суммаризации новостей с доставкой в Telegram-канал. Подойдёт для редакций, личных новостных дайджестов и мониторинга тематических новостей.",
       "expires_at": "2026-06-28",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -95,7 +95,7 @@
       "category": "devops_workflow",
       "description": "Workflow для автоматизации code review pull requests с помощью ИИ в n8n. Предназначен для разработчиков, которые хотят получать AI-ассистированные комментарии к PR без ручного ревью каждого изменения.",
       "expires_at": "2026-07-11",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -113,7 +113,7 @@
       "category": "general_workflow",
       "description": "Стартовый набор из 4 n8n-workflow для AI-агентов: RAG-агент, репёрпозинг контента, обработка лидов и извлечение данных из PDF. Подходит для быстрого старта с AI-автоматизацией.",
       "expires_at": "2026-07-06",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 4,
@@ -131,7 +131,7 @@
       "category": "devops_workflow",
       "description": "n8n-workflow для обработки неуспешных платежей: AI анализирует причину отказа, автоматически создаёт тикет в Jira и отправляет алерт в Slack. Предназначен для команд поддержки и DevOps в SaaS-продуктах.",
       "expires_at": "2026-07-05",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
@@ -149,7 +149,7 @@
       "category": "marketing_workflow",
       "description": "Make-blueprint для мониторинга Reddit через RSS с целью поиска лидов. Простой workflow, отслеживающий посты по ключевым словам и агрегирующий потенциальных клиентов.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -167,7 +167,7 @@
       "category": "general_workflow",
       "description": "n8n-workflow для self-correcting RAG чат-бота — чат-бот с механизмом самокоррекции на основе Retrieval-Augmented Generation. Свежий push сегодня, тема AI-агентов актуальна.",
       "expires_at": "2026-06-22",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -184,7 +184,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -200,7 +200,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -217,7 +217,7 @@
       "category": "general_workflow",
       "description": "AI-агент для юридической практики (адвокатура), реализованный в n8n. Судя по имени — чат-бот или ассистент юридической консультации. Интересен как редкий пример legaltech-workflow на n8n.",
       "expires_at": "2026-06-21",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -235,7 +235,7 @@
       "category": "general_workflow",
       "description": "Репозиторий содержит два n8n-workflow: классификатор входящих писем с помощью AI и конвертер электронных книг в аудиокниги. Оба файла верифицированы, push апрель 2026.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -253,7 +253,7 @@
       "category": "general_workflow",
       "description": "n8n AI-агент для управления Google Calendar через чат-интерфейс (в отличие от webhook-варианта). Позволяет вести диалог с агентом и последовательно уточнять детали встречи.",
       "expires_at": "2026-07-01",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -271,7 +271,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для автоматической транскрипции YouTube-видео с сохранением результатов в Google Docs. Репо новое, опубликовано сегодня, verified=true.",
       "expires_at": "2026-06-19",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -289,7 +289,7 @@
       "category": "general_workflow",
       "description": "Make-blueprint для приложения-журнала (journal app). Единственный Make-кандидат с верифицированным JSON; детали workflow неизвестны без просмотра blueprint.",
       "expires_at": "2026-07-02",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -306,7 +306,7 @@
       "added_date": "2026-05-16",
       "category": "general_skill",
       "expires_at": "2026-06-15",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -318,12 +318,30 @@
       "url": "https://github.com/Katacha1537/n8n-backups",
       "why_interesting": "Workflow для медицинской клиники с AI — нишевый и потенциально интересный кейс автоматизации записи пациентов или обработки запросов. Verified JSON."
     },
+    "https://github.com/KzTeMa/n8n-telegram-voice-transcription-bot": {
+      "added_date": "2026-06-12",
+      "category": "general_workflow",
+      "description": "n8n-workflow для транскрипции голосовых сообщений Telegram с использованием AI (предположительно Whisper/OpenAI). Принимает голосовое сообщение в Telegram-боте и возвращает текстовую расшифровку.",
+      "expires_at": "2026-07-12",
+      "last_checked": "2026-06-12",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 1
+      },
+      "repo_full_name": "KzTeMa/n8n-telegram-voice-transcription-bot: transcriptor",
+      "signal_to_wait": "Рост звёзд или появление инструкции по настройке Telegram Bot Token и Whisper API",
+      "title": "KzTeMa/n8n-telegram-voice-transcription-bot: transcriptor",
+      "tool": "n8n",
+      "url": "https://github.com/KzTeMa/n8n-telegram-voice-transcription-bot",
+      "why_interesting": "Практичный одиночный workflow с ясным назначением; транскрипция голосовых сообщений — частая потребность в командах и личном использовании"
+    },
     "https://github.com/Meeting-BaaS/meeting-bot-as-a-service": {
       "added_date": "2026-05-25",
       "category": "data_workflow",
       "description": "Make-интеграция для автоматической записи и обработки встреч через Meeting BaaS: вебхук принимает данные встречи, LLM генерирует краткое резюме и сохраняет результат в Airtable. Репозиторий содержит 2 блюпринта (Airtable + Webhook), 41 звезда.",
       "expires_at": "2026-06-24",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 2,
@@ -341,7 +359,7 @@
       "category": "general_workflow",
       "description": "Пример workflow для кастомной n8n-ноды sgr-tool-calling, демонстрирующий паттерн structured generation с вызовом инструментов. Интересен разработчикам, создающим кастомные AI-ноды.",
       "expires_at": "2026-06-28",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -359,7 +377,7 @@
       "category": "data_workflow",
       "description": "Мультиагентная система для анализа данных в n8n: главный агент, SQL-исполнитель, генератор графиков, поиск по схеме БД и утренний брифинг. Предназначена для аналитиков данных и BI-команд.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 5,
@@ -377,7 +395,7 @@
       "category": "general_workflow",
       "description": "Репозиторий курса по n8n от MohElshamy1994 содержит workflow 39-GPT-Oss — по названию связан с интеграцией GPT и OSS-инструментов. Имеет 696 звёзд, что делает его самым популярным репо в сегодняшней выборке.",
       "expires_at": "2026-06-23",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -395,7 +413,7 @@
       "category": "data_workflow",
       "description": "Набор из 3 n8n-workflow для автоматического поиска вакансий: скрейпинг LinkedIn, RemoteOK и главный оркестрирующий workflow. Предназначен для соискателей или рекрутеров, которые хотят автоматически собирать подходящие вакансии.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 3,
@@ -413,7 +431,7 @@
       "category": "marketing_workflow",
       "description": "n8n-workflow для автоматической генерации лидов с использованием AI-агента. Автоматизирует поиск и первичную обработку потенциальных клиентов, ориентирован на маркетинговые команды и freelance-аутрич.",
       "expires_at": "2026-07-10",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -431,7 +449,7 @@
       "category": "marketing_workflow",
       "description": "Два n8n-workflow для автоматизированного бизнес-анализа в контексте AI-маркетинга: основной workflow и набор инструментов к нему. Свежий push сегодня.",
       "expires_at": "2026-06-22",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -449,7 +467,7 @@
       "category": "sales_workflow",
       "description": "n8n-workflow для генерации персонализированных рекомендаций по сделкам в Zoho CRM с помощью GPT-4o-mini и отправки через Gmail. Помогает sales-командам, работающим с Zoho, автоматизировать подготовку контента для каждой сделки.",
       "expires_at": "2026-07-06",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -467,7 +485,7 @@
       "category": "marketing_workflow",
       "description": "n8n-workflow для автоматического скрейпинга данных из Instagram с применением AI-обработки. Репо специализированное — один файл, 35 звёзд, push январь 2026.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -485,7 +503,7 @@
       "category": "general_workflow",
       "description": "Репозиторий с названием jobsignal-engine содержит workflow 06-alerter. По имени предполагается система мониторинга и алертов, связанная с сигналами о вакансиях или рыночными сигналами. Подробное описание в данных отсутствует.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -503,7 +521,7 @@
       "category": "sales_workflow",
       "description": "Make-репозиторий с blueprint-файлами для CRM и e-commerce автоматизаций; содержит 4 workflow, включая pulse-сценарии. Недавно получил новый workflow (delta_skills_count=1), push был 2026-05-25.",
       "expires_at": "2026-06-25",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 4,
@@ -521,7 +539,7 @@
       "category": "devops_workflow",
       "description": "Репозиторий uptime-ai-notifier содержит два versioned n8n-workflow (v1.0.0 и v3.0.0), судя по названию — мониторинг uptime с AI-уведомлениями. Инструкции по настройке в данных отсутствуют.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -539,7 +557,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для AI-репёрпозинга контента: предположительно переформатирует исходный материал (статью, пост, видео) в несколько форматов для разных платформ. Имя файла workflow.json не раскрывает деталей — требуется изучение node-графа.",
       "expires_at": "2026-07-04",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -557,7 +575,7 @@
       "category": "general_workflow",
       "description": "n8n-workflow версии 2 для AI-ассистента, объединяющего Google Calendar и Telegram: обрабатывает входящие сообщения в Telegram, взаимодействует с Calendar через AI и отвечает пользователю. Опубликован сегодня, cross_source_count=2.",
       "expires_at": "2026-06-24",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -575,7 +593,7 @@
       "category": "devops_workflow",
       "description": "AutoSec-MCP содержит n8n-workflow snyk-to-n8n для интеграции Snyk (сканер уязвимостей) с n8n-пайплайном. Нишевый DevSecOps-инструмент для команд, автоматизирующих security-алерты.",
       "expires_at": "2026-06-23",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -593,7 +611,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для автоматической генерации и публикации тредов в Twitter/X. Ориентирован на контент-маркетологов и авторов, которым нужна регулярная активность в соцсетях.",
       "expires_at": "2026-06-28",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -611,7 +629,7 @@
       "category": "data_workflow",
       "description": "n8n-workflow для оркестрации AI-процессов в сфере закупок (procurement) с использованием RAG: автоматизирует анализ тендерных документов, сравнение поставщиков или обработку заявок. Опубликован сегодня, 1 верифицированный JSON.",
       "expires_at": "2026-06-24",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -629,7 +647,7 @@
       "category": "data_workflow",
       "description": "QUANT-LLM-ASSISTANT содержит n8n-workflow stock_alert для мониторинга фондового рынка с использованием LLM. Ориентирован на трейдеров и аналитиков, автоматизирующих алерты по акциям.",
       "expires_at": "2026-06-23",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -647,7 +665,7 @@
       "category": "general_workflow",
       "description": "n8n-workflow с названием 'ai-automation-consultant' — вероятно, AI-ассистент для консультаций по автоматизации. Конкретное назначение неясно из-за безымянного workflow.json; необходимо изучение node-графа.",
       "expires_at": "2026-07-04",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -665,7 +683,7 @@
       "category": "general_workflow",
       "description": "Демо-бот для WhatsApp на базе n8n и Whapi.Cloud API. Показывает базовый сценарий приёма и отправки сообщений через WhatsApp для бизнеса.",
       "expires_at": "2026-06-28",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -683,7 +701,7 @@
       "category": "general_workflow",
       "description": "Make-blueprint для автоматизации обработки заявок из Google Forms: вебхук принимает данные формы, отправляет уведомление Gmail и записывает в Google Sheets, опционально создавая карточку в Trello. Полезен для команд, которые собирают заявки через формы.",
       "expires_at": "2026-07-05",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -701,7 +719,7 @@
       "category": "data_workflow",
       "description": "n8n-workflow для OCR-парсинга счетов и документов через Gemini AI с автоматической записью данных в Google Sheets. Актуален для бухгалтерских и финансовых команд, обрабатывающих большой объём входящих документов.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -719,7 +737,7 @@
       "category": "devops_workflow",
       "description": "Репозиторий с n8n-workflow PingUpTime — мониторинг доступности сервисов (uptime check) с отправкой уведомлений при недоступности.",
       "expires_at": "2026-07-07",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -737,7 +755,7 @@
       "category": "marketing_workflow",
       "description": "Набор из 2 workflow для email-drip кампаний и маркировки экспортированных контактов в n8n. Ориентирован на маркетологов, автоматизирующих email-последовательности.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -755,7 +773,7 @@
       "category": "marketing_workflow",
       "description": "n8n-workflow для AI-генерации лидов: автоматический скрапинг и обработка потенциальных клиентов. Актуален для sales- и маркетинг-команд, ищущих автоматизацию верхней части воронки.",
       "expires_at": "2026-06-21",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -773,7 +791,7 @@
       "category": "video_workflow",
       "description": "n8n workflow для автоматического перевода SRT-субтитров с помощью LLM. Полезен видеопродюсерам, YouTube-каналам и локализаторам, которым нужен быстрый AI-перевод субтитров.",
       "expires_at": "2026-06-30",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -791,7 +809,7 @@
       "category": "general_workflow",
       "description": "n8n-workflow для автоматизации HR-рекрутинга с использованием AI-агента. Обрабатывает этапы найма: скрининг резюме, планирование интервью или коммуникацию с кандидатами. Ориентирован на HR-команды и рекрутинговые агентства.",
       "expires_at": "2026-07-10",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -809,7 +827,7 @@
       "category": "marketing_workflow",
       "description": "Workflow для SEO-автоматизации в n8n. Подходит для контент-маркетологов и SEO-специалистов, которые хотят автоматизировать рутинные задачи анализа или публикации.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -827,7 +845,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для полностью агентической автоматизации блогинга: генерация, редактирование и публикация постов через AI-агента. Подходит для блогеров и контент-команд, которые хотят автоматизировать весь цикл создания статей.",
       "expires_at": "2026-07-05",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -845,7 +863,7 @@
       "category": "general_workflow",
       "description": "Коллекция n8n workflow с акцентом на AI-обработку текста; репозиторий содержит как минимум один verified workflow text-fix. Может содержать дополнительные workflow, не попавшие в выборку.",
       "expires_at": "2026-07-03",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -863,7 +881,7 @@
       "category": "sales_workflow",
       "description": "n8n-workflow для интеграции с PerfexCRM — популярной self-hosted CRM-системой. Автоматизирует операции в CRM через n8n.",
       "expires_at": "2026-07-02",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -881,7 +899,7 @@
       "category": "general_workflow",
       "description": "Два n8n-workflow для интеграции с Claude через MCP-протокол: HTTP и webhook варианты. Актуально для разработчиков, строящих AI-агентов на базе Claude с управлением через n8n.",
       "expires_at": "2026-07-09",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -899,7 +917,7 @@
       "category": "data_workflow",
       "description": "Репозиторий от организации datawhalechina с двумя n8n-workflow: RAG-пайплайн и инструментальная автоматизация (tools). 113 звёзд, добавлен новый workflow за последние сутки.",
       "expires_at": "2026-06-19",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -917,7 +935,7 @@
       "category": "devops_workflow",
       "description": "n8n-workflow для автопилота операционных задач — судя по названию, автоматизация рутинных ops-процессов. Репо свежее, JSON верифицирован, конкретика use case неизвестна без README.",
       "expires_at": "2026-06-26",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -935,7 +953,7 @@
       "category": "sales_workflow",
       "description": "Workflow для автоматического оповещения об оттоке клиентов (churn alert) через n8n. Ориентирован на SaaS-компании и продуктовые команды, которым важно оперативно реагировать на признаки ухода пользователей.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -953,7 +971,7 @@
       "category": "general_workflow",
       "description": "Коллекция n8n-workflow для разных задач: Telegram-расписание, TOTP-автоматизация, Bitwarden, Typeform→Sheets, публикация в Twitter. Репо со 256 звёздами, ориентировано на general-purpose автоматизацию.",
       "expires_at": "2026-06-21",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 5,
@@ -971,7 +989,7 @@
       "category": "video_workflow",
       "description": "n8n workflow в составе проекта TikTok Forge для автоматизации создания или публикации TikTok-контента. Репо посвящено инструментарию вокруг TikTok, workflow выступает частью пайплайна.",
       "expires_at": "2026-06-30",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -989,7 +1007,7 @@
       "category": "data_workflow",
       "description": "Личный бэкап-репозиторий с 4 n8n-workflow: RAG AI Agent, Cover Letter generator, HF Sites и SQL Agents. Охватывает AI-агентику, генерацию документов и работу с базами данных через SQL.",
       "expires_at": "2026-07-07",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 4,
@@ -1007,7 +1025,7 @@
       "category": "video_workflow",
       "description": "Коллекция Make blueprints для работы с AI видеогенерацией: Dream Machine (img2vid, txt2vid) и Fal.ai API коннекторы. Предназначена для контент-криейторов и разработчиков, интегрирующих AI-видеогенерацию в Make-автоматизации.",
       "expires_at": "2026-06-30",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 5,
@@ -1020,12 +1038,30 @@
       "url": "https://github.com/felores/make-blueprints",
       "why_interesting": "5 blueprint в одном репо, все verified. Dream Machine и Fal.ai — актуальные AI-видео инструменты 2025-2026. Но push старый (2024-11-05)."
     },
+    "https://github.com/foot8319/openclaw-n8n-stack": {
+      "added_date": "2026-06-12",
+      "category": "sales_workflow",
+      "description": "Пять n8n-workflow для операционных нужд бизнеса: поиск контактов в CRM, проверка доступности в календаре, запись в Airtable, аудит-лог и мониторинг сервисов. Хорошо подходит как набор sub-workflow для более крупных автоматизаций.",
+      "expires_at": "2026-07-12",
+      "last_checked": "2026-06-12",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 5,
+        "stars": 1
+      },
+      "repo_full_name": "foot8319/openclaw-n8n-stack: CRM Contact Lookup + Calendar Check + Service Health",
+      "signal_to_wait": "Рост звёзд от 1 до 5+ или появление README с описанием интеграций",
+      "title": "foot8319/openclaw-n8n-stack: CRM Contact Lookup + Calendar Check + Service Health",
+      "tool": "n8n",
+      "url": "https://github.com/foot8319/openclaw-n8n-stack",
+      "why_interesting": "5 верифицированных workflow с чёткими именами, охватывающих CRM, календарь и мониторинг; может служить основой для более сложных пайплайнов"
+    },
     "https://github.com/gnueole/jobby-md2html": {
       "added_date": "2026-06-09",
       "category": "sales_workflow",
       "description": "Репозиторий содержит 5 n8n-workflow для job-tracking системы: LinkedIn-профили в Notion, динамическая и статическая генерация PDF, синхронизация конфига и отправка ошибок в Axiom. Ориентирован на автоматизацию найма или карьерного отслеживания.",
       "expires_at": "2026-07-09",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 5,
@@ -1038,12 +1074,30 @@
       "url": "https://github.com/gnueole/jobby-md2html",
       "why_interesting": "Редкая комбинация LinkedIn→Notion парсинга с PDF-генерацией и error-logging в Axiom. 5 верифицированных workflow в одном репо — хороший задел для production-системы."
     },
+    "https://github.com/gogogogogogogogogogo55/List-of-out-of-focus-photos-Excel-output": {
+      "added_date": "2026-06-12",
+      "category": "photo_workflow",
+      "description": "n8n-workflow на японском языке для автоматического поиска и выгрузки списка нечётких (расфокусированных) фотографий в Excel-файл. Нишевый инструмент для фотографов или операторов медиатек.",
+      "expires_at": "2026-07-12",
+      "last_checked": "2026-06-12",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 0
+      },
+      "repo_full_name": "gogogogogogogogogogo55/List-of-out-of-focus-photos-Excel-output: ピンボケ写真検索",
+      "signal_to_wait": "Появление описания на английском или рост интереса со стороны сообщества фотографов",
+      "title": "gogogogogogogogogogo55/List-of-out-of-focus-photos-Excel-output: ピンボケ写真検索",
+      "tool": "n8n",
+      "url": "https://github.com/gogogogogogogogogogo55/List-of-out-of-focus-photos-Excel-output",
+      "why_interesting": "Редкая нишевая автоматизация для photo QA — поиск размытых фото и формирование отчёта; верифицированный JSON, оригинальная задача"
+    },
     "https://github.com/gyoridavid/ai_agents_az": {
       "added_date": "2026-05-21",
       "category": "content_workflow",
       "description": "Репозиторий курса по AI-агентам с workflow для эпизода 31, связанного с Veo (Google видеогенерация). 3761 звезда — очень популярный образовательный репо.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1061,7 +1115,7 @@
       "category": "data_workflow",
       "description": "Репозиторий с n8n workflow для работы с Excel-файлами (XLS/XLSX): чтение, обработка и интеграция данных из табличных файлов. Один из самых популярных в выборке по числу звёзд.",
       "expires_at": "2026-06-27",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1079,7 +1133,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для генерации AI-видео через Seedance и автоматической публикации на TikTok, YouTube и Instagram одновременно. Ориентирован на контент-мейкеров и маркетологов, работающих с короткими видео.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1097,7 +1151,7 @@
       "category": "video_workflow",
       "description": "Workflow для автоматической генерации видео через n8n. Конкретный стек неизвестен без просмотра JSON, но название прямо указывает на видеогенерацию — вероятно через AI-видео API.",
       "expires_at": "2026-07-11",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1115,7 +1169,7 @@
       "category": "devops_workflow",
       "description": "Два n8n-workflow для обработки алертов из LibreNMS: триаж входящих алертов и их маршрутизация. Предназначен для сетевых администраторов и NOC-команд, использующих LibreNMS для мониторинга сети.",
       "expires_at": "2026-07-01",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -1133,7 +1187,7 @@
       "category": "data_workflow",
       "description": "Официальный репозиторий Make (Integromat) с коллекцией skills-blueprint, включая шаблон для подключения произвольного API через shell. Свежий push май 2026.",
       "expires_at": "2026-06-20",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1151,7 +1205,7 @@
       "category": "devops_workflow",
       "description": "n8n-workflow для интеграции с Security Onion — платформой мониторинга сетевой безопасности. Workflow Dispatcher предназначен для маршрутизации и обработки security-событий в рамках SOC-процессов.",
       "expires_at": "2026-06-19",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1169,7 +1223,7 @@
       "category": "general_workflow",
       "description": "Workflow для автоматической валидации страховых квитанций в n8n. Подходит страховым компаниям или брокерам, которым нужна автоматизация проверки документов.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1187,7 +1241,7 @@
       "category": "devops_workflow",
       "description": "n8n-workflow для мониторинга затрат в гибридном AI-стеке. Судя по имени файла и названию репо, workflow отслеживает расходы на AI-инфраструктуру и может отправлять алерты. Подходит командам, использующим несколько AI-провайдеров.",
       "expires_at": "2026-06-18",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1205,7 +1259,7 @@
       "category": "data_workflow",
       "description": "n8n-workflow для еженедельной генерации отчётов об энергопотреблении через EnergiDataService API с отправкой по email и сохранением в Google Drive. Интересен для энергетической отрасли и компаний с ESG-отчётностью.",
       "expires_at": "2026-07-01",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -1223,7 +1277,7 @@
       "category": "data_workflow",
       "description": "n8n workflow для бумажной торговли на основе RSI индикатора с 15-минутным таймфреймом через Alpaca API. Предназначен для трейдеров и разработчиков алготрейдинговых систем.",
       "expires_at": "2026-06-27",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1241,7 +1295,7 @@
       "category": "marketing_workflow",
       "description": "Make-система из нескольких blueprints для исследования блогов и автоматизированного outreach через Hunter.io. Предназначена для маркетологов и лид-генерационных команд, использующих Make в связке с Hunter.io.",
       "expires_at": "2026-06-30",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -1259,7 +1313,7 @@
       "category": "marketing_workflow",
       "description": "Репозиторий market-analyticx содержит n8n-workflow seo_auditor для автоматизированного SEO-аудита сайтов. Verified JSON с понятным именем файла.",
       "expires_at": "2026-06-23",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1277,7 +1331,7 @@
       "category": "sales_workflow",
       "description": "n8n-workflow для интеграции платёжной системы Stripe с WhatsApp через Twilio с fallback-логикой при сбоях. Полезен для e-commerce и SaaS-бизнесов, принимающих платежи и уведомляющих клиентов через WhatsApp.",
       "expires_at": "2026-06-17",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1294,7 +1348,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1311,7 +1365,7 @@
       "category": "content_workflow",
       "description": "Make-blueprint для автоматического постинга рыночной стоимости футболистов из Transfermarkt в X (Twitter). Workflow парсит данные о трансферной стоимости и публикует их в виде постов. Интересен для спортивных медиа-аккаунтов.",
       "expires_at": "2026-06-18",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1329,7 +1383,7 @@
       "category": "content_workflow",
       "description": "Коллекция из двух n8n-workflow: публикация нового блог-поста и пересылка твитов в Telegram. Репозиторий имеет 74 звезды, но последний push был в ноябре 2022 года; новый workflow был добавлен по delta_skills_count.",
       "expires_at": "2026-07-02",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -1347,7 +1401,7 @@
       "category": "data_workflow",
       "description": "Репозиторий с n8n-workflow для веб-краулинга; содержит два workflow: crawler-n8n и дополнительный. Назначение — автоматический обход и сбор данных с веб-страниц.",
       "expires_at": "2026-06-25",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -1365,7 +1419,7 @@
       "category": "data_workflow",
       "description": "n8n-workflow интегрирующий self-hosted заметочник Memos с векторным поиском через MCP (Model Context Protocol). Нишевая автоматизация для пользователей PKM-инструментов.",
       "expires_at": "2026-07-02",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1383,7 +1437,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для AI-генерации SEO-оптимизированного контента. Использует AI-агента для создания статей или текстов с учётом ключевых слов и SEO-требований. Подходит для контент-маркетологов и SEO-агентств.",
       "expires_at": "2026-07-10",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1400,7 +1454,7 @@
       "added_date": "2026-05-16",
       "category": "general_skill",
       "expires_at": "2026-06-15",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1416,7 +1470,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1433,7 +1487,7 @@
       "category": "general_workflow",
       "description": "n8n workflow-пример для моста между n8n и OpenAI API, реализующий chat-интерфейс. Часть репозитория n8n-openai-bridge с 122 звёздами.",
       "expires_at": "2026-06-27",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1450,7 +1504,7 @@
       "added_date": "2026-05-15",
       "category": "general_skill",
       "expires_at": "2026-06-14",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1467,7 +1521,7 @@
       "category": "general_workflow",
       "description": "Два n8n workflow для омниканального тикет-чата: обработка сообщений от агентов и интеграция с Telegram. Предназначен для команд поддержки, которые хотят объединить несколько каналов коммуникации в одну систему тикетов.",
       "expires_at": "2026-07-08",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -1484,7 +1538,7 @@
       "added_date": "2026-05-16",
       "category": "general_skill",
       "expires_at": "2026-06-15",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1501,7 +1555,7 @@
       "category": "marketing_workflow",
       "description": "AI-агент для автоматизации действий в X (Twitter): предположительно публикация, мониторинг или взаимодействие с контентом. Verified JSON, новый репозиторий.",
       "expires_at": "2026-07-03",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1519,7 +1573,7 @@
       "category": "marketing_workflow",
       "description": "Make-блюпринт для автоматизации создания и публикации контента в LinkedIn с помощью AI. Содержит один верифицированный JSON-файл с осмысленным именем. Подходит маркетологам и personal brand-менеджерам.",
       "expires_at": "2026-06-24",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1537,7 +1591,7 @@
       "category": "sales_workflow",
       "description": "n8n-workflow, который принимает вопросы от клиентов через WhatsApp, ищет ответы в PDF-базе знаний с помощью GPT-4o и отвечает автоматически. Ориентирован на команды продаж и поддержки, работающие с продуктовой документацией.",
       "expires_at": "2026-06-29",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1555,7 +1609,7 @@
       "category": "devops_workflow",
       "description": "n8n-workflow для автоматической проверки обновлений Gradle-зависимостей с уведомлением в Slack. Полезен для Java/Kotlin-команд, которые хотят своевременно получать информацию о новых версиях библиотек.",
       "expires_at": "2026-07-01",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1573,7 +1627,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для автоматического создания превью (thumbnails) из загружаемых видео с помощью FFmpeg и сохранения на Google Drive. Подходит для контент-менеджеров и видеопроизводителей, автоматизирующих обработку видеоконтента.",
       "expires_at": "2026-06-26",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -1591,7 +1645,7 @@
       "category": "devops_workflow",
       "description": "n8n-workflow для автоматического триажа уязвимостей из Snyk: создаёт Jira-тикеты, отправляет Slack-алерты и логирует в Airtable. Решение для DevSecOps-команд, использующих стек Snyk+Jira+Slack.",
       "expires_at": "2026-07-06",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1609,7 +1663,7 @@
       "category": "devops_workflow",
       "description": "n8n-workflow для автоматического обнаружения неудачных попыток входа с созданием Jira-задачи, отправкой Slack-алерта и логированием в Notion. Ориентирован на команды безопасности и DevOps.",
       "expires_at": "2026-06-22",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1627,7 +1681,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для автоматизации производства и публикации подкастов: генерация сценария через OpenAI, управление эпизодами в Airtable и публикация на Buzzsprout. Подойдёт создателям подкастов и контент-командам.",
       "expires_at": "2026-06-29",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1645,7 +1699,7 @@
       "category": "sales_workflow",
       "description": "n8n-workflow, который обогащает сделки в Zoho CRM рыночными данными AlphaVantage, строит GPT-4-прогноз вероятности закрытия и отправляет алерты в Slack. Ориентирован на sales-команды с B2B-циклами.",
       "expires_at": "2026-06-29",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1663,7 +1717,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для автоматической транскрипции и перевода YouTube-видео в Google Docs с помощью Gemini AI. Полезен контент-командам и исследователям, работающим с видеоматериалами.",
       "expires_at": "2026-06-29",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 2,
         "skills_count": 1,
@@ -1681,7 +1735,7 @@
       "category": "sales_workflow",
       "description": "Набор из 5 n8n-workflow для WhatsApp-бота с голосовым интерфейсом, real-time скрапингом, follow-up автоматизацией и Instagram outbound. Ориентирован на автоматизацию продаж через мессенджеры.",
       "expires_at": "2026-07-06",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 5,
@@ -1699,7 +1753,7 @@
       "category": "marketing_workflow",
       "description": "Два n8n-workflow для захвата и обогащения лидов: lead-intake-main принимает входящие лиды, lead-enrichment-microservice добавляет дополнительные данные через внешние API. Микросервисная архитектура для лид-менеджмента.",
       "expires_at": "2026-07-06",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 2,
@@ -1717,7 +1771,7 @@
       "category": "content_workflow",
       "description": "n8n-workflow для автоматизированной подготовки черновиков постов для Reddit с помощью AI. Предназначен для маркетологов и community-менеджеров, ведущих Reddit-присутствие бренда.",
       "expires_at": "2026-06-28",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1735,7 +1789,7 @@
       "category": "general_workflow",
       "description": "Репозиторий с HR-workflow для n8n; содержит сценарий онбординга новых сотрудников. Путь файла (workflows/hr/onboarding.json) указывает на структурированную HR-коллекцию.",
       "expires_at": "2026-06-25",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1753,7 +1807,7 @@
       "category": "marketing_workflow",
       "description": "Три n8n-workflow для маркетинг-автоматизации: анализ конкурентов, ежедневный поток задач и настройка базы знаний. Подходит для маркетологов, которые хотят автоматизировать мониторинг рынка и ежедневные задачи.",
       "expires_at": "2026-07-09",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 3,
@@ -1771,7 +1825,7 @@
       "category": "general_workflow",
       "description": "Набор из 5 n8n-workflow для приложения Craft: AI-ассистент, AI-research агент, менеджер встреч, транскрибация аудио, генерация брендированных изображений. Все 5 JSON верифицированы. Последний push — февраль 2026.",
       "expires_at": "2026-06-24",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 5,
@@ -1789,7 +1843,7 @@
       "category": "data_workflow",
       "description": "n8n workflow из технического блога с 200 звёздами, по названию связанный с автоматизацией работы с веб-новеллами (парсинг/синхронизация контента). Блог ориентирован на китайскоязычную аудиторию.",
       "expires_at": "2026-07-08",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,
@@ -1807,7 +1861,7 @@
       "category": "general_workflow",
       "description": "Make (formerly Integromat) workflow для автоматизации процесса запросов на ревью — вероятно, code review или document review. Единственный Make-кандидат с содержательным именем файла в сегодняшних данных.",
       "expires_at": "2026-07-10",
-      "last_checked": "2026-06-11",
+      "last_checked": "2026-06-12",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": 1,

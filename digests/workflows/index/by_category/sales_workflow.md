@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 12
+Total: 13
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-12 | [wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound](https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping) | ASIC Miners - Complete with Scraping FIXED, Details to Document Generator, Follow-Up Automation, +2 more |  | 7.0 | medium | Скачать JSON нужного workflow из папки workflows/ репозитория |
 | 2026-06-10 | [Trusera/ai-bom: lead-scorer](https://github.com/Trusera/ai-bom) | lead-scorer |  | 7.3 | high | Скачать JSON: https://raw.githubusercontent.com/Trusera/ai-bom/main/src/ai_bom/demo_data/workflows/lead-scorer.json |
 | 2026-06-10 | [AntraTripathi74/AI-SDR: sdr](https://github.com/AntraTripathi74/AI-SDR) | sdr |  | 6.8 | medium | Скачать JSON: https://raw.githubusercontent.com/AntraTripathi74/AI-SDR/main/sdr.json |
 | 2026-06-09 | [wranngle/n8n: lead-enrichment-microservice + lead-intake-main](https://github.com/wranngle/n8n) | lead-enrichment-microservice, lead-intake-main |  | 6.6 | medium | Скачать lead-enrichment-microservice.json и lead-intake-main.json из папки workflows/ |
