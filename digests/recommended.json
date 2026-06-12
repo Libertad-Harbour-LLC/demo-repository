@@ -782,6 +782,41 @@
       "title": "OpenAnalystInc/10x-Content-Expert",
       "url": "https://github.com/OpenAnalystInc/10x-Content-Expert/tree/main/.claude/skills"
     },
+    "https://github.com/OpenCoworkAI/open-cowork/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Репозиторий open-cowork содержит 5 Claude Skills для работы с офисными документами — DOCX, PDF, PPTX, XLSX — а также skill для создания новых skills. Ориентирован на пользователей, которым нужно обрабатывать и генерировать документы прямо в рабочем процессе Claude Code.",
+      "final_score": 8.5,
+      "first_recommended": "2026-06-12",
+      "metric": "Генерирует ли Claude Code реальный .docx/.pdf/.xlsx файл по инструкции из SKILL.md без дополнительной настройки",
+      "promoted_from_watch": false,
+      "repo_full_name": "OpenCoworkAI/open-cowork",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "docx",
+        "pdf",
+        "pptx",
+        "skill-creator",
+        "xlsx"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/OpenCoworkAI/open-cowork и перейти в папку репо",
+        "Скопировать .claude/skills/docx/ и .claude/skills/pdf/ в свой проект (или в ~/.claude/skills/)",
+        "Запустить Claude Code в своём проекте и ввести: 'Используй skill docx, сгенерируй документ Word с кратким резюме этого проекта'",
+        "Проверить, что Claude Code корректно распознал skill и создал файл .docx"
+      ],
+      "title": "OpenCoworkAI/open-cowork",
+      "url": "https://github.com/OpenCoworkAI/open-cowork/tree/main/.claude/skills"
+    },
     "https://github.com/OutSystems/docs-product/tree/master/.claude/skills": {
       "category": "content_skill",
       "confidence": "medium",
@@ -1021,6 +1056,55 @@
       "title": "UKGovernmentBEIS/inspect_evals",
       "url": "https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/.claude/skills"
     },
+    "https://github.com/WillNigri/Agentic-Tool-Optimization/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий Agentic Tool Optimization содержит 19 Claude Skills для организации командных процессов через агентные роли: CEO-ревью планов, инженерные и дизайн-ревью, war room, ретроспективы и выпуск релизов. Фокус на координации команды с помощью Claude Code.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-12",
+      "metric": "Генерирует ли skill структурированный вывод в ролевом формате (CEO/инженер/дизайнер) с конкретными замечаниями",
+      "promoted_from_watch": false,
+      "repo_full_name": "WillNigri/Agentic-Tool-Optimization",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 19,
+      "skills_in_repo": [
+        "ato-make-agent",
+        "ato-review",
+        "ato-warroom",
+        "browse",
+        "debug",
+        "design-consultation",
+        "design-review",
+        "document-release",
+        "gstack-upgrade",
+        "office-hours",
+        "plan-ceo-review",
+        "plan-design-review",
+        "plan-eng-review",
+        "qa-only",
+        "qa",
+        "retro",
+        "review",
+        "setup-browser-cookies",
+        "ship"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/WillNigri/Agentic-Tool-Optimization",
+        "Скопировать .claude/skills/plan-eng-review/ и .claude/skills/retro/ в свой проект",
+        "Запустить Claude Code и ввести: 'Используй skill plan-eng-review, оцени этот технический план: [вставить план]'",
+        "Дополнительно: попробовать skill ato-warroom с описанием инцидента"
+      ],
+      "title": "WillNigri/Agentic-Tool-Optimization",
+      "url": "https://github.com/WillNigri/Agentic-Tool-Optimization/tree/main/.claude/skills"
+    },
     "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -1190,6 +1274,40 @@
       ],
       "title": "affaan-m/everything-claude-code",
       "url": "https://github.com/affaan-m/everything-claude-code/tree/main/.claude/skills"
+    },
+    "https://github.com/ahumblenerd/tour-of-agents/tree/master/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий tour-of-agents содержит 4 Claude Skills с агентными ролями для маркетинга и бизнеса: CEO (стратегические решения), CMO (маркетинговая стратегия), content-publisher (публикация контента) и keyword-research (исследование ключевых слов). Полезен соло-предпринимателям и малому бизнесу.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-12",
+      "metric": "Выдаёт ли keyword-research skill структурированный список ключевых слов с оценкой конкурентности и объёма",
+      "promoted_from_watch": false,
+      "repo_full_name": "ahumblenerd/tour-of-agents",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "ceo",
+        "cmo",
+        "content-publisher",
+        "keyword-research"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/ahumblenerd/tour-of-agents",
+        "Скопировать .claude/skills/keyword-research/ в свой проект или рабочую папку",
+        "Запустить Claude Code и ввести: 'Используй skill keyword-research, найди ключевые слова для ниши [вставить нишу]'",
+        "Дополнительно: протестировать skill cmo с запросом маркетинговой стратегии для продукта"
+      ],
+      "title": "ahumblenerd/tour-of-agents",
+      "url": "https://github.com/ahumblenerd/tour-of-agents/tree/master/.claude/skills"
     },
     "https://github.com/ai-analyst-lab/ai-analyst/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -2264,6 +2382,42 @@
       ],
       "title": "decebals/claude-code-java",
       "url": "https://github.com/decebals/claude-code-java/tree/main/.claude/skills"
+    },
+    "https://github.com/devoxx/DevoxxGenieIDEAPlugin/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий плагина Devoxx Genie для IntelliJ IDEA содержит 6 Claude Skills, автоматизирующих полный цикл работы с задачами: начало задачи, коммит, пуш, создание PR и ревью. Полезен Java/IntelliJ-разработчикам, использующим Claude Code совместно с IDE.",
+      "final_score": 8.1,
+      "first_recommended": "2026-06-12",
+      "metric": "Создаёт ли skill корректный git-workflow: ветка → коммит → push → PR без ручных шагов",
+      "promoted_from_watch": false,
+      "repo_full_name": "devoxx/DevoxxGenieIDEAPlugin",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "close-task-commit-push-pr",
+        "git-commit-push-pr",
+        "pr",
+        "release",
+        "review",
+        "start-task"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/devoxx/DevoxxGenieIDEAPlugin",
+        "Скопировать .claude/skills/start-task/ и .claude/skills/git-commit-push-pr/ в свой рабочий проект",
+        "Запустить Claude Code в своём репо и ввести: 'Используй skill start-task, начни задачу по этому issue: [вставить описание]'",
+        "Проверить, что Claude Code создаёт ветку, начинает работу согласно инструкции из SKILL.md"
+      ],
+      "title": "devoxx/DevoxxGenieIDEAPlugin",
+      "url": "https://github.com/devoxx/DevoxxGenieIDEAPlugin/tree/master/.claude/skills"
     },
     "https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -4629,6 +4783,48 @@
       "title": "pr-pm/prpm",
       "url": "https://github.com/pr-pm/prpm/tree/main/.claude/skills"
     },
+    "https://github.com/proteanhq/protean/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий фреймворка Protean (DDD/Python) содержит 12 Claude Skills для управления разработкой: ADR (архитектурные решения), эпики (epic-plan, epic-status), оценка влияния тестов, управление breaking changes и changelog. Продуманный набор для зрелой разработки.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-12",
+      "metric": "Генерирует ли adr skill полноценный ADR-документ в стандартном формате (контекст, решение, последствия)",
+      "promoted_from_watch": false,
+      "repo_full_name": "proteanhq/protean",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "adr",
+        "breaking-change",
+        "changelog",
+        "check",
+        "epic-plan",
+        "epic-status",
+        "implement",
+        "pr-respond",
+        "pr",
+        "release-check",
+        "test-impact",
+        "test"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/proteanhq/protean",
+        "Скопировать .claude/skills/adr/ и .claude/skills/epic-plan/ в свой проект",
+        "Запустить Claude Code и ввести: 'Используй skill adr, задокументируй решение о выборе [технология] для [задача]'",
+        "Дополнительно: протестировать skill test-impact с описанием планируемого изменения"
+      ],
+      "title": "proteanhq/protean",
+      "url": "https://github.com/proteanhq/protean/tree/main/.claude/skills"
+    },
     "https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -5409,6 +5605,49 @@
       ],
       "title": "withkynam/vibecode-pro-max-kit",
       "url": "https://github.com/withkynam/vibecode-pro-max-kit/tree/main/.claude/skills"
+    },
+    "https://github.com/woocommerce/woocommerce-ios/tree/trunk/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Официальный iOS-репозиторий WooCommerce содержит 13 Claude Skills для мобильной разработки: сборка, отладка, линтинг, работа с мокапами, симулятором и снапшот-тестами. Реальный production-пример применения skills командой Automattic.",
+      "final_score": 8.0,
+      "first_recommended": "2026-06-12",
+      "metric": "Корректно ли iOS-specific skills (build, simulator, snapshot) работают без адаптации на чистом iOS-проекте",
+      "promoted_from_watch": false,
+      "repo_full_name": "woocommerce/woocommerce-ios",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 13,
+      "skills_in_repo": [
+        "bootstrap",
+        "build",
+        "debug",
+        "lint",
+        "mocks",
+        "pr",
+        "review",
+        "setup-context-a8c",
+        "simulator",
+        "snapshot",
+        "test",
+        "verify",
+        "woo-ai-smoke"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/woocommerce/woocommerce-ios (требует macOS с Xcode)",
+        "Скопировать .claude/skills/debug/ и .claude/skills/test/ в свой iOS-проект",
+        "Запустить Claude Code в Xcode-проекте и ввести: 'Используй skill debug, проанализируй последний crash log'",
+        "Для не-iOS проектов: скопировать .claude/skills/pr/ и .claude/skills/review/ — они универсальны"
+      ],
+      "title": "woocommerce/woocommerce-ios",
+      "url": "https://github.com/woocommerce/woocommerce-ios/tree/trunk/.claude/skills"
     },
     "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills": {
       "category": "marketing_skill",

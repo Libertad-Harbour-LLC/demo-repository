@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 34
+Total: 35
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-12 | [OpenCoworkAI/open-cowork](https://github.com/OpenCoworkAI/open-cowork/tree/main/.claude/skills) | docx, pdf, pptx, +2 more |  | 8.5 | high | git clone https://github.com/OpenCoworkAI/open-cowork и перейти в папку репо |
 | 2026-06-11 | [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills) | audit-reproducibility, capture-environment, checkpoint, +39 more |  | 8.5 | high | git clone https://github.com/pedrohcgs/claude-code-my-workflow && cp -r claude-code-my-workflow/.claude/skills/lit-re... |
 | 2026-06-11 | [joaquimscosta/arkhe-claude-plugins](https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills) | plugin-release-checker, skill-validator, sync-docs |  | 6.8 | medium | git clone https://github.com/joaquimscosta/arkhe-claude-plugins && cp -r arkhe-claude-plugins/.claude/skills/skill-va... |
 | 2026-06-09 | [ergrelet/windiff](https://github.com/ergrelet/windiff/tree/master/.claude/skills/windiff-version-diff-analysis) | windiff-version-diff-analysis |  | 7.0 | high | Клонировать: git clone https://github.com/ergrelet/windiff.git и скопировать .claude/skills/windiff-version-diff-anal... |

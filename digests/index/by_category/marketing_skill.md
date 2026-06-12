@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 13
+Total: 14
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-12 | [ahumblenerd/tour-of-agents](https://github.com/ahumblenerd/tour-of-agents/tree/master/.claude/skills) | ceo, cmo, content-publisher, +1 more |  | 6.8 | medium | git clone https://github.com/ahumblenerd/tour-of-agents |
 | 2026-06-10 | [deanwhitex/AIW2.0STACK](https://github.com/deanwhitex/AIW2.0STACK/tree/main/.claude/skills) | apify-niche-research, brief-compilation, deep-research-synthesis, +3 more |  | 6.5 | medium | git clone https://github.com/deanwhitex/AIW2.0STACK.git && cp -r AIW2.0STACK/.claude/skills/niche-research-framework ... |
 | 2026-06-10 | [Dullu9/10x-Outreach-Skill](https://github.com/Dullu9/10x-Outreach-Skill/tree/main/.claude/skills) | email-composer, linkedin-adapter, campaign-executor, +12 more |  | 7.1 | medium | git clone https://github.com/Dullu9/10x-Outreach-Skill.git && cp -r 10x-Outreach-Skill/.claude/skills/email-composer ... |
 | 2026-06-08 | [wsbs20/claude-code-aso-skill](https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills) | aso |  | 7.3 | medium | git clone https://github.com/wsbs20/claude-code-aso-skill && cp -r claude-code-aso-skill/.claude/skills/aso .claude/s... |

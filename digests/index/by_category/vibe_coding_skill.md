@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 89
+Total: 93
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-12 | [woocommerce/woocommerce-ios](https://github.com/woocommerce/woocommerce-ios/tree/trunk/.claude/skills) | bootstrap, build, debug, +10 more |  | 8.0 | high | git clone https://github.com/woocommerce/woocommerce-ios (требует macOS с Xcode) |
+| 2026-06-12 | [proteanhq/protean](https://github.com/proteanhq/protean/tree/main/.claude/skills) | adr, breaking-change, changelog, +9 more |  | 7.0 | medium | git clone https://github.com/proteanhq/protean |
+| 2026-06-12 | [devoxx/DevoxxGenieIDEAPlugin](https://github.com/devoxx/DevoxxGenieIDEAPlugin/tree/master/.claude/skills) | close-task-commit-push-pr, git-commit-push-pr, pr, +3 more |  | 8.1 | high | git clone https://github.com/devoxx/DevoxxGenieIDEAPlugin |
+| 2026-06-12 | [WillNigri/Agentic-Tool-Optimization](https://github.com/WillNigri/Agentic-Tool-Optimization/tree/main/.claude/skills) | ato-make-agent, ato-review, ato-warroom, +16 more |  | 7.5 | medium | git clone https://github.com/WillNigri/Agentic-Tool-Optimization |
 | 2026-06-11 | [ractive/hyalo](https://github.com/ractive/hyalo/tree/main/.claude/skills) | dogfood, hyalo-tidy, hyalo, +2 more |  | 6.9 | medium | git clone https://github.com/ractive/hyalo && cp -r hyalo/.claude/skills/review-rust ~/.claude/skills/ && cp -r hyalo... |
 | 2026-06-10 | [jimmc414/Kosmos](https://github.com/jimmc414/Kosmos/tree/master/.claude/skills) | kosmos-e2e-testing |  | 7.0 | high | git clone https://github.com/jimmc414/Kosmos.git && cp -r Kosmos/.claude/skills/kosmos-e2e-testing <ваш-проект>/.clau... |
 | 2026-06-10 | [github/gh-aw](https://github.com/github/gh-aw/tree/main/.claude/skills) | playwright-cli |  | 7.4 | high | git clone https://github.com/github/gh-aw.git && cp -r gh-aw/.claude/skills/playwright-cli <ваш-проект>/.claude/skills/ |

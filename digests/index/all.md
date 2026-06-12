@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 147
+Total: 153
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-12 | [woocommerce/woocommerce-ios](https://github.com/woocommerce/woocommerce-ios/tree/trunk/.claude/skills) | bootstrap, build, debug, +10 more |  | 8.0 | high | git clone https://github.com/woocommerce/woocommerce-ios (требует macOS с Xcode) |
+| 2026-06-12 | [proteanhq/protean](https://github.com/proteanhq/protean/tree/main/.claude/skills) | adr, breaking-change, changelog, +9 more |  | 7.0 | medium | git clone https://github.com/proteanhq/protean |
+| 2026-06-12 | [devoxx/DevoxxGenieIDEAPlugin](https://github.com/devoxx/DevoxxGenieIDEAPlugin/tree/master/.claude/skills) | close-task-commit-push-pr, git-commit-push-pr, pr, +3 more |  | 8.1 | high | git clone https://github.com/devoxx/DevoxxGenieIDEAPlugin |
+| 2026-06-12 | [ahumblenerd/tour-of-agents](https://github.com/ahumblenerd/tour-of-agents/tree/master/.claude/skills) | ceo, cmo, content-publisher, +1 more |  | 6.8 | medium | git clone https://github.com/ahumblenerd/tour-of-agents |
+| 2026-06-12 | [WillNigri/Agentic-Tool-Optimization](https://github.com/WillNigri/Agentic-Tool-Optimization/tree/main/.claude/skills) | ato-make-agent, ato-review, ato-warroom, +16 more |  | 7.5 | medium | git clone https://github.com/WillNigri/Agentic-Tool-Optimization |
+| 2026-06-12 | [OpenCoworkAI/open-cowork](https://github.com/OpenCoworkAI/open-cowork/tree/main/.claude/skills) | docx, pdf, pptx, +2 more |  | 8.5 | high | git clone https://github.com/OpenCoworkAI/open-cowork и перейти в папку репо |
 | 2026-06-11 | [ractive/hyalo](https://github.com/ractive/hyalo/tree/main/.claude/skills) | dogfood, hyalo-tidy, hyalo, +2 more |  | 6.9 | medium | git clone https://github.com/ractive/hyalo && cp -r hyalo/.claude/skills/review-rust ~/.claude/skills/ && cp -r hyalo... |
 | 2026-06-11 | [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills) | audit-reproducibility, capture-environment, checkpoint, +39 more |  | 8.5 | high | git clone https://github.com/pedrohcgs/claude-code-my-workflow && cp -r claude-code-my-workflow/.claude/skills/lit-re... |
 | 2026-06-11 | [joaquimscosta/arkhe-claude-plugins](https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills) | plugin-release-checker, skill-validator, sync-docs |  | 6.8 | medium | git clone https://github.com/joaquimscosta/arkhe-claude-plugins && cp -r arkhe-claude-plugins/.claude/skills/skill-va... |
