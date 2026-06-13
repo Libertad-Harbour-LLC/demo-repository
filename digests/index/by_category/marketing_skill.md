@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 14
+Total: 15
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-13 | [AntonioBlago/claude-code-seo-starter](https://github.com/AntonioBlago/claude-code-seo-starter/tree/master/.claude/skills) | visibly-seo-offer, visibly-seo-pdf-build, visibly-seo-potential, +1 more |  | 7.1 | medium | git clone https://github.com/AntonioBlago/claude-code-seo-starter && cp -r claude-code-seo-starter/.claude/skills/vis... |
 | 2026-06-12 | [ahumblenerd/tour-of-agents](https://github.com/ahumblenerd/tour-of-agents/tree/master/.claude/skills) | ceo, cmo, content-publisher, +1 more |  | 6.8 | medium | git clone https://github.com/ahumblenerd/tour-of-agents |
 | 2026-06-10 | [deanwhitex/AIW2.0STACK](https://github.com/deanwhitex/AIW2.0STACK/tree/main/.claude/skills) | apify-niche-research, brief-compilation, deep-research-synthesis, +3 more |  | 6.5 | medium | git clone https://github.com/deanwhitex/AIW2.0STACK.git && cp -r AIW2.0STACK/.claude/skills/niche-research-framework ... |
 | 2026-06-10 | [Dullu9/10x-Outreach-Skill](https://github.com/Dullu9/10x-Outreach-Skill/tree/main/.claude/skills) | email-composer, linkedin-adapter, campaign-executor, +12 more |  | 7.1 | medium | git clone https://github.com/Dullu9/10x-Outreach-Skill.git && cp -r 10x-Outreach-Skill/.claude/skills/email-composer ... |

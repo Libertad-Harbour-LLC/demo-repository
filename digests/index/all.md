@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 153
+Total: 156
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-13 | [zubayer0077/Claude-Multi-Agent-Research-System-Skill](https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill/tree/main/.claude/skills) | multi-agent-researcher, spec-workflow-orchestrator |  | 7.0 | medium | git clone https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill && cp -r .claude/skills/multi-agent... |
+| 2026-06-13 | [RonenMars/threadbase-streamer](https://github.com/RonenMars/threadbase-streamer/tree/main/.claude/skills) | deploy-menubar, local-deploy, setup-auto-updater, +3 more |  | 6.6 | medium | git clone https://github.com/RonenMars/threadbase-streamer && cp -r .claude/skills/write-release-notes <ваш-проект>/.... |
+| 2026-06-13 | [AntonioBlago/claude-code-seo-starter](https://github.com/AntonioBlago/claude-code-seo-starter/tree/master/.claude/skills) | visibly-seo-offer, visibly-seo-pdf-build, visibly-seo-potential, +1 more |  | 7.1 | medium | git clone https://github.com/AntonioBlago/claude-code-seo-starter && cp -r claude-code-seo-starter/.claude/skills/vis... |
 | 2026-06-12 | [woocommerce/woocommerce-ios](https://github.com/woocommerce/woocommerce-ios/tree/trunk/.claude/skills) | bootstrap, build, debug, +10 more |  | 8.0 | high | git clone https://github.com/woocommerce/woocommerce-ios (требует macOS с Xcode) |
 | 2026-06-12 | [proteanhq/protean](https://github.com/proteanhq/protean/tree/main/.claude/skills) | adr, breaking-change, changelog, +9 more |  | 7.0 | medium | git clone https://github.com/proteanhq/protean |
 | 2026-06-12 | [devoxx/DevoxxGenieIDEAPlugin](https://github.com/devoxx/DevoxxGenieIDEAPlugin/tree/master/.claude/skills) | close-task-commit-push-pr, git-commit-push-pr, pr, +3 more |  | 8.1 | high | git clone https://github.com/devoxx/DevoxxGenieIDEAPlugin |

@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 35
+Total: 37
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-13 | [zubayer0077/Claude-Multi-Agent-Research-System-Skill](https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill/tree/main/.claude/skills) | multi-agent-researcher, spec-workflow-orchestrator |  | 7.0 | medium | git clone https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill && cp -r .claude/skills/multi-agent... |
+| 2026-06-13 | [RonenMars/threadbase-streamer](https://github.com/RonenMars/threadbase-streamer/tree/main/.claude/skills) | deploy-menubar, local-deploy, setup-auto-updater, +3 more |  | 6.6 | medium | git clone https://github.com/RonenMars/threadbase-streamer && cp -r .claude/skills/write-release-notes <ваш-проект>/.... |
 | 2026-06-12 | [OpenCoworkAI/open-cowork](https://github.com/OpenCoworkAI/open-cowork/tree/main/.claude/skills) | docx, pdf, pptx, +2 more |  | 8.5 | high | git clone https://github.com/OpenCoworkAI/open-cowork и перейти в папку репо |
 | 2026-06-11 | [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills) | audit-reproducibility, capture-environment, checkpoint, +39 more |  | 8.5 | high | git clone https://github.com/pedrohcgs/claude-code-my-workflow && cp -r claude-code-my-workflow/.claude/skills/lit-re... |
 | 2026-06-11 | [joaquimscosta/arkhe-claude-plugins](https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills) | plugin-release-checker, skill-validator, sync-docs |  | 6.8 | medium | git clone https://github.com/joaquimscosta/arkhe-claude-plugins && cp -r arkhe-claude-plugins/.claude/skills/skill-va... |
