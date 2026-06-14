@@ -310,6 +310,39 @@
       "tool": "n8n",
       "url": "https://github.com/JeffersonMFti/agente-dra-julia-advocacia"
     },
+    "https://github.com/KC23br/n8n-ai-calendar-agent-chat": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "AI-агент для управления Google Calendar через чат-интерфейс в n8n. Позволяет создавать, просматривать и изменять события через текстовые запросы без ручного открытия календаря.",
+      "final_score": 5.5,
+      "first_recommended": "2026-06-14",
+      "metric": "Создание тестового события в Google Calendar через текстовый запрос",
+      "promoted_from_watch": false,
+      "repo_full_name": "KC23br/n8n-ai-calendar-agent-chat: Calendar Agent",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Calendar Agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/KC23br/n8n-ai-calendar-agent-chat/main/Calendar Agent.json",
+        "Импортировать в n8n через Import from File",
+        "Настроить credential Google Calendar OAuth2",
+        "Настроить credential для LLM-провайдера (OpenAI или совместимый)",
+        "Запустить тестовый прогон: написать в чат 'создай событие завтра в 15:00'"
+      ],
+      "title": "KC23br/n8n-ai-calendar-agent-chat: Calendar Agent",
+      "tool": "n8n",
+      "url": "https://github.com/KC23br/n8n-ai-calendar-agent-chat"
+    },
     "https://github.com/KRYSPRODUCER/n8n-automation-youtube-transcription": {
       "category": "video_workflow",
       "confidence": "medium",
@@ -713,6 +746,39 @@
       "title": "Tanishq60/n8n_nl2sql: nl2sql",
       "tool": "n8n",
       "url": "https://github.com/Tanishq60/n8n_nl2sql"
+    },
+    "https://github.com/Trojan3877/QUANT-LLM-ASSISTANT": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "Workflow для мониторинга биржевых котировок с LLM-анализом и отправкой алертов в n8n. Часть более широкого проекта QUANT-LLM-ASSISTANT для количественного анализа рынка.",
+      "final_score": 5.3,
+      "first_recommended": "2026-06-14",
+      "metric": "Получение алерта с LLM-анализом при изменении цены",
+      "promoted_from_watch": false,
+      "repo_full_name": "Trojan3877/QUANT-LLM-ASSISTANT: stock_alert",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 6,
+        "traction": 3,
+        "utility": 6
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "stock_alert"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/Trojan3877/QUANT-LLM-ASSISTANT/main/workflows/stock_alert.json",
+        "Импортировать в n8n через Import from File",
+        "Настроить API-ключ для источника рыночных данных (проверить какой используется в нодах)",
+        "Настроить LLM credential (OpenAI или аналог)",
+        "Запустить тестовый прогон с тикером TEST/любым"
+      ],
+      "title": "Trojan3877/QUANT-LLM-ASSISTANT: stock_alert",
+      "tool": "n8n",
+      "url": "https://github.com/Trojan3877/QUANT-LLM-ASSISTANT"
     },
     "https://github.com/Trusera/ai-bom": {
       "category": "sales_workflow",

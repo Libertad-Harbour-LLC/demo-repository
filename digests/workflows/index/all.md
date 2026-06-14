@@ -1,11 +1,13 @@
 # Recommended Claude Skills — all time
 
-Total: 75
+Total: 77
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-14 | [Trojan3877/QUANT-LLM-ASSISTANT: stock_alert](https://github.com/Trojan3877/QUANT-LLM-ASSISTANT) | stock_alert |  | 5.3 | medium | Скачать JSON: https://raw.githubusercontent.com/Trojan3877/QUANT-LLM-ASSISTANT/main/workflows/stock_alert.json |
+| 2026-06-14 | [KC23br/n8n-ai-calendar-agent-chat: Calendar Agent](https://github.com/KC23br/n8n-ai-calendar-agent-chat) | Calendar Agent |  | 5.5 | medium | Скачать JSON: https://raw.githubusercontent.com/KC23br/n8n-ai-calendar-agent-chat/main/Calendar Agent.json |
 | 2026-06-12 | [wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound](https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping) | ASIC Miners - Complete with Scraping FIXED, Details to Document Generator, Follow-Up Automation, +2 more |  | 7.0 | medium | Скачать JSON нужного workflow из папки workflows/ репозитория |
 | 2026-06-12 | [mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator](https://github.com/mhmdmnsor292003-arch/free-ai-tools) | ai-code-reviewer-api, ai-code-reviewer-landing-page, ai-email-writer-api, +2 more |  | 6.6 | medium | Скачать JSON нужного workflow (например, ai-linkedin-post-generator-api.json) |
 | 2026-06-11 | [yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)](https://github.com/yigitkonur/n8n-workflows-craft) | craft-ai-assistant-gen, craft-ai-research-agent, craft-appointment-manager, +2 more |  | 6.2 | medium | Скачать нужный JSON, например craft-ai-assistant-gen.json |
