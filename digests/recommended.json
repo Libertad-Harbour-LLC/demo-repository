@@ -774,6 +774,45 @@
       "title": "Lambenthan/empiricalwiki",
       "url": "https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills"
     },
+    "https://github.com/Neetx/ai-research-radar/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 10 Claude Skills для автоматизированного мониторинга AI-исследований: поиск источников через Tavily, верификация и «лечение» источников, ведение реестра, рендер дашборда и самооценка системы. Подойдёт исследователям и аналитикам, следящим за AI-трендами.",
+      "final_score": 6.9,
+      "first_recommended": "2026-06-14",
+      "metric": "Полнота и точность найденных источников; работоспособность цепочки tavily-search → radar-source-verify → radar-render-dashboard без ручных правок.",
+      "promoted_from_watch": false,
+      "repo_full_name": "Neetx/ai-research-radar",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "radar-lab-sweep",
+        "radar-ledger-update",
+        "radar-pulse",
+        "radar-render-dashboard",
+        "radar-repo-watch",
+        "radar-self-eval",
+        "radar-source-heal",
+        "radar-source-verify",
+        "tavily-extract",
+        "tavily-search"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Neetx/ai-research-radar && cp -r .claude/skills/* /ваш-проект/.claude/skills/",
+        "Убедиться, что есть TAVILY_API_KEY (нужен для tavily-search/extract skills); задать переменную окружения.",
+        "Запустить skill: 'Используй radar-pulse, чтобы найти топ-5 новых AI-репозиториев за неделю, верифицировать источники через radar-source-verify и вывести дашборд через radar-render-dashboard'"
+      ],
+      "title": "Neetx/ai-research-radar",
+      "url": "https://github.com/Neetx/ai-research-radar/tree/main/.claude/skills"
+    },
     "https://github.com/OpenAnalystInc/10x-Content-Expert/tree/main/.claude/skills": {
       "category": "content_skill",
       "confidence": "medium",
@@ -2666,6 +2705,36 @@
       "title": "elrufaiforexfx22-creator/claudecode-video-maker",
       "url": "https://github.com/elrufaiforexfx22-creator/claudecode-video-maker/tree/main/.claude/skills"
     },
+    "https://github.com/ergrelet/windiff/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий инструмента WinDiff для сравнения версий Windows-бинарей содержит skill windiff-version-diff-analysis. Skill предназначен для анализа различий между версиями Windows-компонентов и автоматизации diff-отчётов в контексте реверс-инжиниринга.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-14",
+      "metric": "Точность и полнота выявленных diff-ов; наличие структурированного отчёта об изменениях в API/экспортах.",
+      "promoted_from_watch": false,
+      "repo_full_name": "ergrelet/windiff",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "windiff-version-diff-analysis"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/ergrelet/windiff && cp -r .claude/skills/* /ваш-проект/.claude/skills/",
+        "Убедиться, что установлены зависимости WinDiff (см. README репо); подготовить два образца Windows-бинарей разных версий.",
+        "Запустить Claude Code: 'Используй windiff-version-diff-analysis для сравнения kernel32.dll версии X и Y, выдели ключевые изменения в экспортируемых функциях'"
+      ],
+      "title": "ergrelet/windiff",
+      "url": "https://github.com/ergrelet/windiff/tree/master/.claude/skills"
+    },
     "https://github.com/ergrelet/windiff/tree/master/.claude/skills/windiff-version-diff-analysis": {
       "category": "general_skill",
       "confidence": "high",
@@ -2732,6 +2801,46 @@
       ],
       "title": "erp-mafia/swedish-accounting-skills",
       "url": "https://github.com/erp-mafia/swedish-accounting-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/eugenelim/agent-ready-repo/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 11 Claude Skills, покрывающих полный цикл работы AI-агента в проекте: от инициализации и получения брифа до фикса багов, создания ADR/RFC/spec-документов и security-чеклистов. Предназначен для разработчиков, которые хотят сделать свой репозиторий готовым к работе с Claude Code.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-14",
+      "metric": "Количество шагов, которые Claude Code выполняет автоматически без дополнительных уточнений; качество сгенерированных ADR/RFC/spec.",
+      "promoted_from_watch": false,
+      "repo_full_name": "eugenelim/agent-ready-repo",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 11,
+      "skills_in_repo": [
+        "adapt-to-project",
+        "bug-fix",
+        "init-project",
+        "new-adr",
+        "new-guide",
+        "new-rfc",
+        "new-spec",
+        "receive-brief",
+        "security-checklists",
+        "update-conventions",
+        "work-loop"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/eugenelim/agent-ready-repo && cp -r .claude/skills/* /ваш-проект/.claude/skills/",
+        "Открыть Claude Code в целевом проекте и проверить, что skills подхватились: спросить 'What skills do you have?'",
+        "Протестировать skill work-loop: дать задачу 'Используй skill work-loop, чтобы реализовать небольшую фичу X и задокументировать её через new-spec и new-adr'"
+      ],
+      "title": "eugenelim/agent-ready-repo",
+      "url": "https://github.com/eugenelim/agent-ready-repo/tree/main/.claude/skills"
     },
     "https://github.com/flowglad/flowglad/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -5319,6 +5428,39 @@
       ],
       "title": "steve-magne/hookstack",
       "url": "https://github.com/steve-magne/hookstack/tree/main/.claude/skills"
+    },
+    "https://github.com/susomejias/rembric/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 Claude Skills для работы с OpenAPI-спецификациями: исследование существующих spec, предложение изменений, применение и архивация. Ориентирован на backend-разработчиков, работающих с API-контрактами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-14",
+      "metric": "Корректность предложенных изменений в OpenAPI-формате; соответствие стилю существующего spec; успешное применение через openspec-apply-change без ошибок валидации.",
+      "promoted_from_watch": false,
+      "repo_full_name": "susomejias/rembric",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "openspec-apply-change",
+        "openspec-archive-change",
+        "openspec-explore",
+        "openspec-propose"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/susomejias/rembric && cp -r .claude/skills/* /ваш-api-проект/.claude/skills/",
+        "Убедиться, что в проекте есть openapi.yaml или swagger.json; открыть Claude Code.",
+        "Запустить: 'Используй openspec-explore для анализа текущего API, затем openspec-propose для добавления нового endpoint /users/{id}/preferences, и openspec-apply-change для применения изменений'"
+      ],
+      "title": "susomejias/rembric",
+      "url": "https://github.com/susomejias/rembric/tree/main/.claude/skills"
     },
     "https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

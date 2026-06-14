@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 93
+Total: 96
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-14 | [susomejias/rembric](https://github.com/susomejias/rembric/tree/main/.claude/skills) | openspec-apply-change, openspec-archive-change, openspec-explore, +1 more |  | 6.6 | medium | git clone https://github.com/susomejias/rembric && cp -r .claude/skills/* /ваш-api-проект/.claude/skills/ |
+| 2026-06-14 | [eugenelim/agent-ready-repo](https://github.com/eugenelim/agent-ready-repo/tree/main/.claude/skills) | adapt-to-project, bug-fix, init-project, +8 more |  | 7.3 | medium | git clone https://github.com/eugenelim/agent-ready-repo && cp -r .claude/skills/* /ваш-проект/.claude/skills/ |
+| 2026-06-14 | [ergrelet/windiff](https://github.com/ergrelet/windiff/tree/master/.claude/skills) | windiff-version-diff-analysis |  | 6.5 | high | git clone https://github.com/ergrelet/windiff && cp -r .claude/skills/* /ваш-проект/.claude/skills/ |
 | 2026-06-12 | [woocommerce/woocommerce-ios](https://github.com/woocommerce/woocommerce-ios/tree/trunk/.claude/skills) | bootstrap, build, debug, +10 more |  | 8.0 | high | git clone https://github.com/woocommerce/woocommerce-ios (требует macOS с Xcode) |
 | 2026-06-12 | [proteanhq/protean](https://github.com/proteanhq/protean/tree/main/.claude/skills) | adr, breaking-change, changelog, +9 more |  | 7.0 | medium | git clone https://github.com/proteanhq/protean |
 | 2026-06-12 | [devoxx/DevoxxGenieIDEAPlugin](https://github.com/devoxx/DevoxxGenieIDEAPlugin/tree/master/.claude/skills) | close-task-commit-push-pr, git-commit-push-pr, pr, +3 more |  | 8.1 | high | git clone https://github.com/devoxx/DevoxxGenieIDEAPlugin |
