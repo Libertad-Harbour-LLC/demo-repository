@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 16
+Total: 17
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-15 | [AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video](https://github.com/AtlasCloudAI/n8n-nodes-atlascloud) | 01-chatbot, 02-text-to-image, 03-async-video |  | 7.3 | medium | Скачать 01-chatbot.json по ссылке json_url |
 | 2026-06-14 | [KC23br/n8n-ai-calendar-agent-chat: Calendar Agent](https://github.com/KC23br/n8n-ai-calendar-agent-chat) | Calendar Agent |  | 5.5 | medium | Скачать JSON: https://raw.githubusercontent.com/KC23br/n8n-ai-calendar-agent-chat/main/Calendar Agent.json |
 | 2026-06-10 | [Repello-AI/Agent-Wiz: spotify](https://github.com/Repello-AI/Agent-Wiz) | spotify |  | 6.5 | high | Скачать JSON: https://raw.githubusercontent.com/Repello-AI/Agent-Wiz/master/examples/code/n8n/spotify.json |
 | 2026-06-06 | [slayerlux/n8n-llm-workflows: LLM workflow pack](https://github.com/slayerlux/n8n-llm-workflows) | 01-deterministic-text-summarizer, 02-deterministic-url-summarizer, 03-deterministic-url-qna, +2 more |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/slayerlux/n8n-llm-workflows/main/workflows/01-deterministic-text-summ... |

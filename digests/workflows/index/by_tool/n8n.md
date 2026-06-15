@@ -1,9 +1,10 @@
 # Recommended — tool: n8n
 
-Total: 74
+Total: 75
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-15 | [AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video](https://github.com/AtlasCloudAI/n8n-nodes-atlascloud) | 01-chatbot, 02-text-to-image, 03-async-video |  | 7.3 | medium | Скачать 01-chatbot.json по ссылке json_url |
 | 2026-06-14 | [Trojan3877/QUANT-LLM-ASSISTANT: stock_alert](https://github.com/Trojan3877/QUANT-LLM-ASSISTANT) | stock_alert |  | 5.3 | medium | Скачать JSON: https://raw.githubusercontent.com/Trojan3877/QUANT-LLM-ASSISTANT/main/workflows/stock_alert.json |
 | 2026-06-14 | [KC23br/n8n-ai-calendar-agent-chat: Calendar Agent](https://github.com/KC23br/n8n-ai-calendar-agent-chat) | Calendar Agent |  | 5.5 | medium | Скачать JSON: https://raw.githubusercontent.com/KC23br/n8n-ai-calendar-agent-chat/main/Calendar Agent.json |
 | 2026-06-12 | [wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound](https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping) | ASIC Miners - Complete with Scraping FIXED, Details to Document Generator, Follow-Up Automation, +2 more |  | 7.0 | medium | Скачать JSON нужного workflow из папки workflows/ репозитория |

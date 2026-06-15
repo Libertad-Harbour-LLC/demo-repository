@@ -1,13 +1,5 @@
 {
   "items": {
-    "https://github.com/161sam/n8n-voice-ai": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 2,
-      "title": "161sam/n8n-voice-ai: Logging"
-    },
     "https://github.com/7PH/n8n-self-hosted": {
       "first_seen": "2026-06-13T13:38:09Z",
       "score": null,
@@ -15,14 +7,6 @@
       "source": "github_n8n",
       "stars": 22,
       "title": "7PH/n8n-self-hosted: 1"
-    },
-    "https://github.com/ABE1617/Project-Swarm": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 1,
-      "title": "ABE1617/Project-Swarm: 1_1"
     },
     "https://github.com/Amin-Moniry/n8n_ExecutiveBot_Platform": {
       "first_seen": "2026-05-30T13:17:45Z",
@@ -40,13 +24,13 @@
       "stars": 2,
       "title": "AntonioPhilip/AlertFlow: uptime_kuma_alert"
     },
-    "https://github.com/Apolo442/Open-Finance-ETL": {
-      "first_seen": "2026-06-14T13:52:25Z",
+    "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud": {
+      "first_seen": "2026-06-15T17:14:18Z",
       "score": null,
-      "skills_count": 1,
+      "skills_count": 3,
       "source": "github_n8n",
-      "stars": 1,
-      "title": "Apolo442/Open-Finance-ETL: API Rest"
+      "stars": 13,
+      "title": "AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot"
     },
     "https://github.com/Automations-Project/n8n-bulk-automated-google-drive-files-sharing-and-direct-download-link-generation": {
       "first_seen": "2026-05-18T21:38:18Z",
@@ -88,22 +72,6 @@
       "stars": 7,
       "title": "BhaveshBhakta/N8N-Telegram-News-Agent: Telegram News Summarizer"
     },
-    "https://github.com/BigAddict/8n8Workflows": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 5,
-      "title": "BigAddict/8n8Workflows: My workflow 3"
-    },
-    "https://github.com/Crispy-Biscuits-AI/crispybrain": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 2,
-      "title": "Crispy-Biscuits-AI/crispybrain: ingest"
-    },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "first_seen": "2026-05-18T21:38:18Z",
       "score": null,
@@ -136,21 +104,13 @@
       "stars": 3,
       "title": "Edublackk/self-correcting-rag-chatbot: n8n_workflow"
     },
-    "https://github.com/FabricioLR/Laravel_Rag_Chabot": {
-      "first_seen": "2026-06-13T13:38:09Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 2,
-      "title": "FabricioLR/Laravel_Rag_Chabot: RAG-Test"
-    },
     "https://github.com/GaturaN/ai.n8n": {
       "first_seen": "2026-06-13T13:38:09Z",
       "score": null,
-      "skills_count": 2,
+      "skills_count": 4,
       "source": "github_n8n",
       "stars": 4,
-      "title": "GaturaN/ai.n8n: Documentation"
+      "title": "GaturaN/ai.n8n: Email Spy"
     },
     "https://github.com/Infinity-man01/june-telegram-ai-bot": {
       "first_seen": "2026-06-11T15:53:01Z",
@@ -159,6 +119,14 @@
       "source": "github_n8n",
       "stars": 4,
       "title": "Infinity-man01/june-telegram-ai-bot: Telegram Assistant Bot"
+    },
+    "https://github.com/JeffersonMFti/JurisAI": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "JeffersonMFti/JurisAI: WF3_rag_query"
     },
     "https://github.com/JeffersonMFti/agente-dra-julia-advocacia": {
       "first_seen": "2026-05-29T14:57:48Z",
@@ -224,6 +192,14 @@
       "stars": 15,
       "title": "MohamedMamdouh18/Find-Me-Job: LinkedIn Scraping Sub-Workflow"
     },
+    "https://github.com/MrSuperA/Spiderette-Strategy-Lab": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_make",
+      "stars": 0,
+      "title": "MrSuperA/Spiderette-Strategy-Lab: meta"
+    },
     "https://github.com/Nijamudin/automated-business-analysis-workflow": {
       "first_seen": "2026-06-11T15:53:01Z",
       "score": null,
@@ -256,6 +232,14 @@
       "stars": 2,
       "title": "Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: main"
     },
+    "https://github.com/Piyabordee/n8n-auto-ticket-system": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 3,
+      "title": "Piyabordee/n8n-auto-ticket-system: Auto Ticket"
+    },
     "https://github.com/SamVivan1/n8n-Workflows-Backup": {
       "first_seen": "2026-06-11T15:53:01Z",
       "score": null,
@@ -269,7 +253,7 @@
       "score": null,
       "skills_count": 5,
       "source": "github_n8n",
-      "stars": 84,
+      "stars": 82,
       "title": "SamurAIGPT/n8n-nodes-muapi: Skill_3DLogoAnimation"
     },
     "https://github.com/SohamXYZDev/TwitterThreadCreator": {
@@ -279,14 +263,6 @@
       "source": "github_n8n",
       "stars": 5,
       "title": "SohamXYZDev/TwitterThreadCreator: Twitter_Thread_Creator"
-    },
-    "https://github.com/Trojan3877/QUANT-LLM-ASSISTANT": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 6,
-      "title": "Trojan3877/QUANT-LLM-ASSISTANT: stock_alert"
     },
     "https://github.com/Whapi-Cloud/whatsapp-n8n-bot": {
       "first_seen": "2026-06-01T17:37:03Z",
@@ -320,14 +296,6 @@
       "stars": 3,
       "title": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main"
     },
-    "https://github.com/abdopcnet/n8n-workflows": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 2,
-      "title": "abdopcnet/n8n-workflows: e20party"
-    },
     "https://github.com/akahappygit/AI-Lead-Voice-Automation": {
       "first_seen": "2026-06-13T13:38:09Z",
       "score": null,
@@ -336,13 +304,29 @@
       "stars": 7,
       "title": "akahappygit/AI-Lead-Voice-Automation: Lead Scraper"
     },
+    "https://github.com/akamalov/n8n-workflows2": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 2,
+      "source": "github_n8n",
+      "stars": 6,
+      "title": "akamalov/n8n-workflows2: 639_"
+    },
+    "https://github.com/akshatcodes1810/AI_Resume_Analyser_Pipeline": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_make",
+      "stars": 0,
+      "title": "akshatcodes1810/AI_Resume_Analyser_Pipeline: AI Resume Analyser.blueprint"
+    },
     "https://github.com/anas-farooq8/verpakkingenxl": {
       "first_seen": "2026-06-14T13:52:25Z",
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
       "stars": 2,
-      "title": "anas-farooq8/verpakkingenxl: Dashboard"
+      "title": "anas-farooq8/verpakkingenxl: Main"
     },
     "https://github.com/andrewkolagit/DetectPack-Forge": {
       "first_seen": "2026-05-18T21:38:18Z",
@@ -352,14 +336,6 @@
       "stars": 24,
       "title": "andrewkolagit/DetectPack-Forge: DetectForge - Backend"
     },
-    "https://github.com/anilrajrimal1/n8n-backups": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 13,
-      "title": "anilrajrimal1/n8n-backups: n8n-backup"
-    },
     "https://github.com/anshwysmcbel2710/ai-ad-creative-strategist": {
       "first_seen": "2026-06-08T15:57:14Z",
       "score": null,
@@ -368,20 +344,20 @@
       "stars": 5,
       "title": "anshwysmcbel2710/ai-ad-creative-strategist: ai-ad-creative-strategist"
     },
-    "https://github.com/avarose57/ai-agent-wikipedia-n8n": {
-      "first_seen": "2026-06-14T13:52:25Z",
+    "https://github.com/antoninBr/talk-n8n-agent": {
+      "first_seen": "2026-06-15T17:14:18Z",
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
-      "stars": 1,
-      "title": "avarose57/ai-agent-wikipedia-n8n: workflow"
+      "stars": 8,
+      "title": "antoninBr/talk-n8n-agent: Hermione_Tip"
     },
     "https://github.com/christancho/Blogging-with-N8N": {
       "first_seen": "2026-05-18T21:38:18Z",
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
-      "stars": 29,
+      "stars": 31,
       "title": "christancho/Blogging-with-N8N: Blog Automation - full agentic"
     },
     "https://github.com/christinec-dev/n8n-Audit-Workflow": {
@@ -391,14 +367,6 @@
       "source": "github_n8n",
       "stars": 14,
       "title": "christinec-dev/n8n-Audit-Workflow: n8n Workflow Auditor"
-    },
-    "https://github.com/civo-learn/civo-n8n": {
-      "first_seen": "2026-06-13T13:38:09Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 5,
-      "title": "civo-learn/civo-n8n: workflow1"
     },
     "https://github.com/datadrivenconstruction/Project-management-n8n-with-task-management-and-photo-reports": {
       "first_seen": "2026-05-18T21:38:18Z",
@@ -421,16 +389,32 @@
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
-      "stars": 22987,
+      "stars": 23011,
       "title": "enescingoz/awesome-n8n-templates: AI product imagines"
     },
-    "https://github.com/freddy-schuetz/dmo-claw": {
-      "first_seen": "2026-06-14T13:52:25Z",
+    "https://github.com/erjulixn/Vibe-Coding-Prototype": {
+      "first_seen": "2026-06-15T17:14:18Z",
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
       "stars": 1,
-      "title": "freddy-schuetz/dmo-claw: mcp-builder"
+      "title": "erjulixn/Vibe-Coding-Prototype: Vibe Coding workflow n8n"
+    },
+    "https://github.com/faustormz/n8n-backups": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 5,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "faustormz/n8n-backups: Content"
+    },
+    "https://github.com/ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main"
     },
     "https://github.com/freddy-schuetz/n8n-claw": {
       "first_seen": "2026-05-18T21:38:18Z",
@@ -456,13 +440,13 @@
       "stars": 4,
       "title": "hidetheweed11/n8n_ExecutiveBot_Platform: n8n_amin"
     },
-    "https://github.com/jarmentor/larry-llama": {
-      "first_seen": "2026-06-14T13:52:25Z",
+    "https://github.com/josepereza/n8n-workflows-es": {
+      "first_seen": "2026-06-15T17:14:18Z",
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
-      "stars": 1,
-      "title": "jarmentor/larry-llama: Larry_Llama_v1"
+      "stars": 25,
+      "title": "josepereza/n8n-workflows-es: 0121-crm-sync"
     },
     "https://github.com/jreyesr/n8n-nodes-tesseractjs": {
       "first_seen": "2026-06-01T17:37:03Z",
@@ -471,6 +455,14 @@
       "source": "github_n8n",
       "stars": 125,
       "title": "jreyesr/n8n-nodes-tesseractjs: sample_workflow"
+    },
+    "https://github.com/kimjutu1996/n8n-Generate-weekly-energy-consumption-reports-with-EnergiDataService-email-and-Google-Drive": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "kimjutu1996/n8n-Generate-weekly-energy-consumption-reports-with-EnergiDataService-email-and-Google-Drive: main"
     },
     "https://github.com/lehcode/n8n-deploy": {
       "first_seen": "2026-06-11T15:53:01Z",
@@ -493,7 +485,7 @@
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
-      "stars": 1230,
+      "stars": 1238,
       "title": "lynote-ai/humanize-text: humanize_standard"
     },
     "https://github.com/m3tam3re/n8n-backup": {
@@ -502,7 +494,15 @@
       "skills_count": 1,
       "source": "github_n8n",
       "stars": 1,
-      "title": "m3tam3re/n8n-backup: Metabase"
+      "title": "m3tam3re/n8n-backup: My workflow"
+    },
+    "https://github.com/market-analyticx/seo-auditor-service": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 16,
+      "title": "market-analyticx/seo-auditor-service: seo_auditor"
     },
     "https://github.com/masteranime/n8n-claude-skills": {
       "first_seen": "2026-05-18T21:38:18Z",
@@ -523,10 +523,10 @@
     "https://github.com/n8n-io/test-workflows": {
       "first_seen": "2026-06-13T13:38:09Z",
       "score": null,
-      "skills_count": 4,
+      "skills_count": 2,
       "source": "github_n8n",
       "stars": 82,
-      "title": "n8n-io/test-workflows: 220"
+      "title": "n8n-io/test-workflows: 85"
     },
     "https://github.com/oxbshw/Open-Workflow-Library": {
       "first_seen": "2026-05-24T13:14:56Z",
@@ -555,10 +555,10 @@
     "https://github.com/ravindragith/zie619": {
       "first_seen": "2026-06-13T13:38:09Z",
       "score": null,
-      "skills_count": 2,
+      "skills_count": 1,
       "source": "github_n8n",
       "stars": 127,
-      "title": "ravindragith/zie619: 1123_Automate"
+      "title": "ravindragith/zie619: 1124_Create"
     },
     "https://github.com/reklis/ovos-n8n-jarvis-persona": {
       "first_seen": "2026-06-14T13:52:25Z",
@@ -566,7 +566,7 @@
       "skills_count": 1,
       "source": "github_n8n",
       "stars": 1,
-      "title": "reklis/ovos-n8n-jarvis-persona: weather"
+      "title": "reklis/ovos-n8n-jarvis-persona: friday"
     },
     "https://github.com/reorx/n8n-workflows": {
       "first_seen": "2026-06-14T13:52:25Z",
@@ -614,31 +614,15 @@
       "skills_count": 1,
       "source": "github_n8n",
       "stars": 1,
-      "title": "sshort/avondale-n8n: add-refund"
-    },
-    "https://github.com/stdioh321/n8n-test": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 1,
-      "title": "stdioh321/n8n-test: xml2json"
+      "title": "sshort/avondale-n8n: refund-form"
     },
     "https://github.com/theaiautomators/insights-lm-public": {
       "first_seen": "2026-05-18T21:38:18Z",
       "score": null,
       "skills_count": 5,
       "source": "github_n8n",
-      "stars": 545,
+      "stars": 547,
       "title": "theaiautomators/insights-lm-public: Import_Insights_LM_Workflows"
-    },
-    "https://github.com/thecloudstation/n8n-workflows": {
-      "first_seen": "2026-06-14T13:52:25Z",
-      "score": null,
-      "skills_count": 1,
-      "source": "github_n8n",
-      "stars": 15,
-      "title": "thecloudstation/n8n-workflows: jarvisBiz"
     },
     "https://github.com/traylorre/openclaw-mac": {
       "first_seen": "2026-06-11T15:53:01Z",
@@ -648,6 +632,22 @@
       "stars": 3,
       "title": "traylorre/openclaw-mac: action-runner"
     },
+    "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store"
+    },
+    "https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: main"
+    },
     "https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive": {
       "first_seen": "2026-06-11T15:53:01Z",
       "score": null,
@@ -655,6 +655,14 @@
       "source": "github_n8n",
       "stars": 2,
       "title": "weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive: main"
+    },
+    "https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 1,
+      "title": "weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: main"
     },
     "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
       "first_seen": "2026-06-11T15:53:01Z",
@@ -664,13 +672,13 @@
       "stars": 3,
       "title": "weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main"
     },
-    "https://github.com/women-in-ai-ireland/march-2025-group-1": {
-      "first_seen": "2026-06-14T13:52:25Z",
+    "https://github.com/weblineindia/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing": {
+      "first_seen": "2026-06-15T17:14:18Z",
       "score": null,
       "skills_count": 1,
       "source": "github_n8n",
       "stars": 1,
-      "title": "women-in-ai-ireland/march-2025-group-1: twitter_post"
+      "title": "weblineindia/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing: main"
     },
     "https://github.com/yadukrishnan-h/n8n-reddit-ai-post-drafter": {
       "first_seen": "2026-06-11T15:53:01Z",
@@ -679,6 +687,14 @@
       "source": "github_n8n",
       "stars": 3,
       "title": "yadukrishnan-h/n8n-reddit-ai-post-drafter: workflow"
+    },
+    "https://github.com/yashab-cyber/zehratech": {
+      "first_seen": "2026-06-15T17:14:18Z",
+      "score": null,
+      "skills_count": 1,
+      "source": "github_n8n",
+      "stars": 4,
+      "title": "yashab-cyber/zehratech: resume-review"
     },
     "https://github.com/yigitkonur/n8n-workflows-craft": {
       "first_seen": "2026-06-11T15:53:01Z",
@@ -689,6 +705,6 @@
       "title": "yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen"
     }
   },
-  "last_run": "2026-06-14T13:52:25Z",
-  "last_sent_date": "2026-06-14"
+  "last_run": "2026-06-15T17:14:18Z",
+  "last_sent_date": "2026-06-15"
 }

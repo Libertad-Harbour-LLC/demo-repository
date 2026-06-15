@@ -99,6 +99,41 @@
       "tool": "n8n",
       "url": "https://github.com/AntraTripathi74/AI-SDR"
     },
+    "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "Репозиторий AtlasCloudAI содержит три готовых n8n-workflow для интеграции с платформой AtlasCloud: чат-бот, генерация изображений по тексту и асинхронная обработка видео. Подойдёт разработчикам и командам, которые хотят быстро подключить AI-функции в n8n через кастомные ноды AtlasCloud.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-15",
+      "metric": "Время до первого успешного ответа чат-бота; успешная генерация изображения",
+      "promoted_from_watch": false,
+      "repo_full_name": "AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "01-chatbot",
+        "02-text-to-image",
+        "03-async-video"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-chatbot.json по ссылке json_url",
+        "Импортировать в n8n через меню Import Workflow",
+        "Установить кастомный нод AtlasCloudAI (npm install n8n-nodes-atlascloud или через Community Nodes)",
+        "Добавить API-ключ AtlasCloud в Credentials",
+        "Запустить тестовый прогон с тестовым сообщением"
+      ],
+      "title": "AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video",
+      "tool": "n8n",
+      "url": "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud"
+    },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "category": "general_workflow",
       "confidence": "high",
