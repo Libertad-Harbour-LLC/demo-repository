@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 96
+Total: 99
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-15 | [testdouble/han](https://github.com/testdouble/han/tree/main/.claude/skills) | han-release, han-update-documentation |  | 7.1 | high | Клонировать: git clone https://github.com/testdouble/han.git |
+| 2026-06-15 | [spencermarx/open-code-review](https://github.com/spencermarx/open-code-review/tree/main/.claude/skills) | agentdb-advanced, agentdb-learning, agentdb-memory-patterns, +27 more |  | 8.1 | high | Клонировать репо: git clone https://github.com/spencermarx/open-code-review.git |
+| 2026-06-15 | [IgorGanapolsky/ThumbGate](https://github.com/IgorGanapolsky/ThumbGate/tree/main/.claude/skills) | ci-failure-triage, evidence-first-answer, revenue-truth, +3 more |  | 7.0 | medium | Клонировать: git clone https://github.com/IgorGanapolsky/ThumbGate.git |
 | 2026-06-14 | [susomejias/rembric](https://github.com/susomejias/rembric/tree/main/.claude/skills) | openspec-apply-change, openspec-archive-change, openspec-explore, +1 more |  | 6.6 | medium | git clone https://github.com/susomejias/rembric && cp -r .claude/skills/* /ваш-api-проект/.claude/skills/ |
 | 2026-06-14 | [eugenelim/agent-ready-repo](https://github.com/eugenelim/agent-ready-repo/tree/main/.claude/skills) | adapt-to-project, bug-fix, init-project, +8 more |  | 7.3 | medium | git clone https://github.com/eugenelim/agent-ready-repo && cp -r .claude/skills/* /ваш-проект/.claude/skills/ |
 | 2026-06-14 | [ergrelet/windiff](https://github.com/ergrelet/windiff/tree/master/.claude/skills) | windiff-version-diff-analysis |  | 6.5 | high | git clone https://github.com/ergrelet/windiff && cp -r .claude/skills/* /ваш-проект/.claude/skills/ |

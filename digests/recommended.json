@@ -585,6 +585,42 @@
       "title": "Hello-QM/catgo-LRG",
       "url": "https://github.com/Hello-QM/catgo-LRG/tree/main/.claude/skills"
     },
+    "https://github.com/IgorGanapolsky/ThumbGate/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 6 Claude Skills, направленных на дисциплину разработки: автоматический triaging CI-падений, evidence-based ответы, трекинг состояния задач и контроль скоупа. Ориентирован на разработчиков и PM, которым важна строгость в принятии решений.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-15",
+      "metric": "Точность диагностики CI-падения: находит ли skill root cause за одну сессию; качество evidence-first ответов",
+      "promoted_from_watch": false,
+      "repo_full_name": "IgorGanapolsky/ThumbGate",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "ci-failure-triage",
+        "evidence-first-answer",
+        "revenue-truth",
+        "scope-discipline",
+        "task-state-ledger",
+        "thumbgate"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/IgorGanapolsky/ThumbGate.git",
+        "Скопировать ci-failure-triage: cp -r ThumbGate/.claude/skills/ci-failure-triage /твой-проект/.claude/skills/",
+        "В Claude Code вставить лог упавшего CI и написать: 'Triage this CI failure using ci-failure-triage skill and suggest a fix'",
+        "Дополнительно протестировать evidence-first-answer: 'Answer my questions about this codebase using evidence-first-answer skill'"
+      ],
+      "title": "IgorGanapolsky/ThumbGate",
+      "url": "https://github.com/IgorGanapolsky/ThumbGate/tree/main/.claude/skills"
+    },
     "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -5341,6 +5377,66 @@
       "title": "slopus/happy",
       "url": "https://github.com/slopus/happy/tree/main/.claude/skills"
     },
+    "https://github.com/spencermarx/open-code-review/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий содержит 30 Claude Skills для автоматизации code review, управления GitHub-проектами, агентной памяти (agentdb) и координации swarm-агентов. Ориентирован на разработчиков, которые хотят усилить CI/CD и review-процессы через Claude Code.",
+      "final_score": 8.1,
+      "first_recommended": "2026-06-15",
+      "metric": "Качество авто-ревью PR: находит ли skill реальные проблемы за < 2 минут; сохраняет ли agentdb контекст между сессиями",
+      "promoted_from_watch": false,
+      "repo_full_name": "spencermarx/open-code-review",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 30,
+      "skills_in_repo": [
+        "agentdb-advanced",
+        "agentdb-learning",
+        "agentdb-memory-patterns",
+        "agentdb-optimization",
+        "agentdb-vector-search",
+        "browser",
+        "github-code-review",
+        "github-multi-repo",
+        "github-project-management",
+        "github-release-management",
+        "github-workflow-automation",
+        "hooks-automation",
+        "pair-programming",
+        "reasoningbank-agentdb",
+        "reasoningbank-intelligence",
+        "skill-builder",
+        "sparc-methodology",
+        "stream-chain",
+        "swarm-advanced",
+        "swarm-orchestration",
+        "v3-cli-modernization",
+        "v3-core-implementation",
+        "v3-ddd-architecture",
+        "v3-integration-deep",
+        "v3-mcp-optimization",
+        "v3-memory-unification",
+        "v3-performance-optimization",
+        "v3-security-overhaul",
+        "v3-swarm-coordination",
+        "verification-quality"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/spencermarx/open-code-review.git",
+        "Скопировать нужные папки: cp -r open-code-review/.claude/skills/github-code-review /твой-проект/.claude/skills/",
+        "Открыть Claude Code в своём проекте и написать: 'Review the last PR changes in this repo using the github-code-review skill'",
+        "Дополнительно протестировать agentdb-memory-patterns: 'Store context about our codebase architecture using agentdb skills'"
+      ],
+      "title": "spencermarx/open-code-review",
+      "url": "https://github.com/spencermarx/open-code-review/tree/main/.claude/skills"
+    },
     "https://github.com/staskh/trading_skills/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -5549,6 +5645,38 @@
       ],
       "title": "taewanu/pr-review-agent",
       "url": "https://github.com/taewanu/pr-review-agent/tree/main/.claude/skills"
+    },
+    "https://github.com/testdouble/han/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий от компании testdouble содержит два сфокусированных Claude Skills для автоматизации релизного процесса и обновления документации. Подходит командам, работающим с семантическим версионированием и changelog.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-15",
+      "metric": "Корректность bumped-версии, полнота changelog, актуальность обновлённой документации",
+      "promoted_from_watch": false,
+      "repo_full_name": "testdouble/han",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "han-release",
+        "han-update-documentation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/testdouble/han.git",
+        "Скопировать skills: cp -r han/.claude/skills/han-release /твой-проект/.claude/skills/ && cp -r han/.claude/skills/han-update-documentation /твой-проект/.claude/skills/",
+        "В Claude Code написать: 'Prepare a new release using han-release skill — bump patch version, update changelog, create git tag'",
+        "Затем: 'Update documentation for the changes in the last commit using han-update-documentation skill'"
+      ],
+      "title": "testdouble/han",
+      "url": "https://github.com/testdouble/han/tree/main/.claude/skills"
     },
     "https://github.com/thedotmack/claude-mem/tree/main/.claude/skills": {
       "added_manually": true,
