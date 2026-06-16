@@ -1428,6 +1428,43 @@
       "tool": "n8n",
       "url": "https://github.com/freddy-schuetz/n8n-claw"
     },
+    "https://github.com/gnueole/jobby-md2html": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "Набор из пяти n8n-workflow для автоматизации работы с резюме и вакансиями: синхронизация LinkedIn-данных в Notion, генерация PDF-документов (динамически и статически), синхронизация конфигурации и обработка ошибок с отправкой логов в Axiom. Подходит для рекрутёров и кандидатов, ведущих активный поиск работы.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-16",
+      "metric": "Количество вакансий, синхронизированных в Notion за один прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "gnueole/jobby-md2html: jobby-linkedin-2-notion",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "error-trigger-to-axiom-via-stdout",
+        "jobby-linkedin-2-notion",
+        "jobby-pdf-dyn",
+        "jobby-pdf-static",
+        "jobby-sync-conf"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON (например jobby-linkedin-2-notion): https://raw.githubusercontent.com/gnueole/jobby-md2html/main/n8n/jobby-linkedin-2-notion.json",
+        "Открыть n8n → Import from file → загрузить JSON",
+        "Настроить credentials: LinkedIn OAuth2 и Notion API token",
+        "Указать ID целевой Notion-базы данных в параметрах нодов",
+        "Запустить workflow и проверить появление записей в Notion"
+      ],
+      "title": "gnueole/jobby-md2html: jobby-linkedin-2-notion",
+      "tool": "n8n",
+      "url": "https://github.com/gnueole/jobby-md2html"
+    },
     "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram": {
       "category": "video_workflow",
       "confidence": "medium",
