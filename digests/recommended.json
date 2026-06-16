@@ -963,6 +963,44 @@
       "title": "OutSystems/docs-product",
       "url": "https://github.com/OutSystems/docs-product/tree/master/.claude/skills"
     },
+    "https://github.com/PackmindHub/packmind/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Packmind — инструмента для управления командными практиками кодинга — содержит 9 Claude Skills для автоматизации e2e-тестирования, написания TypeORM-миграций, аудита feature flags и создания документации. Ориентирован на команды разработчиков, работающих с TypeScript/TypeORM стеком.",
+      "final_score": 8.2,
+      "first_recommended": "2026-06-16",
+      "metric": "Время написания первого рабочего e2e-теста vs без skill; соответствие шаблонам проекта",
+      "promoted_from_watch": false,
+      "repo_full_name": "PackmindHub/packmind",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "cli-e2e-test-authoring",
+        "create-run-e2e-tests",
+        "creating-end-user-documentation-for-packmind",
+        "feature-flags-audit",
+        "how-to-write-typeorm-migrations-in-packmind",
+        "packmind-onboard",
+        "packmind-update-playbook",
+        "working-with-playground-app",
+        "working-with-pm-design-kit"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/PackmindHub/packmind && cp -r packmind/.claude/skills/create-run-e2e-tests <твой-проект>/.claude/skills/",
+        "Открыть Claude Code в своём TypeScript-проекте",
+        "Написать: 'Use create-run-e2e-tests skill to write e2e tests for the login flow' и оценить качество сгенерированных тестов"
+      ],
+      "title": "PackmindHub/packmind",
+      "url": "https://github.com/PackmindHub/packmind/tree/main/.claude/skills"
+    },
     "https://github.com/ReinaMacCredy/maestro/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -3325,6 +3363,53 @@
       ],
       "title": "hashintel/hash",
       "url": "https://github.com/hashintel/hash/tree/main/.claude/skills"
+    },
+    "https://github.com/hodoshia/richworks-skills/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 18 Claude Skills для контент-маркетинга и SMM: охватывает LinkedIn, Instagram Reels, лендинги, хэштег-стратегии и виральные формулы. Репозиторий ориентирован на маркетологов, контент-мейкеров и фрилансеров, работающих с социальными сетями.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-16",
+      "metric": "Качество генерируемых текстов vs без skill (структура, соответствие платформе, hook в первые 3 секунды)",
+      "promoted_from_watch": false,
+      "repo_full_name": "hodoshia/richworks-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 18,
+      "skills_in_repo": [
+        "ai-automation",
+        "content-flywheel",
+        "content-planning",
+        "content-principles",
+        "creative-techniques",
+        "foundation-layer",
+        "hashtag-strategy",
+        "headlines",
+        "landing-page-copy",
+        "linkedin-templates",
+        "profile-growth",
+        "profile-optimization",
+        "reels-video",
+        "reel-diagnosis",
+        "sales-posts",
+        "seasonal-campaigns",
+        "tone-of-voice",
+        "viral-script-formula"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/hodoshia/richworks-skills && cp -r richworks-skills/.claude/skills/viral-script-formula <твой-проект>/.claude/skills/",
+        "Открыть Claude Code в проекте с контент-задачами",
+        "Дать промт: 'Use viral-script-formula skill to write a 60-second Reels script about [твоя тема]' и оценить структуру сценария"
+      ],
+      "title": "hodoshia/richworks-skills",
+      "url": "https://github.com/hodoshia/richworks-skills/tree/main/.claude/skills"
     },
     "https://github.com/hugohe3/ppt-master/tree/main/.claude/skills": {
       "added_manually": true,

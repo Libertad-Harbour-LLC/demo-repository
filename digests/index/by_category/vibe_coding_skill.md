@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 99
+Total: 100
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-16 | [PackmindHub/packmind](https://github.com/PackmindHub/packmind/tree/main/.claude/skills) | cli-e2e-test-authoring, create-run-e2e-tests, creating-end-user-documentation-for-packmind, +6 more |  | 8.2 | high | git clone https://github.com/PackmindHub/packmind && cp -r packmind/.claude/skills/create-run-e2e-tests <твой-проект>... |
 | 2026-06-15 | [testdouble/han](https://github.com/testdouble/han/tree/main/.claude/skills) | han-release, han-update-documentation |  | 7.1 | high | Клонировать: git clone https://github.com/testdouble/han.git |
 | 2026-06-15 | [spencermarx/open-code-review](https://github.com/spencermarx/open-code-review/tree/main/.claude/skills) | agentdb-advanced, agentdb-learning, agentdb-memory-patterns, +27 more |  | 8.1 | high | Клонировать репо: git clone https://github.com/spencermarx/open-code-review.git |
 | 2026-06-15 | [IgorGanapolsky/ThumbGate](https://github.com/IgorGanapolsky/ThumbGate/tree/main/.claude/skills) | ci-failure-triage, evidence-first-answer, revenue-truth, +3 more |  | 7.0 | medium | Клонировать: git clone https://github.com/IgorGanapolsky/ThumbGate.git |
