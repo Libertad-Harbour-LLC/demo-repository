@@ -1,0 +1,29 @@
+name: skill-backfill
+# Manual one-off: enrich the given GitHub repos' skills via Claude and push the
+# Import payload to the web catalog. No analyzer, no Telegram digest, no
+# digests/ commit-back. Useful to verify enrich→push→catalog without the cron.
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Space-separated GitHub repo URLs to enrich + push"
+        required: true
+        type: string
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r trendwatch/requirements.txt
+      - run: python trendwatch/trendwatch.py --backfill $URLS
+        env:
+          URLS: ${{ inputs.urls }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_SEARCH_TOKEN: ${{ secrets.GH_SEARCH_TOKEN }}
+          SKILL_RADAR_INGEST_SECRET: ${{ secrets.SKILL_RADAR_INGEST_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

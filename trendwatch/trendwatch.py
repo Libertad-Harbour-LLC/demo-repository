@@ -16,6 +16,7 @@ Sprint 5 adds a persistent skill database:
   appended to the Telegram digest.
 """
 import argparse
+import json
 import os
 import sys
 from datetime import datetime, timezone
@@ -503,6 +504,7 @@ def _push_to_catalog(payload: dict, bot_token: str = "", chat_id: str = "") -> N
         print(f"[trendwatch] catalog push skipped/failed: {error}", file=sys.stderr)
         return
     print(f"[trendwatch] catalog push OK: {catalog.format_summary(result)}")
+    print(f"[trendwatch] ingest response: {json.dumps(result, ensure_ascii=False)}")
     _notify_suggested(catalog.suggested_categories(result), bot_token, chat_id)
 
 
@@ -588,6 +590,7 @@ def run_backfill(urls: list[str]) -> int:
         print(f"[backfill] catalog push failed: {error}", file=sys.stderr)
         return 1
     print(f"[backfill] catalog push OK: {catalog.format_summary(result)}")
+    print(f"[backfill] ingest response: {json.dumps(result, ensure_ascii=False)}")
     _notify_suggested(catalog.suggested_categories(result), bot_token, chat_id)
     return 0
 
