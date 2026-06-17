@@ -39,3 +39,5 @@ jobs:
           SKILL_RADAR_INGEST_SECRET: ${{ secrets.SKILL_RADAR_INGEST_SECRET }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # Enrich large skill collections fully (backfill is a one-off catch-up).
+          ENRICH_MAX_SKILLS_PER_REPO: "300"
