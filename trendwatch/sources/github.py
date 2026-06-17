@@ -207,8 +207,11 @@ def _repo_meta(full_name: str) -> dict:
     }
 
 
-def _list_skill_dirs(full_name: str):
+def _list_skill_dirs(full_name: str, ref: str | None = None):
     """Return list of skill directory names under .claude/skills.
+
+    ``ref`` optionally pins a branch/tag (passed as the contents API ``ref``)
+    so callers can list skills that live on a non-default branch.
 
     Returns:
         list[str] — directories found (possibly empty if .claude/skills exists but empty).
@@ -216,7 +219,8 @@ def _list_skill_dirs(full_name: str):
         RATE_LIMITED — verification unknown due to rate-limit; caller should keep
         the candidate as unverified rather than dropping it.
     """
-    data = _safe_get(f"{REPO_API_URL}/{full_name}/contents/.claude/skills")
+    params = {"ref": ref} if ref else None
+    data = _safe_get(f"{REPO_API_URL}/{full_name}/contents/.claude/skills", params=params)
     if data == RATE_LIMITED:
         return RATE_LIMITED
     if data is None:

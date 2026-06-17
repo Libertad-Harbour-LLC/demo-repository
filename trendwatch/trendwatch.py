@@ -527,21 +527,29 @@ def _notify_suggested(suggested: list[dict], bot_token: str, chat_id: str) -> No
         print(f"[trendwatch] suggested-categories notify failed: {exc}", file=sys.stderr)
 
 
-def _parse_owner_repo(url: str) -> str | None:
-    m = import_payload._GITHUB_RE.search(url or "")
+def _parse_repo_url(url: str) -> tuple[str | None, str | None]:
+    """Return ``(owner/repo, branch_or_None)`` from a GitHub URL. Honours a
+    ``/tree/<branch>/…`` deep link so backfill can list skills on the branch
+    the operator pointed at, not just the default branch."""
+    import re
+    m = re.search(
+        r"github\.com/([^/\s]+)/([^/\s#?]+)(?:/tree/([^/\s#?]+))?",
+        url or "", re.IGNORECASE,
+    )
     if not m:
-        return None
+        return None, None
     repo = m.group(2)
     if repo.endswith(".git"):
         repo = repo[:-4]
-    return f"{m.group(1)}/{repo}"
+    return f"{m.group(1)}/{repo}", m.group(3)
 
 
 def run_backfill(urls: list[str]) -> int:
     """One-off catch-up: take repo URLs, enrich every skill, push to catalog.
 
     No analyzer / Telegram digest — just list each repo's ``.claude/skills``
-    folders, build the payload, enrich via Claude, and POST it.
+    folders (on the branch from the URL, else the default branch), build the
+    payload, enrich via Claude, and POST it.
     """
     try:
         from .sources import github as gh_source
@@ -551,18 +559,25 @@ def run_backfill(urls: list[str]) -> int:
     date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     repos: list[dict] = []
     for url in urls:
-        owner_repo = _parse_owner_repo(url)
+        owner_repo, url_branch = _parse_repo_url(url)
         if not owner_repo:
             print(f"[backfill] not a GitHub repo URL, skipping: {url}", file=sys.stderr)
             continue
         meta = gh_source._repo_meta(owner_repo)
-        branch = meta.get("default_branch") or "main"
-        dirs = gh_source._list_skill_dirs(owner_repo)
+        branch = url_branch or meta.get("default_branch") or "main"
+        dirs = gh_source._list_skill_dirs(owner_repo, ref=branch)
+        # Fall back to the default branch if the URL branch had nothing.
+        if (dirs is None or dirs == gh_source.RATE_LIMITED) and url_branch:
+            default_branch = meta.get("default_branch") or "main"
+            if default_branch != branch:
+                alt = gh_source._list_skill_dirs(owner_repo, ref=default_branch)
+                if isinstance(alt, list) and alt:
+                    branch, dirs = default_branch, alt
         if dirs == gh_source.RATE_LIMITED:
             print(f"[backfill] rate-limited listing {owner_repo}, skipping", file=sys.stderr)
             continue
         if not dirs:
-            print(f"[backfill] no .claude/skills in {owner_repo}, skipping", file=sys.stderr)
+            print(f"[backfill] no .claude/skills in {owner_repo}@{branch}, skipping", file=sys.stderr)
             continue
         repos.append(
             import_payload.make_repo_entry(
@@ -570,7 +585,7 @@ def run_backfill(urls: list[str]) -> int:
                 stars=meta.get("stars"), category="general",
             )
         )
-        print(f"[backfill] {owner_repo}: {len(dirs)} skill(s)", file=sys.stderr)
+        print(f"[backfill] {owner_repo}@{branch}: {len(dirs)} skill(s)", file=sys.stderr)
 
     if not repos:
         print("[backfill] nothing to push")
@@ -632,8 +647,9 @@ def main() -> int:
             with open(args.backfill_file, encoding="utf-8") as f:
                 urls += [ln.strip() for ln in f if ln.strip() and not ln.startswith("#")]
         if not urls:
-            print("[backfill] no URLs provided", file=sys.stderr)
-            return 1
+            # No-op (return 0) so clearing the sentinel file doesn't red-fail.
+            print("[backfill] no URLs provided — nothing to do")
+            return 0
         return run_backfill(urls)
 
     return run(
