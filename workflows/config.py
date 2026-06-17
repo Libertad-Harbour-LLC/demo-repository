@@ -34,7 +34,12 @@ GITHUB_TOPICS_MAKE = [
     "no-code-automation",
 ]
 
-# Code-search queries that find workflow JSON files
+# Code-search queries that find workflow JSON files.
+# NOTE: the legacy /search/code API does NOT support OR — terms are ANDed.
+# Domain targeting uses one single-term query per domain; n8n/Make JSON
+# exports literally contain node/module names ("telegram", "youTube",
+# "wordpress"), so single terms match well. Each query is one paced request
+# (~7.5s apart) against code search's 10-requests/min budget.
 GITHUB_CODE_QUERIES_N8N = [
     'path:workflows extension:json "nodes" "connections"',
     'extension:json "n8n" "credentials"',
@@ -42,13 +47,15 @@ GITHUB_CODE_QUERIES_N8N = [
     'path:n8n extension:json "workflow"',
     'filename:workflow.json "n8n"',
     # Domain-targeted — counter the devops/data bias by directly surfacing
-    # marketing/content/video/photo/web n8n workflows that the popularity
+    # marketing/content/video/image/web/bot n8n workflows that the star
     # sort would otherwise truncate below infra/automation repos.
-    'extension:json "nodes" "connections" marketing OR seo OR leads',
-    'extension:json "nodes" "connections" content OR social OR blog',
-    'extension:json "nodes" "connections" video OR youtube OR image',
-    'extension:json "nodes" "connections" website OR webhook OR wordpress',
-    'extension:json "nodes" "connections" bot OR chatbot OR agent OR telegram OR discord',
+    'extension:json "nodes" "connections" marketing',
+    'extension:json "nodes" "connections" social',
+    'extension:json "nodes" "connections" video',
+    'extension:json "nodes" "connections" image',
+    'extension:json "nodes" "connections" wordpress',
+    'extension:json "nodes" "connections" telegram',
+    'extension:json "nodes" "connections" chatbot',
 ]
 GITHUB_CODE_QUERIES_MAKE = [
     'extension:json "blueprint" "scenario"',
@@ -56,10 +63,11 @@ GITHUB_CODE_QUERIES_MAKE = [
     'extension:json "make" "scenario" "modules"',
     'filename:blueprint.json',
     # Domain-targeted Make blueprints (see n8n note above).
-    'extension:json "modules" marketing OR social OR content',
-    'extension:json "modules" video OR image OR youtube',
-    'extension:json "modules" website OR wordpress OR shopify',
-    'extension:json "modules" bot OR chatbot OR agent OR telegram',
+    'extension:json "modules" "scenario" marketing',
+    'extension:json "modules" "scenario" social',
+    'extension:json "modules" "scenario" video',
+    'extension:json "modules" "scenario" image',
+    'extension:json "modules" "scenario" telegram',
 ]
 
 REDDIT_SUBREDDITS = [

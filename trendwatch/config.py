@@ -22,20 +22,29 @@ GITHUB_TOPICS = [
     "agent-skill",
 ]
 
+# NOTE: the legacy /search/code API does NOT support OR — multi-term queries
+# are ANDed, so the old "marketing OR seo OR copywriting" style never did
+# what it looked like. Domain targeting therefore uses one single-term query
+# per domain. Each query costs one paced request (~7.5s apart) against code
+# search's 10-requests/min budget.
 GITHUB_CODE_QUERIES = [
     'path:.claude/skills filename:SKILL.md',
     'path:skills filename:SKILL.md "claude"',
     'filename:SKILL.md "name:" "description:"',  # YAML-frontmatter skills at root or any depth
     'path:.claude filename:SKILL.md',
     # Domain-targeted SKILL.md queries — counter the coding bias by directly
-    # surfacing non-coding skills (marketing, content, video, photo, web, design)
-    # that the popularity sort would otherwise truncate below dev-tool repos.
-    'filename:SKILL.md marketing OR seo OR copywriting',
-    'filename:SKILL.md content OR blog OR newsletter OR social',
-    'filename:SKILL.md video OR youtube OR shorts OR subtitle',
-    'filename:SKILL.md image OR photo OR design OR presentation OR slides',
-    'filename:SKILL.md website OR landing OR frontend OR webflow',
-    'filename:SKILL.md agent OR chatbot OR bot OR assistant',
+    # surfacing non-coding skills that the star sort would otherwise truncate
+    # below dev-tool repos.
+    'filename:SKILL.md marketing',
+    'filename:SKILL.md seo',
+    'filename:SKILL.md content',
+    'filename:SKILL.md social',
+    'filename:SKILL.md video',
+    'filename:SKILL.md image',
+    'filename:SKILL.md presentation',
+    'filename:SKILL.md website',
+    'filename:SKILL.md agent',
+    'filename:SKILL.md chatbot',
 ]
 
 REDDIT_SUBREDDITS = [

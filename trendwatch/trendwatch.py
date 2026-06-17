@@ -161,10 +161,10 @@ def _fetch_all() -> dict[str, list[dict]]:
     return items_by_source
 
 
-def _write_report(analysis: dict, date: str) -> str:
+def _write_report(analysis: dict, date: str, items: list[dict] | None = None) -> str:
     os.makedirs("digests", exist_ok=True)
     path = os.path.join("digests", f"{date}.md")
-    md = report.to_markdown(analysis, date)
+    md = report.to_markdown(analysis, date, items=items)
     with open(path, "w", encoding="utf-8") as f:
         f.write(md)
     return path
@@ -445,7 +445,7 @@ def run(
         print(f"[trendwatch] index write failed: {exc}", file=sys.stderr)
 
     try:
-        report_path = _write_report(analysis, date)
+        report_path = _write_report(analysis, date, items=items_with_deltas)
         print(f"[trendwatch] wrote {report_path}")
         try:
             state.save_state(items_by_source)

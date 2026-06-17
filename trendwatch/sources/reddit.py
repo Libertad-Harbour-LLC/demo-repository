@@ -1,15 +1,79 @@
-"""Reddit subreddit source via public new.json endpoint.
+"""Reddit subreddit source.
 
 Sprint 3: post-filter by keywords (config.REDDIT_KEYWORDS_FILTER) so we only
 keep posts that look like they're about Claude Code Skills, not generic AI
 chatter.
+
+Auth: Reddit blocks anonymous requests from datacenter IPs (GitHub Actions
+runners answer ``403 Blocked`` — observed in every production run), so the
+public ``www.reddit.com/*.json`` endpoint only works from residential IPs.
+When ``REDDIT_CLIENT_ID`` + ``REDDIT_CLIENT_SECRET`` env vars are set
+(create a "script" app at reddit.com/prefs/apps), we use the official
+app-only OAuth flow instead: token from ``/api/v1/access_token``, data from
+``oauth.reddit.com`` — which is allowed from CI. Without creds we fall back
+to the public endpoint (fine locally, dead in Actions).
 """
+import os
 import sys
 import time
 
 import requests
 
-HEADERS = {"User-Agent": "trendwatch/1.0"}
+PUBLIC_BASE = "https://www.reddit.com"
+OAUTH_BASE = "https://oauth.reddit.com"
+TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
+USER_AGENT = "trendwatch/1.0 (daily skills digest)"
+
+HEADERS = {"User-Agent": USER_AGENT}
+
+# Module-level token cache — one token per process run is plenty
+# (app-only tokens live 24h; the cron run takes minutes).
+_token_cache: list[str | None] = [None]
+
+
+def _oauth_token() -> str | None:
+    """Fetch (and cache) an app-only OAuth token. None if creds unset/fail."""
+    if _token_cache[0]:
+        return _token_cache[0]
+    client_id = os.environ.get("REDDIT_CLIENT_ID", "").strip()
+    client_secret = os.environ.get("REDDIT_CLIENT_SECRET", "").strip()
+    if not client_id or not client_secret:
+        return None
+    try:
+        resp = requests.post(
+            TOKEN_URL,
+            auth=(client_id, client_secret),
+            data={"grant_type": "client_credentials"},
+            headers=HEADERS,
+            timeout=30,
+        )
+        resp.raise_for_status()
+        token = (resp.json() or {}).get("access_token") or ""
+        if token:
+            _token_cache[0] = token
+            return token
+        print("[trendwatch:reddit] OAuth token response had no access_token",
+              file=sys.stderr)
+    except Exception as exc:
+        print(f"[trendwatch:reddit] OAuth token fetch failed: {exc}",
+              file=sys.stderr)
+    return None
+
+
+def _fetch_new_json(sub: str) -> list[dict]:
+    """Return the /new listing children for a subreddit via OAuth when
+    possible, else the public endpoint. Raises on HTTP errors so the caller's
+    per-subreddit try/except logs and moves on."""
+    token = _oauth_token()
+    if token:
+        url = f"{OAUTH_BASE}/r/{sub}/new?limit=50"
+        headers = {**HEADERS, "Authorization": f"Bearer {token}"}
+    else:
+        url = f"{PUBLIC_BASE}/r/{sub}/new.json?limit=50"
+        headers = HEADERS
+    resp = requests.get(url, headers=headers, timeout=30)
+    resp.raise_for_status()
+    return resp.json().get("data", {}).get("children", []) or []
 
 
 def _match_keyword(text: str, keywords: list[str]) -> str | None:
@@ -37,10 +101,7 @@ def fetch_reddit(
         collected: list[dict] = []
         for sub in subreddits or []:
             try:
-                url = f"https://www.reddit.com/r/{sub}/new.json?limit=50"
-                resp = requests.get(url, headers=HEADERS, timeout=30)
-                resp.raise_for_status()
-                children = resp.json().get("data", {}).get("children", []) or []
+                children = _fetch_new_json(sub)
             except Exception as exc:
                 print(f"[trendwatch:reddit:{sub}] error: {exc}", file=sys.stderr)
                 continue
