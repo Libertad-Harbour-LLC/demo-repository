@@ -1,11 +1,12 @@
 # Recommended Claude Skills — all time
 
-Total: 79
+Total: 80
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-17 | [ravindragith/zie619: 1123_Automate + 1125_Create](https://github.com/ravindragith/zie619) | 1123_Automate, 1125_Create |  | 4.8 | high | Скачать JSON: https://raw.githubusercontent.com/ravindragith/zie619/main/workflows/1123_Automate.json |
 | 2026-06-16 | [gnueole/jobby-md2html: jobby-linkedin-2-notion](https://github.com/gnueole/jobby-md2html) | error-trigger-to-axiom-via-stdout, jobby-linkedin-2-notion, jobby-pdf-dyn, +2 more |  | 6.5 | medium | Скачать нужный JSON (например jobby-linkedin-2-notion): https://raw.githubusercontent.com/gnueole/jobby-md2html/main/... |
 | 2026-06-15 | [AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video](https://github.com/AtlasCloudAI/n8n-nodes-atlascloud) | 01-chatbot, 02-text-to-image, 03-async-video |  | 7.3 | medium | Скачать 01-chatbot.json по ссылке json_url |
 | 2026-06-14 | [Trojan3877/QUANT-LLM-ASSISTANT: stock_alert](https://github.com/Trojan3877/QUANT-LLM-ASSISTANT) | stock_alert |  | 5.3 | medium | Скачать JSON: https://raw.githubusercontent.com/Trojan3877/QUANT-LLM-ASSISTANT/main/workflows/stock_alert.json |
