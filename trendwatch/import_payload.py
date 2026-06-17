@@ -21,20 +21,74 @@ from typing import Any
 
 RADAR_VERSION = "1.0"
 
-# Active category dictionary: normalized slug -> human name (no emoji, no
-# markdown, per contract §6). Mirrors the canonical skill categories; the raw
-# ``*_skill`` enum is normalized via ``normalize_category``.
+# Active category dictionary (catalog shelves): slug -> Russian title.
+# These are the ONLY active categories; the per-skill enricher and the
+# analyzer must reuse these slugs. Anything new is surfaced as
+# ``status: "suggested"`` with a rationale and is never assigned to a skill.
 SKILL_CATEGORY_NAMES: dict[str, str] = {
-    "marketing": "Marketing",
-    "content": "Content",
-    "video": "Video",
-    "photo": "Photo & images",
-    "design": "Design & presentations",
-    "webdev": "Web development",
-    "vibe-coding": "Vibe coding",
-    "ai-content": "AI content generation",
-    "general": "General",
+    "vibe-coding": "Вайбкодинг",
+    "engineering": "Инженерия",
+    "automation": "Автоматизация",
+    "marketing": "Маркетинг",
+    "content": "Контент",
+    "design": "Дизайн",
+    "research": "Исследования",
+    "documentation": "Документация",
+    "testing": "Тестирование",
+    "data": "Данные",
+    "ai-tooling": "AI-тулинг",
+    "devops": "DevOps",
+    "security": "Безопасность",
+    "integration": "Интеграции",
+    "orchestration": "Оркестрация",
+    "productivity": "Продуктивность",
+    "seo": "SEO",
+    "learning": "Обучение",
+    "general": "Общее",
 }
+
+# Map the pipeline's own normalized category slugs (and common variants) onto
+# the catalog dictionary above, so a repo's analyzer-assigned category always
+# resolves to a real shelf.
+CATEGORY_ALIASES: dict[str, str] = {
+    "vibe-coding": "vibe-coding",
+    "coding": "vibe-coding",
+    "webdev": "engineering",
+    "web-development": "engineering",
+    "frontend": "engineering",
+    "video": "content",
+    "photo": "content",
+    "image": "content",
+    "ai-content": "ai-tooling",
+    "ai-content-generation": "ai-tooling",
+    "ml": "ai-tooling",
+    "sales": "marketing",
+    "social": "marketing",
+    "smm": "marketing",
+    "docs": "documentation",
+    "qa": "testing",
+    "infra": "devops",
+    "ops": "devops",
+    "ci-cd": "devops",
+    "api": "integration",
+    "knowledge": "learning",
+    "education": "learning",
+}
+
+
+def resolve_category(value: str | None, default: str = "general") -> str:
+    """Normalize a raw category to a known catalog slug, applying aliases.
+
+    Returns ``default`` (clamped to the dictionary) when the value maps to
+    nothing known — callers that need to detect "unknown" should compare
+    ``normalize_category`` + ``CATEGORY_ALIASES`` against
+    ``SKILL_CATEGORY_NAMES`` themselves.
+    """
+    slug = normalize_category(value)
+    slug = CATEGORY_ALIASES.get(slug, slug)
+    if slug in SKILL_CATEGORY_NAMES:
+        return slug
+    return default if default in SKILL_CATEGORY_NAMES else "general"
 
 _GITHUB_RE = re.compile(r"github\.com/([^/\s]+)/([^/\s#?]+)", re.IGNORECASE)
 # Broad emoji / symbol ranges + markdown emphasis we strip from plain-text fields.
@@ -183,7 +237,7 @@ def _build_repo(entry: dict, decision: str, by_url: dict, by_repo: dict) -> dict
     if item is None:
         item = by_repo.get(slug)
 
-    category_slug = normalize_category(entry.get("category")) or "general"
+    category_slug = resolve_category(entry.get("category"))
     rating = entry.get("final_score")
     if not isinstance(rating, (int, float)) or isinstance(rating, bool):
         rating = None
@@ -209,40 +263,63 @@ def _build_repo(entry: dict, decision: str, by_url: dict, by_repo: dict) -> dict
     return repo
 
 
-def _build_categories(repos: list[dict], analysis: dict) -> list[dict]:
-    """Active categories actually referenced + suggested ones from metadata."""
-    referenced: list[str] = []
+def _normalize_suggested(raw: Any) -> dict | None:
+    """Coerce a raw suggested-category dict into the contract shape, or None.
+
+    Dropped when the slug is empty or actually a *known* dictionary slug
+    (a known shelf is active, never "suggested").
+    """
+    if not isinstance(raw, dict):
+        return None
+    slug = normalize_category(raw.get("slug"))
+    if not slug or slug in SKILL_CATEGORY_NAMES:
+        return None
+    return {
+        "slug": slug,
+        "name": clean_text(raw.get("name")) or slug.replace("-", " ").title(),
+        "status": "suggested",
+        "rationale": clean_text(raw.get("rationale"), max_len=400),
+    }
+
+
+def _categories(repos: list[dict], suggested: list[dict] | None) -> list[dict]:
+    """Active shelves actually referenced by repos/skills (must be in the
+    dictionary) + de-duplicated suggested shelves (must NOT be in it)."""
+    out: list[dict] = []
     seen: set[str] = set()
     for repo in repos:
-        for slug in [repo.get("category")] + [s.get("category") for s in repo.get("skills", [])]:
-            if slug and slug not in seen:
+        slugs = [repo.get("category")] + [s.get("category") for s in repo.get("skills", [])]
+        for slug in slugs:
+            if slug in SKILL_CATEGORY_NAMES and slug not in seen:
                 seen.add(slug)
-                referenced.append(slug)
-
-    categories: list[dict] = []
-    for slug in referenced:
-        categories.append({
-            "slug": slug,
-            "name": SKILL_CATEGORY_NAMES.get(slug, slug.replace("-", " ").title()),
-            "status": "active",
-        })
-
-    meta = analysis.get("metadata")
-    suggested = (meta or {}).get("suggested_categories") if isinstance(meta, dict) else None
+                out.append({"slug": slug, "name": SKILL_CATEGORY_NAMES[slug], "status": "active"})
     for sug in suggested or []:
-        if not isinstance(sug, dict):
-            continue
-        slug = normalize_category(sug.get("slug"))
-        if not slug or slug in seen:
-            continue
-        seen.add(slug)
-        categories.append({
-            "slug": slug,
-            "name": clean_text(sug.get("name")) or slug.replace("-", " ").title(),
-            "status": "suggested",
-            "rationale": clean_text(sug.get("rationale"), max_len=400),
-        })
-    return categories
+        norm = _normalize_suggested(sug)
+        if norm and norm["slug"] not in seen:
+            seen.add(norm["slug"])
+            out.append(norm)
+    return out
+
+
+def _meta_suggested(analysis: dict) -> list[dict]:
+    meta = analysis.get("metadata") if isinstance(analysis, dict) else None
+    raw = (meta or {}).get("suggested_categories") if isinstance(meta, dict) else None
+    return list(raw or [])
+
+
+def assemble_payload(
+    repos: list[dict],
+    date: str,
+    suggested: list[dict] | None = None,
+    *,
+    radar_version: str = RADAR_VERSION,
+) -> dict:
+    return {
+        "radar_version": radar_version,
+        "date": date,
+        "categories": _categories(repos, suggested),
+        "repos": repos,
+    }
 
 
 def build_payload(
@@ -269,18 +346,75 @@ def build_payload(
             seen_slugs.add(repo["slug"])
             repos.append(repo)
 
-    return {
-        "radar_version": radar_version,
-        "date": date,
-        "categories": _build_categories(repos, analysis),
-        "repos": repos,
+    return assemble_payload(
+        repos, date, _meta_suggested(analysis), radar_version=radar_version
+    )
+
+
+def apply_category_updates(payload: dict, extra_suggested: list[dict] | None = None) -> dict:
+    """Re-derive ``payload['categories']`` after enrichment changed per-skill
+    categories. Preserves already-present suggested shelves and merges any new
+    ones discovered during enrichment. Mutates and returns ``payload``.
+    """
+    prior_suggested = [c for c in payload.get("categories", []) if c.get("status") == "suggested"]
+    merged = prior_suggested + list(extra_suggested or [])
+    payload["categories"] = _categories(payload.get("repos", []), merged)
+    return payload
+
+
+def make_repo_entry(
+    owner_repo: str,
+    branch: str,
+    skill_names: list[str],
+    *,
+    stars: int | None = None,
+    category: str = "general",
+    rating: float | int = 0,
+    decision: str = "test_now",
+    description: str | None = None,
+) -> dict:
+    """Build a base Repo entry from a known skill-folder listing — used by the
+    backfill path, which has no analyzer output. Skills get canonical deep
+    links; enrichment fills description/category/tags afterwards.
+    """
+    cat = resolve_category(category)
+    skills = []
+    for name in skill_names:
+        name = (name or "").strip()
+        if not name:
+            continue
+        skills.append(_skill_obj(
+            name,
+            f"https://github.com/{owner_repo}/tree/{branch}/.claude/skills/{name}",
+            cat,
+            rating,
+        ))
+    repo = {
+        "slug": owner_repo.lower(),
+        "name": owner_repo,
+        "url": f"https://github.com/{owner_repo}",
+        "decision": decision,
+        "category": cat,
+        "rating": rating,
+        "skills": skills,
     }
+    if isinstance(stars, int):
+        repo["github_stars"] = stars
+    desc = clean_text(description)
+    if desc:
+        repo["description"] = desc
+    return repo
 
 
 __all__ = [
     "RADAR_VERSION",
     "SKILL_CATEGORY_NAMES",
+    "CATEGORY_ALIASES",
     "normalize_category",
+    "resolve_category",
     "clean_text",
     "build_payload",
+    "assemble_payload",
+    "apply_category_updates",
+    "make_repo_entry",
 ]

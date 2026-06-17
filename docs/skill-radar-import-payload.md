@@ -110,4 +110,58 @@ bot reuses existing shelves. Active categories from the dictionary get
 not assigned to skills.
 
 The active dictionary the bot ships with lives in
-`trendwatch/import_payload.py` → `SKILL_CATEGORY_NAMES`.
+`trendwatch/import_payload.py` → `SKILL_CATEGORY_NAMES`:
+
+`vibe-coding`=Вайбкодинг, `engineering`=Инженерия, `automation`=Автоматизация,
+`marketing`=Маркетинг, `content`=Контент, `design`=Дизайн, `research`=Исследования,
+`documentation`=Документация, `testing`=Тестирование, `data`=Данные,
+`ai-tooling`=AI-тулинг, `devops`=DevOps, `security`=Безопасность,
+`integration`=Интеграции, `orchestration`=Оркестрация, `productivity`=Продуктивность,
+`seo`=SEO, `learning`=Обучение, `general`=Общее.
+
+## 7. Per-skill enrichment (`trendwatch/enrich.py`)
+
+For every **`test_now`** repo, each skill's `SKILL.md` is read from raw GitHub
+and a Claude call (batched, default 8 skills/call, model `ENRICH_MODEL`, default
+`claude-haiku-4-5-…`) fills three fields per skill:
+
+- `description` — 1–2 sentences **in Russian**, naming platforms/tools and
+  their synonyms (e.g. «Инстаграм», «Reels», «SMM») for the site's keyword search;
+- `category` — a slug from the dictionary above (default = repo category; an
+  out-of-dictionary answer is dropped and the skill keeps the repo category);
+- `tags` — 3–7 english slugs (lowercase-hyphen).
+
+A category Claude wants but that isn't in the dictionary is surfaced as a
+`suggested` shelf (`{slug,name,rationale}`) and **never** assigned to the skill.
+Caps: `ENRICH_BATCH_SIZE` (8), `ENRICH_MAX_SKILLS_PER_REPO` (60). Enrichment is
+best-effort — any failure (missing `ANTHROPIC_API_KEY`, fetch/LLM error) leaves
+the skill with its base `slug/name/url/category`.
+
+## 8. Auto-push to the web catalog (`trendwatch/catalog.py`)
+
+After the digest + enriched payload are built, the orchestrator does one
+idempotent POST:
+
+```
+POST https://iuxlbrjhcbeiovgbldcy.supabase.co/functions/v1/ingest-skill-radar
+Content-Type: application/json
+x-radar-secret: <SKILL_RADAR_INGEST_SECRET>      # repo Actions secret
+body: <the Import payload JSON>
+```
+
+Response `{ok, repos, skills, skipped, suggested}` is logged; any `suggested`
+categories are sent to the owner via Telegram. Upsert is by repo `slug` / skill
+`url`, so re-pushing the same payload does not create duplicates. Override the
+URL with `SKILL_RADAR_INGEST_URL` if needed.
+
+## 9. Backfill mode
+
+One-off catch-up for repos already in the catalog:
+
+```
+python trendwatch/trendwatch.py --backfill https://github.com/owner/repo …
+python trendwatch/trendwatch.py --backfill-file urls.txt
+```
+
+Lists each repo's `.claude/skills` folders, enriches every skill (§7), and
+pushes (§8). No analyzer, no Telegram digest.

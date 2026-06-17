@@ -29,6 +29,9 @@ try:
     from . import telegram_client
 
     from . import analyzer
+    from . import catalog
+    from . import enrich
+    from . import import_payload
     from . import index_writer
     from . import normalizer
     from . import report
@@ -43,6 +46,9 @@ except ImportError:
     import telegram_client
 
     import analyzer
+    import catalog
+    import enrich
+    import import_payload
     import index_writer
     import normalizer
     import report
@@ -444,8 +450,22 @@ def run(
     except Exception as exc:
         print(f"[trendwatch] index write failed: {exc}", file=sys.stderr)
 
+    # Build the catalog Import payload, enrich each test_now skill via Claude
+    # (reads SKILL.md), then embed the SAME enriched payload in the report and
+    # push it to the web catalog. Each step degrades gracefully on failure.
+    payload = None
     try:
-        report_path = _write_report(analysis, date, items=items_with_deltas)
+        payload = import_payload.build_payload(analysis, items_with_deltas, date)
+        try:
+            extra_suggested = enrich.enrich_payload(payload)
+            import_payload.apply_category_updates(payload, extra_suggested)
+        except Exception as exc:
+            print(f"[trendwatch] skill enrichment failed: {exc}", file=sys.stderr)
+    except Exception as exc:
+        print(f"[trendwatch] payload build failed: {exc}", file=sys.stderr)
+
+    try:
+        report_path = _write_report(analysis, date, payload=payload)
         print(f"[trendwatch] wrote {report_path}")
         try:
             state.save_state(items_by_source)
@@ -461,6 +481,9 @@ def run(
         print(summary)
         return 1
 
+    if payload is not None:
+        _push_to_catalog(payload, bot_token, chat_id)
+
     try:
         state.mark_sent_today()
     except Exception as exc:
@@ -468,6 +491,104 @@ def run(
 
     print("[ANALYSIS_OK]")
     print(summary)
+    return 0
+
+
+def _push_to_catalog(payload: dict, bot_token: str = "", chat_id: str = "") -> None:
+    """One idempotent POST of the Import payload to the web catalog. Logs the
+    response counts and surfaces any suggested categories to the owner via
+    Telegram. Never raises."""
+    result, error = catalog.push_payload(payload)
+    if error:
+        print(f"[trendwatch] catalog push skipped/failed: {error}", file=sys.stderr)
+        return
+    print(f"[trendwatch] catalog push OK: {catalog.format_summary(result)}")
+    _notify_suggested(catalog.suggested_categories(result), bot_token, chat_id)
+
+
+def _notify_suggested(suggested: list[dict], bot_token: str, chat_id: str) -> None:
+    """Surface catalog-proposed new categories to the owner via Telegram."""
+    if not suggested or not bot_token or not chat_id:
+        return
+    lines = ["🆕 Предложены новые категории каталога (нужно решение):"]
+    for s in suggested:
+        slug = s.get("slug", "?")
+        name = s.get("name", "")
+        rationale = s.get("rationale", "")
+        line = f"• {slug}" + (f" — {name}" if name else "")
+        if rationale:
+            line += f": {rationale}"
+        lines.append(line)
+    try:
+        telegram_client.send_text("\n".join(lines), bot_token, chat_id)
+    except Exception as exc:
+        print(f"[trendwatch] suggested-categories notify failed: {exc}", file=sys.stderr)
+
+
+def _parse_owner_repo(url: str) -> str | None:
+    m = import_payload._GITHUB_RE.search(url or "")
+    if not m:
+        return None
+    repo = m.group(2)
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    return f"{m.group(1)}/{repo}"
+
+
+def run_backfill(urls: list[str]) -> int:
+    """One-off catch-up: take repo URLs, enrich every skill, push to catalog.
+
+    No analyzer / Telegram digest — just list each repo's ``.claude/skills``
+    folders, build the payload, enrich via Claude, and POST it.
+    """
+    try:
+        from .sources import github as gh_source
+    except ImportError:  # pragma: no cover
+        from sources import github as gh_source
+
+    date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    repos: list[dict] = []
+    for url in urls:
+        owner_repo = _parse_owner_repo(url)
+        if not owner_repo:
+            print(f"[backfill] not a GitHub repo URL, skipping: {url}", file=sys.stderr)
+            continue
+        meta = gh_source._repo_meta(owner_repo)
+        branch = meta.get("default_branch") or "main"
+        dirs = gh_source._list_skill_dirs(owner_repo)
+        if dirs == gh_source.RATE_LIMITED:
+            print(f"[backfill] rate-limited listing {owner_repo}, skipping", file=sys.stderr)
+            continue
+        if not dirs:
+            print(f"[backfill] no .claude/skills in {owner_repo}, skipping", file=sys.stderr)
+            continue
+        repos.append(
+            import_payload.make_repo_entry(
+                owner_repo, branch, dirs,
+                stars=meta.get("stars"), category="general",
+            )
+        )
+        print(f"[backfill] {owner_repo}: {len(dirs)} skill(s)", file=sys.stderr)
+
+    if not repos:
+        print("[backfill] nothing to push")
+        return 0
+
+    payload = import_payload.assemble_payload(repos, date)
+    try:
+        extra = enrich.enrich_payload(payload)
+        import_payload.apply_category_updates(payload, extra)
+    except Exception as exc:
+        print(f"[backfill] enrichment failed: {exc}", file=sys.stderr)
+
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+    result, error = catalog.push_payload(payload)
+    if error:
+        print(f"[backfill] catalog push failed: {error}", file=sys.stderr)
+        return 1
+    print(f"[backfill] catalog push OK: {catalog.format_summary(result)}")
+    _notify_suggested(catalog.suggested_categories(result), bot_token, chat_id)
     return 0
 
 
@@ -488,7 +609,30 @@ def main() -> int:
         action="store_true",
         help="Bypass the once-per-day idempotency guard (for manual reruns).",
     )
+    parser.add_argument(
+        "--backfill",
+        nargs="*",
+        metavar="REPO_URL",
+        help="Backfill mode: enrich + push these GitHub repo URLs to the catalog "
+        "(no analyzer/Telegram). Combine with --backfill-file.",
+    )
+    parser.add_argument(
+        "--backfill-file",
+        metavar="PATH",
+        help="Backfill mode: read repo URLs (one per line) from this file.",
+    )
     args = parser.parse_args()
+
+    if args.backfill is not None or args.backfill_file:
+        urls: list[str] = list(args.backfill or [])
+        if args.backfill_file:
+            with open(args.backfill_file, encoding="utf-8") as f:
+                urls += [ln.strip() for ln in f if ln.strip() and not ln.startswith("#")]
+        if not urls:
+            print("[backfill] no URLs provided", file=sys.stderr)
+            return 1
+        return run_backfill(urls)
+
     return run(
         dry_run=args.dry_run, no_analyzer=args.no_analyzer, force=args.force
     )

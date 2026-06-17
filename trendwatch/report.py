@@ -34,13 +34,20 @@ def _safe(x: Any, default: str = "") -> str:
     return str(x)
 
 
-def to_markdown(analysis: dict, date: str, items: list[dict] | None = None) -> str:
+def to_markdown(
+    analysis: dict,
+    date: str,
+    items: list[dict] | None = None,
+    payload: dict | None = None,
+) -> str:
     """Render the analyzer JSON dict into a Markdown report.
 
-    ``items`` are the original fetched items (with their full ``skills``
-    arrays). When provided, a single ``## Import payload`` JSON block is
-    appended per the catalog-import contract. When ``None`` (e.g. the
-    workflows pipeline, which has its own schema), no payload is emitted.
+    Catalog ``## Import payload`` block (skills pipeline only):
+    - pass a pre-built ``payload`` (already enriched/pushed by the orchestrator)
+      to embed it verbatim; or
+    - pass the original fetched ``items`` to build the base payload inline
+      (used by tests / the non-enriched path).
+    ``None`` for both (e.g. the workflows pipeline) emits no block.
     """
     lines: list[str] = []
     lines.append(f"# Daily Skill Radar — {date}")
@@ -224,15 +231,15 @@ def to_markdown(analysis: dict, date: str, items: list[dict] | None = None) -> s
 
     # Machine-readable catalog-import block (skills pipeline only). Exactly one
     # ``## Import payload`` section; importer reads only this, never the prose.
-    if items is not None:
+    if payload is None and items is not None:
         payload = import_payload.build_payload(analysis, items, date)
-        if payload.get("repos"):
-            lines.append("## Import payload")
-            lines.append("")
-            lines.append("```json")
-            lines.append(json.dumps(payload, ensure_ascii=False, indent=2))
-            lines.append("```")
-            lines.append("")
+    if payload is not None and payload.get("repos"):
+        lines.append("## Import payload")
+        lines.append("")
+        lines.append("```json")
+        lines.append(json.dumps(payload, ensure_ascii=False, indent=2))
+        lines.append("```")
+        lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 

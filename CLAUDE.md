@@ -23,7 +23,10 @@ Container repo housing automation utilities. Two active tracking pipelines:
 | `trendwatch/prompts.py` | SYSTEM_PROMPT (Russian, cached) + USER_PROMPT_TEMPLATE |
 | `trendwatch/state.py` | `digests/state.json` read/write + delta computation |
 | `trendwatch/normalizer.py` | Cross-source tool-name aggregation (KNOWN_TOOLS + alias map) |
-| `trendwatch/report.py` | JSON analysis → Markdown for `digests/YYYY-MM-DD.md` |
+| `trendwatch/report.py` | JSON analysis → Markdown for `digests/YYYY-MM-DD.md` (+ embeds the `## Import payload` block) |
+| `trendwatch/import_payload.py` | Builds the machine-readable `## Import payload` (catalog contract); category dictionary + normalization |
+| `trendwatch/enrich.py` | Per-skill enrichment: reads each `SKILL.md`, batched Claude call → Russian `description` + `category` + `tags` |
+| `trendwatch/catalog.py` | Idempotent POST of the Import payload to the web-catalog ingest endpoint (`x-radar-secret`) |
 | `trendwatch/telegram_client.py` | `send_text` (LLM mode) + `send_digest` (fallback links) |
 | `trendwatch/skill_db.py` | Persistent skill DB (`recommended.json` + `watchlist.json`) — one-shot recommendations + signal-based graduation |
 | `trendwatch/index_writer.py` | Generates Markdown indexes in `digests/index/` (all / by_category / by_month) |
@@ -55,6 +58,8 @@ Container repo housing automation utilities. Two active tracking pipelines:
 - `python workflows/workflows.py` — workflows pipeline (analyzer + Telegram)
 - `python workflows/workflows.py --dry-run` — workflows fetch + print, no API calls
 - `python workflows/workflows.py --no-analyzer` — workflows links-only fallback
+- `python trendwatch/trendwatch.py --backfill <repo-url> …` — enrich + push given repos to the web catalog (no analyzer/Telegram)
+- `python trendwatch/trendwatch.py --backfill-file urls.txt` — same, URLs from a file
 
 ## Secrets (GitHub repository secrets)
 - `APIFY_API_TOKEN` — Apify token for X/Threads scrapers
@@ -73,6 +78,9 @@ Container repo housing automation utilities. Two active tracking pipelines:
   Used in preference to `GITHUB_TOKEN` for GitHub search; a user PAT has its
   own code-search quota, dodging shared secondary rate limits (429) that
   killed code search on Actions runners.
+- `SKILL_RADAR_INGEST_SECRET` (**required for catalog auto-push**) — shared
+  secret for the Supabase ingest function; sent as `x-radar-secret`. Without it
+  the per-run POST to the web catalog is skipped (digest/Telegram unaffected).
 
 ## Vercel bot env vars (set in Vercel project → Settings → Environment Variables)
 - `TELEGRAM_BOT_TOKEN` — same bot token as the cron pipeline
