@@ -39,6 +39,8 @@ jobs:
           # Reddit source contributes nothing.
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          # Web-catalog ingest: enriched Import payload is POSTed here each run.
+          SKILL_RADAR_INGEST_SECRET: ${{ secrets.SKILL_RADAR_INGEST_SECRET }}
       - name: Commit daily digest
         if: success()
         run: |

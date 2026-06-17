@@ -26,10 +26,10 @@ def _analysis() -> dict:
             "date": "2026-06-16",
             "suggested_categories": [
                 {
-                    "slug": "research_skill",
-                    "name": "Research",
+                    "slug": "blockchain",
+                    "name": "Blockchain",
                     "count": 2,
-                    "rationale": "lit-review, replication-package — научный workflow.",
+                    "rationale": "smart-contract audit, on-chain — не вписывается в словарь.",
                 }
             ],
         },
@@ -189,19 +189,20 @@ def test_non_github_watch_entry_is_skipped(payload):
 def test_active_categories_referenced_and_named(payload):
     cats = {c["slug"]: c for c in payload["categories"]}
     assert cats["vibe-coding"]["status"] == "active"
-    assert cats["vibe-coding"]["name"] == "Vibe coding"
+    assert cats["vibe-coding"]["name"] == "Вайбкодинг"  # catalog dict is Russian
     assert cats["marketing"]["status"] == "active"
 
 
 def test_suggested_category_carries_rationale_and_is_not_assigned(payload):
     cats = {c["slug"]: c for c in payload["categories"]}
-    assert "research" in cats
-    assert cats["research"]["status"] == "suggested"
-    assert cats["research"]["rationale"]
+    # "blockchain" is NOT in the dictionary -> surfaced as suggested
+    assert "blockchain" in cats
+    assert cats["blockchain"]["status"] == "suggested"
+    assert cats["blockchain"]["rationale"]
     # suggested shelf is never assigned to a repo/skill
     assigned = {r["category"] for r in payload["repos"]}
     assigned |= {s["category"] for r in payload["repos"] for s in r["skills"]}
-    assert "research" not in assigned
+    assert "blockchain" not in assigned
 
 
 # --- integration with report.to_markdown ------------------------------------
