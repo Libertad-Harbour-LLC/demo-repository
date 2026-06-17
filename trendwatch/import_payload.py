@@ -44,6 +44,11 @@ SKILL_CATEGORY_NAMES: dict[str, str] = {
     "productivity": "Продуктивность",
     "seo": "SEO",
     "learning": "Обучение",
+    "web-development": "Веб-разработка",
+    "ai-agents": "AI-агенты",
+    "media-processing": "Обработка медиа",
+    "knowledge-management": "Управление знаниями",
+    "financial-analysis": "Финансы",
     "general": "Общее",
 }
 
@@ -53,9 +58,8 @@ SKILL_CATEGORY_NAMES: dict[str, str] = {
 CATEGORY_ALIASES: dict[str, str] = {
     "vibe-coding": "vibe-coding",
     "coding": "vibe-coding",
-    "webdev": "engineering",
-    "web-development": "engineering",
-    "frontend": "engineering",
+    "webdev": "web-development",
+    "frontend": "web-development",
     "video": "content",
     "photo": "content",
     "image": "content",
@@ -71,8 +75,13 @@ CATEGORY_ALIASES: dict[str, str] = {
     "ops": "devops",
     "ci-cd": "devops",
     "api": "integration",
-    "knowledge": "learning",
+    "knowledge": "knowledge-management",
     "education": "learning",
+    "agent": "ai-agents",
+    "agents": "ai-agents",
+    "media": "media-processing",
+    "finance": "financial-analysis",
+    "financial": "financial-analysis",
 }
 
 

@@ -117,7 +117,10 @@ The active dictionary the bot ships with lives in
 `documentation`=Документация, `testing`=Тестирование, `data`=Данные,
 `ai-tooling`=AI-тулинг, `devops`=DevOps, `security`=Безопасность,
 `integration`=Интеграции, `orchestration`=Оркестрация, `productivity`=Продуктивность,
-`seo`=SEO, `learning`=Обучение, `general`=Общее.
+`seo`=SEO, `learning`=Обучение, `web-development`=Веб-разработка,
+`ai-agents`=AI-агенты, `media-processing`=Обработка медиа,
+`knowledge-management`=Управление знаниями, `financial-analysis`=Финансы,
+`general`=Общее.
 
 ## 7. Per-skill enrichment (`trendwatch/enrich.py`)
 
