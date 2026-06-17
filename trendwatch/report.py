@@ -2,10 +2,20 @@
 
 Used to write ``digests/YYYY-MM-DD.md`` after each successful analyzer run so
 we get a permanent, browsable archive in the repo.
+
+When ``items`` is supplied (skills pipeline only), a single machine-readable
+``## Import payload`` JSON block is appended for the ``/claude-skills`` catalog
+importer — see ``import_payload.py`` and ``docs/skill-radar-import-payload.md``.
 """
 from __future__ import annotations
 
+import json
 from typing import Any
+
+try:
+    from . import import_payload
+except ImportError:  # pragma: no cover - script-style import fallback
+    import import_payload
 
 
 def _fmt_scores(scores: dict | None) -> str:
@@ -24,8 +34,14 @@ def _safe(x: Any, default: str = "") -> str:
     return str(x)
 
 
-def to_markdown(analysis: dict, date: str) -> str:
-    """Render the analyzer JSON dict into a Markdown report."""
+def to_markdown(analysis: dict, date: str, items: list[dict] | None = None) -> str:
+    """Render the analyzer JSON dict into a Markdown report.
+
+    ``items`` are the original fetched items (with their full ``skills``
+    arrays). When provided, a single ``## Import payload`` JSON block is
+    appended per the catalog-import contract. When ``None`` (e.g. the
+    workflows pipeline, which has its own schema), no payload is emitted.
+    """
     lines: list[str] = []
     lines.append(f"# Daily Skill Radar — {date}")
     lines.append("")
@@ -205,6 +221,18 @@ def to_markdown(analysis: dict, date: str) -> str:
         lines.append(_safe(summary_text))
         lines.append("```")
         lines.append("")
+
+    # Machine-readable catalog-import block (skills pipeline only). Exactly one
+    # ``## Import payload`` section; importer reads only this, never the prose.
+    if items is not None:
+        payload = import_payload.build_payload(analysis, items, date)
+        if payload.get("repos"):
+            lines.append("## Import payload")
+            lines.append("")
+            lines.append("```json")
+            lines.append(json.dumps(payload, ensure_ascii=False, indent=2))
+            lines.append("```")
+            lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 
