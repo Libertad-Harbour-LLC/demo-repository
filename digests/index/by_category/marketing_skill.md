@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 16
+Total: 17
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-17 | [Infrasity-Labs/dev-gtm-claude-skills](https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/main/.claude/skills) | ab-testing, ad-creative, ai-seo, +17 more |  | 8.2 | medium | Клонировать репо: git clone https://github.com/Infrasity-Labs/dev-gtm-claude-skills.git |
 | 2026-06-16 | [hodoshia/richworks-skills](https://github.com/hodoshia/richworks-skills/tree/main/.claude/skills) | ai-automation, content-flywheel, content-planning, +15 more |  | 7.1 | medium | git clone https://github.com/hodoshia/richworks-skills && cp -r richworks-skills/.claude/skills/viral-script-formula ... |
 | 2026-06-13 | [AntonioBlago/claude-code-seo-starter](https://github.com/AntonioBlago/claude-code-seo-starter/tree/master/.claude/skills) | visibly-seo-offer, visibly-seo-pdf-build, visibly-seo-potential, +1 more |  | 7.1 | medium | git clone https://github.com/AntonioBlago/claude-code-seo-starter && cp -r claude-code-seo-starter/.claude/skills/vis... |
 | 2026-06-12 | [ahumblenerd/tour-of-agents](https://github.com/ahumblenerd/tour-of-agents/tree/master/.claude/skills) | ceo, cmo, content-publisher, +1 more |  | 6.8 | medium | git clone https://github.com/ahumblenerd/tour-of-agents |

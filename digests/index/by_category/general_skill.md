@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 38
+Total: 39
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-17 | [zeuikli/claude-code-workspace](https://github.com/zeuikli/claude-code-workspace/tree/main/.claude/skills) | add-skill, agent-team, blog-analyzer, +16 more |  | 7.9 | medium | git clone https://github.com/zeuikli/claude-code-workspace.git |
 | 2026-06-14 | [Neetx/ai-research-radar](https://github.com/Neetx/ai-research-radar/tree/main/.claude/skills) | radar-lab-sweep, radar-ledger-update, radar-pulse, +7 more |  | 6.9 | medium | git clone https://github.com/Neetx/ai-research-radar && cp -r .claude/skills/* /ваш-проект/.claude/skills/ |
 | 2026-06-13 | [zubayer0077/Claude-Multi-Agent-Research-System-Skill](https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill/tree/main/.claude/skills) | multi-agent-researcher, spec-workflow-orchestrator |  | 7.0 | medium | git clone https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill && cp -r .claude/skills/multi-agent... |
 | 2026-06-13 | [RonenMars/threadbase-streamer](https://github.com/RonenMars/threadbase-streamer/tree/main/.claude/skills) | deploy-menubar, local-deploy, setup-auto-updater, +3 more |  | 6.6 | medium | git clone https://github.com/RonenMars/threadbase-streamer && cp -r .claude/skills/write-release-notes <ваш-проект>/.... |

@@ -207,6 +207,55 @@
       "title": "ClickHouse/pg_stat_ch",
       "url": "https://github.com/ClickHouse/pg_stat_ch/tree/main/.claude/skills"
     },
+    "https://github.com/DGouron/review-flow/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Набор из 30 Claude Skills для полного цикла разработки: автоматический code review (back/front/fullstack), рефакторинг, TDD, DDD, clean architecture, security-аудит и управление документацией. Репозиторий сфокусирован на качестве кода и инженерных практиках.",
+      "final_score": 7.9,
+      "first_recommended": "2026-06-17",
+      "metric": "Покрытие замечаний auto-review vs ручного ревью; найденные security-проблемы через /security",
+      "promoted_from_watch": false,
+      "repo_full_name": "DGouron/review-flow",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "auto-review",
+        "review-back",
+        "review-front",
+        "review-fullstack",
+        "review-doc",
+        "clean-architecture",
+        "clean-code",
+        "tdd",
+        "ddd",
+        "anti-overengineering",
+        "security",
+        "implement-feature",
+        "refactoring",
+        "event-storming",
+        "skill-creator",
+        "agent-creator",
+        "discovery",
+        "product-manager",
+        "worktree",
+        "tailwind"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/DGouron/review-flow.git && cp -r review-flow/.claude/skills/auto-review /your-project/.claude/skills/",
+        "Запустить Claude Code в вашем проекте с открытым git diff и вызвать /auto-review",
+        "Также протестировать /clean-code и /security на существующем модуле — сравнить с ручным ревью"
+      ],
+      "title": "DGouron/review-flow",
+      "url": "https://github.com/DGouron/review-flow/tree/master/.claude/skills"
+    },
     "https://github.com/DavidROliverBA/ArchitectKB/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -620,6 +669,56 @@
       ],
       "title": "IgorGanapolsky/ThumbGate",
       "url": "https://github.com/IgorGanapolsky/ThumbGate/tree/main/.claude/skills"
+    },
+    "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/main/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 112 Claude Skills для маркетинга и GTM-операций: SEO-аудит, написание блогов, email-кампании, рекламные креативы, анализ конкурентов, оптимизация конверсий. Ориентирован на маркетинговые и growth-команды, работающие с Claude Code.",
+      "final_score": 8.2,
+      "first_recommended": "2026-06-17",
+      "metric": "Качество и применимость сгенерированного SEO-отчёта или блог-поста по сравнению с ручным процессом; время выполнения задачи",
+      "promoted_from_watch": false,
+      "repo_full_name": "Infrasity-Labs/dev-gtm-claude-skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "ab-testing",
+        "ad-creative",
+        "ai-seo",
+        "analytics",
+        "blog-write",
+        "blog-seo-check",
+        "cold-email",
+        "content-strategy",
+        "copywriting",
+        "cro",
+        "keyword-clustering",
+        "landing-page-auditor",
+        "ogilvy-copywriting",
+        "programmatic-seo",
+        "seo-audit-full",
+        "seo-technical",
+        "social-media-posts",
+        "blog-rewrite",
+        "competitor-profiling",
+        "growth-report"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/Infrasity-Labs/dev-gtm-claude-skills.git",
+        "Скопировать нужные папки из .claude/skills/ в .claude/skills/ вашего проекта (например: cp -r dev-gtm-claude-skills/.claude/skills/seo-audit-full /your-project/.claude/skills/)",
+        "Запустить Claude Code в вашем проекте и ввести: /seo-audit-full — проверить, что skill подхватывается и выдаёт структурированный SEO-аудит страницы",
+        "Дополнительно протестировать: /blog-write для создания SEO-оптимизированной статьи и /cold-email для генерации email-последовательности"
+      ],
+      "title": "Infrasity-Labs/dev-gtm-claude-skills",
+      "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/main/.claude/skills"
     },
     "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -4206,6 +4305,39 @@
       "title": "minicoohei/ai-agent-camp",
       "url": "https://github.com/minicoohei/ai-agent-camp/tree/main/.claude/skills"
     },
+    "https://github.com/mintlify/docs/tree/main/.claude/skills": {
+      "category": "content_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий документации Mintlify с 4 Claude Skills для работы с технической документацией: написание и редактирование docs, навигация по структуре, обновление навигации. Полезен для любого проекта, использующего Mintlify или схожие doc-платформы.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-17",
+      "metric": "Качество сгенерированной документации: соответствие стилю, структуре и completeness по сравнению с ручным написанием",
+      "promoted_from_watch": false,
+      "repo_full_name": "mintlify/docs",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "doc-author",
+        "doc-reader",
+        "mintlify",
+        "update-nav"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/mintlify/docs.git && cp -r docs/.claude/skills/doc-author /your-project/.claude/skills/",
+        "Запустить Claude Code в проекте с существующей документацией и вызвать /doc-author с задачей написать новую страницу",
+        "Протестировать /doc-reader на анализ существующих docs и /update-nav для реструктуризации навигации"
+      ],
+      "title": "mintlify/docs",
+      "url": "https://github.com/mintlify/docs/tree/main/.claude/skills"
+    },
     "https://github.com/mksglu/context-mode/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -4431,6 +4563,37 @@
       ],
       "title": "nativewind/nativewind",
       "url": "https://github.com/nativewind/nativewind/tree/main/.claude/skills"
+    },
+    "https://github.com/near/nearcore/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Основной репозиторий блокчейна NEAR Protocol с 2 встроенными Claude Skills: автоматическая миграция тестов с pytest и стандартизированное создание PR. Репо используется командой NEAR для ускорения рутинных инженерных операций.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-17",
+      "metric": "Процент корректно мигрированных тестов без ручных правок; сохранение покрытия после миграции",
+      "promoted_from_watch": false,
+      "repo_full_name": "near/nearcore",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "migrate-pytest",
+        "pr"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/near/nearcore.git && cp -r nearcore/.claude/skills/migrate-pytest /your-project/.claude/skills/",
+        "Запустить Claude Code в проекте с legacy unittest-тестами и вызвать /migrate-pytest",
+        "Проверить качество миграции на небольшом тестовом файле, затем на более крупном модуле"
+      ],
+      "title": "near/nearcore",
+      "url": "https://github.com/near/nearcore/tree/master/.claude/skills"
     },
     "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill": {
       "added_manually": true,
@@ -6306,6 +6469,55 @@
       ],
       "title": "zenyrae123/claude-data-analysis-ultra-main",
       "url": "https://github.com/zenyrae123/claude-data-analysis-ultra-main/tree/main/.claude/skills"
+    },
+    "https://github.com/zeuikli/claude-code-workspace/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Универсальный workspace с 19 Claude Skills для разных ролей: разработчик (debug, perf, deep-review), менеджер (pm, retro, spec-interview), маркетолог (marketing, blog-analyzer), исследователь (research). Включает meta-skills: add-skill для расширения набора и cost-tracker для контроля расходов.",
+      "final_score": 7.9,
+      "first_recommended": "2026-06-17",
+      "metric": "Количество skills, которые реально сработали и дали полезный результат из 19; особо проверить cost-tracker на точность",
+      "promoted_from_watch": false,
+      "repo_full_name": "zeuikli/claude-code-workspace",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 19,
+      "skills_in_repo": [
+        "add-skill",
+        "agent-team",
+        "blog-analyzer",
+        "context-report",
+        "cost-tracker",
+        "debug",
+        "deep-review",
+        "frontend-design",
+        "load-plan",
+        "map",
+        "marketing",
+        "perf",
+        "pm",
+        "research",
+        "research-best-practices",
+        "retro",
+        "spec-interview",
+        "writing",
+        "prime"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/zeuikli/claude-code-workspace.git",
+        "Скопировать всю папку .claude/skills/ в свой проект: cp -r claude-code-workspace/.claude/skills /your-project/.claude/",
+        "Запустить Claude Code и протестировать: /cost-tracker, /context-report, /debug на реальной задаче",
+        "Попробовать /add-skill для создания собственного skill прямо через Claude Code"
+      ],
+      "title": "zeuikli/claude-code-workspace",
+      "url": "https://github.com/zeuikli/claude-code-workspace/tree/main/.claude/skills"
     },
     "https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill/tree/main/.claude/skills": {
       "category": "general_skill",
