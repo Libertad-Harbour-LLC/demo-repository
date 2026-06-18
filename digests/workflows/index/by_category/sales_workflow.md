@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 14
+Total: 15
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-18 | [akahappygit/AI-Lead-Voice-Automation: Lead Scraper](https://github.com/akahappygit/AI-Lead-Voice-Automation) | Lead Scraper |  | 7.5 | medium | Скачать JSON по ссылке: https://raw.githubusercontent.com/akahappygit/AI-Lead-Voice-Automation/main/workflows/Lead Sc... |
 | 2026-06-16 | [gnueole/jobby-md2html: jobby-linkedin-2-notion](https://github.com/gnueole/jobby-md2html) | error-trigger-to-axiom-via-stdout, jobby-linkedin-2-notion, jobby-pdf-dyn, +2 more |  | 6.5 | medium | Скачать нужный JSON (например jobby-linkedin-2-notion): https://raw.githubusercontent.com/gnueole/jobby-md2html/main/... |
 | 2026-06-12 | [wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound](https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping) | ASIC Miners - Complete with Scraping FIXED, Details to Document Generator, Follow-Up Automation, +2 more |  | 7.0 | medium | Скачать JSON нужного workflow из папки workflows/ репозитория |
 | 2026-06-10 | [Trusera/ai-bom: lead-scorer](https://github.com/Trusera/ai-bom) | lead-scorer |  | 7.3 | high | Скачать JSON: https://raw.githubusercontent.com/Trusera/ai-bom/main/src/ai_bom/demo_data/workflows/lead-scorer.json |

@@ -1,9 +1,11 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 6
+Total: 8
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-18 | [skadaai/awesome-n8n-templates: leadgen](https://github.com/skadaai/awesome-n8n-templates) | leadgen |  | 6.5 | medium | Скачать leadgen.json |
+| 2026-06-18 | [gguyon0925/n8n-reddit-scraper: subreddit-discovery](https://github.com/gguyon0925/n8n-reddit-scraper) | subreddit-discovery |  | 6.6 | medium | Скачать subreddit-discovery.json |
 | 2026-06-10 | [market-analyticx/seo-auditor-service: seo_auditor](https://github.com/market-analyticx/seo-auditor-service) | seo_auditor |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/market-analyticx/seo-auditor-service/main/workflows/seo_auditor.json |
 | 2026-05-29 | [akahappygit/AI-Lead-Generation-Automation: Lead Scraper](https://github.com/akahappygit/AI-Lead-Generation-Automation) | Lead Scraper |  | 6.7 | medium | Скачать Lead Scraper.json из папки workflows/ |
 | 2026-05-28 | [ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)](https://github.com/ScraperNode/awesome-n8n-templates) | workflow (Find Company LinkedIn URLs via Apify + Google Sheets) |  | 7.2 | medium | Скачать workflow.json |

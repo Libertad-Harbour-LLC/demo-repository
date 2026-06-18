@@ -134,6 +134,39 @@
       "tool": "n8n",
       "url": "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud"
     },
+    "https://github.com/ChiefGyk3D/siem-docker-stack": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для маршрутизации Grafana-алертов в рамках SIEM Docker-стека. Предназначен для DevOps/SecOps инженеров, которым нужна автоматическая маршрутизация инфраструктурных алертов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-18",
+      "metric": "Процент алертов, корректно доставленных в нужный канал; время реакции от алерта до уведомления",
+      "promoted_from_watch": false,
+      "repo_full_name": "ChiefGyk3D/siem-docker-stack: grafana-alert-router",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "grafana-alert-router"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать grafana-alert-router.json",
+        "Импортировать в n8n",
+        "Настроить webhook-endpoint для приёма алертов от Grafana",
+        "Настроить credentials для целевых каналов (Slack, email)",
+        "Отправить тестовый алерт из Grafana и проверить маршрутизацию"
+      ],
+      "title": "ChiefGyk3D/siem-docker-stack: grafana-alert-router",
+      "tool": "n8n",
+      "url": "https://github.com/ChiefGyk3D/siem-docker-stack"
+    },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "category": "general_workflow",
       "confidence": "high",
@@ -947,6 +980,39 @@
       "tool": "n8n",
       "url": "https://github.com/akahappygit/AI-Lead-Generation-Automation"
     },
+    "https://github.com/akahappygit/AI-Lead-Voice-Automation": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического сбора лидов с AI-слоем и потенциальной голосовой интеграцией. Предназначен для sales-команд, которым нужно автоматизировать первичный сбор и обработку контактов потенциальных клиентов.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-18",
+      "metric": "Количество собранных и квалифицированных лидов за прогон, процент успешных запросов к AI-слою",
+      "promoted_from_watch": false,
+      "repo_full_name": "akahappygit/AI-Lead-Voice-Automation: Lead Scraper",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Lead Scraper"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке: https://raw.githubusercontent.com/akahappygit/AI-Lead-Voice-Automation/main/workflows/Lead Scraper.json",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials для источника лидов (LinkedIn/веб), AI-провайдера и, при наличии, голосового API",
+        "Запустить тестовый прогон на небольшой выборке (5–10 контактов)",
+        "Проверить, что данные корректно собираются и передаются дальше по pipeline"
+      ],
+      "title": "akahappygit/AI-Lead-Voice-Automation: Lead Scraper",
+      "tool": "n8n",
+      "url": "https://github.com/akahappygit/AI-Lead-Voice-Automation"
+    },
     "https://github.com/alejandrosnz/srt-llm-translator": {
       "category": "video_workflow",
       "confidence": "medium",
@@ -1427,6 +1493,39 @@
       "title": "freddy-schuetz/n8n-claw: agent-library-manager + 4 агентных workflow",
       "tool": "n8n",
       "url": "https://github.com/freddy-schuetz/n8n-claw"
+    },
+    "https://github.com/gguyon0925/n8n-reddit-scraper": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического обнаружения и мониторинга релевантных сабреддитов. Полезен маркетологам и growth-специалистам, которые ищут новые площадки для органического продвижения.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-18",
+      "metric": "Количество обнаруженных релевантных сабреддитов за прогон, полнота охвата по заданным темам",
+      "promoted_from_watch": false,
+      "repo_full_name": "gguyon0925/n8n-reddit-scraper: subreddit-discovery",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "subreddit-discovery"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать subreddit-discovery.json",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить Reddit API credentials (client_id, client_secret)",
+        "Задать список ключевых слов / начальных сабреддитов для discovery",
+        "Запустить и проверить список найденных сабреддитов"
+      ],
+      "title": "gguyon0925/n8n-reddit-scraper: subreddit-discovery",
+      "tool": "n8n",
+      "url": "https://github.com/gguyon0925/n8n-reddit-scraper"
     },
     "https://github.com/gnueole/jobby-md2html": {
       "category": "sales_workflow",
@@ -2078,6 +2177,39 @@
       "title": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
       "tool": "n8n",
       "url": "https://github.com/sinabarimd/reputation-engine"
+    },
+    "https://github.com/skadaai/awesome-n8n-templates": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "n8n-шаблон для автоматизации лидогенерации. Подходит маркетологам и growth-хакерам, которым нужен готовый pipeline для сбора и первичной обработки лидов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-18",
+      "metric": "Количество лидов, прошедших через pipeline без ошибок, за тестовый прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "skadaai/awesome-n8n-templates: leadgen",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "leadgen"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать leadgen.json",
+        "Импортировать в n8n",
+        "Настроить источник лидов (форма, вебхук, API)",
+        "Подключить CRM или Google Sheets для хранения",
+        "Запустить тест с тестовым лидом"
+      ],
+      "title": "skadaai/awesome-n8n-templates: leadgen",
+      "tool": "n8n",
+      "url": "https://github.com/skadaai/awesome-n8n-templates"
     },
     "https://github.com/slayerlux/n8n-llm-workflows": {
       "category": "general_workflow",
