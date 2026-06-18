@@ -64,6 +64,47 @@
       "title": "AgriciDaniel/claude-seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/tree/main/skills"
     },
+    "https://github.com/AkaraChen/2code/tree/dev/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий 2code содержит 12 Claude Skills вокруг концепции OpenSpec — спецификационно-ориентированного подхода к разработке. Skills управляют жизненным циклом изменений через спецификации: создание, применение, верификация, архивирование. Также есть dead-code-cleanup и release-changelog.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-18",
+      "metric": "Понятность и применимость OpenSpec workflow для управления изменениями в реальном проекте",
+      "promoted_from_watch": false,
+      "repo_full_name": "AkaraChen/2code",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "dead-code-cleanup",
+        "openspec-apply-change",
+        "openspec-archive-change",
+        "openspec-bulk-archive-change",
+        "openspec-continue-change",
+        "openspec-explore",
+        "openspec-ff-change",
+        "openspec-new-change",
+        "openspec-onboard",
+        "openspec-sync-specs",
+        "openspec-verify-change",
+        "release-changelog"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/AkaraChen/2code.git && cp -r 2code/.claude/skills /your-project/.claude/",
+        "Запустить Claude Code в своём TypeScript/JS проекте",
+        "Дать промт: 'Use the openspec-onboard skill to understand the OpenSpec workflow, then use openspec-new-change to create a spec for adding a new API endpoint'"
+      ],
+      "title": "AkaraChen/2code",
+      "url": "https://github.com/AkaraChen/2code/tree/dev/.claude/skills"
+    },
     "https://github.com/AntonioBlago/claude-code-seo-starter/tree/master/.claude/skills": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -1729,6 +1770,47 @@
       "title": "akiselev/ghidra-cli",
       "url": "https://github.com/akiselev/ghidra-cli/tree/master/.claude/skills"
     },
+    "https://github.com/alamenai/terrae/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий terrae содержит 12 Claude Skills для полного dev-workflow: от создания issues и коммитов до code review, тестирования, оптимизации производительности и релизов. Набор охватывает весь жизненный цикл разработки в едином репо.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-18",
+      "metric": "Качество и полнота автоматически генерируемых PR-описаний и code review",
+      "promoted_from_watch": false,
+      "repo_full_name": "alamenai/terrae",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "check",
+        "commit",
+        "docs",
+        "fix",
+        "issue",
+        "lint",
+        "new",
+        "perf",
+        "pr",
+        "release",
+        "review",
+        "test"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/alamenai/terrae.git && cp -r terrae/.claude/skills /your-project/.claude/",
+        "Открыть Claude Code в своём проекте",
+        "Дать промт: 'Use the pr skill to create a pull request description for my current changes' и затем 'Use the review skill to review the last commit'"
+      ],
+      "title": "alamenai/terrae",
+      "url": "https://github.com/alamenai/terrae/tree/main/.claude/skills"
+    },
     "https://github.com/alchaincyf/nuwa-skill": {
       "added_manually": true,
       "category": "general_skill",
@@ -2204,6 +2286,50 @@
       "title": "beshuaxian/higgsfield-seedance2-jineng",
       "url": "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills"
     },
+    "https://github.com/boundless-xyz/boundless/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий блокчейн-платформы Boundless содержит 15 Claude Skills для DevOps и операционных задач: деплой инфраструктуры, работа с логами, телеметрия, управление балансами, CI/CD пайплайны и настройка prover-нод. Интересен как пример ops-ориентированных skills.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-18",
+      "metric": "Применимость ops-skills вне контекста Boundless для общих DevOps-задач",
+      "promoted_from_watch": false,
+      "repo_full_name": "boundless-xyz/boundless",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 6,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "boundless-cli",
+        "localnet",
+        "ops-add-new-chain",
+        "ops-check-balances",
+        "ops-indexer-query",
+        "ops-infra-deploy",
+        "ops-logs-query",
+        "ops-pipelines",
+        "ops-query",
+        "ops-release-notes",
+        "ops-telemetry-query",
+        "pr",
+        "requesting",
+        "setup-prover",
+        "testing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/boundless-xyz/boundless.git && cp -r boundless/.claude/skills/ops-logs-query /your-project/.claude/skills/",
+        "Запустить Claude Code в контексте проекта с логами",
+        "Дать промт: 'Use the ops-logs-query skill to help me query and analyze application logs for errors in the last hour'"
+      ],
+      "title": "boundless-xyz/boundless",
+      "url": "https://github.com/boundless-xyz/boundless/tree/main/.claude/skills"
+    },
     "https://github.com/cohen-liel/hivemind/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -2525,6 +2651,60 @@
       ],
       "title": "daloopa/investing",
       "url": "https://github.com/daloopa/investing/tree/main/.claude/skills"
+    },
+    "https://github.com/datagrok-ai/public/tree/master/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Репозиторий Datagrok — платформы для анализа научных данных — содержит 25 Claude Skills для разработчиков плагинов и пакетов. Skills охватывают создание интерактивных научных приложений, кастомных вьюверов, workflow-процессов и тестирование пакетов на базе Datagrok API.",
+      "final_score": 7.7,
+      "first_recommended": "2026-06-18",
+      "metric": "Скорость и корректность генерации структуры пакета по сравнению с ручным созданием",
+      "promoted_from_watch": false,
+      "repo_full_name": "datagrok-ai/public",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 25,
+      "skills_in_repo": [
+        "add-curve-format",
+        "add-info-panel",
+        "add-package-tests",
+        "build-app",
+        "cache-function-results",
+        "create-cell-renderer",
+        "create-custom-filter",
+        "create-custom-view",
+        "create-custom-viewer",
+        "create-docker-container",
+        "create-file-viewer",
+        "create-interactive-scientific-application-spec",
+        "create-package",
+        "create-script-handler",
+        "create-semantic-type-detector",
+        "create-workflow",
+        "datagrok-logging",
+        "implement-interactive-scientific-application-from-spec",
+        "manage-credentials",
+        "prepare-package-for-claude",
+        "test-connectors",
+        "test-package",
+        "ui",
+        "write-demo-script",
+        "write-tutorial"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/datagrok-ai/public.git && cp -r public/.claude/skills/create-package /your-project/.claude/skills/",
+        "Запустить Claude Code в директории проекта Datagrok-пакета",
+        "Дать промт: 'Use the create-package skill to scaffold a new Datagrok package with TypeScript support'"
+      ],
+      "title": "datagrok-ai/public",
+      "url": "https://github.com/datagrok-ai/public/tree/master/.claude/skills"
     },
     "https://github.com/deanwhitex/AIW2.0STACK/tree/main/.claude/skills": {
       "category": "marketing_skill",
@@ -3691,6 +3871,36 @@
       ],
       "title": "joaquimscosta/arkhe-claude-plugins",
       "url": "https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills"
+    },
+    "https://github.com/kasonye/ui-aesthetics-skill/tree/main/.claude/skills/ui-aesthetics": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Репозиторий содержит один Claude Skill с фокусом на UI-эстетику — инструкции для Claude Code по созданию визуально привлекательных интерфейсов с правилами дизайна, типографики и цветовых схем. Ориентирован на разработчиков, которым важен внешний вид без отдельного дизайнера.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-18",
+      "metric": "Визуальное качество и эстетичность сгенерированного UI без дополнительных правок",
+      "promoted_from_watch": false,
+      "repo_full_name": "kasonye/ui-aesthetics-skill",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ui-aesthetics"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/kasonye/ui-aesthetics-skill.git && cp -r ui-aesthetics-skill/.claude/skills/ui-aesthetics /your-project/.claude/skills/",
+        "Запустить Claude Code в проекте с фронтендом (React/Vue/HTML)",
+        "Дать промт: 'Create a landing page hero section using the ui-aesthetics skill guidelines'"
+      ],
+      "title": "kasonye/ui-aesthetics-skill",
+      "url": "https://github.com/kasonye/ui-aesthetics-skill/tree/main/.claude/skills/ui-aesthetics"
     },
     "https://github.com/komunite/kalfa/tree/main/.claude/skills": {
       "category": "marketing_skill",
@@ -4942,6 +5152,44 @@
       "title": "opendatadiscovery/odd-team",
       "url": "https://github.com/opendatadiscovery/odd-team/tree/main/.claude/skills"
     },
+    "https://github.com/padak/claude-code-kit/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий claude-code-kit содержит 9 Claude Skills для работы с различными SDK и сервисами: браузерная автоматизация, e2b sandboxes, swarm-агенты, а также meta-skill skill-creator для создания новых skills. Ориентирован на продвинутых пользователей Claude Code.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-18",
+      "metric": "Качество и применимость сгенерированного нового skill через meta-skill skill-creator",
+      "promoted_from_watch": false,
+      "repo_full_name": "padak/claude-code-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "Browser",
+        "claude-agent-sdk",
+        "e2b",
+        "keboola-data-app",
+        "polymarket",
+        "post-merge",
+        "second-opinion",
+        "skill-creator",
+        "swarm"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/padak/claude-code-kit.git && cp -r claude-code-kit/.claude/skills/skill-creator /your-project/.claude/skills/",
+        "Запустить Claude Code в директории проекта",
+        "Дать промт: 'Use the skill-creator skill to help me create a new Claude skill for automating my code review process'"
+      ],
+      "title": "padak/claude-code-kit",
+      "url": "https://github.com/padak/claude-code-kit/tree/main/.claude/skills"
+    },
     "https://github.com/paperclipai/paperclip/tree/master/.claude/skills/design-guide": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -5684,6 +5932,44 @@
       ],
       "title": "spencermarx/open-code-review",
       "url": "https://github.com/spencermarx/open-code-review/tree/main/.claude/skills"
+    },
+    "https://github.com/srid/haskell-flake/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Haskell Nix-флейка содержит 9 Claude Skills с необычными именами (elegance, hickey, code-police, fact-check), вероятно описывающими стиль и подход к разработке на Haskell с Nix. Интересен как пример persona/style-oriented skills.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-18",
+      "metric": "Качество и специфичность review-предложений с применённым skill vs без него",
+      "promoted_from_watch": false,
+      "repo_full_name": "srid/haskell-flake",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "code-police",
+        "do",
+        "elegance",
+        "fact-check",
+        "forge-pr",
+        "hickey",
+        "lowy",
+        "nix-justfile",
+        "ralph"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/srid/haskell-flake.git && cp -r haskell-flake/.claude/skills/elegance /your-project/.claude/skills/",
+        "Запустить Claude Code в Haskell-проекте",
+        "Дать промт: 'Use the elegance skill to review this function and suggest improvements for code elegance'"
+      ],
+      "title": "srid/haskell-flake",
+      "url": "https://github.com/srid/haskell-flake/tree/master/.claude/skills"
     },
     "https://github.com/staskh/trading_skills/tree/main/.claude/skills": {
       "category": "general_skill",

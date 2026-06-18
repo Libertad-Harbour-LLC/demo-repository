@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 102
+Total: 106
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-18 | [srid/haskell-flake](https://github.com/srid/haskell-flake/tree/master/.claude/skills) | code-police, do, elegance, +6 more |  | 7.0 | high | git clone https://github.com/srid/haskell-flake.git && cp -r haskell-flake/.claude/skills/elegance /your-project/.cla... |
+| 2026-06-18 | [padak/claude-code-kit](https://github.com/padak/claude-code-kit/tree/main/.claude/skills) | Browser, claude-agent-sdk, e2b, +6 more |  | 6.6 | medium | git clone https://github.com/padak/claude-code-kit.git && cp -r claude-code-kit/.claude/skills/skill-creator /your-pr... |
+| 2026-06-18 | [alamenai/terrae](https://github.com/alamenai/terrae/tree/main/.claude/skills) | check, commit, docs, +9 more |  | 7.3 | high | git clone https://github.com/alamenai/terrae.git && cp -r terrae/.claude/skills /your-project/.claude/ |
+| 2026-06-18 | [AkaraChen/2code](https://github.com/AkaraChen/2code/tree/dev/.claude/skills) | dead-code-cleanup, openspec-apply-change, openspec-archive-change, +9 more |  | 6.5 | medium | git clone https://github.com/AkaraChen/2code.git && cp -r 2code/.claude/skills /your-project/.claude/ |
 | 2026-06-17 | [near/nearcore](https://github.com/near/nearcore/tree/master/.claude/skills) | migrate-pytest, pr |  | 6.5 | high | git clone https://github.com/near/nearcore.git && cp -r nearcore/.claude/skills/migrate-pytest /your-project/.claude/... |
 | 2026-06-17 | [DGouron/review-flow](https://github.com/DGouron/review-flow/tree/master/.claude/skills) | auto-review, review-back, review-front, +17 more |  | 7.9 | medium | git clone https://github.com/DGouron/review-flow.git && cp -r review-flow/.claude/skills/auto-review /your-project/.c... |
 | 2026-06-16 | [PackmindHub/packmind](https://github.com/PackmindHub/packmind/tree/main/.claude/skills) | cli-e2e-test-authoring, create-run-e2e-tests, creating-end-user-documentation-for-packmind, +6 more |  | 8.2 | high | git clone https://github.com/PackmindHub/packmind && cp -r packmind/.claude/skills/create-run-e2e-tests <твой-проект>... |
