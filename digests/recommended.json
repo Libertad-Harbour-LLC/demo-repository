@@ -596,6 +596,77 @@
       "title": "FerroxLabs/wayland",
       "url": "https://github.com/FerroxLabs/wayland/tree/main/.claude/skills"
     },
+    "https://github.com/FlorianBruniaux/claude-code-ultimate-guide/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий-гайд по лучшим практикам Claude Code с 5100+ звёздами. Содержит skill self-assessment для самооценки качества работы Claude в проекте.",
+      "final_score": 8.0,
+      "first_recommended": "2026-06-19",
+      "metric": "Получает ли Claude структурированную самооценку с конкретными критериями?",
+      "promoted_from_watch": false,
+      "repo_full_name": "FlorianBruniaux/claude-code-ultimate-guide",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "self-assessment"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+        "Скопировать .claude/skills/self-assessment/ в .claude/skills/ своего проекта",
+        "Запустить Claude Code и написать: 'Use self-assessment skill to evaluate last code change'"
+      ],
+      "title": "FlorianBruniaux/claude-code-ultimate-guide",
+      "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide/tree/main/.claude/skills"
+    },
+    "https://github.com/Gerstep/cybos/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Набор из 12 разнообразных Claude Skills для продуктивности и контента: GTD, Research, Writing, Content, а также технические skills для Remotion и Excalidraw. Подойдёт индивидуальным разработчикам и создателям контента.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-19",
+      "metric": "Насколько структурированнее и полнее ответы Claude при использовании этих skills vs. без них?",
+      "promoted_from_watch": false,
+      "repo_full_name": "Gerstep/cybos",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "Browse",
+        "Content",
+        "DDMemo",
+        "GTD",
+        "Positioning",
+        "Research",
+        "Summarize",
+        "Telegram",
+        "Writing",
+        "design-taste-frontend",
+        "excalidraw-diagram",
+        "remotion-best-practices"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Gerstep/cybos",
+        "Скопировать выбранные skills (.claude/skills/Research/, .claude/skills/GTD/, .claude/skills/Writing/) в свой проект",
+        "Протестировать: 'Use Research skill to analyze competitors for [ваш продукт]', затем 'Use GTD skill to organize my task backlog'"
+      ],
+      "title": "Gerstep/cybos",
+      "url": "https://github.com/Gerstep/cybos/tree/main/.claude/skills"
+    },
     "https://github.com/Growthub-ai/growthub-local/tree/main/.claude/skills": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -790,6 +861,45 @@
       ],
       "title": "JCodesMore/ai-website-cloner-template",
       "url": "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills"
+    },
+    "https://github.com/JetBrains/MPS/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий JetBrains MPS (Language Workbench) с 38 Claude Skills для разработки DSL и языковых аспектов в MPS. Один из крупнейших наборов skills от корпоративного вендора.",
+      "final_score": 7.9,
+      "first_recommended": "2026-06-19",
+      "metric": "Насколько точнее Claude понимает MPS-концепции (аспекты, quotations, nodes) со skills vs. без?",
+      "promoted_from_watch": false,
+      "repo_full_name": "JetBrains/MPS",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "actions",
+        "code-style",
+        "commits",
+        "debugging",
+        "mps-aspect-behavior",
+        "mps-aspect-editor",
+        "mps-bugfix",
+        "mps-tests",
+        "mps-mcp-workflow",
+        "teamcity-cli"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/JetBrains/MPS",
+        "Скопировать нужные skills из .claude/skills/ (например mps-bugfix, debugging, code-style) в свой MPS-проект",
+        "Запустить Claude Code и попросить: 'Using mps-bugfix skill, help me fix this MPS model error'"
+      ],
+      "title": "JetBrains/MPS",
+      "url": "https://github.com/JetBrains/MPS/tree/master/.claude/skills"
     },
     "https://github.com/JetBrains/ideavim/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -2260,6 +2370,45 @@
       ],
       "title": "ben-manes/caffeine",
       "url": "https://github.com/ben-manes/caffeine/tree/master/.claude/skills"
+    },
+    "https://github.com/benjaminshoemaker/ai_coding_project_base/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Базовый шаблон AI-кодинг проекта с 52 Claude Skills для полного жизненного цикла разработки. Охватывает планирование, спецификации, верификацию, PR-менеджмент и управление сессиями.",
+      "final_score": 7.7,
+      "first_recommended": "2026-06-19",
+      "metric": "Генерирует ли Claude структурированный план с чётко определёнными шагами и acceptance criteria?",
+      "promoted_from_watch": false,
+      "repo_full_name": "benjaminshoemaker/ai_coding_project_base",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "feature-plan",
+        "feature-spec",
+        "product-spec",
+        "generate-plan",
+        "security-scan",
+        "tech-debt-check",
+        "audit-skills",
+        "code-verification",
+        "create-pr",
+        "capture-session"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/benjaminshoemaker/ai_coding_project_base",
+        "Скопировать .claude/skills/ целиком или выборочно (feature-plan, product-spec, security-scan) в свой проект",
+        "Запустить Claude Code: 'Use feature-plan skill to plan a new user authentication feature'"
+      ],
+      "title": "benjaminshoemaker/ai_coding_project_base",
+      "url": "https://github.com/benjaminshoemaker/ai_coding_project_base/tree/main/.claude/skills"
     },
     "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills": {
       "added_manually": true,
@@ -6266,6 +6415,39 @@
       ],
       "title": "theodo-group/debug-that",
       "url": "https://github.com/theodo-group/debug-that/tree/main/.claude/skills"
+    },
+    "https://github.com/tractorjuice/arc-kit/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Набор из 4 Claude Skills для разработки: автоматическая память проекта, документация команд, community overlay для PR-ревью и управление релизами. Репозиторий направлен на улучшение workflow разработчика.",
+      "final_score": 7.6,
+      "first_recommended": "2026-06-19",
+      "metric": "Сохраняется ли контекст между сессиями? Улучшается ли качество PR-ревью?",
+      "promoted_from_watch": false,
+      "repo_full_name": "tractorjuice/arc-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "auto-memory",
+        "new-command-docs",
+        "pr-review-community-overlay",
+        "release"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/tractorjuice/arc-kit",
+        "Скопировать .claude/skills/auto-memory/ и .claude/skills/pr-review-community-overlay/ в свой проект",
+        "Запустить Claude Code: 'Use auto-memory skill to capture current project context', затем сделать PR и запустить 'Use pr-review-community-overlay skill'"
+      ],
+      "title": "tractorjuice/arc-kit",
+      "url": "https://github.com/tractorjuice/arc-kit/tree/main/.claude/skills"
     },
     "https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

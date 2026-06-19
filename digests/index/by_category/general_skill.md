@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 41
+Total: 42
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-19 | [Gerstep/cybos](https://github.com/Gerstep/cybos/tree/main/.claude/skills) | Browse, Content, DDMemo, +9 more |  | 7.1 | medium | git clone https://github.com/Gerstep/cybos |
 | 2026-06-18 | [datagrok-ai/public](https://github.com/datagrok-ai/public/tree/master/.claude/skills) | add-curve-format, add-info-panel, add-package-tests, +22 more |  | 7.7 | high | git clone https://github.com/datagrok-ai/public.git && cp -r public/.claude/skills/create-package /your-project/.clau... |
 | 2026-06-18 | [boundless-xyz/boundless](https://github.com/boundless-xyz/boundless/tree/main/.claude/skills) | boundless-cli, localnet, ops-add-new-chain, +12 more |  | 7.0 | medium | git clone https://github.com/boundless-xyz/boundless.git && cp -r boundless/.claude/skills/ops-logs-query /your-proje... |
 | 2026-06-17 | [zeuikli/claude-code-workspace](https://github.com/zeuikli/claude-code-workspace/tree/main/.claude/skills) | add-skill, agent-team, blog-analyzer, +16 more |  | 7.9 | medium | git clone https://github.com/zeuikli/claude-code-workspace.git |

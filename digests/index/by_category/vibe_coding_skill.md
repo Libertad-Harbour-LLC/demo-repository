@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 106
+Total: 110
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-19 | [tractorjuice/arc-kit](https://github.com/tractorjuice/arc-kit/tree/main/.claude/skills) | auto-memory, new-command-docs, pr-review-community-overlay, +1 more |  | 7.6 | high | git clone https://github.com/tractorjuice/arc-kit |
+| 2026-06-19 | [benjaminshoemaker/ai_coding_project_base](https://github.com/benjaminshoemaker/ai_coding_project_base/tree/main/.claude/skills) | feature-plan, feature-spec, product-spec, +7 more |  | 7.7 | medium | git clone https://github.com/benjaminshoemaker/ai_coding_project_base |
+| 2026-06-19 | [JetBrains/MPS](https://github.com/JetBrains/MPS/tree/master/.claude/skills) | actions, code-style, commits, +7 more |  | 7.9 | high | git clone https://github.com/JetBrains/MPS |
+| 2026-06-19 | [FlorianBruniaux/claude-code-ultimate-guide](https://github.com/FlorianBruniaux/claude-code-ultimate-guide/tree/main/.claude/skills) | self-assessment |  | 8.0 | high | git clone https://github.com/FlorianBruniaux/claude-code-ultimate-guide |
 | 2026-06-18 | [srid/haskell-flake](https://github.com/srid/haskell-flake/tree/master/.claude/skills) | code-police, do, elegance, +6 more |  | 7.0 | high | git clone https://github.com/srid/haskell-flake.git && cp -r haskell-flake/.claude/skills/elegance /your-project/.cla... |
 | 2026-06-18 | [padak/claude-code-kit](https://github.com/padak/claude-code-kit/tree/main/.claude/skills) | Browser, claude-agent-sdk, e2b, +6 more |  | 6.6 | medium | git clone https://github.com/padak/claude-code-kit.git && cp -r claude-code-kit/.claude/skills/skill-creator /your-pr... |
 | 2026-06-18 | [alamenai/terrae](https://github.com/alamenai/terrae/tree/main/.claude/skills) | check, commit, docs, +9 more |  | 7.3 | high | git clone https://github.com/alamenai/terrae.git && cp -r terrae/.claude/skills /your-project/.claude/ |
