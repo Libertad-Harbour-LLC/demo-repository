@@ -3510,6 +3510,43 @@
       "title": "fzyzcjy/flutter_rust_bridge",
       "url": "https://github.com/fzyzcjy/flutter_rust_bridge/tree/master/.claude/skills"
     },
+    "https://github.com/gacela-project/gacela/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "PHP-фреймворк Gacela (134 звезды) включает 8 Claude Skills для полного цикла разработки: от написания тестов и фиксов до управления changelog, release и GitHub-issues. Ориентирован на PHP/Symfony-разработчиков.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-20",
+      "metric": "Качество и формат сгенерированного changelog vs стандартный Claude-ответ",
+      "promoted_from_watch": false,
+      "repo_full_name": "gacela-project/gacela",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "benchmark",
+        "changelog",
+        "commit",
+        "fix",
+        "gh-issue",
+        "pr",
+        "release",
+        "test"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/gacela-project/gacela && cp -r gacela/.claude/skills/changelog ~/.claude/skills/",
+        "Открыть любой проект с историей коммитов в Claude Code",
+        "Промт: 'Используй skill changelog, сгенерируй CHANGELOG.md на основе последних 10 коммитов'"
+      ],
+      "title": "gacela-project/gacela",
+      "url": "https://github.com/gacela-project/gacela/tree/main/.claude/skills"
+    },
     "https://github.com/gaia-react/gaia/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -4021,6 +4058,50 @@
       "title": "joaquimscosta/arkhe-claude-plugins",
       "url": "https://github.com/joaquimscosta/arkhe-claude-plugins/tree/main/.claude/skills"
     },
+    "https://github.com/jvm-skills/jvm-skills/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Специализированный репозиторий из 15 Claude Skills для JVM-разработки (Kotlin/Java). Покрывает TDD, Kotest, jOOQ, мутационное тестирование, Spring Boot, Gradle и code review — практически полный стек backend JVM-разработчика.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-20",
+      "metric": "Применяет ли Claude Kotest-специфичный синтаксис и TDD-паттерны из skill vs без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "jvm-skills/jvm-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "commit",
+        "coverage-kover-gradle",
+        "fix",
+        "interview",
+        "jooq-best-practices",
+        "kotest",
+        "mutation-testing",
+        "performance-web",
+        "ralph-coverage",
+        "rebase-commit",
+        "restart-spring-boot",
+        "spec",
+        "tdd-task",
+        "test-gradle",
+        "ui-review"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/jvm-skills/jvm-skills && cp -r jvm-skills/.claude/skills/tdd-task ~/.claude/skills/",
+        "Открыть Kotlin/Java проект в Claude Code",
+        "Промт: 'Используй skill tdd-task, напиши TDD-задачу для функции X с Kotest'"
+      ],
+      "title": "jvm-skills/jvm-skills",
+      "url": "https://github.com/jvm-skills/jvm-skills/tree/main/.claude/skills"
+    },
     "https://github.com/kasonye/ui-aesthetics-skill/tree/main/.claude/skills/ui-aesthetics": {
       "category": "design_skill",
       "confidence": "high",
@@ -4290,6 +4371,41 @@
       ],
       "title": "luongnv89/claude-howto",
       "url": "https://github.com/luongnv89/claude-howto/tree/main/.claude/skills"
+    },
+    "https://github.com/macro-inc/macro/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий компании Macro (271 звезда) содержит 6 Claude Skills для разработки AI-инструментов: создание новых AI-тулзов, дебаг сервисов, управление Dependabot, работа со схемами БД и обновление AI-моделей.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-20",
+      "metric": "Создаёт ли Claude структурированный скаффолдинг AI-тула vs generic-ответ",
+      "promoted_from_watch": false,
+      "repo_full_name": "macro-inc/macro",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "create-ai-tool",
+        "debug-service",
+        "dependabot",
+        "dump-schema",
+        "qc",
+        "upgrade-model"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/macro-inc/macro && cp -r macro/.claude/skills/create-ai-tool ~/.claude/skills/",
+        "Открыть проект, в котором нужно добавить новый AI-инструмент, в Claude Code",
+        "Промт: 'Используй skill create-ai-tool, создай новый AI-инструмент для задачи X'"
+      ],
+      "title": "macro-inc/macro",
+      "url": "https://github.com/macro-inc/macro/tree/main/.claude/skills"
     },
     "https://github.com/marketcalls/vectorbt-backtesting-skills/tree/master/.claude/skills": {
       "category": "general_skill",
@@ -6082,6 +6198,51 @@
       "title": "spencermarx/open-code-review",
       "url": "https://github.com/spencermarx/open-code-review/tree/main/.claude/skills"
     },
+    "https://github.com/srid/emanote/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Emanote (Haskell/Nix note-taking tool, 948 звёзд) содержит 16 Claude Skills — крупнейшую коллекцию в выборке. Skills охватывают Nix-разработку, Haskell, тестирование с Playwright, code review, управление PR и fact-checking.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-20",
+      "metric": "Корректность сгенерированной nix-конфигурации; наличие специфических Nix-паттернов из skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "srid/emanote",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 16,
+      "skills_in_repo": [
+        "code-police",
+        "do",
+        "dpella-mcp",
+        "elegance",
+        "fact-check",
+        "forge-pr",
+        "frontend-design",
+        "hickey",
+        "lowy",
+        "nix-chrome-devtools-mcp",
+        "nix-for-dev",
+        "nix-haskell",
+        "nix-justfile",
+        "nix-playwright",
+        "ralph",
+        "talk"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/srid/emanote && cp -r emanote/.claude/skills/nix-for-dev ~/.claude/skills/",
+        "Открыть Nix-проект (или любой проект) в Claude Code",
+        "Промт: 'Используй skill nix-for-dev, настрой devShell для этого проекта'"
+      ],
+      "title": "srid/emanote",
+      "url": "https://github.com/srid/emanote/tree/master/.claude/skills"
+    },
     "https://github.com/srid/haskell-flake/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -6448,6 +6609,39 @@
       ],
       "title": "tractorjuice/arc-kit",
       "url": "https://github.com/tractorjuice/arc-kit/tree/main/.claude/skills"
+    },
+    "https://github.com/vellum-ai/vellum-assistant/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий команды Vellum AI содержит набор из 4 Claude Skills для автоматизации workflow AI-ассистента: тестирование CLI, управление релизами и обновлениями. Ориентирован на разработчиков, которые строят production AI-продукты на базе LLM.",
+      "final_score": 8.2,
+      "first_recommended": "2026-06-20",
+      "metric": "Качество сгенерированных CLI-тестов vs без skill; наличие структуры тест-кейсов Vellum-стиля",
+      "promoted_from_watch": false,
+      "repo_full_name": "vellum-ai/vellum-assistant",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "cli-testing",
+        "release",
+        "update",
+        "vellum-skills"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/vellum-ai/vellum-assistant && cp -r vellum-assistant/.claude/skills/cli-testing ~/.claude/skills/",
+        "Открыть любой проект с CLI-инструментом в Claude Code",
+        "Написать промт: 'Используй skill cli-testing, напиши тесты для CLI-команды X и проверь их'"
+      ],
+      "title": "vellum-ai/vellum-assistant",
+      "url": "https://github.com/vellum-ai/vellum-assistant/tree/main/.claude/skills"
     },
     "https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
