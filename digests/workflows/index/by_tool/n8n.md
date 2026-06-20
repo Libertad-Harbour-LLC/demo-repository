@@ -1,9 +1,10 @@
 # Recommended — tool: n8n
 
-Total: 81
+Total: 82
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-20 | [n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)](https://github.com/n8n-io/test-workflows) | 138, 161, 179, +2 more |  | 5.5 | high | Перейти на https://github.com/n8n-io/test-workflows и выбрать нужный JSON из папки workflows/ |
 | 2026-06-18 | [skadaai/awesome-n8n-templates: leadgen](https://github.com/skadaai/awesome-n8n-templates) | leadgen |  | 6.5 | medium | Скачать leadgen.json |
 | 2026-06-18 | [gguyon0925/n8n-reddit-scraper: subreddit-discovery](https://github.com/gguyon0925/n8n-reddit-scraper) | subreddit-discovery |  | 6.6 | medium | Скачать subreddit-discovery.json |
 | 2026-06-18 | [akahappygit/AI-Lead-Voice-Automation: Lead Scraper](https://github.com/akahappygit/AI-Lead-Voice-Automation) | Lead Scraper |  | 7.5 | medium | Скачать JSON по ссылке: https://raw.githubusercontent.com/akahappygit/AI-Lead-Voice-Automation/main/workflows/Lead Sc... |

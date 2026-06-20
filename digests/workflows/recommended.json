@@ -1936,6 +1936,43 @@
       "tool": "n8n",
       "url": "https://github.com/mhmdmnsor292003-arch/free-ai-tools"
     },
+    "https://github.com/n8n-io/test-workflows": {
+      "category": "general_workflow",
+      "confidence": "high",
+      "description": "Официальный репозиторий n8n-io с набором тестовых workflow для проверки функциональности платформы. Содержит 5 верифицированных JSON-файлов, пригодных для импорта и изучения структуры узлов n8n.",
+      "final_score": 5.5,
+      "first_recommended": "2026-06-20",
+      "metric": "Успешное выполнение всех узлов без ошибок при тестовом запуске",
+      "promoted_from_watch": false,
+      "repo_full_name": "n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)",
+      "scores": {
+        "business_impact": 4,
+        "noise_risk": 3,
+        "novelty": 3,
+        "testability": 9,
+        "traction": 6,
+        "utility": 6
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "138",
+        "161",
+        "179",
+        "259",
+        "36"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Перейти на https://github.com/n8n-io/test-workflows и выбрать нужный JSON из папки workflows/",
+        "Скачать JSON-файл (например, 138.json) по прямой ссылке raw",
+        "В интерфейсе n8n выбрать Import from File и загрузить JSON",
+        "Проверить граф узлов в редакторе и изучить соединения",
+        "Запустить workflow вручную кнопкой Execute Workflow"
+      ],
+      "title": "n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)",
+      "tool": "n8n",
+      "url": "https://github.com/n8n-io/test-workflows"
+    },
     "https://github.com/n8nKOR/n8n-shared-workflow": {
       "category": "data_workflow",
       "confidence": "medium",
