@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 17
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-21 | [LeadGrowGTM/research-process-builder](https://github.com/LeadGrowGTM/research-process-builder/tree/master/.claude/skills) | graduate-to-trigger, research-agent, trigger-agents, +5 more |  | 7.3 | medium | git clone https://github.com/LeadGrowGTM/research-process-builder && cp -r research-process-builder/.claude/skills/re... |
 | 2026-06-17 | [Infrasity-Labs/dev-gtm-claude-skills](https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/main/.claude/skills) | ab-testing, ad-creative, ai-seo, +17 more |  | 8.2 | medium | Клонировать репо: git clone https://github.com/Infrasity-Labs/dev-gtm-claude-skills.git |
 | 2026-06-16 | [hodoshia/richworks-skills](https://github.com/hodoshia/richworks-skills/tree/main/.claude/skills) | ai-automation, content-flywheel, content-planning, +15 more |  | 7.1 | medium | git clone https://github.com/hodoshia/richworks-skills && cp -r richworks-skills/.claude/skills/viral-script-formula ... |
 | 2026-06-13 | [AntonioBlago/claude-code-seo-starter](https://github.com/AntonioBlago/claude-code-seo-starter/tree/master/.claude/skills) | visibly-seo-offer, visibly-seo-pdf-build, visibly-seo-potential, +1 more |  | 7.1 | medium | git clone https://github.com/AntonioBlago/claude-code-seo-starter && cp -r claude-code-seo-starter/.claude/skills/vis... |

@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 115
+Total: 118
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-21 | [browseros-ai/BrowserOS-agent](https://github.com/browseros-ai/BrowserOS-agent/tree/main/.claude/skills) | dev-debug, dev, dev1-start, +7 more |  | 6.9 | medium | git clone https://github.com/browseros-ai/BrowserOS-agent && cp -r BrowserOS-agent/.claude/skills ~/.claude/ |
+| 2026-06-21 | [SpillwaveSolutions/agent_rulez](https://github.com/SpillwaveSolutions/agent_rulez/tree/main/.claude/skills) | architect-agent, aws-cdk, design-doc-mermaid, +11 more |  | 7.4 | medium | git clone https://github.com/SpillwaveSolutions/agent_rulez && cp -r agent_rulez/.claude/skills/aws-cdk ~/.claude/ski... |
+| 2026-06-21 | [LiorCohen/sdd](https://github.com/LiorCohen/sdd/tree/main/.claude/skills) | agents-standards, commands-standards, commit, +10 more |  | 7.4 | medium | git clone https://github.com/LiorCohen/sdd && cp -r sdd/.claude/skills/skills-standards ~/.claude/skills/ — начать с ... |
 | 2026-06-20 | [vellum-ai/vellum-assistant](https://github.com/vellum-ai/vellum-assistant/tree/main/.claude/skills) | cli-testing, release, update, +1 more |  | 8.2 | high | git clone https://github.com/vellum-ai/vellum-assistant && cp -r vellum-assistant/.claude/skills/cli-testing ~/.claud... |
 | 2026-06-20 | [srid/emanote](https://github.com/srid/emanote/tree/master/.claude/skills) | code-police, do, dpella-mcp, +13 more |  | 7.5 | high | git clone https://github.com/srid/emanote && cp -r emanote/.claude/skills/nix-for-dev ~/.claude/skills/ |
 | 2026-06-20 | [macro-inc/macro](https://github.com/macro-inc/macro/tree/main/.claude/skills) | create-ai-tool, debug-service, dependabot, +3 more |  | 7.0 | medium | git clone https://github.com/macro-inc/macro && cp -r macro/.claude/skills/create-ai-tool ~/.claude/skills/ |

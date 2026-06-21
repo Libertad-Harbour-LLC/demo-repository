@@ -1060,6 +1060,85 @@
       "title": "Lambenthan/empiricalwiki",
       "url": "https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills"
     },
+    "https://github.com/LeadGrowGTM/research-process-builder/tree/master/.claude/skills": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 8 Claude Skills для автоматизации GTM-исследований и лидогенерации: research-agent для сбора данных, trigger-агенты для автоматического запуска процессов, cost-saving конфигурации. Ориентирована на B2B-маркетологов и growth-команды.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-21",
+      "metric": "Время на квалификацию одного лида до и после применения skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "LeadGrowGTM/research-process-builder",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "graduate-to-trigger",
+        "research-agent",
+        "trigger-agents",
+        "trigger-config",
+        "trigger-cost-savings",
+        "trigger-realtime",
+        "trigger-setup",
+        "trigger-tasks"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/LeadGrowGTM/research-process-builder && cp -r research-process-builder/.claude/skills/research-agent ~/.claude/skills/",
+        "Открыть Claude Code и дать задачу: 'Используй skill research-agent: собери данные о компании [название] для квалификации лида'",
+        "Протестировать trigger-setup: 'Используй trigger-setup: настрой триггер для мониторинга упоминаний нашего конкурента'"
+      ],
+      "title": "LeadGrowGTM/research-process-builder",
+      "url": "https://github.com/LeadGrowGTM/research-process-builder/tree/master/.claude/skills"
+    },
+    "https://github.com/LiorCohen/sdd/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Набор из 13 Claude Skills для стандартизации разработки: стандарты для агентов, команд, документации, плагинов и тестирования. Включает skill для работы с диаграммами D2 и валидации манифестов. Ориентирован на продуктовые команды, строящие AI-агентов.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-21",
+      "metric": "Насколько предложенный SKILL.md соответствует шаблону и реально улучшает контекст Claude",
+      "promoted_from_watch": false,
+      "repo_full_name": "LiorCohen/sdd",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 13,
+      "skills_in_repo": [
+        "agents-standards",
+        "commands-standards",
+        "commit",
+        "critic",
+        "d2",
+        "docs-standards",
+        "manifest-validation",
+        "plugin-product-standards",
+        "plugin-testing-standards",
+        "skills-standards",
+        "system-cli-standards",
+        "tasks",
+        "typescript-standards"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/LiorCohen/sdd && cp -r sdd/.claude/skills/skills-standards ~/.claude/skills/ — начать с мета-skill",
+        "Открыть Claude Code и попросить: 'Используй skill skills-standards: помоги написать SKILL.md для нашего проекта'",
+        "Добавить critic skill и проверить: 'Используй critic: оцени мой последний PR на предмет качества кода'"
+      ],
+      "title": "LiorCohen/sdd",
+      "url": "https://github.com/LiorCohen/sdd/tree/main/.claude/skills"
+    },
     "https://github.com/Neetx/ai-research-radar/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -1370,6 +1449,49 @@
       ],
       "title": "SpectrAI-Initiative/InnoClaw",
       "url": "https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills"
+    },
+    "https://github.com/SpillwaveSolutions/agent_rulez/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 14 Claude Skills для профессиональной разработки: архитектор-агент, AWS CDK, стандарты TypeScript, Python, React, Git workflow, диаграммы PlantUML и Mermaid, code review и управление релизами. Репо ориентировано на команды, желающие стандартизировать AI-assisted разработку.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-21",
+      "metric": "Качество и полнота ревью по сравнению с обычным промтом без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "SpillwaveSolutions/agent_rulez",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 14,
+      "skills_in_repo": [
+        "architect-agent",
+        "aws-cdk",
+        "design-doc-mermaid",
+        "documentation-specialist",
+        "mastering-git-cli",
+        "mastering-github-cli",
+        "mastering-python-skill",
+        "mastering-typescript",
+        "plantuml",
+        "pr-reviewer",
+        "project-memory",
+        "react-best-practices",
+        "release-rulez",
+        "sdd"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/SpillwaveSolutions/agent_rulez && cp -r agent_rulez/.claude/skills/aws-cdk ~/.claude/skills/ (или выбрать нужные skills)",
+        "Открыть Claude Code в своём проекте на TypeScript/Python/React",
+        "Дать промт: 'Используй skill mastering-typescript: проревьюй мой код на соответствие стандартам и предложи рефакторинг'"
+      ],
+      "title": "SpillwaveSolutions/agent_rulez",
+      "url": "https://github.com/SpillwaveSolutions/agent_rulez/tree/main/.claude/skills"
     },
     "https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -2478,6 +2600,45 @@
       ],
       "title": "boundless-xyz/boundless",
       "url": "https://github.com/boundless-xyz/boundless/tree/main/.claude/skills"
+    },
+    "https://github.com/browseros-ai/BrowserOS-agent/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "10 Claude Skills, покрывающих полный цикл разработки фичи: от старта (dev1-start) через дизайн, PRD, реализацию, ревью и исправления до создания PR (dev7-pr). Включает отдельный skill для TS-стиля и дебаг-режим. Репо — BrowserOS agent-проект.",
+      "final_score": 6.9,
+      "first_recommended": "2026-06-21",
+      "metric": "Время от идеи до готового PR с использованием pipeline vs без",
+      "promoted_from_watch": false,
+      "repo_full_name": "browseros-ai/BrowserOS-agent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "dev-debug",
+        "dev",
+        "dev1-start",
+        "dev2-design",
+        "dev3-prd",
+        "dev4-implement",
+        "dev5-review",
+        "dev6-review-fix",
+        "dev7-pr",
+        "ts-style-review"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/browseros-ai/BrowserOS-agent && cp -r BrowserOS-agent/.claude/skills ~/.claude/",
+        "Начать новую фичу: 'Используй skill dev1-start: начнём разработку [описание фичи]'",
+        "Пройти по pipeline dev2→dev3→dev4→dev5→dev7 и засечь время по сравнению с обычным workflow"
+      ],
+      "title": "browseros-ai/BrowserOS-agent",
+      "url": "https://github.com/browseros-ai/BrowserOS-agent/tree/main/.claude/skills"
     },
     "https://github.com/cohen-liel/hivemind/tree/main/.claude/skills": {
       "category": "general_skill",
