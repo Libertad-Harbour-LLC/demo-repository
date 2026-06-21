@@ -2076,6 +2076,43 @@
       "tool": "n8n",
       "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
     },
+    "https://github.com/papadopouloskyriakos/agentic-chatops": {
+      "category": "devops_workflow",
+      "confidence": "high",
+      "description": "Набор из 5 n8n workflow для agentic ChatOps-автоматизации на базе Claude: сбор статистики инфраструктуры, запуск и восстановление после chaos-тестов, мониторинг статуса через API. Предназначен для DevOps-команд, которые хотят управлять инфраструктурой через LLM-агента.",
+      "final_score": 7.6,
+      "first_recommended": "2026-06-21",
+      "metric": "Время от команды до получения статуса инфраструктуры; успешный прогон chaos-test без ручного вмешательства",
+      "promoted_from_watch": false,
+      "repo_full_name": "papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "claude-gateway-agentic-stats",
+        "claude-gateway-chaos-logs-api",
+        "claude-gateway-chaos-test-recover",
+        "claude-gateway-chaos-test-start",
+        "claude-gateway-chaos-test-status"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/papadopouloskyriakos/agentic-chatops/main/workflows/claude-gateway-agentic-stats.json",
+        "Импортировать в n8n через Settings → Import workflow",
+        "Настроить credentials: Claude API key (Anthropic), доступ к целевой инфраструктуре/API",
+        "Запустить тестовый прогон на claude-gateway-agentic-stats, проверить вывод статистики",
+        "При успехе импортировать остальные 4 workflow и связать их в единую ChatOps-систему"
+      ],
+      "title": "papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats",
+      "tool": "n8n",
+      "url": "https://github.com/papadopouloskyriakos/agentic-chatops"
+    },
     "https://github.com/ravindragith/zie619": {
       "category": "general_workflow",
       "confidence": "high",

@@ -1,9 +1,10 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 12
+Total: 13
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-21 | [papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats](https://github.com/papadopouloskyriakos/agentic-chatops) | claude-gateway-agentic-stats, claude-gateway-chaos-logs-api, claude-gateway-chaos-test-recover, +2 more |  | 7.6 | high | Скачать JSON: https://raw.githubusercontent.com/papadopouloskyriakos/agentic-chatops/main/workflows/claude-gateway-ag... |
 | 2026-06-18 | [ChiefGyk3D/siem-docker-stack: grafana-alert-router](https://github.com/ChiefGyk3D/siem-docker-stack) | grafana-alert-router |  | 6.5 | medium | Скачать grafana-alert-router.json |
 | 2026-06-10 | [PacktPublishing/Incident-Response-with-Threat-Intelligence: n8n_thehive_velociraptor_workflow](https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence) | n8n_thehive_velociraptor_workflow |  | 7.0 | medium | Скачать JSON: https://raw.githubusercontent.com/PacktPublishing/Incident-Response-with-Threat-Intelligence/main/Chapt... |
 | 2026-06-03 | [weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator](https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive) | APK Security Scanner & PDF Report Generator |  | 6.8 | medium | Скачать JSON по ссылке json_url |
