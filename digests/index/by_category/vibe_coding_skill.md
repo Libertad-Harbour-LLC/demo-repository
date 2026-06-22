@@ -1,9 +1,11 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 118
+Total: 120
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-22 | [hoangsonww/Claude-Code-Agent-Monitor](https://github.com/hoangsonww/Claude-Code-Agent-Monitor/tree/master/.claude/skills) | debug-live-issue, mcp-operations, repo-onboarding, +1 more |  | 7.5 | medium | git clone https://github.com/hoangsonww/Claude-Code-Agent-Monitor && cd Claude-Code-Agent-Monitor |
+| 2026-06-22 | [Cukurikik/Omni](https://github.com/Cukurikik/Omni/tree/main/.claude/skills) | developing-genkit-dart, developing-genkit-go, developing-genkit-js, +9 more |  | 6.9 | medium | git clone https://github.com/Cukurikik/Omni && cd Omni |
 | 2026-06-21 | [browseros-ai/BrowserOS-agent](https://github.com/browseros-ai/BrowserOS-agent/tree/main/.claude/skills) | dev-debug, dev, dev1-start, +7 more |  | 6.9 | medium | git clone https://github.com/browseros-ai/BrowserOS-agent && cp -r BrowserOS-agent/.claude/skills ~/.claude/ |
 | 2026-06-21 | [SpillwaveSolutions/agent_rulez](https://github.com/SpillwaveSolutions/agent_rulez/tree/main/.claude/skills) | architect-agent, aws-cdk, design-doc-mermaid, +11 more |  | 7.4 | medium | git clone https://github.com/SpillwaveSolutions/agent_rulez && cp -r agent_rulez/.claude/skills/aws-cdk ~/.claude/ski... |
 | 2026-06-21 | [LiorCohen/sdd](https://github.com/LiorCohen/sdd/tree/main/.claude/skills) | agents-standards, commands-standards, commit, +10 more |  | 7.4 | medium | git clone https://github.com/LiorCohen/sdd && cp -r sdd/.claude/skills/skills-standards ~/.claude/skills/ — начать с ... |

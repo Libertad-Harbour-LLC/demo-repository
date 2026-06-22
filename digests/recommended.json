@@ -248,6 +248,48 @@
       "title": "ClickHouse/pg_stat_ch",
       "url": "https://github.com/ClickHouse/pg_stat_ch/tree/main/.claude/skills"
     },
+    "https://github.com/Cukurikik/Omni/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий Omni содержит 12 специализированных Claude Skills для разработки с Firebase и Google Genkit на трёх языках (Dart, Go, JS). Предназначен для разработчиков, использующих Firebase-экосистему и желающих ускорить работу через Claude Code.",
+      "final_score": 6.9,
+      "first_recommended": "2026-06-22",
+      "metric": "Точность сгенерированных Firestore rules; количество пойманных уязвимостей в security rules",
+      "promoted_from_watch": false,
+      "repo_full_name": "Cukurikik/Omni",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "developing-genkit-dart",
+        "developing-genkit-go",
+        "developing-genkit-js",
+        "firebase-ai-logic",
+        "firebase-app-hosting-basics",
+        "firebase-auth-basics",
+        "firebase-basics",
+        "firebase-data-connect",
+        "firebase-firestore-enterprise-native-mode",
+        "firebase-firestore-standard",
+        "firebase-hosting-basics",
+        "firestore-security-rules-auditor"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Cukurikik/Omni && cd Omni",
+        "Скопировать .claude/skills/firebase-basics/ и .claude/skills/firestore-security-rules-auditor/ в Firebase-проект",
+        "Открыть Claude Code и написать: 'Use firebase-basics skill to set up Firestore for [сценарий]'",
+        "Проверить аудитор: 'Use firestore-security-rules-auditor skill to review my security rules in firestore.rules'"
+      ],
+      "title": "Cukurikik/Omni",
+      "url": "https://github.com/Cukurikik/Omni/tree/main/.claude/skills"
+    },
     "https://github.com/DGouron/review-flow/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -1059,6 +1101,71 @@
       ],
       "title": "Lambenthan/empiricalwiki",
       "url": "https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills"
+    },
+    "https://github.com/LazyIsEfficient/agentic-os/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий agentic-os представляет собой большую коллекцию из 35 Claude Skills, охватывающую кодинг (TypeScript, Rust, Godot), маркетинг, SEO, рост, безопасность, геймдев и CI/CD. Предназначен для разработчиков и инди-хакеров, которым нужен универсальный набор агентских инструментов в одном репо.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-22",
+      "metric": "Качество и глубина авто-исследования vs ручного поиска; количество полезных skills из 35 в реальном проекте",
+      "promoted_from_watch": false,
+      "repo_full_name": "LazyIsEfficient/agentic-os",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 35,
+      "skills_in_repo": [
+        "adversarial-claims-reviewer",
+        "autoresearch",
+        "browser-testing-with-devtools",
+        "code-review-and-quality",
+        "codebase-cost-estimator",
+        "content-ops",
+        "content-pipeline",
+        "conversion-ops",
+        "deployment-pipelines",
+        "findings-ledger",
+        "game-balancer",
+        "game-systems-designer",
+        "godot-engineer",
+        "growth-engine",
+        "iap-manager",
+        "library-investigator",
+        "marketing-shaper",
+        "outbound-engine",
+        "phaser-engineer",
+        "planning-and-task-breakdown",
+        "prompt-shaper",
+        "release-manager",
+        "revenue-intelligence",
+        "rust-engineer",
+        "security-engineering",
+        "security",
+        "seo-ops",
+        "session-state",
+        "skill-library-review",
+        "telemetry",
+        "typescript-analytics",
+        "typescript-data-engineering",
+        "typescript-testing-backend",
+        "typescript-testing-frontend",
+        "web3-smart-contract-engineering"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/LazyIsEfficient/agentic-os && cd agentic-os",
+        "Скопировать нужные папки из .claude/skills/ в свой проект: cp -r .claude/skills/autoresearch /your-project/.claude/skills/",
+        "Открыть Claude Code в /your-project и написать: 'Use the autoresearch skill to investigate [тема]'",
+        "Попробовать также adversarial-claims-reviewer: 'Review these claims using adversarial-claims-reviewer skill'"
+      ],
+      "title": "LazyIsEfficient/agentic-os",
+      "url": "https://github.com/LazyIsEfficient/agentic-os/tree/main/.claude/skills"
     },
     "https://github.com/LeadGrowGTM/research-process-builder/tree/master/.claude/skills": {
       "category": "marketing_skill",
@@ -3990,6 +4097,40 @@
       "title": "hashintel/hash",
       "url": "https://github.com/hashintel/hash/tree/main/.claude/skills"
     },
+    "https://github.com/hoangsonww/Claude-Code-Agent-Monitor/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий Claude-Code-Agent-Monitor содержит 4 практических skill для работы с Claude Code: отладка живых проблем, управление MCP-операциями, онбординг нового репозитория и выпуск фич. Ориентирован на разработчиков, активно использующих Claude Code в проектах.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-22",
+      "metric": "Скорость онбординга в незнакомый репозиторий; точность диагностики живых issues",
+      "promoted_from_watch": false,
+      "repo_full_name": "hoangsonww/Claude-Code-Agent-Monitor",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "debug-live-issue",
+        "mcp-operations",
+        "repo-onboarding",
+        "ship-feature"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/hoangsonww/Claude-Code-Agent-Monitor && cd Claude-Code-Agent-Monitor",
+        "Скопировать .claude/skills/ в свой рабочий проект: cp -r .claude/skills /your-project/.claude/",
+        "Открыть Claude Code в проекте и написать: 'Use repo-onboarding skill to help me understand this codebase'",
+        "Затем проверить debug-live-issue: 'There is a bug in [файл], use debug-live-issue skill to investigate'"
+      ],
+      "title": "hoangsonww/Claude-Code-Agent-Monitor",
+      "url": "https://github.com/hoangsonww/Claude-Code-Agent-Monitor/tree/master/.claude/skills"
+    },
     "https://github.com/hodoshia/richworks-skills/tree/main/.claude/skills": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -4453,6 +4594,51 @@
       ],
       "title": "linuxfoundation/crowd.dev",
       "url": "https://github.com/linuxfoundation/crowd.dev/tree/main/.claude/skills"
+    },
+    "https://github.com/littlebearapps/pitchdocs/tree/main/.claude/skills": {
+      "category": "content_skill",
+      "confidence": "medium",
+      "description": "Репозиторий pitchdocs содержит 15 Claude Skills для полного цикла технической документации продукта: от API reference и changelog до geo-оптимизации и llms.txt. Ориентирован на технических писателей, продуктовых менеджеров и стартапы, которым нужна качественная документация.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-22",
+      "metric": "Скорость и качество генерации llms.txt и API-документации; сравнение с ручным написанием",
+      "promoted_from_watch": false,
+      "repo_full_name": "littlebearapps/pitchdocs",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "api-reference",
+        "changelog",
+        "doc-refresh",
+        "docs-verify",
+        "feature-benefits",
+        "geo-optimisation",
+        "launch-artifacts",
+        "llms-txt",
+        "package-registry",
+        "pitchdocs-suite",
+        "platform-profiles",
+        "public-readme",
+        "roadmap",
+        "user-guides",
+        "visual-standards"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/littlebearapps/pitchdocs && cd pitchdocs",
+        "Скопировать .claude/skills/llms-txt/ и .claude/skills/api-reference/ в свой проект",
+        "Открыть Claude Code и написать: 'Use the llms-txt skill to generate llms.txt for this project'",
+        "Затем: 'Use api-reference skill to document the API endpoints in [файл]'"
+      ],
+      "title": "littlebearapps/pitchdocs",
+      "url": "https://github.com/littlebearapps/pitchdocs/tree/main/.claude/skills"
     },
     "https://github.com/llama-farm/llamafarm/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -6954,6 +7140,37 @@
       ],
       "title": "webiny/webiny-js",
       "url": "https://github.com/webiny/webiny-js/tree/next/.claude/skills"
+    },
+    "https://github.com/wgpsec/AboutSecurity/tree/master/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Репозиторий AboutSecurity — известный китайский security-ресурс с 1485 звёздами. Содержит skill aboutsecurity-content-ingestion, предназначенный для систематизации и поглощения security-контента в рамках Claude Code.",
+      "final_score": 7.2,
+      "first_recommended": "2026-06-22",
+      "metric": "Качество извлечения и структурирования security-информации из репозитория; скорость поиска релевантных writeups",
+      "promoted_from_watch": false,
+      "repo_full_name": "wgpsec/AboutSecurity",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "aboutsecurity-content-ingestion"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/wgpsec/AboutSecurity && cd AboutSecurity",
+        "Скопировать .claude/skills/aboutsecurity-content-ingestion/ в свой security-проект",
+        "Открыть Claude Code и написать: 'Use aboutsecurity-content-ingestion skill to process [security topic/CVE/writeup]'",
+        "Оценить качество структурирования и поиска по security-контенту"
+      ],
+      "title": "wgpsec/AboutSecurity",
+      "url": "https://github.com/wgpsec/AboutSecurity/tree/master/.claude/skills"
     },
     "https://github.com/withkynam/vibecode-pro-max-kit/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

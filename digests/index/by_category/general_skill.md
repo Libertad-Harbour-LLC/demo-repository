@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 42
+Total: 44
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-22 | [wgpsec/AboutSecurity](https://github.com/wgpsec/AboutSecurity/tree/master/.claude/skills) | aboutsecurity-content-ingestion |  | 7.2 | high | git clone https://github.com/wgpsec/AboutSecurity && cd AboutSecurity |
+| 2026-06-22 | [LazyIsEfficient/agentic-os](https://github.com/LazyIsEfficient/agentic-os/tree/main/.claude/skills) | adversarial-claims-reviewer, autoresearch, browser-testing-with-devtools, +32 more |  | 7.5 | medium | git clone https://github.com/LazyIsEfficient/agentic-os && cd agentic-os |
 | 2026-06-19 | [Gerstep/cybos](https://github.com/Gerstep/cybos/tree/main/.claude/skills) | Browse, Content, DDMemo, +9 more |  | 7.1 | medium | git clone https://github.com/Gerstep/cybos |
 | 2026-06-18 | [datagrok-ai/public](https://github.com/datagrok-ai/public/tree/master/.claude/skills) | add-curve-format, add-info-panel, add-package-tests, +22 more |  | 7.7 | high | git clone https://github.com/datagrok-ai/public.git && cp -r public/.claude/skills/create-package /your-project/.clau... |
 | 2026-06-18 | [boundless-xyz/boundless](https://github.com/boundless-xyz/boundless/tree/main/.claude/skills) | boundless-cli, localnet, ops-add-new-chain, +12 more |  | 7.0 | medium | git clone https://github.com/boundless-xyz/boundless.git && cp -r boundless/.claude/skills/ops-logs-query /your-proje... |
