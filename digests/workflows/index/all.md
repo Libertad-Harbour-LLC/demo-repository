@@ -1,11 +1,12 @@
 # Recommended Claude Skills — all time
 
-Total: 86
+Total: 87
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-22 | [women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos](https://github.com/women-in-ai-ireland/march-2025-group-1) | facebook_post, short_videos |  | 6.5 | medium | Скачать JSON: wget https://raw.githubusercontent.com/women-in-ai-ireland/march-2025-group-1/main/Workflows/facebook_p... |
 | 2026-06-21 | [papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats](https://github.com/papadopouloskyriakos/agentic-chatops) | claude-gateway-agentic-stats, claude-gateway-chaos-logs-api, claude-gateway-chaos-test-recover, +2 more |  | 7.6 | high | Скачать JSON: https://raw.githubusercontent.com/papadopouloskyriakos/agentic-chatops/main/workflows/claude-gateway-ag... |
 | 2026-06-20 | [n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)](https://github.com/n8n-io/test-workflows) | 138, 161, 179, +2 more |  | 5.5 | high | Перейти на https://github.com/n8n-io/test-workflows и выбрать нужный JSON из папки workflows/ |
 | 2026-06-18 | [skadaai/awesome-n8n-templates: leadgen](https://github.com/skadaai/awesome-n8n-templates) | leadgen |  | 6.5 | medium | Скачать leadgen.json |

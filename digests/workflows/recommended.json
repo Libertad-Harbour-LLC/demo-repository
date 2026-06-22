@@ -2798,6 +2798,40 @@
       "tool": "n8n",
       "url": "https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping"
     },
+    "https://github.com/women-in-ai-ireland/march-2025-group-1": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Набор n8n-workflow для автоматической публикации контента в социальные сети: посты в Facebook и генерация коротких видео. Репозиторий создан в рамках учебной группы Women in AI Ireland и содержит несколько взаимосвязанных workflow для multi-channel posting.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-22",
+      "metric": "Количество успешно опубликованных постов в Facebook за первую неделю",
+      "promoted_from_watch": false,
+      "repo_full_name": "women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "facebook_post",
+        "short_videos"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: wget https://raw.githubusercontent.com/women-in-ai-ireland/march-2025-group-1/main/Workflows/facebook_post.json",
+        "Импортировать в n8n через Settings → Import Workflow → выбрать скачанный JSON",
+        "Настроить credentials: Facebook Graph API token (или OAuth2) в узлах публикации",
+        "Для short_videos.json дополнительно настроить источник медиафайлов (Google Drive или локальный путь)",
+        "Запустить тестовый прогон на тестовой странице Facebook, убедиться что пост создаётся"
+      ],
+      "title": "women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos",
+      "tool": "n8n",
+      "url": "https://github.com/women-in-ai-ireland/march-2025-group-1"
+    },
     "https://github.com/workfloows/workfloows-tutorials": {
       "category": "data_workflow",
       "confidence": "medium",

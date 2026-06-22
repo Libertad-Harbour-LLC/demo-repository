@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 13
+Total: 14
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-22 | [women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos](https://github.com/women-in-ai-ireland/march-2025-group-1) | facebook_post, short_videos |  | 6.5 | medium | Скачать JSON: wget https://raw.githubusercontent.com/women-in-ai-ireland/march-2025-group-1/main/Workflows/facebook_p... |
 | 2026-06-12 | [mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator](https://github.com/mhmdmnsor292003-arch/free-ai-tools) | ai-code-reviewer-api, ai-code-reviewer-landing-page, ai-email-writer-api, +2 more |  | 6.6 | medium | Скачать JSON нужного workflow (например, ai-linkedin-post-generator-api.json) |
 | 2026-06-11 | [yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)](https://github.com/yigitkonur/n8n-workflows-craft) | craft-ai-assistant-gen, craft-ai-research-agent, craft-appointment-manager, +2 more |  | 6.2 | medium | Скачать нужный JSON, например craft-ai-assistant-gen.json |
 | 2026-06-06 | [STGime/posta-n8n-workflows: blog-to-linkedin-carousel](https://github.com/STGime/posta-n8n-workflows) | blog-to-linkedin-carousel, blog-to-social-media, product-launch-campaign, +1 more |  | 7.3 | medium | Скачать JSON: https://raw.githubusercontent.com/STGime/posta-n8n-workflows/main/workflows/blog-to-linkedin-carousel.json |
