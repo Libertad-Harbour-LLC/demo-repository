@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 44
+Total: 45
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-23 | [photostructure/exiftool-vendored.js](https://github.com/photostructure/exiftool-vendored.js/tree/main/.claude/skills) | handoff, replan, tpp |  | 7.0 | medium | git clone https://github.com/photostructure/exiftool-vendored.js и скопировать .claude/skills/handoff/ и .claude/skil... |
 | 2026-06-22 | [wgpsec/AboutSecurity](https://github.com/wgpsec/AboutSecurity/tree/master/.claude/skills) | aboutsecurity-content-ingestion |  | 7.2 | high | git clone https://github.com/wgpsec/AboutSecurity && cd AboutSecurity |
 | 2026-06-22 | [LazyIsEfficient/agentic-os](https://github.com/LazyIsEfficient/agentic-os/tree/main/.claude/skills) | adversarial-claims-reviewer, autoresearch, browser-testing-with-devtools, +32 more |  | 7.5 | medium | git clone https://github.com/LazyIsEfficient/agentic-os && cd agentic-os |
 | 2026-06-19 | [Gerstep/cybos](https://github.com/Gerstep/cybos/tree/main/.claude/skills) | Browse, Content, DDMemo, +9 more |  | 7.1 | medium | git clone https://github.com/Gerstep/cybos |

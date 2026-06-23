@@ -20,6 +20,43 @@
       "title": "199-biotechnologies/claude-deep-research-skill",
       "url": "https://github.com/199-biotechnologies/claude-deep-research-skill"
     },
+    "https://github.com/Actual-Chat/actual-chat/tree/dev/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий реального чат-приложения Actual-Chat с production-grade Claude Skills для code review и QA workflow. Skills отражают реальные процессы команды: план с CEO-ревью, инженерное ревью, QA-циклы и ретроспективы.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-23",
+      "metric": "Полнота и структурированность планов, качество QA-чеклистов",
+      "promoted_from_watch": false,
+      "repo_full_name": "Actual-Chat/actual-chat",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "plan-ceo-review",
+        "plan-eng-review",
+        "qa-only",
+        "qa",
+        "retro",
+        "review",
+        "virtual-list-debug",
+        "voxt-qa"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Actual-Chat/actual-chat и скопировать .claude/skills/plan-eng-review/ и .claude/skills/qa/ в свой проект",
+        "В Claude Code: 'запусти plan-eng-review для текущей задачи <описание>'",
+        "Сравнить структуру plan-ceo-review и plan-eng-review для понимания паттерна двухуровневого планирования"
+      ],
+      "title": "Actual-Chat/actual-chat",
+      "url": "https://github.com/Actual-Chat/actual-chat/tree/dev/.claude/skills"
+    },
     "https://github.com/AgriciDaniel/claude-seo/tree/main/skills": {
       "added_manually": true,
       "category": "marketing_skill",
@@ -1008,6 +1045,52 @@
       ],
       "title": "JimLiu/baoyu-skills",
       "url": "https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/JubaKitiashvili/everything-react-native-expo/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 51 Claude Skill специализированно для разработки на React Native и Expo. Покрывает полный цикл: от инициализации проекта и написания компонентов до TDD, дебага, деплоя и обновлений зависимостей.",
+      "final_score": 7.6,
+      "first_recommended": "2026-06-23",
+      "metric": "Качество генерируемых компонентов и тестов по сравнению с generic промптами",
+      "promoted_from_watch": false,
+      "repo_full_name": "JubaKitiashvili/everything-react-native-expo",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 17,
+      "skills_in_repo": [
+        "animate",
+        "build-fix",
+        "code-review",
+        "component",
+        "debug",
+        "deploy",
+        "feature",
+        "native-module",
+        "navigate",
+        "perf",
+        "plan",
+        "quality-gate",
+        "retrospective",
+        "security-review",
+        "tdd",
+        "upgrade",
+        "worker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/JubaKitiashvili/everything-react-native-expo и скопировать .claude/skills/ в свой React Native проект",
+        "Запустить Claude Code и вызвать: 'используй skill component для создания нового компонента <название>'",
+        "Попробовать tdd skill: 'напиши тесты для <компонент> используя erne-tdd'"
+      ],
+      "title": "JubaKitiashvili/everything-react-native-expo",
+      "url": "https://github.com/JubaKitiashvili/everything-react-native-expo/tree/main/.claude/skills"
     },
     "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -2197,6 +2280,62 @@
       ],
       "title": "alexei-led/ccgram",
       "url": "https://github.com/alexei-led/ccgram/tree/main/.claude/skills"
+    },
+    "https://github.com/alfredolopez80/multi-agent-ralph-loop/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 61 Claude Skill для multi-agent разработки — одна из крупнейших публичных skill-библиотек. Охватывает весь цикл: от генерации ADR и спецификаций до параллельного выполнения задач, code review, security-аудита и борьбы с AI-слопом.",
+      "final_score": 7.7,
+      "first_recommended": "2026-06-23",
+      "metric": "Качество генерируемых спецификаций и эффективность anti-slop skills",
+      "promoted_from_watch": false,
+      "repo_full_name": "alfredolopez80/multi-agent-ralph-loop",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 27,
+      "skills_in_repo": [
+        "adr",
+        "adversarial",
+        "architecture-diagram",
+        "ask-questions-if-underspecified",
+        "audit",
+        "autoresearch",
+        "browser-test",
+        "bugs",
+        "checkpoint-manager",
+        "clarify",
+        "clean-slop",
+        "code-reviewer",
+        "context-engineer",
+        "orchestrator",
+        "parallel",
+        "prd",
+        "research",
+        "security",
+        "senior-software-engineer",
+        "ship",
+        "spec",
+        "stop-slop",
+        "task-batch",
+        "task-classifier",
+        "testing-anti-patterns",
+        "vault",
+        "worktree-pr"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/alfredolopez80/multi-agent-ralph-loop и скопировать нужные папки из .claude/skills/ (начать с: orchestrator, spec, clean-slop, adr)",
+        "В Claude Code запустить: 'используй skill spec для написания спецификации к <фича>'",
+        "Протестировать clean-slop / stop-slop на существующем коде: 'запусти clean-slop на <файл>' и оценить качество очистки AI-артефактов"
+      ],
+      "title": "alfredolopez80/multi-agent-ralph-loop",
+      "url": "https://github.com/alfredolopez80/multi-agent-ralph-loop/tree/main/.claude/skills"
     },
     "https://github.com/alirezarezvani/claude-skills/tree/main/.claude/skills": {
       "added_manually": true,
@@ -6050,6 +6189,38 @@
       "title": "peterfei/ai-agent-team",
       "url": "https://github.com/peterfei/ai-agent-team/tree/main/.claude/skills"
     },
+    "https://github.com/photostructure/exiftool-vendored.js/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "JavaScript-библиотека для работы с ExifTool, содержащая Claude Skills для управления контекстом длинных сессий (handoff, replan) и test-plan-progress (tpp). Skills решают проблему потери контекста при длинных разработческих сессиях.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-23",
+      "metric": "Насколько полно восстанавливается контекст после handoff в новой сессии",
+      "promoted_from_watch": false,
+      "repo_full_name": "photostructure/exiftool-vendored.js",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "handoff",
+        "replan",
+        "tpp"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/photostructure/exiftool-vendored.js и скопировать .claude/skills/handoff/ и .claude/skills/replan/ в свой проект",
+        "В конце длинной рабочей сессии с Claude Code: 'запусти handoff — сохрани контекст текущей работы'",
+        "В новой сессии загрузить handoff-документ и продолжить работу, оценить качество восстановления контекста"
+      ],
+      "title": "photostructure/exiftool-vendored.js",
+      "url": "https://github.com/photostructure/exiftool-vendored.js/tree/main/.claude/skills"
+    },
     "https://github.com/pr-pm/prpm/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -6211,6 +6382,39 @@
       ],
       "title": "ractive/hyalo",
       "url": "https://github.com/ractive/hyalo/tree/main/.claude/skills"
+    },
+    "https://github.com/regent-vcs/re_gent/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "re_gent — экспериментальная система управления версиями с нативной поддержкой Claude Skills для git-подобных операций (blame, log, rewind, show). Репозиторий ориентирован на разработчиков, которые хотят интегрировать AI-контекст в навигацию по истории кода.",
+      "final_score": 8.0,
+      "first_recommended": "2026-06-23",
+      "metric": "Насколько полезен AI-контекст в blame/log по сравнению с обычным git blame",
+      "promoted_from_watch": false,
+      "repo_full_name": "regent-vcs/re_gent",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "blame",
+        "log",
+        "rewind",
+        "show"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/regent-vcs/re_gent и скопировать папки .claude/skills/blame/, .claude/skills/log/, .claude/skills/rewind/, .claude/skills/show/ в свой проект",
+        "Открыть проект в Claude Code и вызвать skill: 'blame последние изменения в <файл>'",
+        "Попробовать 'rewind к состоянию перед багом в <модуль>' и оценить качество AI-контекста"
+      ],
+      "title": "regent-vcs/re_gent",
+      "url": "https://github.com/regent-vcs/re_gent/tree/main/.claude/skills"
     },
     "https://github.com/rjmurillo/ai-agents/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 120
+Total: 124
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-23 | [regent-vcs/re_gent](https://github.com/regent-vcs/re_gent/tree/main/.claude/skills) | blame, log, rewind, +1 more |  | 8.0 | high | git clone https://github.com/regent-vcs/re_gent и скопировать папки .claude/skills/blame/, .claude/skills/log/, .clau... |
+| 2026-06-23 | [alfredolopez80/multi-agent-ralph-loop](https://github.com/alfredolopez80/multi-agent-ralph-loop/tree/main/.claude/skills) | adr, adversarial, architecture-diagram, +24 more |  | 7.7 | medium | git clone https://github.com/alfredolopez80/multi-agent-ralph-loop и скопировать нужные папки из .claude/skills/ (нач... |
+| 2026-06-23 | [JubaKitiashvili/everything-react-native-expo](https://github.com/JubaKitiashvili/everything-react-native-expo/tree/main/.claude/skills) | animate, build-fix, code-review, +14 more |  | 7.6 | medium | git clone https://github.com/JubaKitiashvili/everything-react-native-expo и скопировать .claude/skills/ в свой React ... |
+| 2026-06-23 | [Actual-Chat/actual-chat](https://github.com/Actual-Chat/actual-chat/tree/dev/.claude/skills) | plan-ceo-review, plan-eng-review, qa-only, +5 more |  | 7.1 | medium | git clone https://github.com/Actual-Chat/actual-chat и скопировать .claude/skills/plan-eng-review/ и .claude/skills/q... |
 | 2026-06-22 | [hoangsonww/Claude-Code-Agent-Monitor](https://github.com/hoangsonww/Claude-Code-Agent-Monitor/tree/master/.claude/skills) | debug-live-issue, mcp-operations, repo-onboarding, +1 more |  | 7.5 | medium | git clone https://github.com/hoangsonww/Claude-Code-Agent-Monitor && cd Claude-Code-Agent-Monitor |
 | 2026-06-22 | [Cukurikik/Omni](https://github.com/Cukurikik/Omni/tree/main/.claude/skills) | developing-genkit-dart, developing-genkit-go, developing-genkit-js, +9 more |  | 6.9 | medium | git clone https://github.com/Cukurikik/Omni && cd Omni |
 | 2026-06-21 | [browseros-ai/BrowserOS-agent](https://github.com/browseros-ai/BrowserOS-agent/tree/main/.claude/skills) | dev-debug, dev, dev1-start, +7 more |  | 6.9 | medium | git clone https://github.com/browseros-ai/BrowserOS-agent && cp -r BrowserOS-agent/.claude/skills ~/.claude/ |
