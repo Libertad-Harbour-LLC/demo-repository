@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 8
+Total: 9
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-23 | [marequest/lead-outreach-research-system: Blog Research + Hunter.io Lead Outreach](https://github.com/marequest/lead-outreach-research-system) | 1_1_Blog_Research_--_Start_and_call_1_2_blueprint, 4__Get_Hunter_io_unprocessed_leads_-_call_build_email_flow_blueprint |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/marequest/lead-outreach-research-system/main/blueprints/1_1_Blog_Rese... |
 | 2026-06-18 | [skadaai/awesome-n8n-templates: leadgen](https://github.com/skadaai/awesome-n8n-templates) | leadgen |  | 6.5 | medium | Скачать leadgen.json |
 | 2026-06-18 | [gguyon0925/n8n-reddit-scraper: subreddit-discovery](https://github.com/gguyon0925/n8n-reddit-scraper) | subreddit-discovery |  | 6.6 | medium | Скачать subreddit-discovery.json |
 | 2026-06-10 | [market-analyticx/seo-auditor-service: seo_auditor](https://github.com/market-analyticx/seo-auditor-service) | seo_auditor |  | 6.7 | medium | Скачать JSON: https://raw.githubusercontent.com/market-analyticx/seo-auditor-service/main/workflows/seo_auditor.json |

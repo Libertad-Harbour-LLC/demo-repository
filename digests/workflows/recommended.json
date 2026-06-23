@@ -1833,6 +1833,40 @@
       "tool": "n8n",
       "url": "https://github.com/lynote-ai/humanize-text"
     },
+    "https://github.com/marequest/lead-outreach-research-system": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "Make blueprint-система для автоматического исследования блогов и обработки лидов через Hunter.io с последующей сборкой email-потока. Предназначена для маркетологов и sales-команд, которые ищут и прогревают потенциальных клиентов через контентный аутрич.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-23",
+      "metric": "Количество лидов, попавших в email-очередь за прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "marequest/lead-outreach-research-system: Blog Research + Hunter.io Lead Outreach",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "1_1_Blog_Research_--_Start_and_call_1_2_blueprint",
+        "4__Get_Hunter_io_unprocessed_leads_-_call_build_email_flow_blueprint"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/marequest/lead-outreach-research-system/main/blueprints/1_1_Blog_Research_--_Start_and_call_1_2_blueprint.json",
+        "Открыть Make → Import blueprint → загрузить скачанный JSON",
+        "Повторить для второго blueprint (4__Get_Hunter_io_unprocessed_leads...)",
+        "Настроить credentials: Hunter.io API key, почтовый модуль (Gmail/SMTP)",
+        "Запустить тестовый прогон с тестовым доменом и проверить, что лиды появляются в очереди"
+      ],
+      "title": "marequest/lead-outreach-research-system: Blog Research + Hunter.io Lead Outreach",
+      "tool": "make",
+      "url": "https://github.com/marequest/lead-outreach-research-system"
+    },
     "https://github.com/market-analyticx/seo-auditor-service": {
       "category": "marketing_workflow",
       "confidence": "medium",
