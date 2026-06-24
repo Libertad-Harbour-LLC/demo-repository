@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 124
+Total: 127
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-24 | [vstakhovsky/shokunin-review](https://github.com/vstakhovsky/shokunin-review/tree/main/.claude/skills) | ponytail-audit, ponytail-debt, ponytail-help, +7 more |  | 6.5 | medium | git clone https://github.com/vstakhovsky/shokunin-review && cp -r shokunin-review/.claude/skills/shokunin-review <ваш... |
+| 2026-06-24 | [omnigent-ai/omnigent](https://github.com/omnigent-ai/omnigent/tree/main/.claude/skills) | antigravity-sdk-e2e-dev, cli-setup-verify, copilot-sdk-e2e-dev, +1 more |  | 7.5 | high | git clone https://github.com/omnigent-ai/omnigent && cp -r omnigent/.claude/skills/cli-setup-verify <ваш_проект>/.cla... |
+| 2026-06-24 | [frvnkfrmchicago/skills-library-v2](https://github.com/frvnkfrmchicago/skills-library-v2/tree/main/.claude/skills) | animation-designing, anti-glitch-debugging, anti-mock-enforcing, +46 more |  | 6.7 | medium | git clone https://github.com/frvnkfrmchicago/skills-library-v2 && cp -r skills-library-v2/.claude/skills/code-reviewi... |
 | 2026-06-23 | [regent-vcs/re_gent](https://github.com/regent-vcs/re_gent/tree/main/.claude/skills) | blame, log, rewind, +1 more |  | 8.0 | high | git clone https://github.com/regent-vcs/re_gent и скопировать папки .claude/skills/blame/, .claude/skills/log/, .clau... |
 | 2026-06-23 | [alfredolopez80/multi-agent-ralph-loop](https://github.com/alfredolopez80/multi-agent-ralph-loop/tree/main/.claude/skills) | adr, adversarial, architecture-diagram, +24 more |  | 7.7 | medium | git clone https://github.com/alfredolopez80/multi-agent-ralph-loop и скопировать нужные папки из .claude/skills/ (нач... |
 | 2026-06-23 | [JubaKitiashvili/everything-react-native-expo](https://github.com/JubaKitiashvili/everything-react-native-expo/tree/main/.claude/skills) | animate, build-fix, code-review, +14 more |  | 7.6 | medium | git clone https://github.com/JubaKitiashvili/everything-react-native-expo и скопировать .claude/skills/ в свой React ... |

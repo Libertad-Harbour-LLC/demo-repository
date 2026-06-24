@@ -1127,6 +1127,36 @@
       "title": "KhazP/vibe-coding-prompt-template",
       "url": "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills"
     },
+    "https://github.com/Kuneosu/make-slide/tree/main/.claude/skills": {
+      "category": "design_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит один Claude Skill make-slide для автоматической генерации слайдов/презентаций через Claude Code. Ориентирован на разработчиков и контент-мейкеров, которым нужно быстро создавать структурированные презентации.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-24",
+      "metric": "Качество структуры слайдов, соответствие теме, читаемость вывода",
+      "promoted_from_watch": false,
+      "repo_full_name": "Kuneosu/make-slide",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "make-slide"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Kuneosu/make-slide && cp -r make-slide/.claude/skills/make-slide <ваш_проект>/.claude/skills/",
+        "Запустить Claude Code: cd <ваш_проект> && claude",
+        "Дать промт: 'Use make-slide skill to create a 5-slide presentation about [ваша тема]' и проверить формат вывода"
+      ],
+      "title": "Kuneosu/make-slide",
+      "url": "https://github.com/Kuneosu/make-slide/tree/main/.claude/skills"
+    },
     "https://github.com/Lambenthan/empiricalwiki/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -3874,6 +3904,84 @@
       "title": "freshtechbro/claudedesignskills",
       "url": "https://github.com/freshtechbro/claudedesignskills/tree/main/.claude/skills"
     },
+    "https://github.com/frvnkfrmchicago/skills-library-v2/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Публичная библиотека из 49 Claude Skills для разных направлений разработки и дизайна: от code-reviewing и security-auditing до typography-enforcing и animation-designing. Репозиторий позиционируется как универсальный набор навыков для Claude Code.",
+      "final_score": 6.7,
+      "first_recommended": "2026-06-24",
+      "metric": "Глубина code review, покрытие проблем, actionable рекомендации",
+      "promoted_from_watch": false,
+      "repo_full_name": "frvnkfrmchicago/skills-library-v2",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 49,
+      "skills_in_repo": [
+        "animation-designing",
+        "anti-glitch-debugging",
+        "anti-mock-enforcing",
+        "api-integrating",
+        "aws-building",
+        "azure-building",
+        "backend-hardening",
+        "code-auditing",
+        "code-cleaning",
+        "code-reviewing",
+        "code-scrutinizing",
+        "component-building",
+        "consistency-checking",
+        "conversational-ai-building",
+        "copywriting-enforcing",
+        "database-designing",
+        "deploying",
+        "exit-gating",
+        "experience-designing",
+        "facilitating",
+        "flow-designing",
+        "frontend-architecting",
+        "game-developing",
+        "google-ai-integrating",
+        "hacker-scanning",
+        "implementation-guiding",
+        "interactive-animating",
+        "lab-orchestrating",
+        "mobile-first-enforcing",
+        "model-fine-tuning",
+        "multi-agent-designing",
+        "n8n-automating",
+        "onboarding-designing",
+        "orchestration-managing",
+        "pattern-referencing",
+        "performance-tuning",
+        "pre-deploy-gating",
+        "progress-tracking",
+        "prompt-engineering",
+        "research-conducting",
+        "search-building",
+        "security-auditing",
+        "supabase-building",
+        "tech-advising",
+        "testing-enforcing",
+        "three-d-developing",
+        "typography-enforcing",
+        "ux-designing",
+        "visual-auditing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/frvnkfrmchicago/skills-library-v2 && cp -r skills-library-v2/.claude/skills/code-reviewing <ваш_проект>/.claude/skills/",
+        "Запустить Claude Code: cd <ваш_проект> && claude",
+        "Дать промт: 'Use code-reviewing skill to review the last changes in this repo' и оценить детальность отчёта"
+      ],
+      "title": "frvnkfrmchicago/skills-library-v2",
+      "url": "https://github.com/frvnkfrmchicago/skills-library-v2/tree/main/.claude/skills"
+    },
     "https://github.com/fzyzcjy/flutter_rust_bridge/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -5805,6 +5913,39 @@
       "title": "oliver-kriska/claude-elixir-phoenix",
       "url": "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills"
     },
+    "https://github.com/omnigent-ai/omnigent/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий omnigent — платформа с 4 649 звёздами, содержащая 4 Claude Skills для сквозной разработки на разных SDK (antigravity, copilot, cursor). Навыки ориентированы на разработчиков, работающих с AI-инструментами на базе агентов.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-24",
+      "metric": "Корректность диагностики окружения, наличие actionable вывода",
+      "promoted_from_watch": false,
+      "repo_full_name": "omnigent-ai/omnigent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "antigravity-sdk-e2e-dev",
+        "cli-setup-verify",
+        "copilot-sdk-e2e-dev",
+        "cursor-sdk-e2e-dev"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/omnigent-ai/omnigent && cp -r omnigent/.claude/skills/cli-setup-verify <ваш_проект>/.claude/skills/",
+        "Запустить Claude Code в вашем проекте: cd <ваш_проект> && claude",
+        "Дать промт: 'Use cli-setup-verify skill to check my development environment setup' и проверить вывод"
+      ],
+      "title": "omnigent-ai/omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent/tree/main/.claude/skills"
+    },
     "https://github.com/opencue/cuecards/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -7308,6 +7449,45 @@
       ],
       "title": "vm0-ai/vm0",
       "url": "https://github.com/vm0-ai/vm0/tree/main/.claude/skills"
+    },
+    "https://github.com/vstakhovsky/shokunin-review/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Набор из 10 Claude Skills вокруг концепции shokunin (японский мастер-ремесленник) и ponytail-метрик для глубокого code review, аудита технического долга и оценки качества кода. Ориентирован на команды, практикующие качественный инжиниринг.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-24",
+      "metric": "Качество и структурированность code review, полезность shokunin-score для оценки",
+      "promoted_from_watch": false,
+      "repo_full_name": "vstakhovsky/shokunin-review",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "ponytail-audit",
+        "ponytail-debt",
+        "ponytail-help",
+        "ponytail-review",
+        "ponytail",
+        "shokunin-gherkin",
+        "shokunin-review",
+        "shokunin-score",
+        "shokunin-strategy",
+        "shokunin-verify"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/vstakhovsky/shokunin-review && cp -r shokunin-review/.claude/skills/shokunin-review <ваш_проект>/.claude/skills/",
+        "Запустить Claude Code: cd <ваш_проект> && claude",
+        "Дать промт: 'Use shokunin-review skill to perform a quality review of the current codebase' и оценить структуру отчёта"
+      ],
+      "title": "vstakhovsky/shokunin-review",
+      "url": "https://github.com/vstakhovsky/shokunin-review/tree/main/.claude/skills"
     },
     "https://github.com/webiny/webiny-js/tree/next/.claude/skills": {
       "category": "vibe_coding_skill",
