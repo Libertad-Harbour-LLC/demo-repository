@@ -1359,6 +1359,44 @@
       "title": "LiorCohen/sdd",
       "url": "https://github.com/LiorCohen/sdd/tree/main/.claude/skills"
     },
+    "https://github.com/MetaMask/ocap-kernel/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "MetaMask ocap-kernel — репозиторий (9★) от MetaMask с 9 Claude Skills для автоматизации типичного dev-workflow: code review, commit, создание пакетов, E2E тесты с Docker, lint/build/test и управление changelogs. Ориентирован на web3/Ethereum разработчиков в стиле корпоративного open-source.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-25",
+      "metric": "Качество code review по сравнению с обычным запросом; корректность формата changelogs",
+      "promoted_from_watch": false,
+      "repo_full_name": "MetaMask/ocap-kernel",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "code-review",
+        "commit",
+        "create-package",
+        "evm-wallet-docker-e2e",
+        "glossary",
+        "lint-build-test",
+        "pr",
+        "push",
+        "update-changelogs"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/MetaMask/ocap-kernel && cp -r ocap-kernel/.claude/skills/code-review <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code на PR-бранче и вызвать /skill code-review — проверить качество ревью",
+        "Дополнительно скопировать commit и update-changelogs для тестирования git workflow automation"
+      ],
+      "title": "MetaMask/ocap-kernel",
+      "url": "https://github.com/MetaMask/ocap-kernel/tree/main/.claude/skills"
+    },
     "https://github.com/Neetx/ai-research-radar/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -1549,6 +1587,41 @@
       ],
       "title": "PackmindHub/packmind",
       "url": "https://github.com/PackmindHub/packmind/tree/main/.claude/skills"
+    },
+    "https://github.com/Piebald-AI/splitrail/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Splitrail — инструмент для анализа производительности и стоимости сессий Claude Code. Содержит 6 специализированных skills для мониторинга расходов, профилирования и работы с MCP-интеграцией, ориентирован на разработчиков, которые активно используют Claude Code и хотят контролировать затраты.",
+      "final_score": 8.1,
+      "first_recommended": "2026-06-25",
+      "metric": "Появляется ли отчёт о токенах/стоимости после вызова skill; насколько точны данные",
+      "promoted_from_watch": false,
+      "repo_full_name": "Piebald-AI/splitrail",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "mcp",
+        "new-analyzer",
+        "performance",
+        "pricing",
+        "tui",
+        "types"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Piebald-AI/splitrail && cp -r splitrail/.claude/skills/performance <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в проекте и проверить: /skill performance",
+        "Запустить несколько задач, затем вызвать /skill pricing — проверить отчёт о стоимости сессии"
+      ],
+      "title": "Piebald-AI/splitrail",
+      "url": "https://github.com/Piebald-AI/splitrail/tree/main/.claude/skills"
     },
     "https://github.com/ReinaMacCredy/maestro/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -2916,6 +2989,47 @@
       "title": "browseros-ai/BrowserOS-agent",
       "url": "https://github.com/browseros-ai/BrowserOS-agent/tree/main/.claude/skills"
     },
+    "https://github.com/changkun/wallfacer/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Wallfacer — репозиторий (72★) с 12 Claude Skills для управления жизненным циклом спецификаций: от создания и разбивки до валидации, имплементации и завершения. Ориентирован на команды, практикующие spec-driven разработку с Claude Code.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-25",
+      "metric": "Насколько структурированно Claude Code ведёт по spec lifecycle; есть ли потеря контекста между skills",
+      "promoted_from_watch": false,
+      "repo_full_name": "changkun/wallfacer",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "wf-spec-breakdown",
+        "wf-spec-create",
+        "wf-spec-diff",
+        "wf-spec-dispatch",
+        "wf-spec-impact",
+        "wf-spec-implement",
+        "wf-spec-refine",
+        "wf-spec-review-breakdown",
+        "wf-spec-review-impl",
+        "wf-spec-status",
+        "wf-spec-validate",
+        "wf-spec-wrapup"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/changkun/wallfacer && cp -r wallfacer/.claude/skills/wf-spec-create <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code и вызвать /skill wf-spec-create с описанием фичи, которую нужно имплементировать",
+        "Последовательно пройти цикл: wf-spec-breakdown → wf-spec-implement → wf-spec-validate → wf-spec-wrapup"
+      ],
+      "title": "changkun/wallfacer",
+      "url": "https://github.com/changkun/wallfacer/tree/main/.claude/skills"
+    },
     "https://github.com/cohen-liel/hivemind/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -3850,6 +3964,53 @@
       ],
       "title": "fmflurry/settings-opencode",
       "url": "https://github.com/fmflurry/settings-opencode/tree/master/.claude/skills"
+    },
+    "https://github.com/forecast-bio/ferray/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Ferray — новый репозиторий (21★, сегодня первый раз виден) с 18 Claude Skills, охватывающими полный цикл Rust-разработки: от архитектуры и kickoff до GPU-дисциплины, QA и релиза. Ориентирован на Rust-разработчиков, работающих с GPU-вычислениями и высококачественным кодом.",
+      "final_score": 7.4,
+      "first_recommended": "2026-06-25",
+      "metric": "Качество подсказок по исправлению Rust-ошибок; соответствие советов идиоматическому Rust",
+      "promoted_from_watch": false,
+      "repo_full_name": "forecast-bio/ferray",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 18,
+      "skills_in_repo": [
+        "architect",
+        "audit",
+        "check",
+        "commit",
+        "crosslink-guide",
+        "design",
+        "dev-release",
+        "featree",
+        "feature",
+        "kickoff",
+        "maintain",
+        "preflight",
+        "qa",
+        "review-pre-commit",
+        "rust-fix-discipline",
+        "rust-gpu-discipline",
+        "rust-quality",
+        "workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/forecast-bio/ferray && cp -r ferray/.claude/skills/rust-fix-discipline <ваш-rust-проект>/.claude/skills/",
+        "Запустить Claude Code в Rust-проекте с известной проблемой borrow checker и вызвать /skill rust-fix-discipline",
+        "Дополнительно скопировать rust-quality и rust-gpu-discipline если работаете с GPU (wgpu/CUDA)"
+      ],
+      "title": "forecast-bio/ferray",
+      "url": "https://github.com/forecast-bio/ferray/tree/main/.claude/skills"
     },
     "https://github.com/freshtechbro/claudedesignskills/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -5461,6 +5622,37 @@
       ],
       "title": "moshuying/pitchcraft",
       "url": "https://github.com/moshuying/pitchcraft/tree/main/.claude/skills"
+    },
+    "https://github.com/mozilla/fx-private-relay/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Firefox Private Relay — продукт Mozilla (1746★) с двумя Claude Skills: pr-ready (проверка готовности PR к мержу) и ble (назначение не задокументировано публично, предположительно workflow для Bluetooth или внутренний термин). Один из немногих примеров крупной open-source организации, внедрившей Claude Skills в production-репозиторий.",
+      "final_score": 7.5,
+      "first_recommended": "2026-06-25",
+      "metric": "Полнота чеклиста PR-ready; есть ли false positives/negatives в готовности PR",
+      "promoted_from_watch": false,
+      "repo_full_name": "mozilla/fx-private-relay",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 7,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "ble",
+        "pr-ready"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/mozilla/fx-private-relay && cp -r fx-private-relay/.claude/skills/pr-ready <ваш-проект>/.claude/skills/",
+        "Запустить Claude Code в проекте с открытым PR-бранчем и вызвать /skill pr-ready",
+        "Сравнить результат с ручным чеклистом PR — проверить, какие пункты skill автоматизирует"
+      ],
+      "title": "mozilla/fx-private-relay",
+      "url": "https://github.com/mozilla/fx-private-relay/tree/main/.claude/skills"
     },
     "https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills": {
       "added_manually": true,

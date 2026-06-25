@@ -1,11 +1,16 @@
 # Recommended Claude Skills — all time
 
-Total: 205
+Total: 210
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-25 | [mozilla/fx-private-relay](https://github.com/mozilla/fx-private-relay/tree/main/.claude/skills) | ble, pr-ready |  | 7.5 | high | git clone https://github.com/mozilla/fx-private-relay && cp -r fx-private-relay/.claude/skills/pr-ready <ваш-проект>/... |
+| 2026-06-25 | [forecast-bio/ferray](https://github.com/forecast-bio/ferray/tree/main/.claude/skills) | architect, audit, check, +15 more |  | 7.4 | medium | git clone https://github.com/forecast-bio/ferray && cp -r ferray/.claude/skills/rust-fix-discipline <ваш-rust-проект>... |
+| 2026-06-25 | [changkun/wallfacer](https://github.com/changkun/wallfacer/tree/main/.claude/skills) | wf-spec-breakdown, wf-spec-create, wf-spec-diff, +9 more |  | 7.0 | medium | git clone https://github.com/changkun/wallfacer && cp -r wallfacer/.claude/skills/wf-spec-create <ваш-проект>/.claude... |
+| 2026-06-25 | [Piebald-AI/splitrail](https://github.com/Piebald-AI/splitrail/tree/main/.claude/skills) | mcp, new-analyzer, performance, +3 more |  | 8.1 | high | git clone https://github.com/Piebald-AI/splitrail && cp -r splitrail/.claude/skills/performance <ваш-проект>/.claude/... |
+| 2026-06-25 | [MetaMask/ocap-kernel](https://github.com/MetaMask/ocap-kernel/tree/main/.claude/skills) | code-review, commit, create-package, +6 more |  | 6.6 | medium | git clone https://github.com/MetaMask/ocap-kernel && cp -r ocap-kernel/.claude/skills/code-review <ваш-проект>/.claud... |
 | 2026-06-24 | [vstakhovsky/shokunin-review](https://github.com/vstakhovsky/shokunin-review/tree/main/.claude/skills) | ponytail-audit, ponytail-debt, ponytail-help, +7 more |  | 6.5 | medium | git clone https://github.com/vstakhovsky/shokunin-review && cp -r shokunin-review/.claude/skills/shokunin-review <ваш... |
 | 2026-06-24 | [omnigent-ai/omnigent](https://github.com/omnigent-ai/omnigent/tree/main/.claude/skills) | antigravity-sdk-e2e-dev, cli-setup-verify, copilot-sdk-e2e-dev, +1 more |  | 7.5 | high | git clone https://github.com/omnigent-ai/omnigent && cp -r omnigent/.claude/skills/cli-setup-verify <ваш_проект>/.cla... |
 | 2026-06-24 | [frvnkfrmchicago/skills-library-v2](https://github.com/frvnkfrmchicago/skills-library-v2/tree/main/.claude/skills) | animation-designing, anti-glitch-debugging, anti-mock-enforcing, +46 more |  | 6.7 | medium | git clone https://github.com/frvnkfrmchicago/skills-library-v2 && cp -r skills-library-v2/.claude/skills/code-reviewi... |
