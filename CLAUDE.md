@@ -87,6 +87,12 @@ Container repo housing automation utilities. Two active tracking pipelines:
 - `TELEGRAM_WEBHOOK_SECRET` (optional) — random string; if set, used to validate incoming Telegram POST headers
 - `BOT_REPO` (optional, default `Libertad-Harbour-LLC/demo-repository`) — repo to fetch `recommended.json` from
 - `BOT_BRANCH` (optional, default `main`)
+- `BOT_GITHUB_TOKEN` (**required if `BOT_REPO` is PRIVATE**) — PAT with read
+  access to the repo. `raw.githubusercontent.com` returns 404 for private
+  repos without auth, so without this the bot reads empty data (all categories
+  show 0, lists show «Пусто»). With it, the bot fetches the data JSONs via the
+  authenticated GitHub contents API. Falls back to `GITHUB_TOKEN`. Not needed
+  for a public repo. Verify via `GET /api/telegram` → `github_read_token_set`.
 
 ## Conventions
 - Secrets never committed; read from env only.
