@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 14
+Total: 15
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-25 | [DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle](https://github.com/DINAKAR-S/N8N-Workflows) | 1 Automated Social Media Post Scheduler with Google Sheets Content Calendar, 10 AI support system using website data (RAG pipeline) (1), 11 Discover local business leads and run automated cold email sequences with Google Maps and Gmail (1), +2 more |  | 5.9 | medium | Скачать нужный JSON из репозитория (например, workflow #1 — Social Media Scheduler) |
 | 2026-06-22 | [women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos](https://github.com/women-in-ai-ireland/march-2025-group-1) | facebook_post, short_videos |  | 6.5 | medium | Скачать JSON: wget https://raw.githubusercontent.com/women-in-ai-ireland/march-2025-group-1/main/Workflows/facebook_p... |
 | 2026-06-12 | [mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator](https://github.com/mhmdmnsor292003-arch/free-ai-tools) | ai-code-reviewer-api, ai-code-reviewer-landing-page, ai-email-writer-api, +2 more |  | 6.6 | medium | Скачать JSON нужного workflow (например, ai-linkedin-post-generator-api.json) |
 | 2026-06-11 | [yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)](https://github.com/yigitkonur/n8n-workflows-craft) | craft-ai-assistant-gen, craft-ai-research-agent, craft-appointment-manager, +2 more |  | 6.2 | medium | Скачать нужный JSON, например craft-ai-assistant-gen.json |

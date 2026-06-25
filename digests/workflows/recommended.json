@@ -167,6 +167,43 @@
       "tool": "n8n",
       "url": "https://github.com/ChiefGyk3D/siem-docker-stack"
     },
+    "https://github.com/DINAKAR-S/N8N-Workflows": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Коллекция из 5 n8n workflow, охватывающих публикацию в соцсети по расписанию (Google Sheets как контент-план), автопостинг в Instagram, планировщик LinkedIn, RAG-поддержку клиентов и автоматизированные холодные email-последовательности через Google Maps и Gmail. Подходит для маркетологов и агентств, управляющих несколькими каналами.",
+      "final_score": 5.9,
+      "first_recommended": "2026-06-25",
+      "metric": "Количество успешно опубликованных постов за первый тестовый прогон",
+      "promoted_from_watch": false,
+      "repo_full_name": "DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "1 Automated Social Media Post Scheduler with Google Sheets Content Calendar",
+        "10 AI support system using website data (RAG pipeline) (1)",
+        "11 Discover local business leads and run automated cold email sequences with Google Maps and Gmail (1)",
+        "2 Auto-post images from Google Drive to Instagram (1)",
+        "3 LinkedIn Post Scheduler with Time and Status Tracking"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из репозитория (например, workflow #1 — Social Media Scheduler)",
+        "Импортировать в n8n через Import Workflow",
+        "Подключить Google Sheets credential и указать ID таблицы с контент-планом",
+        "Настроить целевые соцсети (Instagram/LinkedIn) через соответствующие credentials",
+        "Запустить тестовый прогон с одной записью в Google Sheets"
+      ],
+      "title": "DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle",
+      "tool": "n8n",
+      "url": "https://github.com/DINAKAR-S/N8N-Workflows"
+    },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "category": "general_workflow",
       "confidence": "high",
@@ -2630,6 +2667,39 @@
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base"
     },
+    "https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической проверки обновлений Gradle-зависимостей в Android/Java проектах и отправки уведомлений в Slack при наличии новых версий. Рассчитан на Android-разработчиков и DevOps-инженеров, которые хотят держать зависимости актуальными без ручного мониторинга.",
+      "final_score": 5.9,
+      "first_recommended": "2026-06-25",
+      "metric": "Получено Slack-уведомление при наличии outdated зависимости",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json",
+        "Импортировать в n8n",
+        "Настроить Slack Bot credential",
+        "Указать репозиторий/путь к Gradle-файлу в параметрах",
+        "Запустить и проверить уведомление в Slack"
+      ],
+      "title": "weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications"
+    },
     "https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive": {
       "category": "video_workflow",
       "confidence": "medium",
@@ -2695,6 +2765,39 @@
       "title": "weblineindia/n8n-Automated-APK-security-scanning: APK Security Scanner & PDF Report Generator",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive"
+    },
+    "https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического обнаружения неудачных попыток входа: при срабатывании создаёт задачу в Jira, отправляет алерт в Slack и логирует событие в Notion. Предназначен для DevOps и SecOps команд, которым нужна реактивная реакция на угрозы безопасности без ручного мониторинга.",
+      "final_score": 6.1,
+      "first_recommended": "2026-06-25",
+      "metric": "Время от failed login до появления Jira ticket и Slack-уведомления",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Jira API token, Slack Bot token, Notion API token",
+        "Указать Jira project key и Notion database ID в параметрах nodes",
+        "Эмулировать failed login событие (webhook или тестовый trigger) и проверить создание тикета"
+      ],
+      "title": "weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging"
     },
     "https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout": {
       "category": "content_workflow",

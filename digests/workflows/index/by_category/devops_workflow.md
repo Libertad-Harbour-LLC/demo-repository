@@ -1,9 +1,11 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 13
+Total: 15
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-25 | [weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection](https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging) | main |  | 6.1 | medium | Скачать JSON по ссылке json_url |
+| 2026-06-25 | [weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater](https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications) | main |  | 5.9 | medium | Скачать main.json |
 | 2026-06-21 | [papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats](https://github.com/papadopouloskyriakos/agentic-chatops) | claude-gateway-agentic-stats, claude-gateway-chaos-logs-api, claude-gateway-chaos-test-recover, +2 more |  | 7.6 | high | Скачать JSON: https://raw.githubusercontent.com/papadopouloskyriakos/agentic-chatops/main/workflows/claude-gateway-ag... |
 | 2026-06-18 | [ChiefGyk3D/siem-docker-stack: grafana-alert-router](https://github.com/ChiefGyk3D/siem-docker-stack) | grafana-alert-router |  | 6.5 | medium | Скачать grafana-alert-router.json |
 | 2026-06-10 | [PacktPublishing/Incident-Response-with-Threat-Intelligence: n8n_thehive_velociraptor_workflow](https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence) | n8n_thehive_velociraptor_workflow |  | 7.0 | medium | Скачать JSON: https://raw.githubusercontent.com/PacktPublishing/Incident-Response-with-Threat-Intelligence/main/Chapt... |

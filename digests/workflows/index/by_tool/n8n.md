@@ -1,9 +1,12 @@
 # Recommended — tool: n8n
 
-Total: 84
+Total: 87
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-25 | [weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection](https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging) | main |  | 6.1 | medium | Скачать JSON по ссылке json_url |
+| 2026-06-25 | [weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater](https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications) | main |  | 5.9 | medium | Скачать main.json |
+| 2026-06-25 | [DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle](https://github.com/DINAKAR-S/N8N-Workflows) | 1 Automated Social Media Post Scheduler with Google Sheets Content Calendar, 10 AI support system using website data (RAG pipeline) (1), 11 Discover local business leads and run automated cold email sequences with Google Maps and Gmail (1), +2 more |  | 5.9 | medium | Скачать нужный JSON из репозитория (например, workflow #1 — Social Media Scheduler) |
 | 2026-06-22 | [women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos](https://github.com/women-in-ai-ireland/march-2025-group-1) | facebook_post, short_videos |  | 6.5 | medium | Скачать JSON: wget https://raw.githubusercontent.com/women-in-ai-ireland/march-2025-group-1/main/Workflows/facebook_p... |
 | 2026-06-21 | [papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats](https://github.com/papadopouloskyriakos/agentic-chatops) | claude-gateway-agentic-stats, claude-gateway-chaos-logs-api, claude-gateway-chaos-test-recover, +2 more |  | 7.6 | high | Скачать JSON: https://raw.githubusercontent.com/papadopouloskyriakos/agentic-chatops/main/workflows/claude-gateway-ag... |
 | 2026-06-20 | [n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)](https://github.com/n8n-io/test-workflows) | 138, 161, 179, +2 more |  | 5.5 | high | Перейти на https://github.com/n8n-io/test-workflows и выбрать нужный JSON из папки workflows/ |
