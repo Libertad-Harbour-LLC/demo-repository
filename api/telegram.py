@@ -138,6 +138,44 @@ VALID_SOURCES = set(SOURCES.keys())
 # === In-process cache (keyed by URL) ===
 _cache: dict[str, tuple[float, dict]] = {}
 
+# Token for reading the data JSONs when the repo is PRIVATE. raw.githubusercontent.com
+# returns 404 for private repos without auth, so when a token is present we fetch via
+# the GitHub contents API instead (Accept: raw → same JSON body). Set BOT_GITHUB_TOKEN
+# (a fine-grained/classic PAT with read access to BOT_REPO) in Vercel env vars. Without
+# a token we fall back to the plain raw URL, which works for public repos.
+GITHUB_READ_TOKEN = (
+    os.environ.get("BOT_GITHUB_TOKEN", "").strip()
+    or os.environ.get("GITHUB_TOKEN", "").strip()
+)
+_RAW_RE = re.compile(
+    r"^https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/([^/]+)/(.+)$"
+)
+
+
+def _http_get_json(url: str):
+    """GET ``url`` as JSON. For a raw.githubusercontent.com URL with a token
+    set, route through the authenticated contents API so PRIVATE repos work.
+    Returns the parsed JSON dict, or None on any non-200 / error.
+    """
+    m = _RAW_RE.match(url)
+    if GITHUB_READ_TOKEN and m:
+        owner, repo, branch, path = m.groups()
+        api = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}?ref={branch}"
+        resp = requests.get(
+            api,
+            timeout=10,
+            headers={
+                "Authorization": f"Bearer {GITHUB_READ_TOKEN}",
+                "Accept": "application/vnd.github.raw",
+                "User-Agent": "trendwatch-bot",
+            },
+        )
+    else:
+        resp = requests.get(url, timeout=10)
+    if resp.status_code == 200:
+        return resp.json()
+    return None
+
 
 def _fetch_url(url: str, empty: dict) -> dict:
     """GET a JSON URL with a short in-process cache. Returns ``empty`` on miss."""
@@ -146,11 +184,9 @@ def _fetch_url(url: str, empty: dict) -> dict:
     if cached is not None and now - cached[0] < CACHE_TTL_SECONDS:
         return cached[1]
     try:
-        resp = requests.get(url, timeout=10)
-        if resp.status_code == 200:
-            data = resp.json()
-        else:
-            data = dict(empty)
+        data = _http_get_json(url)
+        if data is None:
+            data = cached[1] if cached is not None else dict(empty)
     except Exception:
         data = cached[1] if cached is not None else dict(empty)
     _cache[url] = (now, data)
@@ -1544,6 +1580,7 @@ class handler(BaseHTTPRequestHandler):  # noqa: N801 (required name by Vercel)
             "llm_model": os.environ.get("BOT_LLM_MODEL", "claude-haiku-4-5-20251001") if LLM_ENABLED else None,
             "llm_cache_hit_ratio_last20": cache_ratio,
             "admin_count": len(ADMIN_IDS),
+            "github_read_token_set": bool(GITHUB_READ_TOKEN),
             "repo": REPO,
             "branch": BRANCH,
         }).encode()
