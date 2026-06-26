@@ -381,6 +381,39 @@
       "tool": "make",
       "url": "https://github.com/Endgame-Labs/mechanizer"
     },
+    "https://github.com/FabricioLR/Financial": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматизации финансового учёта. Репозиторий был обновлён прямо сегодня (26 июня 2026), что делает его самым свежим кандидатом за этот период.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-26",
+      "metric": "Количество обработанных финансовых записей за прогон; корректность агрегации",
+      "promoted_from_watch": false,
+      "repo_full_name": "FabricioLR/Financial: FinancialN8NWorkflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "FinancialN8NWorkflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/FabricioLR/Financial/master/FinancialN8NWorkflow.json",
+        "Открыть n8n, перейти в Workflows → Import from file/URL",
+        "Вставить скачанный JSON или ссылку на raw-файл",
+        "Изучить node-граф: определить какие credentials требуются (БД, API, Google Sheets и т.д.)",
+        "Запустить тестовый прогон с тестовыми данными"
+      ],
+      "title": "FabricioLR/Financial: FinancialN8NWorkflow",
+      "tool": "n8n",
+      "url": "https://github.com/FabricioLR/Financial"
+    },
     "https://github.com/JeffersonMFti/agente-dra-julia-advocacia": {
       "category": "general_workflow",
       "confidence": "medium",

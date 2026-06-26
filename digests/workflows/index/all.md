@@ -1,11 +1,12 @@
 # Recommended Claude Skills — all time
 
-Total: 91
+Total: 92
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-26 | [FabricioLR/Financial: FinancialN8NWorkflow](https://github.com/FabricioLR/Financial) | FinancialN8NWorkflow |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/FabricioLR/Financial/master/FinancialN8NWorkflow.json |
 | 2026-06-25 | [weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection](https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging) | main |  | 6.1 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-25 | [weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater](https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications) | main |  | 5.9 | medium | Скачать main.json |
 | 2026-06-25 | [DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle](https://github.com/DINAKAR-S/N8N-Workflows) | 1 Automated Social Media Post Scheduler with Google Sheets Content Calendar, 10 AI support system using website data (RAG pipeline) (1), 11 Discover local business leads and run automated cold email sequences with Google Maps and Gmail (1), +2 more |  | 5.9 | medium | Скачать нужный JSON из репозитория (например, workflow #1 — Social Media Scheduler) |

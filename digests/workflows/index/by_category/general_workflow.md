@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 19
+Total: 20
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-26 | [FabricioLR/Financial: FinancialN8NWorkflow](https://github.com/FabricioLR/Financial) | FinancialN8NWorkflow |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/FabricioLR/Financial/master/FinancialN8NWorkflow.json |
 | 2026-06-20 | [n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)](https://github.com/n8n-io/test-workflows) | 138, 161, 179, +2 more |  | 5.5 | high | Перейти на https://github.com/n8n-io/test-workflows и выбрать нужный JSON из папки workflows/ |
 | 2026-06-17 | [ravindragith/zie619: 1123_Automate + 1125_Create](https://github.com/ravindragith/zie619) | 1123_Automate, 1125_Create |  | 4.8 | high | Скачать JSON: https://raw.githubusercontent.com/ravindragith/zie619/main/workflows/1123_Automate.json |
 | 2026-06-15 | [AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video](https://github.com/AtlasCloudAI/n8n-nodes-atlascloud) | 01-chatbot, 02-text-to-image, 03-async-video |  | 7.3 | medium | Скачать 01-chatbot.json по ссылке json_url |
