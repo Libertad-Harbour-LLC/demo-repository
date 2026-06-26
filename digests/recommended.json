@@ -6957,6 +6957,52 @@
       "title": "sergebulaev/linkedin-skills",
       "url": "https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills"
     },
+    "https://github.com/serithemage/serverless-openclaw/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 17 Claude Skills для serverless-разработки на AWS Lambda. Охватывает полный цикл: архитектуру, деплой, миграцию, безопасность, cost-оптимизацию и паттерны для соло-мейнтейнера.",
+      "final_score": 7.7,
+      "first_recommended": "2026-06-26",
+      "metric": "Claude использует специфические паттерны из SKILL.md (inbox/guard/release workflow), а не generic-ответы",
+      "promoted_from_watch": false,
+      "repo_full_name": "serithemage/serverless-openclaw",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 17,
+      "skills_in_repo": [
+        "architecture",
+        "cold-start",
+        "context",
+        "cost",
+        "deploy",
+        "dev",
+        "implement",
+        "lambda-migration",
+        "openclaw",
+        "release",
+        "security",
+        "solo-maintainer-guard",
+        "solo-maintainer-inbox",
+        "solo-maintainer-release",
+        "solo-maintainer",
+        "status",
+        "troubleshoot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/serithemage/serverless-openclaw && cp -r serverless-openclaw/.claude/skills/solo-maintainer ~/.claude/skills/ (или в папку своего проекта)",
+        "Открыть Claude Code в своём serverless-проекте (или создать тестовый), убедиться что .claude/skills/solo-maintainer/SKILL.md подхватился",
+        "Спросить Claude: 'Помоги спланировать релиз этого Lambda-сервиса, используя solo-maintainer workflow' — проверить, применяет ли Claude инструкции из SKILL.md"
+      ],
+      "title": "serithemage/serverless-openclaw",
+      "url": "https://github.com/serithemage/serverless-openclaw/tree/main/.claude/skills"
+    },
     "https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -7285,6 +7331,41 @@
       ],
       "title": "susomejias/rembric",
       "url": "https://github.com/susomejias/rembric/tree/main/.claude/skills"
+    },
+    "https://github.com/swamp-club/swamp/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий языка программирования Swamp содержит 6 Claude Skills для DDD-разработки, управления GitHub PR/issues и форматирования терминального вывода. Появился сегодня, 457 звёзд.",
+      "final_score": 7.2,
+      "first_recommended": "2026-06-26",
+      "metric": "Claude применяет DDD-терминологию (bounded contexts, aggregates, domain events) из SKILL.md в своих рекомендациях",
+      "promoted_from_watch": false,
+      "repo_full_name": "swamp-club/swamp",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 6,
+      "skills_in_repo": [
+        "ddd",
+        "github-pr",
+        "issue-lifecycle",
+        "swamp-getting-started",
+        "swamp",
+        "terminal-output"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/swamp-club/swamp && cp -r swamp/.claude/skills/ddd /path/to/your/project/.claude/skills/",
+        "Запустить Claude Code в своём проекте с DDD-архитектурой (или любом достаточно крупном проекте)",
+        "Дать промт: 'Проанализируй архитектуру этого проекта с точки зрения DDD и предложи улучшения' — проверить, использует ли Claude контекст из skill ddd"
+      ],
+      "title": "swamp-club/swamp",
+      "url": "https://github.com/swamp-club/swamp/tree/main/.claude/skills"
     },
     "https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

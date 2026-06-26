@@ -1,11 +1,13 @@
 # Recommended Claude Skills — all time
 
-Total: 210
+Total: 212
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-26 | [swamp-club/swamp](https://github.com/swamp-club/swamp/tree/main/.claude/skills) | ddd, github-pr, issue-lifecycle, +3 more |  | 7.2 | medium | git clone https://github.com/swamp-club/swamp && cp -r swamp/.claude/skills/ddd /path/to/your/project/.claude/skills/ |
+| 2026-06-26 | [serithemage/serverless-openclaw](https://github.com/serithemage/serverless-openclaw/tree/main/.claude/skills) | architecture, cold-start, context, +14 more |  | 7.7 | medium | git clone https://github.com/serithemage/serverless-openclaw && cp -r serverless-openclaw/.claude/skills/solo-maintai... |
 | 2026-06-25 | [mozilla/fx-private-relay](https://github.com/mozilla/fx-private-relay/tree/main/.claude/skills) | ble, pr-ready |  | 7.5 | high | git clone https://github.com/mozilla/fx-private-relay && cp -r fx-private-relay/.claude/skills/pr-ready <ваш-проект>/... |
 | 2026-06-25 | [forecast-bio/ferray](https://github.com/forecast-bio/ferray/tree/main/.claude/skills) | architect, audit, check, +15 more |  | 7.4 | medium | git clone https://github.com/forecast-bio/ferray && cp -r ferray/.claude/skills/rust-fix-discipline <ваш-rust-проект>... |
 | 2026-06-25 | [changkun/wallfacer](https://github.com/changkun/wallfacer/tree/main/.claude/skills) | wf-spec-breakdown, wf-spec-create, wf-spec-diff, +9 more |  | 7.0 | medium | git clone https://github.com/changkun/wallfacer && cp -r wallfacer/.claude/skills/wf-spec-create <ваш-проект>/.claude... |
