@@ -285,6 +285,36 @@
       "title": "ClickHouse/pg_stat_ch",
       "url": "https://github.com/ClickHouse/pg_stat_ch/tree/main/.claude/skills"
     },
+    "https://github.com/Couchers-org/couchers/tree/develop/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Open-source платформа для couchsurfing (553 звезды) использует Claude Skill pr для автоматизации pull request workflow. Промоушен из watch-листа: +6 звёзд за последние 24 часа.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-27",
+      "metric": "Время на подготовку PR description + качество (полнота описания изменений, checklist)",
+      "promoted_from_watch": false,
+      "repo_full_name": "Couchers-org/couchers",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "pr"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Couchers-org/couchers && cp -r couchers/.claude/skills/pr .claude/skills/ в ваш рабочий репозиторий",
+        "Запустить Claude Code при наличии готовых изменений для PR",
+        "Дать промпт: 'Use pr skill to create a pull request description for my current changes' и сравнить с тем, что написали бы вручную"
+      ],
+      "title": "Couchers-org/couchers",
+      "url": "https://github.com/Couchers-org/couchers/tree/develop/.claude/skills"
+    },
     "https://github.com/Cukurikik/Omni/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -1825,6 +1855,43 @@
       "title": "TheGoatPsy/claude-code-for-social-scientists",
       "url": "https://github.com/TheGoatPsy/claude-code-for-social-scientists/tree/main/.claude/skills"
     },
+    "https://github.com/Trevoke/org-gtd.el/tree/master/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий org-gtd.el (Emacs GTD-плагин, 476 звёзд) содержит 8 Claude Skills, покрывающих полный цикл разработки: от проектирования архитектуры до QA и рефакторинга. Ориентирован на разработчиков, использующих Claude Code для структурированной работы над кодовой базой.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-27",
+      "metric": "Насколько структурированнее становятся ответы Claude при использовании named skills vs без них",
+      "promoted_from_watch": false,
+      "repo_full_name": "Trevoke/org-gtd.el",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "architect",
+        "define",
+        "implement",
+        "qa",
+        "refactor",
+        "test",
+        "using-superpowers",
+        "writing-skills"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Trevoke/org-gtd.el && cp -r org-gtd.el/.claude/skills/architect ~/.claude/skills/ (или скопировать весь набор в .claude/skills/ вашего проекта)",
+        "Запустить Claude Code в рабочем проекте",
+        "Протестировать skill architect: попросить Claude 'Use architect skill to design the module structure for [ваш модуль]', затем implement: 'Use implement skill to write the code for [функция]'"
+      ],
+      "title": "Trevoke/org-gtd.el",
+      "url": "https://github.com/Trevoke/org-gtd.el/tree/master/.claude/skills"
+    },
     "https://github.com/TypedDevs/bashunit/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -1950,6 +2017,37 @@
       ],
       "title": "WillNigri/Agentic-Tool-Optimization",
       "url": "https://github.com/WillNigri/Agentic-Tool-Optimization/tree/main/.claude/skills"
+    },
+    "https://github.com/Wirasm/worktree-manager-skill/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий с 2 Claude Skills специально для управления git worktrees: scripts (автоматизация git worktree операций) и templates (шаблоны для новых worktree). 133 звезды, репо создан с единственной целью — предоставить Claude Skills.",
+      "final_score": 7.2,
+      "first_recommended": "2026-06-27",
+      "metric": "Скорость и корректность управления worktrees через Claude vs ручные git команды",
+      "promoted_from_watch": false,
+      "repo_full_name": "Wirasm/worktree-manager-skill",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "scripts",
+        "templates"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Wirasm/worktree-manager-skill && cp -r worktree-manager-skill/.claude/skills/ .claude/ в рабочий git-репозиторий",
+        "Запустить Claude Code",
+        "Протестировать: 'Use scripts skill to create a new worktree for feature branch feature/my-feature'"
+      ],
+      "title": "Wirasm/worktree-manager-skill",
+      "url": "https://github.com/Wirasm/worktree-manager-skill/tree/main/.claude/skills"
     },
     "https://github.com/WorldFlowAI/everything-claude-code/tree/main/.claude/skills": {
       "added_manually": true,
@@ -4504,6 +4602,37 @@
       ],
       "title": "hashintel/hash",
       "url": "https://github.com/hashintel/hash/tree/main/.claude/skills"
+    },
+    "https://github.com/heygen-com/heygen-cli/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Официальный CLI-репозиторий HeyGen (платформа AI-видео, 78 звёзд) содержит 2 Claude Skills: changelog-cli для автоматизации changelog и e2e-cli-test для end-to-end тестирования CLI-инструментов. Промоушен из watch-листа: +7 звёзд за сутки, пуш сегодня.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-27",
+      "metric": "Соответствие сгенерированного changelog реальным изменениям, корректность категоризации (feat/fix/chore)",
+      "promoted_from_watch": false,
+      "repo_full_name": "heygen-com/heygen-cli",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "changelog-cli",
+        "e2e-cli-test"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/heygen-com/heygen-cli && cp -r heygen-cli/.claude/skills/changelog-cli .claude/skills/ в ваш CLI-проект",
+        "Запустить Claude Code в репозитории с git history",
+        "Протестировать: 'Use changelog-cli skill to generate a changelog for changes since last release tag'"
+      ],
+      "title": "heygen-com/heygen-cli",
+      "url": "https://github.com/heygen-com/heygen-cli/tree/main/.claude/skills"
     },
     "https://github.com/hoangsonww/Claude-Code-Agent-Monitor/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -7454,6 +7583,39 @@
       ],
       "title": "taewanu/pr-review-agent",
       "url": "https://github.com/taewanu/pr-review-agent/tree/main/.claude/skills"
+    },
+    "https://github.com/talmolab/sleap/tree/develop/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "SLEAP — ML-фреймворк для pose estimation животных (597 звёзд, активный research-проект). Содержит 4 Claude Skills: investigation (расследование багов), pr, qt-testing (тестирование Qt GUI) и sleap-support (поддержка пользователей).",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-27",
+      "metric": "Системность анализа бага: Claude составляет план расследования, проверяет гипотезы последовательно",
+      "promoted_from_watch": false,
+      "repo_full_name": "talmolab/sleap",
+      "scores": {
+        "business_impact": 5,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "investigation",
+        "pr",
+        "qt-testing",
+        "sleap-support"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/talmolab/sleap -b develop && cp -r sleap/.claude/skills/investigation .claude/skills/ в ваш проект",
+        "Запустить Claude Code при наличии бага или неясного поведения",
+        "Протестировать: 'Use investigation skill to systematically investigate why [описание бага]'"
+      ],
+      "title": "talmolab/sleap",
+      "url": "https://github.com/talmolab/sleap/tree/develop/.claude/skills"
     },
     "https://github.com/testdouble/han/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

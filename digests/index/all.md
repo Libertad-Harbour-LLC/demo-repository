@@ -1,11 +1,16 @@
 # Recommended Claude Skills — all time
 
-Total: 212
+Total: 217
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-27 | [talmolab/sleap](https://github.com/talmolab/sleap/tree/develop/.claude/skills) | investigation, pr, qt-testing, +1 more |  | 6.5 | high | git clone https://github.com/talmolab/sleap -b develop && cp -r sleap/.claude/skills/investigation .claude/skills/ в ... |
+| 2026-06-27 | [heygen-com/heygen-cli](https://github.com/heygen-com/heygen-cli/tree/main/.claude/skills) | changelog-cli, e2e-cli-test |  | 7.0 | high | git clone https://github.com/heygen-com/heygen-cli && cp -r heygen-cli/.claude/skills/changelog-cli .claude/skills/ в... |
+| 2026-06-27 | [Wirasm/worktree-manager-skill](https://github.com/Wirasm/worktree-manager-skill/tree/main/.claude/skills) | scripts, templates |  | 7.2 | high | git clone https://github.com/Wirasm/worktree-manager-skill && cp -r worktree-manager-skill/.claude/skills/ .claude/ в... |
+| 2026-06-27 | [Trevoke/org-gtd.el](https://github.com/Trevoke/org-gtd.el/tree/master/.claude/skills) | architect, define, implement, +5 more |  | 7.3 | high | git clone https://github.com/Trevoke/org-gtd.el && cp -r org-gtd.el/.claude/skills/architect ~/.claude/skills/ (или с... |
+| 2026-06-27 | [Couchers-org/couchers](https://github.com/Couchers-org/couchers/tree/develop/.claude/skills) | pr |  | 7.1 | high | git clone https://github.com/Couchers-org/couchers && cp -r couchers/.claude/skills/pr .claude/skills/ в ваш рабочий ... |
 | 2026-06-26 | [swamp-club/swamp](https://github.com/swamp-club/swamp/tree/main/.claude/skills) | ddd, github-pr, issue-lifecycle, +3 more |  | 7.2 | medium | git clone https://github.com/swamp-club/swamp && cp -r swamp/.claude/skills/ddd /path/to/your/project/.claude/skills/ |
 | 2026-06-26 | [serithemage/serverless-openclaw](https://github.com/serithemage/serverless-openclaw/tree/main/.claude/skills) | architecture, cold-start, context, +14 more |  | 7.7 | medium | git clone https://github.com/serithemage/serverless-openclaw && cp -r serverless-openclaw/.claude/skills/solo-maintai... |
 | 2026-06-25 | [mozilla/fx-private-relay](https://github.com/mozilla/fx-private-relay/tree/main/.claude/skills) | ble, pr-ready |  | 7.5 | high | git clone https://github.com/mozilla/fx-private-relay && cp -r fx-private-relay/.claude/skills/pr-ready <ваш-проект>/... |
