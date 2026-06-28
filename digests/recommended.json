@@ -1969,6 +1969,58 @@
       "title": "UKGovernmentBEIS/inspect_evals",
       "url": "https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/.claude/skills"
     },
+    "https://github.com/Vinix24/vnx-orchestration/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Набор из 23 специализированных Claude Skills для командной разработки: каждый skill моделирует роль (architect, backend-developer, security-engineer и др.) и задаёт соответствующий контекст и поведение Claude Code. Репозиторий обновлялся в день публикации — 28 июня 2026.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-28",
+      "metric": "Соответствует ли ответ Claude Code ожидаемой роли: architect предлагает схему, backend-developer — код, security-engineer — уязвимости",
+      "promoted_from_watch": false,
+      "repo_full_name": "Vinix24/vnx-orchestration",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 23,
+      "skills_in_repo": [
+        "api-developer",
+        "architect",
+        "backend-developer",
+        "control-centre",
+        "data-analyst",
+        "database-engineer",
+        "debugger",
+        "excel-reporter",
+        "featureplan-kickoff",
+        "frontend-developer",
+        "intelligence-engineer",
+        "monitoring-specialist",
+        "performance-profiler",
+        "planner",
+        "pm",
+        "python-optimizer",
+        "quality-engineer",
+        "reviewer",
+        "security-engineer",
+        "supabase-expert",
+        "t0-orchestrator",
+        "test-engineer",
+        "vnx-manager"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/Vinix24/vnx-orchestration.git",
+        "Скопировать нужные папки из .claude/skills/ в свой проект: cp -r vnx-orchestration/.claude/skills/architect .claude/skills/ (повторить для нужных ролей)",
+        "Открыть Claude Code в своём проекте и дать промт: 'Используй роль architect — спроектируй структуру модулей для [описание фичи]', затем переключиться на 'backend-developer' и попросить реализацию"
+      ],
+      "title": "Vinix24/vnx-orchestration",
+      "url": "https://github.com/Vinix24/vnx-orchestration/tree/main/.claude/skills"
+    },
     "https://github.com/WillNigri/Agentic-Tool-Optimization/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -3915,6 +3967,36 @@
       ],
       "title": "ergrelet/windiff",
       "url": "https://github.com/ergrelet/windiff/tree/master/.claude/skills/windiff-version-diff-analysis"
+    },
+    "https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills/qa": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий с одним QA-skill для Claude Code, направленным на снижение 'slop' — шаблонных, избыточных или некачественных ответов при генерации кода. 148 звёзд указывают на реальный интерес сообщества.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-28",
+      "metric": "Сократилось ли количество шаблонных фраз, placeholder-комментариев и избыточного текста в ответах",
+      "promoted_from_watch": false,
+      "repo_full_name": "eric-tramel/slop-guard",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "qa"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/eric-tramel/slop-guard.git",
+        "Скопировать skill: cp -r slop-guard/.claude/skills/qa .claude/skills/",
+        "Запустить Claude Code и попросить написать функцию с намеренно расплывчатым описанием — сравнить вывод с QA-skill и без него"
+      ],
+      "title": "eric-tramel/slop-guard",
+      "url": "https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills/qa"
     },
     "https://github.com/erp-mafia/swedish-accounting-skills/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -6147,6 +6229,36 @@
       ],
       "title": "nicepkg/ai-workflow",
       "url": "https://github.com/nicepkg/ai-workflow/tree/main/.claude/skills"
+    },
+    "https://github.com/nicobailon/surf-cli/tree/main/.claude/skills/surf-codebase": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "CLI-утилита с встроенным Claude Skill для навигации и поиска по кодовой базе. 520 звёзд делают её одним из наиболее популярных репозиториев в выборке.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-28",
+      "metric": "Насколько точно Claude Code находит и описывает связи в кодовой базе по сравнению с обычным поиском",
+      "promoted_from_watch": false,
+      "repo_full_name": "nicobailon/surf-cli",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "surf-codebase"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/nicobailon/surf-cli.git",
+        "Скопировать skill: cp -r surf-cli/.claude/skills/surf-codebase .claude/skills/",
+        "Запустить Claude Code в большом проекте и дать промт: 'Используя surf-codebase skill, найди все места, где используется функция X, и объясни зависимости'"
+      ],
+      "title": "nicobailon/surf-cli",
+      "url": "https://github.com/nicobailon/surf-cli/tree/main/.claude/skills/surf-codebase"
     },
     "https://github.com/obot-platform/obot/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

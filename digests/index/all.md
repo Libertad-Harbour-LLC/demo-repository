@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 217
+Total: 220
 
 ## June 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-28 | [nicobailon/surf-cli](https://github.com/nicobailon/surf-cli/tree/main/.claude/skills/surf-codebase) | surf-codebase |  | 7.1 | high | Клонировать: git clone https://github.com/nicobailon/surf-cli.git |
+| 2026-06-28 | [eric-tramel/slop-guard](https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills/qa) | qa |  | 7.3 | high | Клонировать: git clone https://github.com/eric-tramel/slop-guard.git |
+| 2026-06-28 | [Vinix24/vnx-orchestration](https://github.com/Vinix24/vnx-orchestration/tree/main/.claude/skills) | api-developer, architect, backend-developer, +20 more |  | 7.3 | medium | Клонировать репо: git clone https://github.com/Vinix24/vnx-orchestration.git |
 | 2026-06-27 | [talmolab/sleap](https://github.com/talmolab/sleap/tree/develop/.claude/skills) | investigation, pr, qt-testing, +1 more |  | 6.5 | high | git clone https://github.com/talmolab/sleap -b develop && cp -r sleap/.claude/skills/investigation .claude/skills/ в ... |
 | 2026-06-27 | [heygen-com/heygen-cli](https://github.com/heygen-com/heygen-cli/tree/main/.claude/skills) | changelog-cli, e2e-cli-test |  | 7.0 | high | git clone https://github.com/heygen-com/heygen-cli && cp -r heygen-cli/.claude/skills/changelog-cli .claude/skills/ в... |
 | 2026-06-27 | [Wirasm/worktree-manager-skill](https://github.com/Wirasm/worktree-manager-skill/tree/main/.claude/skills) | scripts, templates |  | 7.2 | high | git clone https://github.com/Wirasm/worktree-manager-skill && cp -r worktree-manager-skill/.claude/skills/ .claude/ в... |

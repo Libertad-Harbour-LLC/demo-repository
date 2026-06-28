@@ -1,9 +1,12 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 136
+Total: 139
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-28 | [nicobailon/surf-cli](https://github.com/nicobailon/surf-cli/tree/main/.claude/skills/surf-codebase) | surf-codebase |  | 7.1 | high | Клонировать: git clone https://github.com/nicobailon/surf-cli.git |
+| 2026-06-28 | [eric-tramel/slop-guard](https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills/qa) | qa |  | 7.3 | high | Клонировать: git clone https://github.com/eric-tramel/slop-guard.git |
+| 2026-06-28 | [Vinix24/vnx-orchestration](https://github.com/Vinix24/vnx-orchestration/tree/main/.claude/skills) | api-developer, architect, backend-developer, +20 more |  | 7.3 | medium | Клонировать репо: git clone https://github.com/Vinix24/vnx-orchestration.git |
 | 2026-06-27 | [Wirasm/worktree-manager-skill](https://github.com/Wirasm/worktree-manager-skill/tree/main/.claude/skills) | scripts, templates |  | 7.2 | high | git clone https://github.com/Wirasm/worktree-manager-skill && cp -r worktree-manager-skill/.claude/skills/ .claude/ в... |
 | 2026-06-27 | [Trevoke/org-gtd.el](https://github.com/Trevoke/org-gtd.el/tree/master/.claude/skills) | architect, define, implement, +5 more |  | 7.3 | high | git clone https://github.com/Trevoke/org-gtd.el && cp -r org-gtd.el/.claude/skills/architect ~/.claude/skills/ (или с... |
 | 2026-06-27 | [Couchers-org/couchers](https://github.com/Couchers-org/couchers/tree/develop/.claude/skills) | pr |  | 7.1 | high | git clone https://github.com/Couchers-org/couchers && cp -r couchers/.claude/skills/pr .claude/skills/ в ваш рабочий ... |
