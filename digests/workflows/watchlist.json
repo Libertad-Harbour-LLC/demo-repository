@@ -54,6 +54,24 @@
       "url": "https://github.com/51-Shenn/wordpress-blog-automation",
       "why_interesting": "Verified JSON, свежий push (май 2026), понятная задача — автопостинг в WordPress. Имя файла workflow.json не очень информативно, но контекст репозитория (wordpress-blog-automation) и дата push указывают на актуальность."
     },
+    "https://github.com/51-Shenn/wordpress-cf7-n8n-pipeline": {
+      "added_date": "2026-06-29",
+      "category": "web_workflow",
+      "description": "Workflow для n8n, интегрирующий WordPress Contact Form 7 с n8n через pipeline. Обрабатывает входящие заявки с сайта и передаёт данные в следующие системы. Подходит для владельцев WordPress-сайтов, использующих CF7 для лидогенерации.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 1
+      },
+      "repo_full_name": "51-Shenn/wordpress-cf7-n8n-pipeline: workflow",
+      "signal_to_wait": "Рост звёзд или появление документации по настройке CF7 webhook",
+      "title": "51-Shenn/wordpress-cf7-n8n-pipeline: workflow",
+      "tool": "n8n",
+      "url": "https://github.com/51-Shenn/wordpress-cf7-n8n-pipeline",
+      "why_interesting": "Интеграция CF7 (один из самых популярных WP-плагинов для форм) с n8n — практическая задача для тысяч WordPress-сайтов. Два связанных репо от одного автора (51-Shenn) с wordpress-тематикой."
+    },
     "https://github.com/AbelCoplet/llama-cag-n8N": {
       "added_date": "2026-06-18",
       "category": "data_workflow",
@@ -431,6 +449,24 @@
       "tool": "n8n",
       "url": "https://github.com/UdaraChamidu/Zenra---n8n_AI_Agents",
       "why_interesting": "9 звёзд при одном workflow — выше среднего для нишевых n8n-репо. Verified JSON, is_new=true."
+    },
+    "https://github.com/V1D1AN/S1EM": {
+      "added_date": "2026-06-29",
+      "category": "devops_workflow",
+      "description": "Workflow для n8n в составе SIEM-платформы S1EM, интегрирующий TheHive (платформу управления инцидентами безопасности). Репозиторий насчитывает 462 звезды и является частью более широкой security-экосистемы. Подходит для SOC-команд и специалистов по информационной безопасности.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 462
+      },
+      "repo_full_name": "V1D1AN/S1EM: S1EM_TheHive",
+      "signal_to_wait": "Возобновление активности репозитория (новые push в 2026) или появление новых workflow в S1EM",
+      "title": "V1D1AN/S1EM: S1EM_TheHive",
+      "tool": "n8n",
+      "url": "https://github.com/V1D1AN/S1EM",
+      "why_interesting": "462 звезды — наивысший показатель в сегодняшнем наборе. Workflow является частью production SIEM-стека. Последний push в ноябре 2024, но высокая звёздность говорит о зрелости проекта."
     },
     "https://github.com/Victor7092/ai-automation-consultant": {
       "added_date": "2026-06-04",
@@ -1511,6 +1547,24 @@
       "tool": "make",
       "url": "https://github.com/zachariah-mithani/aplosai-workflows",
       "why_interesting": "Единственный Make-workflow с осмысленным именем; 0 звёзд, но verified; полезен как пример review automation в Make"
+    },
+    "https://github.com/zerAda/RestaurantAgentAutomation": {
+      "added_date": "2026-06-29",
+      "category": "marketing_workflow",
+      "description": "Набор из 3 n8n-workflow для автоматизации ресторанного агента: приём входящих сообщений из TikTok, исходящие ответы через WhatsApp и health check. Подходит для ресторанов, ведущих маркетинг в TikTok и коммуникацию через WhatsApp.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 3,
+        "stars": 0
+      },
+      "repo_full_name": "zerAda/RestaurantAgentAutomation: W1_IN_TIKTOK + W5_OUT_WA",
+      "signal_to_wait": "Появление документации или рост звёзд; подтверждение работающего TikTok webhook",
+      "title": "zerAda/RestaurantAgentAutomation: W1_IN_TIKTOK + W5_OUT_WA",
+      "tool": "n8n",
+      "url": "https://github.com/zerAda/RestaurantAgentAutomation",
+      "why_interesting": "TikTok→WhatsApp pipeline для ресторанного бизнеса — узкоспециализированный, но реалистичный сценарий. Workflow с TikTok-интеграцией редко встречаются в n8n-экосистеме."
     }
   }
 }

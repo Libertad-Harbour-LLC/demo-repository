@@ -1,10 +1,15 @@
 # Recommended — tool: n8n
 
-Total: 90
+Total: 95
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-29 | [papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders: main](https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders) | main |  | 6.5 | medium | Скачать main.json по ссылке json_url |
+| 2026-06-29 | [keila-moral/researchflow-ai: Arxiv_Monitor](https://github.com/keila-moral/researchflow-ai) | Arxiv_Monitor, Arxiv_Semantic_Search, Error_Handler |  | 5.8 | medium | Скачать Arxiv_Monitor.json |
 | 2026-06-29 | [bitsandbrainsai/ai-ad-creative-strategist: ai-ad-creative-strategist](https://github.com/bitsandbrainsai/ai-ad-creative-strategist) | ai-ad-creative-strategist |  | 6.6 | medium | Скачать ai-ad-creative-strategist.json по json_url |
+| 2026-06-29 | [SidhartSami/HiringAutomation: Hiring Pipeline](https://github.com/SidhartSami/HiringAutomation) | Hiring Pipeline - Email Sender, Hiring Pipeline - Ingestion |  | 6.4 | medium | Скачать оба JSON: Hiring Pipeline - Email Sender.json и Hiring Pipeline - Ingestion.json |
+| 2026-06-29 | [Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main](https://github.com/Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail) | main |  | 6.5 | medium | Скачать main.json |
+| 2026-06-29 | [AkuchiS/n8n-Templates: daily-rss-email-digest](https://github.com/AkuchiS/n8n-Templates) | daily-rss-email-digest, uptime-monitor-email-alert, webhook-input-validation-api, +1 more |  | 5.9 | medium | Скачать daily-rss-email-digest.json |
 | 2026-06-29 | [Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow](https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer) | wazuh-ai-security-analyzer-dynamic.workflow, wazuh-ai-security-analyzer.workflow |  | 6.8 | medium | Скачать wazuh-ai-security-analyzer-dynamic.workflow.json по json_url |
 | 2026-06-26 | [FabricioLR/Financial: FinancialN8NWorkflow](https://github.com/FabricioLR/Financial) | FinancialN8NWorkflow |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/FabricioLR/Financial/master/FinancialN8NWorkflow.json |
 | 2026-06-25 | [weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection](https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging) | main |  | 6.1 | medium | Скачать JSON по ссылке json_url |

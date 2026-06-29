@@ -34,6 +34,42 @@
       "tool": "n8n",
       "url": "https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer"
     },
+    "https://github.com/AkuchiS/n8n-Templates": {
+      "category": "content_workflow",
+      "confidence": "medium",
+      "description": "Коллекция из 4 готовых n8n-шаблонов с осмысленными именами: ежедневный RSS-дайджест по email, мониторинг uptime с email-алертами, валидация webhook-входных данных и логирование webhook в Google Sheets. Подходит для разработчиков и small-business владельцев, строящих базовую инфраструктуру автоматизации.",
+      "final_score": 5.9,
+      "first_recommended": "2026-06-29",
+      "metric": "Получение ежедневного email-дайджеста с новостями из RSS-источников",
+      "promoted_from_watch": false,
+      "repo_full_name": "AkuchiS/n8n-Templates: daily-rss-email-digest",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "daily-rss-email-digest",
+        "uptime-monitor-email-alert",
+        "webhook-input-validation-api",
+        "webhook-to-google-sheets-logger"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily-rss-email-digest.json",
+        "Импортировать в n8n",
+        "Настроить RSS-источники в соответствующем узле",
+        "Добавить email credentials (SMTP/Gmail)",
+        "Установить расписание и запустить тестовый прогон"
+      ],
+      "title": "AkuchiS/n8n-Templates: daily-rss-email-digest",
+      "tool": "n8n",
+      "url": "https://github.com/AkuchiS/n8n-Templates"
+    },
     "https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation": {
       "category": "sales_workflow",
       "confidence": "medium",
@@ -685,6 +721,39 @@
       "tool": "n8n",
       "url": "https://github.com/Nijamudin/automated-business-analysis-workflow"
     },
+    "https://github.com/Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "Workflow для n8n, который извлекает данные о сделках из Zoho CRM, генерирует персонализированные рекомендации по контенту с помощью GPT-4o-mini и отправляет их менеджеру или клиенту через Gmail. Подходит для B2B sales-команд, использующих Zoho CRM.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-29",
+      "metric": "Количество персонализированных email-рекомендаций, отправленных за день",
+      "promoted_from_watch": false,
+      "repo_full_name": "Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json",
+        "Импортировать в n8n",
+        "Добавить Zoho CRM OAuth2 credentials",
+        "Добавить OpenAI API key для GPT-4o-mini",
+        "Добавить Gmail OAuth2 credentials и запустить тест на одной сделке"
+      ],
+      "title": "Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main",
+      "tool": "n8n",
+      "url": "https://github.com/Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
+    },
     "https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence": {
       "category": "devops_workflow",
       "confidence": "medium",
@@ -885,6 +954,40 @@
       "title": "ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)",
       "tool": "n8n",
       "url": "https://github.com/ScraperNode/awesome-n8n-templates"
+    },
+    "https://github.com/SidhartSami/HiringAutomation": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "Два связанных n8n-workflow для автоматизации найма: первый отвечает за приём заявок кандидатов (Ingestion), второй — за автоматическую отправку email-уведомлений по статусу найма (Email Sender). Предназначен для HR-команд и рекрутеров малого и среднего бизнеса.",
+      "final_score": 6.4,
+      "first_recommended": "2026-06-29",
+      "metric": "Время от получения заявки до отправки подтверждения кандидату",
+      "promoted_from_watch": false,
+      "repo_full_name": "SidhartSami/HiringAutomation: Hiring Pipeline",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "Hiring Pipeline - Email Sender",
+        "Hiring Pipeline - Ingestion"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать оба JSON: Hiring Pipeline - Email Sender.json и Hiring Pipeline - Ingestion.json",
+        "Импортировать оба workflow в n8n",
+        "Настроить email-credentials (SMTP или Gmail OAuth2)",
+        "Проверить входящие webhook-триггеры в Ingestion workflow",
+        "Отправить тестовую заявку и проверить получение email-уведомления"
+      ],
+      "title": "SidhartSami/HiringAutomation: Hiring Pipeline",
+      "tool": "n8n",
+      "url": "https://github.com/SidhartSami/HiringAutomation"
     },
     "https://github.com/Tanishq60/n8n_nl2sql": {
       "category": "data_workflow",
@@ -1800,6 +1903,41 @@
       "tool": "n8n",
       "url": "https://github.com/jreyesr/n8n-nodes-tesseractjs"
     },
+    "https://github.com/keila-moral/researchflow-ai": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "Набор из 3 n8n-workflow для автоматического мониторинга новых научных статей на arXiv и семантического поиска по ним. Включает обработчик ошибок. Подходит для исследователей, аналитиков и ML-инженеров, следящих за научной литературой.",
+      "final_score": 5.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Количество релевантных статей, найденных и отфильтрованных за день",
+      "promoted_from_watch": false,
+      "repo_full_name": "keila-moral/researchflow-ai: Arxiv_Monitor",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "Arxiv_Monitor",
+        "Arxiv_Semantic_Search",
+        "Error_Handler"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать Arxiv_Monitor.json",
+        "Импортировать в n8n",
+        "Настроить поисковые запросы/категории arXiv",
+        "Настроить credentials для уведомлений (email/Telegram)",
+        "Запустить тест и убедиться в получении списка новых статей"
+      ],
+      "title": "keila-moral/researchflow-ai: Arxiv_Monitor",
+      "tool": "n8n",
+      "url": "https://github.com/keila-moral/researchflow-ai"
+    },
     "https://github.com/kevorklepedjian1/Autonomous-SDR-System": {
       "category": "sales_workflow",
       "confidence": "medium",
@@ -2283,6 +2421,39 @@
       "title": "papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats",
       "tool": "n8n",
       "url": "https://github.com/papadopouloskyriakos/agentic-chatops"
+    },
+    "https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "Workflow для n8n, автоматизирующий синхронизацию пропущенных строк локализации iOS-приложения: сканирует Google Sheets с переводами, находит пробелы и автоматически создаёт PR-плейсхолдеры в GitHub. Подходит разработчикам и менеджерам локализации мобильных приложений.",
+      "final_score": 6.5,
+      "first_recommended": "2026-06-29",
+      "metric": "Количество автоматически созданных PR с placeholder-переводами за период",
+      "promoted_from_watch": false,
+      "repo_full_name": "papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders: main",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "main"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать main.json по ссылке json_url",
+        "Импортировать в n8n через меню Import Workflow",
+        "Подключить Google Sheets credentials (OAuth2)",
+        "Подключить GitHub credentials (Personal Access Token с правами repo)",
+        "Запустить тестовый прогон на тестовом репозитории с неполными .strings-файлами"
+      ],
+      "title": "papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders: main",
+      "tool": "n8n",
+      "url": "https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders"
     },
     "https://github.com/ravindragith/zie619": {
       "category": "general_workflow",

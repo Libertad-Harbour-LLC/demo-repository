@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 15
+Total: 16
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-29 | [AkuchiS/n8n-Templates: daily-rss-email-digest](https://github.com/AkuchiS/n8n-Templates) | daily-rss-email-digest, uptime-monitor-email-alert, webhook-input-validation-api, +1 more |  | 5.9 | medium | Скачать daily-rss-email-digest.json |
 | 2026-06-25 | [DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle](https://github.com/DINAKAR-S/N8N-Workflows) | 1 Automated Social Media Post Scheduler with Google Sheets Content Calendar, 10 AI support system using website data (RAG pipeline) (1), 11 Discover local business leads and run automated cold email sequences with Google Maps and Gmail (1), +2 more |  | 5.9 | medium | Скачать нужный JSON из репозитория (например, workflow #1 — Social Media Scheduler) |
 | 2026-06-22 | [women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos](https://github.com/women-in-ai-ireland/march-2025-group-1) | facebook_post, short_videos |  | 6.5 | medium | Скачать JSON: wget https://raw.githubusercontent.com/women-in-ai-ireland/march-2025-group-1/main/Workflows/facebook_p... |
 | 2026-06-12 | [mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator](https://github.com/mhmdmnsor292003-arch/free-ai-tools) | ai-code-reviewer-api, ai-code-reviewer-landing-page, ai-email-writer-api, +2 more |  | 6.6 | medium | Скачать JSON нужного workflow (например, ai-linkedin-post-generator-api.json) |
