@@ -106,7 +106,10 @@ REDDIT_MIN_SCORE = 5
 SOURCES = {
     "n8n_github": True,
     "make_github": True,
-    "reddit": True,
+    "reddit": False,    # disabled — Reddit 403-blocks Actions IPs and the OAuth
+                        # route needs API creds we don't maintain; contributed 0
+                        # every run. Flip to True (+ REDDIT_CLIENT_ID/SECRET) to
+                        # re-enable.
 }
 
 MAX_ITEMS_PER_SOURCE = 150  # was 80 — the fetch hit the cap every run, so only
