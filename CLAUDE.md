@@ -1,7 +1,7 @@
 # demo-repository
 
 ## Project Overview
-Container repo housing automation utilities. Two active tracking pipelines:
+Container repo housing automation utilities. Three active tracking pipelines:
 
 1. **trendwatch** — daily GitHub Actions job (09:00 UTC) that scans for **new
    Claude Code Skills** (`.claude/skills/<name>/SKILL.md`) across GitHub
@@ -14,6 +14,13 @@ Container repo housing automation utilities. Two active tracking pipelines:
    Reuses trendwatch primitives (`analyzer`, `state`, `skill_db`,
    `telegram_client`, `index_writer`, `links`, `report`) and writes all
    artifacts to `digests/workflows/`. Same Telegram chat as skills.
+3. **opensource** — third pipeline (~every 3 days, 10:00 UTC) that scans GitHub
+   for **ready-to-use / self-hostable open-source products & platforms** (whole
+   repos, NOT skills/workflows: deploy as-is, rebrand + attach API, or
+   vibe-code on top). Topic + name/description/readme search + a seed list of
+   example repos. Reuses trendwatch primitives; artifacts to
+   `digests/opensource/`. Same Telegram chat; header `🧩 Open Source Radar`.
+   Bot source `opensource` (button `📦 Open Source`).
 
 ## Key Files
 | File | Purpose |
@@ -44,6 +51,13 @@ Container repo housing automation utilities. Two active tracking pipelines:
 | `workflows/normalizer.py` | Cross-source aggregation with workflow-specific `KNOWN_TOOLS` (wraps `trendwatch.normalizer`) |
 | `workflows/sources/{n8n_github,make_github,reddit}.py` | Per-source fetchers; both GitHub fetchers share `_github_common.py` |
 | `digests/workflows/` | Workflows-pipeline reports (`YYYY-MM-DD.md`), `state.json`, `recommended.json`, `watchlist.json`, `index/{all,by_category,by_tool,by_month}` |
+| `opensource/opensource.py` | Open Source radar orchestrator (deployable-OSS-products pipeline) — reuses trendwatch primitives |
+| `opensource/config.py` | OSS topics, description queries, `SEED_REPOS`, paths under `digests/opensource/`, `CATEGORIES` (`*_oss`) |
+| `opensource/prompts.py` | Open Source SYSTEM_PROMPT (Russian, cached) — "ready-to-use product vs library" schema |
+| `opensource/sources/github.py` | Repo-level discovery: topic + name/description/readme search + seed injection |
+| `opensource/normalizer.py` | Cross-source aggregation wrapping `trendwatch.normalizer` with OSS vocabulary |
+| `digests/opensource/` | Open Source pipeline reports + `state.json`, `recommended.json`, `watchlist.json`, `index/` |
+| `.github/workflows/opensource.yml` | ~Every-3-days cron (10:00 UTC) + commit-back of `digests/opensource/` |
 | `api/telegram.py` | Vercel serverless webhook for the interactive Telegram bot (`/start`, `/list`, `/categories`, `/months`) |
 | `requirements.txt` (root) | Vercel deploy deps (`requests`) — separate from `trendwatch/requirements.txt` |
 | `vercel.json`, `.vercelignore`, `bot-README.md` | Vercel deploy config + Russian deploy guide |
@@ -58,6 +72,8 @@ Container repo housing automation utilities. Two active tracking pipelines:
 - `python workflows/workflows.py` — workflows pipeline (analyzer + Telegram)
 - `python workflows/workflows.py --dry-run` — workflows fetch + print, no API calls
 - `python workflows/workflows.py --no-analyzer` — workflows links-only fallback
+- `python opensource/opensource.py` — Open Source radar (analyzer + Telegram)
+- `python opensource/opensource.py --dry-run` — OSS fetch + print, no API calls
 - `python trendwatch/trendwatch.py --backfill <repo-url> …` — enrich + push given repos to the web catalog (no analyzer/Telegram)
 - `python trendwatch/trendwatch.py --backfill-file urls.txt` — same, URLs from a file
 

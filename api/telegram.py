@@ -4,7 +4,8 @@ Single-file interactive bot that reads recommendation JSON files from
 raw.githubusercontent.com and serves them via Telegram commands and inline
 keyboards. Stateless — no DB inside the function, 60s in-process cache.
 
-Supports three data sources: Claude Skills, n8n Workflows, Make Workflows.
+Supports four data sources: Claude Skills, n8n Workflows, Make Workflows,
+Open Source (deployable OSS products/platforms).
 """
 from __future__ import annotations
 
@@ -99,6 +100,18 @@ _WORKFLOW_CATS = {
     "devops_workflow": "🛠 DevOps",
     "general_workflow": "🔧 Общее",
 }
+_OPENSOURCE_CATS = {
+    "video_oss": "🎬 Видео",
+    "avatars_oss": "🧑‍🎤 Аватары и инфлюенсеры",
+    "image_oss": "🎨 Изображения и баннеры",
+    "marketing_oss": "📣 Маркетинг и реклама",
+    "agents_oss": "🤖 Агенты и боты",
+    "automation_oss": "⚙️ Автоматизация",
+    "devtools_oss": "🛠 Dev-инструменты",
+    "apps_oss": "📱 Приложения и платформы",
+    "data_oss": "📊 Данные и ресёрч",
+    "general_oss": "🧩 Другое",
+}
 
 SOURCES: dict[str, Source] = {
     "skills": Source(
@@ -130,6 +143,16 @@ SOURCES: dict[str, Source] = {
         categories=_WORKFLOW_CATS,
         default_category="general_workflow",
         tool_filter="make",
+    ),
+    "opensource": Source(
+        key="opensource",
+        label="📦 Open Source",
+        header="Open Source решения",
+        url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/opensource/recommended.json",
+        watchlist_url=f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/digests/opensource/watchlist.json",
+        categories=_OPENSOURCE_CATS,
+        default_category="general_oss",
+        tool_filter=None,
     ),
 }
 
@@ -236,7 +259,7 @@ def _tg(method: str, **payload) -> dict:
 
 
 def _reply_keyboard() -> dict:
-    """Persistent reply keyboard with the 3 source buttons + menu/help.
+    """Persistent reply keyboard with the 4 source buttons + menu/help.
 
     Telegram only allows one `reply_markup` per sendMessage call. We attach
     this reply_keyboard only on messages that do NOT carry an inline_keyboard
@@ -248,7 +271,10 @@ def _reply_keyboard() -> dict:
             [
                 {"text": "📚 Claude Skills"},
                 {"text": "⚙️ N8N Workflows"},
+            ],
+            [
                 {"text": "🧩 Make Workflows"},
+                {"text": "📦 Open Source"},
             ],
             [
                 {"text": "📋 Меню"},
@@ -713,6 +739,7 @@ def screen_top_menu() -> Screen:
             [{"text": SOURCES["skills"].label, "callback_data": "src:skills:menu"}],
             [{"text": SOURCES["n8n"].label, "callback_data": "src:n8n:menu"}],
             [{"text": SOURCES["make"].label, "callback_data": "src:make:menu"}],
+            [{"text": SOURCES["opensource"].label, "callback_data": "src:opensource:menu"}],
         ]
     }
     return text, kb
@@ -1454,6 +1481,7 @@ def dispatch(update: dict) -> None:
         "📚 Claude Skills": "skills",
         "⚙️ N8N Workflows": "n8n",
         "🧩 Make Workflows": "make",
+        "📦 Open Source": "opensource",
     }
     if text in REPLY_BUTTON_TO_SOURCE:
         deliver(chat_id, screen_source_menu(REPLY_BUTTON_TO_SOURCE[text]))
