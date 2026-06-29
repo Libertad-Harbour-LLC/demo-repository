@@ -1,3 +1,265 @@
 {
-  "skills": {}
+  "skills": {
+    "https://github.com/Anil-matcha/Open-AI-UGC": {
+      "category": "marketing_oss",
+      "confidence": "medium",
+      "description": "Open-AI-UGC — open-source альтернатива Arcads и MakeUGC для генерации UGC-рекламных видео с AI-актёрами на базе Veo 3.1, Seedance 2 и Grok Video. Разворачивается на Next.js + Stripe, готово к white-label и немедленной монетизации как SaaS.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Сгенерированное UGC-видео с AI-актёром длительностью 15-30 секунд",
+      "promoted_from_watch": false,
+      "repo_full_name": "Anil-matcha/Open-AI-UGC",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Anil-matcha/Open-AI-UGC",
+        "npm install && настроить .env (MUAPI_KEY, Stripe keys, Next.js config)",
+        "npm run dev — локальный запуск",
+        "Создать тестовое UGC-видео с AI-актёром"
+      ],
+      "title": "Anil-matcha/Open-AI-UGC",
+      "url": "https://github.com/Anil-matcha/Open-AI-UGC"
+    },
+    "https://github.com/Anil-matcha/Open-Generative-AI": {
+      "category": "video_oss",
+      "confidence": "high",
+      "description": "Open-Generative-AI — self-hosted альтернатива Midjourney/Sora/Kling с поддержкой 200+ моделей генерации изображений и видео (Flux, Wan, Seedance2, Veo). MIT-лицензия, нет фильтров контента, разворачивается на Next.js, готово к ребрендингу и продаже как SaaS.",
+      "final_score": 8.5,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешная генерация изображения и видео через UI за <10 минут",
+      "promoted_from_watch": false,
+      "repo_full_name": "Anil-matcha/Open-Generative-AI",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Anil-matcha/Open-Generative-AI",
+        "npm install && настроить .env с MUAPI_KEY / провайдерами",
+        "npm run dev — запустить локально",
+        "Проверить генерацию изображения через Flux и видео через Seedance2"
+      ],
+      "title": "Anil-matcha/Open-Generative-AI",
+      "url": "https://github.com/Anil-matcha/Open-Generative-AI"
+    },
+    "https://github.com/FlowiseAI/Flowise": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "Flowise — визуальный no-code конструктор AI-агентов и RAG-пайплайнов на базе LangChain. Заменяет платные платформы типа Botpress и Cohere — разворачивается через Docker за 5 минут, поддерживает встраивание чат-виджета, продаётся как white-label AI-агент-платформа.",
+      "final_score": 8.5,
+      "first_recommended": "2026-06-29",
+      "metric": "Рабочий chatflow с ответами на вопросы по загруженному документу",
+      "promoted_from_watch": false,
+      "repo_full_name": "FlowiseAI/Flowise",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "docker pull flowiseai/flowise",
+        "docker run -d -p 3000:3000 flowiseai/flowise",
+        "Открыть http://localhost:3000, создать первый chatflow",
+        "Прицепить OpenAI API key и протестировать RAG-агента"
+      ],
+      "title": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise"
+    },
+    "https://github.com/activepieces/activepieces": {
+      "category": "automation_oss",
+      "confidence": "high",
+      "description": "Activepieces — open-source альтернатива Zapier и Make с 400+ MCP-серверами для AI-агентов и визуальным no-code конструктором workflow. Разворачивается через Docker, поддерживает white-label и продажу как SaaS-платформу автоматизации.",
+      "final_score": 8.4,
+      "first_recommended": "2026-06-29",
+      "metric": "Запущенный automation flow, выполняющий реальную задачу через AI-агента",
+      "promoted_from_watch": false,
+      "repo_full_name": "activepieces/activepieces",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/activepieces/activepieces && cd activepieces",
+        "docker-compose up -d",
+        "Открыть http://localhost:3000, зарегистрироваться",
+        "Создать первый flow с AI-агентом через MCP-сервер"
+      ],
+      "title": "activepieces/activepieces",
+      "url": "https://github.com/activepieces/activepieces"
+    },
+    "https://github.com/calesthio/OpenMontage": {
+      "category": "video_oss",
+      "confidence": "high",
+      "description": "OpenMontage — первая в мире открытая агентная система видеопродакшна с 12 пайплайнами, 52 инструментами и 500+ скилами агентов. Заменяет коммерческие AI-видеостудии (Runway, Pika и пр.) — разворачивается self-hosted, допиливается вайбкодингом, используется как бэкенд для SaaS.",
+      "final_score": 8.5,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешная генерация тестового видео через один из 12 пайплайнов",
+      "promoted_from_watch": false,
+      "repo_full_name": "calesthio/OpenMontage",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/calesthio/OpenMontage",
+        "Установить зависимости: pip install -r requirements.txt (или docker-compose up)",
+        "Прицепить API-ключи: OpenAI / ElevenLabs / Stability AI в .env",
+        "Запустить базовый пайплайн: python run_pipeline.py --prompt 'test video'"
+      ],
+      "title": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage"
+    },
+    "https://github.com/duixcom/Duix-Avatar": {
+      "category": "avatars_oss",
+      "confidence": "high",
+      "description": "Duix-Avatar — полностью открытый инструментарий для AI-аватаров и цифровых людей с офлайн-генерацией видео и клонированием внешности. Заменяет HeyGen и Synthesia — разворачивается локально, подходит для создания видео с цифровыми ведущими без облачных подписок.",
+      "final_score": 7.1,
+      "first_recommended": "2026-06-29",
+      "metric": "Сгенерированное talking-head видео с загруженным аватаром",
+      "promoted_from_watch": false,
+      "repo_full_name": "duixcom/Duix-Avatar",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 6,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/duixcom/Duix-Avatar",
+        "Установить зависимости по README (Python + модели)",
+        "Загрузить тестовое фото/видео для клонирования аватара",
+        "Сгенерировать короткое talking-head видео офлайн"
+      ],
+      "title": "duixcom/Duix-Avatar",
+      "url": "https://github.com/duixcom/Duix-Avatar"
+    },
+    "https://github.com/every-app/open-seo": {
+      "category": "marketing_oss",
+      "confidence": "medium",
+      "description": "Open-SEO — open-source альтернатива Semrush и Ahrefs с аудитом сайтов, исследованием ключевых слов, анализом бэклинков и интеграцией с Google Search Console через MCP. Разворачивается self-hosted, может использоваться как белая метка для SEO-агентств.",
+      "final_score": 7.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Отчёт по аудиту сайта с данными по ключевым словам и бэклинкам",
+      "promoted_from_watch": false,
+      "repo_full_name": "every-app/open-seo",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/every-app/open-seo",
+        "npm install && настроить .env (Google Search Console credentials)",
+        "npm run dev или docker-compose up",
+        "Запустить site-audit на тестовом домене"
+      ],
+      "title": "every-app/open-seo",
+      "url": "https://github.com/every-app/open-seo"
+    },
+    "https://github.com/farion1231/cc-switch": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "CC-Switch — кросс-платформенный desktop all-in-one ассистент для управления Claude Code, Codex, Gemini CLI, Hermes Agent и другими AI-инструментами из единого интерфейса на Tauri/Rust. Заменяет разрозненные CLI-клиенты — распространяется как standalone desktop-приложение.",
+      "final_score": 8.0,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешная работа 2+ AI-агентов через единый интерфейс",
+      "promoted_from_watch": false,
+      "repo_full_name": "farion1231/cc-switch",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "Скачать installer с GitHub Releases (ccswitch.io)",
+        "Установить как desktop-приложение (macOS/Windows/Linux)",
+        "Прицепить API-ключи для Claude Code / Gemini CLI / Hermes",
+        "Протестировать переключение между агентами в одном UI"
+      ],
+      "title": "farion1231/cc-switch",
+      "url": "https://github.com/farion1231/cc-switch"
+    },
+    "https://github.com/nexu-io/open-design": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Open-Design — локальный desktop-инструмент для UI/UX-дизайна с AI, аналог Claude Design и альтернатива Figma. Поддерживает 259+ скилов, 142+ дизайн-систем, экспорт в HTML/PDF/PPTX/MP4 и работу с Claude Code, Cursor, Copilot и другими AI-агентами.",
+      "final_score": 7.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Готовый UI-прототип, экспортированный в HTML за <15 минут",
+      "promoted_from_watch": false,
+      "repo_full_name": "nexu-io/open-design",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": null,
+      "test_steps": [
+        "Скачать desktop-installer с GitHub Releases (nexu-io/open-design)",
+        "Установить нативное приложение (macOS/Windows)",
+        "Прицепить API-ключ Claude / OpenAI",
+        "Создать тестовый UI-прототип через AI-промпт"
+      ],
+      "title": "nexu-io/open-design",
+      "url": "https://github.com/nexu-io/open-design"
+    }
+  }
 }

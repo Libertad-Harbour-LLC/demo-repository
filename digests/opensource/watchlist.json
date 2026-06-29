@@ -1,3 +1,106 @@
 {
-  "items": {}
+  "items": {
+    "https://github.com/Egonex-AI/Understand-Anything": {
+      "added_date": "2026-06-29",
+      "category": "devtools_oss",
+      "description": "Understand-Anything превращает любую кодовую базу в интерактивный knowledge graph для исследования, поиска и вопросов. Интегрируется с Claude Code, Codex, Cursor, Copilot, Gemini CLI.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": null,
+        "stars": 69159
+      },
+      "repo_full_name": "Egonex-AI/Understand-Anything",
+      "signal_to_wait": "Появление hosted/SaaS-версии или одношагового Docker-деплоя для команд",
+      "title": "Egonex-AI/Understand-Anything",
+      "url": "https://github.com/Egonex-AI/Understand-Anything",
+      "why_interesting": "69k звёзд, seed-репо, уникальная категория devtools-продукта для анализа кодовых баз; интересен как инструмент для команд"
+    },
+    "https://github.com/mutonby/openshorts": {
+      "added_date": "2026-06-29",
+      "category": "video_oss",
+      "description": "OpenShorts — self-hosted платформа для генерации AI-шортсов и UGC-видео с AI-актёрами, аналог Mango AI и Opus Clip. Включает генератор клипов, AI Shorts и YouTube Studio без вотермарок.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": null,
+        "stars": 2492
+      },
+      "repo_full_name": "mutonby/openshorts",
+      "signal_to_wait": "Возобновление коммитов (последний — май 2026) и появление docker-compose с полным стеком",
+      "title": "mutonby/openshorts",
+      "url": "https://github.com/mutonby/openshorts",
+      "why_interesting": "2.5k звёзд, свежая концепция UGC+Shorts платформы all-in-one, самостоятельный деплой"
+    },
+    "https://github.com/nesquena/hermes-webui": {
+      "added_date": "2026-06-29",
+      "category": "agents_oss",
+      "description": "Hermes WebUI — web и мобильный интерфейс для Hermes Agent (Nous Research). Заменяет CLI-интерфейс агента — разворачивается как веб-приложение, подходит для white-label AI-ассистента.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": null,
+        "stars": 15176
+      },
+      "repo_full_name": "nesquena/hermes-webui",
+      "signal_to_wait": "Релиз стабильной v1.0 или появление Docker-образа с одношаговым деплоем",
+      "title": "nesquena/hermes-webui",
+      "url": "https://github.com/nesquena/hermes-webui",
+      "why_interesting": "15k звёзд, актуальная экосистема Hermes Agent, простой деплой; стоит проверить зрелость API и качество мобильного UX"
+    },
+    "https://github.com/paperclipai/paperclip": {
+      "added_date": "2026-06-29",
+      "category": "agents_oss",
+      "description": "Paperclip — open-source приложение для управления AI-агентами на рабочем месте. 72k звёзд, активные обновления, но отсутствие топиков и описания затрудняет оценку готовности продукта.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": null,
+        "stars": 72107
+      },
+      "repo_full_name": "paperclipai/paperclip",
+      "signal_to_wait": "Появление документации по деплою и подтверждённых use-case от реальных пользователей",
+      "title": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "why_interesting": "72k звёзд и 13k форков при пустых топиках — подозрительно, нужна ручная проверка качества продукта"
+    },
+    "https://github.com/pewdiepie-archdaemon/odysseus": {
+      "added_date": "2026-06-29",
+      "category": "apps_oss",
+      "description": "Odysseus — self-hosted AI workspace без описания топиков. 79k звёзд при минимальном описании вызывают вопросы по реальности тракшна — нужна проверка.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": null,
+        "stars": 79242
+      },
+      "repo_full_name": "pewdiepie-archdaemon/odysseus",
+      "signal_to_wait": "Появление документации, топиков и подтверждённых отзывов сообщества",
+      "title": "pewdiepie-archdaemon/odysseus",
+      "url": "https://github.com/pewdiepie-archdaemon/odysseus",
+      "why_interesting": "79k звёзд и активные обновления (29.06.2026), но полное отсутствие топиков и скудное описание — требует проверки содержимого"
+    },
+    "https://github.com/seanZhang414/openadserver": {
+      "added_date": "2026-06-29",
+      "category": "marketing_oss",
+      "description": "OpenAdServer — self-hosted альтернатива Google Ad Manager с ML-предсказанием CTR на базе DeepFM (Python, FastAPI, PyTorch). Уникальная ниша рекламных технологий в open-source.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": null,
+        "stars": 200
+      },
+      "repo_full_name": "seanZhang414/openadserver",
+      "signal_to_wait": "Рост до 1k+ звёзд или docker-compose с полным production-стеком и документацией",
+      "title": "seanZhang414/openadserver",
+      "url": "https://github.com/seanZhang414/openadserver",
+      "why_interesting": "Редкая ниша open-source ad-server с ML-CTR; 200 звёзд говорят о нишевости, но реальная потребность велика"
+    }
+  }
 }
