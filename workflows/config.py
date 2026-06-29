@@ -118,6 +118,11 @@ MAX_ITEMS_PER_SOURCE = 150  # was 80 — the fetch hit the cap every run, so onl
 # even with the higher fetch cap; fresh repos rotate through over runs).
 ANALYZER_MAX_ITEMS = 60
 
+# Fix 2 (per-workflow catalog): when a repo is promoted, explode it into one
+# catalog entry per individual workflow JSON, up to this many per repo (bounds
+# recommended.json growth + the per-repo git-tree enumeration cost).
+EXPLODE_MAX_WORKFLOWS_PER_REPO = 25
+
 # Verification: for n8n, fetch the JSON and check it has "nodes" and "connections" keys.
 # For Make, check for "blueprint"/"flow" structure. Skip verification if file is too big.
 VERIFY_WORKFLOW_JSON = True
