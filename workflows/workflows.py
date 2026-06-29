@@ -66,6 +66,70 @@ def _safe(name: str, fn, *args, **kwargs) -> list[dict]:
         return []
 
 
+def _owner_repo_from(entry: dict) -> str | None:
+    """owner/repo from a promoted analyzer entry (name like 'owner/repo: wf' or
+    a github URL)."""
+    import re
+    name = (entry.get("name") or "").split(":", 1)[0].strip()
+    if name.count("/") == 1 and " " not in name:
+        return name
+    m = re.search(r"github\.com/([^/\s]+)/([^/\s#?]+)", entry.get("url") or "")
+    if m:
+        repo = m.group(2)
+        return f"{m.group(1)}/{repo[:-4] if repo.endswith('.git') else repo}"
+    return None
+
+
+def _explode_promotions(top_test_items: list[dict]) -> list[dict]:
+    """Fix 2: turn each promoted REPO into one entry per individual workflow
+    JSON, so the catalog counts importable workflows, not repos. Enumerates the
+    full repo (git tree) only for these few promoted repos. Repos that can't be
+    enumerated fall back to a single repo-level entry.
+    """
+    try:
+        from workflows.sources import _github_common as gh
+        from workflows.sources.make_github import _is_make_blueprint
+        from workflows.sources.n8n_github import _is_n8n_workflow
+    except ImportError:  # pragma: no cover
+        from sources import _github_common as gh
+        from sources.make_github import _is_make_blueprint
+        from sources.n8n_github import _is_n8n_workflow
+
+    validators = {"n8n": _is_n8n_workflow, "make": _is_make_blueprint}
+    cap = getattr(config, "EXPLODE_MAX_WORKFLOWS_PER_REPO", 25)
+    out: list[dict] = []
+    for entry in top_test_items:
+        if not isinstance(entry, dict):
+            out.append(entry)
+            continue
+        tool = (entry.get("tool") or "").lower()
+        owner_repo = _owner_repo_from(entry)
+        validator = validators.get(tool)
+        wfs: list[dict] = []
+        if owner_repo and validator:
+            try:
+                meta = gh._repo_meta(owner_repo)
+                branch = meta.get("default_branch") or "main"
+                wfs = gh.list_repo_workflows(owner_repo, branch, validator, limit=cap)
+            except Exception as exc:
+                print(f"[workflows] explode failed for {owner_repo}: {exc}",
+                      file=sys.stderr)
+        if not wfs:
+            out.append(entry)  # keep repo-level entry as fallback
+            continue
+        for wf in wfs:
+            e = dict(entry)
+            e["name"] = f"{owner_repo}: {wf['name']}"
+            e["url"] = wf["blob_url"]
+            e["json_url"] = wf["json_url"]
+            e["repo_full_name"] = owner_repo
+            e["skills_in_repo"] = [wf["name"]]
+            out.append(e)
+        print(f"[workflows] exploded {owner_repo} -> {len(wfs)} workflow entries",
+              file=sys.stderr)
+    return out
+
+
 def _fetch_all() -> dict[str, list[dict]]:
     enabled = getattr(config, "SOURCES", {})
     max_items = getattr(config, "MAX_ITEMS_PER_SOURCE", 15)
@@ -221,11 +285,20 @@ def run(
     recommended_db = skill_db.load_recommended(path=config.RECOMMENDED_PATH)
     watchlist_db = skill_db.load_watchlist(path=config.WATCHLIST_PATH)
 
-    # Drop already-recommended workflows.
+    # Drop already-recommended workflows. With per-workflow explosion (Fix 2)
+    # recommended.json is keyed by individual workflow URLs, so also exclude any
+    # repo whose workflows we already catalogued (matched by repo_full_name) —
+    # otherwise the repo would be re-analysed and re-exploded every run.
+    recommended_repos = {
+        v.get("repo_full_name")
+        for v in (recommended_db.get("skills") or {}).values()
+        if isinstance(v, dict) and v.get("repo_full_name")
+    }
     pre_filter = len(items_with_deltas)
     items_with_deltas = [
         i for i in items_with_deltas
         if not skill_db.is_recommended(recommended_db, i.get("url") or "")
+        and i.get("repo_full_name") not in recommended_repos
     ]
     dropped = pre_filter - len(items_with_deltas)
     if dropped:
@@ -353,6 +426,15 @@ def run(
     top_test_items = analysis.get("top_test") or []
     top_watch_items = analysis.get("top_watch") or []
 
+    # Repo URLs BEFORE explosion (for watchlist removal — watchlist is keyed by
+    # repo URL, but explosion rewrites entry URLs to per-workflow blob URLs).
+    promoted_repo_urls = {
+        (it.get("url") or "") for it in top_test_items if isinstance(it, dict)
+    }
+    # Fix 2: explode each promoted REPO into one entry per individual workflow
+    # JSON, so the catalog counts importable workflows, not repos.
+    top_test_items = _explode_promotions(top_test_items)
+
     try:
         added_rec = skill_db.add_to_recommended(recommended_db, top_test_items, date)
         if added_rec:
@@ -369,10 +451,7 @@ def run(
             if url in rec_skills and isinstance(rec_skills[url], dict):
                 rec_skills[url]["tool"] = (it.get("tool") or "other").lower()
 
-        promoted_urls = {
-            (it.get("url") or "") for it in top_test_items if isinstance(it, dict)
-        }
-        to_remove = (graduate_urls & promoted_urls) | {
+        to_remove = (graduate_urls & promoted_repo_urls) | {
             u for u in graduate_urls if u in recommended_db.get("skills", {})
         }
         if to_remove:

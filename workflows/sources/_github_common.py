@@ -97,6 +97,67 @@ def _blob_url(full_name: str, branch: str, path: str) -> str:
     return f"https://github.com/{full_name}/blob/{branch}/{path.lstrip('/')}"
 
 
+# JSON files that are never workflows — skip them during full enumeration.
+_NON_WORKFLOW_JSON = {
+    "package.json", "package-lock.json", "tsconfig.json", "composer.json",
+    "manifest.json", "renovate.json", ".eslintrc.json", "babel.config.json",
+    "lerna.json", "nx.json", "components.json", "vercel.json", "now.json",
+}
+
+
+def list_repo_workflows(
+    full_name: str,
+    branch: str,
+    json_validator,
+    max_json_bytes: int = 200_000,
+    limit: int = 25,
+) -> list[dict]:
+    """Enumerate ALL verified workflow JSONs in a repo via the recursive git
+    tree (used when a repo is PROMOTED, to explode it into per-workflow catalog
+    entries). Returns up to ``limit`` ``{name, path, json_url, blob_url}`` dicts;
+    empty on any failure. Bounded: at most ``limit`` JSON fetches+validations.
+    """
+    tree = _safe_get(
+        f"{REPO_API_URL}/{full_name}/git/trees/{branch}",
+        params={"recursive": "1"},
+    )
+    if not tree or tree == RATE_LIMITED or not isinstance(tree, dict):
+        return []
+    paths: list[str] = []
+    for node in tree.get("tree") or []:
+        if not isinstance(node, dict) or node.get("type") != "blob":
+            continue
+        path = node.get("path") or ""
+        if not path.lower().endswith(".json"):
+            continue
+        if os.path.basename(path).lower() in _NON_WORKFLOW_JSON:
+            continue
+        paths.append(path)
+    out: list[dict] = []
+    for path in paths:
+        if len(out) >= limit:
+            break
+        raw_url = _raw_url(full_name, branch, path)
+        parsed = _fetch_json_capped(raw_url, max_json_bytes)
+        ok = False
+        if isinstance(parsed, (dict, list)):
+            try:
+                ok = bool(json_validator(parsed))
+            except Exception:
+                ok = False
+        if ok:
+            name = os.path.basename(path)
+            if name.lower().endswith(".json"):
+                name = name[:-5]
+            out.append({
+                "name": name,
+                "path": path,
+                "json_url": raw_url,
+                "blob_url": _blob_url(full_name, branch, path),
+            })
+    return out
+
+
 def _fetch_json_capped(raw_url: str, max_bytes: int) -> dict | None:
     """Best-effort: download up to ``max_bytes`` and parse JSON.
 
@@ -518,4 +579,4 @@ def _select_with_recency(items: list[dict], max_items: int) -> list[dict]:
     return selected
 
 
-__all__ = ["fetch_workflows", "RATE_LIMITED"]
+__all__ = ["fetch_workflows", "list_repo_workflows", "_repo_meta", "RATE_LIMITED"]
