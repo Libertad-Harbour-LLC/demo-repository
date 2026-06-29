@@ -214,6 +214,36 @@
       "title": "AsiaOstrich/universal-dev-standards",
       "url": "https://github.com/AsiaOstrich/universal-dev-standards/tree/main/.claude/skills"
     },
+    "https://github.com/BehiSecc/VibeSec-Skill/blob/main/SKILL.md": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Claude Code skill для написания безопасного кода и предотвращения распространённых уязвимостей. 981 звезда, skill-формат SKILL.md в корне репо.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-29",
+      "metric": "Обнаружил ли Claude уязвимость, которую пропускает без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "BehiSecc/VibeSec-Skill",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "VibeSec-Skill"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/BehiSecc/VibeSec-Skill && скопировать SKILL.md в .claude/skills/vibesec/SKILL.md своего проекта",
+        "Открыть Claude Code и попросить: 'Проверь этот код на уязвимости' — с намеренно уязвимым примером (SQL без параметризации)",
+        "Сравнить ответ с/без skill: насколько глубже анализ с VibeSec"
+      ],
+      "title": "BehiSecc/VibeSec-Skill",
+      "url": "https://github.com/BehiSecc/VibeSec-Skill/blob/main/SKILL.md"
+    },
     "https://github.com/Chorus-AIDLC/Chorus/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -940,6 +970,39 @@
       ],
       "title": "Infrasity-Labs/dev-gtm-claude-skills",
       "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/Ivy-Interactive/Ivy-Tendril/tree/development/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Ivy-Tendril — репозиторий проекта на GitHub со 164 звёздами, содержащий 4 verified Claude Skills для отладки, релизов и ревью кода. Skills подхватываются Claude Code автоматически из папки .claude/skills/.",
+      "final_score": 7.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Получили ли структурированный план отладки вместо хаотичных советов",
+      "promoted_from_watch": false,
+      "repo_full_name": "Ivy-Interactive/Ivy-Tendril",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "tendril-debug-plan",
+        "tendril-debug-promptware",
+        "tendril-release",
+        "tendril-review"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Ivy-Interactive/Ivy-Tendril && cd Ivy-Tendril && git checkout development",
+        "Скопировать папку .claude/skills/tendril-debug-plan/ в .claude/skills/ своего проекта",
+        "Открыть Claude Code в своём проекте и написать: 'Запусти tendril-debug-plan для этой ошибки: [вставить трейсбек]'"
+      ],
+      "title": "Ivy-Interactive/Ivy-Tendril",
+      "url": "https://github.com/Ivy-Interactive/Ivy-Tendril/tree/development/.claude/skills"
     },
     "https://github.com/JCodesMore/ai-website-cloner-template/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -4642,6 +4705,53 @@
       "title": "gsd-build/get-shit-done",
       "url": "https://github.com/gsd-build/get-shit-done"
     },
+    "https://github.com/hackermanishackerman/claude-skills-vault/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 18 Claude Skills для разработчиков: покрывает FastAPI, Next.js, code review, тестирование, архитектуру систем, работу с документацией и MCP. Появилась сегодня, verified.",
+      "final_score": 7.6,
+      "first_recommended": "2026-06-29",
+      "metric": "Насколько специфичны и полезны советы по сравнению с обычным Claude без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "hackermanishackerman/claude-skills-vault",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 18,
+      "skills_in_repo": [
+        "beautiful-code",
+        "code-reviewer",
+        "doc-navigator",
+        "document-skills",
+        "fastapi-senior-dev",
+        "gemini-cli",
+        "materialreacttable-mastery",
+        "mcp-builder",
+        "nextjs-senior-dev",
+        "pep8",
+        "project-change-log",
+        "prompt-compressor",
+        "pydantic-model",
+        "skill-creator",
+        "system-architect",
+        "testing-automation-expert",
+        "token-formatter",
+        "ux-toolkit"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/hackermanishackerman/claude-skills-vault && cd claude-skills-vault",
+        "Скопировать .claude/skills/fastapi-senior-dev/ и .claude/skills/testing-automation-expert/ в .claude/skills/ своего FastAPI проекта",
+        "В Claude Code написать: 'Ты fastapi-senior-dev. Проведи review этого эндпоинта и предложи улучшения: [код]'"
+      ],
+      "title": "hackermanishackerman/claude-skills-vault",
+      "url": "https://github.com/hackermanishackerman/claude-skills-vault/tree/main/.claude/skills"
+    },
     "https://github.com/hashintel/hash/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -7173,6 +7283,36 @@
       "title": "santifer/career-ops",
       "url": "https://github.com/santifer/career-ops/tree/main/.claude/skills"
     },
+    "https://github.com/seo-skills/seo-audit-skill/blob/main/skill/SKILL.md": {
+      "category": "marketing_skill",
+      "confidence": "high",
+      "description": "Комплексный SEO-аудит инструмент как Claude Code skill: 108 правил аудита по 12 категориям. 301 звезда, специализированная команда seo-skills на GitHub.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-29",
+      "metric": "Сколько из 108 правил применено и насколько конкретны рекомендации",
+      "promoted_from_watch": false,
+      "repo_full_name": "seo-skills/seo-audit-skill",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "seo-audit-skill"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/seo-skills/seo-audit-skill && скопировать skill/SKILL.md в .claude/skills/seo-audit/SKILL.md своего проекта",
+        "Открыть Claude Code и написать: 'Проведи SEO-аудит этой страницы: [вставить HTML или URL]'",
+        "Проверить, охватывает ли ответ технические, контентные и структурные аспекты"
+      ],
+      "title": "seo-skills/seo-audit-skill",
+      "url": "https://github.com/seo-skills/seo-audit-skill/blob/main/skill/SKILL.md"
+    },
     "https://github.com/sergebulaev/linkedin-skills/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "marketing_skill",
@@ -8265,6 +8405,36 @@
       ],
       "title": "wsbs20/claude-code-aso-skill",
       "url": "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills/aso"
+    },
+    "https://github.com/xiaopu-ai/web-design/blob/main/SKILL.md": {
+      "category": "webdev_skill",
+      "confidence": "high",
+      "description": "Claude Code skill для проектирования красивых, консистентных веб-страниц по принципу spec-first. 565 звёзд, активно обновляется (последний push 2026-06-24).",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-29",
+      "metric": "Есть ли единая цветовая палитра, типографика и spacing-система во всех элементах",
+      "promoted_from_watch": false,
+      "repo_full_name": "xiaopu-ai/web-design",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "web-design"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/xiaopu-ai/web-design && скопировать SKILL.md в .claude/skills/web-design/SKILL.md своего проекта",
+        "Открыть Claude Code и написать: 'Создай лендинг для SaaS-продукта с героем, фичами и CTA'",
+        "Сравнить результат с обычным Claude: насколько консистентнее дизайн-система"
+      ],
+      "title": "xiaopu-ai/web-design",
+      "url": "https://github.com/xiaopu-ai/web-design/blob/main/SKILL.md"
     },
     "https://github.com/yamadashy/repomix/tree/main/.claude/skills": {
       "added_manually": true,
