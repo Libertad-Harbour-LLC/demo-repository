@@ -1,9 +1,10 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 15
+Total: 16
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-29 | [Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow](https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer) | wazuh-ai-security-analyzer-dynamic.workflow, wazuh-ai-security-analyzer.workflow |  | 6.8 | medium | Скачать wazuh-ai-security-analyzer-dynamic.workflow.json по json_url |
 | 2026-06-25 | [weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection](https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging) | main |  | 6.1 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-25 | [weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater](https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications) | main |  | 5.9 | medium | Скачать main.json |
 | 2026-06-21 | [papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats](https://github.com/papadopouloskyriakos/agentic-chatops) | claude-gateway-agentic-stats, claude-gateway-chaos-logs-api, claude-gateway-chaos-test-recover, +2 more |  | 7.6 | high | Скачать JSON: https://raw.githubusercontent.com/papadopouloskyriakos/agentic-chatops/main/workflows/claude-gateway-ag... |

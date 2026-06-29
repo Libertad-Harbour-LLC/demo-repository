@@ -1,5 +1,39 @@
 {
   "skills": {
+    "https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer": {
+      "category": "devops_workflow",
+      "confidence": "medium",
+      "description": "Два n8n-workflow для подключения Wazuh SIEM к AI-движку: анализируют security-алерты в реальном времени и формируют структурированный вывод. Предназначены для SOC-команд и DevOps-инженеров, использующих Wazuh для мониторинга инфраструктуры.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Количество алертов, классифицированных AI за единицу времени; точность приоритизации по сравнению с ручным разбором",
+      "promoted_from_watch": false,
+      "repo_full_name": "Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "wazuh-ai-security-analyzer-dynamic.workflow",
+        "wazuh-ai-security-analyzer.workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать wazuh-ai-security-analyzer-dynamic.workflow.json по json_url",
+        "Импортировать JSON в n8n через меню Import Workflow",
+        "Настроить Wazuh API credentials (URL, username, password) в n8n Credentials",
+        "Настроить AI-model credentials (OpenAI или совместимый провайдер)",
+        "Запустить тестовый прогон с тестовым алертом из Wazuh"
+      ],
+      "title": "Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow",
+      "tool": "n8n",
+      "url": "https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer"
+    },
     "https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation": {
       "category": "sales_workflow",
       "confidence": "medium",
@@ -1148,6 +1182,39 @@
       "title": "anilrajrimal1/n8n-backups: n8n-backup",
       "tool": "n8n",
       "url": "https://github.com/anilrajrimal1/n8n-backups"
+    },
+    "https://github.com/bitsandbrainsai/ai-ad-creative-strategist": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической генерации стратегий рекламных креативов с использованием AI. Подходит маркетологам и агентствам, которым нужно быстро формировать концепции и тексты для рекламных кампаний.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-29",
+      "metric": "Время от запуска до получения 3+ вариантов рекламной концепции; качество выдачи по оценке маркетолога",
+      "promoted_from_watch": false,
+      "repo_full_name": "bitsandbrainsai/ai-ad-creative-strategist: ai-ad-creative-strategist",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-ad-creative-strategist"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-ad-creative-strategist.json по json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить AI-провайдер credentials (OpenAI / Anthropic)",
+        "Заполнить входные параметры: описание продукта, целевая аудитория, бюджет",
+        "Запустить тестовый прогон и проверить сгенерированные концепции"
+      ],
+      "title": "bitsandbrainsai/ai-ad-creative-strategist: ai-ad-creative-strategist",
+      "tool": "n8n",
+      "url": "https://github.com/bitsandbrainsai/ai-ad-creative-strategist"
     },
     "https://github.com/caioross/n8n_Workflows": {
       "category": "devops_workflow",

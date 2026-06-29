@@ -1,9 +1,11 @@
 # Recommended — tool: n8n
 
-Total: 88
+Total: 90
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-29 | [bitsandbrainsai/ai-ad-creative-strategist: ai-ad-creative-strategist](https://github.com/bitsandbrainsai/ai-ad-creative-strategist) | ai-ad-creative-strategist |  | 6.6 | medium | Скачать ai-ad-creative-strategist.json по json_url |
+| 2026-06-29 | [Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow](https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer) | wazuh-ai-security-analyzer-dynamic.workflow, wazuh-ai-security-analyzer.workflow |  | 6.8 | medium | Скачать wazuh-ai-security-analyzer-dynamic.workflow.json по json_url |
 | 2026-06-26 | [FabricioLR/Financial: FinancialN8NWorkflow](https://github.com/FabricioLR/Financial) | FinancialN8NWorkflow |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/FabricioLR/Financial/master/FinancialN8NWorkflow.json |
 | 2026-06-25 | [weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection](https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging) | main |  | 6.1 | medium | Скачать JSON по ссылке json_url |
 | 2026-06-25 | [weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater](https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications) | main |  | 5.9 | medium | Скачать main.json |
