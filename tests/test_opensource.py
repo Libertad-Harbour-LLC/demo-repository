@@ -107,6 +107,39 @@ def test_is_worth_showing():
     assert not oss._is_worth_showing({"is_new": False, "delta_stars": 0, "stars": 3})
 
 
+def test_force_promote_seeds_moves_watch_and_synthesizes():
+    oss = _load_orchestrator()
+    items = [
+        {"url": "u1", "repo_full_name": "a/seed-in-watch", "_seed": True, "stars": 10,
+         "description": "d1"},
+        {"url": "u2", "repo_full_name": "a/seed-unmentioned", "_seed": True, "stars": 20,
+         "description": "d2"},
+        {"url": "u3", "repo_full_name": "a/non-seed", "stars": 5},
+    ]
+    analysis = {
+        "top_test": [{"url": "u3", "name": "a/non-seed", "category": "apps_oss"}],
+        "top_watch": [{"url": "u1", "name": "a/seed-in-watch", "category": "agents_oss",
+                       "why_interesting": "nice", "signal_to_wait": "stars"}],
+    }
+    oss._force_promote_seeds(analysis, items)
+    test_urls = {t["url"] for t in analysis["top_test"]}
+    assert test_urls == {"u1", "u2", "u3"}  # both seeds promoted
+    # the watch seed was moved out of top_watch
+    assert all(w["url"] != "u1" for w in analysis["top_watch"])
+    # promoted seeds carry decision + stars
+    u2 = next(t for t in analysis["top_test"] if t["url"] == "u2")
+    assert u2["decision"] == "test_now" and u2["stars"] == 20
+
+
+def test_backfill_promo_meta_copies_stars():
+    oss = _load_orchestrator()
+    items = [{"url": "u1", "stars": 1234, "forks": 56}]
+    analysis = {"top_test": [{"url": "u1", "name": "a/b"}], "top_watch": []}
+    oss._backfill_promo_meta(analysis, items)
+    assert analysis["top_test"][0]["stars"] == 1234
+    assert analysis["top_test"][0]["forks"] == 56
+
+
 # --- bot integration --------------------------------------------------------
 
 def test_bot_has_opensource_source():
