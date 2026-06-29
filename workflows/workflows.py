@@ -251,9 +251,19 @@ def run(
 
     pre_worth_count = len(items_with_deltas)
     filtered_items = [it for it in items_with_deltas if _is_worth_showing(it)]
+    # Bound the analyzer input (the fetch cap is high now). Prioritise NEW repos,
+    # then star count, so fresh discoveries get evaluated first and the rest
+    # rotate through subsequent runs.
+    analyzer_cap = getattr(config, "ANALYZER_MAX_ITEMS", 60)
+    pre_cap = len(filtered_items)
+    if pre_cap > analyzer_cap:
+        filtered_items.sort(
+            key=lambda it: (not it.get("is_new", False), -(it.get("stars") or 0))
+        )
+        filtered_items = filtered_items[:analyzer_cap]
     print(
         f"[PHASE:FILTER] after_is_recommended={pre_worth_count} "
-        f"after_is_worth_showing={len(filtered_items)} "
+        f"after_is_worth_showing={pre_cap} to_analyzer={len(filtered_items)} "
         f"graduates={len(graduates)}",
         file=sys.stderr,
     )

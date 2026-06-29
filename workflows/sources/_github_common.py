@@ -355,14 +355,14 @@ def fetch_workflows(
                     for probe_dir in ("workflows", "n8n", "blueprints", ""):
                         discovered = _list_json_files(full, probe_dir)
                         if discovered:
-                            hinted_paths = discovered[:5]
+                            hinted_paths = discovered[:_MAX_PATHS_PER_REPO]
                             break
 
                 workflows: list[dict] = []
                 any_verified = False
 
                 if hinted_paths and verify:
-                    for path in hinted_paths[:5]:  # cap verification per repo
+                    for path in hinted_paths[:_MAX_PATHS_PER_REPO]:  # cap verification per repo
                         raw_url = _raw_url(full, branch, path)
                         parsed = _fetch_json_capped(raw_url, max_json_bytes)
                         is_wf = False
@@ -390,7 +390,7 @@ def fetch_workflows(
                     if verified_only:
                         workflows = verified_only
                 elif hinted_paths:
-                    for path in hinted_paths[:5]:
+                    for path in hinted_paths[:_MAX_PATHS_PER_REPO]:
                         name = os.path.basename(path)
                         if name.lower().endswith(".json"):
                             name = name[:-5]
@@ -476,11 +476,46 @@ def fetch_workflows(
                 f"(failed JSON-structure check)", file=sys.stderr
             )
 
-        items.sort(key=lambda x: -(x.get("stars") or 0))
-        return items[:max_items]
+        return _select_with_recency(items, max_items)
     except Exception as exc:
         print(f"[workflows:github] error: {exc}", file=sys.stderr)
         return []
+
+
+# Fraction of the cap reserved for highest-star repos; the rest is filled by
+# most-recently-pushed repos so NEW low-star workflows aren't truncated out by
+# the star sort (the root cause of the pipeline only ever seeing the same
+# top-N popular repos).
+_STAR_QUOTA_FRACTION = 0.7
+_MAX_PATHS_PER_REPO = 8
+
+
+def _select_with_recency(items: list[dict], max_items: int) -> list[dict]:
+    """Pick up to ``max_items``: a star-ranked head + a recency-ranked tail.
+
+    Pure star-sort truncation makes the pipeline re-chew the same popular repos
+    every run; interleaving the freshest-pushed repos rotates new candidates in.
+    """
+    if len(items) <= max_items:
+        return sorted(items, key=lambda x: -(x.get("stars") or 0))
+    by_stars = sorted(items, key=lambda x: -(x.get("stars") or 0))
+    by_recency = sorted(items, key=lambda x: x.get("pushed_at") or "", reverse=True)
+    star_quota = int(max_items * _STAR_QUOTA_FRACTION)
+    selected: list[dict] = []
+    seen: set[str] = set()
+    for it in by_stars[:star_quota]:
+        full = it.get("repo_full_name") or ""
+        if full and full not in seen:
+            seen.add(full)
+            selected.append(it)
+    for it in by_recency:
+        if len(selected) >= max_items:
+            break
+        full = it.get("repo_full_name") or ""
+        if full and full not in seen:
+            seen.add(full)
+            selected.append(it)
+    return selected
 
 
 __all__ = ["fetch_workflows", "RATE_LIMITED"]

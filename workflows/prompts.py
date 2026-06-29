@@ -112,9 +112,15 @@ confidence:
 - low   — единичное упоминание без подтверждения
 
 decision:
-- test_now — final_score ≥ 6.5 И confidence in {high, medium} И это точно workflow
-- watch    — 4.5 ≤ final_score < 6.5 ИЛИ confidence=low с потенциалом
-- skip     — final_score < 4.5 ИЛИ noise_risk ≥ 8
+- test_now — (final_score ≥ 6.5 И confidence in {high, medium}) ИЛИ
+  (`verified=True` И final_score ≥ 5.5 И noise_risk < 6). verified=True значит
+  JSON реально импортируется в n8n/Make — это ГЛАВНАЯ ценность радара, не требуй
+  для него высокого traction/звёзд.
+- watch    — 4.0 ≤ final_score < порог test_now ИЛИ confidence=low с потенциалом
+- skip     — final_score < 4.0 ИЛИ noise_risk ≥ 8 ИЛИ это не workflow
+
+ВАЖНО: `verified=True` workflow с содержательным именем файла НИКОГДА не уходит
+в skip — минимум `watch`. Готовый импортируемый workflow всегда полезен.
 
 ==== РАЗНООБРАЗИЕ ДОМЕНОВ (анти-перекос) ====
 Если во входных данных есть workflow из РАЗНЫХ доменов — дайджест ОБЯЗАН это
