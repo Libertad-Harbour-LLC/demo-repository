@@ -85,7 +85,10 @@ REDDIT_MIN_SCORE = 5  # lowered — Claude Skills are niche, posts get less scor
 
 SOURCES = {
     "github": True,
-    "reddit": True,
+    "reddit": False,    # disabled — Reddit 403-blocks Actions IPs and the
+                        # OAuth route needs API creds we don't maintain; it
+                        # contributed 0 every run and only spammed logs. Flip
+                        # to True (+ set REDDIT_CLIENT_ID/SECRET) to re-enable.
     "twitter": False,   # disabled per Sprint 3 — too noisy for this niche
     "threads": False,   # disabled per Sprint 3
 }

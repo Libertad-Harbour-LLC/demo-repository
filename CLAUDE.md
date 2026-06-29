@@ -86,10 +86,10 @@ Container repo housing automation utilities. Three active tracking pipelines:
   `🤖 Объясни простыми словами` button; without it the button is hidden.
   Check current state at `GET https://<vercel-url>/api/telegram` →
   `llm_enabled` field in the JSON response.)
-- `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` (**required for the Reddit
-  source to work at all in CI**) — script-app creds from reddit.com/prefs/apps.
-  Reddit answers `403 Blocked` to anonymous requests from Actions runner IPs,
-  so without these the Reddit source contributes zero items every run.
+- `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` — **not used**: the Reddit source
+  is disabled (`SOURCES["reddit"] = False` in both configs). Reddit 403-blocks
+  Actions IPs and the OAuth route needs creds we don't maintain. To re-enable,
+  flip the toggle and set these (script-app creds from reddit.com/prefs/apps).
 - `GH_SEARCH_TOKEN` (optional) — classic PAT (`public_repo` scope is enough).
   Used in preference to `GITHUB_TOKEN` for GitHub search; a user PAT has its
   own code-search quota, dodging shared secondary rate limits (429) that

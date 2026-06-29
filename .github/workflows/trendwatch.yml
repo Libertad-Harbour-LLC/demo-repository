@@ -34,11 +34,6 @@ jobs:
           # Optional PAT with its own code-search quota - dodges the shared
           # secondary rate limit that 429s code search on Actions runners.
           GH_SEARCH_TOKEN: ${{ secrets.GH_SEARCH_TOKEN }}
-          # Reddit script-app creds (reddit.com/prefs/apps). Without them the
-          # public endpoint answers 403 Blocked from Actions IPs and the
-          # Reddit source contributes nothing.
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           # Web-catalog ingest: enriched Import payload is POSTed here each run.
           SKILL_RADAR_INGEST_SECRET: ${{ secrets.SKILL_RADAR_INGEST_SECRET }}
       - name: Commit daily digest
