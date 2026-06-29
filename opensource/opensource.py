@@ -111,6 +111,15 @@ def _baseline_metrics(items: list[dict]) -> dict[str, dict]:
     return out
 
 
+def _prune_watch_dups(recommended_db: dict, watchlist_db: dict) -> int:
+    """Remove watchlist entries already present in recommended. Returns count."""
+    dups = [u for u in list((watchlist_db.get("items") or {}))
+            if skill_db.is_recommended(recommended_db, u)]
+    if dups:
+        skill_db.remove_from_watchlist(watchlist_db, dups)
+    return len(dups)
+
+
 def _force_promote_seeds(analysis: dict, items: list[dict]) -> None:
     """Ensure every owner seed (``_seed: true``) is in ``top_test`` so it gets
     saved to recommended. Code-level safety net behind the prompt's seed rule:
@@ -236,6 +245,14 @@ def run(dry_run: bool = False, no_analyzer: bool = False, force: bool = False) -
 
     recommended_db = skill_db.load_recommended(path=config.RECOMMENDED_PATH)
     watchlist_db = skill_db.load_watchlist(path=config.WATCHLIST_PATH)
+
+    # Invariant: a repo can't be both recommended and watched (recommended is
+    # the stronger state). Self-heals duplicates left when a watch item later
+    # lands in recommended (e.g. force-promoted seeds).
+    pruned = _prune_watch_dups(recommended_db, watchlist_db)
+    if pruned:
+        print(f"[opensource] pruned {pruned} watch dup(s) already recommended",
+              file=sys.stderr)
 
     pre = len(items_with_deltas)
     items_with_deltas = [

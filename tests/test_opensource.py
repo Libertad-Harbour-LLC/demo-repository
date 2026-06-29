@@ -168,6 +168,15 @@ def test_force_promote_seeds_moves_watch_and_synthesizes():
     assert u2["decision"] == "test_now" and u2["stars"] == 20
 
 
+def test_prune_watch_dups():
+    oss = _load_orchestrator()
+    recommended = {"skills": {"u1": {}, "u2": {}}}
+    watchlist = {"items": {"u2": {}, "u3": {}}}  # u2 is a dup
+    n = oss._prune_watch_dups(recommended, watchlist)
+    assert n == 1
+    assert set(watchlist["items"]) == {"u3"}  # only the non-recommended remains
+
+
 def test_backfill_promo_meta_copies_stars():
     oss = _load_orchestrator()
     items = [{"url": "u1", "stars": 1234, "forks": 56}]
