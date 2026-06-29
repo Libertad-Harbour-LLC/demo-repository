@@ -63,6 +63,43 @@ def test_item_shape_from_repo():
     assert "⭐ 123" in it["meta"]
 
 
+def test_looks_like_list_detects_awesome():
+    from opensource.sources import github as gh
+    assert gh._looks_like_list({"repo_full_name": "sindresorhus/awesome"})
+    assert gh._looks_like_list({"repo_full_name": "awesome-selfhosted/awesome-selfhosted"})
+    assert gh._looks_like_list({"repo_full_name": "x/awesome-ai-list"})
+    assert gh._looks_like_list({"repo_full_name": "x/cool", "topics": ["awesome"]})
+    assert not gh._looks_like_list({"repo_full_name": "n8n-io/n8n", "topics": ["automation"]})
+    assert not gh._looks_like_list({"repo_full_name": "calesthio/OpenMontage"})
+
+
+def test_fetch_drops_awesome_lists_but_keeps_seeds(monkeypatch):
+    from opensource.sources import github as gh
+
+    def fake_get(url, params=None):
+        if url.startswith(gh.REPO_API_URL):  # seed meta — make the seed an awesome-list
+            full = url.split("/repos/", 1)[1]
+            return {"full_name": full, "html_url": f"https://github.com/{full}",
+                    "stargazers_count": 9, "default_branch": "main"}
+        return {"items": [
+            {"full_name": "sindresorhus/awesome", "html_url": "https://github.com/sindresorhus/awesome",
+             "stargazers_count": 999999, "default_branch": "main"},
+            {"full_name": "n8n-io/n8n", "html_url": "https://github.com/n8n-io/n8n",
+             "stargazers_count": 99999, "default_branch": "main"},
+        ]}
+
+    monkeypatch.setattr(gh, "_get", fake_get)
+    items = gh.fetch_opensource(
+        topics=["self-hosted"], desc_queries=[],
+        seed_repos=["https://github.com/owner/awesome-seed"],  # a seeded awesome-* name
+        max_items=50,
+    )
+    fulls = [it["repo_full_name"] for it in items]
+    assert "sindresorhus/awesome" not in fulls   # list dropped from search results
+    assert "n8n-io/n8n" in fulls                  # real product kept
+    assert "owner/awesome-seed" in fulls          # seeded list is kept (owner asked for it)
+
+
 def test_fetch_injects_seeds_first_and_dedupes(monkeypatch):
     from opensource.sources import github as gh
 

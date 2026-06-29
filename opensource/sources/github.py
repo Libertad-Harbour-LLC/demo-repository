@@ -135,6 +135,22 @@ def _owner_repo(url: str) -> str | None:
     return f"{m.group(1)}/{repo}"
 
 
+def _looks_like_list(item: dict) -> bool:
+    """True if the repo is an awesome-list / curated link collection (NOT a
+    deployable product). These are dropped from the candidate pool — the
+    catalog is for software you can deploy/rebrand, not link directories."""
+    full = (item.get("repo_full_name") or "").lower()
+    name = full.split("/", 1)[1] if "/" in full else full
+    if name == "awesome" or name.startswith("awesome-") or name.startswith("awesome_"):
+        return True
+    if "awesome-list" in name or name.endswith("-awesome"):
+        return True
+    topics = [str(t).lower() for t in (item.get("topics") or [])]
+    if "awesome" in topics or "awesome-list" in topics:
+        return True
+    return False
+
+
 def fetch_opensource(
     topics: list[str],
     desc_queries: list[str],
@@ -149,14 +165,21 @@ def fetch_opensource(
         raw.extend(_description_search(desc_queries or []))
 
         # Dedupe by repo_full_name; first occurrence wins (seeds come first).
+        # Awesome-lists / link collections are dropped (unless explicitly seeded).
         seen: set[str] = set()
         items: list[dict] = []
+        dropped_lists = 0
         for it in raw:
             full = it.get("repo_full_name") or ""
             if not full or full in seen:
                 continue
+            if not it.get("_seed") and _looks_like_list(it):
+                dropped_lists += 1
+                continue
             seen.add(full)
             items.append(it)
+        if dropped_lists:
+            print(f"[opensource:github] dropped {dropped_lists} awesome-list(s)", file=sys.stderr)
 
         # Seeds first, then by stars desc.
         items.sort(key=lambda x: (not x.get("_seed", False), -(x.get("stars") or 0)))
