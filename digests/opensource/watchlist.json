@@ -1,21 +1,72 @@
 {
   "items": {
-    "https://github.com/Egonex-AI/Understand-Anything": {
+    "https://github.com/Anil-matcha/Open-AI-UGC": {
       "added_date": "2026-06-29",
-      "category": "devtools_oss",
-      "description": "Understand-Anything превращает любую кодовую базу в интерактивный knowledge graph для исследования, поиска и вопросов. Интегрируется с Claude Code, Codex, Cursor, Copilot, Gemini CLI.",
+      "category": "video_oss",
+      "description": "Open-AI-UGC — open-source платформа для создания UGC-рекламы с AI, seed-репо от Anil-matcha. Позволяет self-host и перепродавать как UGC-рекламный сервис.",
       "expires_at": "2026-07-29",
       "last_checked": "2026-06-29",
       "metric_baseline": {
-        "cross_source_count": 1,
+        "cross_source_count": null,
         "skills_count": null,
-        "stars": 69159
+        "stars": null
       },
-      "repo_full_name": "Egonex-AI/Understand-Anything",
-      "signal_to_wait": "Появление hosted/SaaS-версии или одношагового Docker-деплоя для команд",
-      "title": "Egonex-AI/Understand-Anything",
-      "url": "https://github.com/Egonex-AI/Understand-Anything",
-      "why_interesting": "69k звёзд, seed-репо, уникальная категория devtools-продукта для анализа кодовых баз; интересен как инструмент для команд"
+      "repo_full_name": "Anil-matcha/Open-AI-UGC",
+      "signal_to_wait": "Данные о звёздах, подтверждение рабочего деплоя через Docker/CLI",
+      "title": "Anil-matcha/Open-AI-UGC",
+      "url": "https://github.com/Anil-matcha/Open-AI-UGC",
+      "why_interesting": "Seed-репо с высоким потенциалом бизнес-применения (UGC-реклама востребована), но данных по звёздам нет"
+    },
+    "https://github.com/Anil-matcha/Open-Generative-AI": {
+      "added_date": "2026-06-29",
+      "category": "image_oss",
+      "description": "Open-Generative-AI — self-hosted студия генерации изображений и контента от того же автора, что Open-AI-UGC. Seed-репо с потенциалом ребрендинга.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "Anil-matcha/Open-Generative-AI",
+      "signal_to_wait": "Подтверждение рабочего деплоя, появление звёзд и документации",
+      "title": "Anil-matcha/Open-Generative-AI",
+      "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+      "why_interesting": "Seed-репо, потенциал white-label генерации изображений, но нет данных о звёздах и деплое"
+    },
+    "https://github.com/calesthio/OpenMontage": {
+      "added_date": "2026-06-29",
+      "category": "video_oss",
+      "description": "OpenMontage — open-source AI-видеопродакшн инструмент, упомянутый как seed-репо. Данных о звёздах и деплое из текущего набора данных нет.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "calesthio/OpenMontage",
+      "signal_to_wait": "Получение данных о репозитории: звёзды, README, способ деплоя",
+      "title": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "why_interesting": "Упомянут в seed-списке как образец, но нет данных для полноценной оценки"
+    },
+    "https://github.com/every-app/open-seo": {
+      "added_date": "2026-06-29",
+      "category": "marketing_oss",
+      "description": "Open-SEO — open-source SEO-инструмент из seed-списка. Данных о текущих звёздах и методе деплоя из набора данных нет.",
+      "expires_at": "2026-07-29",
+      "last_checked": "2026-06-29",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "every-app/open-seo",
+      "signal_to_wait": "Данные о звёздах, наличие Docker/CLI деплоя, подтверждённый функционал",
+      "title": "every-app/open-seo",
+      "url": "https://github.com/every-app/open-seo",
+      "why_interesting": "SEO-инструмент с потенциалом ребрендинга, но нет данных для оценки зрелости"
     },
     "https://github.com/mutonby/openshorts": {
       "added_date": "2026-06-29",

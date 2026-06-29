@@ -1,5 +1,7 @@
 # Recommended Claude Skills — image_oss
 
-Total: 0
+Total: 1
 
-_No skills in this category yet._
+| Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
+|---|---|---|---|---|---|---|
+| 2026-06-29 | [Autom8AI/Open-Higgsfield-AI](https://github.com/Autom8AI/Open-Higgsfield-AI) |  | 0 |  |  | — |

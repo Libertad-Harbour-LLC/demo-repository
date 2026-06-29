@@ -58,6 +58,52 @@
       "title": "Anil-matcha/Open-Generative-AI",
       "url": "https://github.com/Anil-matcha/Open-Generative-AI"
     },
+    "https://github.com/Autom8AI/Open-Higgsfield-AI": {
+      "category": "image_oss",
+      "confidence": null,
+      "description": "Open-Higgsfield-AI — open-source альтернатива Higgsfield AI для генерации изображений и работы со студией Cinema с 20+ моделями (Flux, SDXL, Midjourney-подобные). Seed-репо без звёзд, MIT лицензия.",
+      "final_score": null,
+      "first_recommended": "2026-06-29",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "Autom8AI/Open-Higgsfield-AI",
+      "scores": {},
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 0,
+      "test_steps": [],
+      "title": "Autom8AI/Open-Higgsfield-AI",
+      "url": "https://github.com/Autom8AI/Open-Higgsfield-AI"
+    },
+    "https://github.com/Egonex-AI/Understand-Anything": {
+      "category": "devtools_oss",
+      "confidence": "high",
+      "description": "Understand-Anything превращает любую кодовую базу в интерактивный knowledge graph для исследования, поиска и диалога. Интегрируется с Claude Code, Codex, Cursor, Copilot и Gemini CLI как плагин/навык.",
+      "final_score": 7.7,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешное построение graph для реального проекта, качество ответов на вопросы о коде",
+      "promoted_from_watch": false,
+      "repo_full_name": "Egonex-AI/Understand-Anything",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 69168,
+      "test_steps": [
+        "Изучить README для определения метода запуска (CLI/npm/pip)",
+        "Установить инструмент и запустить на тестовой кодовой базе",
+        "Проверить работу knowledge graph и поиска по коду",
+        "Протестировать интеграцию с Claude Code или Cursor"
+      ],
+      "title": "Egonex-AI/Understand-Anything",
+      "url": "https://github.com/Egonex-AI/Understand-Anything"
+    },
     "https://github.com/FlowiseAI/Flowise": {
       "category": "agents_oss",
       "confidence": "high",
@@ -86,6 +132,52 @@
       ],
       "title": "FlowiseAI/Flowise",
       "url": "https://github.com/FlowiseAI/Flowise"
+    },
+    "https://github.com/NickIBrody/arcade_ai": {
+      "category": "apps_oss",
+      "confidence": null,
+      "description": "Arcade AI — универсальный мобильный LLM-чат клиент для Android на Flutter с поддержкой множества провайдеров. Seed-репо с 2 звёздами, ранняя стадия.",
+      "final_score": null,
+      "first_recommended": "2026-06-29",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "NickIBrody/arcade_ai",
+      "scores": {},
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 2,
+      "test_steps": [],
+      "title": "NickIBrody/arcade_ai",
+      "url": "https://github.com/NickIBrody/arcade_ai"
+    },
+    "https://github.com/Stirling-Tools/Stirling-PDF": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Stirling-PDF — самый популярный на GitHub self-hosted инструмент для работы с PDF-файлами: редактирование, конвертация, слияние, OCR и многое другое. Альтернатива Adobe Acrobat и iLovePDF, разворачиваемая через Docker.",
+      "final_score": 8.2,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешная конвертация и слияние PDF, время деплоя",
+      "promoted_from_watch": false,
+      "repo_full_name": "Stirling-Tools/Stirling-PDF",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 5,
+        "testability": 10,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 85147,
+      "test_steps": [
+        "docker pull frooodle/s-pdf",
+        "docker run -d -p 8080:8080 --name stirling-pdf frooodle/s-pdf",
+        "Открыть http://localhost:8080, проверить базовые PDF-операции",
+        "Настроить брендинг через переменные окружения"
+      ],
+      "title": "Stirling-Tools/Stirling-PDF",
+      "url": "https://github.com/Stirling-Tools/Stirling-PDF"
     },
     "https://github.com/activepieces/activepieces": {
       "category": "automation_oss",
@@ -116,6 +208,52 @@
       "title": "activepieces/activepieces",
       "url": "https://github.com/activepieces/activepieces"
     },
+    "https://github.com/appwrite/appwrite": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Appwrite — полная cloud-инфраструктура для web, mobile и AI приложений: Auth, Database, Storage, Functions, Messaging и Hosting в одном self-hosted пакете. Альтернатива Firebase и Supabase.",
+      "final_score": 8.1,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешный деплой всех сервисов, время до первого API-запроса",
+      "promoted_from_watch": false,
+      "repo_full_name": "appwrite/appwrite",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 4,
+        "testability": 9,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 56438,
+      "test_steps": [
+        "docker run -it --rm appwrite/install",
+        "Следовать интерактивному установщику, выбрать конфигурацию",
+        "Открыть http://localhost/console, создать проект",
+        "Протестировать Auth, Database и Storage через SDK"
+      ],
+      "title": "appwrite/appwrite",
+      "url": "https://github.com/appwrite/appwrite"
+    },
+    "https://github.com/arelove/infinity-loop": {
+      "category": "general_oss",
+      "confidence": null,
+      "description": "AI knowledge graph explorer built with Tauri + Svelte + Rust",
+      "final_score": null,
+      "first_recommended": "2026-06-29",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "arelove/infinity-loop",
+      "scores": {},
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 8,
+      "test_steps": [],
+      "title": "arelove/infinity-loop",
+      "url": "https://github.com/arelove/infinity-loop"
+    },
     "https://github.com/calesthio/OpenMontage": {
       "category": "video_oss",
       "confidence": "high",
@@ -144,6 +282,35 @@
       ],
       "title": "calesthio/OpenMontage",
       "url": "https://github.com/calesthio/OpenMontage"
+    },
+    "https://github.com/coollabsio/coolify": {
+      "category": "devtools_oss",
+      "confidence": "high",
+      "description": "Coolify — self-hostable PaaS-платформа, альтернатива Vercel/Heroku/Netlify для деплоя статических сайтов, баз данных и full-stack приложений с 280+ one-click сервисами. Позволяет создать собственный managed-хостинг.",
+      "final_score": 8.4,
+      "first_recommended": "2026-06-29",
+      "metric": "Количество задеплоенных сервисов за первый день, успешный CI/CD pipeline",
+      "promoted_from_watch": false,
+      "repo_full_name": "coollabsio/coolify",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 1,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 9,
+        "utility": 10
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 57531,
+      "test_steps": [
+        "curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash",
+        "Открыть http://<server-ip>:8000, создать admin-аккаунт",
+        "Добавить сервер (или использовать localhost), задеплоить первое приложение",
+        "Протестировать one-click деплой популярного сервиса (n8n, Supabase и др.)"
+      ],
+      "title": "coollabsio/coolify",
+      "url": "https://github.com/coollabsio/coolify"
     },
     "https://github.com/duixcom/Duix-Avatar": {
       "category": "avatars_oss",
@@ -232,6 +399,139 @@
       "title": "farion1231/cc-switch",
       "url": "https://github.com/farion1231/cc-switch"
     },
+    "https://github.com/hexo-ai/sia": {
+      "category": "agents_oss",
+      "confidence": null,
+      "description": "SIA — Self Improving AI фреймворк для автономного улучшения производительности AI-систем (моделей и агентов) на бенчмарк-задачах. Seed-репо с 1.9k звёзд, ближе к фреймворку чем к готовому продукту.",
+      "final_score": null,
+      "first_recommended": "2026-06-29",
+      "metric": "",
+      "promoted_from_watch": false,
+      "repo_full_name": "hexo-ai/sia",
+      "scores": {},
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 1894,
+      "test_steps": [],
+      "title": "hexo-ai/sia",
+      "url": "https://github.com/hexo-ai/sia"
+    },
+    "https://github.com/langgenius/dify": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "Dify — production-ready платформа для разработки agentic workflow и LLM-приложений с визуальным конструктором, RAG, поддержкой MCP и no-code интерфейсом. Альтернатива LangSmith и проприетарным AI-платформам.",
+      "final_score": 8.7,
+      "first_recommended": "2026-06-29",
+      "metric": "Время до первого работающего AI-приложения с RAG, количество подключённых источников",
+      "promoted_from_watch": false,
+      "repo_full_name": "langgenius/dify",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 1,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 10,
+        "utility": 10
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 146987,
+      "test_steps": [
+        "git clone https://github.com/langgenius/dify && cd dify/docker",
+        "docker compose up -d",
+        "Открыть http://localhost/install, создать admin-аккаунт",
+        "Подключить OpenAI/Anthropic ключ, создать первое RAG-приложение"
+      ],
+      "title": "langgenius/dify",
+      "url": "https://github.com/langgenius/dify"
+    },
+    "https://github.com/mutonby/openshorts": {
+      "category": "video_oss",
+      "confidence": "medium",
+      "description": "OpenShorts — open-source AI-видеоплатформа для создания коротких роликов (Shorts/TikTok), UGC-видео с AI-актёрами и управления YouTube-каналом. Self-hosted без водяных знаков, seed-репо.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешная генерация 1 AI-видео ролика, качество результата",
+      "promoted_from_watch": false,
+      "repo_full_name": "mutonby/openshorts",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 2492,
+      "test_steps": [
+        "git clone https://github.com/mutonby/openshorts && изучить README",
+        "Запустить через docker-compose или указанный в README метод",
+        "Подключить AI API (OpenAI/ElevenLabs/D-ID или аналог для AI-актёров)",
+        "Протестировать генерацию первого короткого видео"
+      ],
+      "title": "mutonby/openshorts",
+      "url": "https://github.com/mutonby/openshorts"
+    },
+    "https://github.com/n8n-io/n8n": {
+      "category": "automation_oss",
+      "confidence": "high",
+      "description": "n8n — self-hosted платформа автоматизации рабочих процессов с нативными AI-возможностями и более 400 интеграциями. Прямая open-source альтернатива Zapier и Make, которую можно развернуть через Docker и продавать как сервис под своим брендом.",
+      "final_score": 8.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Количество рабочих интеграций за первый день, успешный запуск AI-workflow",
+      "promoted_from_watch": false,
+      "repo_full_name": "n8n-io/n8n",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 1,
+        "novelty": 5,
+        "testability": 10,
+        "traction": 10,
+        "utility": 10
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 194506,
+      "test_steps": [
+        "Склонировать или использовать официальный Docker-образ: docker pull n8nio/n8n",
+        "Запустить: docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n",
+        "Открыть http://localhost:5678, создать первый workflow с AI-нодой",
+        "Прицепить OpenAI/Anthropic API ключ, протестировать базовый AI-сценарий"
+      ],
+      "title": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n"
+    },
+    "https://github.com/nesquena/hermes-webui": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "Hermes WebUI — веб- и мобильный интерфейс для Hermes Agent от NousResearch, обеспечивающий удобный доступ к AI-агенту через браузер или телефон. Seed-репо с 15k звёзд и активными обновлениями.",
+      "final_score": 8.1,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешный запуск агент-сессии через браузер, время до первого ответа",
+      "promoted_from_watch": false,
+      "repo_full_name": "nesquena/hermes-webui",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 15178,
+      "test_steps": [
+        "Склонировать: git clone https://github.com/nesquena/hermes-webui",
+        "Проверить README на наличие Docker/npm инструкций, запустить согласно документации",
+        "Подключить Hermes Agent API или совместимый LLM endpoint",
+        "Протестировать базовый агент-диалог через веб-интерфейс"
+      ],
+      "title": "nesquena/hermes-webui",
+      "url": "https://github.com/nesquena/hermes-webui"
+    },
     "https://github.com/nexu-io/open-design": {
       "category": "apps_oss",
       "confidence": "high",
@@ -260,6 +560,64 @@
       ],
       "title": "nexu-io/open-design",
       "url": "https://github.com/nexu-io/open-design"
+    },
+    "https://github.com/open-webui/open-webui": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Open WebUI — user-friendly веб-интерфейс для работы с LLM-моделями через Ollama и OpenAI API, с поддержкой RAG, MCP и self-hosted деплоем. Прямая альтернатива ChatGPT UI для корпоративного использования.",
+      "final_score": 8.5,
+      "first_recommended": "2026-06-29",
+      "metric": "Время до работающего корпоративного AI-чата, успешный RAG с документом",
+      "promoted_from_watch": false,
+      "repo_full_name": "open-webui/open-webui",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 5,
+        "testability": 10,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 143435,
+      "test_steps": [
+        "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main",
+        "Открыть http://localhost:3000, создать admin-аккаунт",
+        "Подключить OpenAI API ключ или локальный Ollama",
+        "Протестировать базовый чат и RAG с загрузкой документа"
+      ],
+      "title": "open-webui/open-webui",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    "https://github.com/seanZhang414/openadserver": {
+      "category": "marketing_oss",
+      "confidence": "medium",
+      "description": "OpenAdServer — self-hosted рекламный сервер с ML-предсказанием CTR на основе DeepFM, альтернатива Google Ad Manager. Построен на Python, FastAPI и PyTorch, поддерживает программатик-рекламу.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-29",
+      "metric": "Успешная ротация рекламы, работающее ML-предсказание CTR",
+      "promoted_from_watch": false,
+      "repo_full_name": "seanZhang414/openadserver",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 200,
+      "test_steps": [
+        "git clone https://github.com/seanZhang414/openadserver",
+        "Изучить README, запустить через Docker или Python venv",
+        "Настроить базу данных и загрузить тестовые рекламные кампании",
+        "Протестировать API предсказания CTR и ротацию баннеров"
+      ],
+      "title": "seanZhang414/openadserver",
+      "url": "https://github.com/seanZhang414/openadserver"
     }
   }
 }

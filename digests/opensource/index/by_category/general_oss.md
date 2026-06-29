@@ -1,5 +1,7 @@
 # Recommended Claude Skills — general_oss
 
-Total: 0
+Total: 1
 
-_No skills in this category yet._
+| Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
+|---|---|---|---|---|---|---|
+| 2026-06-29 | [arelove/infinity-loop](https://github.com/arelove/infinity-loop) |  | 8 |  |  | — |
