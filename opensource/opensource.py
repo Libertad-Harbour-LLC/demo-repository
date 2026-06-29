@@ -111,6 +111,75 @@ def _baseline_metrics(items: list[dict]) -> dict[str, dict]:
     return out
 
 
+def _force_promote_seeds(analysis: dict, items: list[dict]) -> None:
+    """Ensure every owner seed (``_seed: true``) is in ``top_test`` so it gets
+    saved to recommended. Code-level safety net behind the prompt's seed rule:
+    a seed the model left in top_watch/excluded is moved/synthesised into
+    top_test (and removed from top_watch). Mutates ``analysis``.
+    """
+    seeds = {it.get("url"): it for it in (items or [])
+             if it.get("_seed") and it.get("url")}
+    if not seeds:
+        return
+    top_test = analysis.setdefault("top_test", [])
+    if not isinstance(top_test, list):
+        top_test = analysis["top_test"] = []
+    top_watch = analysis.get("top_watch") or []
+    test_urls = {t.get("url") for t in top_test if isinstance(t, dict)}
+    watch_by_url = {w.get("url"): w for w in top_watch
+                    if isinstance(w, dict) and w.get("url")}
+
+    promoted: list[str] = []
+    for url, item in seeds.items():
+        if url in test_urls:
+            continue
+        entry = watch_by_url.get(url)
+        if isinstance(entry, dict):
+            e = dict(entry)
+            e["decision"] = "test_now"
+            e.setdefault("what", e.get("why_interesting", ""))
+        else:
+            e = {
+                "name": item.get("repo_full_name") or item.get("title") or url,
+                "url": url,
+                "source": "github",
+                "category": "general_oss",
+                "decision": "test_now",
+                "description": (item.get("description") or "")[:300],
+                "what": item.get("description") or "",
+            }
+        e.setdefault("category", "general_oss")
+        if item.get("stars") is not None:
+            e["stars"] = item.get("stars")
+        top_test.append(e)
+        promoted.append(url)
+
+    if promoted:
+        analysis["top_watch"] = [
+            w for w in top_watch
+            if not (isinstance(w, dict) and w.get("url") in promoted)
+        ]
+        print(f"[opensource] force-promoted {len(promoted)} seed(s) to recommended",
+              file=sys.stderr)
+
+
+def _backfill_promo_meta(analysis: dict, items: list[dict]) -> None:
+    """Copy real ``stars``/``forks`` from fetched items onto top_test/top_watch
+    entries (the analyzer omits them), so the catalog/bot show true counts."""
+    by_url = {it.get("url"): it for it in (items or []) if it.get("url")}
+    for bucket in ("top_test", "top_watch"):
+        for e in analysis.get(bucket) or []:
+            if not isinstance(e, dict):
+                continue
+            item = by_url.get(e.get("url"))
+            if not item:
+                continue
+            if e.get("stars") is None and item.get("stars") is not None:
+                e["stars"] = item.get("stars")
+            if e.get("forks") is None and item.get("forks") is not None:
+                e["forks"] = item.get("forks")
+
+
 def _write_report(analysis: dict, date: str) -> str:
     os.makedirs(config.DIGEST_DIR, exist_ok=True)
     path = os.path.join(config.DIGEST_DIR, f"{date}.md")
@@ -241,6 +310,11 @@ def run(dry_run: bool = False, no_analyzer: bool = False, force: bool = False) -
         return 0
 
     analysis.setdefault("graduated_from_watch", graduates)
+
+    # Owner's seeds are curated picks — guarantee they land in the catalog
+    # (recommended), not watch; and backfill real star counts onto promotions.
+    _force_promote_seeds(analysis, filtered_items)
+    _backfill_promo_meta(analysis, filtered_items)
 
     telegram_text = analysis.get("telegram_summary") or ""
     if not telegram_text.strip():

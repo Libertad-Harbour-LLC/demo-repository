@@ -63,6 +63,43 @@ def test_item_shape_from_repo():
     assert "⭐ 123" in it["meta"]
 
 
+def test_looks_like_list_detects_awesome():
+    from opensource.sources import github as gh
+    assert gh._looks_like_list({"repo_full_name": "sindresorhus/awesome"})
+    assert gh._looks_like_list({"repo_full_name": "awesome-selfhosted/awesome-selfhosted"})
+    assert gh._looks_like_list({"repo_full_name": "x/awesome-ai-list"})
+    assert gh._looks_like_list({"repo_full_name": "x/cool", "topics": ["awesome"]})
+    assert not gh._looks_like_list({"repo_full_name": "n8n-io/n8n", "topics": ["automation"]})
+    assert not gh._looks_like_list({"repo_full_name": "calesthio/OpenMontage"})
+
+
+def test_fetch_drops_awesome_lists_but_keeps_seeds(monkeypatch):
+    from opensource.sources import github as gh
+
+    def fake_get(url, params=None):
+        if url.startswith(gh.REPO_API_URL):  # seed meta — make the seed an awesome-list
+            full = url.split("/repos/", 1)[1]
+            return {"full_name": full, "html_url": f"https://github.com/{full}",
+                    "stargazers_count": 9, "default_branch": "main"}
+        return {"items": [
+            {"full_name": "sindresorhus/awesome", "html_url": "https://github.com/sindresorhus/awesome",
+             "stargazers_count": 999999, "default_branch": "main"},
+            {"full_name": "n8n-io/n8n", "html_url": "https://github.com/n8n-io/n8n",
+             "stargazers_count": 99999, "default_branch": "main"},
+        ]}
+
+    monkeypatch.setattr(gh, "_get", fake_get)
+    items = gh.fetch_opensource(
+        topics=["self-hosted"], desc_queries=[],
+        seed_repos=["https://github.com/owner/awesome-seed"],  # a seeded awesome-* name
+        max_items=50,
+    )
+    fulls = [it["repo_full_name"] for it in items]
+    assert "sindresorhus/awesome" not in fulls   # list dropped from search results
+    assert "n8n-io/n8n" in fulls                  # real product kept
+    assert "owner/awesome-seed" in fulls          # seeded list is kept (owner asked for it)
+
+
 def test_fetch_injects_seeds_first_and_dedupes(monkeypatch):
     from opensource.sources import github as gh
 
@@ -105,6 +142,39 @@ def test_is_worth_showing():
     assert oss._is_worth_showing({"is_new": False, "delta_stars": 7, "stars": 1})
     assert oss._is_worth_showing({"is_new": False, "stars": 50})
     assert not oss._is_worth_showing({"is_new": False, "delta_stars": 0, "stars": 3})
+
+
+def test_force_promote_seeds_moves_watch_and_synthesizes():
+    oss = _load_orchestrator()
+    items = [
+        {"url": "u1", "repo_full_name": "a/seed-in-watch", "_seed": True, "stars": 10,
+         "description": "d1"},
+        {"url": "u2", "repo_full_name": "a/seed-unmentioned", "_seed": True, "stars": 20,
+         "description": "d2"},
+        {"url": "u3", "repo_full_name": "a/non-seed", "stars": 5},
+    ]
+    analysis = {
+        "top_test": [{"url": "u3", "name": "a/non-seed", "category": "apps_oss"}],
+        "top_watch": [{"url": "u1", "name": "a/seed-in-watch", "category": "agents_oss",
+                       "why_interesting": "nice", "signal_to_wait": "stars"}],
+    }
+    oss._force_promote_seeds(analysis, items)
+    test_urls = {t["url"] for t in analysis["top_test"]}
+    assert test_urls == {"u1", "u2", "u3"}  # both seeds promoted
+    # the watch seed was moved out of top_watch
+    assert all(w["url"] != "u1" for w in analysis["top_watch"])
+    # promoted seeds carry decision + stars
+    u2 = next(t for t in analysis["top_test"] if t["url"] == "u2")
+    assert u2["decision"] == "test_now" and u2["stars"] == 20
+
+
+def test_backfill_promo_meta_copies_stars():
+    oss = _load_orchestrator()
+    items = [{"url": "u1", "stars": 1234, "forks": 56}]
+    analysis = {"top_test": [{"url": "u1", "name": "a/b"}], "top_watch": []}
+    oss._backfill_promo_meta(analysis, items)
+    assert analysis["top_test"][0]["stars"] == 1234
+    assert analysis["top_test"][0]["forks"] == 56
 
 
 # --- bot integration --------------------------------------------------------
