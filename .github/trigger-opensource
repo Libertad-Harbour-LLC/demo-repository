@@ -1,2 +1,3 @@
 # Touch this file (change it) and merge to main to trigger an immediate
 # opensource radar run (--force). Used to populate the bot on first deploy.
+# Re-run 2026-06-29T16:23:02Z: apply seeds-to-catalog + products-only filter.
