@@ -9,14 +9,27 @@ from __future__ import annotations
 from ._github_common import fetch_workflows
 
 
+def _is_make_flow(d) -> bool:
+    return isinstance(d, dict) and ("flow" in d or "modules" in d)
+
+
 def _is_make_blueprint(parsed) -> bool:
-    if not isinstance(parsed, dict):
-        return False
-    if "flow" in parsed or "modules" in parsed:
+    if _is_make_flow(parsed):
         return True
-    bp = parsed.get("blueprint")
-    if isinstance(bp, dict) and ("flow" in bp or "modules" in bp):
-        return True
+    if isinstance(parsed, dict):
+        if _is_make_flow(parsed.get("blueprint")):
+            return True
+        for v in parsed.values():
+            if _is_make_flow(v) or _is_make_flow(
+                v.get("blueprint") if isinstance(v, dict) else None
+            ):
+                return True
+    if isinstance(parsed, list):
+        for x in parsed:
+            if _is_make_flow(x) or _is_make_flow(
+                x.get("blueprint") if isinstance(x, dict) else None
+            ):
+                return True
     return False
 
 

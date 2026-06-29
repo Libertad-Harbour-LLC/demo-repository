@@ -109,9 +109,14 @@ SOURCES = {
     "reddit": True,
 }
 
-MAX_ITEMS_PER_SOURCE = 80  # was 50 — gave more headroom so low-star niche
-# (marketing/content/video/photo/web) workflows survive the star-sort
-# truncation instead of being crowded out by high-star devops/automation repos.
+MAX_ITEMS_PER_SOURCE = 150  # was 80 — the fetch hit the cap every run, so only
+# the top-N-by-stars repos were ever seen. Higher cap + recency rotation in the
+# fetcher (see _select_with_recency) lets new low-star workflows in. Verification
+# runs for ALL grouped repos before the cap, so raising it adds ~no extra cost.
+
+# Cap how many candidates reach the LLM per run (keeps the prompt/cost bounded
+# even with the higher fetch cap; fresh repos rotate through over runs).
+ANALYZER_MAX_ITEMS = 60
 
 # Verification: for n8n, fetch the JSON and check it has "nodes" and "connections" keys.
 # For Make, check for "blueprint"/"flow" structure. Skip verification if file is too big.

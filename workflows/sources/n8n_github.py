@@ -9,15 +9,31 @@ from __future__ import annotations
 from ._github_common import fetch_workflows
 
 
+def _is_n8n_node_set(d) -> bool:
+    return isinstance(d, dict) and "nodes" in d and "connections" in d
+
+
 def _is_n8n_workflow(parsed) -> bool:
-    if not isinstance(parsed, dict):
-        return False
-    if "nodes" in parsed and "connections" in parsed:
+    # single workflow: {nodes, connections}
+    if _is_n8n_node_set(parsed):
         return True
-    # Some n8n exports wrap workflow under "workflow" key
-    inner = parsed.get("workflow")
-    if isinstance(inner, dict) and "nodes" in inner and "connections" in inner:
-        return True
+    if isinstance(parsed, dict):
+        # wrapped under "workflow"
+        if _is_n8n_node_set(parsed.get("workflow")):
+            return True
+        # collection keyed by id/name: {"<id>": {nodes, connections}, ...}
+        for v in parsed.values():
+            if _is_n8n_node_set(v) or _is_n8n_node_set(
+                v.get("workflow") if isinstance(v, dict) else None
+            ):
+                return True
+    # array of workflows: [{nodes, connections}, ...]
+    if isinstance(parsed, list):
+        for x in parsed:
+            if _is_n8n_node_set(x) or _is_n8n_node_set(
+                x.get("workflow") if isinstance(x, dict) else None
+            ):
+                return True
     return False
 
 
