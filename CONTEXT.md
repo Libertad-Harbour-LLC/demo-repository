@@ -10,11 +10,13 @@ the bot's UI/data vocabulary.
 
 ## Bot (api/telegram.py)
 
-**Source** — one of `{skills, n8n, make}`. A logical data namespace the bot
-serves. Each Source has its own recommended/watchlist files in `digests/`,
-its own category enum, and a `tool_filter` (skills: `None`; n8n: `"n8n"`;
-make: `"make"`). `make` shares the workflows files with `n8n` but filters by
-tool. Registered in `SOURCES` at the top of `api/telegram.py`.
+**Source** — one of `{skills, n8n, make, opensource}`. A logical data namespace
+the bot serves. Each Source has its own recommended/watchlist files in
+`digests/`, its own category enum, and a `tool_filter` (skills: `None`; n8n:
+`"n8n"`; make: `"make"`; opensource: `None`). `make` shares the workflows files
+with `n8n` but filters by tool. `opensource` (deployable OSS products/platforms)
+reads its own `digests/opensource/` files. Registered in `SOURCES` at the top of
+`api/telegram.py`.
 
 **Item** — a single entry in a Source. Either a **recommended item** (lives
 in `digests/<source>/recommended.json` under the `skills` key, includes
