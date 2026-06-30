@@ -55,6 +55,25 @@ High-level record of notable changes so a fresh session has context.
   repo into one entry per individual workflow JSON (`list_repo_workflows`, git
   tree, cap 25/repo); repo-level dedup by `repo_full_name`.
 
+### Workflow catalog cards — 4 metadata fields + automation ingest (PR #68)
+- The site's «Шаблоны автоматизаций» now renders our workflows alongside the n8n
+  library as identical chip cards. Each `digests/workflows/recommended.json`
+  entry gained 4 optional, backwards-compatible fields: `node_count`,
+  `complexity` (simple≤5 / medium 6–15 / complex>15 — n8n-library thresholds),
+  `integrations` (real services from node types / Make module prefixes; generic
+  control/protocol nodes excluded), `trigger_type`.
+- `workflows/wf_meta.py` — pure extractor (n8n `nodes` + Make `flow`/`modules`),
+  `merge` across a repo's workflows, `fields_for` omit-empty rules.
+  `workflows/wf_enrich.py` — fetches each entry's JSON(s) and writes the fields
+  (injectable seam). `workflows/catalog.py` — idempotent POST of the whole
+  `recommended.json` to `…/ingest-automation-workflows` (`x-automation-secret`,
+  env `AUTOMATION_INGEST_SECRET`).
+- Wired into the pipeline: new promotions are enriched + the DB is pushed each
+  run. One-time/operator retrofit of existing entries via
+  `workflows.py --backfill-meta`. Categories are now free-form `<slug>_workflow`
+  (site auto-creates unknown ones). `tests/test_wf_meta.py` locks thresholds,
+  service naming, trigger detection, omit rules, and the push guard.
+
 ### Reddit disabled (PR #66)
 - Reddit 403-blocks Actions IPs and needs unmaintained API creds; contributed 0.
   `SOURCES["reddit"] = False` in both configs; removed the unused
