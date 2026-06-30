@@ -1220,6 +1220,44 @@
       "title": "KhazP/vibe-coding-prompt-template",
       "url": "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills"
     },
+    "https://github.com/KjellKod/quest/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий quest содержит 9 Claude Skills для автоматизации git-workflow: написание коммитов, PR-ассистент, проверка перед коммитом и UX-ревью. Репозиторий обновлялся 29 июня 2026 года.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "metric": "Качество автогенерированных коммит-сообщений и описаний PR: соответствие conventional commits, полнота описания изменений",
+      "promoted_from_watch": false,
+      "repo_full_name": "KjellKod/quest",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "git-commit-assistant",
+        "pr-assistant",
+        "pr-shepherd",
+        "pre-commit-review",
+        "ux-review",
+        "sharpen",
+        "celebrate",
+        "gpt",
+        "quest"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/KjellKod/quest && cp -r quest/.claude/skills/git-commit-assistant <ваш-проект>/.claude/skills/",
+        "Внести изменения в файл и попросить Claude: 'Use git-commit-assistant skill to write a commit message for my staged changes'",
+        "Дополнительно скопировать pre-commit-review и запустить: 'Run pre-commit-review on my current diff'"
+      ],
+      "title": "KjellKod/quest",
+      "url": "https://github.com/KjellKod/quest/tree/main/.claude/skills"
+    },
     "https://github.com/Kuneosu/make-slide/tree/main/.claude/skills": {
       "category": "design_skill",
       "confidence": "medium",
@@ -4030,6 +4068,36 @@
       ],
       "title": "ergrelet/windiff",
       "url": "https://github.com/ergrelet/windiff/tree/master/.claude/skills/windiff-version-diff-analysis"
+    },
+    "https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий slop-guard содержит один Claude Skill (qa), судя по названию ориентированный на защиту кодовой базы от низкокачественного AI-генерированного кода. Появился в радаре 30 июня 2026 года.",
+      "final_score": 7.0,
+      "first_recommended": "2026-06-30",
+      "metric": "Skill выявляет конкретные паттерны низкокачественного AI-кода (избыточные комментарии, неиспользуемые переменные, cargo-cult patterns) и предлагает конкретные улучшения",
+      "promoted_from_watch": false,
+      "repo_full_name": "eric-tramel/slop-guard",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "qa"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/eric-tramel/slop-guard && cp -r slop-guard/.claude/skills/qa <ваш-проект>/.claude/skills/",
+        "Открыть проект в Claude Code и проверить содержимое: cat .claude/skills/qa/SKILL.md",
+        "Дать промт на заведомо 'slop'-код: 'Use qa skill to review this function for AI code quality issues' на куске автогенерированного кода"
+      ],
+      "title": "eric-tramel/slop-guard",
+      "url": "https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills"
     },
     "https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills/qa": {
       "category": "vibe_coding_skill",
@@ -7001,6 +7069,40 @@
       "title": "proteanhq/protean",
       "url": "https://github.com/proteanhq/protean/tree/main/.claude/skills"
     },
+    "https://github.com/quantumaikr/quant.cpp/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий quant.cpp предлагает 5 Claude Skills для работы с квантовым/ML-кодом на C++: develop, grow, orchestrate, qa и score. Репозиторий набрал 395 звёзд и присутствует в базе с 17 июня.",
+      "final_score": 6.7,
+      "first_recommended": "2026-06-30",
+      "metric": "Skills корректно направляют Claude для специфики C++ / quant-кода без дополнительных инструкций в промте",
+      "promoted_from_watch": false,
+      "repo_full_name": "quantumaikr/quant.cpp",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "develop",
+        "grow",
+        "orchestrate",
+        "qa",
+        "score"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/quantumaikr/quant.cpp && cp -r quant.cpp/.claude/skills/develop <ваш-cpp-проект>/.claude/skills/",
+        "Запустить Claude Code в C++ проекте и попросить: 'Use the develop skill to scaffold a new module'",
+        "Затем проверить qa: 'Run qa skill on the generated code'"
+      ],
+      "title": "quantumaikr/quant.cpp",
+      "url": "https://github.com/quantumaikr/quant.cpp/tree/main/.claude/skills"
+    },
     "https://github.com/quickwit-oss/tantivy/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -7418,6 +7520,55 @@
       "title": "shanraisshan/claude-code-best-practice",
       "url": "https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills"
     },
+    "https://github.com/sliamh11/Deus/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий Deus — масштабная коллекция из 62 Claude Skills, охватывающих интеграции с внешними сервисами (Slack, Gmail, Telegram, Linear, Asana, Discord) и инженерные workflows (code-review, TDD, debug, onboard, deep-research). Обновлён 30 июня 2026 года.",
+      "final_score": 7.6,
+      "first_recommended": "2026-06-30",
+      "metric": "Claude автоматически применяет инструкции из SKILL.md при code-review без дополнительных промтов",
+      "promoted_from_watch": false,
+      "repo_full_name": "sliamh11/Deus",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 20,
+      "skills_in_repo": [
+        "add-asana",
+        "add-claude-context",
+        "add-discord",
+        "add-gmail",
+        "add-gcal",
+        "add-linear",
+        "add-slack",
+        "add-telegram",
+        "add-whatsapp",
+        "code-review",
+        "codebase-design",
+        "debug",
+        "deep-research",
+        "design-to-dev",
+        "tdd",
+        "onboard",
+        "prototype",
+        "quiz-me",
+        "x-integration",
+        "add-youtube-transcript"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/sliamh11/Deus && cp -r Deus/.claude/skills/code-review <ваш-проект>/.claude/skills/",
+        "Открыть проект в Claude Code и проверить, что skill подхватился: набрать /skills или спросить Claude 'what skills do you have?'",
+        "Дать тест-промт: 'Run code-review skill on this file and suggest improvements' на любом реальном файле"
+      ],
+      "title": "sliamh11/Deus",
+      "url": "https://github.com/sliamh11/Deus/tree/main/.claude/skills"
+    },
     "https://github.com/slopus/happy/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -7796,6 +7947,36 @@
       ],
       "title": "syahiidkamil/Software-Engineer-AI-Agent-Atlas",
       "url": "https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas/tree/main/.claude/skills"
+    },
+    "https://github.com/szymdzum/browser-debugger-cli/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий browser-debugger-cli содержит Claude Skill bdg для отладки через браузерный CLI. Появился в радаре 30 июня 2026 года, верифицирован, набрал 144 звезды.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-30",
+      "metric": "Claude успешно читает браузерные логи/ошибки через CLI и предлагает конкретный фикс",
+      "promoted_from_watch": false,
+      "repo_full_name": "szymdzum/browser-debugger-cli",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "bdg"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/szymdzum/browser-debugger-cli && cat .claude/skills/bdg/SKILL.md для понимания зависимостей",
+        "Установить зависимости согласно README, скопировать .claude/skills/bdg/ в ваш frontend-проект",
+        "Воспроизвести браузерную ошибку и попросить Claude: 'Use bdg skill to analyze the browser console errors'"
+      ],
+      "title": "szymdzum/browser-debugger-cli",
+      "url": "https://github.com/szymdzum/browser-debugger-cli/tree/main/.claude/skills"
     },
     "https://github.com/taewanu/pr-review-agent/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

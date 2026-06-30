@@ -1,9 +1,13 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 142
+Total: 146
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-30 | [szymdzum/browser-debugger-cli](https://github.com/szymdzum/browser-debugger-cli/tree/main/.claude/skills) | bdg |  | 6.6 | medium | git clone https://github.com/szymdzum/browser-debugger-cli && cat .claude/skills/bdg/SKILL.md для понимания зависимостей |
+| 2026-06-30 | [quantumaikr/quant.cpp](https://github.com/quantumaikr/quant.cpp/tree/main/.claude/skills) | develop, grow, orchestrate, +2 more |  | 6.7 | medium | git clone https://github.com/quantumaikr/quant.cpp && cp -r quant.cpp/.claude/skills/develop <ваш-cpp-проект>/.claude... |
+| 2026-06-30 | [eric-tramel/slop-guard](https://github.com/eric-tramel/slop-guard/tree/main/.claude/skills) | qa |  | 7.0 | medium | git clone https://github.com/eric-tramel/slop-guard && cp -r slop-guard/.claude/skills/qa <ваш-проект>/.claude/skills/ |
+| 2026-06-30 | [KjellKod/quest](https://github.com/KjellKod/quest/tree/main/.claude/skills) | git-commit-assistant, pr-assistant, pr-shepherd, +6 more |  | 7.3 | medium | git clone https://github.com/KjellKod/quest && cp -r quest/.claude/skills/git-commit-assistant <ваш-проект>/.claude/s... |
 | 2026-06-29 | [hackermanishackerman/claude-skills-vault](https://github.com/hackermanishackerman/claude-skills-vault/tree/main/.claude/skills) | beautiful-code, code-reviewer, doc-navigator, +15 more |  | 7.6 | medium | git clone https://github.com/hackermanishackerman/claude-skills-vault && cd claude-skills-vault |
 | 2026-06-29 | [Ivy-Interactive/Ivy-Tendril](https://github.com/Ivy-Interactive/Ivy-Tendril/tree/development/.claude/skills) | tendril-debug-plan, tendril-debug-promptware, tendril-release, +1 more |  | 7.8 | high | git clone https://github.com/Ivy-Interactive/Ivy-Tendril && cd Ivy-Tendril && git checkout development |
 | 2026-06-29 | [BehiSecc/VibeSec-Skill](https://github.com/BehiSecc/VibeSec-Skill/blob/main/SKILL.md) | VibeSec-Skill |  | 7.3 | high | git clone https://github.com/BehiSecc/VibeSec-Skill && скопировать SKILL.md в .claude/skills/vibesec/SKILL.md своего ... |

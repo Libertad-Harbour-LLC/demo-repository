@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 48
+Total: 49
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-30 | [sliamh11/Deus](https://github.com/sliamh11/Deus/tree/main/.claude/skills) | add-asana, add-claude-context, add-discord, +17 more |  | 7.6 | medium | git clone https://github.com/sliamh11/Deus && cp -r Deus/.claude/skills/code-review <ваш-проект>/.claude/skills/ |
 | 2026-06-27 | [talmolab/sleap](https://github.com/talmolab/sleap/tree/develop/.claude/skills) | investigation, pr, qt-testing, +1 more |  | 6.5 | high | git clone https://github.com/talmolab/sleap -b develop && cp -r sleap/.claude/skills/investigation .claude/skills/ в ... |
 | 2026-06-27 | [heygen-com/heygen-cli](https://github.com/heygen-com/heygen-cli/tree/main/.claude/skills) | changelog-cli, e2e-cli-test |  | 7.0 | high | git clone https://github.com/heygen-com/heygen-cli && cp -r heygen-cli/.claude/skills/changelog-cli .claude/skills/ в... |
 | 2026-06-25 | [changkun/wallfacer](https://github.com/changkun/wallfacer/tree/main/.claude/skills) | wf-spec-breakdown, wf-spec-create, wf-spec-diff, +9 more |  | 7.0 | medium | git clone https://github.com/changkun/wallfacer && cp -r wallfacer/.claude/skills/wf-spec-create <ваш-проект>/.claude... |
