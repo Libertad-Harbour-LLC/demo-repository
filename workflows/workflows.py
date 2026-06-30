@@ -228,6 +228,22 @@ def _write_report(analysis: dict, date: str) -> str:
     return path
 
 
+def push_only() -> int:
+    """Just POST the current recommended.json to the automation catalog — no
+    fetch, no analyzer, no enrichment. Fast operator path to (re)publish the
+    cards after the data is already in place."""
+    recommended_db = skill_db.load_recommended(path=config.RECOMMENDED_PATH)
+    sk = recommended_db.get("skills") or {}
+    enriched = sum(1 for v in sk.values() if isinstance(v, dict) and v.get("node_count"))
+    print(f"[workflows] push-only: {len(sk)} workflow(s), {enriched} with card fields")
+    result, err = catalog.push_recommended(recommended_db)
+    if err:
+        print(f"[workflows] catalog push FAILED: {err}", file=sys.stderr)
+        return 1
+    print(f"[workflows] catalog push ok: {catalog.format_summary(result)}")
+    return 0
+
+
 def backfill_meta(only_missing: bool = False, push: bool = True) -> int:
     """One-shot: enrich EVERY recommended workflow with the four catalog fields
     (node_count / complexity / integrations / trigger_type) by fetching each
@@ -619,7 +635,15 @@ def main() -> int:
         action="store_true",
         help="With --backfill-meta: skip the catalog POST (compute + save only).",
     )
+    parser.add_argument(
+        "--push-only",
+        action="store_true",
+        help="Just POST the current recommended.json to the catalog "
+        "(no fetch/analyzer/enrichment). Fast (re)publish path.",
+    )
     args = parser.parse_args()
+    if args.push_only:
+        return push_only()
     if args.backfill_meta:
         return backfill_meta(only_missing=args.only_missing, push=not args.no_push)
     return run(

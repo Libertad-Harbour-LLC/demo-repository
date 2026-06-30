@@ -1,0 +1,22 @@
+name: push-cards
+on:
+  workflow_dispatch:
+    # Manual: just (re)publish the workflow catalog cards.
+  push:
+    branches: [main]
+    paths:
+      - '.github/trigger-push-cards'
+    # Touch .github/trigger-push-cards → POST digests/workflows/recommended.json
+    # (already enriched) to the automation catalog. Fast: no fetch/analyzer.
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r trendwatch/requirements.txt
+      - run: python workflows/workflows.py --push-only
+        env:
+          AUTOMATION_INGEST_SECRET: ${{ secrets.AUTOMATION_INGEST_SECRET }}
