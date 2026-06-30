@@ -247,6 +247,46 @@
       "trigger_type": "manual",
       "url": "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud"
     },
+    "https://github.com/Cheffromspace/AI-PR-Assistant/blob/main/n8n-workflow.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для AI-ассистента код-ревью Pull Request на GitHub. Автоматически анализирует diff PR с помощью языковой модели и публикует комментарии с предложениями — для разработчиков и DevOps-команд.",
+      "final_score": 6.4,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Anthropic",
+        "Github Tool"
+      ],
+      "metric": "Время от открытия PR до появления AI-комментария (целевой показатель: < 2 минут)",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "Cheffromspace/AI-PR-Assistant",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n-workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать n8n-workflow.json",
+        "Импортировать в n8n",
+        "Настроить GitHub webhook для события pull_request",
+        "Добавить credentials: GitHub API token + OpenAI/Anthropic API key",
+        "Создать тестовый PR и проверить появление AI-комментария"
+      ],
+      "title": "Cheffromspace/AI-PR-Assistant: n8n-workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Cheffromspace/AI-PR-Assistant/blob/main/n8n-workflow.json"
+    },
     "https://github.com/ChiefGyk3D/siem-docker-stack": {
       "category": "devops_workflow",
       "complexity": "simple",
@@ -1476,6 +1516,973 @@
       "trigger_type": "webhook",
       "url": "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration"
     },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/01-ai-approval-generic.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-ai-approval-generic"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 01-ai-approval-generic",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/01-ai-approval-generic.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/02-invoice-approval.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02-invoice-approval"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 02-invoice-approval",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/02-invoice-approval.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/03-customer-refund-shopify-stripe.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03-customer-refund-shopify-stripe"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 03-customer-refund-shopify-stripe",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/03-customer-refund-shopify-stripe.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/04-hr-resume-screening.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust",
+        "Gmail"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "04-hr-resume-screening"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 04-hr-resume-screening",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/04-hr-resume-screening.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/05-ai-email-classification.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Gmail",
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "05-ai-email-classification"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 05-ai-email-classification",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/05-ai-email-classification.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/06-agent-chain-of-custody.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 13,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "06-agent-chain-of-custody"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 06-agent-chain-of-custody",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/06-agent-chain-of-custody.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/07-loan-approval.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "07-loan-approval"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 07-loan-approval",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/07-loan-approval.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/08-insurance-claim.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust",
+        "Google Sheets"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "08-insurance-claim"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 08-insurance-claim",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/08-insurance-claim.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/09-transaction-fraud-screening.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust",
+        "Slack"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "09-transaction-fraud-screening"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 09-transaction-fraud-screening",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/09-transaction-fraud-screening.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/10-payment-chargeback-dispute.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "10-payment-chargeback-dispute"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 10-payment-chargeback-dispute",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/10-payment-chargeback-dispute.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/11-ai-support-agent.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "11-ai-support-agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 11-ai-support-agent",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/11-ai-support-agent.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/12-support-ticket-priority.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust",
+        "Google Sheets"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "12-support-ticket-priority"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 12-support-ticket-priority",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/12-support-ticket-priority.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/13-content-moderation.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust",
+        "Slack"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "13-content-moderation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 13-content-moderation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/13-content-moderation.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/14-candidate-ranking-batch.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust",
+        "Google Sheets"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "14-candidate-ranking-batch"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 14-candidate-ranking-batch",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/14-candidate-ranking-batch.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/15-performance-review-assist.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "15-performance-review-assist"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 15-performance-review-assist",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/15-performance-review-assist.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/16-medical-triage.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "16-medical-triage"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 16-medical-triage",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/16-medical-triage.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/17-prior-authorization.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "17-prior-authorization"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 17-prior-authorization",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/17-prior-authorization.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/18-document-classification.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "18-document-classification"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 18-document-classification",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/18-document-classification.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/19-data-access-request-gdpr.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "19-data-access-request-gdpr"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 19-data-access-request-gdpr",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/19-data-access-request-gdpr.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/20-vendor-risk-assessment.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust",
+        "Google Sheets"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "20-vendor-risk-assessment"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 20-vendor-risk-assessment",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/20-vendor-risk-assessment.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/21-marketing-copy-approval.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenAI",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "21-marketing-copy-approval"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 21-marketing-copy-approval",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/21-marketing-copy-approval.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/22-receipt-verify-endpoint.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "22-receipt-verify-endpoint"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 22-receipt-verify-endpoint",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/22-receipt-verify-endpoint.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/23-receipt-audit-export.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Google Sheets",
+        "Signatrust"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "23-receipt-audit-export"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 23-receipt-audit-export",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/23-receipt-audit-export.json"
+    },
+    "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/24-receipt-verify-on-webhook.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n workflow для AI-assisted approval-процессов: одобрение инвойсов, возвраты Shopify/Stripe, скрининг резюме, классификация email, одобрение кредитов и страховых требований. Ориентирована на команды, которым нужны готовые цепочки согласования с AI-слоем.",
+      "final_score": 7.3,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Signatrust",
+        "Slack"
+      ],
+      "metric": "Время обработки одного approval-запроса (до и после), процент корректных AI-решений",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/n8n-signatrust-workflows",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "24-receipt-verify-on-webhook"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой JSON из папки workflows/ (например, 02-invoice-approval.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Изучить node-граф: найти AI-узел и настроить API-ключ (OpenAI/Claude)",
+        "Для shopify-workflow настроить Shopify и Stripe credentials",
+        "Запустить тестовый прогон с тестовым документом"
+      ],
+      "title": "abokenan444/n8n-signatrust-workflows: 24-receipt-verify-on-webhook",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/24-receipt-verify-on-webhook.json"
+    },
     "https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer": {
       "category": "web_workflow",
       "complexity": "complex",
@@ -2428,6 +3435,169 @@
       "tool": "n8n",
       "trigger_type": "manual",
       "url": "https://github.com/jreyesr/n8n-nodes-tesseractjs"
+    },
+    "https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Feature Requests Error Workflow.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 3 n8n workflow для автоматической обработки feature requests: логирование входящих запросов, AI-приоритизация и обработка ошибок. Подходит для продуктовых команд и SaaS-компаний.",
+      "final_score": 5.9,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Процент feature requests, получивших автоматическую оценку приоритета без ручного вмешательства",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "kalouseskimon-dot/feature-request-pipeline",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 1,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Feature Requests Error Workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать Feature Requests Prioritzer.json",
+        "Импортировать в n8n",
+        "Изучить граф: найти входной канал (форма/webhook) и AI-узел приоритизации",
+        "Настроить credentials (AI-провайдер, возможно Notion/Linear/Jira для логирования)",
+        "Подать тестовый feature request и проверить результат"
+      ],
+      "title": "kalouseskimon-dot/feature-request-pipeline: Feature Requests Error Workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Feature Requests Error Workflow.json"
+    },
+    "https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Feature Requests Prioritzer.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 3 n8n workflow для автоматической обработки feature requests: логирование входящих запросов, AI-приоритизация и обработка ошибок. Подходит для продуктовых команд и SaaS-компаний.",
+      "final_score": 5.9,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Gmail",
+        "Typeform",
+        "Google Gemini",
+        "Google Sheets"
+      ],
+      "metric": "Процент feature requests, получивших автоматическую оценку приоритета без ручного вмешательства",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "kalouseskimon-dot/feature-request-pipeline",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 1,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Feature Requests Prioritzer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать Feature Requests Prioritzer.json",
+        "Импортировать в n8n",
+        "Изучить граф: найти входной канал (форма/webhook) и AI-узел приоритизации",
+        "Настроить credentials (AI-провайдер, возможно Notion/Linear/Jira для логирования)",
+        "Подать тестовый feature request и проверить результат"
+      ],
+      "title": "kalouseskimon-dot/feature-request-pipeline: Feature Requests Prioritzer",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Feature Requests Prioritzer.json"
+    },
+    "https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Features Logging.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 3 n8n workflow для автоматической обработки feature requests: логирование входящих запросов, AI-приоритизация и обработка ошибок. Подходит для продуктовых команд и SaaS-компаний.",
+      "final_score": 5.9,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Google Sheets",
+        "Google Gemini",
+        "Gmail"
+      ],
+      "metric": "Процент feature requests, получивших автоматическую оценку приоритета без ручного вмешательства",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "kalouseskimon-dot/feature-request-pipeline",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 1,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Features Logging"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать Feature Requests Prioritzer.json",
+        "Импортировать в n8n",
+        "Изучить граф: найти входной канал (форма/webhook) и AI-узел приоритизации",
+        "Настроить credentials (AI-провайдер, возможно Notion/Linear/Jira для логирования)",
+        "Подать тестовый feature request и проверить результат"
+      ],
+      "title": "kalouseskimon-dot/feature-request-pipeline: Features Logging",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Features Logging.json"
+    },
+    "https://github.com/kashn11/Automated-AI-Video-Generation-and-TikTok-Upload/blob/main/workflow.json": {
+      "category": "video_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической генерации AI-видео и загрузки на TikTok. Предназначен для контент-мейкеров и маркетологов, которые хотят автоматизировать создание коротких видео с помощью AI-инструментов.",
+      "final_score": 5.8,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "Google Sheets",
+        "OpenAI",
+        "Blotato"
+      ],
+      "metric": "Время от запуска workflow до появления видео в TikTok (включая генерацию)",
+      "node_count": 24,
+      "promoted_from_watch": false,
+      "repo_full_name": "kashn11/Automated-AI-Video-Generation-and-TikTok-Upload",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow.json",
+        "Импортировать в n8n",
+        "Определить AI-сервис генерации видео (Runway, Seedance и т.д.) и настроить API",
+        "Добавить TikTok credentials (OAuth или API)",
+        "Сгенерировать тестовое видео и проверить загрузку"
+      ],
+      "title": "kashn11/Automated-AI-Video-Generation-and-TikTok-Upload: workflow",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/kashn11/Automated-AI-Video-Generation-and-TikTok-Upload/blob/main/workflow.json"
     },
     "https://github.com/keila-moral/researchflow-ai": {
       "category": "data_workflow",
@@ -4398,6 +5568,45 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/yigitkonur/n8n-workflows-craft"
+    },
+    "https://github.com/youerning/blog/blob/master/n8n/novel-workflow.json": {
+      "category": "content_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow из технического блога с 200 звёздами, автоматизирующий обработку или агрегацию контента веб-новелл. Подходит для читателей и авторов, которым нужно отслеживать/обрабатывать текстовый контент автоматически.",
+      "final_score": 6.4,
+      "first_recommended": "2026-06-30",
+      "integrations": [
+        "DeepSeek"
+      ],
+      "metric": "Количество успешно обработанных глав/обновлений за прогон",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "youerning/blog",
+      "scores": {
+        "business_impact": 5,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 6
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "novel-workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать novel-workflow.json по прямой ссылке",
+        "Импортировать в n8n через Import Workflow",
+        "Изучить узлы: определить источник данных (HTTP Request / RSS) и выходной канал",
+        "Настроить URL целевого сайта с новеллами",
+        "Запустить тестовый прогон и проверить вывод"
+      ],
+      "title": "youerning/blog: novel-workflow",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/youerning/blog/blob/master/n8n/novel-workflow.json"
     },
     "https://github.com/zengfr/n8n-workflow-all-templates": {
       "category": "general_workflow",

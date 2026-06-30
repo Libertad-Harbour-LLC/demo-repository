@@ -198,6 +198,24 @@
       "url": "https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts",
       "why_interesting": "Связка AI-анализ + Jira + Slack для платёжных сбоев решает реальную боль SaaS-команд; упоминается в cross-source по ключевым словам jira/slack."
     },
+    "https://github.com/Devin-Un/Automated-Network-Threat-Detection-And-Response": {
+      "added_date": "2026-06-30",
+      "category": "devops_workflow",
+      "description": "n8n workflow для автоматического обнаружения сетевых угроз и реагирования на них. Ориентирован на SecOps-команды и системных администраторов.",
+      "expires_at": "2026-07-30",
+      "last_checked": "2026-06-30",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 2
+      },
+      "repo_full_name": "Devin-Un/Automated-Network-Threat-Detection-And-Response: ANTD&R",
+      "signal_to_wait": "Появление описания источников данных об угрозах (SIEM, логи) и действий реагирования; рост звёзд от 2 до 10+",
+      "title": "Devin-Un/Automated-Network-Threat-Detection-And-Response: ANTD&R",
+      "tool": "n8n",
+      "url": "https://github.com/Devin-Un/Automated-Network-Threat-Detection-And-Response",
+      "why_interesting": "Cybersecurity automation — редкий кейс для n8n; описательное имя ANTD&R Workflow, verified=True, cross_source упоминание 'audit' и 'network'"
+    },
     "https://github.com/Elimeleth/n8n-templates": {
       "added_date": "2026-06-22",
       "category": "devops_workflow",
@@ -540,6 +558,24 @@
       "url": "https://github.com/Yeisson8A/make_automatizacion_google_forms_trello",
       "why_interesting": "Один из немногих Make-blueprints в выборке; охватывает популярную связку Google Forms + Trello, которая востребована в малом бизнесе."
     },
+    "https://github.com/aayushiagratha/positionpilot": {
+      "added_date": "2026-06-30",
+      "category": "general_workflow",
+      "description": "Трёхэтапный n8n pipeline с говорящим названием PositionPilot — судя по именам файлов, автоматизирует многоступенчатый процесс (вероятно, рекрутинг или торговые позиции). Три связанных workflow: Stage 1, Stage 2 и Approve Run.",
+      "expires_at": "2026-07-30",
+      "last_checked": "2026-06-30",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 3,
+        "stars": 1
+      },
+      "repo_full_name": "aayushiagratha/positionpilot: PositionPilot (3 workflow)",
+      "signal_to_wait": "Появление README/описания что именно автоматизирует 'PositionPilot'; рост звёзд с 1 до 5+",
+      "title": "aayushiagratha/positionpilot: PositionPilot (3 workflow)",
+      "tool": "n8n",
+      "url": "https://github.com/aayushiagratha/positionpilot",
+      "why_interesting": "Свежий push (2026-06-30), 3 логически связанных workflow с понятными именами этапов, verified=True; тема рекрутинга/позиционирования — практичный бизнес-кейс"
+    },
     "https://github.com/abdopcnet/n8n-workflows": {
       "added_date": "2026-06-07",
       "category": "devops_workflow",
@@ -575,6 +611,24 @@
       "tool": "make",
       "url": "https://github.com/akshatcodes1810/AI_Resume_Analyser_Pipeline",
       "why_interesting": "Единственный интересный Make-blueprint за день с осмысленным именем файла и пушем прямо сегодня. Тема AI-рекрутинга актуальна."
+    },
+    "https://github.com/aksheyw/GrowFlowAI": {
+      "added_date": "2026-06-30",
+      "category": "marketing_workflow",
+      "description": "3 версии Telegram-бота для growth-автоматизации на n8n: базовый бот, бот с кнопками и бот с расширенным snooze. Подходит для маркетологов и growth-команд, работающих через Telegram.",
+      "expires_at": "2026-07-30",
+      "last_checked": "2026-06-30",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 3,
+        "stars": 0
+      },
+      "repo_full_name": "aksheyw/GrowFlowAI: growflow_telegram_bot_with_buttons",
+      "signal_to_wait": "Появление описания что именно автоматизирует GrowFlowAI (лидген, нотификации, онбординг?); рост звёзд с 0",
+      "title": "aksheyw/GrowFlowAI: growflow_telegram_bot_with_buttons",
+      "tool": "n8n",
+      "url": "https://github.com/aksheyw/GrowFlowAI",
+      "why_interesting": "3 итеративных версии одного бота в одном репо — признак активной разработки; Telegram-автоматизация популярна; pushed 2026-06-30, verified=True"
     },
     "https://github.com/alejandrosnz/srt-llm-translator": {
       "added_date": "2026-05-31",
@@ -1097,6 +1151,24 @@
       "tool": "n8n",
       "url": "https://github.com/reorx/n8n-workflows",
       "why_interesting": "74 звезды — наибольшее число среди всех кандидатов дня; delta_skills_count=1 означает добавление нового workflow. Пара 'blog+twitter to tg' — классика контент-автоматизации."
+    },
+    "https://github.com/ronnienter/n8n-phishing-check": {
+      "added_date": "2026-06-30",
+      "category": "devops_workflow",
+      "description": "n8n workflow для автоматической проверки URL на фишинг. Полезен для SecOps-команд, email-фильтрации и корпоративной безопасности.",
+      "expires_at": "2026-07-30",
+      "last_checked": "2026-06-30",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": 1,
+        "stars": 3
+      },
+      "repo_full_name": "ronnienter/n8n-phishing-check: phishing URL checker",
+      "signal_to_wait": "README с описанием используемого anti-phishing API (VirusTotal, Google Safe Browsing и т.д.); рост звёзд",
+      "title": "ronnienter/n8n-phishing-check: phishing URL checker",
+      "tool": "n8n",
+      "url": "https://github.com/ronnienter/n8n-phishing-check",
+      "why_interesting": "Конкретный security use-case с понятным применением; 3 звезды при минималистичном репо, verified=True; вписывается в тренд AI+security"
     },
     "https://github.com/shabbirun/n8nclaw": {
       "added_date": "2026-06-25",
