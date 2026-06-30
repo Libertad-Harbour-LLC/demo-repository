@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 21
+Total: 22
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-30 | [muhammadzayed2003/AI-powered-classifier-for-Grants: AI powered classifier for Grants](https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json) | AI powered classifier for Grants |  | 6.7 | medium | Скачать JSON-файл 'AI powered classifier for Grants.json' |
 | 2026-06-29 | [SidhartSami/HiringAutomation: Hiring Pipeline](https://github.com/SidhartSami/HiringAutomation) | Hiring Pipeline - Email Sender, Hiring Pipeline - Ingestion |  | 6.4 | medium | Скачать оба JSON: Hiring Pipeline - Email Sender.json и Hiring Pipeline - Ingestion.json |
 | 2026-06-26 | [FabricioLR/Financial: FinancialN8NWorkflow](https://github.com/FabricioLR/Financial) | FinancialN8NWorkflow |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/FabricioLR/Financial/master/FinancialN8NWorkflow.json |
 | 2026-06-20 | [n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)](https://github.com/n8n-io/test-workflows) | 138, 161, 179, +2 more |  | 5.5 | high | Перейти на https://github.com/n8n-io/test-workflows и выбрать нужный JSON из папки workflows/ |

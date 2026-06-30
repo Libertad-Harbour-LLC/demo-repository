@@ -1,9 +1,10 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 17
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-30 | [V1D1AN/S1EM: S1EM_TheHive](https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json) | S1EM_TheHive |  | 6.6 | high | Скачать S1EM_TheHive.json из папки n8n/ репозитория |
 | 2026-06-29 | [papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders: main](https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders) | main |  | 6.5 | medium | Скачать main.json по ссылке json_url |
 | 2026-06-29 | [Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow](https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer) | wazuh-ai-security-analyzer-dynamic.workflow, wazuh-ai-security-analyzer.workflow |  | 6.8 | medium | Скачать wazuh-ai-security-analyzer-dynamic.workflow.json по json_url |
 | 2026-06-25 | [weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection](https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging) | main |  | 6.1 | medium | Скачать JSON по ссылке json_url |

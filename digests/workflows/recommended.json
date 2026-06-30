@@ -451,6 +451,72 @@
       "tool": "make",
       "url": "https://github.com/Endgame-Labs/mechanizer"
     },
+    "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/daily-photo-open-calls.json": {
+      "category": "photo_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для ежедневного автоматического поиска открытых фотоконкурсов (open calls) с сохранением результатов в Airtable. Предназначен для фотографов, которые хотят не пропускать дедлайны конкурсов.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-30",
+      "metric": "Количество найденных open calls в Airtable за первые 7 дней",
+      "promoted_from_watch": false,
+      "repo_full_name": "EvgeniQwerty/n8n-find-photo-opencalls",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily-photo-open-calls"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily-photo-open-calls.json из репозитория",
+        "Импортировать JSON в n8n через меню Import",
+        "Запустить setup-airtable.json первым для создания структуры базы",
+        "Настроить credentials: Airtable API key",
+        "Запустить тестовый прогон и проверить появление записей в Airtable"
+      ],
+      "title": "EvgeniQwerty/n8n-find-photo-opencalls: daily-photo-open-calls",
+      "tool": "n8n",
+      "url": "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/daily-photo-open-calls.json"
+    },
+    "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/setup-airtable.json": {
+      "category": "photo_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для ежедневного автоматического поиска открытых фотоконкурсов (open calls) с сохранением результатов в Airtable. Предназначен для фотографов, которые хотят не пропускать дедлайны конкурсов.",
+      "final_score": 6.8,
+      "first_recommended": "2026-06-30",
+      "metric": "Количество найденных open calls в Airtable за первые 7 дней",
+      "promoted_from_watch": false,
+      "repo_full_name": "EvgeniQwerty/n8n-find-photo-opencalls",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "setup-airtable"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily-photo-open-calls.json из репозитория",
+        "Импортировать JSON в n8n через меню Import",
+        "Запустить setup-airtable.json первым для создания структуры базы",
+        "Настроить credentials: Airtable API key",
+        "Запустить тестовый прогон и проверить появление записей в Airtable"
+      ],
+      "title": "EvgeniQwerty/n8n-find-photo-opencalls: setup-airtable",
+      "tool": "n8n",
+      "url": "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/setup-airtable.json"
+    },
     "https://github.com/FabricioLR/Financial": {
       "category": "general_workflow",
       "confidence": "medium",
@@ -1087,6 +1153,39 @@
       "title": "Trusera/ai-bom: lead-scorer",
       "tool": "n8n",
       "url": "https://github.com/Trusera/ai-bom"
+    },
+    "https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json": {
+      "category": "devops_workflow",
+      "confidence": "high",
+      "description": "n8n-workflow в составе проекта S1EM (SIEM на базе открытого ПО), интегрирующий n8n с платформой реагирования на инциденты TheHive. Предназначен для команд SOC и информационной безопасности.",
+      "final_score": 6.6,
+      "first_recommended": "2026-06-30",
+      "metric": "Время от получения алерта до создания кейса в TheHive",
+      "promoted_from_watch": false,
+      "repo_full_name": "V1D1AN/S1EM",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "S1EM_TheHive"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать S1EM_TheHive.json из папки n8n/ репозитория",
+        "Импортировать в n8n через Import workflow",
+        "Настроить credentials для TheHive (API key и URL инстанса)",
+        "Настроить входящий источник событий (webhook или другой триггер)",
+        "Запустить тестовый прогон с тестовым алертом"
+      ],
+      "title": "V1D1AN/S1EM: S1EM_TheHive",
+      "tool": "n8n",
+      "url": "https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json"
     },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
@@ -2245,6 +2344,39 @@
       "tool": "n8n",
       "url": "https://github.com/mhmdmnsor292003-arch/free-ai-tools"
     },
+    "https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow с использованием AI для автоматической классификации грантов и финансовых возможностей. Ориентирован на НКО, исследователей и стартапы, которым нужно быстро сортировать большой поток грантовых программ.",
+      "final_score": 6.7,
+      "first_recommended": "2026-06-30",
+      "metric": "Точность классификации на тестовой выборке грантов",
+      "promoted_from_watch": false,
+      "repo_full_name": "muhammadzayed2003/AI-powered-classifier-for-Grants",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "AI powered classifier for Grants"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON-файл 'AI powered classifier for Grants.json'",
+        "Импортировать в n8n через Import workflow",
+        "Настроить AI credentials (OpenAI или другая модель по конфигурации)",
+        "Подготовить тестовый набор грантовых описаний",
+        "Запустить workflow и проверить корректность классификации"
+      ],
+      "title": "muhammadzayed2003/AI-powered-classifier-for-Grants: AI powered classifier for Grants",
+      "tool": "n8n",
+      "url": "https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json"
+    },
     "https://github.com/n8n-io/test-workflows": {
       "category": "general_workflow",
       "confidence": "high",
@@ -2523,6 +2655,72 @@
       "title": "ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports",
       "tool": "n8n",
       "url": "https://github.com/ritik-prog/n8n-automation-templates-5000"
+    },
+    "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/new_workflow.json": {
+      "category": "video_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического суммаризирования видео с помощью AI. Упоминается в контексте ключевого слова 'summarizer' в нескольких источниках выборки; предназначен для создателей контента и исследователей.",
+      "final_score": 5.8,
+      "first_recommended": "2026-06-30",
+      "metric": "Качество и полнота суммаризации на тестовом видео",
+      "promoted_from_watch": false,
+      "repo_full_name": "shikherjha/n8n-video-Summarizer-Bot",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "new_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать worflow.json (опечатка в имени файла — это штатное имя)",
+        "Импортировать в n8n через Import workflow",
+        "Изучить node-граф для определения AI-провайдера и источника видео",
+        "Настроить credentials для AI-сервиса и видео-источника",
+        "Запустить тест с коротким видео или YouTube-ссылкой"
+      ],
+      "title": "shikherjha/n8n-video-Summarizer-Bot: new_workflow",
+      "tool": "n8n",
+      "url": "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/new_workflow.json"
+    },
+    "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/worflow.json": {
+      "category": "video_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического суммаризирования видео с помощью AI. Упоминается в контексте ключевого слова 'summarizer' в нескольких источниках выборки; предназначен для создателей контента и исследователей.",
+      "final_score": 5.8,
+      "first_recommended": "2026-06-30",
+      "metric": "Качество и полнота суммаризации на тестовом видео",
+      "promoted_from_watch": false,
+      "repo_full_name": "shikherjha/n8n-video-Summarizer-Bot",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "worflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать worflow.json (опечатка в имени файла — это штатное имя)",
+        "Импортировать в n8n через Import workflow",
+        "Изучить node-граф для определения AI-провайдера и источника видео",
+        "Настроить credentials для AI-сервиса и видео-источника",
+        "Запустить тест с коротким видео или YouTube-ссылкой"
+      ],
+      "title": "shikherjha/n8n-video-Summarizer-Bot: worflow",
+      "tool": "n8n",
+      "url": "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/worflow.json"
     },
     "https://github.com/shreyvaughn/claude-ai-sales-system": {
       "category": "sales_workflow",
@@ -3307,6 +3505,105 @@
       "title": "wranngle/n8n: lead-enrichment-microservice + lead-intake-main",
       "tool": "n8n",
       "url": "https://github.com/wranngle/n8n"
+    },
+    "https://github.com/yedoww/vibemarketingflow/blob/main/CompetitorAnalysis.json": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "Набор из трёх n8n-workflow для маркетингового анализа: мониторинг конкурентов, ежедневный поток задач и настройка базы знаний. Подойдёт маркетологам и аналитикам, ведущим регулярный competitive intelligence.",
+      "final_score": 6.3,
+      "first_recommended": "2026-06-30",
+      "metric": "Количество автоматически собранных данных о конкурентах в первую неделю",
+      "promoted_from_watch": false,
+      "repo_full_name": "yedoww/vibemarketingflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "CompetitorAnalysis"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все три JSON-файла из репозитория",
+        "Начать с KnowledgeSetting.json — импортировать и настроить базу знаний",
+        "Импортировать CompetitorAnalysis.json, настроить источники данных",
+        "Импортировать DailyFlow.json и связать с предыдущими",
+        "Запустить тестовый прогон CompetitorAnalysis с реальным конкурентом"
+      ],
+      "title": "yedoww/vibemarketingflow: CompetitorAnalysis",
+      "tool": "n8n",
+      "url": "https://github.com/yedoww/vibemarketingflow/blob/main/CompetitorAnalysis.json"
+    },
+    "https://github.com/yedoww/vibemarketingflow/blob/main/DailyFlow.json": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "Набор из трёх n8n-workflow для маркетингового анализа: мониторинг конкурентов, ежедневный поток задач и настройка базы знаний. Подойдёт маркетологам и аналитикам, ведущим регулярный competitive intelligence.",
+      "final_score": 6.3,
+      "first_recommended": "2026-06-30",
+      "metric": "Количество автоматически собранных данных о конкурентах в первую неделю",
+      "promoted_from_watch": false,
+      "repo_full_name": "yedoww/vibemarketingflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "DailyFlow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все три JSON-файла из репозитория",
+        "Начать с KnowledgeSetting.json — импортировать и настроить базу знаний",
+        "Импортировать CompetitorAnalysis.json, настроить источники данных",
+        "Импортировать DailyFlow.json и связать с предыдущими",
+        "Запустить тестовый прогон CompetitorAnalysis с реальным конкурентом"
+      ],
+      "title": "yedoww/vibemarketingflow: DailyFlow",
+      "tool": "n8n",
+      "url": "https://github.com/yedoww/vibemarketingflow/blob/main/DailyFlow.json"
+    },
+    "https://github.com/yedoww/vibemarketingflow/blob/main/KnowledgeSetting.json": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "Набор из трёх n8n-workflow для маркетингового анализа: мониторинг конкурентов, ежедневный поток задач и настройка базы знаний. Подойдёт маркетологам и аналитикам, ведущим регулярный competitive intelligence.",
+      "final_score": 6.3,
+      "first_recommended": "2026-06-30",
+      "metric": "Количество автоматически собранных данных о конкурентах в первую неделю",
+      "promoted_from_watch": false,
+      "repo_full_name": "yedoww/vibemarketingflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "KnowledgeSetting"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все три JSON-файла из репозитория",
+        "Начать с KnowledgeSetting.json — импортировать и настроить базу знаний",
+        "Импортировать CompetitorAnalysis.json, настроить источники данных",
+        "Импортировать DailyFlow.json и связать с предыдущими",
+        "Запустить тестовый прогон CompetitorAnalysis с реальным конкурентом"
+      ],
+      "title": "yedoww/vibemarketingflow: KnowledgeSetting",
+      "tool": "n8n",
+      "url": "https://github.com/yedoww/vibemarketingflow/blob/main/KnowledgeSetting.json"
     },
     "https://github.com/yigitkonur/n8n-workflows-craft": {
       "category": "content_workflow",

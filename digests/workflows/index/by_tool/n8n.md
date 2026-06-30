@@ -1,9 +1,18 @@
 # Recommended — tool: n8n
 
-Total: 95
+Total: 104
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-06-30 | [yedoww/vibemarketingflow: KnowledgeSetting](https://github.com/yedoww/vibemarketingflow/blob/main/KnowledgeSetting.json) | KnowledgeSetting |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |
+| 2026-06-30 | [yedoww/vibemarketingflow: DailyFlow](https://github.com/yedoww/vibemarketingflow/blob/main/DailyFlow.json) | DailyFlow |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |
+| 2026-06-30 | [yedoww/vibemarketingflow: CompetitorAnalysis](https://github.com/yedoww/vibemarketingflow/blob/main/CompetitorAnalysis.json) | CompetitorAnalysis |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |
+| 2026-06-30 | [shikherjha/n8n-video-Summarizer-Bot: worflow](https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/worflow.json) | worflow |  | 5.8 | medium | Скачать worflow.json (опечатка в имени файла — это штатное имя) |
+| 2026-06-30 | [shikherjha/n8n-video-Summarizer-Bot: new_workflow](https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/new_workflow.json) | new_workflow |  | 5.8 | medium | Скачать worflow.json (опечатка в имени файла — это штатное имя) |
+| 2026-06-30 | [muhammadzayed2003/AI-powered-classifier-for-Grants: AI powered classifier for Grants](https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json) | AI powered classifier for Grants |  | 6.7 | medium | Скачать JSON-файл 'AI powered classifier for Grants.json' |
+| 2026-06-30 | [V1D1AN/S1EM: S1EM_TheHive](https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json) | S1EM_TheHive |  | 6.6 | high | Скачать S1EM_TheHive.json из папки n8n/ репозитория |
+| 2026-06-30 | [EvgeniQwerty/n8n-find-photo-opencalls: setup-airtable](https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/setup-airtable.json) | setup-airtable |  | 6.8 | medium | Скачать daily-photo-open-calls.json из репозитория |
+| 2026-06-30 | [EvgeniQwerty/n8n-find-photo-opencalls: daily-photo-open-calls](https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/daily-photo-open-calls.json) | daily-photo-open-calls |  | 6.8 | medium | Скачать daily-photo-open-calls.json из репозитория |
 | 2026-06-29 | [papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders: main](https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders) | main |  | 6.5 | medium | Скачать main.json по ссылке json_url |
 | 2026-06-29 | [keila-moral/researchflow-ai: Arxiv_Monitor](https://github.com/keila-moral/researchflow-ai) | Arxiv_Monitor, Arxiv_Semantic_Search, Error_Handler |  | 5.8 | medium | Скачать Arxiv_Monitor.json |
 | 2026-06-29 | [bitsandbrainsai/ai-ad-creative-strategist: ai-ad-creative-strategist](https://github.com/bitsandbrainsai/ai-ad-creative-strategist) | ai-ad-creative-strategist |  | 6.6 | medium | Скачать ai-ad-creative-strategist.json по json_url |
