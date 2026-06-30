@@ -5,15 +5,18 @@ Container repo housing automation utilities. Three active tracking pipelines:
 
 1. **trendwatch** — daily GitHub Actions job (09:00 UTC) that scans for **new
    Claude Code Skills** (`.claude/skills/<name>/SKILL.md`) across GitHub
-   (code search + topic search), Reddit (with keyword post-filter), and
-   X/Threads (disabled by default), runs Claude analysis, and posts a scored
-   Telegram digest.
+   (code search + topic search). Runs Claude analysis, posts a scored Telegram
+   digest, **enriches each promoted skill** (`enrich.py`: reads each SKILL.md →
+   Russian description + category + tags) and **auto-pushes** the result to the
+   web catalog (`catalog.py` → Supabase ingest). Reddit/X/Threads sources exist
+   but are **disabled**. Also supports a **`--backfill`** mode (enrich + push
+   arbitrary repos).
 2. **workflows** — second pipeline (12:00 UTC) that scans for **ready-made n8n
    and Make workflows** (JSON files importable directly) across GitHub
-   (n8n + Make topics, code search for workflow JSON signatures) and Reddit.
-   Reuses trendwatch primitives (`analyzer`, `state`, `skill_db`,
-   `telegram_client`, `index_writer`, `links`, `report`) and writes all
-   artifacts to `digests/workflows/`. Same Telegram chat as skills.
+   (n8n + Make topics, code search for workflow JSON signatures). Reuses
+   trendwatch primitives (`analyzer`, `state`, `skill_db`, `telegram_client`,
+   `index_writer`, `links`, `report`) and writes all artifacts to
+   `digests/workflows/`. Same Telegram chat as skills. Reddit source disabled.
 3. **opensource** — third pipeline (~every 3 days, 10:00 UTC) that scans GitHub
    for **ready-to-use / self-hostable open-source products & platforms** (whole
    repos, NOT skills/workflows: deploy as-is, rebrand + attach API, or
@@ -21,6 +24,10 @@ Container repo housing automation utilities. Three active tracking pipelines:
    example repos. Reuses trendwatch primitives; artifacts to
    `digests/opensource/`. Same Telegram chat; header `🧩 Open Source Radar`.
    Bot source `opensource` (button `📦 Open Source`).
+
+> Change history & rationale: [`docs/CHANGELOG.md`](docs/CHANGELOG.md). Bot
+> UI/data glossary: [`CONTEXT.md`](CONTEXT.md). Catalog contract:
+> [`docs/skill-radar-import-payload.md`](docs/skill-radar-import-payload.md).
 
 ## Key Files
 | File | Purpose |
@@ -38,7 +45,8 @@ Container repo housing automation utilities. Three active tracking pipelines:
 | `trendwatch/skill_db.py` | Persistent skill DB (`recommended.json` + `watchlist.json`) — one-shot recommendations + signal-based graduation |
 | `trendwatch/index_writer.py` | Generates Markdown indexes in `digests/index/` (all / by_category / by_month) |
 | `trendwatch/links.py` | Builds public github.com URLs to the indexes for the Telegram footer (reads `GITHUB_REPOSITORY`) |
-| `trendwatch/sources/{github,reddit,twitter,threads}.py` | Per-source fetchers |
+| `trendwatch/sources/{github,reddit,twitter,threads}.py` | Per-source fetchers (only `github` enabled) |
+| `trendwatch/sources/_http.py` | Shared GitHub GET helper: `get_json_with_backoff` (429/Retry-After aware) + `build_github_headers` (prefers `GH_SEARCH_TOKEN`); used by both pipelines' fetchers |
 | `trendwatch/get_chat_id.py` | One-shot helper to capture Telegram chat_id |
 | `trendwatch/config.py` | Keywords, subreddits, source toggles, `GITHUB_CODE_QUERIES`, `REDDIT_KEYWORDS_FILTER`, `VERIFY_GITHUB_SKILLS` |
 | `trendwatch/requirements.txt` | `requests`, `anthropic>=0.40` |
@@ -49,7 +57,7 @@ Container repo housing automation utilities. Three active tracking pipelines:
 | `workflows/config.py` | Workflows keywords, topics, code queries, subs, paths under `digests/workflows/`, `CATEGORIES`, `TOOLS` |
 | `workflows/prompts.py` | Workflows SYSTEM_PROMPT (Russian, cached) — n8n/Make-focused schema |
 | `workflows/normalizer.py` | Cross-source aggregation with workflow-specific `KNOWN_TOOLS` (wraps `trendwatch.normalizer`) |
-| `workflows/sources/{n8n_github,make_github,reddit}.py` | Per-source fetchers; both GitHub fetchers share `_github_common.py` |
+| `workflows/sources/{n8n_github,make_github,reddit}.py` | Per-source fetchers; both GitHub fetchers share `_github_common.py` (`fetch_workflows`, `list_repo_workflows` for Fix-2 explosion, `_select_with_recency`) |
 | `digests/workflows/` | Workflows-pipeline reports (`YYYY-MM-DD.md`), `state.json`, `recommended.json`, `watchlist.json`, `index/{all,by_category,by_tool,by_month}` |
 | `opensource/opensource.py` | Open Source radar orchestrator (deployable-OSS-products pipeline) — reuses trendwatch primitives |
 | `opensource/config.py` | OSS topics, description queries, `SEED_REPOS`, paths under `digests/opensource/`, `CATEGORIES` (`*_oss`) |
@@ -58,7 +66,14 @@ Container repo housing automation utilities. Three active tracking pipelines:
 | `opensource/normalizer.py` | Cross-source aggregation wrapping `trendwatch.normalizer` with OSS vocabulary |
 | `digests/opensource/` | Open Source pipeline reports + `state.json`, `recommended.json`, `watchlist.json`, `index/` |
 | `.github/workflows/opensource.yml` | ~Every-3-days cron (10:00 UTC) + commit-back of `digests/opensource/` |
-| `api/telegram.py` | Vercel serverless webhook for the interactive Telegram bot (`/start`, `/list`, `/categories`, `/months`) |
+| `.github/workflows/backfill.yml` | Manual `skill-backfill` (workflow_dispatch `urls` input OR push to `.github/backfill-urls.txt`) → `trendwatch.py --backfill` |
+| `.github/trigger-{trendwatch,workflows,opensource}` | Sentinel files; a push that edits one runs that pipeline with `--force` (operator trigger from anywhere) |
+| `api/telegram.py` | Vercel webhook for the interactive Telegram bot. 4 sources (Claude Skills / N8N / Make / Open Source), category & month browsing, per-item detail, search/random/whatsnew/stats, `🤖 Объясни` (→ `api/llm.py`). Reads data JSONs via authed contents API when `BOT_GITHUB_TOKEN` is set (private repos) |
+| `api/llm.py` | One-shot Anthropic call behind the bot's `🤖 Объясни простыми словами` button (prompt-injection-guarded, Haiku default) |
+| `docs/skill-radar-import-payload.md` | Contract for the `## Import payload` block (bot side) + enrichment/auto-push/backfill spec |
+| `docs/decisions/` | ADRs (0001–0008): Route sum-type, Items deep module, fail-closed admin gate, push-trigger sentinel, etc. |
+| `CONTEXT.md` | Bot UI/data domain glossary (Source, Item, Items, View, Screen, Route, deliver, nav_token) |
+| `scripts/{cleanup_db.py,llm_smoke_test.py}` | Maintenance helpers (DB cleanup; LLM eval smoke test) |
 | `requirements.txt` (root) | Vercel deploy deps (`requests`) — separate from `trendwatch/requirements.txt` |
 | `vercel.json`, `.vercelignore`, `bot-README.md` | Vercel deploy config + Russian deploy guide |
 | `index.html` / `package.json` | Legacy GitHub demo files |
@@ -121,7 +136,9 @@ Container repo housing automation utilities. Three active tracking pipelines:
 - Persistent skill DB: repos promoted to `top_test` are saved to `digests/recommended.json` and EXCLUDED from future digests forever (one-shot recommendation). `top_watch` repos are saved to `digests/watchlist.json` with `signal_to_wait` + baseline metrics; on subsequent runs they graduate back into `top_test` when `delta_stars ≥ 5`, `delta_skills_count ≥ 1`, or `cross_source_count` grew. Watchlist items expire after 30 days. Markdown indexes regenerated to `digests/index/`.
 - Workflows pipeline runs at **12:00 UTC** (skills at 09:00) and uses the **SAME Telegram chat** as skills — separate header (`⚙️ Daily Workflow Radar`). All workflows data lives in `digests/workflows/` and never mixes with the skills DB. The workflows index adds a `by_tool/` grouping (n8n / make / other) on top of the standard all / by_category / by_month layout.
 - Workflows discovery tuning: fetch is `MAX_ITEMS_PER_SOURCE=150` selected by `_select_with_recency` (70% top-stars + recency tail, so new low-star workflows aren't truncated); analyzer input capped at `ANALYZER_MAX_ITEMS=60`; `verified=True` workflows promote at a lower bar (`final_score≥5.5`, never `skip`). **Per-workflow catalog (Fix 2):** a promoted repo is exploded by `_explode_promotions` into one `recommended.json` entry per individual workflow JSON (full git-tree enumeration, `EXPLODE_MAX_WORKFLOWS_PER_REPO=25`); the pre-analysis filter excludes already-exploded repos by `repo_full_name`.
-- Reuse over duplication: `workflows/` imports `trendwatch.{state,skill_db,analyzer,telegram_client,index_writer,report,normalizer}` and passes path/category/tool kwargs. The only workflows-specific code is fetchers, prompts, normalizer vocabulary, and the orchestrator.
+- Reuse over duplication: `workflows/` AND `opensource/` import `trendwatch.{state,skill_db,analyzer,telegram_client,index_writer,report,normalizer}` and pass path/category/tool kwargs. The only pipeline-specific code is fetchers, prompts, normalizer vocabulary, and the orchestrator.
+- **Skills catalog (`/claude-skills`):** after the skills digest, the report embeds a single machine-readable `## Import payload` JSON block (`import_payload.py`), each promoted skill is enriched (`enrich.py`: per-`SKILL.md` batched Claude call → RU description + dictionary category + tags), and the payload is POSTed to the Supabase ingest endpoint (`catalog.py`, `x-radar-secret`, idempotent upsert by repo slug / skill url). Suggested new categories are surfaced to the owner via Telegram. Category dictionary (`SKILL_CATEGORY_NAMES`, 24 slugs) is the single source of truth — the analyzer/enricher reuse it; new = `status:"suggested"`. Contract: `docs/skill-radar-import-payload.md`.
+- **Open Source pipeline:** discovers deployable OSS *products* (not skills/workflows) via topic + description search + `SEED_REPOS` (owner-curated, force-promoted to recommended). `_looks_like_list` drops awesome-lists/link-collections from the pool. Digest header `🧩 Open Source Radar`; bot source `opensource`.
 - **Once-per-day idempotency:** each orchestrator records `last_sent_date` in its own `state.json` via `state.mark_sent_today()` after a successful Telegram send. On run start, `state.was_sent_today()` short-circuits before the Anthropic call if the date matches today (UTC). Marker `[ALREADY_SENT_TODAY]`. Manual reruns can bypass with `--force`. This protects the Anthropic API budget against `workflow_dispatch` retries.
 - **Daily Telegram messages stay lean:** no "База рекомендованных …" index footer, no "🗑 Пропустить" section. Users browse the DB via the interactive bot (`api/telegram.py`), which merges `recommended.json` + `watchlist.json` items and marks watch entries with 👀. `analyzer.py` post-processes `telegram_summary` to strip any stray 🗑-block the LLM emits from cached prompt memory.
 
