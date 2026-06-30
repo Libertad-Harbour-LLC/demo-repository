@@ -2,11 +2,16 @@
   "skills": {
     "https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer": {
       "category": "devops_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Два n8n-workflow для подключения Wazuh SIEM к AI-движку: анализируют security-алерты в реальном времени и формируют структурированный вывод. Предназначены для SOC-команд и DevOps-инженеров, использующих Wazuh для мониторинга инфраструктуры.",
       "final_score": 6.8,
       "first_recommended": "2026-06-29",
+      "integrations": [
+        "Postgres"
+      ],
       "metric": "Количество алертов, классифицированных AI за единицу времени; точность приоритизации по сравнению с ручным разбором",
+      "node_count": 38,
       "promoted_from_watch": false,
       "repo_full_name": "Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow",
       "scores": {
@@ -32,15 +37,21 @@
       ],
       "title": "Agenius-AI-Labs/Wazuh-AI-Security-Analyzer: wazuh-ai-security-analyzer-dynamic.workflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer"
     },
     "https://github.com/AkuchiS/n8n-Templates": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Коллекция из 4 готовых n8n-шаблонов с осмысленными именами: ежедневный RSS-дайджест по email, мониторинг uptime с email-алертами, валидация webhook-входных данных и логирование webhook в Google Sheets. Подходит для разработчиков и small-business владельцев, строящих базовую инфраструктуру автоматизации.",
       "final_score": 5.9,
       "first_recommended": "2026-06-29",
+      "integrations": [
+        "Google Sheets"
+      ],
       "metric": "Получение ежедневного email-дайджеста с новостями из RSS-источников",
+      "node_count": 19,
       "promoted_from_watch": false,
       "repo_full_name": "AkuchiS/n8n-Templates: daily-rss-email-digest",
       "scores": {
@@ -68,15 +79,24 @@
       ],
       "title": "AkuchiS/n8n-Templates: daily-rss-email-digest",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/AkuchiS/n8n-Templates"
     },
     "https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation": {
       "category": "sales_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow для автоматической квалификации входящих лидов с помощью AI и синхронизации результатов с CRM. Решение для команд продаж, которые хотят автоматически фильтровать и приоритизировать входящие запросы.",
       "final_score": 7.2,
       "first_recommended": "2026-06-06",
+      "integrations": [
+        "Google Sheets",
+        "Google Gemini",
+        "HubSpot",
+        "Gmail"
+      ],
       "metric": "Процент корректно квалифицированных лидов vs ручная оценка менеджера",
+      "node_count": 10,
       "promoted_from_watch": false,
       "repo_full_name": "AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation: AI Lead Qualification Template",
       "scores": {
@@ -101,15 +121,22 @@
       ],
       "title": "AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation: AI Lead Qualification Template",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation"
     },
     "https://github.com/AntonioPhilip/AlertFlow": {
       "category": "devops_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow для обработки алертов от Uptime Kuma: принимает вебхук при падении/восстановлении сервиса и маршрутизирует уведомления в нужные каналы. Полезен командам, использующим Uptime Kuma для мониторинга и желающим расширить логику уведомлений.",
       "final_score": 6.3,
       "first_recommended": "2026-05-25",
+      "integrations": [
+        "Google Gemini",
+        "Telegram"
+      ],
       "metric": "Время от события в Uptime Kuma до получения уведомления в целевом канале; процент доставленных алертов",
+      "node_count": 14,
       "promoted_from_watch": false,
       "repo_full_name": "AntonioPhilip/AlertFlow: uptime_kuma_alert",
       "scores": {
@@ -134,15 +161,22 @@
       ],
       "title": "AntonioPhilip/AlertFlow: uptime_kuma_alert",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/AntonioPhilip/AlertFlow"
     },
     "https://github.com/AntraTripathi74/AI-SDR": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow, реализующий функции AI SDR (Sales Development Representative): автоматическая обработка лидов, генерация персонализированных аутрич-сообщений и управление follow-up последовательностями. Ориентирован на B2B-продажи и команды роста.",
       "final_score": 6.8,
       "first_recommended": "2026-06-10",
+      "integrations": [
+        "Google Sheets",
+        "Gmail"
+      ],
       "metric": "Количество обработанных лидов в час; процент ответов на AI-сгенерированные сообщения",
+      "node_count": 20,
       "promoted_from_watch": false,
       "repo_full_name": "AntraTripathi74/AI-SDR: sdr",
       "scores": {
@@ -167,15 +201,23 @@
       ],
       "title": "AntraTripathi74/AI-SDR: sdr",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/AntraTripathi74/AI-SDR"
     },
     "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud": {
       "category": "general_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Репозиторий AtlasCloudAI содержит три готовых n8n-workflow для интеграции с платформой AtlasCloud: чат-бот, генерация изображений по тексту и асинхронная обработка видео. Подойдёт разработчикам и командам, которые хотят быстро подключить AI-функции в n8n через кастомные ноды AtlasCloud.",
       "final_score": 7.3,
       "first_recommended": "2026-06-15",
+      "integrations": [
+        "Atlas Cloud Chat",
+        "Atlas Cloud Task Submit",
+        "Atlas Cloud Task Status"
+      ],
       "metric": "Время до первого успешного ответа чат-бота; успешная генерация изображения",
+      "node_count": 7,
       "promoted_from_watch": false,
       "repo_full_name": "AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video",
       "scores": {
@@ -202,15 +244,21 @@
       ],
       "title": "AtlasCloudAI/n8n-nodes-atlascloud: 01-chatbot / 02-text-to-image / 03-async-video",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud"
     },
     "https://github.com/ChiefGyk3D/siem-docker-stack": {
       "category": "devops_workflow",
+      "complexity": "simple",
       "confidence": "medium",
       "description": "n8n-workflow для маршрутизации Grafana-алертов в рамках SIEM Docker-стека. Предназначен для DevOps/SecOps инженеров, которым нужна автоматическая маршрутизация инфраструктурных алертов.",
       "final_score": 6.5,
       "first_recommended": "2026-06-18",
+      "integrations": [
+        "Discord"
+      ],
       "metric": "Процент алертов, корректно доставленных в нужный канал; время реакции от алерта до уведомления",
+      "node_count": 4,
       "promoted_from_watch": false,
       "repo_full_name": "ChiefGyk3D/siem-docker-stack: grafana-alert-router",
       "scores": {
@@ -235,15 +283,28 @@
       ],
       "title": "ChiefGyk3D/siem-docker-stack: grafana-alert-router",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/ChiefGyk3D/siem-docker-stack"
     },
     "https://github.com/DINAKAR-S/N8N-Workflows": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Коллекция из 5 n8n workflow, охватывающих публикацию в соцсети по расписанию (Google Sheets как контент-план), автопостинг в Instagram, планировщик LinkedIn, RAG-поддержку клиентов и автоматизированные холодные email-последовательности через Google Maps и Gmail. Подходит для маркетологов и агентств, управляющих несколькими каналами.",
       "final_score": 5.9,
       "first_recommended": "2026-06-25",
+      "integrations": [
+        "Google Sheets",
+        "Google Drive",
+        "Facebook",
+        "OpenAI",
+        "Firecrawl",
+        "Google Gemini",
+        "Gmail",
+        "LinkedIn"
+      ],
       "metric": "Количество успешно опубликованных постов за первый тестовый прогон",
+      "node_count": 160,
       "promoted_from_watch": false,
       "repo_full_name": "DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle",
       "scores": {
@@ -272,15 +333,30 @@
       ],
       "title": "DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/DINAKAR-S/N8N-Workflows"
     },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий с 5 готовыми n8n-шаблонами для типовых задач: Telegram-рассылка по расписанию, TOTP-автоматизация, интеграция с Bitwarden, синхронизация Google Sheets и Typeform, создание постов в Twitter. Каждый шаблон — отдельный JSON-файл, пригодный для прямого импорта в n8n.",
       "final_score": 7.5,
       "first_recommended": "2026-05-20",
+      "integrations": [
+        "Gmail",
+        "Google Gemini",
+        "Telegram",
+        "Nostrobotsread",
+        "Totp",
+        "Bitwarden",
+        "Typeform",
+        "Google Sheets",
+        "X (Twitter)",
+        "Airtable"
+      ],
       "metric": "Количество успешно выполненных workflow без ошибок в первые 24 часа",
+      "node_count": 42,
       "promoted_from_watch": false,
       "repo_full_name": "Danitilahun/n8n-workflow-templates: 5 шаблонов (Telegram, TOTP, Bitwarden, GoogleSheets+Typeform, Twitter)",
       "scores": {
@@ -309,15 +385,23 @@
       ],
       "title": "Danitilahun/n8n-workflow-templates: 5 шаблонов (Telegram, TOTP, Bitwarden, GoogleSheets+Typeform, Twitter)",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/Danitilahun/n8n-workflow-templates"
     },
     "https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts": {
       "category": "general_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Workflow для n8n, автоматизирующий обработку сбоев при продлении платежей: AI-анализ причины ошибки, создание Jira-тикета и отправка Slack-алерта. Подходит для команд поддержки и биллинг-операций.",
       "final_score": 6.6,
       "first_recommended": "2026-05-23",
+      "integrations": [
+        "OpenAI",
+        "Slack",
+        "Jira"
+      ],
       "metric": "Jira-тикет создан и Slack-сообщение отправлено в течение 30 секунд после симулированного сбоя",
+      "node_count": 15,
       "promoted_from_watch": false,
       "repo_full_name": "Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main",
       "scores": {
@@ -342,15 +426,23 @@
       ],
       "title": "Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts: main",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts"
     },
     "https://github.com/DragonJAR/n8n-workflows-esp": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий DragonJAR содержит 5 готовых n8n-workflow на испанском языке: Telegram-тьютор китайского языка, генератор аудио-саммари WordPress-постов, трекер крипторынка через CoinGecko/Discord, конвертер скриптов в Instagram Reels и автодобавление событий в Google Calendar.",
       "final_score": 6.7,
       "first_recommended": "2026-05-21",
+      "integrations": [
+        "OpenAI",
+        "Telegram",
+        "Google Sheets"
+      ],
       "metric": "Качество и скорость генерации урока в ответ на сообщение пользователя",
+      "node_count": 35,
       "promoted_from_watch": false,
       "repo_full_name": "DragonJAR/n8n-workflows-esp: Telegram Chinese Tutor + 4 more",
       "scores": {
@@ -379,15 +471,23 @@
       ],
       "title": "DragonJAR/n8n-workflows-esp: Telegram Chinese Tutor + 4 more",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/DragonJAR/n8n-workflows-esp"
     },
     "https://github.com/Edublackk/self-correcting-rag-chatbot": {
       "category": "data_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Готовый n8n-workflow для RAG-чатбота с механизмом самокоррекции: при низкой уверенности модели workflow автоматически перезапрашивает контекст и уточняет ответ. Подходит разработчикам и командам, строящим внутренние AI-помощники на основе собственных документов.",
       "final_score": 6.6,
       "first_recommended": "2026-05-25",
+      "integrations": [
+        "Google Gemini",
+        "Telegram",
+        "Google Drive"
+      ],
       "metric": "Процент ответов без галлюцинаций при тестовом наборе из 10 вопросов; число итераций коррекции на запрос",
+      "node_count": 32,
       "promoted_from_watch": false,
       "repo_full_name": "Edublackk/self-correcting-rag-chatbot: n8n_workflow",
       "scores": {
@@ -412,15 +512,23 @@
       ],
       "title": "Edublackk/self-correcting-rag-chatbot: n8n_workflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/Edublackk/self-correcting-rag-chatbot"
     },
     "https://github.com/Endgame-Labs/mechanizer": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Коллекция из 5 Make-сценариев для автоматизации B2B продаж: AI SDR для исходящих контактов, аудит здоровья аккаунта, генерация планов аккаунта, интервенция при риске оттока и гигиена сделок в CRM. Подходит для revenue operations и sales-команд.",
       "final_score": 7.3,
       "first_recommended": "2026-05-21",
+      "integrations": [
+        "Salesforce",
+        "Gmail",
+        "Slack"
+      ],
       "metric": "Количество обработанных аккаунтов за прогон, процент отправленных аутрич-сообщений без ошибок",
+      "node_count": 57,
       "promoted_from_watch": false,
       "repo_full_name": "Endgame-Labs/mechanizer: AI SDR + Sales Scenarios",
       "scores": {
@@ -449,15 +557,18 @@
       ],
       "title": "Endgame-Labs/mechanizer: AI SDR + Sales Scenarios",
       "tool": "make",
+      "trigger_type": "webhook",
       "url": "https://github.com/Endgame-Labs/mechanizer"
     },
     "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/daily-photo-open-calls.json": {
       "category": "photo_workflow",
+      "complexity": "simple",
       "confidence": "medium",
       "description": "n8n-workflow для ежедневного автоматического поиска открытых фотоконкурсов (open calls) с сохранением результатов в Airtable. Предназначен для фотографов, которые хотят не пропускать дедлайны конкурсов.",
       "final_score": 6.8,
       "first_recommended": "2026-06-30",
       "metric": "Количество найденных open calls в Airtable за первые 7 дней",
+      "node_count": 4,
       "promoted_from_watch": false,
       "repo_full_name": "EvgeniQwerty/n8n-find-photo-opencalls",
       "scores": {
@@ -482,15 +593,18 @@
       ],
       "title": "EvgeniQwerty/n8n-find-photo-opencalls: daily-photo-open-calls",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/daily-photo-open-calls.json"
     },
     "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/setup-airtable.json": {
       "category": "photo_workflow",
+      "complexity": "simple",
       "confidence": "medium",
       "description": "n8n-workflow для ежедневного автоматического поиска открытых фотоконкурсов (open calls) с сохранением результатов в Airtable. Предназначен для фотографов, которые хотят не пропускать дедлайны конкурсов.",
       "final_score": 6.8,
       "first_recommended": "2026-06-30",
       "metric": "Количество найденных open calls в Airtable за первые 7 дней",
+      "node_count": 3,
       "promoted_from_watch": false,
       "repo_full_name": "EvgeniQwerty/n8n-find-photo-opencalls",
       "scores": {
@@ -515,15 +629,18 @@
       ],
       "title": "EvgeniQwerty/n8n-find-photo-opencalls: setup-airtable",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/EvgeniQwerty/n8n-find-photo-opencalls/blob/main/setup-airtable.json"
     },
     "https://github.com/FabricioLR/Financial": {
       "category": "general_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow для автоматизации финансового учёта. Репозиторий был обновлён прямо сегодня (26 июня 2026), что делает его самым свежим кандидатом за этот период.",
       "final_score": 6.5,
       "first_recommended": "2026-06-26",
       "metric": "Количество обработанных финансовых записей за прогон; корректность агрегации",
+      "node_count": 8,
       "promoted_from_watch": false,
       "repo_full_name": "FabricioLR/Financial: FinancialN8NWorkflow",
       "scores": {
@@ -548,15 +665,23 @@
       ],
       "title": "FabricioLR/Financial: FinancialN8NWorkflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/FabricioLR/Financial"
     },
     "https://github.com/JeffersonMFti/agente-dra-julia-advocacia": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "AI-агент для юридической практики (адвокатура), построенный на n8n. Автоматизирует взаимодействие с клиентами адвокатского бюро: приём запросов, первичные ответы и маршрутизация дел.",
       "final_score": 6.5,
       "first_recommended": "2026-05-29",
+      "integrations": [
+        "Google Sheets",
+        "OpenAI",
+        "Google Calendar"
+      ],
       "metric": "Процент корректно обработанных клиентских запросов без вмешательства юриста",
+      "node_count": 61,
       "promoted_from_watch": false,
       "repo_full_name": "JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia",
       "scores": {
@@ -582,6 +707,7 @@
       ],
       "title": "JeffersonMFti/agente-dra-julia-advocacia: dra-julia-agente-ia-advocacia",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/JeffersonMFti/agente-dra-julia-advocacia"
     },
     "https://github.com/KC23br/n8n-ai-calendar-agent-chat": {
@@ -652,11 +778,17 @@
     },
     "https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing": {
       "category": "devops_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow для мониторинга доступности сервисов: при падении автоматически создаёт Jira-тикет и уведомляет нужного дежурного в Slack на основе on-call расписания. Полезен командам DevOps и SRE.",
       "final_score": 6.7,
       "first_recommended": "2026-06-01",
+      "integrations": [
+        "Jira",
+        "Slack"
+      ],
       "metric": "Время от падения сервиса до создания Jira-тикета и Slack-уведомления",
+      "node_count": 14,
       "promoted_from_watch": false,
       "repo_full_name": "Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing",
       "scores": {
@@ -681,15 +813,24 @@
       ],
       "title": "Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing: Real-Time Uptime Alerts to Jira with Smart Slack On-Call Routing",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing"
     },
     "https://github.com/MinaSaad1/n8n-data-analyst-agent": {
       "category": "data_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Мультиагентный data-analyst на n8n: набор из 5 взаимосвязанных workflow для выполнения SQL-запросов, генерации чартов, поиска по схеме БД и утренних брифингов. Подойдёт аналитикам и командам, которым нужен AI-агент поверх существующей базы данных.",
       "final_score": 7.0,
       "first_recommended": "2026-05-29",
+      "integrations": [
+        "OpenRouter",
+        "Postgres Tool",
+        "Google Sheets Tool",
+        "Postgres"
+      ],
       "metric": "Количество успешно отвеченных SQL-вопросов без ошибок агента",
+      "node_count": 36,
       "promoted_from_watch": false,
       "repo_full_name": "MinaSaad1/n8n-data-analyst-agent: 01-main-agent",
       "scores": {
@@ -718,15 +859,23 @@
       ],
       "title": "MinaSaad1/n8n-data-analyst-agent: 01-main-agent",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/MinaSaad1/n8n-data-analyst-agent"
     },
     "https://github.com/MohElshamy1994/n8n-course-Projetcs": {
       "category": "general_workflow",
+      "complexity": "simple",
       "confidence": "high",
       "description": "Репозиторий курсовых проектов по n8n с 697 звёздами; содержит workflow 39-GPT-Oss, связанный с интеграцией GPT и открытых источников данных. Полезен как учебный пример построения AI-агентов в n8n.",
       "final_score": 6.5,
       "first_recommended": "2026-05-26",
+      "integrations": [
+        "Telegram",
+        "Ollama",
+        "Google Sheets"
+      ],
       "metric": "Корректность ответа GPT на тестовый запрос через workflow",
+      "node_count": 5,
       "promoted_from_watch": false,
       "repo_full_name": "MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss",
       "scores": {
@@ -751,15 +900,28 @@
       ],
       "title": "MohElshamy1994/n8n-course-Projetcs: 39-GPT-Oss",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/MohElshamy1994/n8n-course-Projetcs"
     },
     "https://github.com/Nijamudin/automated-business-analysis-workflow": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Репозиторий содержит два n8n-workflow для автоматизированного бизнес-анализа с AI-агентом, ориентированных на маркетинговые задачи. Подходит для аналитиков и маркетологов, которым нужен готовый конвейер сбора и анализа данных с использованием AI.",
       "final_score": 6.5,
       "first_recommended": "2026-05-27",
+      "integrations": [
+        "HTTP Request Tool",
+        "Data Table Tool",
+        "Perplexity Tool",
+        "Google Gemini",
+        "Data Table",
+        "Google Drive",
+        "Gmail",
+        "Google Docs"
+      ],
       "metric": "Время генерации одного бизнес-анализа; качество и полнота выходного отчёта",
+      "node_count": 50,
       "promoted_from_watch": false,
       "repo_full_name": "Nijamudin/automated-business-analysis-workflow: Business Analysis Workflow - AI Marketing Hub",
       "scores": {
@@ -785,15 +947,23 @@
       ],
       "title": "Nijamudin/automated-business-analysis-workflow: Business Analysis Workflow - AI Marketing Hub",
       "tool": "n8n",
+      "trigger_type": "form",
       "url": "https://github.com/Nijamudin/automated-business-analysis-workflow"
     },
     "https://github.com/Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Workflow для n8n, который извлекает данные о сделках из Zoho CRM, генерирует персонализированные рекомендации по контенту с помощью GPT-4o-mini и отправляет их менеджеру или клиенту через Gmail. Подходит для B2B sales-команд, использующих Zoho CRM.",
       "final_score": 6.5,
       "first_recommended": "2026-06-29",
+      "integrations": [
+        "Zoho CRM",
+        "OpenAI",
+        "Gmail"
+      ],
       "metric": "Количество персонализированных email-рекомендаций, отправленных за день",
+      "node_count": 16,
       "promoted_from_watch": false,
       "repo_full_name": "Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main",
       "scores": {
@@ -818,15 +988,21 @@
       ],
       "title": "Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
     },
     "https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence": {
       "category": "devops_workflow",
+      "complexity": "simple",
       "confidence": "medium",
       "description": "Workflow из книги Packt Publishing по Incident Response, интегрирующий n8n с TheHive (платформой управления инцидентами) и Velociraptor (инструментом форензики). Предназначен для команд SOC и IR-специалистов, автоматизирующих реагирование на киберинциденты.",
       "final_score": 7.0,
       "first_recommended": "2026-06-10",
+      "integrations": [
+        "The Hive"
+      ],
       "metric": "Время от алерта в TheHive до запуска форензического сбора в Velociraptor",
+      "node_count": 5,
       "promoted_from_watch": false,
       "repo_full_name": "PacktPublishing/Incident-Response-with-Threat-Intelligence: n8n_thehive_velociraptor_workflow",
       "scores": {
@@ -851,6 +1027,7 @@
       ],
       "title": "PacktPublishing/Incident-Response-with-Threat-Intelligence: n8n_thehive_velociraptor_workflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/PacktPublishing/Incident-Response-with-Threat-Intelligence"
     },
     "https://github.com/Peaghan/n8n-ai-calendar-agent-webhook": {
@@ -921,11 +1098,16 @@
     },
     "https://github.com/Repello-AI/Agent-Wiz": {
       "category": "general_workflow",
+      "complexity": "simple",
       "confidence": "high",
       "description": "Репозиторий Agent-Wiz от Repello AI содержит пример n8n-workflow для взаимодействия со Spotify API через AI-агента. Является примером кода для фреймворка Agent-Wiz и демонстрирует, как строить AI-агентов поверх внешних API.",
       "final_score": 6.5,
       "first_recommended": "2026-06-10",
+      "integrations": [
+        "Spotify"
+      ],
       "metric": "Успешность распознавания и выполнения музыкальных команд через AI",
+      "node_count": 5,
       "promoted_from_watch": false,
       "repo_full_name": "Repello-AI/Agent-Wiz: spotify",
       "scores": {
@@ -950,15 +1132,23 @@
       ],
       "title": "Repello-AI/Agent-Wiz: spotify",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/Repello-AI/Agent-Wiz"
     },
     "https://github.com/STGime/posta-n8n-workflows": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из 4 n8n-workflow для автоматической дистрибуции контента: конвертация блога в LinkedIn-карусель, кросспостинг в соцсети, запуск продуктовых кампаний и репостинг YouTube-видео. Подойдёт контент-маркетологам и SMM-специалистам.",
       "final_score": 7.3,
       "first_recommended": "2026-06-06",
+      "integrations": [
+        "Posta",
+        "DeepSeek",
+        "Fal AI"
+      ],
       "metric": "Количество успешно опубликованных LinkedIn-каруселей за неделю",
+      "node_count": 77,
       "promoted_from_watch": false,
       "repo_full_name": "STGime/posta-n8n-workflows: blog-to-linkedin-carousel",
       "scores": {
@@ -986,15 +1176,46 @@
       ],
       "title": "STGime/posta-n8n-workflows: blog-to-linkedin-carousel",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/STGime/posta-n8n-workflows"
     },
     "https://github.com/ScraperNode/awesome-n8n-templates": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n workflow для автоматического поиска LinkedIn URL компаний по списку из Google Sheets с использованием Apify. Предназначен для маркетологов и sales-команд, занимающихся лидогенерацией.",
       "final_score": 7.2,
       "first_recommended": "2026-05-28",
+      "integrations": [
+        "Google Calendar",
+        "ClickUp",
+        "LinkedIn",
+        "OpenAI",
+        "Google Drive",
+        "Google Sheets",
+        "HTTP Request Tool",
+        "Mcp",
+        "DeepSeek",
+        "Brave Search",
+        "ElevenLabs",
+        "Gmail",
+        "X (Twitter)",
+        "Phantombuster",
+        "Microsoft Share Point",
+        "OpenRouter",
+        "Facebook",
+        "GitHub",
+        "Html2 PDF",
+        "Perplexity",
+        "Telegram",
+        "Google Gemini",
+        "Reddit",
+        "Gmail Tool",
+        "Google Sheets Tool",
+        "Form"
+      ],
       "metric": "Процент компаний, для которых найден LinkedIn URL (целевой показатель >70%)",
+      "node_count": 468,
       "promoted_from_watch": false,
       "repo_full_name": "ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)",
       "scores": {
@@ -1019,15 +1240,24 @@
       ],
       "title": "ScraperNode/awesome-n8n-templates: Find Company LinkedIn URLs (Apify + Google Sheets)",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/ScraperNode/awesome-n8n-templates"
     },
     "https://github.com/SidhartSami/HiringAutomation": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Два связанных n8n-workflow для автоматизации найма: первый отвечает за приём заявок кандидатов (Ingestion), второй — за автоматическую отправку email-уведомлений по статусу найма (Email Sender). Предназначен для HR-команд и рекрутеров малого и среднего бизнеса.",
       "final_score": 6.4,
       "first_recommended": "2026-06-29",
+      "integrations": [
+        "Google Sheets",
+        "Gmail",
+        "Google Calendar",
+        "Google Drive"
+      ],
       "metric": "Время от получения заявки до отправки подтверждения кандидату",
+      "node_count": 33,
       "promoted_from_watch": false,
       "repo_full_name": "SidhartSami/HiringAutomation: Hiring Pipeline",
       "scores": {
@@ -1053,6 +1283,7 @@
       ],
       "title": "SidhartSami/HiringAutomation: Hiring Pipeline",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/SidhartSami/HiringAutomation"
     },
     "https://github.com/Tanishq60/n8n_nl2sql": {
@@ -1090,11 +1321,16 @@
     },
     "https://github.com/Trojan3877/QUANT-LLM-ASSISTANT": {
       "category": "data_workflow",
+      "complexity": "simple",
       "confidence": "medium",
       "description": "Workflow для мониторинга биржевых котировок с LLM-анализом и отправкой алертов в n8n. Часть более широкого проекта QUANT-LLM-ASSISTANT для количественного анализа рынка.",
       "final_score": 5.3,
       "first_recommended": "2026-06-14",
+      "integrations": [
+        "Slack"
+      ],
       "metric": "Получение алерта с LLM-анализом при изменении цены",
+      "node_count": 3,
       "promoted_from_watch": false,
       "repo_full_name": "Trojan3877/QUANT-LLM-ASSISTANT: stock_alert",
       "scores": {
@@ -1123,11 +1359,16 @@
     },
     "https://github.com/Trusera/ai-bom": {
       "category": "sales_workflow",
+      "complexity": "medium",
       "confidence": "high",
       "description": "Репозиторий ai-bom от Trusera содержит n8n-workflow для автоматической скоринговки лидов с использованием AI. Предназначен для отделов продаж и RevOps-команд, которым нужно приоритизировать входящие лиды без ручного труда.",
       "final_score": 7.3,
       "first_recommended": "2026-06-10",
+      "integrations": [
+        "OpenAI"
+      ],
       "metric": "Время скоринга одного лида; корреляция AI-скора с реальной конверсией",
+      "node_count": 10,
       "promoted_from_watch": false,
       "repo_full_name": "Trusera/ai-bom: lead-scorer",
       "scores": {
@@ -1152,15 +1393,21 @@
       ],
       "title": "Trusera/ai-bom: lead-scorer",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/Trusera/ai-bom"
     },
     "https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json": {
       "category": "devops_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "n8n-workflow в составе проекта S1EM (SIEM на базе открытого ПО), интегрирующий n8n с платформой реагирования на инциденты TheHive. Предназначен для команд SOC и информационной безопасности.",
       "final_score": 6.6,
       "first_recommended": "2026-06-30",
+      "integrations": [
+        "The Hive"
+      ],
       "metric": "Время от получения алерта до создания кейса в TheHive",
+      "node_count": 55,
       "promoted_from_watch": false,
       "repo_full_name": "V1D1AN/S1EM",
       "scores": {
@@ -1185,15 +1432,23 @@
       ],
       "title": "V1D1AN/S1EM: S1EM_TheHive",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json"
     },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Workflow для n8n, автоматизирующий распознавание и парсинг счетов-фактур и документов с помощью Gemini AI OCR с последующей записью структурированных данных в Google Sheets. Полезен бухгалтерам, финансовым командам и операционным менеджерам, обрабатывающим большой поток документов.",
       "final_score": 6.8,
       "first_recommended": "2026-05-22",
+      "integrations": [
+        "Google Sheets",
+        "Google Gemini",
+        "Tesseract Node"
+      ],
       "metric": "Точность извлечения полей (% корректно распознанных полей из 10 тестовых счетов)",
+      "node_count": 12,
       "promoted_from_watch": false,
       "repo_full_name": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main",
       "scores": {
@@ -1218,15 +1473,23 @@
       ],
       "title": "abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: main",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration"
     },
     "https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer": {
       "category": "web_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n workflow для автоматической SEO-оптимизации изображений товаров в магазине Shopify. Предназначен для владельцев e-commerce магазинов, которые хотят улучшить позиции в поиске без ручного редактирования каждого товара.",
       "final_score": 7.1,
       "first_recommended": "2026-05-31",
+      "integrations": [
+        "OpenAI",
+        "Shopify",
+        "Google Sheets"
+      ],
       "metric": "Количество обработанных товаров в час; до/после сравнение SEO-score изображений",
+      "node_count": 17,
       "promoted_from_watch": false,
       "repo_full_name": "agnellolucas/n8n-shopify-seo-product-image-optimizer: n8n-shopify-image-optimizer",
       "scores": {
@@ -1251,15 +1514,23 @@
       ],
       "title": "agnellolucas/n8n-shopify-seo-product-image-optimizer: n8n-shopify-image-optimizer",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer"
     },
     "https://github.com/akahappygit/AI-Lead-Generation-Automation": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для автоматизированного сбора лидов с помощью AI. Предназначен для маркетологов и sales-команд, которым нужен потоковый скрепинг контактов без ручного труда.",
       "final_score": 6.7,
       "first_recommended": "2026-05-29",
+      "integrations": [
+        "Serp API",
+        "Google Sheets",
+        "Twilio"
+      ],
       "metric": "Количество собранных и валидированных лидов за один прогон",
+      "node_count": 29,
       "promoted_from_watch": false,
       "repo_full_name": "akahappygit/AI-Lead-Generation-Automation: Lead Scraper",
       "scores": {
@@ -1284,15 +1555,23 @@
       ],
       "title": "akahappygit/AI-Lead-Generation-Automation: Lead Scraper",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/akahappygit/AI-Lead-Generation-Automation"
     },
     "https://github.com/akahappygit/AI-Lead-Voice-Automation": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для автоматического сбора лидов с AI-слоем и потенциальной голосовой интеграцией. Предназначен для sales-команд, которым нужно автоматизировать первичный сбор и обработку контактов потенциальных клиентов.",
       "final_score": 7.5,
       "first_recommended": "2026-06-18",
+      "integrations": [
+        "Serp API",
+        "Google Sheets",
+        "Twilio"
+      ],
       "metric": "Количество собранных и квалифицированных лидов за прогон, процент успешных запросов к AI-слою",
+      "node_count": 29,
       "promoted_from_watch": false,
       "repo_full_name": "akahappygit/AI-Lead-Voice-Automation: Lead Scraper",
       "scores": {
@@ -1317,15 +1596,23 @@
       ],
       "title": "akahappygit/AI-Lead-Voice-Automation: Lead Scraper",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/akahappygit/AI-Lead-Voice-Automation"
     },
     "https://github.com/alejandrosnz/srt-llm-translator": {
       "category": "video_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Workflow для автоматического перевода SRT-файлов субтитров с помощью LLM через n8n. Предназначен для создателей видеоконтента, которым нужна быстрая локализация субтитров без ручного перевода.",
       "final_score": 6.3,
       "first_recommended": "2026-06-11",
+      "integrations": [
+        "Form",
+        "Telegram",
+        "OpenRouter"
+      ],
       "metric": "Время перевода 1 минуты субтитров; качество сравнить с Google Translate",
+      "node_count": 34,
       "promoted_from_watch": false,
       "repo_full_name": "alejandrosnz/srt-llm-translator: n8n_workflow",
       "scores": {
@@ -1350,15 +1637,21 @@
       ],
       "title": "alejandrosnz/srt-llm-translator: n8n_workflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/alejandrosnz/srt-llm-translator"
     },
     "https://github.com/anilrajrimal1/n8n-backups": {
       "category": "devops_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Workflow для автоматического резервного копирования всех workflow из вашего n8n-инстанса в GitHub-репозиторий. Подходит командам, которым важна сохранность автоматизаций и версионирование изменений.",
       "final_score": 7.5,
       "first_recommended": "2026-06-03",
+      "integrations": [
+        "GitHub"
+      ],
       "metric": "Количество JSON-файлов в GitHub-репозитории после каждого прогона",
+      "node_count": 14,
       "promoted_from_watch": false,
       "repo_full_name": "anilrajrimal1/n8n-backups: n8n-backup",
       "scores": {
@@ -1383,15 +1676,25 @@
       ],
       "title": "anilrajrimal1/n8n-backups: n8n-backup",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/anilrajrimal1/n8n-backups"
     },
     "https://github.com/bitsandbrainsai/ai-ad-creative-strategist": {
       "category": "marketing_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow для автоматической генерации стратегий рекламных креативов с использованием AI. Подходит маркетологам и агентствам, которым нужно быстро формировать концепции и тексты для рекламных кампаний.",
       "final_score": 6.6,
       "first_recommended": "2026-06-29",
+      "integrations": [
+        "Airtable",
+        "Slack",
+        "Anthropic",
+        "Google Gemini",
+        "Airtable Tool"
+      ],
       "metric": "Время от запуска до получения 3+ вариантов рекламной концепции; качество выдачи по оценке маркетолога",
+      "node_count": 14,
       "promoted_from_watch": false,
       "repo_full_name": "bitsandbrainsai/ai-ad-creative-strategist: ai-ad-creative-strategist",
       "scores": {
@@ -1416,15 +1719,22 @@
       ],
       "title": "bitsandbrainsai/ai-ad-creative-strategist: ai-ad-creative-strategist",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/bitsandbrainsai/ai-ad-creative-strategist"
     },
     "https://github.com/caioross/n8n_Workflows": {
       "category": "devops_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Репозиторий содержит несколько n8n-workflow, в том числе github-ai-code-review — автоматический AI-анализ кода в GitHub PR. Подойдёт разработчикам и DevOps-командам, желающим встроить AI-ревью в CI-процесс.",
       "final_score": 6.7,
       "first_recommended": "2026-05-30",
+      "integrations": [
+        "GitHub",
+        "OpenAI"
+      ],
       "metric": "Появление автоматического AI-комментария в PR в течение 2 минут после открытия",
+      "node_count": 30,
       "promoted_from_watch": false,
       "repo_full_name": "caioross/n8n_Workflows: github-ai-code-review",
       "scores": {
@@ -1451,15 +1761,21 @@
       ],
       "title": "caioross/n8n_Workflows: github-ai-code-review",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/caioross/n8n_Workflows"
     },
     "https://github.com/castlen3/line-family-comment-bot": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "n8n-workflow для автоматической отправки комментариев в LINE Messaging API, нацеленный на семейные или групповые чат-сценарии. Репозиторий получил 62 звезды и обновлён сегодня, что говорит об активном использовании.",
       "final_score": 7.1,
       "first_recommended": "2026-06-02",
+      "integrations": [
+        "OpenAI"
+      ],
       "metric": "Количество успешно отправленных сообщений в LINE за тестовый прогон",
+      "node_count": 27,
       "promoted_from_watch": false,
       "repo_full_name": "castlen3/line-family-comment-bot: LINE_FAMILY_COMMENT_BOT.public",
       "scores": {
@@ -1484,15 +1800,23 @@
       ],
       "title": "castlen3/line-family-comment-bot: LINE_FAMILY_COMMENT_BOT.public",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/castlen3/line-family-comment-bot"
     },
     "https://github.com/ceyre-boop/email-automation": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из 5 Make-сценариев для полного цикла обработки входящей почты: триаж, автоответы, дайджест, алерты об ошибках и еженедельный отчёт. Подходит для команд поддержки и операционных менеджеров.",
       "final_score": 7.0,
       "first_recommended": "2026-05-21",
+      "integrations": [
+        "Gmail",
+        "OpenAI",
+        "Google Sheets"
+      ],
       "metric": "Процент писем корректно классифицированных на этапе триажа; время до автоответа",
+      "node_count": 24,
       "promoted_from_watch": false,
       "repo_full_name": "ceyre-boop/email-automation: 5-Phase Email Triage Pipeline",
       "scores": {
@@ -1521,15 +1845,24 @@
       ],
       "title": "ceyre-boop/email-automation: 5-Phase Email Triage Pipeline",
       "tool": "make",
+      "trigger_type": "schedule",
       "url": "https://github.com/ceyre-boop/email-automation"
     },
     "https://github.com/datawhalechina/handy-n8n": {
       "category": "data_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Репозиторий datawhalechina/handy-n8n содержит обучающие n8n-workflow от китайского сообщества DataWhale. Workflow n8n_mcp демонстрирует интеграцию n8n с MCP (Model Context Protocol) для подключения AI-моделей к внешним инструментам.",
       "final_score": 6.5,
       "first_recommended": "2026-06-07",
+      "integrations": [
+        "Google Gemini",
+        "Mcp Client Tool",
+        "Mcp",
+        "Github Tool"
+      ],
       "metric": "Успешный вызов внешнего инструмента через MCP-протокол и получение ответа от AI-агента",
+      "node_count": 6,
       "promoted_from_watch": false,
       "repo_full_name": "datawhalechina/handy-n8n: n8n_mcp",
       "scores": {
@@ -1554,15 +1887,21 @@
       ],
       "title": "datawhalechina/handy-n8n: n8n_mcp",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/datawhalechina/handy-n8n"
     },
     "https://github.com/djeknet/n8n-master-workflows": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Готовый n8n-workflow для создания AI-агента на базе Google Gemini с персистентной памятью между сессиями. Рассчитан на разработчиков и операционные команды, которые хотят быстро запустить conversational AI-агента.",
       "final_score": 7.7,
       "first_recommended": "2026-05-21",
+      "integrations": [
+        "Google Gemini"
+      ],
       "metric": "Корректность воспроизведения контекста из предыдущих сообщений в новой сессии",
+      "node_count": 26,
       "promoted_from_watch": false,
       "repo_full_name": "djeknet/n8n-master-workflows: Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory",
       "scores": {
@@ -1587,15 +1926,22 @@
       ],
       "title": "djeknet/n8n-master-workflows: Build_Your_First_AI_Agent_Powered_by_Google_Gemini_with_Memory",
       "tool": "n8n",
+      "trigger_type": "chat",
       "url": "https://github.com/djeknet/n8n-master-workflows"
     },
     "https://github.com/duncan-buildroom/n8n-automations": {
       "category": "sales_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n workflow для автоматического мониторинга и сбора вакансий с Upwork по заданным критериям. Предназначен для фрилансеров и агентств, которые хотят оперативно получать уведомления о новых заказах без ручного мониторинга платформы.",
       "final_score": 7.3,
       "first_recommended": "2026-06-08",
+      "integrations": [
+        "OpenAI",
+        "Airtable"
+      ],
       "metric": "Количество найденных новых вакансий за первые 24 часа работы",
+      "node_count": 11,
       "promoted_from_watch": false,
       "repo_full_name": "duncan-buildroom/n8n-automations: Upwork-Scraper",
       "scores": {
@@ -1620,15 +1966,23 @@
       ],
       "title": "duncan-buildroom/n8n-automations: Upwork-Scraper",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/duncan-buildroom/n8n-automations"
     },
     "https://github.com/eliassaoe/n8nworkflows": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий содержит два готовых n8n-workflow для скрейпинга LinkedIn через LinkFinderAI: первый собирает профили/лиды, второй — дополнительный вариант обработки. Подойдёт командам продаж и лидген-специалистам.",
       "final_score": 8.1,
       "first_recommended": "2026-05-21",
+      "integrations": [
+        "Google Sheets",
+        "OpenAI",
+        "Google Gemini"
+      ],
       "metric": "Количество успешно собранных профилей за прогон, процент заполненных полей (email, должность, компания)",
+      "node_count": 34,
       "promoted_from_watch": false,
       "repo_full_name": "eliassaoe/n8nworkflows: linkedin-scraper-linkfinderai",
       "scores": {
@@ -1654,15 +2008,30 @@
       ],
       "title": "eliassaoe/n8nworkflows: linkedin-scraper-linkfinderai",
       "tool": "n8n",
+      "trigger_type": "chat",
       "url": "https://github.com/eliassaoe/n8nworkflows"
     },
     "https://github.com/emretasss/AI-Workflow-Hub-2000-": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "AI-Workflow-Hub-2000- — коллекция из 5 готовых n8n-workflow: расписание Telegram-уведомлений, TOTP-автоматизация, работа с Bitwarden, синхронизация Typeform с Google Sheets и публикация в Twitter. Репозиторий набрал 256 звёзд.",
       "final_score": 6.6,
       "first_recommended": "2026-05-23",
+      "integrations": [
+        "Gmail",
+        "Google Gemini",
+        "Telegram",
+        "Nostrobotsread",
+        "Totp",
+        "Bitwarden",
+        "Typeform",
+        "Google Sheets",
+        "X (Twitter)",
+        "Airtable"
+      ],
       "metric": "Успешная отправка Telegram-сообщения по расписанию / корректная запись в Google Sheets",
+      "node_count": 42,
       "promoted_from_watch": false,
       "repo_full_name": "emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows",
       "scores": {
@@ -1691,15 +2060,22 @@
       ],
       "title": "emretasss/AI-Workflow-Hub-2000-: Telegram, TOTP, Bitwarden, Typeform, Twitter workflows",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/emretasss/AI-Workflow-Hub-2000-"
     },
     "https://github.com/enescingoz/awesome-n8n-templates": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий с 22 261 звездой содержит workflow для AI-генерации изображений продуктов. Один верифицированный JSON-файл, пригодный для немедленного импорта в n8n. Подходит для e-commerce и маркетинговых команд, которым нужна быстрая визуализация продуктов.",
       "final_score": 6.5,
       "first_recommended": "2026-05-18",
+      "integrations": [
+        "Google Drive",
+        "OpenAI"
+      ],
       "metric": "Качество и скорость генерации изображения продукта",
+      "node_count": 17,
       "promoted_from_watch": false,
       "repo_full_name": "enescingoz/awesome-n8n-templates: AI product imagines",
       "scores": {
@@ -1724,15 +2100,21 @@
       ],
       "title": "enescingoz/awesome-n8n-templates: AI product imagines",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/enescingoz/awesome-n8n-templates"
     },
     "https://github.com/felores/make-blueprints": {
       "category": "video_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Коллекция Make (Make.com) blueprint для подключения AI-видеогенераторов Dream Machine (Luma AI) и Fal.ai к автоматизированным сценариям. Позволяет запускать генерацию видео из изображений или текста без написания кода.",
       "final_score": 6.8,
       "first_recommended": "2026-06-08",
+      "integrations": [
+        "Google Drive"
+      ],
       "metric": "Успешная генерация видео по тестовому входу без ошибок API",
+      "node_count": 26,
       "promoted_from_watch": false,
       "repo_full_name": "felores/make-blueprints: Dream Machine video connectors (5 blueprints)",
       "scores": {
@@ -1765,11 +2147,18 @@
     },
     "https://github.com/ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow для автоматического OCR-парсинга инвойсов и документов с помощью Google Gemini AI и сохранения результатов в Google Sheets. Подходит для бухгалтеров, финансистов и любого бизнеса с большим объёмом входящих документов.",
       "final_score": 6.5,
       "first_recommended": "2026-05-27",
+      "integrations": [
+        "Google Sheets",
+        "Google Gemini",
+        "Tesseract Node"
+      ],
       "metric": "Точность извлечения полей (поставщик, сумма, дата); время обработки одного инвойса",
+      "node_count": 12,
       "promoted_from_watch": false,
       "repo_full_name": "ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: Invoice Parser",
       "scores": {
@@ -1794,15 +2183,22 @@
       ],
       "title": "ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration: Invoice Parser",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/ffsdffsf/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration"
     },
     "https://github.com/freddy-schuetz/n8n-claw": {
       "category": "devops_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Набор из 5 n8n-workflow для управления агентами: менеджер библиотеки агентов, браузерный агент, проверка бэкграунда, форма для credentials и нотификации об ошибках. Репозиторий обновлён сегодня (18 мая 2026), что говорит об активной разработке.",
       "final_score": 7.9,
       "first_recommended": "2026-05-18",
+      "integrations": [
+        "Anthropic",
+        "Telegram"
+      ],
       "metric": "Количество агентов в библиотеке и процент ошибок, перехваченных error-notification workflow",
+      "node_count": 18,
       "promoted_from_watch": false,
       "repo_full_name": "freddy-schuetz/n8n-claw: agent-library-manager + 4 агентных workflow",
       "scores": {
@@ -1831,15 +2227,21 @@
       ],
       "title": "freddy-schuetz/n8n-claw: agent-library-manager + 4 агентных workflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/freddy-schuetz/n8n-claw"
     },
     "https://github.com/gguyon0925/n8n-reddit-scraper": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для автоматического обнаружения и мониторинга релевантных сабреддитов. Полезен маркетологам и growth-специалистам, которые ищут новые площадки для органического продвижения.",
       "final_score": 6.6,
       "first_recommended": "2026-06-18",
+      "integrations": [
+        "Google Sheets"
+      ],
       "metric": "Количество обнаруженных релевантных сабреддитов за прогон, полнота охвата по заданным темам",
+      "node_count": 17,
       "promoted_from_watch": false,
       "repo_full_name": "gguyon0925/n8n-reddit-scraper: subreddit-discovery",
       "scores": {
@@ -1864,15 +2266,23 @@
       ],
       "title": "gguyon0925/n8n-reddit-scraper: subreddit-discovery",
       "tool": "n8n",
+      "trigger_type": "form",
       "url": "https://github.com/gguyon0925/n8n-reddit-scraper"
     },
     "https://github.com/gnueole/jobby-md2html": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из пяти n8n-workflow для автоматизации работы с резюме и вакансиями: синхронизация LinkedIn-данных в Notion, генерация PDF-документов (динамически и статически), синхронизация конфигурации и обработка ошибок с отправкой логов в Axiom. Подходит для рекрутёров и кандидатов, ведущих активный поиск работы.",
       "final_score": 6.5,
       "first_recommended": "2026-06-16",
+      "integrations": [
+        "Notion",
+        "Data Table",
+        "Google Gemini"
+      ],
       "metric": "Количество вакансий, синхронизированных в Notion за один прогон",
+      "node_count": 57,
       "promoted_from_watch": false,
       "repo_full_name": "gnueole/jobby-md2html: jobby-linkedin-2-notion",
       "scores": {
@@ -1901,15 +2311,22 @@
       ],
       "title": "gnueole/jobby-md2html: jobby-linkedin-2-notion",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/gnueole/jobby-md2html"
     },
     "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram": {
       "category": "video_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для генерации коротких вирусных видео с помощью Seedance AI и автоматической загрузки на TikTok, YouTube и Instagram. Рассчитан на контент-мейкеров и маркетологов, которые хотят масштабировать производство видеоконтента.",
       "final_score": 6.6,
       "first_recommended": "2026-06-05",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets"
+      ],
       "metric": "Число успешных загрузок видео на целевые платформы за прогон",
+      "node_count": 36,
       "promoted_from_watch": false,
       "repo_full_name": "hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram: AI Viral Video Generator",
       "scores": {
@@ -1934,15 +2351,18 @@
       ],
       "title": "hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram: AI Viral Video Generator",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram"
     },
     "https://github.com/inthecyber-group/securityonion-n8n-workflows": {
       "category": "devops_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Workflow для n8n, интегрированный с Security Onion: запрашивает информацию о CVE-уязвимостях и выводит структурированные данные об угрозах. Предназначен для security-команд, использующих Security Onion для мониторинга инфраструктуры.",
       "final_score": 6.7,
       "first_recommended": "2026-05-26",
       "metric": "Время от появления CVE до получения структурированного алерта",
+      "node_count": 7,
       "promoted_from_watch": false,
       "repo_full_name": "inthecyber-group/securityonion-n8n-workflows: CVE_Info",
       "scores": {
@@ -1967,15 +2387,21 @@
       ],
       "title": "inthecyber-group/securityonion-n8n-workflows: CVE_Info",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/inthecyber-group/securityonion-n8n-workflows"
     },
     "https://github.com/jreyesr/n8n-nodes-tesseractjs": {
       "category": "data_workflow",
+      "complexity": "medium",
       "confidence": "high",
       "description": "Образцовый workflow для n8n-узла TesseractJS, демонстрирующий OCR (распознавание текста из изображений) прямо в пайплайне. Репозиторий включает кастомный n8n-узел на базе Tesseract.js и готовый сценарий для извлечения текста из изображений без внешних API.",
       "final_score": 6.5,
       "first_recommended": "2026-05-25",
+      "integrations": [
+        "Tesseract Node"
+      ],
       "metric": "Точность распознавания текста на тестовом наборе из 5 изображений; время обработки одного изображения",
+      "node_count": 8,
       "promoted_from_watch": false,
       "repo_full_name": "jreyesr/n8n-nodes-tesseractjs: sample_workflow",
       "scores": {
@@ -2000,15 +2426,24 @@
       ],
       "title": "jreyesr/n8n-nodes-tesseractjs: sample_workflow",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/jreyesr/n8n-nodes-tesseractjs"
     },
     "https://github.com/keila-moral/researchflow-ai": {
       "category": "data_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из 3 n8n-workflow для автоматического мониторинга новых научных статей на arXiv и семантического поиска по ним. Включает обработчик ошибок. Подходит для исследователей, аналитиков и ML-инженеров, следящих за научной литературой.",
       "final_score": 5.8,
       "first_recommended": "2026-06-29",
+      "integrations": [
+        "OpenAI",
+        "Qdrant Vector Store",
+        "Telegram",
+        "AI Agent"
+      ],
       "metric": "Количество релевантных статей, найденных и отфильтрованных за день",
+      "node_count": 24,
       "promoted_from_watch": false,
       "repo_full_name": "keila-moral/researchflow-ai: Arxiv_Monitor",
       "scores": {
@@ -2035,15 +2470,22 @@
       ],
       "title": "keila-moral/researchflow-ai: Arxiv_Monitor",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/keila-moral/researchflow-ai"
     },
     "https://github.com/kevorklepedjian1/Autonomous-SDR-System": {
       "category": "sales_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n workflow для автономной системы SDR (Sales Development Representative) на базе AI. Предназначен для B2B-команд, которые хотят автоматизировать первичный аутрич и квалификацию лидов без найма дополнительных SDR.",
       "final_score": 7.0,
       "first_recommended": "2026-05-31",
+      "integrations": [
+        "Airtable",
+        "Slack"
+      ],
       "metric": "Reply rate на первые письма; количество лидов, прошедших квалификацию автоматически",
+      "node_count": 8,
       "promoted_from_watch": false,
       "repo_full_name": "kevorklepedjian1/Autonomous-SDR-System: ai-sdr",
       "scores": {
@@ -2068,15 +2510,22 @@
       ],
       "title": "kevorklepedjian1/Autonomous-SDR-System: ai-sdr",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/kevorklepedjian1/Autonomous-SDR-System"
     },
     "https://github.com/kingler/n8n_agent": {
       "category": "devops_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Workflow для n8n, который автоматически создаёт резервные копии всех workflow из вашего n8n-инстанса и коммитит их в GitHub-репозиторий. Полезен для команд и соло-разработчиков, которым важна версионность автоматизаций.",
       "final_score": 6.6,
       "first_recommended": "2026-05-26",
+      "integrations": [
+        "GitHub",
+        "Slack"
+      ],
       "metric": "Наличие актуальных JSON-файлов в GitHub-репо после каждого запуска",
+      "node_count": 26,
       "promoted_from_watch": false,
       "repo_full_name": "kingler/n8n_agent: back_up_your_n8n_workflows_to_github",
       "scores": {
@@ -2101,15 +2550,24 @@
       ],
       "title": "kingler/n8n_agent: back_up_your_n8n_workflows_to_github",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/kingler/n8n_agent"
     },
     "https://github.com/kossakovsky/n8n-install": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий содержит два практических n8n workflow: WhatsApp-чатбот и ChatGPT email-ответчик с сохранением в Google Sheets. Подходит для начинающих и тех, кто строит первые мессенджер-интеграции.",
       "final_score": 7.3,
       "first_recommended": "2026-05-28",
+      "integrations": [
+        "WhatsApp",
+        "OpenAI",
+        "Gmail",
+        "Google Sheets"
+      ],
       "metric": "Входящее WhatsApp-сообщение вызывает автоответ в течение 5 секунд",
+      "node_count": 77,
       "promoted_from_watch": false,
       "repo_full_name": "kossakovsky/n8n-install: Building Your First WhatsApp Chatbot",
       "scores": {
@@ -2135,15 +2593,32 @@
       ],
       "title": "kossakovsky/n8n-install: Building Your First WhatsApp Chatbot",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/kossakovsky/n8n-install"
     },
     "https://github.com/lucaswalter/n8n-ai-automations": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Коллекция из 5 n8n-workflow на базе AI: Gmail-агент, сбор новостей, генератор рассылок, пайплайн скрейпинга и специализированный агент для авторемонтного бизнеса. Репозиторий ориентирован на малый и средний бизнес, которому нужна автоматизация коммуникаций и контента без написания кода.",
       "final_score": 8.1,
       "first_recommended": "2026-05-18",
+      "integrations": [
+        "Gmail",
+        "Gmail Tool",
+        "Google Sheets Tool",
+        "Google Gemini",
+        "Google Docs Tool",
+        "AWS S3",
+        "OpenAI",
+        "Reddit",
+        "Anthropic",
+        "Slack",
+        "Google Drive",
+        "Twilio Tool"
+      ],
       "metric": "Количество писем, обработанных автоматически без ручного вмешательства",
+      "node_count": 212,
       "promoted_from_watch": false,
       "repo_full_name": "lucaswalter/n8n-ai-automations: ai_gmail_agent + 4 других AI-workflow",
       "scores": {
@@ -2172,15 +2647,18 @@
       ],
       "title": "lucaswalter/n8n-ai-automations: ai_gmail_agent + 4 других AI-workflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/lucaswalter/n8n-ai-automations"
     },
     "https://github.com/lynote-ai/humanize-text": {
       "category": "content_workflow",
+      "complexity": "medium",
       "confidence": "high",
       "description": "Workflow для n8n, преобразующий AI-сгенерированный текст в более естественный, человекоподобный стиль. Подходит командам, публикующим контент с помощью LLM и желающим снизить детектируемость AI-текста.",
       "final_score": 7.6,
       "first_recommended": "2026-05-22",
       "metric": "AI-detection score до и после обработки (например, % вероятности AI по GPTZero)",
+      "node_count": 8,
       "promoted_from_watch": false,
       "repo_full_name": "lynote-ai/humanize-text: humanize_standard",
       "scores": {
@@ -2205,15 +2683,22 @@
       ],
       "title": "lynote-ai/humanize-text: humanize_standard",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/lynote-ai/humanize-text"
     },
     "https://github.com/marequest/lead-outreach-research-system": {
       "category": "marketing_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Make blueprint-система для автоматического исследования блогов и обработки лидов через Hunter.io с последующей сборкой email-потока. Предназначена для маркетологов и sales-команд, которые ищут и прогревают потенциальных клиентов через контентный аутрич.",
       "final_score": 6.5,
       "first_recommended": "2026-06-23",
+      "integrations": [
+        "Placeholder",
+        "Scenario Service"
+      ],
       "metric": "Количество лидов, попавших в email-очередь за прогон",
+      "node_count": 9,
       "promoted_from_watch": false,
       "repo_full_name": "marequest/lead-outreach-research-system: Blog Research + Hunter.io Lead Outreach",
       "scores": {
@@ -2243,11 +2728,16 @@
     },
     "https://github.com/market-analyticx/seo-auditor-service": {
       "category": "marketing_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow для автоматического SEO-аудита веб-страниц или сайтов. Подходит для SEO-специалистов, маркетологов и агентств, которые хотят автоматизировать регулярные проверки технического SEO.",
       "final_score": 6.7,
       "first_recommended": "2026-06-10",
+      "integrations": [
+        "Google Drive"
+      ],
       "metric": "Время аудита одной страницы; полнота охвата SEO-параметров в отчёте",
+      "node_count": 15,
       "promoted_from_watch": false,
       "repo_full_name": "market-analyticx/seo-auditor-service: seo_auditor",
       "scores": {
@@ -2272,15 +2762,23 @@
       ],
       "title": "market-analyticx/seo-auditor-service: seo_auditor",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/market-analyticx/seo-auditor-service"
     },
     "https://github.com/mehdreaming/tiktok-to-pinterest": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n workflow для автоматического репоста контента из TikTok в Pinterest. Подходит SMM-менеджерам и контент-криейторам, которые хотят расширить охват без дополнительных усилий по публикации.",
       "final_score": 6.6,
       "first_recommended": "2026-05-31",
+      "integrations": [
+        "Google Drive",
+        "Groq",
+        "Google Sheets"
+      ],
       "metric": "Количество автоматически созданных пинов; охват и вовлечённость на Pinterest",
+      "node_count": 18,
       "promoted_from_watch": false,
       "repo_full_name": "mehdreaming/tiktok-to-pinterest: TikTok → Pinterest",
       "scores": {
@@ -2305,6 +2803,7 @@
       ],
       "title": "mehdreaming/tiktok-to-pinterest: TikTok → Pinterest",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/mehdreaming/tiktok-to-pinterest"
     },
     "https://github.com/mhmdmnsor292003-arch/free-ai-tools": {
@@ -2346,11 +2845,18 @@
     },
     "https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json": {
       "category": "general_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-workflow с использованием AI для автоматической классификации грантов и финансовых возможностей. Ориентирован на НКО, исследователей и стартапы, которым нужно быстро сортировать большой поток грантовых программ.",
       "final_score": 6.7,
       "first_recommended": "2026-06-30",
+      "integrations": [
+        "Google Gemini",
+        "Google Sheets",
+        "Gmail"
+      ],
       "metric": "Точность классификации на тестовой выборке грантов",
+      "node_count": 6,
       "promoted_from_watch": false,
       "repo_full_name": "muhammadzayed2003/AI-powered-classifier-for-Grants",
       "scores": {
@@ -2375,15 +2881,25 @@
       ],
       "title": "muhammadzayed2003/AI-powered-classifier-for-Grants: AI powered classifier for Grants",
       "tool": "n8n",
+      "trigger_type": "form",
       "url": "https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json"
     },
     "https://github.com/n8n-io/test-workflows": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Официальный репозиторий n8n-io с набором тестовых workflow для проверки функциональности платформы. Содержит 5 верифицированных JSON-файлов, пригодных для импорта и изучения структуры узлов n8n.",
       "final_score": 5.5,
       "first_recommended": "2026-06-20",
+      "integrations": [
+        "The Hive",
+        "Vonage",
+        "Uproc",
+        "OpenAI",
+        "Slack"
+      ],
       "metric": "Успешное выполнение всех узлов без ошибок при тестовом запуске",
+      "node_count": 98,
       "promoted_from_watch": false,
       "repo_full_name": "n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)",
       "scores": {
@@ -2412,15 +2928,29 @@
       ],
       "title": "n8n-io/test-workflows: тестовые workflow n8n (138, 161, 179, 259, 36)",
       "tool": "n8n",
+      "trigger_type": "manual",
       "url": "https://github.com/n8n-io/test-workflows"
     },
     "https://github.com/n8nKOR/n8n-shared-workflow": {
       "category": "data_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Корейский репозиторий с коллекцией n8n-workflow, включая RAG-чатбот на базе Google Drive, Gemini и Qdrant для ответов на вопросы по документам. Содержит также workflow для работы с Airtable через AI и Obsidian Notes.",
       "final_score": 6.5,
       "first_recommended": "2026-06-10",
+      "integrations": [
+        "Airtable Tool",
+        "OpenAI",
+        "Google Gemini",
+        "Google Drive",
+        "Telegram",
+        "Google Docs",
+        "AWS S3",
+        "Slack",
+        "Shopify"
+      ],
       "metric": "Точность ответов на вопросы по документам (relevance); время индексации",
+      "node_count": 163,
       "promoted_from_watch": false,
       "repo_full_name": "n8nKOR/n8n-shared-workflow: AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant",
       "scores": {
@@ -2449,15 +2979,21 @@
       ],
       "title": "n8nKOR/n8n-shared-workflow: AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/n8nKOR/n8n-shared-workflow"
     },
     "https://github.com/oxbshw/Open-Workflow-Library": {
       "category": "content_workflow",
+      "complexity": "simple",
       "confidence": "high",
       "description": "Open-Workflow-Library — публичная библиотека n8n-workflow с AI-агентом summarizer-bot, который автоматически суммаризирует входящий контент. Репозиторий имеет 538 звёзд и получил свежий push 24 мая 2026 года.",
       "final_score": 6.7,
       "first_recommended": "2026-05-24",
+      "integrations": [
+        "OpenAI"
+      ],
       "metric": "Качество и скорость суммаризации: время выполнения workflow + точность резюме по контрольному тексту",
+      "node_count": 2,
       "promoted_from_watch": false,
       "repo_full_name": "oxbshw/Open-Workflow-Library: summarizer-bot",
       "scores": {
@@ -2482,15 +3018,21 @@
       ],
       "title": "oxbshw/Open-Workflow-Library: summarizer-bot",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/oxbshw/Open-Workflow-Library"
     },
     "https://github.com/oxbshw/ultimate-n8n-ai-workflows": {
       "category": "content_workflow",
+      "complexity": "simple",
       "confidence": "high",
       "description": "Крупнейшая open-source библиотека из 3400+ готовых n8n AI-воркфлоу — для импорта, расширения и переиспользования (одиночный summarizer-bot воркфлоу из этой коллекции).",
       "final_score": 6.7,
       "first_recommended": "2026-05-15",
+      "integrations": [
+        "OpenAI"
+      ],
       "metric": "Среднее время генерации резюме и точность (сравнение с ручным резюме)",
+      "node_count": 2,
       "promoted_from_watch": false,
       "repo_full_name": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
       "scores": {
@@ -2515,15 +3057,18 @@
       ],
       "title": "oxbshw/ultimate-n8n-ai-workflows: summarizer-bot",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/oxbshw/ultimate-n8n-ai-workflows"
     },
     "https://github.com/papadopouloskyriakos/agentic-chatops": {
       "category": "devops_workflow",
+      "complexity": "medium",
       "confidence": "high",
       "description": "Набор из 5 n8n workflow для agentic ChatOps-автоматизации на базе Claude: сбор статистики инфраструктуры, запуск и восстановление после chaos-тестов, мониторинг статуса через API. Предназначен для DevOps-команд, которые хотят управлять инфраструктурой через LLM-агента.",
       "final_score": 7.6,
       "first_recommended": "2026-06-21",
       "metric": "Время от команды до получения статуса инфраструктуры; успешный прогон chaos-test без ручного вмешательства",
+      "node_count": 15,
       "promoted_from_watch": false,
       "repo_full_name": "papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats",
       "scores": {
@@ -2552,15 +3097,21 @@
       ],
       "title": "papadopouloskyriakos/agentic-chatops: claude-gateway-agentic-stats",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/papadopouloskyriakos/agentic-chatops"
     },
     "https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders": {
       "category": "devops_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Workflow для n8n, автоматизирующий синхронизацию пропущенных строк локализации iOS-приложения: сканирует Google Sheets с переводами, находит пробелы и автоматически создаёт PR-плейсхолдеры в GitHub. Подходит разработчикам и менеджерам локализации мобильных приложений.",
       "final_score": 6.5,
       "first_recommended": "2026-06-29",
+      "integrations": [
+        "Google Sheets"
+      ],
       "metric": "Количество автоматически созданных PR с placeholder-переводами за период",
+      "node_count": 11,
       "promoted_from_watch": false,
       "repo_full_name": "papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders: main",
       "scores": {
@@ -2585,15 +3136,18 @@
       ],
       "title": "papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders: main",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders"
     },
     "https://github.com/ravindragith/zie619": {
       "category": "general_workflow",
+      "complexity": "simple",
       "confidence": "high",
       "description": "Репозиторий с двумя верифицированными n8n-workflow (1123_Automate, 1125_Create) и 127 звёздами. Реальное назначение раскрывается при открытии node-графа в n8n; имена файлов числовые, тема — автоматизация неизвестного процесса.",
       "final_score": 4.8,
       "first_recommended": "2026-06-17",
       "metric": "Успешное выполнение обоих workflow без ошибок",
+      "node_count": 4,
       "promoted_from_watch": false,
       "repo_full_name": "ravindragith/zie619: 1123_Automate + 1125_Create",
       "scores": {
@@ -2623,11 +3177,19 @@
     },
     "https://github.com/ritik-prog/n8n-automation-templates-5000": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий с 3 продвинутыми n8n workflow: генерация compliance-отчётов для здравоохранения, автоматизация event-маркетинга и анализ затрат на поддержку. Ориентирован на enterprise и regulated industries.",
       "final_score": 7.0,
       "first_recommended": "2026-05-28",
+      "integrations": [
+        "Smtp",
+        "OpenAI",
+        "Slack",
+        "Google Sheets"
+      ],
       "metric": "Отчёт сгенерирован и доставлен получателям без ручного вмешательства",
+      "node_count": 18,
       "promoted_from_watch": false,
       "repo_full_name": "ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports",
       "scores": {
@@ -2654,15 +3216,23 @@
       ],
       "title": "ritik-prog/n8n-automation-templates-5000: auto-generate-healthcare-compliance-reports",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/ritik-prog/n8n-automation-templates-5000"
     },
     "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/new_workflow.json": {
       "category": "video_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для автоматического суммаризирования видео с помощью AI. Упоминается в контексте ключевого слова 'summarizer' в нескольких источниках выборки; предназначен для создателей контента и исследователей.",
       "final_score": 5.8,
       "first_recommended": "2026-06-30",
+      "integrations": [
+        "Telegram",
+        "Google Gemini",
+        "YouTube"
+      ],
       "metric": "Качество и полнота суммаризации на тестовом видео",
+      "node_count": 19,
       "promoted_from_watch": false,
       "repo_full_name": "shikherjha/n8n-video-Summarizer-Bot",
       "scores": {
@@ -2687,15 +3257,23 @@
       ],
       "title": "shikherjha/n8n-video-Summarizer-Bot: new_workflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/new_workflow.json"
     },
     "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/worflow.json": {
       "category": "video_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для автоматического суммаризирования видео с помощью AI. Упоминается в контексте ключевого слова 'summarizer' в нескольких источниках выборки; предназначен для создателей контента и исследователей.",
       "final_score": 5.8,
       "first_recommended": "2026-06-30",
+      "integrations": [
+        "Telegram",
+        "YouTube",
+        "Groq"
+      ],
       "metric": "Качество и полнота суммаризации на тестовом видео",
+      "node_count": 34,
       "promoted_from_watch": false,
       "repo_full_name": "shikherjha/n8n-video-Summarizer-Bot",
       "scores": {
@@ -2720,15 +3298,23 @@
       ],
       "title": "shikherjha/n8n-video-Summarizer-Bot: worflow",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/worflow.json"
     },
     "https://github.com/shreyvaughn/claude-ai-sales-system": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для автоматизации email-последовательностей SDR на базе Claude AI. Генерирует персонализированные цепочки писем для холодных продаж и отправляет их по расписанию.",
       "final_score": 6.8,
       "first_recommended": "2026-06-01",
+      "integrations": [
+        "Gmail",
+        "OpenAI",
+        "Google Sheets"
+      ],
       "metric": "Open rate и reply rate по сгенерированным последовательностям",
+      "node_count": 25,
       "promoted_from_watch": false,
       "repo_full_name": "shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR",
       "scores": {
@@ -2753,15 +3339,18 @@
       ],
       "title": "shreyvaughn/claude-ai-sales-system: Email_sequencing_SDR",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/shreyvaughn/claude-ai-sales-system"
     },
     "https://github.com/sinabarimd/reputation-engine": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из 5 взаимосвязанных n8n-workflow для автоматизированного управления репутацией: исследование тем, генерация контента, публикация, поглощение медиа и измерение результатов. Ориентирован на бренды и маркетологов, строящих автономный контент-пайплайн.",
       "final_score": 6.8,
       "first_recommended": "2026-05-22",
       "metric": "Количество автоматически опубликованных материалов в неделю и охват (impressions) по measurement-agent",
+      "node_count": 142,
       "promoted_from_watch": false,
       "repo_full_name": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
       "scores": {
@@ -2790,15 +3379,21 @@
       ],
       "title": "sinabarimd/reputation-engine: content-generator, content-publisher, content-research-agent, measurement-agent, media-ingestion-agent",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/sinabarimd/reputation-engine"
     },
     "https://github.com/skadaai/awesome-n8n-templates": {
       "category": "marketing_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n-шаблон для автоматизации лидогенерации. Подходит маркетологам и growth-хакерам, которым нужен готовый pipeline для сбора и первичной обработки лидов.",
       "final_score": 6.5,
       "first_recommended": "2026-06-18",
+      "integrations": [
+        "Google Sheets"
+      ],
       "metric": "Количество лидов, прошедших через pipeline без ошибок, за тестовый прогон",
+      "node_count": 9,
       "promoted_from_watch": false,
       "repo_full_name": "skadaai/awesome-n8n-templates: leadgen",
       "scores": {
@@ -2823,15 +3418,21 @@
       ],
       "title": "skadaai/awesome-n8n-templates: leadgen",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/skadaai/awesome-n8n-templates"
     },
     "https://github.com/slayerlux/n8n-llm-workflows": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Коллекция из 5 n8n-workflow с нарастающей сложностью LLM-паттернов: от детерминированного суммаризатора текста до агентного чата с инструментами. Предназначена как для изучения, так и для прямого использования в продукте.",
       "final_score": 6.7,
       "first_recommended": "2026-06-06",
+      "integrations": [
+        "OpenAI"
+      ],
       "metric": "Качество суммаризации (ROUGE-score или ручная оценка) и латентность ответа",
+      "node_count": 34,
       "promoted_from_watch": false,
       "repo_full_name": "slayerlux/n8n-llm-workflows: LLM workflow pack",
       "scores": {
@@ -2860,15 +3461,22 @@
       ],
       "title": "slayerlux/n8n-llm-workflows: LLM workflow pack",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/slayerlux/n8n-llm-workflows"
     },
     "https://github.com/soluckysummer/n8n_workflows": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий содержит два n8n-workflow: n8nposter для автоматизации публикации постов и webhook_demo для демонстрации входящих вебхуков. Подходит тем, кто хочет автоматизировать контент-публикацию через n8n.",
       "final_score": 6.8,
       "first_recommended": "2026-06-05",
+      "integrations": [
+        "OpenAI",
+        "DeepSeek"
+      ],
       "metric": "Количество успешных публикаций за тестовый прогон",
+      "node_count": 21,
       "promoted_from_watch": false,
       "repo_full_name": "soluckysummer/n8n_workflows: n8nposter",
       "scores": {
@@ -2894,15 +3502,22 @@
       ],
       "title": "soluckysummer/n8n_workflows: n8nposter",
       "tool": "n8n",
+      "trigger_type": "form",
       "url": "https://github.com/soluckysummer/n8n_workflows"
     },
     "https://github.com/splx-ai/agentic-radar": {
       "category": "data_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Репозиторий agentic-radar от splx-ai содержит n8n workflow для многоагентной системы работы с базами данных. Предназначен для разработчиков и инженеров, строящих AI-агентные пайплайны с доступом к данным.",
       "final_score": 7.3,
       "first_recommended": "2026-05-28",
+      "integrations": [
+        "Postgres Tool",
+        "OpenAI"
+      ],
       "metric": "Успешный ответ агента на запрос к БД без ошибок выполнения",
+      "node_count": 40,
       "promoted_from_watch": false,
       "repo_full_name": "splx-ai/agentic-radar: multi_agent (Multi-Agent Database System)",
       "scores": {
@@ -2927,15 +3542,24 @@
       ],
       "title": "splx-ai/agentic-radar: multi_agent (Multi-Agent Database System)",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/splx-ai/agentic-radar"
     },
     "https://github.com/theaiautomators/insights-lm-public": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "Система InsightsLM — набор из 5 n8n-workflow для создания AI-подкастов и работы с контентом: извлечение текста, генерация структуры записной книжки, чат с материалами и автоматическая генерация подкастных эпизодов. Рассчитан на медиа-команды, исследователей и контент-мейкеров.",
       "final_score": 7.2,
       "first_recommended": "2026-05-18",
+      "integrations": [
+        "OpenAI",
+        "Google Gemini",
+        "Anthropic",
+        "Supabase"
+      ],
       "metric": "Время от загрузки документа до готового подкаст-эпизода",
+      "node_count": 73,
       "promoted_from_watch": false,
       "repo_full_name": "theaiautomators/insights-lm-public: InsightsLM (5 workflow)",
       "scores": {
@@ -2964,15 +3588,23 @@
       ],
       "title": "theaiautomators/insights-lm-public: InsightsLM (5 workflow)",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/theaiautomators/insights-lm-public"
     },
     "https://github.com/thecloudstation/n8n-workflows": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Репозиторий thecloudstation содержит два n8n-workflow: скрапер лидов из LinkedIn и генератор контента. Оба JSON верифицированы и доступны для прямого импорта.",
       "final_score": 6.6,
       "first_recommended": "2026-05-24",
+      "integrations": [
+        "AWS S3",
+        "NocoDB",
+        "OpenAI"
+      ],
       "metric": "Количество успешно собранных лидов за прогон и полнота полей (имя, должность, компания, email если доступен)",
+      "node_count": 37,
       "promoted_from_watch": false,
       "repo_full_name": "thecloudstation/n8n-workflows: linkedin_Lead_scraper + content-generator",
       "scores": {
@@ -2998,15 +3630,23 @@
       ],
       "title": "thecloudstation/n8n-workflows: linkedin_Lead_scraper + content-generator",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/thecloudstation/n8n-workflows"
     },
     "https://github.com/tinyfish-io/tinyfish-cookbook": {
       "category": "data_workflow",
+      "complexity": "medium",
       "confidence": "high",
       "description": "Готовый n8n workflow для автоматического веб-исследования с использованием Tinyfish API. Подходит аналитикам, маркетологам и разработчикам, которым нужно быстро собирать структурированные данные из открытых источников.",
       "final_score": 8.1,
       "first_recommended": "2026-05-31",
+      "integrations": [
+        "OpenRouter",
+        "Notion",
+        "Tinyfish Tool"
+      ],
       "metric": "Время от запроса до получения структурированного ответа; полнота и точность собранных данных",
+      "node_count": 6,
       "promoted_from_watch": false,
       "repo_full_name": "tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish",
       "scores": {
@@ -3031,15 +3671,23 @@
       ],
       "title": "tinyfish-io/tinyfish-cookbook: Web Research Agent via Tinyfish",
       "tool": "n8n",
+      "trigger_type": "chat",
       "url": "https://github.com/tinyfish-io/tinyfish-cookbook"
     },
     "https://github.com/traversaal-ai/agents-in-action": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "high",
       "description": "n8n workflow-агент для автоматической генерации блог-постов, запускаемый через webhook. Часть репозитория traversaal-ai с примерами AI-агентов в действии.",
       "final_score": 6.5,
       "first_recommended": "2026-05-28",
+      "integrations": [
+        "OpenAI",
+        "Notion",
+        "Gmail"
+      ],
       "metric": "Получение готового текста блог-поста в ответе на webhook-запрос",
+      "node_count": 44,
       "promoted_from_watch": false,
       "repo_full_name": "traversaal-ai/agents-in-action: blog_post_agent_webhook",
       "scores": {
@@ -3064,15 +3712,18 @@
       ],
       "title": "traversaal-ai/agents-in-action: blog_post_agent_webhook",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/traversaal-ai/agents-in-action"
     },
     "https://github.com/traylorre/openclaw-mac": {
       "category": "devops_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Репозиторий openclaw-mac содержит 5 n8n-workflow для devops-автоматизации: запуск действий, мониторинг активности, обновление конфигураций, обработка ошибок и обнаружение RSS-фидов. Предназначен для команд, автоматизирующих рутинные операции в инфраструктуре.",
       "final_score": 6.8,
       "first_recommended": "2026-05-23",
       "metric": "Количество успешно выполненных action-runner прогонов без ошибок",
+      "node_count": 30,
       "promoted_from_watch": false,
       "repo_full_name": "traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery",
       "scores": {
@@ -3101,15 +3752,22 @@
       ],
       "title": "traylorre/openclaw-mac: action-runner, activity-query, config-update, error-handler, feed-discovery",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/traylorre/openclaw-mac"
     },
     "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow для автоматического ответа на вопросы покупателей через WhatsApp с использованием GPT-4o и базы знаний из PDF-документа. Предназначен для малого и среднего бизнеса, который хочет автоматизировать поддержку продаж без живого оператора.",
       "final_score": 7.3,
       "first_recommended": "2026-06-01",
+      "integrations": [
+        "WhatsApp",
+        "OpenAI"
+      ],
       "metric": "Процент вопросов, получивших автоматический ответ без эскалации",
+      "node_count": 27,
       "promoted_from_watch": false,
       "repo_full_name": "weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store",
       "scores": {
@@ -3134,15 +3792,21 @@
       ],
       "title": "weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base: WhatsApp AI Sales Agent using PDF Vector Store",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base"
     },
     "https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications": {
       "category": "devops_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "n8n workflow для автоматической проверки обновлений Gradle-зависимостей в Android/Java проектах и отправки уведомлений в Slack при наличии новых версий. Рассчитан на Android-разработчиков и DevOps-инженеров, которые хотят держать зависимости актуальными без ручного мониторинга.",
       "final_score": 5.9,
       "first_recommended": "2026-06-25",
+      "integrations": [
+        "Slack"
+      ],
       "metric": "Получено Slack-уведомление при наличии outdated зависимости",
+      "node_count": 15,
       "promoted_from_watch": false,
       "repo_full_name": "weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater",
       "scores": {
@@ -3167,15 +3831,21 @@
       ],
       "title": "weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications: Gradle Dependency Updater",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications"
     },
     "https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive": {
       "category": "video_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Workflow для автоматической генерации миниатюр из видеофайлов с помощью FFmpeg и сохранения результатов в Google Drive. Подходит для команд, работающих с большим объёмом видеоконтента и нуждающихся в автоматизации рутинных операций с файлами.",
       "final_score": 6.3,
       "first_recommended": "2026-06-11",
+      "integrations": [
+        "Google Drive"
+      ],
       "metric": "Время обработки 1 видеофайла; наличие thumbnail в Google Drive",
+      "node_count": 9,
       "promoted_from_watch": false,
       "repo_full_name": "weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive: main",
       "scores": {
@@ -3200,6 +3870,7 @@
       ],
       "title": "weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive: main",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive"
     },
     "https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive": {
@@ -3237,11 +3908,18 @@
     },
     "https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging": {
       "category": "devops_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n workflow для автоматического обнаружения неудачных попыток входа: при срабатывании создаёт задачу в Jira, отправляет алерт в Slack и логирует событие в Notion. Предназначен для DevOps и SecOps команд, которым нужна реактивная реакция на угрозы безопасности без ручного мониторинга.",
       "final_score": 6.1,
       "first_recommended": "2026-06-25",
+      "integrations": [
+        "Jira",
+        "Slack",
+        "Notion"
+      ],
       "metric": "Время от failed login до появления Jira ticket и Slack-уведомления",
+      "node_count": 20,
       "promoted_from_watch": false,
       "repo_full_name": "weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection",
       "scores": {
@@ -3266,6 +3944,7 @@
       ],
       "title": "weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging: Failed Login Detection",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Automated-failed-login-detection-with-Jira-tasks-Slack-alerts-Notion-logging"
     },
     "https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout": {
@@ -3336,11 +4015,18 @@
     },
     "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "n8n-workflow от Webline India: по данным сделки из Zoho CRM генерирует персонализированные рекомендации по контенту с помощью GPT-4o-mini и отправляет их через Gmail. Подходит sales-командам, которые хотят автоматизировать follow-up и подготовку материалов для сделок.",
       "final_score": 6.8,
       "first_recommended": "2026-05-19",
+      "integrations": [
+        "Zoho CRM",
+        "OpenAI",
+        "Gmail"
+      ],
       "metric": "Количество автоматически отправленных персонализированных писем за сессию / время экономии на ручной подготовке",
+      "node_count": 16,
       "promoted_from_watch": false,
       "repo_full_name": "weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: Personalized Deal Content via Zoho CRM + GPT-4o-mini + Gmail",
       "scores": {
@@ -3365,15 +4051,23 @@
       ],
       "title": "weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: Personalized Deal Content via Zoho CRM + GPT-4o-mini + Gmail",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
     },
     "https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping": {
       "category": "sales_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из 5 n8n-workflow для автоматизации продаж через WhatsApp и Instagram: голосовой бот, реалтайм-скрапинг, follow-up цепочки и исходящий охват через Instagram. Подходит для малого бизнеса и команд продаж, работающих в мессенджерах.",
       "final_score": 7.0,
       "first_recommended": "2026-06-12",
+      "integrations": [
+        "Airtable",
+        "OpenAI",
+        "WhatsApp"
+      ],
       "metric": "Время ответа на входящий WhatsApp-запрос, процент follow-up доставленных в срок",
+      "node_count": 80,
       "promoted_from_watch": false,
       "repo_full_name": "wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound",
       "scores": {
@@ -3402,15 +4096,24 @@
       ],
       "title": "wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping: WhatsApp Sales Bot + Follow-Up + Insta Outbound",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping"
     },
     "https://github.com/women-in-ai-ireland/march-2025-group-1": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор n8n-workflow для автоматической публикации контента в социальные сети: посты в Facebook и генерация коротких видео. Репозиторий создан в рамках учебной группы Women in AI Ireland и содержит несколько взаимосвязанных workflow для multi-channel posting.",
       "final_score": 6.5,
       "first_recommended": "2026-06-22",
+      "integrations": [
+        "OpenAI",
+        "Google Drive",
+        "OpenRouter",
+        "Gmail"
+      ],
       "metric": "Количество успешно опубликованных постов в Facebook за первую неделю",
+      "node_count": 48,
       "promoted_from_watch": false,
       "repo_full_name": "women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos",
       "scores": {
@@ -3436,15 +4139,22 @@
       ],
       "title": "women-in-ai-ireland/march-2025-group-1: facebook_post + short_videos",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/women-in-ai-ireland/march-2025-group-1"
     },
     "https://github.com/workfloows/workfloows-tutorials": {
       "category": "data_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Репозиторий содержит два n8n workflow: OCR-обработка счетов через Mindee API с сохранением в Notion, и трекер портфеля акций через Alpha Vantage. Предназначен для финансовых операций и бухгалтерии.",
       "final_score": 7.2,
       "first_recommended": "2026-05-28",
+      "integrations": [
+        "Mindee",
+        "Notion"
+      ],
       "metric": "Точность извлечения полей счёта (поставщик, сумма, дата) — целевой показатель >90%",
+      "node_count": 23,
       "promoted_from_watch": false,
       "repo_full_name": "workfloows/workfloows-tutorials: invoice-ocr-assistant-mindee",
       "scores": {
@@ -3470,15 +4180,21 @@
       ],
       "title": "workfloows/workfloows-tutorials: invoice-ocr-assistant-mindee",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/workfloows/workfloows-tutorials"
     },
     "https://github.com/wranngle/n8n": {
       "category": "sales_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Репозиторий содержит два связанных n8n-workflow для лид-пайплайна: intake принимает входящие лиды, enrichment обогащает их данными. Подходит для sales-команд, которым нужна автоматическая обработка новых лидов без ручного ввода.",
       "final_score": 6.6,
       "first_recommended": "2026-06-09",
+      "integrations": [
+        "Postgres"
+      ],
       "metric": "Количество лидов, прошедших обогащение без ошибок за первый день",
+      "node_count": 10,
       "promoted_from_watch": false,
       "repo_full_name": "wranngle/n8n: lead-enrichment-microservice + lead-intake-main",
       "scores": {
@@ -3504,15 +4220,23 @@
       ],
       "title": "wranngle/n8n: lead-enrichment-microservice + lead-intake-main",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/wranngle/n8n"
     },
     "https://github.com/yedoww/vibemarketingflow/blob/main/CompetitorAnalysis.json": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из трёх n8n-workflow для маркетингового анализа: мониторинг конкурентов, ежедневный поток задач и настройка базы знаний. Подойдёт маркетологам и аналитикам, ведущим регулярный competitive intelligence.",
       "final_score": 6.3,
       "first_recommended": "2026-06-30",
+      "integrations": [
+        "Perplexity Tool",
+        "OpenRouter",
+        "Airtable"
+      ],
       "metric": "Количество автоматически собранных данных о конкурентах в первую неделю",
+      "node_count": 33,
       "promoted_from_watch": false,
       "repo_full_name": "yedoww/vibemarketingflow",
       "scores": {
@@ -3537,15 +4261,24 @@
       ],
       "title": "yedoww/vibemarketingflow: CompetitorAnalysis",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/yedoww/vibemarketingflow/blob/main/CompetitorAnalysis.json"
     },
     "https://github.com/yedoww/vibemarketingflow/blob/main/DailyFlow.json": {
       "category": "marketing_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из трёх n8n-workflow для маркетингового анализа: мониторинг конкурентов, ежедневный поток задач и настройка базы знаний. Подойдёт маркетологам и аналитикам, ведущим регулярный competitive intelligence.",
       "final_score": 6.3,
       "first_recommended": "2026-06-30",
+      "integrations": [
+        "OpenRouter",
+        "Airtable",
+        "Perplexity Tool",
+        "HTTP Request Tool"
+      ],
       "metric": "Количество автоматически собранных данных о конкурентах в первую неделю",
+      "node_count": 166,
       "promoted_from_watch": false,
       "repo_full_name": "yedoww/vibemarketingflow",
       "scores": {
@@ -3570,15 +4303,24 @@
       ],
       "title": "yedoww/vibemarketingflow: DailyFlow",
       "tool": "n8n",
+      "trigger_type": "schedule",
       "url": "https://github.com/yedoww/vibemarketingflow/blob/main/DailyFlow.json"
     },
     "https://github.com/yedoww/vibemarketingflow/blob/main/KnowledgeSetting.json": {
       "category": "marketing_workflow",
+      "complexity": "medium",
       "confidence": "medium",
       "description": "Набор из трёх n8n-workflow для маркетингового анализа: мониторинг конкурентов, ежедневный поток задач и настройка базы знаний. Подойдёт маркетологам и аналитикам, ведущим регулярный competitive intelligence.",
       "final_score": 6.3,
       "first_recommended": "2026-06-30",
+      "integrations": [
+        "Airtable",
+        "Scrape Ninja",
+        "Perplexity Tool",
+        "OpenRouter"
+      ],
       "metric": "Количество автоматически собранных данных о конкурентах в первую неделю",
+      "node_count": 14,
       "promoted_from_watch": false,
       "repo_full_name": "yedoww/vibemarketingflow",
       "scores": {
@@ -3603,15 +4345,29 @@
       ],
       "title": "yedoww/vibemarketingflow: KnowledgeSetting",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/yedoww/vibemarketingflow/blob/main/KnowledgeSetting.json"
     },
     "https://github.com/yigitkonur/n8n-workflows-craft": {
       "category": "content_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Набор из 5 n8n-workflow для автоматизации работы с Craft CMS: генерация контента с ИИ, AI-ресёрч агент, управление встречами, транскрибация аудио и генерация брендовых изображений. Предназначен для команд, использующих Craft CMS и желающих подключить ИИ-инструменты к своему контент-пайплайну.",
       "final_score": 6.2,
       "first_recommended": "2026-06-11",
+      "integrations": [
+        "Craft Documents",
+        "Anthropic",
+        "OpenAI",
+        "Form",
+        "Execution Data",
+        "Google Gemini",
+        "Twilio",
+        "Google Drive",
+        "Craft Daily Notes"
+      ],
       "metric": "Успешное создание контент-записи в Craft CMS через AI-workflow",
+      "node_count": 185,
       "promoted_from_watch": false,
       "repo_full_name": "yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)",
       "scores": {
@@ -3640,15 +4396,23 @@
       ],
       "title": "yigitkonur/n8n-workflows-craft: craft-ai-assistant-gen (+ 4 wf)",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/yigitkonur/n8n-workflows-craft"
     },
     "https://github.com/zengfr/n8n-workflow-all-templates": {
       "category": "general_workflow",
+      "complexity": "complex",
       "confidence": "medium",
       "description": "Репозиторий содержит два n8n workflow: система продажи билетов с автогенерацией QR-кодов через Google Sheets и Gmail, а также AI-уведомления о релизах n8n через GPT-5-Mini. Подходит для организаторов событий и DevOps-команд.",
       "final_score": 6.5,
       "first_recommended": "2026-05-28",
+      "integrations": [
+        "Google Sheets",
+        "Gmail",
+        "OpenAI"
+      ],
       "metric": "Участник получает email с QR-кодом в течение 30 секунд после регистрации",
+      "node_count": 51,
       "promoted_from_watch": false,
       "repo_full_name": "zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)",
       "scores": {
@@ -3674,6 +4438,7 @@
       ],
       "title": "zengfr/n8n-workflow-all-templates: Event Ticketing Backend (Auto QR Tickets + Google Sheets + Gmail)",
       "tool": "n8n",
+      "trigger_type": "webhook",
       "url": "https://github.com/zengfr/n8n-workflow-all-templates"
     }
   }

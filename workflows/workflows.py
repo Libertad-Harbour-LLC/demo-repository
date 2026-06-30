@@ -31,8 +31,10 @@ from trendwatch import skill_db  # noqa: E402
 from trendwatch import state  # noqa: E402
 from trendwatch import telegram_client  # noqa: E402
 
+from workflows import catalog  # noqa: E402
 from workflows import config  # noqa: E402
 from workflows import normalizer  # noqa: E402
+from workflows import wf_enrich  # noqa: E402
 from workflows.prompts import SYSTEM_PROMPT as WORKFLOWS_SYSTEM_PROMPT  # noqa: E402
 from workflows.sources.make_github import fetch_make_github  # noqa: E402
 from workflows.sources.n8n_github import fetch_n8n_github  # noqa: E402
@@ -224,6 +226,44 @@ def _write_report(analysis: dict, date: str) -> str:
     with open(path, "w", encoding="utf-8") as f:
         f.write(md)
     return path
+
+
+def backfill_meta(only_missing: bool = False, push: bool = True) -> int:
+    """One-shot: enrich EVERY recommended workflow with the four catalog fields
+    (node_count / complexity / integrations / trigger_type) by fetching each
+    workflow's JSON, save recommended.json, then POST it to the catalog.
+
+    Used to retrofit entries created before the card-metadata feature and to let
+    an operator re-push after the schema change. No analyzer / Telegram.
+    """
+    recommended_db = skill_db.load_recommended(path=config.RECOMMENDED_PATH)
+    total = len((recommended_db.get("skills") or {}))
+    print(f"[workflows] backfilling card meta for {total} workflow(s)…")
+    try:
+        n = wf_enrich.enrich_db(
+            recommended_db,
+            wf_enrich.make_network_fetcher(
+                max_per_repo=getattr(config, "EXPLODE_MAX_WORKFLOWS_PER_REPO", 25),
+                max_bytes=getattr(config, "MAX_JSON_FETCH_BYTES", 200_000),
+            ),
+            only_missing=only_missing,
+        )
+    except Exception as exc:
+        print(f"[workflows] backfill enrichment failed: {exc}", file=sys.stderr)
+        return 1
+    print(f"[workflows] enriched {n}/{total} workflow(s)")
+    try:
+        skill_db.save_recommended(recommended_db, path=config.RECOMMENDED_PATH)
+    except Exception as exc:
+        print(f"[workflows] save failed: {exc}", file=sys.stderr)
+        return 1
+    if push:
+        result, err = catalog.push_recommended(recommended_db)
+        if err:
+            print(f"[workflows] catalog push skipped/failed: {err}", file=sys.stderr)
+        else:
+            print(f"[workflows] catalog push ok: {catalog.format_summary(result)}")
+    return 0
 
 
 def run(
@@ -451,6 +491,27 @@ def run(
             if url in rec_skills and isinstance(rec_skills[url], dict):
                 rec_skills[url]["tool"] = (it.get("tool") or "other").lower()
 
+        # Card metadata: fetch each newly-promoted workflow's JSON and write
+        # node_count / complexity / integrations / trigger_type so the catalog
+        # cards match the n8n-library chips. Bounded to the new URLs only.
+        if added_rec:
+            try:
+                n = wf_enrich.enrich_db(
+                    recommended_db,
+                    wf_enrich.make_network_fetcher(
+                        max_per_repo=getattr(
+                            config, "EXPLODE_MAX_WORKFLOWS_PER_REPO", 25
+                        ),
+                        max_bytes=getattr(config, "MAX_JSON_FETCH_BYTES", 200_000),
+                    ),
+                    urls=added_rec,
+                )
+                print(f"[workflows] enriched card meta for {n} workflow(s)",
+                      file=sys.stderr)
+            except Exception as exc:
+                print(f"[workflows] card-meta enrichment failed: {exc}",
+                      file=sys.stderr)
+
         to_remove = (graduate_urls & promoted_repo_urls) | {
             u for u in graduate_urls if u in recommended_db.get("skills", {})
         }
@@ -485,6 +546,18 @@ def run(
         )
     except Exception as exc:
         print(f"[workflows] index write failed: {exc}", file=sys.stderr)
+
+    # Push the whole recommended.json to the automation catalog (idempotent).
+    try:
+        result, err = catalog.push_recommended(recommended_db)
+        if err:
+            print(f"[workflows] catalog push skipped/failed: {err}",
+                  file=sys.stderr)
+        else:
+            print(f"[workflows] catalog push ok: {catalog.format_summary(result)}",
+                  file=sys.stderr)
+    except Exception as exc:
+        print(f"[workflows] catalog push crashed: {exc}", file=sys.stderr)
 
     try:
         report_path = _write_report(analysis, date)
@@ -530,7 +603,25 @@ def main() -> int:
         action="store_true",
         help="Bypass the once-per-day idempotency guard (for manual reruns).",
     )
+    parser.add_argument(
+        "--backfill-meta",
+        action="store_true",
+        help="Enrich every recommended workflow with card metadata "
+        "(node_count/complexity/integrations/trigger_type) + push. No analyzer.",
+    )
+    parser.add_argument(
+        "--only-missing",
+        action="store_true",
+        help="With --backfill-meta: only enrich entries lacking node_count.",
+    )
+    parser.add_argument(
+        "--no-push",
+        action="store_true",
+        help="With --backfill-meta: skip the catalog POST (compute + save only).",
+    )
     args = parser.parse_args()
+    if args.backfill_meta:
+        return backfill_meta(only_missing=args.only_missing, push=not args.no_push)
     return run(
         dry_run=args.dry_run, no_analyzer=args.no_analyzer, force=args.force
     )
