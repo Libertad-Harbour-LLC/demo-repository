@@ -204,6 +204,45 @@
       "trigger_type": "manual",
       "url": "https://github.com/AntraTripathi74/AI-SDR"
     },
+    "https://github.com/ArshhAnsari/n8n-whatsapp-posting-agent/blob/main/WA-Job-Posting-agent-template.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow-агент для автоматической публикации вакансий через WhatsApp. Подходит для HR-команд и рекрутинговых агентств, которые используют WhatsApp Business API для дистрибуции джоб-постингов.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Google Sheets",
+        "Google Gemini"
+      ],
+      "metric": "Число автоматически отправленных вакансий / время от создания вакансии до рассылки",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "ArshhAnsari/n8n-whatsapp-posting-agent",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "WA-Job-Posting-agent-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать WA-Job-Posting-agent-template.json",
+        "Импортировать в n8n",
+        "Настроить WhatsApp Business API credentials",
+        "Заполнить тестовую вакансию и запустить прогон"
+      ],
+      "title": "ArshhAnsari/n8n-whatsapp-posting-agent: WA-Job-Posting-agent-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/ArshhAnsari/n8n-whatsapp-posting-agent/blob/main/WA-Job-Posting-agent-template.json"
+    },
     "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud": {
       "category": "general_workflow",
       "complexity": "medium",
@@ -1174,6 +1213,300 @@
       "tool": "n8n",
       "trigger_type": "manual",
       "url": "https://github.com/Repello-AI/Agent-Wiz"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-api-health-check.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-api-health-check"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-api-health-check",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-api-health-check.json"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-cron-http.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-cron-http"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-cron-http",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-cron-http.json"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-form-to-google-sheets.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-form-to-google-sheets"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-form-to-google-sheets",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-form-to-google-sheets.json"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-lead-summary.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-lead-summary"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-lead-summary",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-lead-summary.json"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-rss-to-slack.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-rss-to-slack"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-rss-to-slack",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-rss-to-slack.json"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-transform-forward.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-transform-forward"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-transform-forward",
+      "tool": "n8n",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-transform-forward.json"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-webhook-slack.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-webhook-slack"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-webhook-slack",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-webhook-slack.json"
+    },
+    "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-weekly-report-email.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 готовых n8n-шаблонов для типичных задач автоматизации: мониторинг API, RSS→Slack, форма→Google Sheets, еженедельный email-отчёт, лид-сводка. Подходит как стартовый набор для тех, кто только осваивает n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно импортированных и запущенных шаблонов из 8",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Rumman90/n8n-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-weekly-report-email"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json)",
+        "Импортировать в n8n",
+        "Настроить нужные credentials (Google, Slack, SMTP)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "Rumman90/n8n-workflows: workflow-weekly-report-email",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-weekly-report-email.json"
     },
     "https://github.com/STGime/posta-n8n-workflows": {
       "category": "content_workflow",
@@ -3723,6 +4056,41 @@
       "trigger_type": "webhook",
       "url": "https://github.com/kingler/n8n_agent"
     },
+    "https://github.com/kkornas/n8n-ai-news-pipeline/blob/main/ai-news-pipeline.json": {
+      "category": "content_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического сбора, AI-обработки и публикации новостного контента. Судя по имени файла, объединяет RSS/API-источники, LLM-суммаризацию и выходной канал. Подходит для медиа-команд и контент-маркетологов.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-01",
+      "metric": "Количество обработанных статей в день / время от появления новости до публикации дайджеста",
+      "node_count": 52,
+      "promoted_from_watch": false,
+      "repo_full_name": "kkornas/n8n-ai-news-pipeline",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-news-pipeline"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-news-pipeline.json из репозитория",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить credentials для источников новостей (RSS или News API) и LLM (OpenAI/другой)",
+        "Запустить пробный прогон и проверить выходной формат"
+      ],
+      "title": "kkornas/n8n-ai-news-pipeline: ai-news-pipeline",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/kkornas/n8n-ai-news-pipeline/blob/main/ai-news-pipeline.json"
+    },
     "https://github.com/kossakovsky/n8n-install": {
       "category": "general_workflow",
       "complexity": "complex",
@@ -4012,6 +4380,44 @@
       "title": "mhmdmnsor292003-arch/free-ai-tools: AI Code Reviewer + Email Writer + LinkedIn Post Generator",
       "tool": "n8n",
       "url": "https://github.com/mhmdmnsor292003-arch/free-ai-tools"
+    },
+    "https://github.com/mrzasad/n8n-hl7-fhir-llm-guardrail/blob/main/n8n-hl7-fhir-llm-guardrail.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для обработки медицинских данных в формате HL7/FHIR с guardrail-проверкой через LLM. Предназначен для медицинских интеграционных команд, которые хотят добавить AI-валидацию при передаче клинических данных.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "OpenAI"
+      ],
+      "metric": "Процент некорректных/небезопасных FHIR-сообщений, пойманных guardrail",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "mrzasad/n8n-hl7-fhir-llm-guardrail",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n-hl7-fhir-llm-guardrail"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать n8n-hl7-fhir-llm-guardrail.json",
+        "Импортировать в n8n",
+        "Настроить LLM credentials (OpenAI или совместимый)",
+        "Отправить тестовое HL7/FHIR-сообщение через webhook и проверить guardrail-логику"
+      ],
+      "title": "mrzasad/n8n-hl7-fhir-llm-guardrail: n8n-hl7-fhir-llm-guardrail",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/mrzasad/n8n-hl7-fhir-llm-guardrail/blob/main/n8n-hl7-fhir-llm-guardrail.json"
     },
     "https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json": {
       "category": "general_workflow",
@@ -4714,6 +5120,957 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/splx-ai/agentic-radar"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/RAG_qdrant.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Ollama"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "RAG_qdrant"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: RAG_qdrant",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/RAG_qdrant.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/auditar_conexiones_ecmp.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "auditar_conexiones_ecmp"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: auditar_conexiones_ecmp",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/auditar_conexiones_ecmp.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/cambiar_prioridad_error_en_zabbix.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "cambiar_prioridad_error_en_zabbix"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: cambiar_prioridad_error_en_zabbix",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/cambiar_prioridad_error_en_zabbix.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/cerrar_error_en_zabbix.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "cerrar_error_en_zabbix"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: cerrar_error_en_zabbix",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/cerrar_error_en_zabbix.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/clientes_whats_soporte.json": {
+      "category": "devops_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Ollama",
+        "Data Table Tool",
+        "Reranker Cohere",
+        "Postgres",
+        "Postgres Tool",
+        "Evolution API",
+        "Telegram"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 28,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "clientes_whats_soporte"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: clientes_whats_soporte",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/clientes_whats_soporte.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/comentario_error_en_zabbix.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "comentario_error_en_zabbix"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: comentario_error_en_zabbix",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/comentario_error_en_zabbix.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/consultar_estado_bgp.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "consultar_estado_bgp"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: consultar_estado_bgp",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/consultar_estado_bgp.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/consultar_potencia_optica_ont.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "consultar_potencia_optica_ont"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: consultar_potencia_optica_ont",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/consultar_potencia_optica_ont.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/diagnosticar_recursos_router.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "diagnosticar_recursos_router"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: diagnosticar_recursos_router",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/diagnosticar_recursos_router.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/diagnostico_noc_automatizado.json": {
+      "category": "devops_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Ollama",
+        "Data Table Tool",
+        "Reranker Cohere",
+        "Postgres Tool",
+        "Postgres",
+        "Telegram"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 28,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "diagnostico_noc_automatizado"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: diagnostico_noc_automatizado",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/diagnostico_noc_automatizado.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/ejecucion_automatica.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Google Calendar"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ejecucion_automatica"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: ejecucion_automatica",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/ejecucion_automatica.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/leer_errores_en_zabbix.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "leer_errores_en_zabbix"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: leer_errores_en_zabbix",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/leer_errores_en_zabbix.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/leer_graylog.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "leer_graylog"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: leer_graylog",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/leer_graylog.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/liberar_sesion_pppoe.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "liberar_sesion_pppoe"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: liberar_sesion_pppoe",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/liberar_sesion_pppoe.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/limpiar_mac_caller_id.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "limpiar_mac_caller_id"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: limpiar_mac_caller_id",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/limpiar_mac_caller_id.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/netwatch.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "netwatch"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: netwatch",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/netwatch.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/noc_openwebui_complemento.json": {
+      "category": "devops_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Ollama",
+        "Data Table Tool",
+        "Reranker Cohere",
+        "Postgres",
+        "Postgres Tool",
+        "Data Table"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 29,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "noc_openwebui_complemento"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: noc_openwebui_complemento",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/noc_openwebui_complemento.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/noc_zabbix_ai_triage_agent.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Ollama",
+        "Hadidiz AI Tool",
+        "Data Table Tool",
+        "Reranker Cohere"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "noc_zabbix_ai_triage_agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: noc_zabbix_ai_triage_agent",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/noc_zabbix_ai_triage_agent.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/reiniciar_puerto_poe.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "reiniciar_puerto_poe"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: reiniciar_puerto_poe",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/reiniciar_puerto_poe.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/respaldo_automatico.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Data Table",
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "respaldo_automatico"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: respaldo_automatico",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/respaldo_automatico.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/revisar_sesion_pppoe.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "revisar_sesion_pppoe"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: revisar_sesion_pppoe",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/revisar_sesion_pppoe.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/verificar_agotamiento_cgnat.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "verificar_agotamiento_cgnat"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: verificar_agotamiento_cgnat",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/verificar_agotamiento_cgnat.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/verificar_balanceo_pcc.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Hadidiz AI"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "verificar_balanceo_pcc"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: verificar_balanceo_pcc",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/verificar_balanceo_pcc.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_graylog.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "wf_event_controller_graylog"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: wf_event_controller_graylog",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_graylog.json"
+    },
+    "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_zabbix.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflows для интернет-провайдеров (ISP): автоматизация мониторинга через Zabbix, проверка BGP-сессий, аудит ECMP-соединений, поддержка клиентов через WhatsApp и RAG-поиск по документации. Ориентирован на NOC-инженеров и команды поддержки ISP.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-01",
+      "integrations": [
+        "Postgres",
+        "OpenAI",
+        "Telegram"
+      ],
+      "metric": "Время реакции на алерт Zabbix / количество закрытых тикетов через автоматизацию",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "tecno-consultores/ISP-Copilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "wf_event_controller_zabbix"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json)",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Zabbix API, WhatsApp Business API, Qdrant",
+        "Запустить тестовый прогон с реальным или mock-событием"
+      ],
+      "title": "tecno-consultores/ISP-Copilot: wf_event_controller_zabbix",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_zabbix.json"
     },
     "https://github.com/theaiautomators/insights-lm-public": {
       "category": "content_workflow",

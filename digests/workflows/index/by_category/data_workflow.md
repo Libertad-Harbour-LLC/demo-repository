@@ -1,9 +1,10 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 13
+Total: 14
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-01 | [mrzasad/n8n-hl7-fhir-llm-guardrail: n8n-hl7-fhir-llm-guardrail](https://github.com/mrzasad/n8n-hl7-fhir-llm-guardrail/blob/main/n8n-hl7-fhir-llm-guardrail.json) | n8n-hl7-fhir-llm-guardrail |  | 6.2 | medium | Скачать n8n-hl7-fhir-llm-guardrail.json |
 | 2026-06-29 | [keila-moral/researchflow-ai: Arxiv_Monitor](https://github.com/keila-moral/researchflow-ai) | Arxiv_Monitor, Arxiv_Semantic_Search, Error_Handler |  | 5.8 | medium | Скачать Arxiv_Monitor.json |
 | 2026-06-14 | [Trojan3877/QUANT-LLM-ASSISTANT: stock_alert](https://github.com/Trojan3877/QUANT-LLM-ASSISTANT) | stock_alert |  | 5.3 | medium | Скачать JSON: https://raw.githubusercontent.com/Trojan3877/QUANT-LLM-ASSISTANT/main/workflows/stock_alert.json |
 | 2026-06-10 | [n8nKOR/n8n-shared-workflow: AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant](https://github.com/n8nKOR/n8n-shared-workflow) | 8tusZTTtcyaiznEG__AI_Powered_RAG_Chatbot_for_Your_Docs_+_Google_Drive_+_Gemini_+_Qdrant, Get Airtable data via AI and Obsidian Notes, 2585_workflow_2585, +2 more |  | 6.5 | medium | Скачать RAG Chatbot JSON по ссылке |

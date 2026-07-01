@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 17
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-01 | [kkornas/n8n-ai-news-pipeline: ai-news-pipeline](https://github.com/kkornas/n8n-ai-news-pipeline/blob/main/ai-news-pipeline.json) | ai-news-pipeline |  | 6.7 | medium | Скачать ai-news-pipeline.json из репозитория |
 | 2026-06-30 | [youerning/blog: novel-workflow](https://github.com/youerning/blog/blob/master/n8n/novel-workflow.json) | novel-workflow |  | 6.4 | high | Скачать novel-workflow.json по прямой ссылке |
 | 2026-06-29 | [AkuchiS/n8n-Templates: daily-rss-email-digest](https://github.com/AkuchiS/n8n-Templates) | daily-rss-email-digest, uptime-monitor-email-alert, webhook-input-validation-api, +1 more |  | 5.9 | medium | Скачать daily-rss-email-digest.json |
 | 2026-06-25 | [DINAKAR-S/N8N-Workflows: Social Media & Lead Gen Bundle](https://github.com/DINAKAR-S/N8N-Workflows) | 1 Automated Social Media Post Scheduler with Google Sheets Content Calendar, 10 AI support system using website data (RAG pipeline) (1), 11 Discover local business leads and run automated cold email sequences with Google Maps and Gmail (1), +2 more |  | 5.9 | medium | Скачать нужный JSON из репозитория (например, workflow #1 — Social Media Scheduler) |

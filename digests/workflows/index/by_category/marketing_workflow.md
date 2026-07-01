@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 13
+Total: 14
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-01 | [ArshhAnsari/n8n-whatsapp-posting-agent: WA-Job-Posting-agent-template](https://github.com/ArshhAnsari/n8n-whatsapp-posting-agent/blob/main/WA-Job-Posting-agent-template.json) | WA-Job-Posting-agent-template |  | 6.1 | medium | Скачать WA-Job-Posting-agent-template.json |
 | 2026-06-30 | [yedoww/vibemarketingflow: KnowledgeSetting](https://github.com/yedoww/vibemarketingflow/blob/main/KnowledgeSetting.json) | KnowledgeSetting |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |
 | 2026-06-30 | [yedoww/vibemarketingflow: DailyFlow](https://github.com/yedoww/vibemarketingflow/blob/main/DailyFlow.json) | DailyFlow |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |
 | 2026-06-30 | [yedoww/vibemarketingflow: CompetitorAnalysis](https://github.com/yedoww/vibemarketingflow/blob/main/CompetitorAnalysis.json) | CompetitorAnalysis |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |

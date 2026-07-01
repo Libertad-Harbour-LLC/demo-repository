@@ -1,9 +1,17 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 49
+Total: 57
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-weekly-report-email](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-weekly-report-email.json) | workflow-weekly-report-email |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-webhook-slack](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-webhook-slack.json) | workflow-webhook-slack |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-transform-forward](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-transform-forward.json) | workflow-transform-forward |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-rss-to-slack](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-rss-to-slack.json) | workflow-rss-to-slack |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-lead-summary](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-lead-summary.json) | workflow-lead-summary |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-form-to-google-sheets](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-form-to-google-sheets.json) | workflow-form-to-google-sheets |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-cron-http](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-cron-http.json) | workflow-cron-http |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
+| 2026-07-01 | [Rumman90/n8n-workflows: workflow-api-health-check](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-api-health-check.json) | workflow-api-health-check |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
 | 2026-06-30 | [muhammadzayed2003/AI-powered-classifier-for-Grants: AI powered classifier for Grants](https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json) | AI powered classifier for Grants |  | 6.7 | medium | Скачать JSON-файл 'AI powered classifier for Grants.json' |
 | 2026-06-30 | [kalouseskimon-dot/feature-request-pipeline: Features Logging](https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Features Logging.json) | Features Logging |  | 5.9 | medium | Скачать Feature Requests Prioritzer.json |
 | 2026-06-30 | [kalouseskimon-dot/feature-request-pipeline: Feature Requests Prioritzer](https://github.com/kalouseskimon-dot/feature-request-pipeline/blob/main/Feature Requests Prioritzer.json) | Feature Requests Prioritzer |  | 5.9 | medium | Скачать Feature Requests Prioritzer.json |
