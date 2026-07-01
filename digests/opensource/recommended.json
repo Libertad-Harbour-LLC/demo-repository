@@ -133,6 +133,35 @@
       "title": "FlowiseAI/Flowise",
       "url": "https://github.com/FlowiseAI/Flowise"
     },
+    "https://github.com/Mintplex-Labs/anything-llm": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "AnythingLLM — полноценный self-hosted AI workspace с поддержкой агентов, RAG, мультипользовательского режима и десятков LLM. Заменяет ChatGPT Teams и аналогичные платные workspace-решения; разворачивается одной Docker-командой, поддерживает ребрендинг и продажу как корпоративный AI-ассистент.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-01",
+      "metric": "Время до работающего корпоративного AI-ассистента с RAG < 1 час",
+      "promoted_from_watch": false,
+      "repo_full_name": "Mintplex-Labs/anything-llm",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 62385,
+      "test_steps": [
+        "docker pull mintplexlabs/anythingllm && docker run -d -p 3001:3001 mintplexlabs/anythingllm",
+        "Открыть http://localhost:3001 и пройти первоначальную настройку",
+        "Подключить LLM (Ollama локально или OpenAI API), загрузить документы",
+        "Создать workspace с агентом и протестировать RAG + tool use"
+      ],
+      "title": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm"
+    },
     "https://github.com/NickIBrody/arcade_ai": {
       "category": "apps_oss",
       "confidence": null,
@@ -253,6 +282,35 @@
       "test_steps": [],
       "title": "arelove/infinity-loop",
       "url": "https://github.com/arelove/infinity-loop"
+    },
+    "https://github.com/bytedance/deer-flow": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "Deer Flow от ByteDance — open-source SuperAgent harness для долгосрочных задач: исследование, написание кода, создание подкастов и отчётов. Является self-hosted альтернативой Deep Research от OpenAI/Google; разворачивается через Docker с web UI и API.",
+      "final_score": 7.4,
+      "first_recommended": "2026-07-01",
+      "metric": "Качество и полнота автоматически сгенерированного research-отчёта по заданной теме",
+      "promoted_from_watch": false,
+      "repo_full_name": "bytedance/deer-flow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 7,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 75721,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/bytedance/deer-flow",
+        "Настроить .env с API-ключами (OpenAI/Anthropic/Tavily для поиска)",
+        "Запустить: docker compose up -d",
+        "Открыть web UI и запустить тестовое deep research задание"
+      ],
+      "title": "bytedance/deer-flow",
+      "url": "https://github.com/bytedance/deer-flow"
     },
     "https://github.com/calesthio/OpenMontage": {
       "category": "video_oss",
@@ -415,6 +473,35 @@
       "test_steps": [],
       "title": "hexo-ai/sia",
       "url": "https://github.com/hexo-ai/sia"
+    },
+    "https://github.com/infiniflow/ragflow": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "RAGFlow — open-source RAG-движок с поддержкой агентных возможностей, лидирующий в своём классе по качеству обработки документов. Является self-hosted альтернативой таким сервисам, как Glean и Notion AI; разворачивается через Docker Compose и предоставляет API для интеграции в собственные продукты.",
+      "final_score": 8.3,
+      "first_recommended": "2026-07-01",
+      "metric": "Точность ответов на вопросы по загруженным документам vs. прямой вызов LLM",
+      "promoted_from_watch": false,
+      "repo_full_name": "infiniflow/ragflow",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 84039,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/infiniflow/ragflow",
+        "Запустить: docker compose up -d (требует ~16GB RAM рекомендовано)",
+        "Открыть http://localhost:80, загрузить документы в knowledge base",
+        "Создать AI-ассистента поверх загруженных документов и протестировать API"
+      ],
+      "title": "infiniflow/ragflow",
+      "url": "https://github.com/infiniflow/ragflow"
     },
     "https://github.com/langgenius/dify": {
       "category": "agents_oss",
@@ -590,6 +677,93 @@
       "title": "open-webui/open-webui",
       "url": "https://github.com/open-webui/open-webui"
     },
+    "https://github.com/paperclipai/paperclip": {
+      "category": "agents_oss",
+      "confidence": "medium",
+      "description": "Paperclip — open-source приложение для управления AI-агентами на рабочем месте, позиционируется как стандарт для enterprise agent management. Потенциально заменяет закрытые корпоративные AI-платформы; 72k звёзд, активный рост (+290 за 72h), но отсутствие топиков требует ручной проверки качества.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-01",
+      "metric": "Наличие работающего UI для создания и мониторинга агентов",
+      "promoted_from_watch": false,
+      "repo_full_name": "paperclipai/paperclip",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 5,
+        "novelty": 6,
+        "testability": 6,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 72407,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/paperclipai/paperclip",
+        "Проверить README на наличие инструкций по деплою (Docker/npm/installer)",
+        "Развернуть согласно инструкции и открыть web UI",
+        "Создать тестового агента и проверить базовый управленческий workflow"
+      ],
+      "title": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip"
+    },
+    "https://github.com/rustdesk/rustdesk": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "RustDesk — self-hosted альтернатива TeamViewer и AnyDesk для удалённого доступа к рабочему столу. Поддерживает все платформы (Windows, macOS, Linux, iOS, Android), разворачивается с собственным relay-сервером, позволяет создать коммерческий сервис удалённого доступа под своим брендом.",
+      "final_score": 8.1,
+      "first_recommended": "2026-07-01",
+      "metric": "Задержка подключения и стабильность при работе с собственным relay-сервером",
+      "promoted_from_watch": false,
+      "repo_full_name": "rustdesk/rustdesk",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 3,
+        "testability": 9,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 117437,
+      "test_steps": [
+        "Скачать Docker образ сервера: docker run --name hbbs -p 21115-21117:21115-21117 rustdesk/rustdesk-server",
+        "Установить клиент RustDesk на два устройства (из релизов GitHub)",
+        "Указать адрес своего relay-сервера в настройках клиента",
+        "Проверить удалённое подключение между двумя устройствами"
+      ],
+      "title": "rustdesk/rustdesk",
+      "url": "https://github.com/rustdesk/rustdesk"
+    },
+    "https://github.com/ruvnet/ruflo": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "Ruflo — meta-harness для развёртывания мультиагентных swarm-систем с поддержкой памяти, RAG и интеграцией популярных AI-кодинг инструментов (Claude Code, Codex, Hermes). Является self-hosted альтернативой корпоративным оркестраторам агентов; разворачивается через npm и предоставляет API для управления агент-флотами.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-01",
+      "metric": "Успешное выполнение multi-agent задачи с 3+ агентами и shared memory",
+      "promoted_from_watch": false,
+      "repo_full_name": "ruvnet/ruflo",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 6,
+        "testability": 7,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 62322,
+      "test_steps": [
+        "npm install -g ruflo (или клонировать репо)",
+        "Настроить config с API-ключами LLM и параметрами swarm",
+        "Запустить базовый multi-agent workflow: ruflo start",
+        "Проверить координацию агентов через встроенный dashboard"
+      ],
+      "title": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo"
+    },
     "https://github.com/seanZhang414/openadserver": {
       "category": "marketing_oss",
       "confidence": "medium",
@@ -618,6 +792,35 @@
       ],
       "title": "seanZhang414/openadserver",
       "url": "https://github.com/seanZhang414/openadserver"
+    },
+    "https://github.com/unslothai/unsloth": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Unsloth Studio — web UI для локального fine-tuning и запуска open-source моделей (Gemma, Qwen, DeepSeek, LLaMA). Заменяет платные сервисы fine-tuning вроде OpenAI fine-tuning API или Replicate; поддерживает self-hosted деплой через pip/conda и предоставляет UI для управления обучением.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-01",
+      "metric": "Скорость fine-tuning vs. стандартный HuggingFace Trainer на одном GPU",
+      "promoted_from_watch": false,
+      "repo_full_name": "unslothai/unsloth",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 7,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 67700,
+      "test_steps": [
+        "pip install unsloth (или через conda для GPU-среды)",
+        "Запустить Unsloth Studio: unsloth-studio (открывает web UI)",
+        "Выбрать базовую модель (например Llama-3.1-8B), загрузить датасет",
+        "Запустить fine-tuning и экспортировать модель в GGUF/HuggingFace формат"
+      ],
+      "title": "unslothai/unsloth",
+      "url": "https://github.com/unslothai/unsloth"
     }
   }
 }

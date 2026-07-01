@@ -1,130 +1,198 @@
 {
   "items": {
     "https://github.com/Anil-matcha/Open-AI-UGC": {
-      "added_date": "2026-06-29",
+      "added_date": "2026-07-01",
       "category": "video_oss",
-      "description": "Open-AI-UGC — open-source платформа для создания UGC-рекламы с AI, seed-репо от Anil-matcha. Позволяет self-host и перепродавать как UGC-рекламный сервис.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "description": "Open-AI-UGC — open-source платформа для создания UGC-рекламы с AI-аватарами. Seed-репозиторий, потенциально заменяет платные сервисы вроде HeyGen/Creatify для генерации рекламного видео-контента.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "Anil-matcha/Open-AI-UGC",
-      "signal_to_wait": "Данные о звёздах, подтверждение рабочего деплоя через Docker/CLI",
+      "signal_to_wait": "Подтверждение наличия Docker-деплоя и working demo; рост звёзд выше 500",
       "title": "Anil-matcha/Open-AI-UGC",
       "url": "https://github.com/Anil-matcha/Open-AI-UGC",
-      "why_interesting": "Seed-репо с высоким потенциалом бизнес-применения (UGC-реклама востребована), но данных по звёздам нет"
+      "why_interesting": "Seed-репо; UGC-реклама с AI-аватарами — горячий рынок, потенциал для ребрендинга и resell"
     },
     "https://github.com/Anil-matcha/Open-Generative-AI": {
-      "added_date": "2026-06-29",
+      "added_date": "2026-07-01",
       "category": "image_oss",
-      "description": "Open-Generative-AI — self-hosted студия генерации изображений и контента от того же автора, что Open-AI-UGC. Seed-репо с потенциалом ребрендинга.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "description": "Open-Generative-AI — seed-репозиторий для self-hosted студии генерации изображений и видео с AI. Потенциально заменяет Midjourney/DALL-E SaaS для ребрендинга и white-label использования.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "Anil-matcha/Open-Generative-AI",
-      "signal_to_wait": "Подтверждение рабочего деплоя, появление звёзд и документации",
+      "signal_to_wait": "Рост звёзд и подтверждение работающего деплоя; docker-compose или hosted demo",
       "title": "Anil-matcha/Open-Generative-AI",
       "url": "https://github.com/Anil-matcha/Open-Generative-AI",
-      "why_interesting": "Seed-репо, потенциал white-label генерации изображений, но нет данных о звёздах и деплое"
+      "why_interesting": "Seed-репо; генеративная AI студия из коробки — потенциал для SaaS white-label"
+    },
+    "https://github.com/Autom8AI/Open-Higgsfield-AI": {
+      "added_date": "2026-07-01",
+      "category": "video_oss",
+      "description": "Open-Higgsfield-AI — open-source альтернатива Higgsfield AI, платформы для создания персонализированного видео с AI. Seed-репозиторий, позволяет развернуть студию генерации видео self-hosted.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "Autom8AI/Open-Higgsfield-AI",
+      "signal_to_wait": "Подтверждение работающего видео-генератора и docker-деплоя; рост до 300+ звёзд",
+      "title": "Autom8AI/Open-Higgsfield-AI",
+      "url": "https://github.com/Autom8AI/Open-Higgsfield-AI",
+      "why_interesting": "Seed-репо; клон Higgsfield AI (известный viral-video сервис) — прямой путь к ребрендингу"
+    },
+    "https://github.com/Egonex-AI/Understand-Anything": {
+      "added_date": "2026-07-01",
+      "category": "agents_oss",
+      "description": "Understand-Anything — seed-репозиторий AI-платформы для понимания и анализа любого контента. Потенциально заменяет дорогие document intelligence SaaS для self-hosted семантического анализа.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "Egonex-AI/Understand-Anything",
+      "signal_to_wait": "Подтверждение деплоя, UI и реальных use-case; рост звёзд выше 200",
+      "title": "Egonex-AI/Understand-Anything",
+      "url": "https://github.com/Egonex-AI/Understand-Anything",
+      "why_interesting": "Seed-репо; document understanding из коробки — ценная ниша для enterprise AI"
+    },
+    "https://github.com/NickIBrody/arcade_ai": {
+      "added_date": "2026-07-01",
+      "category": "apps_oss",
+      "description": "Arcade AI — seed-репозиторий готового мобильного AI-приложения. Потенциально предоставляет готовую базу для создания и ребрендинга мобильного AI-продукта.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "NickIBrody/arcade_ai",
+      "signal_to_wait": "Подтверждение наличия мобильного приложения с деплоем; рост звёзд",
+      "title": "NickIBrody/arcade_ai",
+      "url": "https://github.com/NickIBrody/arcade_ai",
+      "why_interesting": "Seed-репо; готовое мобильное AI-приложение — быстрый путь к продукту для ребрендинга"
+    },
+    "https://github.com/arelove/infinity-loop": {
+      "added_date": "2026-07-01",
+      "category": "apps_oss",
+      "description": "Infinity-Loop — seed-репозиторий готового desktop-приложения. Описание и функциональность требуют уточнения.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "arelove/infinity-loop",
+      "signal_to_wait": "Подтверждение функциональности desktop-приложения и installer; рост звёзд",
+      "title": "arelove/infinity-loop",
+      "url": "https://github.com/arelove/infinity-loop",
+      "why_interesting": "Seed-репо; desktop-приложение с потенциалом для ребрендинга"
     },
     "https://github.com/calesthio/OpenMontage": {
-      "added_date": "2026-06-29",
+      "added_date": "2026-07-01",
       "category": "video_oss",
-      "description": "OpenMontage — open-source AI-видеопродакшн инструмент, упомянутый как seed-репо. Данных о звёздах и деплое из текущего набора данных нет.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "description": "OpenMontage — open-source платформа AI-видеопродакшена, seed-репозиторий. Потенциально заменяет коммерческие инструменты автоматизированного монтажа видео для шортсов и маркетинга.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "calesthio/OpenMontage",
-      "signal_to_wait": "Получение данных о репозитории: звёзды, README, способ деплоя",
+      "signal_to_wait": "Появление стабильного деплоя и working demo; документация по API",
       "title": "calesthio/OpenMontage",
       "url": "https://github.com/calesthio/OpenMontage",
-      "why_interesting": "Упомянут в seed-списке как образец, но нет данных для полноценной оценки"
+      "why_interesting": "Seed-репо; AI-видеомонтаж из коробки — востребованная ниша для white-label SaaS"
+    },
+    "https://github.com/duixcom/Duix-Avatar": {
+      "added_date": "2026-07-01",
+      "category": "avatars_oss",
+      "description": "Duix-Avatar — open-source платформа для AI-аватаров (talking-head), конкурент HeyGem.ai и HeyGen. Seed-репозиторий; позволяет развернуть self-hosted сервис генерации видео с говорящими аватарами.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
+      "metric_baseline": {
+        "cross_source_count": null,
+        "skills_count": null,
+        "stars": null
+      },
+      "repo_full_name": "duixcom/Duix-Avatar",
+      "signal_to_wait": "Подтверждение качества генерации и наличия docker-деплоя; рост звёзд выше 500",
+      "title": "duixcom/Duix-Avatar",
+      "url": "https://github.com/duixcom/Duix-Avatar",
+      "why_interesting": "Seed-репо; avatars/talking-head — растущая ниша для white-label сервисов"
     },
     "https://github.com/every-app/open-seo": {
-      "added_date": "2026-06-29",
+      "added_date": "2026-07-01",
       "category": "marketing_oss",
-      "description": "Open-SEO — open-source SEO-инструмент из seed-списка. Данных о текущих звёздах и методе деплоя из набора данных нет.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "description": "Open-SEO — seed-репозиторий open-source SEO-инструмента. Потенциально заменяет Ahrefs/Semrush/Surfer SEO для self-hosted SEO-анализа и оптимизации контента.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "every-app/open-seo",
-      "signal_to_wait": "Данные о звёздах, наличие Docker/CLI деплоя, подтверждённый функционал",
+      "signal_to_wait": "Подтверждение наличия web UI и деплоя; рост звёзд выше 300",
       "title": "every-app/open-seo",
       "url": "https://github.com/every-app/open-seo",
-      "why_interesting": "SEO-инструмент с потенциалом ребрендинга, но нет данных для оценки зрелости"
+      "why_interesting": "Seed-репо; self-hosted SEO SaaS — понятная ниша с высоким business_impact при наличии функциональности"
     },
     "https://github.com/mutonby/openshorts": {
-      "added_date": "2026-06-29",
+      "added_date": "2026-07-01",
       "category": "video_oss",
-      "description": "OpenShorts — self-hosted платформа для генерации AI-шортсов и UGC-видео с AI-актёрами, аналог Mango AI и Opus Clip. Включает генератор клипов, AI Shorts и YouTube Studio без вотермарок.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "description": "OpenShorts — seed-репозиторий платформы для автоматизированного создания коротких видео (shorts/reels). Потенциально заменяет InVideo/Pictory для faceless-видео и автоматической генерации шортсов.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
-        "cross_source_count": 1,
+        "cross_source_count": null,
         "skills_count": null,
-        "stars": 2492
+        "stars": null
       },
       "repo_full_name": "mutonby/openshorts",
-      "signal_to_wait": "Возобновление коммитов (последний — май 2026) и появление docker-compose с полным стеком",
+      "signal_to_wait": "Наличие working demo, docker-деплоя и подтверждённых пользователей; рост звёзд",
       "title": "mutonby/openshorts",
       "url": "https://github.com/mutonby/openshorts",
-      "why_interesting": "2.5k звёзд, свежая концепция UGC+Shorts платформы all-in-one, самостоятельный деплой"
+      "why_interesting": "Seed-репо; автоматизация шортсов — массовая ниша для white-label контент-сервисов"
     },
     "https://github.com/nesquena/hermes-webui": {
-      "added_date": "2026-06-29",
+      "added_date": "2026-07-01",
       "category": "agents_oss",
-      "description": "Hermes WebUI — web и мобильный интерфейс для Hermes Agent (Nous Research). Заменяет CLI-интерфейс агента — разворачивается как веб-приложение, подходит для white-label AI-ассистента.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "description": "Hermes WebUI — seed-репозиторий web-интерфейса для агентов на базе Hermes. Потенциально предоставляет готовый UI для взаимодействия с AI-агентами, конкурент open-webui.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
-        "cross_source_count": 1,
+        "cross_source_count": null,
         "skills_count": null,
-        "stars": 15176
+        "stars": null
       },
       "repo_full_name": "nesquena/hermes-webui",
-      "signal_to_wait": "Релиз стабильной v1.0 или появление Docker-образа с одношаговым деплоем",
+      "signal_to_wait": "Подтверждение работающего docker-деплоя и наличия UI; рост звёзд выше 200",
       "title": "nesquena/hermes-webui",
       "url": "https://github.com/nesquena/hermes-webui",
-      "why_interesting": "15k звёзд, актуальная экосистема Hermes Agent, простой деплой; стоит проверить зрелость API и качество мобильного UX"
-    },
-    "https://github.com/paperclipai/paperclip": {
-      "added_date": "2026-06-29",
-      "category": "agents_oss",
-      "description": "Paperclip — open-source приложение для управления AI-агентами на рабочем месте. 72k звёзд, активные обновления, но отсутствие топиков и описания затрудняет оценку готовности продукта.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
-      "metric_baseline": {
-        "cross_source_count": 1,
-        "skills_count": null,
-        "stars": 72107
-      },
-      "repo_full_name": "paperclipai/paperclip",
-      "signal_to_wait": "Появление документации по деплою и подтверждённых use-case от реальных пользователей",
-      "title": "paperclipai/paperclip",
-      "url": "https://github.com/paperclipai/paperclip",
-      "why_interesting": "72k звёзд и 13k форков при пустых топиках — подозрительно, нужна ручная проверка качества продукта"
+      "why_interesting": "Seed-репо; web UI для агентов — базовая потребность любого AI-продукта"
     },
     "https://github.com/pewdiepie-archdaemon/odysseus": {
       "added_date": "2026-06-29",
       "category": "apps_oss",
       "description": "Odysseus — self-hosted AI workspace без описания топиков. 79k звёзд при минимальном описании вызывают вопросы по реальности тракшна — нужна проверка.",
       "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": null,
@@ -137,21 +205,21 @@
       "why_interesting": "79k звёзд и активные обновления (29.06.2026), но полное отсутствие топиков и скудное описание — требует проверки содержимого"
     },
     "https://github.com/seanZhang414/openadserver": {
-      "added_date": "2026-06-29",
+      "added_date": "2026-07-01",
       "category": "marketing_oss",
-      "description": "OpenAdServer — self-hosted альтернатива Google Ad Manager с ML-предсказанием CTR на базе DeepFM (Python, FastAPI, PyTorch). Уникальная ниша рекламных технологий в open-source.",
-      "expires_at": "2026-07-29",
-      "last_checked": "2026-06-29",
+      "description": "OpenAdServer — seed-репозиторий open-source рекламного сервера. Потенциально заменяет коммерческие ad-server решения для self-hosted показа и ротации рекламы.",
+      "expires_at": "2026-07-31",
+      "last_checked": "2026-07-01",
       "metric_baseline": {
-        "cross_source_count": 1,
+        "cross_source_count": null,
         "skills_count": null,
-        "stars": 200
+        "stars": null
       },
       "repo_full_name": "seanZhang414/openadserver",
-      "signal_to_wait": "Рост до 1k+ звёзд или docker-compose с полным production-стеком и документацией",
+      "signal_to_wait": "Подтверждение работающего ad-serving функционала и деплоя; docker-compose",
       "title": "seanZhang414/openadserver",
       "url": "https://github.com/seanZhang414/openadserver",
-      "why_interesting": "Редкая ниша open-source ad-server с ML-CTR; 200 звёзд говорят о нишевости, но реальная потребность велика"
+      "why_interesting": "Seed-репо; open-source ad-server — редкая и ценная ниша с прямым monetization потенциалом"
     }
   }
 }

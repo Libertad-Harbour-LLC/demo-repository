@@ -1,6 +1,18 @@
 # Recommended Claude Skills — all time
 
-Total: 23
+Total: 30
+
+## July 2026
+
+| Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
+|---|---|---|---|---|---|---|
+| 2026-07-01 | [unslothai/unsloth](https://github.com/unslothai/unsloth) |  | 67700 | 7.5 | high | pip install unsloth (или через conda для GPU-среды) |
+| 2026-07-01 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) |  | 62322 | 6.8 | high | npm install -g ruflo (или клонировать репо) |
+| 2026-07-01 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) |  | 117437 | 8.1 | high | Скачать Docker образ сервера: docker run --name hbbs -p 21115-21117:21115-21117 rustdesk/rustdesk-server |
+| 2026-07-01 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) |  | 72407 | 6.5 | medium | Клонировать: git clone https://github.com/paperclipai/paperclip |
+| 2026-07-01 | [infiniflow/ragflow](https://github.com/infiniflow/ragflow) |  | 84039 | 8.3 | high | Клонировать: git clone https://github.com/infiniflow/ragflow |
+| 2026-07-01 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) |  | 75721 | 7.4 | high | Клонировать: git clone https://github.com/bytedance/deer-flow |
+| 2026-07-01 | [Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm) |  | 62385 | 7.9 | high | docker pull mintplexlabs/anythingllm && docker run -d -p 3001:3001 mintplexlabs/anythingllm |
 
 ## June 2026
 
