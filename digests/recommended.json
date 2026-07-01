@@ -1,5 +1,37 @@
 {
   "skills": {
+    "https://github.com/0xAxiom/AppFactory/tree/main/.claude/skills": {
+      "category": "video_skill",
+      "confidence": "medium",
+      "description": "Репозиторий AppFactory с 133 звёздами. Содержит 3 skills: для построения приложений через фабричный подход, интеграции с Remotion (программная видеогенерация на React), и настройки окружения.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-01",
+      "metric": "Корректность сгенерированных Remotion-компонентов; отсутствие ошибок API при рендере",
+      "promoted_from_watch": false,
+      "repo_full_name": "0xAxiom/AppFactory",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "appfactory-builder",
+        "remotion",
+        "setup"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/0xAxiom/AppFactory.git и скопировать .claude/skills/remotion/ в свой Remotion-проект",
+        "Запустить Claude Code: claude в корне Remotion-проекта",
+        "Дать промт: 'используй skill remotion, создай анимированную сцену с появляющимся текстом поверх видео длительностью 5 секунд'"
+      ],
+      "title": "0xAxiom/AppFactory",
+      "url": "https://github.com/0xAxiom/AppFactory/tree/main/.claude/skills"
+    },
     "https://github.com/199-biotechnologies/claude-deep-research-skill": {
       "added_manually": true,
       "category": "general_skill",
@@ -6487,6 +6519,40 @@
       "title": "obra/superpowers",
       "url": "https://github.com/obra/superpowers"
     },
+    "https://github.com/ohah/hwpjs/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий hwpjs — JavaScript-библиотека для работы с HWP/HWPX форматом (корейский аналог .docx от Hancom Office), 161 звезда. Содержит 5 skills со спецификациями формата и стандартными PR/release-процессами.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-01",
+      "metric": "Точность генерируемого кода по спецификации HWP; соответствие структур данных формату файла",
+      "promoted_from_watch": false,
+      "repo_full_name": "ohah/hwpjs",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "hwp-model-spec",
+        "hwp-spec",
+        "hwpx-spec",
+        "pr",
+        "release"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/ohah/hwpjs.git и скопировать .claude/skills/ в проект, где нужно работать с HWP-форматом",
+        "Запустить Claude Code: claude в корне проекта",
+        "Дать промт: 'используя skill hwp-spec, объясни структуру секции параграфов в HWP-формате и напиши функцию для её парсинга'"
+      ],
+      "title": "ohah/hwpjs",
+      "url": "https://github.com/ohah/hwpjs/tree/main/.claude/skills"
+    },
     "https://github.com/oliver-kriska/claude-elixir-phoenix/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -8235,6 +8301,59 @@
       ],
       "title": "viclafouch/mui-otp-input",
       "url": "https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills"
+    },
+    "https://github.com/videojs/v10/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий Video.js v10 — популярного open-source HTML5-видеоплеера (844 звезды). Содержит 24 Claude Skills, охватывающих весь цикл разработки: от написания компонентов и RFC до CSS-миграции на Tailwind и работы с ARIA-доступностью.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-01",
+      "metric": "Качество конвертации CSS→Tailwind; корректность code review по skill review-branch; успешность создания компонента через skill component",
+      "promoted_from_watch": false,
+      "repo_full_name": "videojs/v10",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 24,
+      "skills_in_repo": [
+        "api-reference",
+        "api",
+        "aria",
+        "claude-update",
+        "commit-pr",
+        "component",
+        "create-issue",
+        "create-skill",
+        "css-to-tailwind",
+        "design",
+        "docs",
+        "gh-issue",
+        "git",
+        "merge-behaviors",
+        "refactor-behavior",
+        "review-branch",
+        "rfc",
+        "spf-create-behavior",
+        "spf-document-feature",
+        "spf-document-use-case",
+        "spf-implement-feature",
+        "spf-implement-use-case",
+        "spf-update-behavior",
+        "split-behavior"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/videojs/v10.git и скопировать папку .claude/skills/ в свой проект с видеоплеером или JS-компонентами",
+        "Запустить Claude Code в своём проекте (claude в корне)",
+        "Протестировать skill css-to-tailwind командой: 'используй skill css-to-tailwind, чтобы конвертировать этот CSS-файл на Tailwind', затем review-branch для проверки последнего PR"
+      ],
+      "title": "videojs/v10",
+      "url": "https://github.com/videojs/v10/tree/main/.claude/skills"
     },
     "https://github.com/vinzenz/prd-breakdown-execute/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

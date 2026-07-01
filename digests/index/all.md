@@ -1,6 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 230
+Total: 233
+
+## July 2026
+
+| Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
+|---|---|---|---|---|---|---|
+| 2026-07-01 | [videojs/v10](https://github.com/videojs/v10/tree/main/.claude/skills) | api-reference, api, aria, +21 more |  | 7.9 | high | Клонировать репо: git clone https://github.com/videojs/v10.git и скопировать папку .claude/skills/ в свой проект с ви... |
+| 2026-07-01 | [ohah/hwpjs](https://github.com/ohah/hwpjs/tree/main/.claude/skills) | hwp-model-spec, hwp-spec, hwpx-spec, +2 more |  | 6.7 | medium | Клонировать репо: git clone https://github.com/ohah/hwpjs.git и скопировать .claude/skills/ в проект, где нужно работ... |
+| 2026-07-01 | [0xAxiom/AppFactory](https://github.com/0xAxiom/AppFactory/tree/main/.claude/skills) | appfactory-builder, remotion, setup |  | 6.5 | medium | Клонировать репо: git clone https://github.com/0xAxiom/AppFactory.git и скопировать .claude/skills/remotion/ в свой R... |
 
 ## June 2026
 
