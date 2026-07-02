@@ -1,11 +1,12 @@
 # Recommended Claude Skills — all time
 
-Total: 233
+Total: 234
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-02 | [pelikan-io/pelikan](https://github.com/pelikan-io/pelikan/tree/main/.claude/skills) | pr, release |  | 6.5 | medium | git clone https://github.com/pelikan-io/pelikan && cp -r .claude/skills/pr ~/.claude/skills/pelikan-pr && cp -r .clau... |
 | 2026-07-01 | [videojs/v10](https://github.com/videojs/v10/tree/main/.claude/skills) | api-reference, api, aria, +21 more |  | 7.9 | high | Клонировать репо: git clone https://github.com/videojs/v10.git и скопировать папку .claude/skills/ в свой проект с ви... |
 | 2026-07-01 | [ohah/hwpjs](https://github.com/ohah/hwpjs/tree/main/.claude/skills) | hwp-model-spec, hwp-spec, hwpx-spec, +2 more |  | 6.7 | medium | Клонировать репо: git clone https://github.com/ohah/hwpjs.git и скопировать .claude/skills/ в проект, где нужно работ... |
 | 2026-07-01 | [0xAxiom/AppFactory](https://github.com/0xAxiom/AppFactory/tree/main/.claude/skills) | appfactory-builder, remotion, setup |  | 6.5 | medium | Клонировать репо: git clone https://github.com/0xAxiom/AppFactory.git и скопировать .claude/skills/remotion/ в свой R... |

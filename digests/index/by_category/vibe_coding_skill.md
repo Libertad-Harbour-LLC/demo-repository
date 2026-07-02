@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 148
+Total: 149
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-02 | [pelikan-io/pelikan](https://github.com/pelikan-io/pelikan/tree/main/.claude/skills) | pr, release |  | 6.5 | medium | git clone https://github.com/pelikan-io/pelikan && cp -r .claude/skills/pr ~/.claude/skills/pelikan-pr && cp -r .clau... |
 | 2026-07-01 | [videojs/v10](https://github.com/videojs/v10/tree/main/.claude/skills) | api-reference, api, aria, +21 more |  | 7.9 | high | Клонировать репо: git clone https://github.com/videojs/v10.git и скопировать папку .claude/skills/ в свой проект с ви... |
 | 2026-07-01 | [ohah/hwpjs](https://github.com/ohah/hwpjs/tree/main/.claude/skills) | hwp-model-spec, hwp-spec, hwpx-spec, +2 more |  | 6.7 | medium | Клонировать репо: git clone https://github.com/ohah/hwpjs.git и скопировать .claude/skills/ в проект, где нужно работ... |
 | 2026-06-30 | [szymdzum/browser-debugger-cli](https://github.com/szymdzum/browser-debugger-cli/tree/main/.claude/skills) | bdg |  | 6.6 | medium | git clone https://github.com/szymdzum/browser-debugger-cli && cat .claude/skills/bdg/SKILL.md для понимания зависимостей |

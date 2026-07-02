@@ -6927,6 +6927,37 @@
       "title": "pedrohcgs/claude-code-my-workflow",
       "url": "https://github.com/pedrohcgs/claude-code-my-workflow/tree/main/.claude/skills"
     },
+    "https://github.com/pelikan-io/pelikan/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий pelikan — высокопроизводительный cache-сервер от Twitter/Meta-экосистемы. Содержит два verified skills: pr (помощь в подготовке pull request) и release (автоматизация релизного процесса). Полезен разработчикам, работающим с C/C++ или Rust системным кодом.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-02",
+      "metric": "Качество и скорость генерации PR-описания по сравнению с ручным написанием",
+      "promoted_from_watch": false,
+      "repo_full_name": "pelikan-io/pelikan",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "pr",
+        "release"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/pelikan-io/pelikan && cp -r .claude/skills/pr ~/.claude/skills/pelikan-pr && cp -r .claude/skills/release ~/.claude/skills/pelikan-release",
+        "Открыть Claude Code в своём репозитории с активным PR-процессом",
+        "Дать промт: 'Use the pr skill to review my current branch changes and suggest a PR description'"
+      ],
+      "title": "pelikan-io/pelikan",
+      "url": "https://github.com/pelikan-io/pelikan/tree/main/.claude/skills"
+    },
     "https://github.com/petenelson/wp-rest-api-log/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
