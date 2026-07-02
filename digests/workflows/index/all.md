@@ -1,11 +1,19 @@
 # Recommended Claude Skills — all time
 
-Total: 174
+Total: 182
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-02 | [weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template](https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks) | workflow-template |  | 6.1 | medium | Скачать workflow-template.json |
+| 2026-07-02 | [weblineindia/n8n-Recover-abandoned-WooCommerce-carts: workflow-template](https://github.com/weblineindia/n8n-Recover-abandoned-WooCommerce-carts-using-OpenAI-GPT-4.1-mini-Gmail-and-Slack) | workflow-template |  | 6.3 | medium | Скачать workflow-template.json |
+| 2026-07-02 | [prashant1507/n8n-youtube-ai-shorts-pipeline: video-pipeline-youtube](https://github.com/prashant1507/n8n-youtube-ai-shorts-pipeline/blob/main/n8n/video-pipeline-youtube.json) | video-pipeline-youtube |  | 6.4 | medium | Скачать video-pipeline-youtube.json |
+| 2026-07-02 | [codezer0x/GoogleMapAIagent: Gooogle map lead ai agent](https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json) | Gooogle map lead ai agent |  | 6.5 | medium | Скачать 'Google map ai agent.json' по прямой ссылке |
+| 2026-07-02 | [codezer0x/GoogleMapAIagent: Google map ai agent](https://github.com/codezer0x/GoogleMapAIagent/blob/main/Google map ai agent.json) | Google map ai agent |  | 6.5 | medium | Скачать 'Google map ai agent.json' по прямой ссылке |
+| 2026-07-02 | [akshayav316/FreelanceOS-AI-CRM: FreelanceOS_Followup_Manager](https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_Followup_Manager.json) | FreelanceOS_Followup_Manager |  | 6.5 | medium | Скачать FreelanceOS_AI_CRM.json по прямой ссылке |
+| 2026-07-02 | [akshayav316/FreelanceOS-AI-CRM: FreelanceOS_AI_CRM](https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_AI_CRM.json) | FreelanceOS_AI_CRM |  | 6.5 | medium | Скачать FreelanceOS_AI_CRM.json по прямой ссылке |
+| 2026-07-02 | [Anunai6966/linkedin-ai-commenting-bot: workflow](https://github.com/Anunai6966/linkedin-ai-commenting-bot/blob/main/workflow.json) | workflow |  | 5.6 | medium | Скачать workflow.json |
 | 2026-07-01 | [tecno-consultores/ISP-Copilot: wf_event_controller_zabbix](https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_zabbix.json) | wf_event_controller_zabbix |  | 7.3 | medium | Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json) |
 | 2026-07-01 | [tecno-consultores/ISP-Copilot: wf_event_controller_graylog](https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_graylog.json) | wf_event_controller_graylog |  | 7.3 | medium | Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json) |
 | 2026-07-01 | [tecno-consultores/ISP-Copilot: verificar_balanceo_pcc](https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/verificar_balanceo_pcc.json) | verificar_balanceo_pcc |  | 7.3 | medium | Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json) |

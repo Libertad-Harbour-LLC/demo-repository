@@ -1,9 +1,11 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 16
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-02 | [akshayav316/FreelanceOS-AI-CRM: FreelanceOS_Followup_Manager](https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_Followup_Manager.json) | FreelanceOS_Followup_Manager |  | 6.5 | medium | Скачать FreelanceOS_AI_CRM.json по прямой ссылке |
+| 2026-07-02 | [akshayav316/FreelanceOS-AI-CRM: FreelanceOS_AI_CRM](https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_AI_CRM.json) | FreelanceOS_AI_CRM |  | 6.5 | medium | Скачать FreelanceOS_AI_CRM.json по прямой ссылке |
 | 2026-06-29 | [Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main](https://github.com/Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail) | main |  | 6.5 | medium | Скачать main.json |
 | 2026-06-18 | [akahappygit/AI-Lead-Voice-Automation: Lead Scraper](https://github.com/akahappygit/AI-Lead-Voice-Automation) | Lead Scraper |  | 7.5 | medium | Скачать JSON по ссылке: https://raw.githubusercontent.com/akahappygit/AI-Lead-Voice-Automation/main/workflows/Lead Sc... |
 | 2026-06-16 | [gnueole/jobby-md2html: jobby-linkedin-2-notion](https://github.com/gnueole/jobby-md2html) | error-trigger-to-axiom-via-stdout, jobby-linkedin-2-notion, jobby-pdf-dyn, +2 more |  | 6.5 | medium | Скачать нужный JSON (например jobby-linkedin-2-notion): https://raw.githubusercontent.com/gnueole/jobby-md2html/main/... |

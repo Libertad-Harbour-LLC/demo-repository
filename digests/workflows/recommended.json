@@ -204,6 +204,47 @@
       "trigger_type": "manual",
       "url": "https://github.com/AntraTripathi74/AI-SDR"
     },
+    "https://github.com/Anunai6966/linkedin-ai-commenting-bot/blob/main/workflow.json": {
+      "category": "marketing_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической генерации и публикации AI-комментариев к постам в LinkedIn. Предназначен для повышения видимости профиля без ручного написания комментариев.",
+      "final_score": 5.6,
+      "first_recommended": "2026-07-02",
+      "integrations": [
+        "Airtable",
+        "Apify",
+        "Google Gemini"
+      ],
+      "metric": "Количество опубликованных AI-комментариев и прирост просмотров профиля",
+      "node_count": 19,
+      "promoted_from_watch": false,
+      "repo_full_name": "Anunai6966/linkedin-ai-commenting-bot",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow.json",
+        "Импортировать в n8n",
+        "Настроить LinkedIn API credentials или Phantombuster",
+        "Добавить OpenAI/другой AI API key",
+        "Запустить с тестовым поиском по ключевому слову"
+      ],
+      "title": "Anunai6966/linkedin-ai-commenting-bot: workflow",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Anunai6966/linkedin-ai-commenting-bot/blob/main/workflow.json"
+    },
     "https://github.com/ArshhAnsari/n8n-whatsapp-posting-agent/blob/main/WA-Job-Posting-agent-template.json": {
       "category": "marketing_workflow",
       "complexity": "medium",
@@ -2939,6 +2980,87 @@
       "trigger_type": "webhook",
       "url": "https://github.com/akahappygit/AI-Lead-Voice-Automation"
     },
+    "https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_AI_CRM.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Два n8n-workflow для фрилансеров: CRM для управления клиентами и автоматизированный менеджер follow-up напоминаний. Подходит для независимых консультантов и небольших агентств.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-02",
+      "integrations": [
+        "Gmail",
+        "OpenAI",
+        "Google Sheets"
+      ],
+      "metric": "Количество автоматически отправленных follow-up и созданных записей в CRM",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "akshayav316/FreelanceOS-AI-CRM",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "FreelanceOS_AI_CRM"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать FreelanceOS_AI_CRM.json по прямой ссылке",
+        "Импортировать JSON в n8n через меню Import Workflow",
+        "Скачать и импортировать FreelanceOS_Followup_Manager.json",
+        "Настроить credentials для используемых сервисов (просмотреть узлы на предмет требуемых API-ключей)",
+        "Запустить тестовый прогон с тестовым контактом"
+      ],
+      "title": "akshayav316/FreelanceOS-AI-CRM: FreelanceOS_AI_CRM",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_AI_CRM.json"
+    },
+    "https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_Followup_Manager.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Два n8n-workflow для фрилансеров: CRM для управления клиентами и автоматизированный менеджер follow-up напоминаний. Подходит для независимых консультантов и небольших агентств.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-02",
+      "integrations": [
+        "Google Sheets",
+        "Gmail"
+      ],
+      "metric": "Количество автоматически отправленных follow-up и созданных записей в CRM",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "akshayav316/FreelanceOS-AI-CRM",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "FreelanceOS_Followup_Manager"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать FreelanceOS_AI_CRM.json по прямой ссылке",
+        "Импортировать JSON в n8n через меню Import Workflow",
+        "Скачать и импортировать FreelanceOS_Followup_Manager.json",
+        "Настроить credentials для используемых сервисов (просмотреть узлы на предмет требуемых API-ключей)",
+        "Запустить тестовый прогон с тестовым контактом"
+      ],
+      "title": "akshayav316/FreelanceOS-AI-CRM: FreelanceOS_Followup_Manager",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_Followup_Manager.json"
+    },
     "https://github.com/alejandrosnz/srt-llm-translator": {
       "category": "video_workflow",
       "complexity": "complex",
@@ -3187,6 +3309,86 @@
       "tool": "make",
       "trigger_type": "schedule",
       "url": "https://github.com/ceyre-boop/email-automation"
+    },
+    "https://github.com/codezer0x/GoogleMapAIagent/blob/main/Google map ai agent.json": {
+      "category": "marketing_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Два n8n-workflow для автоматического извлечения лидов из Google Maps с помощью AI-агента. Позволяет собирать данные о бизнесах по категории и локации для последующей лидогенерации.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-02",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets",
+        "Perplexity"
+      ],
+      "metric": "Количество извлечённых лидов за один прогон",
+      "node_count": 18,
+      "promoted_from_watch": false,
+      "repo_full_name": "codezer0x/GoogleMapAIagent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Google map ai agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 'Google map ai agent.json' по прямой ссылке",
+        "Импортировать в n8n через Import Workflow",
+        "Добавить Google Maps API key в credentials",
+        "Указать тестовую категорию бизнеса и город",
+        "Запустить и проверить результат в выходных узлах"
+      ],
+      "title": "codezer0x/GoogleMapAIagent: Google map ai agent",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/codezer0x/GoogleMapAIagent/blob/main/Google map ai agent.json"
+    },
+    "https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Два n8n-workflow для автоматического извлечения лидов из Google Maps с помощью AI-агента. Позволяет собирать данные о бизнесах по категории и локации для последующей лидогенерации.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-02",
+      "integrations": [
+        "Google Sheets"
+      ],
+      "metric": "Количество извлечённых лидов за один прогон",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "codezer0x/GoogleMapAIagent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Gooogle map lead ai agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 'Google map ai agent.json' по прямой ссылке",
+        "Импортировать в n8n через Import Workflow",
+        "Добавить Google Maps API key в credentials",
+        "Указать тестовую категорию бизнеса и город",
+        "Запустить и проверить результат в выходных узлах"
+      ],
+      "title": "codezer0x/GoogleMapAIagent: Gooogle map lead ai agent",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json"
     },
     "https://github.com/datawhalechina/handy-n8n": {
       "category": "data_workflow",
@@ -4714,6 +4916,45 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/papikimono/n8n-Syncing-iOS-localization-gaps-with-Google-Sheets-and-GitHub-PR-placeholders"
+    },
+    "https://github.com/prashant1507/n8n-youtube-ai-shorts-pipeline/blob/main/n8n/video-pipeline-youtube.json": {
+      "category": "video_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматизированного создания и публикации YouTube Shorts с использованием AI. Охватывает полный цикл от генерации идеи до загрузки видео на канал.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-02",
+      "integrations": [
+        "YouTube"
+      ],
+      "metric": "Количество опубликованных Shorts в неделю без ручного вмешательства",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "prashant1507/n8n-youtube-ai-shorts-pipeline",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "video-pipeline-youtube"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать video-pipeline-youtube.json",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить YouTube API credentials (OAuth2)",
+        "Настроить AI-сервис (OpenAI/Gemini) для генерации контента",
+        "Запустить тестовый прогон с одной темой ролика"
+      ],
+      "title": "prashant1507/n8n-youtube-ai-shorts-pipeline: video-pipeline-youtube",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/prashant1507/n8n-youtube-ai-shorts-pipeline/blob/main/n8n/video-pipeline-youtube.json"
     },
     "https://github.com/ravindragith/zie619": {
       "category": "general_workflow",
@@ -6580,6 +6821,72 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
+    },
+    "https://github.com/weblineindia/n8n-Recover-abandoned-WooCommerce-carts-using-OpenAI-GPT-4.1-mini-Gmail-and-Slack": {
+      "category": "web_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического восстановления брошенных корзин в WooCommerce: GPT-4.1-mini генерирует персонализированное письмо, которое отправляется через Gmail, а уведомление дублируется в Slack.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-02",
+      "metric": "Recovery rate брошенных корзин (% вернувшихся покупателей)",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Recover-abandoned-WooCommerce-carts: workflow-template",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 4,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить WooCommerce REST API credentials",
+        "Добавить OpenAI API key и Gmail credentials",
+        "Создать тестовую брошенную корзину и запустить workflow"
+      ],
+      "title": "weblineindia/n8n-Recover-abandoned-WooCommerce-carts: workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Recover-abandoned-WooCommerce-carts-using-OpenAI-GPT-4.1-mini-Gmail-and-Slack"
+    },
+    "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической маршрутизации входящих писем из Gmail в Zendesk с фильтрацией спама и проверкой дубликатов. Подходит для команд поддержки, использующих Gmail как основной канал.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-02",
+      "metric": "Количество автоматически созданных тикетов без дублей за день",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Добавить Gmail OAuth2 credentials",
+        "Добавить Zendesk API token",
+        "Отправить тестовое письмо и проверить создание тикета"
+      ],
+      "title": "weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks"
     },
     "https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping": {
       "category": "sales_workflow",

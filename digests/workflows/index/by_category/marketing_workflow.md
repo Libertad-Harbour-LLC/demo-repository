@@ -1,9 +1,12 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 14
+Total: 17
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-02 | [codezer0x/GoogleMapAIagent: Gooogle map lead ai agent](https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json) | Gooogle map lead ai agent |  | 6.5 | medium | Скачать 'Google map ai agent.json' по прямой ссылке |
+| 2026-07-02 | [codezer0x/GoogleMapAIagent: Google map ai agent](https://github.com/codezer0x/GoogleMapAIagent/blob/main/Google map ai agent.json) | Google map ai agent |  | 6.5 | medium | Скачать 'Google map ai agent.json' по прямой ссылке |
+| 2026-07-02 | [Anunai6966/linkedin-ai-commenting-bot: workflow](https://github.com/Anunai6966/linkedin-ai-commenting-bot/blob/main/workflow.json) | workflow |  | 5.6 | medium | Скачать workflow.json |
 | 2026-07-01 | [ArshhAnsari/n8n-whatsapp-posting-agent: WA-Job-Posting-agent-template](https://github.com/ArshhAnsari/n8n-whatsapp-posting-agent/blob/main/WA-Job-Posting-agent-template.json) | WA-Job-Posting-agent-template |  | 6.1 | medium | Скачать WA-Job-Posting-agent-template.json |
 | 2026-06-30 | [yedoww/vibemarketingflow: KnowledgeSetting](https://github.com/yedoww/vibemarketingflow/blob/main/KnowledgeSetting.json) | KnowledgeSetting |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |
 | 2026-06-30 | [yedoww/vibemarketingflow: DailyFlow](https://github.com/yedoww/vibemarketingflow/blob/main/DailyFlow.json) | DailyFlow |  | 6.3 | medium | Скачать все три JSON-файла из репозитория |

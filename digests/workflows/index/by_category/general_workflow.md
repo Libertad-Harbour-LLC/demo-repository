@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 57
+Total: 58
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-02 | [weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template](https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks) | workflow-template |  | 6.1 | medium | Скачать workflow-template.json |
 | 2026-07-01 | [Rumman90/n8n-workflows: workflow-weekly-report-email](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-weekly-report-email.json) | workflow-weekly-report-email |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
 | 2026-07-01 | [Rumman90/n8n-workflows: workflow-webhook-slack](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-webhook-slack.json) | workflow-webhook-slack |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
 | 2026-07-01 | [Rumman90/n8n-workflows: workflow-transform-forward](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-transform-forward.json) | workflow-transform-forward |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |
