@@ -521,6 +521,40 @@
       "title": "DavidROliverBA/ArchitectKB",
       "url": "https://github.com/DavidROliverBA/ArchitectKB/tree/main/.claude/skills"
     },
+    "https://github.com/Dbxstudio/dbx-studio/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий Dbxstudio/dbx-studio содержит 5 skills для работы с данными в Claude Code: исследование данных, визуализация, SQL-запросы, AI-инструменты и системный промт. Ориентирован на аналитиков и data-инженеров.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-03",
+      "metric": "Качество и специфичность SQL/визуализационных ответов по сравнению с Claude Code без skills.",
+      "promoted_from_watch": false,
+      "repo_full_name": "Dbxstudio/dbx-studio",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "ai-tools",
+        "data-exploration",
+        "data-visualization",
+        "sql-queries",
+        "system-prompt"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/Dbxstudio/dbx-studio.git",
+        "Скопировать нужные skills (например sql-queries и data-visualization) в свой проект: cp -r dbx-studio/.claude/skills/sql-queries .claude/skills/ && cp -r dbx-studio/.claude/skills/data-visualization .claude/skills/",
+        "В Claude Code дать промт: 'Напиши SQL-запрос для агрегации продаж по месяцам и визуализируй результат' — и проверить, используются ли инструкции из skills."
+      ],
+      "title": "Dbxstudio/dbx-studio",
+      "url": "https://github.com/Dbxstudio/dbx-studio/tree/main/.claude/skills"
+    },
     "https://github.com/DenisSergeevitch/agents-best-practices": {
       "added_manually": true,
       "category": "vibe_coding_skill",
@@ -3189,6 +3223,39 @@
       "title": "beshuaxian/higgsfield-seedance2-jineng",
       "url": "https://github.com/beshuaxian/higgsfield-seedance2-jineng/tree/main/.claude/skills"
     },
+    "https://github.com/bidewio/better-openclaw/tree/main/.claude/skills": {
+      "category": "webdev_skill",
+      "confidence": "medium",
+      "description": "Репозиторий bidewio/better-openclaw предлагает 4 skill'а для веб-разработки с фокусом на Vercel и React: паттерны композиции, best practices для React и React Native, плюс общие web-design guidelines.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-03",
+      "metric": "Применяет ли Claude Code Vercel-специфичные паттерны (ISR, Edge functions, etc.) и React-best-practices из SKILL.md.",
+      "promoted_from_watch": false,
+      "repo_full_name": "bidewio/better-openclaw",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "vercel-composition-patterns",
+        "vercel-react-best-practices",
+        "vercel-react-native-skills",
+        "web-design-guidelines"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: git clone https://github.com/bidewio/better-openclaw.git",
+        "Скопировать skills в свой React/Vercel проект: cp -r better-openclaw/.claude/skills/vercel-react-best-practices .claude/skills/ && cp -r better-openclaw/.claude/skills/vercel-composition-patterns .claude/skills/",
+        "В Claude Code попросить: 'Создай компонент React для списка задач с учётом best practices для Vercel-деплоя' — сравнить вывод с/без skills."
+      ],
+      "title": "bidewio/better-openclaw",
+      "url": "https://github.com/bidewio/better-openclaw/tree/main/.claude/skills"
+    },
     "https://github.com/boundless-xyz/boundless/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -4851,6 +4918,36 @@
       ],
       "title": "hackermanishackerman/claude-skills-vault",
       "url": "https://github.com/hackermanishackerman/claude-skills-vault/tree/main/.claude/skills"
+    },
+    "https://github.com/halfwhey/claudraband/tree/master/.claude/skills/claudraband": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий halfwhey/claudraband содержит один skill с одноимённым названием для Claude Code. Судя по имени и количеству звёзд (283), это один из более популярных skill-репозиториев сегодняшней выборки.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-03",
+      "metric": "Корректно ли Claude Code подхватывает SKILL.md и меняет своё поведение согласно инструкциям внутри.",
+      "promoted_from_watch": false,
+      "repo_full_name": "halfwhey/claudraband",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 6,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "claudraband"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репозиторий: git clone https://github.com/halfwhey/claudraband.git",
+        "Скопировать папку .claude/skills/claudraband/ в корень своего проекта: cp -r claudraband/.claude/skills/claudraband .claude/skills/",
+        "Открыть Claude Code в своём проекте и ввести промт: 'Используй skill claudraband — что ты умеешь делать с ним?'"
+      ],
+      "title": "halfwhey/claudraband",
+      "url": "https://github.com/halfwhey/claudraband/tree/master/.claude/skills/claudraband"
     },
     "https://github.com/hashintel/hash/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

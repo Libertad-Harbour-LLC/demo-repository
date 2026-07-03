@@ -1,11 +1,14 @@
 # Recommended Claude Skills — all time
 
-Total: 234
+Total: 237
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-03 | [halfwhey/claudraband](https://github.com/halfwhey/claudraband/tree/master/.claude/skills/claudraband) | claudraband |  | 7.0 | high | Клонировать репозиторий: git clone https://github.com/halfwhey/claudraband.git |
+| 2026-07-03 | [bidewio/better-openclaw](https://github.com/bidewio/better-openclaw/tree/main/.claude/skills) | vercel-composition-patterns, vercel-react-best-practices, vercel-react-native-skills, +1 more |  | 6.7 | medium | Клонировать: git clone https://github.com/bidewio/better-openclaw.git |
+| 2026-07-03 | [Dbxstudio/dbx-studio](https://github.com/Dbxstudio/dbx-studio/tree/main/.claude/skills) | ai-tools, data-exploration, data-visualization, +2 more |  | 7.3 | medium | Клонировать: git clone https://github.com/Dbxstudio/dbx-studio.git |
 | 2026-07-02 | [pelikan-io/pelikan](https://github.com/pelikan-io/pelikan/tree/main/.claude/skills) | pr, release |  | 6.5 | medium | git clone https://github.com/pelikan-io/pelikan && cp -r .claude/skills/pr ~/.claude/skills/pelikan-pr && cp -r .clau... |
 | 2026-07-01 | [videojs/v10](https://github.com/videojs/v10/tree/main/.claude/skills) | api-reference, api, aria, +21 more |  | 7.9 | high | Клонировать репо: git clone https://github.com/videojs/v10.git и скопировать папку .claude/skills/ в свой проект с ви... |
 | 2026-07-01 | [ohah/hwpjs](https://github.com/ohah/hwpjs/tree/main/.claude/skills) | hwp-model-spec, hwp-spec, hwpx-spec, +2 more |  | 6.7 | medium | Клонировать репо: git clone https://github.com/ohah/hwpjs.git и скопировать .claude/skills/ в проект, где нужно работ... |

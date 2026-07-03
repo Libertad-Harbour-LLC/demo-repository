@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 49
+Total: 50
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-03 | [Dbxstudio/dbx-studio](https://github.com/Dbxstudio/dbx-studio/tree/main/.claude/skills) | ai-tools, data-exploration, data-visualization, +2 more |  | 7.3 | medium | Клонировать: git clone https://github.com/Dbxstudio/dbx-studio.git |
 | 2026-06-30 | [sliamh11/Deus](https://github.com/sliamh11/Deus/tree/main/.claude/skills) | add-asana, add-claude-context, add-discord, +17 more |  | 7.6 | medium | git clone https://github.com/sliamh11/Deus && cp -r Deus/.claude/skills/code-review <ваш-проект>/.claude/skills/ |
 | 2026-06-27 | [talmolab/sleap](https://github.com/talmolab/sleap/tree/develop/.claude/skills) | investigation, pr, qt-testing, +1 more |  | 6.5 | high | git clone https://github.com/talmolab/sleap -b develop && cp -r sleap/.claude/skills/investigation .claude/skills/ в ... |
 | 2026-06-27 | [heygen-com/heygen-cli](https://github.com/heygen-com/heygen-cli/tree/main/.claude/skills) | changelog-cli, e2e-cli-test |  | 7.0 | high | git clone https://github.com/heygen-com/heygen-cli && cp -r heygen-cli/.claude/skills/changelog-cli .claude/skills/ в... |
