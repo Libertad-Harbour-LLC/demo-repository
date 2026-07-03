@@ -549,6 +549,42 @@
       "trigger_type": "webhook",
       "url": "https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts"
     },
+    "https://github.com/Dimitrearaujo/n8n-whatsapp-lead-nurturing/blob/main/workflows/whatsapp-lead-nurturing.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического прогрева лидов через WhatsApp. Ориентирован на отделы продаж и маркетинг-команды, использующие WhatsApp как основной канал коммуникации с клиентами.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-03",
+      "metric": "Процент лидов, получивших автоматическое сообщение, и response rate",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "Dimitrearaujo/n8n-whatsapp-lead-nurturing",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "whatsapp-lead-nurturing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать whatsapp-lead-nurturing.json",
+        "Импортировать в n8n",
+        "Подключить WhatsApp Business API credential (или Evolution API / Baileys)",
+        "Настроить источник лидов (Google Sheets / CRM webhook)",
+        "Запустить тест с тестовым номером телефона"
+      ],
+      "title": "Dimitrearaujo/n8n-whatsapp-lead-nurturing: whatsapp-lead-nurturing",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Dimitrearaujo/n8n-whatsapp-lead-nurturing/blob/main/workflows/whatsapp-lead-nurturing.json"
+    },
     "https://github.com/DragonJAR/n8n-workflows-esp": {
       "category": "content_workflow",
       "complexity": "complex",
@@ -1848,6 +1884,88 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json"
+    },
+    "https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "high",
+      "description": "n8n workflow для преобразования вопросов на естественном языке в SQL-запросы с последующим выполнением против базы данных. Подходит разработчикам и аналитикам, которым нужен NL-интерфейс к реляционным данным без написания SQL вручную.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "DeepSeek",
+        "Postgres",
+        "Google Gemini"
+      ],
+      "metric": "Корректность сгенерированного SQL и успешность выполнения запроса",
+      "node_count": 25,
+      "promoted_from_watch": false,
+      "repo_full_name": "Wilsonoonn/n8n_nl2sql",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "nl2sql"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать nl2sql.json с https://raw.githubusercontent.com/Wilsonoonn/n8n_nl2sql/main/nl2sql.json",
+        "Импортировать в n8n через Import Workflow",
+        "Подключить credentials: LLM (OpenAI/Anthropic) и Database (Postgres/MySQL)",
+        "Задать тестовый вопрос через входной узел",
+        "Проверить сгенерированный SQL и результат выполнения"
+      ],
+      "title": "Wilsonoonn/n8n_nl2sql: nl2sql",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql.json"
+    },
+    "https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql_2.0.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "high",
+      "description": "n8n workflow для преобразования вопросов на естественном языке в SQL-запросы с последующим выполнением против базы данных. Подходит разработчикам и аналитикам, которым нужен NL-интерфейс к реляционным данным без написания SQL вручную.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "Postgres",
+        "OpenAI",
+        "DeepSeek"
+      ],
+      "metric": "Корректность сгенерированного SQL и успешность выполнения запроса",
+      "node_count": 40,
+      "promoted_from_watch": false,
+      "repo_full_name": "Wilsonoonn/n8n_nl2sql",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "nl2sql_2.0"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать nl2sql.json с https://raw.githubusercontent.com/Wilsonoonn/n8n_nl2sql/main/nl2sql.json",
+        "Импортировать в n8n через Import Workflow",
+        "Подключить credentials: LLM (OpenAI/Anthropic) и Database (Postgres/MySQL)",
+        "Задать тестовый вопрос через входной узел",
+        "Проверить сгенерированный SQL и результат выполнения"
+      ],
+      "title": "Wilsonoonn/n8n_nl2sql: nl2sql_2.0",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql_2.0.json"
     },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
@@ -3471,6 +3589,48 @@
       "trigger_type": "chat",
       "url": "https://github.com/djeknet/n8n-master-workflows"
     },
+    "https://github.com/doreen-akpede/email-classification-n8n/blob/main/Email Classification Workflow.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической классификации входящих писем по категориям с помощью AI. Подходит для команд поддержки, операций и всех, кто обрабатывает большой поток входящей почты.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "Gmail",
+        "Groq",
+        "Airtable",
+        "Slack"
+      ],
+      "metric": "Точность классификации (% писем, правильно отнесённых к категории)",
+      "node_count": 25,
+      "promoted_from_watch": false,
+      "repo_full_name": "doreen-akpede/email-classification-n8n",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Email Classification Workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 'Email Classification Workflow.json'",
+        "Импортировать в n8n",
+        "Подключить Gmail или IMAP credential",
+        "Настроить LLM credential для классификации",
+        "Запустить с тестовым письмом и проверить категорию"
+      ],
+      "title": "doreen-akpede/email-classification-n8n: Email Classification Workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/doreen-akpede/email-classification-n8n/blob/main/Email Classification Workflow.json"
+    },
     "https://github.com/duncan-buildroom/n8n-automations": {
       "category": "sales_workflow",
       "complexity": "medium",
@@ -3931,6 +4091,614 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/inthecyber-group/securityonion-n8n-workflows"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/ai-accounting-staff.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "HTTP Request Tool",
+        "OpenAI"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-accounting-staff"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: ai-accounting-staff",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/ai-accounting-staff.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/ai-news-whatsapp-channel.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "Rss Feed Read Tool",
+        "HTTP Request Tool",
+        "WAHA",
+        "OpenAI"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-news-whatsapp-channel"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: ai-news-whatsapp-channel",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/ai-news-whatsapp-channel.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/ai-wordpress-post-maker.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "WordPress"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-wordpress-post-maker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: ai-wordpress-post-maker",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/ai-wordpress-post-maker.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/biteship-ongkir-chatbot.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "HTTP Request Tool",
+        "Google Sheets Tool"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "biteship-ongkir-chatbot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: biteship-ongkir-chatbot",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/biteship-ongkir-chatbot.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/chatwoot-ai-agent.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "Chat Woot"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "chatwoot-ai-agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: chatwoot-ai-agent",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/chatwoot-ai-agent.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/google-sheets-to-data-tables-migration.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "Google Sheets",
+        "Data Table"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "google-sheets-to-data-tables-migration"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: google-sheets-to-data-tables-migration",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/google-sheets-to-data-tables-migration.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/hr-ai-agent.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "hr-ai-agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: hr-ai-agent",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/hr-ai-agent.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/scrap-mitra10-price.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "scrap-mitra10-price"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: scrap-mitra10-price",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/scrap-mitra10-price.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/shopping-ecommerce-chatbot.json": {
+      "category": "web_workflow",
+      "complexity": "complex",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "Waha",
+        "Data Table",
+        "OpenAI",
+        "Data Table Tool",
+        "HTTP Request Tool"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 43,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "shopping-ecommerce-chatbot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: shopping-ecommerce-chatbot",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/shopping-ecommerce-chatbot.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/simple-rag.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "Reranker Cohere"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "simple-rag"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: simple-rag",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/simple-rag.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/ssh-ai-agent.json": {
+      "category": "web_workflow",
+      "complexity": "complex",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "Telegram"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 48,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ssh-ai-agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: ssh-ai-agent",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/ssh-ai-agent.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/voice-ai-agent-maia-router.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "Guardrails"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "voice-ai-agent-maia-router"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: voice-ai-agent-maia-router",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/voice-ai-agent-maia-router.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/waha-convert-lid-hold-chat-data-table.json": {
+      "category": "web_workflow",
+      "complexity": "complex",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "Waha",
+        "Data Table",
+        "OpenAI",
+        "Data Table Tool"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 27,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "waha-convert-lid-hold-chat-data-table"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: waha-convert-lid-hold-chat-data-table",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/waha-convert-lid-hold-chat-data-table.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/whatsapp-ai-google-calendar.json": {
+      "category": "web_workflow",
+      "complexity": "medium",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "WhatsApp",
+        "OpenAI",
+        "Google Calendar Tool"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "whatsapp-ai-google-calendar"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: whatsapp-ai-google-calendar",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/whatsapp-ai-google-calendar.json"
+    },
+    "https://github.com/jipraks/n8n-templates/blob/main/whatsapp-waha-hold-chat.json": {
+      "category": "web_workflow",
+      "complexity": "complex",
+      "confidence": "high",
+      "description": "n8n workflow для автоматической генерации и публикации постов в WordPress с помощью AI. Предназначен для блогеров, контент-менеджеров и SEO-специалистов, которым нужно масштабировать производство текстового контента.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-03",
+      "integrations": [
+        "OpenAI",
+        "Waha"
+      ],
+      "metric": "Количество опубликованных постов в WordPress за цикл и их качество",
+      "node_count": 21,
+      "promoted_from_watch": false,
+      "repo_full_name": "jipraks/n8n-templates",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "whatsapp-waha-hold-chat"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-wordpress-post-maker.json",
+        "Импортировать в n8n",
+        "Настроить LLM credential (OpenAI или Anthropic)",
+        "Подключить WordPress credential (XML-RPC или REST API)",
+        "Запустить ручной тест с тестовой темой поста"
+      ],
+      "title": "jipraks/n8n-templates: whatsapp-waha-hold-chat",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/jipraks/n8n-templates/blob/main/whatsapp-waha-hold-chat.json"
     },
     "https://github.com/jreyesr/n8n-nodes-tesseractjs": {
       "category": "data_workflow",
@@ -6781,6 +7549,39 @@
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts"
     },
+    "https://github.com/weblineindia/n8n-Generate-a-daily-multi-asset-market-report-with-TwelveData-Groq-and-Google-Sheets": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической генерации ежедневного отчёта по мультиактивным рынкам с использованием TwelveData, Groq и Google Sheets. Ориентирован на трейдеров, финансовых аналитиков и инвестиционные команды.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-03",
+      "metric": "Наличие ежедневного отчёта в Google Sheets с аналитическим резюме",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Generate-a-daily-multi-asset-market-report: daily market report",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить TwelveData API key credential",
+        "Настроить Groq API key credential",
+        "Подключить Google Sheets и запустить тест"
+      ],
+      "title": "weblineindia/n8n-Generate-a-daily-multi-asset-market-report: daily market report",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Generate-a-daily-multi-asset-market-report-with-TwelveData-Groq-and-Google-Sheets"
+    },
     "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail": {
       "category": "sales_workflow",
       "complexity": "complex",
@@ -6887,6 +7688,39 @@
       "title": "weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks"
+    },
+    "https://github.com/weblineindia/n8n-Website-SEO-health-analytics-with-Google-Sheets-PDF-reports-Gmail-alerts": {
+      "category": "web_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического SEO-аудита сайта: собирает метрики, сохраняет в Google Sheets, генерирует PDF-отчёт и отправляет алерты на Gmail. Подходит для SEO-специалистов и веб-агентств, которым нужен регулярный мониторинг здоровья сайтов.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-03",
+      "metric": "Регулярность получения SEO-отчётов и полнота собранных метрик",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Website-SEO-health-analytics: SEO analytics + PDF reports",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Подключить Google Sheets и Gmail credentials",
+        "Указать URL сайта для аудита в входном узле",
+        "Запустить вручную и проверить Sheets + письмо"
+      ],
+      "title": "weblineindia/n8n-Website-SEO-health-analytics: SEO analytics + PDF reports",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Website-SEO-health-analytics-with-Google-Sheets-PDF-reports-Gmail-alerts"
     },
     "https://github.com/wolfie88/Whatsapp-chat-voice-Bot-with-Realtime-scraping": {
       "category": "sales_workflow",

@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 18
+Total: 19
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-03 | [Dimitrearaujo/n8n-whatsapp-lead-nurturing: whatsapp-lead-nurturing](https://github.com/Dimitrearaujo/n8n-whatsapp-lead-nurturing/blob/main/workflows/whatsapp-lead-nurturing.json) | whatsapp-lead-nurturing |  | 7.3 | medium | Скачать whatsapp-lead-nurturing.json |
 | 2026-07-02 | [akshayav316/FreelanceOS-AI-CRM: FreelanceOS_Followup_Manager](https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_Followup_Manager.json) | FreelanceOS_Followup_Manager |  | 6.5 | medium | Скачать FreelanceOS_AI_CRM.json по прямой ссылке |
 | 2026-07-02 | [akshayav316/FreelanceOS-AI-CRM: FreelanceOS_AI_CRM](https://github.com/akshayav316/FreelanceOS-AI-CRM/blob/main/FreelanceOS_AI_CRM.json) | FreelanceOS_AI_CRM |  | 6.5 | medium | Скачать FreelanceOS_AI_CRM.json по прямой ссылке |
 | 2026-06-29 | [Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail: main](https://github.com/Okaykar/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail) | main |  | 6.5 | medium | Скачать main.json |

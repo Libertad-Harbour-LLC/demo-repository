@@ -1,9 +1,12 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 14
+Total: 17
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-03 | [weblineindia/n8n-Generate-a-daily-multi-asset-market-report: daily market report](https://github.com/weblineindia/n8n-Generate-a-daily-multi-asset-market-report-with-TwelveData-Groq-and-Google-Sheets) | workflow-template |  | 6.8 | medium | Скачать workflow-template.json |
+| 2026-07-03 | [Wilsonoonn/n8n_nl2sql: nl2sql_2.0](https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql_2.0.json) | nl2sql_2.0 |  | 7.9 | high | Скачать nl2sql.json с https://raw.githubusercontent.com/Wilsonoonn/n8n_nl2sql/main/nl2sql.json |
+| 2026-07-03 | [Wilsonoonn/n8n_nl2sql: nl2sql](https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql.json) | nl2sql |  | 7.9 | high | Скачать nl2sql.json с https://raw.githubusercontent.com/Wilsonoonn/n8n_nl2sql/main/nl2sql.json |
 | 2026-07-01 | [mrzasad/n8n-hl7-fhir-llm-guardrail: n8n-hl7-fhir-llm-guardrail](https://github.com/mrzasad/n8n-hl7-fhir-llm-guardrail/blob/main/n8n-hl7-fhir-llm-guardrail.json) | n8n-hl7-fhir-llm-guardrail |  | 6.2 | medium | Скачать n8n-hl7-fhir-llm-guardrail.json |
 | 2026-06-29 | [keila-moral/researchflow-ai: Arxiv_Monitor](https://github.com/keila-moral/researchflow-ai) | Arxiv_Monitor, Arxiv_Semantic_Search, Error_Handler |  | 5.8 | medium | Скачать Arxiv_Monitor.json |
 | 2026-06-14 | [Trojan3877/QUANT-LLM-ASSISTANT: stock_alert](https://github.com/Trojan3877/QUANT-LLM-ASSISTANT) | stock_alert |  | 5.3 | medium | Скачать JSON: https://raw.githubusercontent.com/Trojan3877/QUANT-LLM-ASSISTANT/main/workflows/stock_alert.json |
