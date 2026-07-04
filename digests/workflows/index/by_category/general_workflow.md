@@ -1,9 +1,21 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 59
+Total: 71
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.application_logger](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.application_logger.json) | job.application_logger |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.6_fsm_mutator](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.6_fsm_mutator.json) | job.6_fsm_mutator |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.5_fsm_decision_engine](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.5_fsm_decision_engine.json) | job.5_fsm_decision_engine |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.3_email_application_linker](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.3_email_application_linker.json) | job.3_email_application_linker |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.2_email_classifier](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.2_email_classifier.json) | job.2_email_classifier |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.1_email_ingestion_pipeline](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.1_email_ingestion_pipeline.json) | job.1_email_ingestion_pipeline |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [Moamen-Elsharkawy/ai-restaurant-automation: restaurant-chat](https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/restaurant-chat.json) | restaurant-chat |  | 6.4 | medium | Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний |
+| 2026-07-04 | [Moamen-Elsharkawy/ai-restaurant-automation: order-status-updates](https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/order-status-updates.json) | order-status-updates |  | 6.4 | medium | Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний |
+| 2026-07-04 | [Moamen-Elsharkawy/ai-restaurant-automation: kb-ingestion](https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/kb-ingestion.json) | kb-ingestion |  | 6.4 | medium | Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний |
+| 2026-07-04 | [Frumane/n8n-workflows: lead-intake-scoring](https://github.com/Frumane/n8n-workflows/blob/master/workflows/lead-intake-scoring.json) | lead-intake-scoring |  | 6.5 | medium | Скачать ai-email-triage.json с GitHub |
+| 2026-07-04 | [Frumane/n8n-workflows: error-alert-handler](https://github.com/Frumane/n8n-workflows/blob/master/workflows/error-alert-handler.json) | error-alert-handler |  | 6.5 | medium | Скачать ai-email-triage.json с GitHub |
+| 2026-07-04 | [Frumane/n8n-workflows: ai-email-triage](https://github.com/Frumane/n8n-workflows/blob/master/workflows/ai-email-triage.json) | ai-email-triage |  | 6.5 | medium | Скачать ai-email-triage.json с GitHub |
 | 2026-07-03 | [doreen-akpede/email-classification-n8n: Email Classification Workflow](https://github.com/doreen-akpede/email-classification-n8n/blob/main/Email Classification Workflow.json) | Email Classification Workflow |  | 6.7 | medium | Скачать 'Email Classification Workflow.json' |
 | 2026-07-02 | [weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template](https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks) | workflow-template |  | 6.1 | medium | Скачать workflow-template.json |
 | 2026-07-01 | [Rumman90/n8n-workflows: workflow-weekly-report-email](https://github.com/Rumman90/n8n-workflows/blob/main/workflows/workflow-weekly-report-email.json) | workflow-weekly-report-email |  | 6.2 | medium | Скачать любой из 8 JSON-файлов (начать с workflow-api-health-check.json) |

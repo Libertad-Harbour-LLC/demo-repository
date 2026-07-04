@@ -1,11 +1,26 @@
 # Recommended Claude Skills — all time
 
-Total: 203
+Total: 218
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-04 | [weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM: workflow-template](https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini) | workflow-template |  | 6.1 | medium | Скачать workflow-template.json |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.application_logger](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.application_logger.json) | job.application_logger |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.6_fsm_mutator](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.6_fsm_mutator.json) | job.6_fsm_mutator |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.5_fsm_decision_engine](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.5_fsm_decision_engine.json) | job.5_fsm_decision_engine |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.3_email_application_linker](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.3_email_application_linker.json) | job.3_email_application_linker |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.2_email_classifier](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.2_email_classifier.json) | job.2_email_classifier |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.1_email_ingestion_pipeline](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.1_email_ingestion_pipeline.json) | job.1_email_ingestion_pipeline |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
+| 2026-07-04 | [PedroTomazeti/wordpress-auto-post-openai: WORDPRESS_AUTO_POST_OPENAI_V3](https://github.com/PedroTomazeti/wordpress-auto-post-openai/blob/main/WORDPRESS_AUTO_POST_OPENAI_V3.json) | WORDPRESS_AUTO_POST_OPENAI_V3 |  | 5.6 | medium | Скачать WORDPRESS_AUTO_POST_OPENAI_V3.json |
+| 2026-07-04 | [Moamen-Elsharkawy/ai-restaurant-automation: restaurant-chat](https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/restaurant-chat.json) | restaurant-chat |  | 6.4 | medium | Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний |
+| 2026-07-04 | [Moamen-Elsharkawy/ai-restaurant-automation: order-status-updates](https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/order-status-updates.json) | order-status-updates |  | 6.4 | medium | Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний |
+| 2026-07-04 | [Moamen-Elsharkawy/ai-restaurant-automation: kb-ingestion](https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/kb-ingestion.json) | kb-ingestion |  | 6.4 | medium | Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний |
+| 2026-07-04 | [Moamen-Elsharkawy/ai-real-estate-lead-qualifier: lead-qualification](https://github.com/Moamen-Elsharkawy/ai-real-estate-lead-qualifier/blob/main/lead-qualification.json) | lead-qualification |  | 6.4 | medium | Скачать lead-qualification.json |
+| 2026-07-04 | [Frumane/n8n-workflows: lead-intake-scoring](https://github.com/Frumane/n8n-workflows/blob/master/workflows/lead-intake-scoring.json) | lead-intake-scoring |  | 6.5 | medium | Скачать ai-email-triage.json с GitHub |
+| 2026-07-04 | [Frumane/n8n-workflows: error-alert-handler](https://github.com/Frumane/n8n-workflows/blob/master/workflows/error-alert-handler.json) | error-alert-handler |  | 6.5 | medium | Скачать ai-email-triage.json с GitHub |
+| 2026-07-04 | [Frumane/n8n-workflows: ai-email-triage](https://github.com/Frumane/n8n-workflows/blob/master/workflows/ai-email-triage.json) | ai-email-triage |  | 6.5 | medium | Скачать ai-email-triage.json с GitHub |
 | 2026-07-03 | [weblineindia/n8n-Website-SEO-health-analytics: SEO analytics + PDF reports](https://github.com/weblineindia/n8n-Website-SEO-health-analytics-with-Google-Sheets-PDF-reports-Gmail-alerts) | workflow-template |  | 7.0 | medium | Скачать workflow-template.json |
 | 2026-07-03 | [weblineindia/n8n-Generate-a-daily-multi-asset-market-report: daily market report](https://github.com/weblineindia/n8n-Generate-a-daily-multi-asset-market-report-with-TwelveData-Groq-and-Google-Sheets) | workflow-template |  | 6.8 | medium | Скачать workflow-template.json |
 | 2026-07-03 | [jipraks/n8n-templates: whatsapp-waha-hold-chat](https://github.com/jipraks/n8n-templates/blob/main/whatsapp-waha-hold-chat.json) | whatsapp-waha-hold-chat |  | 7.8 | high | Скачать ai-wordpress-post-maker.json |

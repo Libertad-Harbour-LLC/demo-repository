@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 18
+Total: 19
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-04 | [PedroTomazeti/wordpress-auto-post-openai: WORDPRESS_AUTO_POST_OPENAI_V3](https://github.com/PedroTomazeti/wordpress-auto-post-openai/blob/main/WORDPRESS_AUTO_POST_OPENAI_V3.json) | WORDPRESS_AUTO_POST_OPENAI_V3 |  | 5.6 | medium | Скачать WORDPRESS_AUTO_POST_OPENAI_V3.json |
 | 2026-07-01 | [kkornas/n8n-ai-news-pipeline: ai-news-pipeline](https://github.com/kkornas/n8n-ai-news-pipeline/blob/main/ai-news-pipeline.json) | ai-news-pipeline |  | 6.7 | medium | Скачать ai-news-pipeline.json из репозитория |
 | 2026-06-30 | [youerning/blog: novel-workflow](https://github.com/youerning/blog/blob/master/n8n/novel-workflow.json) | novel-workflow |  | 6.4 | high | Скачать novel-workflow.json по прямой ссылке |
 | 2026-06-29 | [AkuchiS/n8n-Templates: daily-rss-email-digest](https://github.com/AkuchiS/n8n-Templates) | daily-rss-email-digest, uptime-monitor-email-alert, webhook-input-validation-api, +1 more |  | 5.9 | medium | Скачать daily-rss-email-digest.json |

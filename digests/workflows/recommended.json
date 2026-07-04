@@ -824,6 +824,125 @@
       "trigger_type": "webhook",
       "url": "https://github.com/FabricioLR/Financial"
     },
+    "https://github.com/Frumane/n8n-workflows/blob/master/workflows/ai-email-triage.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 готовых n8n-workflow: AI-триаж входящей почты, обработчик ошибок и скоринг входящих лидов. Полезен для малого бизнеса или команд поддержки, желающих автоматизировать первичную обработку запросов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Telegram",
+        "Google Sheets"
+      ],
+      "metric": "Доля писем, корректно отсортированных по приоритету без ручного вмешательства",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "Frumane/n8n-workflows",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-email-triage"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-email-triage.json с GitHub",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить email credentials и AI-провайдера в настройках нод",
+        "Отправить тестовое письмо на отслеживаемый ящик",
+        "Проверить результат триажа в выходных данных workflow"
+      ],
+      "title": "Frumane/n8n-workflows: ai-email-triage",
+      "tool": "n8n",
+      "trigger_type": "email",
+      "url": "https://github.com/Frumane/n8n-workflows/blob/master/workflows/ai-email-triage.json"
+    },
+    "https://github.com/Frumane/n8n-workflows/blob/master/workflows/error-alert-handler.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 готовых n8n-workflow: AI-триаж входящей почты, обработчик ошибок и скоринг входящих лидов. Полезен для малого бизнеса или команд поддержки, желающих автоматизировать первичную обработку запросов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Доля писем, корректно отсортированных по приоритету без ручного вмешательства",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Frumane/n8n-workflows",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "error-alert-handler"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-email-triage.json с GitHub",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить email credentials и AI-провайдера в настройках нод",
+        "Отправить тестовое письмо на отслеживаемый ящик",
+        "Проверить результат триажа в выходных данных workflow"
+      ],
+      "title": "Frumane/n8n-workflows: error-alert-handler",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Frumane/n8n-workflows/blob/master/workflows/error-alert-handler.json"
+    },
+    "https://github.com/Frumane/n8n-workflows/blob/master/workflows/lead-intake-scoring.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 готовых n8n-workflow: AI-триаж входящей почты, обработчик ошибок и скоринг входящих лидов. Полезен для малого бизнеса или команд поддержки, желающих автоматизировать первичную обработку запросов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Google Sheets",
+        "Telegram"
+      ],
+      "metric": "Доля писем, корректно отсортированных по приоритету без ручного вмешательства",
+      "node_count": 16,
+      "promoted_from_watch": false,
+      "repo_full_name": "Frumane/n8n-workflows",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "lead-intake-scoring"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-email-triage.json с GitHub",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить email credentials и AI-провайдера в настройках нод",
+        "Отправить тестовое письмо на отслеживаемый ящик",
+        "Проверить результат триажа в выходных данных workflow"
+      ],
+      "title": "Frumane/n8n-workflows: lead-intake-scoring",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Frumane/n8n-workflows/blob/master/workflows/lead-intake-scoring.json"
+    },
     "https://github.com/JeffersonMFti/agente-dra-julia-advocacia": {
       "category": "general_workflow",
       "complexity": "complex",
@@ -1017,6 +1136,170 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/MinaSaad1/n8n-data-analyst-agent"
+    },
+    "https://github.com/Moamen-Elsharkawy/ai-real-estate-lead-qualifier/blob/main/lead-qualification.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической квалификации входящих лидов в сфере недвижимости с использованием AI. Позволяет риелторам и агентствам моментально оценивать потенциальных клиентов и приоритизировать работу с ними.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Telegram",
+        "OpenRouter",
+        "Google Sheets Tool"
+      ],
+      "metric": "Точность классификации лидов: доля корректно квалифицированных (горячий/тёплый/холодный)",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "Moamen-Elsharkawy/ai-real-estate-lead-qualifier",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "lead-qualification"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать lead-qualification.json",
+        "Импортировать в n8n",
+        "Настроить webhook-триггер для приёма данных лида",
+        "Указать AI API key в настройках AI-нода",
+        "Отправить тестовый лид через webhook и проверить скоринг"
+      ],
+      "title": "Moamen-Elsharkawy/ai-real-estate-lead-qualifier: lead-qualification",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Moamen-Elsharkawy/ai-real-estate-lead-qualifier/blob/main/lead-qualification.json"
+    },
+    "https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/kb-ingestion.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Три n8n-workflow для автоматизации ресторана: чат-агент для общения с гостями, обновление статусов заказов и загрузка базы знаний. Ориентирован на владельцев ресторанов и доставки еды, которые хотят подключить AI-ассистента.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Google Drive",
+        "OpenAI"
+      ],
+      "metric": "Процент вопросов гостей, на которые AI ответил корректно без эскалации",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "Moamen-Elsharkawy/ai-restaurant-automation",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "kb-ingestion"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний",
+        "Импортировать restaurant-chat.json",
+        "Импортировать order-status-updates.json",
+        "Настроить AI credentials и vector store (Pinecone/Supabase/Weaviate)",
+        "Отправить тестовый запрос в чат и проверить ответ"
+      ],
+      "title": "Moamen-Elsharkawy/ai-restaurant-automation: kb-ingestion",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/kb-ingestion.json"
+    },
+    "https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/order-status-updates.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Три n8n-workflow для автоматизации ресторана: чат-агент для общения с гостями, обновление статусов заказов и загрузка базы знаний. Ориентирован на владельцев ресторанов и доставки еды, которые хотят подключить AI-ассистента.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Google Sheets",
+        "Telegram"
+      ],
+      "metric": "Процент вопросов гостей, на которые AI ответил корректно без эскалации",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Moamen-Elsharkawy/ai-restaurant-automation",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "order-status-updates"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний",
+        "Импортировать restaurant-chat.json",
+        "Импортировать order-status-updates.json",
+        "Настроить AI credentials и vector store (Pinecone/Supabase/Weaviate)",
+        "Отправить тестовый запрос в чат и проверить ответ"
+      ],
+      "title": "Moamen-Elsharkawy/ai-restaurant-automation: order-status-updates",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/order-status-updates.json"
+    },
+    "https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/restaurant-chat.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Три n8n-workflow для автоматизации ресторана: чат-агент для общения с гостями, обновление статусов заказов и загрузка базы знаний. Ориентирован на владельцев ресторанов и доставки еды, которые хотят подключить AI-ассистента.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Telegram",
+        "OpenRouter",
+        "Google Sheets Tool",
+        "OpenAI",
+        "Telegram Tool"
+      ],
+      "metric": "Процент вопросов гостей, на которые AI ответил корректно без эскалации",
+      "node_count": 19,
+      "promoted_from_watch": false,
+      "repo_full_name": "Moamen-Elsharkawy/ai-restaurant-automation",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "restaurant-chat"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать kb-ingestion.json и импортировать первым для загрузки базы знаний",
+        "Импортировать restaurant-chat.json",
+        "Импортировать order-status-updates.json",
+        "Настроить AI credentials и vector store (Pinecone/Supabase/Weaviate)",
+        "Отправить тестовый запрос в чат и проверить ответ"
+      ],
+      "title": "Moamen-Elsharkawy/ai-restaurant-automation: restaurant-chat",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Moamen-Elsharkawy/ai-restaurant-automation/blob/main/restaurant-chat.json"
     },
     "https://github.com/MohElshamy1994/n8n-course-Projetcs": {
       "category": "general_workflow",
@@ -1218,6 +1501,47 @@
       "title": "Peaghan/n8n-ai-calendar-agent-webhook: Calendar Agent - Webhook",
       "tool": "n8n",
       "url": "https://github.com/Peaghan/n8n-ai-calendar-agent-webhook"
+    },
+    "https://github.com/PedroTomazeti/wordpress-auto-post-openai/blob/main/WORDPRESS_AUTO_POST_OPENAI_V3.json": {
+      "category": "content_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической генерации и публикации постов в WordPress с помощью OpenAI. V3 в названии указывает на зрелость решения. Полезен для контент-маркетологов и владельцев блогов.",
+      "final_score": 5.6,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Google Sheets",
+        "WordPress",
+        "OpenAI"
+      ],
+      "metric": "Количество автоматически опубликованных статей в неделю",
+      "node_count": 36,
+      "promoted_from_watch": false,
+      "repo_full_name": "PedroTomazeti/wordpress-auto-post-openai",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "WORDPRESS_AUTO_POST_OPENAI_V3"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать WORDPRESS_AUTO_POST_OPENAI_V3.json",
+        "Импортировать в n8n",
+        "Настроить WordPress credentials (Application Password)",
+        "Указать OpenAI API key",
+        "Запустить тестовый прогон с тестовой темой статьи"
+      ],
+      "title": "PedroTomazeti/wordpress-auto-post-openai: WORDPRESS_AUTO_POST_OPENAI_V3",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/PedroTomazeti/wordpress-auto-post-openai/blob/main/WORDPRESS_AUTO_POST_OPENAI_V3.json"
     },
     "https://github.com/Phonezaw901/n8n-Validate-mobile-app-deep-links-in-GitHub-PRs-with-automated-testing": {
       "category": "devops_workflow",
@@ -3507,6 +3831,240 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json"
+    },
+    "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.1_email_ingestion_pipeline.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 6 связанных n8n-workflow для автоматической обработки email-откликов на вакансии: приём писем, классификация, привязка к заявкам, конечный автомат решений и логирование. Подойдёт HR-специалистам и рекрутерам, которые получают большой поток входящих писем.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Postgres"
+      ],
+      "metric": "Количество корректно классифицированных email-откликов за день",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "job.1_email_ingestion_pipeline"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 6 JSON из папки workflows/",
+        "Импортировать в n8n в порядке нумерации (job.1 → job.6)",
+        "Настроить email credentials (IMAP/SMTP) в job.1",
+        "Настроить AI credentials (OpenAI или совместимый) в job.2",
+        "Запустить тестовый прогон с тестовым email-откликом"
+      ],
+      "title": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.1_email_ingestion_pipeline",
+      "tool": "n8n",
+      "trigger_type": "email",
+      "url": "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.1_email_ingestion_pipeline.json"
+    },
+    "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.2_email_classifier.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 6 связанных n8n-workflow для автоматической обработки email-откликов на вакансии: приём писем, классификация, привязка к заявкам, конечный автомат решений и логирование. Подойдёт HR-специалистам и рекрутерам, которые получают большой поток входящих писем.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Postgres"
+      ],
+      "metric": "Количество корректно классифицированных email-откликов за день",
+      "node_count": 18,
+      "promoted_from_watch": false,
+      "repo_full_name": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "job.2_email_classifier"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 6 JSON из папки workflows/",
+        "Импортировать в n8n в порядке нумерации (job.1 → job.6)",
+        "Настроить email credentials (IMAP/SMTP) в job.1",
+        "Настроить AI credentials (OpenAI или совместимый) в job.2",
+        "Запустить тестовый прогон с тестовым email-откликом"
+      ],
+      "title": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.2_email_classifier",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.2_email_classifier.json"
+    },
+    "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.3_email_application_linker.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 6 связанных n8n-workflow для автоматической обработки email-откликов на вакансии: приём писем, классификация, привязка к заявкам, конечный автомат решений и логирование. Подойдёт HR-специалистам и рекрутерам, которые получают большой поток входящих писем.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Postgres"
+      ],
+      "metric": "Количество корректно классифицированных email-откликов за день",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "job.3_email_application_linker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 6 JSON из папки workflows/",
+        "Импортировать в n8n в порядке нумерации (job.1 → job.6)",
+        "Настроить email credentials (IMAP/SMTP) в job.1",
+        "Настроить AI credentials (OpenAI или совместимый) в job.2",
+        "Запустить тестовый прогон с тестовым email-откликом"
+      ],
+      "title": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.3_email_application_linker",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.3_email_application_linker.json"
+    },
+    "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.5_fsm_decision_engine.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 6 связанных n8n-workflow для автоматической обработки email-откликов на вакансии: приём писем, классификация, привязка к заявкам, конечный автомат решений и логирование. Подойдёт HR-специалистам и рекрутерам, которые получают большой поток входящих писем.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Postgres"
+      ],
+      "metric": "Количество корректно классифицированных email-откликов за день",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "job.5_fsm_decision_engine"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 6 JSON из папки workflows/",
+        "Импортировать в n8n в порядке нумерации (job.1 → job.6)",
+        "Настроить email credentials (IMAP/SMTP) в job.1",
+        "Настроить AI credentials (OpenAI или совместимый) в job.2",
+        "Запустить тестовый прогон с тестовым email-откликом"
+      ],
+      "title": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.5_fsm_decision_engine",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.5_fsm_decision_engine.json"
+    },
+    "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.6_fsm_mutator.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 6 связанных n8n-workflow для автоматической обработки email-откликов на вакансии: приём писем, классификация, привязка к заявкам, конечный автомат решений и логирование. Подойдёт HR-специалистам и рекрутерам, которые получают большой поток входящих писем.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Postgres"
+      ],
+      "metric": "Количество корректно классифицированных email-откликов за день",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "job.6_fsm_mutator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 6 JSON из папки workflows/",
+        "Импортировать в n8n в порядке нумерации (job.1 → job.6)",
+        "Настроить email credentials (IMAP/SMTP) в job.1",
+        "Настроить AI credentials (OpenAI или совместимый) в job.2",
+        "Запустить тестовый прогон с тестовым email-откликом"
+      ],
+      "title": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.6_fsm_mutator",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.6_fsm_mutator.json"
+    },
+    "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.application_logger.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 6 связанных n8n-workflow для автоматической обработки email-откликов на вакансии: приём писем, классификация, привязка к заявкам, конечный автомат решений и логирование. Подойдёт HR-специалистам и рекрутерам, которые получают большой поток входящих писем.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-04",
+      "integrations": [
+        "Postgres"
+      ],
+      "metric": "Количество корректно классифицированных email-откликов за день",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "job.application_logger"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 6 JSON из папки workflows/",
+        "Импортировать в n8n в порядке нумерации (job.1 → job.6)",
+        "Настроить email credentials (IMAP/SMTP) в job.1",
+        "Настроить AI credentials (OpenAI или совместимый) в job.2",
+        "Запустить тестовый прогон с тестовым email-откликом"
+      ],
+      "title": "daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.application_logger",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.application_logger.json"
     },
     "https://github.com/datawhalechina/handy-n8n": {
       "category": "data_workflow",
@@ -7688,6 +8246,39 @@
       "title": "weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks"
+    },
+    "https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n-workflow от weblineindia для отправки AI-персонализированных follow-up сообщений по сделкам из Zoho CRM через email, Slack и WhatsApp с использованием Google Gemini. Подходит для sales-команд на Zoho CRM.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-04",
+      "metric": "Процент сделок, по которым отправлен follow-up в течение 24 часов",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM: workflow-template",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Zoho CRM credentials (OAuth2)",
+        "Указать Google Gemini API key",
+        "Настроить Slack OAuth и WhatsApp Business API credentials"
+      ],
+      "title": "weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM: workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini"
     },
     "https://github.com/weblineindia/n8n-Website-SEO-health-analytics-with-Google-Sheets-PDF-reports-Gmail-alerts": {
       "category": "web_workflow",
