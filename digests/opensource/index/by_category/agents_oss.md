@@ -1,9 +1,10 @@
 # Recommended Claude Skills — agents_oss
 
-Total: 9
+Total: 10
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-04 | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) |  | 79368 | 7.8 | high | docker pull ghcr.io/all-hands-ai/openhands:main |
 | 2026-07-01 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) |  | 62322 | 6.8 | high | npm install -g ruflo (или клонировать репо) |
 | 2026-07-01 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) |  | 72407 | 6.5 | medium | Клонировать: git clone https://github.com/paperclipai/paperclip |
 | 2026-07-01 | [infiniflow/ragflow](https://github.com/infiniflow/ragflow) |  | 84039 | 8.3 | high | Клонировать: git clone https://github.com/infiniflow/ragflow |

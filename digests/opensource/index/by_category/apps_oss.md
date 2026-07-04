@@ -1,9 +1,10 @@
 # Recommended Claude Skills — apps_oss
 
-Total: 8
+Total: 9
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-04 | [immich-app/immich](https://github.com/immich-app/immich) |  | 105367 | 7.9 | high | wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml |
 | 2026-07-01 | [unslothai/unsloth](https://github.com/unslothai/unsloth) |  | 67700 | 7.5 | high | pip install unsloth (или через conda для GPU-среды) |
 | 2026-07-01 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) |  | 117437 | 8.1 | high | Скачать Docker образ сервера: docker run --name hbbs -p 21115-21117:21115-21117 rustdesk/rustdesk-server |
 | 2026-06-29 | [open-webui/open-webui](https://github.com/open-webui/open-webui) |  | 143435 | 8.5 | high | docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-w... |

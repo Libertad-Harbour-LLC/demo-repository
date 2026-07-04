@@ -133,6 +133,35 @@
       "title": "FlowiseAI/Flowise",
       "url": "https://github.com/FlowiseAI/Flowise"
     },
+    "https://github.com/Graphify-Labs/graphify": {
+      "category": "data_oss",
+      "confidence": "medium",
+      "description": "Graphify — инструмент для AI-агентов (Claude Code, Codex, Cursor и др.), превращающий кодовую базу, SQL-схемы и документы в queryable knowledge graph. Новый (is_new=true), 77k звёзд с момента появления — один из самых быстрорастущих репо периода.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-04",
+      "metric": "Качество построенного графа, полезность для AI-агента",
+      "promoted_from_watch": false,
+      "repo_full_name": "Graphify-Labs/graphify",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 6,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 77360,
+      "test_steps": [
+        "git clone https://github.com/Graphify-Labs/graphify",
+        "Установить CLI через npm/pip согласно README",
+        "Запустить graphify на тестовом репозитории с кодом",
+        "Проверить граф в интерфейсе и протестировать запросы"
+      ],
+      "title": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify"
+    },
     "https://github.com/Mintplex-Labs/anything-llm": {
       "category": "agents_oss",
       "confidence": "high",
@@ -178,6 +207,35 @@
       "test_steps": [],
       "title": "NickIBrody/arcade_ai",
       "url": "https://github.com/NickIBrody/arcade_ai"
+    },
+    "https://github.com/OpenHands/OpenHands": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "OpenHands — self-hosted платформа для AI-driven разработки с агентами, которые пишут код, запускают тесты и деплоят самостоятельно. Имеет веб-интерфейс и Docker-деплой; можно предложить команде как альтернативу Devin или GitHub Copilot Workspace.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-04",
+      "metric": "Качество сгенерированного кода, процент успешно выполненных задач",
+      "promoted_from_watch": false,
+      "repo_full_name": "OpenHands/OpenHands",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 4,
+        "testability": 8,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 79368,
+      "test_steps": [
+        "docker pull ghcr.io/all-hands-ai/openhands:main",
+        "docker run -it --rm -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/all-hands-ai/openhands:main",
+        "Открыть localhost:3000 и задать агенту задачу разработки",
+        "Проверить результат в сгенерированном коде"
+      ],
+      "title": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands"
     },
     "https://github.com/Stirling-Tools/Stirling-PDF": {
       "category": "apps_oss",
@@ -474,6 +532,64 @@
       "title": "hexo-ai/sia",
       "url": "https://github.com/hexo-ai/sia"
     },
+    "https://github.com/hoppscotch/hoppscotch": {
+      "category": "devtools_oss",
+      "confidence": "high",
+      "description": "Hoppscotch — open-source экосистема для разработки и тестирования API, альтернатива Postman и Insomnia. Работает в браузере, как desktop-приложение и CLI; поддерживает REST, GraphQL, WebSocket; разворачивается on-premise.",
+      "final_score": 7.7,
+      "first_recommended": "2026-07-04",
+      "metric": "Полнота замены Postman, скорость работы, командные функции",
+      "promoted_from_watch": false,
+      "repo_full_name": "hoppscotch/hoppscotch",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 1,
+        "novelty": 3,
+        "testability": 9,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 79727,
+      "test_steps": [
+        "docker run -p 3000:3000 hoppscotch/hoppscotch",
+        "Открыть localhost:3000",
+        "Импортировать OpenAPI-спецификацию или создать первый запрос",
+        "Проверить командную работу и переменные окружения"
+      ],
+      "title": "hoppscotch/hoppscotch",
+      "url": "https://github.com/hoppscotch/hoppscotch"
+    },
+    "https://github.com/immich-app/immich": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Immich — высокопроизводительное self-hosted решение для хранения и управления фото и видео, open-source альтернатива Google Photos. Разворачивается через Docker, имеет мобильное приложение; подходит для ребрендинга как privacy-first облачное хранилище медиа.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-04",
+      "metric": "Скорость индексации, качество AI-распознавания, стабильность",
+      "promoted_from_watch": false,
+      "repo_full_name": "immich-app/immich",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 1,
+        "novelty": 3,
+        "testability": 9,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 105367,
+      "test_steps": [
+        "wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml",
+        "docker-compose up -d",
+        "Открыть localhost:2283 и создать аккаунт",
+        "Установить мобильное приложение и настроить бэкап"
+      ],
+      "title": "immich-app/immich",
+      "url": "https://github.com/immich-app/immich"
+    },
     "https://github.com/infiniflow/ragflow": {
       "category": "agents_oss",
       "confidence": "high",
@@ -531,6 +647,35 @@
       ],
       "title": "langgenius/dify",
       "url": "https://github.com/langgenius/dify"
+    },
+    "https://github.com/louislam/uptime-kuma": {
+      "category": "devtools_oss",
+      "confidence": "high",
+      "description": "Uptime Kuma — красивый self-hosted инструмент мониторинга uptime сервисов, аналог Better Uptime и StatusCake. Разворачивается через Docker одной командой; подходит как standalone-сервис мониторинга или белая метка для хостинговых компаний.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-04",
+      "metric": "Надёжность мониторинга, скорость реакции на инцидент",
+      "promoted_from_watch": false,
+      "repo_full_name": "louislam/uptime-kuma",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 1,
+        "novelty": 2,
+        "testability": 9,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 88727,
+      "test_steps": [
+        "docker run -d -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1",
+        "Открыть localhost:3001 и создать аккаунт",
+        "Добавить первый монитор (URL, TCP, ping)",
+        "Настроить уведомления (Telegram, Slack, email)"
+      ],
+      "title": "louislam/uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma"
     },
     "https://github.com/mutonby/openshorts": {
       "category": "video_oss",
@@ -821,6 +966,35 @@
       ],
       "title": "unslothai/unsloth",
       "url": "https://github.com/unslothai/unsloth"
+    },
+    "https://github.com/upscayl/upscayl": {
+      "category": "image_oss",
+      "confidence": "high",
+      "description": "Upscayl — бесплатный open-source AI-апскейлер изображений для Linux, macOS и Windows, аналог Topaz Gigapixel AI. Устанавливается как desktop-приложение; можно ребрендировать или использовать API для встраивания в собственный сервис обработки изображений.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-04",
+      "metric": "Качество апскейлинга, скорость обработки, поддержка форматов",
+      "promoted_from_watch": false,
+      "repo_full_name": "upscayl/upscayl",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 1,
+        "novelty": 3,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 46645,
+      "test_steps": [
+        "Скачать installer с GitHub Releases для своей ОС",
+        "Установить и запустить Upscayl",
+        "Загрузить тестовое изображение и применить AI-апскейлинг",
+        "Оценить качество и интегрировать через CLI в пайплайн"
+      ],
+      "title": "upscayl/upscayl",
+      "url": "https://github.com/upscayl/upscayl"
     }
   }
 }

@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 30
+Total: 36
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-04 | [upscayl/upscayl](https://github.com/upscayl/upscayl) |  | 46645 | 7.5 | high | Скачать installer с GitHub Releases для своей ОС |
+| 2026-07-04 | [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma) |  | 88727 | 7.5 | high | docker run -d -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1 |
+| 2026-07-04 | [immich-app/immich](https://github.com/immich-app/immich) |  | 105367 | 7.9 | high | wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml |
+| 2026-07-04 | [hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch) |  | 79727 | 7.7 | high | docker run -p 3000:3000 hoppscotch/hoppscotch |
+| 2026-07-04 | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) |  | 79368 | 7.8 | high | docker pull ghcr.io/all-hands-ai/openhands:main |
+| 2026-07-04 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) |  | 77360 | 7.1 | medium | git clone https://github.com/Graphify-Labs/graphify |
 | 2026-07-01 | [unslothai/unsloth](https://github.com/unslothai/unsloth) |  | 67700 | 7.5 | high | pip install unsloth (или через conda для GPU-среды) |
 | 2026-07-01 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) |  | 62322 | 6.8 | high | npm install -g ruflo (или клонировать репо) |
 | 2026-07-01 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) |  | 117437 | 8.1 | high | Скачать Docker образ сервера: docker run --name hbbs -p 21115-21117:21115-21117 rustdesk/rustdesk-server |
