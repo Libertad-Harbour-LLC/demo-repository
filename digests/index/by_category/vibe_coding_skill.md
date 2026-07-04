@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 150
+Total: 151
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-04 | [KimYx0207/agent-teams-playbook](https://github.com/KimYx0207/agent-teams-playbook/tree/main/.claude/skills/agent-teams-playbook) | agent-teams-playbook |  | 6.5 | medium | git clone https://github.com/KimYx0207/agent-teams-playbook и скопировать .claude/skills/agent-teams-playbook/ в свой... |
 | 2026-07-03 | [halfwhey/claudraband](https://github.com/halfwhey/claudraband/tree/master/.claude/skills/claudraband) | claudraband |  | 7.0 | high | Клонировать репозиторий: git clone https://github.com/halfwhey/claudraband.git |
 | 2026-07-02 | [pelikan-io/pelikan](https://github.com/pelikan-io/pelikan/tree/main/.claude/skills) | pr, release |  | 6.5 | medium | git clone https://github.com/pelikan-io/pelikan && cp -r .claude/skills/pr ~/.claude/skills/pelikan-pr && cp -r .clau... |
 | 2026-07-01 | [videojs/v10](https://github.com/videojs/v10/tree/main/.claude/skills) | api-reference, api, aria, +21 more |  | 7.9 | high | Клонировать репо: git clone https://github.com/videojs/v10.git и скопировать папку .claude/skills/ в свой проект с ви... |

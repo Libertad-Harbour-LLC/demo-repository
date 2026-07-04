@@ -1286,6 +1286,36 @@
       "title": "KhazP/vibe-coding-prompt-template",
       "url": "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills"
     },
+    "https://github.com/KimYx0207/agent-teams-playbook/tree/main/.claude/skills/agent-teams-playbook": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий содержит skill-плейбук для организации командной работы AI-агентов в Claude Code. Предназначен для разработчиков, которые строят multi-agent системы или хотят структурировать совместную работу нескольких экземпляров Claude.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-04",
+      "metric": "Claude Code сформировал структурированный план с ролями агентов, ссылаясь на паттерны из skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "KimYx0207/agent-teams-playbook",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent-teams-playbook"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/KimYx0207/agent-teams-playbook и скопировать .claude/skills/agent-teams-playbook/ в свой проект",
+        "Открыть Claude Code в проекте с несколькими модулями/сервисами",
+        "Дать промт: 'Используя agent-teams-playbook, распредели роли для рефакторинга этого монорепо между агентами и составь план работы'"
+      ],
+      "title": "KimYx0207/agent-teams-playbook",
+      "url": "https://github.com/KimYx0207/agent-teams-playbook/tree/main/.claude/skills/agent-teams-playbook"
+    },
     "https://github.com/KjellKod/quest/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -1900,6 +1930,37 @@
       ],
       "title": "RonenMars/threadbase-streamer",
       "url": "https://github.com/RonenMars/threadbase-streamer/tree/main/.claude/skills"
+    },
+    "https://github.com/SenolIsci/mykg/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Репозиторий предоставляет два skill'а: один для проектирования архитектуры систем, второй — для работы с графами знаний через NetworkX. Ориентирован на разработчиков и data engineers, строящих knowledge graph системы.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-04",
+      "metric": "Claude применил NetworkX API корректно без лишних уточнений, сгенерировал рабочий код",
+      "promoted_from_watch": false,
+      "repo_full_name": "SenolIsci/mykg",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "design-architecture",
+        "networkx"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/SenolIsci/mykg и скопировать .claude/skills/networkx/ и/или .claude/skills/design-architecture/ в свой проект",
+        "В проекте с Python/NetworkX открыть Claude Code",
+        "Дать промт: 'Используй networkx skill — создай граф зависимостей для модулей этого проекта и визуализируй его'"
+      ],
+      "title": "SenolIsci/mykg",
+      "url": "https://github.com/SenolIsci/mykg/tree/main/.claude/skills"
     },
     "https://github.com/SpectrAI-Initiative/InnoClaw/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -7578,6 +7639,54 @@
       ],
       "title": "santifer/career-ops",
       "url": "https://github.com/santifer/career-ops/tree/main/.claude/skills"
+    },
+    "https://github.com/seedprod/openclaw-prompts-and-skills/tree/main/.claude/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Большая коллекция из 52 Claude Skills для популярных инструментов: менеджеры задач (Things, Trello, Notion), мессенджеры (Slack, Discord), заметки (Obsidian, Bear), медиа (Spotify, Sonos) и утилиты (weather, summarize, tmux). Рассчитана на пользователей macOS/productivity стека.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-04",
+      "metric": "Claude Code успешно распознал skill и выполнил операцию с инструментом без дополнительных инструкций",
+      "promoted_from_watch": false,
+      "repo_full_name": "seedprod/openclaw-prompts-and-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 19,
+      "skills_in_repo": [
+        "1password",
+        "apple-notes",
+        "apple-reminders",
+        "bear-notes",
+        "notion",
+        "obsidian",
+        "slack",
+        "spotify-player",
+        "trello",
+        "things-mac",
+        "tmux",
+        "weather",
+        "github",
+        "discord",
+        "summarize",
+        "session-logs",
+        "openai-image-gen",
+        "openai-whisper",
+        "skill-creator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/seedprod/openclaw-prompts-and-skills и перейти в папку .claude/skills",
+        "Выбрать нужный skill (например, obsidian или notion) и скопировать папку .claude/skills/obsidian/ в корень своего проекта: cp -r .claude/skills/obsidian/ ~/myproject/.claude/skills/",
+        "Открыть проект в Claude Code и дать промт: 'Используй obsidian skill — создай заметку о сегодняшних задачах и сохрани в vault'"
+      ],
+      "title": "seedprod/openclaw-prompts-and-skills",
+      "url": "https://github.com/seedprod/openclaw-prompts-and-skills/tree/main/.claude/skills"
     },
     "https://github.com/seo-skills/seo-audit-skill/blob/main/skill/SKILL.md": {
       "category": "marketing_skill",
