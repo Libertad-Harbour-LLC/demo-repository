@@ -3583,6 +3583,42 @@
       "trigger_type": "schedule",
       "url": "https://github.com/anilrajrimal1/n8n-backups"
     },
+    "https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow-агент для автоматизации торговых сигналов и мониторинга рынка. Репозиторий позиционируется как sentinel-агент с торговым ботом на базе n8n.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-05",
+      "metric": "Корректность генерируемых сигналов по историческим данным",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "arvinmoj/Sentinel-Agent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "trading-bot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать trading-bot.json",
+        "Импортировать в n8n через Settings → Import Workflow",
+        "Изучить node-граф и определить требуемые API (биржа, уведомления)",
+        "Настроить credentials для используемой биржи или market data API",
+        "Запустить в тестовом режиме с небольшим объёмом данных"
+      ],
+      "title": "arvinmoj/Sentinel-Agent: trading-bot",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json"
+    },
     "https://github.com/bitsandbrainsai/ai-ad-creative-strategist": {
       "category": "marketing_workflow",
       "complexity": "medium",
@@ -7849,6 +7885,1043 @@
       "trigger_type": "webhook",
       "url": "https://github.com/traylorre/openclaw-mac"
     },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/abandoned_cart_email.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "abandoned_cart_email"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: abandoned_cart_email",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/abandoned_cart_email.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/achievement_suggestion_engine.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Embeddings Hugging Face",
+        "Lm Chat Hf",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "achievement_suggestion_engine"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: achievement_suggestion_engine",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/achievement_suggestion_engine.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/ad_campaign_performance_alert.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "OpenAI",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ad_campaign_performance_alert"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: ad_campaign_performance_alert",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/ad_campaign_performance_alert.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/adas_event_annotator.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "OpenAI",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "adas_event_annotator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: adas_event_annotator",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/adas_event_annotator.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/airport_lounge_finder.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "Lm Chat Hf",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "airport_lounge_finder"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: airport_lounge_finder",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/airport_lounge_finder.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/alert_on_instagram_competitor_story.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "alert_on_instagram_competitor_story"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: alert_on_instagram_competitor_story",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/alert_on_instagram_competitor_story.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/api_monitor_auto_restart.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "api_monitor_auto_restart"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: api_monitor_auto_restart",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/api_monitor_auto_restart.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/api_stats_chart.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "api_stats_chart"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: api_stats_chart",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/api_stats_chart.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/applicant_feedback_folder.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "applicant_feedback_folder"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: applicant_feedback_folder",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/applicant_feedback_folder.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/appointment_whatsapp_notify.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "appointment_whatsapp_notify"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: appointment_whatsapp_notify",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/appointment_whatsapp_notify.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/assignment_sms_reminder.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "assignment_sms_reminder"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: assignment_sms_reminder",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/assignment_sms_reminder.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-dm_new_twitter_followers.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "auto-dm_new_twitter_followers"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: auto-dm_new_twitter_followers",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-dm_new_twitter_followers.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-post_blogs_to_linkedin_and_twitter.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "auto-post_blogs_to_linkedin_and_twitter"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: auto-post_blogs_to_linkedin_and_twitter",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-post_blogs_to_linkedin_and_twitter.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-reply_to_tiktok_comments.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "auto-reply_to_tiktok_comments"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: auto-reply_to_tiktok_comments",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-reply_to_tiktok_comments.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-tag_blog_posts.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "auto-tag_blog_posts"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: auto-tag_blog_posts",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-tag_blog_posts.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto_archive_promotions.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "auto_archive_promotions"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: auto_archive_promotions",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto_archive_promotions.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto_reply_to_faqs.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "auto_reply_to_faqs"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: auto_reply_to_faqs",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto_reply_to_faqs.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/autonomous_vehicle_log_summarizer.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Embeddings Hugging Face",
+        "OpenAI",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "autonomous_vehicle_log_summarizer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: autonomous_vehicle_log_summarizer",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/autonomous_vehicle_log_summarizer.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/bank_sms_alert_to_telegram.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "bank_sms_alert_to_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: bank_sms_alert_to_telegram",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/bank_sms_alert_to_telegram.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/battery_health_monitor.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Embeddings Hugging Face",
+        "Lm Chat Hf",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "battery_health_monitor"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: battery_health_monitor",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/battery_health_monitor.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/birthday_telegram_reminder.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "birthday_telegram_reminder"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: birthday_telegram_reminder",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/birthday_telegram_reminder.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/ble_beacon_mapper.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Embeddings Hugging Face",
+        "OpenAI",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ble_beacon_mapper"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: ble_beacon_mapper",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/ble_beacon_mapper.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blog_comment_discord.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Cohere",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "blog_comment_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: blog_comment_discord",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blog_comment_discord.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blood_test_email_alert.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "OpenAI",
+        "Anthropic",
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "blood_test_email_alert"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: blood_test_email_alert",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blood_test_email_alert.json"
+    },
+    "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/breaking_news_summarizer.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 4 разных n8n-агента. Выделяется unsplash_to_pinterest — workflow для автоматической публикации изображений из Unsplash в Pinterest. Также есть sms-напоминания, проверка позиций ключевых слов и автоматическая проверка тестов.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Embeddings Hugging Face",
+        "OpenAI",
+        "Google Sheets"
+      ],
+      "metric": "Количество успешно опубликованных пинов за запуск",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tushar2704/N8N-Agents",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "breaking_news_summarizer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать unsplash_to_pinterest.json",
+        "Импортировать в n8n",
+        "Настроить Unsplash API key и Pinterest OAuth credentials",
+        "Указать целевую Pinterest доску",
+        "Запустить тестовый прогон и проверить публикацию"
+      ],
+      "title": "tushar2704/N8N-Agents: breaking_news_summarizer",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/breaking_news_summarizer.json"
+    },
     "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base": {
       "category": "sales_workflow",
       "complexity": "complex",
@@ -7888,6 +8961,42 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base"
+    },
+    "https://github.com/weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack/blob/main/workflow-template.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической генерации release notes по GitHub-событиям с последующей отправкой уведомления в Slack. Полезен командам разработки для сопровождения релизов.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-05",
+      "metric": "Наличие Slack-сообщения с release notes в течение 1 минуты после создания релиза",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить GitHub Webhook или GitHub API credential",
+        "Настроить Slack Bot Token и целевой канал",
+        "Создать тестовый pre-release в GitHub и проверить уведомление в Slack"
+      ],
+      "title": "weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Automate-Gradle-dependency-updates-with-Slack-notifications": {
       "category": "devops_workflow",
@@ -7966,6 +9075,46 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Automate-Video-Uploads-to-Thumbnails-with-FFmpeg-and-Google-Drive"
+    },
+    "https://github.com/weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail/blob/main/workflow-template.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматизации репортинга инцидентов: данные из форм попадают в Google Sheets и автоматически отправляются Gmail-уведомления ответственным. Подходит для ops-команд и служб поддержки.",
+      "final_score": 5.9,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Gmail",
+        "Google Sheets"
+      ],
+      "metric": "Время от отправки формы до получения Gmail-уведомления и появления записи в Sheets",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Google Sheets credential (OAuth2) и указать ID таблицы",
+        "Настроить Gmail credential для отправки уведомлений",
+        "Заполнить тестовую форму и убедиться в записи в Sheets и получении письма"
+      ],
+      "title": "weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Automated-APK-security-scanning-PDF-reporting-with-MobSF-AI-Google-Drive": {
       "category": "devops_workflow",
@@ -8279,6 +9428,47 @@
       "title": "weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM: workflow-template",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini"
+    },
+    "https://github.com/weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack/blob/main/workflow-template.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической обработки входящих писем поддержки из Gmail: Gemini AI суммаризирует содержимое и публикует краткое резюме в Slack-канал. Подходит командам поддержки и ops-специалистам.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-05",
+      "integrations": [
+        "Google Gemini",
+        "Gmail",
+        "Slack"
+      ],
+      "metric": "Количество суммаризированных писем и скорость появления Slack-уведомления",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "В n8n: Settings → Import Workflow → вставить JSON",
+        "Настроить credentials: Gmail OAuth2, Google Gemini API key, Slack Bot Token",
+        "Запустить тестовый прогон вручную с тестовым письмом",
+        "Проверить, что сообщение появилось в целевом Slack-канале"
+      ],
+      "title": "weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Website-SEO-health-analytics-with-Google-Sheets-PDF-reports-Gmail-alerts": {
       "category": "web_workflow",

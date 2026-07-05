@@ -1,9 +1,10 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 17
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-05 | [arvinmoj/Sentinel-Agent: trading-bot](https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json) | trading-bot |  | 6.2 | medium | Скачать trading-bot.json |
 | 2026-07-03 | [weblineindia/n8n-Generate-a-daily-multi-asset-market-report: daily market report](https://github.com/weblineindia/n8n-Generate-a-daily-multi-asset-market-report-with-TwelveData-Groq-and-Google-Sheets) | workflow-template |  | 6.8 | medium | Скачать workflow-template.json |
 | 2026-07-03 | [Wilsonoonn/n8n_nl2sql: nl2sql_2.0](https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql_2.0.json) | nl2sql_2.0 |  | 7.9 | high | Скачать nl2sql.json с https://raw.githubusercontent.com/Wilsonoonn/n8n_nl2sql/main/nl2sql.json |
 | 2026-07-03 | [Wilsonoonn/n8n_nl2sql: nl2sql](https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql.json) | nl2sql |  | 7.9 | high | Скачать nl2sql.json с https://raw.githubusercontent.com/Wilsonoonn/n8n_nl2sql/main/nl2sql.json |

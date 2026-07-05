@@ -1,11 +1,40 @@
 # Recommended Claude Skills — all time
 
-Total: 218
+Total: 247
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-05 | [weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.6 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-05 | [weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 5.9 | medium | Скачать workflow-template.json |
+| 2026-07-05 | [weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack: workflow-template](https://github.com/weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.3 | medium | Скачать workflow-template.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: breaking_news_summarizer](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/breaking_news_summarizer.json) | breaking_news_summarizer |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: blood_test_email_alert](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blood_test_email_alert.json) | blood_test_email_alert |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: blog_comment_discord](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blog_comment_discord.json) | blog_comment_discord |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: ble_beacon_mapper](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/ble_beacon_mapper.json) | ble_beacon_mapper |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: birthday_telegram_reminder](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/birthday_telegram_reminder.json) | birthday_telegram_reminder |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: battery_health_monitor](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/battery_health_monitor.json) | battery_health_monitor |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: bank_sms_alert_to_telegram](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/bank_sms_alert_to_telegram.json) | bank_sms_alert_to_telegram |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: autonomous_vehicle_log_summarizer](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/autonomous_vehicle_log_summarizer.json) | autonomous_vehicle_log_summarizer |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: auto_reply_to_faqs](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto_reply_to_faqs.json) | auto_reply_to_faqs |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: auto_archive_promotions](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto_archive_promotions.json) | auto_archive_promotions |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: auto-tag_blog_posts](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-tag_blog_posts.json) | auto-tag_blog_posts |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: auto-reply_to_tiktok_comments](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-reply_to_tiktok_comments.json) | auto-reply_to_tiktok_comments |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: auto-post_blogs_to_linkedin_and_twitter](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-post_blogs_to_linkedin_and_twitter.json) | auto-post_blogs_to_linkedin_and_twitter |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: auto-dm_new_twitter_followers](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/auto-dm_new_twitter_followers.json) | auto-dm_new_twitter_followers |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: assignment_sms_reminder](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/assignment_sms_reminder.json) | assignment_sms_reminder |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: appointment_whatsapp_notify](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/appointment_whatsapp_notify.json) | appointment_whatsapp_notify |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: applicant_feedback_folder](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/applicant_feedback_folder.json) | applicant_feedback_folder |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: api_stats_chart](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/api_stats_chart.json) | api_stats_chart |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: api_monitor_auto_restart](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/api_monitor_auto_restart.json) | api_monitor_auto_restart |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: alert_on_instagram_competitor_story](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/alert_on_instagram_competitor_story.json) | alert_on_instagram_competitor_story |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: airport_lounge_finder](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/airport_lounge_finder.json) | airport_lounge_finder |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: adas_event_annotator](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/adas_event_annotator.json) | adas_event_annotator |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: ad_campaign_performance_alert](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/ad_campaign_performance_alert.json) | ad_campaign_performance_alert |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: achievement_suggestion_engine](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/achievement_suggestion_engine.json) | achievement_suggestion_engine |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [tushar2704/N8N-Agents: abandoned_cart_email](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/abandoned_cart_email.json) | abandoned_cart_email |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
+| 2026-07-05 | [arvinmoj/Sentinel-Agent: trading-bot](https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json) | trading-bot |  | 6.2 | medium | Скачать trading-bot.json |
 | 2026-07-04 | [weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM: workflow-template](https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini) | workflow-template |  | 6.1 | medium | Скачать workflow-template.json |
 | 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.application_logger](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.application_logger.json) | job.application_logger |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
 | 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.6_fsm_mutator](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.6_fsm_mutator.json) | job.6_fsm_mutator |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |

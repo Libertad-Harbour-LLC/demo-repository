@@ -1,9 +1,11 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 44
+Total: 46
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-05 | [weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 5.9 | medium | Скачать workflow-template.json |
+| 2026-07-05 | [weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack: workflow-template](https://github.com/weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.3 | medium | Скачать workflow-template.json |
 | 2026-07-01 | [tecno-consultores/ISP-Copilot: wf_event_controller_zabbix](https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_zabbix.json) | wf_event_controller_zabbix |  | 7.3 | medium | Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json) |
 | 2026-07-01 | [tecno-consultores/ISP-Copilot: wf_event_controller_graylog](https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_graylog.json) | wf_event_controller_graylog |  | 7.3 | medium | Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json) |
 | 2026-07-01 | [tecno-consultores/ISP-Copilot: verificar_balanceo_pcc](https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/verificar_balanceo_pcc.json) | verificar_balanceo_pcc |  | 7.3 | medium | Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json) |
