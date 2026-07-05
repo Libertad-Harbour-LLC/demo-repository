@@ -1663,6 +1663,36 @@
       "title": "Neetx/ai-research-radar",
       "url": "https://github.com/Neetx/ai-research-radar/tree/main/.claude/skills"
     },
+    "https://github.com/NevaMind-AI/memU/tree/main/.claude/skills/memu": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "NevaMind-AI/memU — репозиторий AI-системы памяти с верифицированным Claude Skill memu внутри. Репозиторий ориентирован на разработчиков, которые хотят добавить персистентную память к рабочим процессам Claude Code.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-05",
+      "metric": "Сохраняется ли контекст после завершения сессии и восстанавливается ли при следующем запуске Claude Code",
+      "promoted_from_watch": false,
+      "repo_full_name": "NevaMind-AI/memU",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 6,
+        "traction": 9,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "memu"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/NevaMind-AI/memU.git",
+        "Скопировать папку .claude/skills/memu/ в корень своего проекта: cp -r memU/.claude/skills/memu .claude/skills/",
+        "Открыть Claude Code в проекте и дать промт: 'Используй memu skill для сохранения контекста текущего рефакторинга'"
+      ],
+      "title": "NevaMind-AI/memU",
+      "url": "https://github.com/NevaMind-AI/memU/tree/main/.claude/skills/memu"
+    },
     "https://github.com/OpenAnalystInc/10x-Content-Expert/tree/main/.claude/skills": {
       "category": "content_skill",
       "confidence": "medium",

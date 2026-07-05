@@ -1,11 +1,12 @@
 # Recommended Claude Skills — all time
 
-Total: 240
+Total: 241
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-05 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU/tree/main/.claude/skills/memu) | memu |  | 7.3 | high | Клонировать репо: git clone https://github.com/NevaMind-AI/memU.git |
 | 2026-07-04 | [seedprod/openclaw-prompts-and-skills](https://github.com/seedprod/openclaw-prompts-and-skills/tree/main/.claude/skills) | 1password, apple-notes, apple-reminders, +16 more |  | 7.3 | medium | git clone https://github.com/seedprod/openclaw-prompts-and-skills и перейти в папку .claude/skills |
 | 2026-07-04 | [SenolIsci/mykg](https://github.com/SenolIsci/mykg/tree/main/.claude/skills) | design-architecture, networkx |  | 6.6 | medium | git clone https://github.com/SenolIsci/mykg и скопировать .claude/skills/networkx/ и/или .claude/skills/design-archit... |
 | 2026-07-04 | [KimYx0207/agent-teams-playbook](https://github.com/KimYx0207/agent-teams-playbook/tree/main/.claude/skills/agent-teams-playbook) | agent-teams-playbook |  | 6.5 | medium | git clone https://github.com/KimYx0207/agent-teams-playbook и скопировать .claude/skills/agent-teams-playbook/ в свой... |
