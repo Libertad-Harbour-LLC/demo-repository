@@ -1,9 +1,11 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 151
+Total: 153
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-06 | [seldonframe/seldonframe](https://github.com/seldonframe/seldonframe/tree/main/.claude/skills) | generate-and-grade, handoff, ship-feature, +2 more |  | 6.5 | medium | git clone https://github.com/seldonframe/seldonframe.git && cp -r seldonframe/.claude/skills/* .claude/skills/ |
+| 2026-07-06 | [forbotsake/forbotsake](https://github.com/forbotsake/forbotsake/tree/main/.claude/skills) | autoplan, benchmark, browse, +33 more |  | 7.0 | medium | git clone https://github.com/forbotsake/forbotsake.git && cp -r forbotsake/.claude/skills/* .claude/skills/ |
 | 2026-07-04 | [KimYx0207/agent-teams-playbook](https://github.com/KimYx0207/agent-teams-playbook/tree/main/.claude/skills/agent-teams-playbook) | agent-teams-playbook |  | 6.5 | medium | git clone https://github.com/KimYx0207/agent-teams-playbook и скопировать .claude/skills/agent-teams-playbook/ в свой... |
 | 2026-07-03 | [halfwhey/claudraband](https://github.com/halfwhey/claudraband/tree/master/.claude/skills/claudraband) | claudraband |  | 7.0 | high | Клонировать репозиторий: git clone https://github.com/halfwhey/claudraband.git |
 | 2026-07-02 | [pelikan-io/pelikan](https://github.com/pelikan-io/pelikan/tree/main/.claude/skills) | pr, release |  | 6.5 | medium | git clone https://github.com/pelikan-io/pelikan && cp -r .claude/skills/pr ~/.claude/skills/pelikan-pr && cp -r .clau... |

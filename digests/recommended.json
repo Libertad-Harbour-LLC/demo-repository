@@ -4466,6 +4466,71 @@
       "title": "fmflurry/settings-opencode",
       "url": "https://github.com/fmflurry/settings-opencode/tree/master/.claude/skills"
     },
+    "https://github.com/forbotsake/forbotsake/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "forbotsake/forbotsake — репозиторий с 36 skills, охватывающими полный цикл разработки: от планирования (autoplan, plan-eng-review) до деплоя (ship, land-and-deploy) и ретроспективы (retro). Ориентирован на профессиональные engineering-команды.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-06",
+      "metric": "Покрытие dev-lifecycle; насколько skills бесшовно стыкуются друг с другом",
+      "promoted_from_watch": false,
+      "repo_full_name": "forbotsake/forbotsake",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 9
+      },
+      "skills_count": 36,
+      "skills_in_repo": [
+        "autoplan",
+        "benchmark",
+        "browse",
+        "canary",
+        "careful",
+        "checkpoint",
+        "codex",
+        "cso",
+        "design-consultation",
+        "design-html",
+        "design-review",
+        "design-shotgun",
+        "devex-review",
+        "document-release",
+        "freeze",
+        "gstack-upgrade",
+        "gstack",
+        "guard",
+        "health",
+        "investigate",
+        "land-and-deploy",
+        "learn",
+        "office-hours",
+        "open-gstack-browser",
+        "plan-ceo-review",
+        "plan-design-review",
+        "plan-devex-review",
+        "plan-eng-review",
+        "qa-only",
+        "qa",
+        "retro",
+        "review",
+        "setup-browser-cookies",
+        "setup-deploy",
+        "ship",
+        "unfreeze"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/forbotsake/forbotsake.git && cp -r forbotsake/.claude/skills/* .claude/skills/",
+        "Активировать в своём проекте — начать с наиболее универсальных: autoplan, qa, review, ship",
+        "Дать промт: 'Используй skill autoplan: у меня фича X, составь план реализации с чеклистом для qa и review'"
+      ],
+      "title": "forbotsake/forbotsake",
+      "url": "https://github.com/forbotsake/forbotsake/tree/main/.claude/skills"
+    },
     "https://github.com/forecast-bio/ferray/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -7717,6 +7782,40 @@
       ],
       "title": "seedprod/openclaw-prompts-and-skills",
       "url": "https://github.com/seedprod/openclaw-prompts-and-skills/tree/main/.claude/skills"
+    },
+    "https://github.com/seldonframe/seldonframe/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "seldonframe/seldonframe — репозиторий с 5 skills для структурированного feature delivery: генерация и оценка кода, хэндофф между агентами, верификация билда и визуальная проверка.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-06",
+      "metric": "Работает ли vision-verify с реальными скриншотами; насколько generate-and-grade повышает качество с первой итерации",
+      "promoted_from_watch": false,
+      "repo_full_name": "seldonframe/seldonframe",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "generate-and-grade",
+        "handoff",
+        "ship-feature",
+        "verify-build",
+        "vision-verify"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/seldonframe/seldonframe.git && cp -r seldonframe/.claude/skills/* .claude/skills/",
+        "Запустить Claude Code в проекте с frontend-компонентом",
+        "Дать промт: 'Используй skill generate-and-grade для компонента X — сгенерируй реализацию и оцени её качество, затем vision-verify для проверки UI'"
+      ],
+      "title": "seldonframe/seldonframe",
+      "url": "https://github.com/seldonframe/seldonframe/tree/main/.claude/skills"
     },
     "https://github.com/seo-skills/seo-audit-skill/blob/main/skill/SKILL.md": {
       "category": "marketing_skill",

@@ -1,11 +1,13 @@
 # Recommended Claude Skills — all time
 
-Total: 241
+Total: 243
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-06 | [seldonframe/seldonframe](https://github.com/seldonframe/seldonframe/tree/main/.claude/skills) | generate-and-grade, handoff, ship-feature, +2 more |  | 6.5 | medium | git clone https://github.com/seldonframe/seldonframe.git && cp -r seldonframe/.claude/skills/* .claude/skills/ |
+| 2026-07-06 | [forbotsake/forbotsake](https://github.com/forbotsake/forbotsake/tree/main/.claude/skills) | autoplan, benchmark, browse, +33 more |  | 7.0 | medium | git clone https://github.com/forbotsake/forbotsake.git && cp -r forbotsake/.claude/skills/* .claude/skills/ |
 | 2026-07-05 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU/tree/main/.claude/skills/memu) | memu |  | 7.3 | high | Клонировать репо: git clone https://github.com/NevaMind-AI/memU.git |
 | 2026-07-04 | [seedprod/openclaw-prompts-and-skills](https://github.com/seedprod/openclaw-prompts-and-skills/tree/main/.claude/skills) | 1password, apple-notes, apple-reminders, +16 more |  | 7.3 | medium | git clone https://github.com/seedprod/openclaw-prompts-and-skills и перейти в папку .claude/skills |
 | 2026-07-04 | [SenolIsci/mykg](https://github.com/SenolIsci/mykg/tree/main/.claude/skills) | design-architecture, networkx |  | 6.6 | medium | git clone https://github.com/SenolIsci/mykg и скопировать .claude/skills/networkx/ и/или .claude/skills/design-archit... |
