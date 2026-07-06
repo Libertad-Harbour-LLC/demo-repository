@@ -1,9 +1,10 @@
 # Recommended Claude Skills — video_workflow
 
-Total: 9
+Total: 10
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-06 | [kker4m/pov-videos-n8n-workflow: template](https://github.com/kker4m/pov-videos-n8n-workflow/blob/main/template.json) | template |  | 7.0 | medium | Скачать JSON: https://raw.githubusercontent.com/kker4m/pov-videos-n8n-workflow/main/template.json |
 | 2026-07-02 | [prashant1507/n8n-youtube-ai-shorts-pipeline: video-pipeline-youtube](https://github.com/prashant1507/n8n-youtube-ai-shorts-pipeline/blob/main/n8n/video-pipeline-youtube.json) | video-pipeline-youtube |  | 6.4 | medium | Скачать video-pipeline-youtube.json |
 | 2026-06-30 | [shikherjha/n8n-video-Summarizer-Bot: worflow](https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/worflow.json) | worflow |  | 5.8 | medium | Скачать worflow.json (опечатка в имени файла — это штатное имя) |
 | 2026-06-30 | [shikherjha/n8n-video-Summarizer-Bot: new_workflow](https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/new_workflow.json) | new_workflow |  | 5.8 | medium | Скачать worflow.json (опечатка в имени файла — это штатное имя) |

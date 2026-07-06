@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 21
+Total: 22
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-06 | [weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI: workflow-template](https://github.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CR... |
 | 2026-07-04 | [weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM: workflow-template](https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini) | workflow-template |  | 6.1 | medium | Скачать workflow-template.json |
 | 2026-07-04 | [Moamen-Elsharkawy/ai-real-estate-lead-qualifier: lead-qualification](https://github.com/Moamen-Elsharkawy/ai-real-estate-lead-qualifier/blob/main/lead-qualification.json) | lead-qualification |  | 6.4 | medium | Скачать lead-qualification.json |
 | 2026-07-03 | [Dimitrearaujo/n8n-whatsapp-lead-nurturing: whatsapp-lead-nurturing](https://github.com/Dimitrearaujo/n8n-whatsapp-lead-nurturing/blob/main/workflows/whatsapp-lead-nurturing.json) | whatsapp-lead-nurturing |  | 7.3 | medium | Скачать whatsapp-lead-nurturing.json |

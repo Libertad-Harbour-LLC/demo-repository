@@ -3299,6 +3299,186 @@
       "trigger_type": "webhook",
       "url": "https://github.com/abokenan444/n8n-signatrust-workflows/blob/main/workflows/24-receipt-verify-on-webhook.json"
     },
+    "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/1_ai_payment_approval.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 5 n8n-workflow для автоматизации процессов согласования: AI-одобрение платежей, обработка рефандов, контроль PII-доступа, генерация документов и human-in-the-loop потоки. Подходит командам fintech и SaaS, где требуется аудируемые процессы одобрения.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-06",
+      "metric": "Время обработки платёжного запроса, доля корректных AI-решений",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/trustloop-signatrust-workflows",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "1_ai_payment_approval"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approval.json",
+        "Открыть n8n → Import from file → вставить JSON",
+        "Настроить credentials (AI-провайдер, Webhook или БД по графу нод)",
+        "Запустить тестовый платёж через webhook/trigger",
+        "Проверить, что approval-решение генерируется и логируется корректно"
+      ],
+      "title": "abokenan444/trustloop-signatrust-workflows: 1_ai_payment_approval",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/1_ai_payment_approval.json"
+    },
+    "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/2_customer_refund.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 5 n8n-workflow для автоматизации процессов согласования: AI-одобрение платежей, обработка рефандов, контроль PII-доступа, генерация документов и human-in-the-loop потоки. Подходит командам fintech и SaaS, где требуется аудируемые процессы одобрения.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-06",
+      "metric": "Время обработки платёжного запроса, доля корректных AI-решений",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/trustloop-signatrust-workflows",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "2_customer_refund"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approval.json",
+        "Открыть n8n → Import from file → вставить JSON",
+        "Настроить credentials (AI-провайдер, Webhook или БД по графу нод)",
+        "Запустить тестовый платёж через webhook/trigger",
+        "Проверить, что approval-решение генерируется и логируется корректно"
+      ],
+      "title": "abokenan444/trustloop-signatrust-workflows: 2_customer_refund",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/2_customer_refund.json"
+    },
+    "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/3_pii_access.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 5 n8n-workflow для автоматизации процессов согласования: AI-одобрение платежей, обработка рефандов, контроль PII-доступа, генерация документов и human-in-the-loop потоки. Подходит командам fintech и SaaS, где требуется аудируемые процессы одобрения.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-06",
+      "metric": "Время обработки платёжного запроса, доля корректных AI-решений",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/trustloop-signatrust-workflows",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "3_pii_access"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approval.json",
+        "Открыть n8n → Import from file → вставить JSON",
+        "Настроить credentials (AI-провайдер, Webhook или БД по графу нод)",
+        "Запустить тестовый платёж через webhook/trigger",
+        "Проверить, что approval-решение генерируется и логируется корректно"
+      ],
+      "title": "abokenan444/trustloop-signatrust-workflows: 3_pii_access",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/3_pii_access.json"
+    },
+    "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/4_document_generation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 5 n8n-workflow для автоматизации процессов согласования: AI-одобрение платежей, обработка рефандов, контроль PII-доступа, генерация документов и human-in-the-loop потоки. Подходит командам fintech и SaaS, где требуется аудируемые процессы одобрения.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-06",
+      "metric": "Время обработки платёжного запроса, доля корректных AI-решений",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/trustloop-signatrust-workflows",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "4_document_generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approval.json",
+        "Открыть n8n → Import from file → вставить JSON",
+        "Настроить credentials (AI-провайдер, Webhook или БД по графу нод)",
+        "Запустить тестовый платёж через webhook/trigger",
+        "Проверить, что approval-решение генерируется и логируется корректно"
+      ],
+      "title": "abokenan444/trustloop-signatrust-workflows: 4_document_generation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/4_document_generation.json"
+    },
+    "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/5_human_approval_flow.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 5 n8n-workflow для автоматизации процессов согласования: AI-одобрение платежей, обработка рефандов, контроль PII-доступа, генерация документов и human-in-the-loop потоки. Подходит командам fintech и SaaS, где требуется аудируемые процессы одобрения.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-06",
+      "metric": "Время обработки платёжного запроса, доля корректных AI-решений",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "abokenan444/trustloop-signatrust-workflows",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "5_human_approval_flow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approval.json",
+        "Открыть n8n → Import from file → вставить JSON",
+        "Настроить credentials (AI-провайдер, Webhook или БД по графу нод)",
+        "Запустить тестовый платёж через webhook/trigger",
+        "Проверить, что approval-решение генерируется и логируется корректно"
+      ],
+      "title": "abokenan444/trustloop-signatrust-workflows: 5_human_approval_flow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/5_human_approval_flow.json"
+    },
     "https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer": {
       "category": "web_workflow",
       "complexity": "complex",
@@ -5619,6 +5799,47 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/kingler/n8n_agent"
+    },
+    "https://github.com/kker4m/pov-videos-n8n-workflow/blob/main/template.json": {
+      "category": "video_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматизированной генерации POV-видео. Репозиторий с 28 звёздами, что выше среднего для нишевых видео-автоматизаций в n8n. Подойдёт контент-мейкерам и SMM-специалистам.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-06",
+      "integrations": [
+        "Google Sheets",
+        "OpenAI",
+        "Google Drive"
+      ],
+      "metric": "Успешный рендер POV-видео без ручного вмешательства",
+      "node_count": 29,
+      "promoted_from_watch": false,
+      "repo_full_name": "kker4m/pov-videos-n8n-workflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/kker4m/pov-videos-n8n-workflow/main/template.json",
+        "Импортировать в n8n через Import Workflow",
+        "Изучить граф нод для понимания входных параметров (источник медиа, настройки рендера)",
+        "Настроить credentials/API-ключи по нодам",
+        "Запустить тестовый прогон с тестовым медиафайлом"
+      ],
+      "title": "kker4m/pov-videos-n8n-workflow: template",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/kker4m/pov-videos-n8n-workflow/blob/main/template.json"
     },
     "https://github.com/kkornas/n8n-ai-news-pipeline/blob/main/ai-news-pipeline.json": {
       "category": "content_workflow",
@@ -9223,6 +9444,89 @@
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout"
     },
+    "https://github.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI/blob/main/workflow-template.json": {
+      "category": "sales_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для сравнения коммерческих предложений и анализа разрывов с помощью Groq AI в связке с Salesforce CRM. Помогает sales-командам быстро выявлять слабые места предложений конкурентов.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-06",
+      "integrations": [
+        "Groq",
+        "Google Drive",
+        "Google Sheets",
+        "Salesforce",
+        "Slack"
+      ],
+      "metric": "Время анализа одного предложения, качество выявленных gap-пунктов",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI/main/workflow-template.json",
+        "Импортировать в n8n",
+        "Добавить Groq API key",
+        "Настроить Salesforce credentials (OAuth)",
+        "Загрузить тестовые PDF-предложения и запустить workflow"
+      ],
+      "title": "weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI/blob/main/workflow-template.json"
+    },
+    "https://github.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack/blob/main/workflow-template.json": {
+      "category": "web_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического обнаружения мошеннических заказов в WooCommerce с отправкой алертов в Slack. Предназначен для e-commerce команд, которые хотят минимизировать фрод без ручного мониторинга.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-06",
+      "integrations": [
+        "WooCommerce",
+        "Slack"
+      ],
+      "metric": "Время от создания подозрительного заказа до алерта в Slack, доля false positives",
+      "node_count": 26,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack/main/workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить WooCommerce API credentials (Consumer Key/Secret)",
+        "Настроить Slack Bot Token и канал для алертов",
+        "Создать тестовый заказ с признаками фрода и проверить срабатывание"
+      ],
+      "title": "weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack/blob/main/workflow-template.json"
+    },
     "https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts": {
       "category": "sales_workflow",
       "confidence": "medium",
@@ -9330,6 +9634,48 @@
       "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Generate-personalized-deal-content-recommendations-with-Zoho-CRM-GPT-4o-mini-Gmail"
     },
+    "https://github.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail/blob/main/workflow-template.json": {
+      "category": "web_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической обработки тикетов возврата из Zendesk, связывая их с заказами WooCommerce и уведомляя через Slack и Gmail. Полезен e-commerce командам с support-отделом.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-06",
+      "integrations": [
+        "Zendesk",
+        "WooCommerce",
+        "Slack",
+        "Gmail"
+      ],
+      "metric": "Время закрытия refund-тикета, количество ручных операций по возвратам",
+      "node_count": 23,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail/main/workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Zendesk API credentials",
+        "Добавить WooCommerce API ключи",
+        "Настроить Gmail OAuth и Slack Bot Token"
+      ],
+      "title": "weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail/blob/main/workflow-template.json"
+    },
     "https://github.com/weblineindia/n8n-Recover-abandoned-WooCommerce-carts-using-OpenAI-GPT-4.1-mini-Gmail-and-Slack": {
       "category": "web_workflow",
       "confidence": "medium",
@@ -9395,6 +9741,47 @@
       "title": "weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks"
+    },
+    "https://github.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/blob/main/workflow-template.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического скрининга резюме из Gmail с помощью GPT-4 Turbo и отправки отобранных кандидатов в Slack. Актуален для HR-команд и рекрутеров, работающих с потоком входящих откликов.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-06",
+      "integrations": [
+        "OpenAI",
+        "Gmail",
+        "Slack"
+      ],
+      "metric": "Доля корректно отобранных резюме, время обработки входящих откликов",
+      "node_count": 20,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/main/workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Gmail OAuth credentials",
+        "Добавить OpenAI API key в ноду GPT-4 Turbo",
+        "Настроить Slack Bot Token и target channel"
+      ],
+      "title": "weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini": {
       "category": "sales_workflow",

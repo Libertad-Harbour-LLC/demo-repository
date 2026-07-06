@@ -1,9 +1,11 @@
 # Recommended Claude Skills — web_workflow
 
-Total: 18
+Total: 20
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-06 | [weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.9 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack... |
+| 2026-07-06 | [weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 7.1 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Sl... |
 | 2026-07-03 | [weblineindia/n8n-Website-SEO-health-analytics: SEO analytics + PDF reports](https://github.com/weblineindia/n8n-Website-SEO-health-analytics-with-Google-Sheets-PDF-reports-Gmail-alerts) | workflow-template |  | 7.0 | medium | Скачать workflow-template.json |
 | 2026-07-03 | [jipraks/n8n-templates: whatsapp-waha-hold-chat](https://github.com/jipraks/n8n-templates/blob/main/whatsapp-waha-hold-chat.json) | whatsapp-waha-hold-chat |  | 7.8 | high | Скачать ai-wordpress-post-maker.json |
 | 2026-07-03 | [jipraks/n8n-templates: whatsapp-ai-google-calendar](https://github.com/jipraks/n8n-templates/blob/main/whatsapp-ai-google-calendar.json) | whatsapp-ai-google-calendar |  | 7.8 | high | Скачать ai-wordpress-post-maker.json |

@@ -1,9 +1,15 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 72
+Total: 78
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-06 | [weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 7.1 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-... |
+| 2026-07-06 | [abokenan444/trustloop-signatrust-workflows: 5_human_approval_flow](https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/5_human_approval_flow.json) | 5_human_approval_flow |  | 7.5 | medium | Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approv... |
+| 2026-07-06 | [abokenan444/trustloop-signatrust-workflows: 4_document_generation](https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/4_document_generation.json) | 4_document_generation |  | 7.5 | medium | Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approv... |
+| 2026-07-06 | [abokenan444/trustloop-signatrust-workflows: 3_pii_access](https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/3_pii_access.json) | 3_pii_access |  | 7.5 | medium | Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approv... |
+| 2026-07-06 | [abokenan444/trustloop-signatrust-workflows: 2_customer_refund](https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/2_customer_refund.json) | 2_customer_refund |  | 7.5 | medium | Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approv... |
+| 2026-07-06 | [abokenan444/trustloop-signatrust-workflows: 1_ai_payment_approval](https://github.com/abokenan444/trustloop-signatrust-workflows/blob/master/1_ai_payment_approval.json) | 1_ai_payment_approval |  | 7.5 | medium | Скачать JSON: https://raw.githubusercontent.com/abokenan444/trustloop-signatrust-workflows/master/1_ai_payment_approv... |
 | 2026-07-05 | [weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.6 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.application_logger](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.application_logger.json) | job.application_logger |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
 | 2026-07-04 | [daemon-Ad/Job-Aggregation-and-Email-Intelligence-System: job.6_fsm_mutator](https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.6_fsm_mutator.json) | job.6_fsm_mutator |  | 6.9 | medium | Скачать все 6 JSON из папки workflows/ |
