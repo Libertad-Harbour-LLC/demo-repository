@@ -208,6 +208,35 @@
       "title": "NickIBrody/arcade_ai",
       "url": "https://github.com/NickIBrody/arcade_ai"
     },
+    "https://github.com/NousResearch/hermes-agent": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "Hermes-agent от NousResearch — открытый AI-агент с 210k звёзд, поддерживающий множество LLM-провайдеров (Claude, OpenAI, Codex). Является самостоятельно развёртываемой альтернативой коммерческим агентным платформам.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-07",
+      "metric": "Успешность выполнения простой агентной задачи (создание файла, веб-поиск)",
+      "promoted_from_watch": false,
+      "repo_full_name": "NousResearch/hermes-agent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 7,
+        "traction": 10,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 210712,
+      "test_steps": [
+        "git clone https://github.com/NousResearch/hermes-agent",
+        "pip install -r requirements.txt (или docker build)",
+        "Задать API-ключи для выбранного LLM-провайдера",
+        "Запустить агента на тестовой задаче и проверить выполнение"
+      ],
+      "title": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent"
+    },
     "https://github.com/OpenHands/OpenHands": {
       "category": "agents_oss",
       "confidence": "high",
@@ -851,6 +880,35 @@
       "title": "paperclipai/paperclip",
       "url": "https://github.com/paperclipai/paperclip"
     },
+    "https://github.com/pewdiepie-archdaemon/odysseus": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Odysseus — self-hosted AI workspace с 81k звёзд и активными обновлениями. Позиционируется как замена платным AI-воркспейсам; разворачивается самостоятельно, подходит для ребрендинга под корпоративный AI-портал.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-07",
+      "metric": "Стабильность после деплоя; наличие UI для key user flows",
+      "promoted_from_watch": false,
+      "repo_full_name": "pewdiepie-archdaemon/odysseus",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 81279,
+      "test_steps": [
+        "git clone https://github.com/pewdiepie-archdaemon/odysseus && cd odysseus",
+        "Найти docker-compose.yml или инструкции в README (dev ветка)",
+        "Запустить docker-compose up, открыть Web UI",
+        "Проверить основные сценарии: создание workspace, подключение LLM, базовый агент"
+      ],
+      "title": "pewdiepie-archdaemon/odysseus",
+      "url": "https://github.com/pewdiepie-archdaemon/odysseus"
+    },
     "https://github.com/rustdesk/rustdesk": {
       "category": "apps_oss",
       "confidence": "high",
@@ -995,6 +1053,35 @@
       ],
       "title": "upscayl/upscayl",
       "url": "https://github.com/upscayl/upscayl"
+    },
+    "https://github.com/zhayujie/CowAgent": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "CowAgent (formerly chatgpt-on-wechat) — open-source AI-агент с поддержкой множества LLM и мессенджеров (WeChat, Telegram, Slack). Разворачивается одной командой; подходит для создания мультиканальных AI-ассистентов.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-07",
+      "metric": "Успешность multi-channel деплоя; работоспособность без WeChat",
+      "promoted_from_watch": false,
+      "repo_full_name": "zhayujie/CowAgent",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 5,
+        "testability": 7,
+        "traction": 8,
+        "utility": 7
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 45843,
+      "test_steps": [
+        "pip install cowagent (или git clone + pip install -r requirements.txt)",
+        "Настроить config.json с API-ключами и выбором LLM",
+        "Запустить: python app.py",
+        "Проверить работу агента через Telegram или Web-интерфейс"
+      ],
+      "title": "zhayujie/CowAgent",
+      "url": "https://github.com/zhayujie/CowAgent"
     }
   }
 }

@@ -1,9 +1,10 @@
 # Recommended Claude Skills — apps_oss
 
-Total: 9
+Total: 10
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-07 | [pewdiepie-archdaemon/odysseus](https://github.com/pewdiepie-archdaemon/odysseus) |  | 81279 | 7.9 | high | git clone https://github.com/pewdiepie-archdaemon/odysseus && cd odysseus |
 | 2026-07-04 | [immich-app/immich](https://github.com/immich-app/immich) |  | 105367 | 7.9 | high | wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml |
 | 2026-07-01 | [unslothai/unsloth](https://github.com/unslothai/unsloth) |  | 67700 | 7.5 | high | pip install unsloth (или через conda для GPU-среды) |
 | 2026-07-01 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) |  | 117437 | 8.1 | high | Скачать Docker образ сервера: docker run --name hbbs -p 21115-21117:21115-21117 rustdesk/rustdesk-server |
