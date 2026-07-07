@@ -5760,6 +5760,48 @@
       "trigger_type": "manual",
       "url": "https://github.com/kevorklepedjian1/Autonomous-SDR-System"
     },
+    "https://github.com/kevorklepedjian1/N8N-GTM/blob/main/GTM.json": {
+      "category": "marketing_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматизации задач, связанных с Google Tag Manager. Подходит маркетологам и веб-аналитикам, которым нужно автоматизировать операции с GTM-контейнерами через API.",
+      "final_score": 5.6,
+      "first_recommended": "2026-07-07",
+      "integrations": [
+        "Slack",
+        "Gmail",
+        "Google Sheets",
+        "OpenAI"
+      ],
+      "metric": "Успешное выполнение GTM-операции без ошибок в логах n8n",
+      "node_count": 37,
+      "promoted_from_watch": false,
+      "repo_full_name": "kevorklepedjian1/N8N-GTM",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 4,
+        "utility": 6
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "GTM"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать GTM.json по ссылке json_url",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials для Google Tag Manager API (OAuth2)",
+        "Проверить параметры узлов: account ID, container ID",
+        "Запустить тестовый прогон на staging-контейнере GTM"
+      ],
+      "title": "kevorklepedjian1/N8N-GTM: GTM",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/kevorklepedjian1/N8N-GTM/blob/main/GTM.json"
+    },
     "https://github.com/kingler/n8n_agent": {
       "category": "devops_workflow",
       "complexity": "complex",

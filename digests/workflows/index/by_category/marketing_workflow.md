@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 17
+Total: 18
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-07 | [kevorklepedjian1/N8N-GTM: GTM](https://github.com/kevorklepedjian1/N8N-GTM/blob/main/GTM.json) | GTM |  | 5.6 | medium | Скачать GTM.json по ссылке json_url |
 | 2026-07-02 | [codezer0x/GoogleMapAIagent: Gooogle map lead ai agent](https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json) | Gooogle map lead ai agent |  | 6.5 | medium | Скачать 'Google map ai agent.json' по прямой ссылке |
 | 2026-07-02 | [codezer0x/GoogleMapAIagent: Google map ai agent](https://github.com/codezer0x/GoogleMapAIagent/blob/main/Google map ai agent.json) | Google map ai agent |  | 6.5 | medium | Скачать 'Google map ai agent.json' по прямой ссылке |
 | 2026-07-02 | [Anunai6966/linkedin-ai-commenting-bot: workflow](https://github.com/Anunai6966/linkedin-ai-commenting-bot/blob/main/workflow.json) | workflow |  | 5.6 | medium | Скачать workflow.json |

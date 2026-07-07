@@ -1,9 +1,10 @@
 # Recommended — tool: n8n
 
-Total: 253
+Total: 254
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-07 | [kevorklepedjian1/N8N-GTM: GTM](https://github.com/kevorklepedjian1/N8N-GTM/blob/main/GTM.json) | GTM |  | 5.6 | medium | Скачать GTM.json по ссылке json_url |
 | 2026-07-06 | [weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 7.1 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-... |
 | 2026-07-06 | [weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.9 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack... |
 | 2026-07-06 | [weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 7.1 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Sl... |
