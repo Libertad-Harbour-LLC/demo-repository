@@ -82,6 +82,47 @@
       "trigger_type": "schedule",
       "url": "https://github.com/AkuchiS/n8n-Templates"
     },
+    "https://github.com/AloysJehwin/job-app/blob/main/Job_App.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "high",
+      "description": "n8n-workflow для автоматизации процесса поиска и отслеживания вакансий. Предназначен для соискателей и рекрутеров, которые хотят автоматизировать рутину сбора и обработки предложений о работе.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "DeepSeek",
+        "Google Drive",
+        "Google Sheets"
+      ],
+      "metric": "Количество найденных вакансий за первые 24 часа работы",
+      "node_count": 32,
+      "promoted_from_watch": false,
+      "repo_full_name": "AloysJehwin/job-app",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Job_App"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать Job_App.json по ссылке json_url",
+        "Открыть n8n → Import Workflow → загрузить JSON",
+        "Изучить node-граф: определить источник вакансий и выход (email/sheet/Telegram)",
+        "Настроить credentials для используемых сервисов",
+        "Запустить тестовый прогон с реальным поиском вакансий"
+      ],
+      "title": "AloysJehwin/job-app: Job_App",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/AloysJehwin/job-app/blob/main/Job_App.json"
+    },
     "https://github.com/AlyyanAhmed21/AI-Lead-Qualification-CRM-Automation": {
       "category": "sales_workflow",
       "complexity": "medium",
@@ -3798,6 +3839,955 @@
       "tool": "n8n",
       "trigger_type": "schedule",
       "url": "https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/automated_crypto_price_tracker_for_discord_btc_+_eth_via_coingecko.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "automated_crypto_price_tracker_for_discord_btc_+_eth_via_coingecko"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: automated_crypto_price_tracker_for_discord_btc_+_eth_via_coingecko",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/automated_crypto_price_tracker_for_discord_btc_+_eth_via_coingecko.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_eth_crypto_sender_discord.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "birthday_anniversary_eth_crypto_sender_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: birthday_anniversary_eth_crypto_sender_discord",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_eth_crypto_sender_discord.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_eth_crypto_sender_telegram.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "birthday_anniversary_eth_crypto_sender_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: birthday_anniversary_eth_crypto_sender_telegram",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_eth_crypto_sender_telegram.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_ethereum_usdt_crypto_sender_discord.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "birthday_anniversary_ethereum_usdt_crypto_sender_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: birthday_anniversary_ethereum_usdt_crypto_sender_discord",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_ethereum_usdt_crypto_sender_discord.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_sol_crypto_sender_discord.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "birthday_anniversary_sol_crypto_sender_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: birthday_anniversary_sol_crypto_sender_discord",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_sol_crypto_sender_discord.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_sol_crypto_sender_telegram.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "birthday_anniversary_sol_crypto_sender_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: birthday_anniversary_sol_crypto_sender_telegram",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_sol_crypto_sender_telegram.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_solana_usdt_crypto_sender_telegram.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "birthday_anniversary_solana_usdt_crypto_sender_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: birthday_anniversary_solana_usdt_crypto_sender_telegram",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/birthday_anniversary_solana_usdt_crypto_sender_telegram.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_ethereum_usdt_crypto_sender_telegram.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "bithday_anniversary_ethereum_usdt_crypto_sender_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: bithday_anniversary_ethereum_usdt_crypto_sender_telegram",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_ethereum_usdt_crypto_sender_telegram.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_solana_usdc_crypto_sender_discord.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "bithday_anniversary_solana_usdc_crypto_sender_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: bithday_anniversary_solana_usdc_crypto_sender_discord",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_solana_usdc_crypto_sender_discord.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_solana_usdc_crypto_sender_telegram.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "bithday_anniversary_solana_usdc_crypto_sender_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: bithday_anniversary_solana_usdc_crypto_sender_telegram",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_solana_usdc_crypto_sender_telegram.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_solana_usdt_crypto_sender_discord.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "bithday_anniversary_solana_usdt_crypto_sender_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: bithday_anniversary_solana_usdt_crypto_sender_discord",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/bithday_anniversary_solana_usdt_crypto_sender_discord.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/crypto_news_headlines_discord_auto_poster.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "crypto_news_headlines_discord_auto_poster"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: crypto_news_headlines_discord_auto_poster",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/crypto_news_headlines_discord_auto_poster.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_eth_balance_reporter_discord.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily_eth_balance_reporter_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: daily_eth_balance_reporter_discord",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_eth_balance_reporter_discord.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_eth_balance_reporter_telegram.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily_eth_balance_reporter_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: daily_eth_balance_reporter_telegram",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_eth_balance_reporter_telegram.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_balance_reporter_discord.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily_sol_balance_reporter_discord"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: daily_sol_balance_reporter_discord",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_balance_reporter_discord.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_balance_reporter_telegram.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily_sol_balance_reporter_telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: daily_sol_balance_reporter_telegram",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_balance_reporter_telegram.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_price_discord_reporter_template.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily_sol_price_discord_reporter_template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: daily_sol_price_discord_reporter_template",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_price_discord_reporter_template.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_price_telegram_reporter_template.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily_sol_price_telegram_reporter_template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: daily_sol_price_telegram_reporter_template",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/daily_sol_price_telegram_reporter_template.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/discord_alert_for_eth_gas_fee_threshold.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "discord_alert_for_eth_gas_fee_threshold"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: discord_alert_for_eth_gas_fee_threshold",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/discord_alert_for_eth_gas_fee_threshold.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_discord_alerts.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Google Sheets",
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_discord_alerts"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_discord_alerts",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_discord_alerts.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_telegram_alerts.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Google Sheets",
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_telegram_alerts"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_telegram_alerts",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_&sol_wallet_tracker_with_live_prices_google_sheets_log_&_telegram_alerts.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_low_balance_discord_alert_template.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "eth_low_balance_discord_alert_template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: eth_low_balance_discord_alert_template",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_low_balance_discord_alert_template.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_low_balance_telegram_alert_template.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "eth_low_balance_telegram_alert_template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: eth_low_balance_telegram_alert_template",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_low_balance_telegram_alert_template.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "eth_to_usdc_automated_swap_bot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot.json"
+    },
+    "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot_with_discord_notification.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция Make (Integromat) blueprints для крипто-автоматизаций: ежедневные отчёты по балансам ETH/SOL, алерты по ценам и управление USDC/USDT апрувалами через Telegram-бота. Для держателей крипто-активов и трейдеров.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Discord"
+      ],
+      "metric": "Получение ежедневного Telegram-сообщения с балансом ETH",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "bicced/make-integromat-crypto-workflows",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "eth_to_usdc_automated_swap_bot_with_discord_notification"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать daily_eth_balance_reporter_telegram.json",
+        "Импортировать в Make через Scenarios → Import Blueprint",
+        "Настроить HTTP-модуль для Etherscan API",
+        "Подключить Telegram Bot token",
+        "Запустить тест с реальным ETH-адресом"
+      ],
+      "title": "bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot_with_discord_notification",
+      "tool": "make",
+      "url": "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot_with_discord_notification.json"
     },
     "https://github.com/bitsandbrainsai/ai-ad-creative-strategist": {
       "category": "marketing_workflow",
@@ -9569,6 +10559,48 @@
       "trigger_type": "schedule",
       "url": "https://github.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack/blob/main/workflow-template.json"
     },
+    "https://github.com/weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail/blob/main/workflow-template.json": {
+      "category": "marketing_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической генерации и согласования персонализированных email клиентам по портфелю: Gemini AI создаёт черновики, команда одобряет через Slack, финальная отправка через Gmail. Для финансовых советников и account managers.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Google Sheets",
+        "Google Gemini",
+        "Slack",
+        "Gmail"
+      ],
+      "metric": "Время от старта workflow до отправленного email клиенту (vs ручной процесс)",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Google Sheets с тестовыми данными клиентов",
+        "Настроить Gemini API key и Slack Incoming Webhook",
+        "Запустить тест с одним клиентом и проверить черновик в Slack"
+      ],
+      "title": "weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail/blob/main/workflow-template.json"
+    },
     "https://github.com/weblineindia/n8n-Forecast-Zoho-CRM-deals-with-AlphaVantage-market-data-GPT-4-Slack-alerts": {
       "category": "sales_workflow",
       "confidence": "medium",
@@ -9717,6 +10749,90 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail/blob/main/workflow-template.json"
+    },
+    "https://github.com/weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической организации Gmail-инбокса с помощью Groq AI: классифицирует письма, создаёт задачи в Google Tasks и логирует в Google Sheets. Подходит для профессионалов с высокой нагрузкой на email.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Gmail",
+        "Groq",
+        "Google Tasks",
+        "Google Sheets"
+      ],
+      "metric": "Доля входящих писем с автоматически созданной задачей или классификацией",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Gmail OAuth и Google Sheets credential",
+        "Добавить Groq API key",
+        "Запустить на тестовом inbox и проверить созданные Tasks"
+      ],
+      "title": "weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json"
+    },
+    "https://github.com/weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets/blob/main/workflow-template.json": {
+      "category": "sales_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для предсказания дат закрытия сделок с помощью Groq AI на основе данных из Google Sheets и автоматического обновления записей в Salesforce. Ориентирован на sales-команды, использующие Salesforce как основную CRM.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-08",
+      "integrations": [
+        "Groq",
+        "Gmail",
+        "Salesforce",
+        "Google Sheets"
+      ],
+      "metric": "Процент сделок с автоматически обновлённой датой закрытия в Salesforce",
+      "node_count": 22,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Google Sheets credential с тестовым листом сделок",
+        "Настроить Groq API key и Salesforce OAuth",
+        "Запустить с 3-5 тестовыми сделками и проверить, что close date обновились в Salesforce"
+      ],
+      "title": "weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Recover-abandoned-WooCommerce-carts-using-OpenAI-GPT-4.1-mini-Gmail-and-Slack": {
       "category": "web_workflow",

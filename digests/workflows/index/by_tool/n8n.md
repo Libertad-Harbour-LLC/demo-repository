@@ -1,9 +1,13 @@
 # Recommended — tool: n8n
 
-Total: 254
+Total: 258
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-08 | [weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets: workflow-template](https://github.com/weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets/blob/main/workflow-template.json) | workflow-template |  | 6.7 | medium | Скачать workflow-template.json |
+| 2026-07-08 | [weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks: workflow-template](https://github.com/weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
+| 2026-07-08 | [weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.2 | medium | Скачать workflow-template.json |
+| 2026-07-08 | [AloysJehwin/job-app: Job_App](https://github.com/AloysJehwin/job-app/blob/main/Job_App.json) | Job_App |  | 7.3 | high | Скачать Job_App.json по ссылке json_url |
 | 2026-07-07 | [kevorklepedjian1/N8N-GTM: GTM](https://github.com/kevorklepedjian1/N8N-GTM/blob/main/GTM.json) | GTM |  | 5.6 | medium | Скачать GTM.json по ссылке json_url |
 | 2026-07-06 | [weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 7.1 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-... |
 | 2026-07-06 | [weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.9 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Handle-Zendesk-WooCommerce-refund-tickets-with-Slack... |
