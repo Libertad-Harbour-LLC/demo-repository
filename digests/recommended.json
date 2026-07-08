@@ -5922,6 +5922,44 @@
       "title": "maslennikov-ig/claude-code-orchestrator-kit",
       "url": "https://github.com/maslennikov-ig/claude-code-orchestrator-kit/tree/main/.claude/skills"
     },
+    "https://github.com/matteing/opal/tree/main/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "medium",
+      "description": "Репозиторий Opal содержит 9 Claude Skills для разработчиков, работающих с Elixir/Phoenix и общими CI-процессами. Охватывает задачи от отладки и кодогенерации до управления зависимостями и прогона тестов.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-08",
+      "metric": "Насколько Claude Code лучше справляется с задачами CI-проверки и отладки с включёнными skills по сравнению с базовым промптом.",
+      "promoted_from_watch": false,
+      "repo_full_name": "matteing/opal",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "ci-preflight",
+        "citations",
+        "codegen-sync",
+        "debugging",
+        "docs",
+        "elixir-cyclic-deps",
+        "git",
+        "lint-and-format",
+        "live-tests"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: git clone https://github.com/matteing/opal.git",
+        "Скопировать нужные папки из .claude/skills/ (например, ci-preflight и debugging) в свой проект: cp -r opal/.claude/skills/ci-preflight .claude/skills/ && cp -r opal/.claude/skills/debugging .claude/skills/",
+        "Открыть свой проект в Claude Code и попросить: 'Используй skill ci-preflight и проверь, готов ли проект к CI' или 'Используй skill debugging и помоги разобраться с этой ошибкой: [вставить stacktrace]'"
+      ],
+      "title": "matteing/opal",
+      "url": "https://github.com/matteing/opal/tree/main/.claude/skills"
+    },
     "https://github.com/mattgierhart/PRD-driven-context-engineering/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",

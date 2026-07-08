@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 153
+Total: 154
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-08 | [matteing/opal](https://github.com/matteing/opal/tree/main/.claude/skills) | ci-preflight, citations, codegen-sync, +6 more |  | 6.6 | medium | Клонировать репо: git clone https://github.com/matteing/opal.git |
 | 2026-07-06 | [seldonframe/seldonframe](https://github.com/seldonframe/seldonframe/tree/main/.claude/skills) | generate-and-grade, handoff, ship-feature, +2 more |  | 6.5 | medium | git clone https://github.com/seldonframe/seldonframe.git && cp -r seldonframe/.claude/skills/* .claude/skills/ |
 | 2026-07-06 | [forbotsake/forbotsake](https://github.com/forbotsake/forbotsake/tree/main/.claude/skills) | autoplan, benchmark, browse, +33 more |  | 7.0 | medium | git clone https://github.com/forbotsake/forbotsake.git && cp -r forbotsake/.claude/skills/* .claude/skills/ |
 | 2026-07-04 | [KimYx0207/agent-teams-playbook](https://github.com/KimYx0207/agent-teams-playbook/tree/main/.claude/skills/agent-teams-playbook) | agent-teams-playbook |  | 6.5 | medium | git clone https://github.com/KimYx0207/agent-teams-playbook и скопировать .claude/skills/agent-teams-playbook/ в свой... |
