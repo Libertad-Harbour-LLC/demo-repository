@@ -1,9 +1,11 @@
 # Recommended Claude Skills — video_workflow
 
-Total: 10
+Total: 12
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [iamadoctorforreal/Video-Generator-Workflow: n8n_workflow](https://github.com/iamadoctorforreal/Video-Generator-Workflow/blob/main/n8n_workflow.json) | n8n_workflow |  | 6.6 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-09 | [ahmed-ali-codes/n8n-ai-youtube-shorts-automation: ai-shorts-automation-pro](https://github.com/ahmed-ali-codes/n8n-ai-youtube-shorts-automation/blob/main/ai-shorts-automation-pro.json) | ai-shorts-automation-pro |  | 6.1 | medium | Скачать ai-shorts-automation-pro.json |
 | 2026-07-06 | [kker4m/pov-videos-n8n-workflow: template](https://github.com/kker4m/pov-videos-n8n-workflow/blob/main/template.json) | template |  | 7.0 | medium | Скачать JSON: https://raw.githubusercontent.com/kker4m/pov-videos-n8n-workflow/main/template.json |
 | 2026-07-02 | [prashant1507/n8n-youtube-ai-shorts-pipeline: video-pipeline-youtube](https://github.com/prashant1507/n8n-youtube-ai-shorts-pipeline/blob/main/n8n/video-pipeline-youtube.json) | video-pipeline-youtube |  | 6.4 | medium | Скачать video-pipeline-youtube.json |
 | 2026-06-30 | [shikherjha/n8n-video-Summarizer-Bot: worflow](https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/worflow.json) | worflow |  | 5.8 | medium | Скачать worflow.json (опечатка в имени файла — это штатное имя) |

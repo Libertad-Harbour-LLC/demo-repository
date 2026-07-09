@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 19
+Total: 20
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [weblineindia/n8n-Send-promo-code-expiry-alerts: workflow-template](https://github.com/weblineindia/n8n-Send-promo-code-expiry-alerts-using-Webhook-Google-Sheets-Gmail-and-Slack) | workflow-template |  | 6.5 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-08 | [weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.2 | medium | Скачать workflow-template.json |
 | 2026-07-07 | [kevorklepedjian1/N8N-GTM: GTM](https://github.com/kevorklepedjian1/N8N-GTM/blob/main/GTM.json) | GTM |  | 5.6 | medium | Скачать GTM.json по ссылке json_url |
 | 2026-07-02 | [codezer0x/GoogleMapAIagent: Gooogle map lead ai agent](https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json) | Gooogle map lead ai agent |  | 6.5 | medium | Скачать 'Google map ai agent.json' по прямой ссылке |

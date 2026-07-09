@@ -1,9 +1,25 @@
 # Recommended — tool: make
 
-Total: 29
+Total: 45
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [tribe-framework/types.json: types](https://github.com/tribe-framework/types.json/blob/master/types.json) | types |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: survey-data-collector](https://github.com/tribe-framework/types.json/blob/master/blueprints/survey-data-collector.json) | survey-data-collector |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: project-task-manager](https://github.com/tribe-framework/types.json/blob/master/blueprints/project-task-manager.json) | project-task-manager |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: portfolio](https://github.com/tribe-framework/types.json/blob/master/blueprints/portfolio.json) | portfolio |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: news-media-command-center](https://github.com/tribe-framework/types.json/blob/master/blueprints/news-media-command-center.json) | news-media-command-center |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: lead-management-system](https://github.com/tribe-framework/types.json/blob/master/blueprints/lead-management-system.json) | lead-management-system |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: junction](https://github.com/tribe-framework/types.json/blob/master/junction.json) | junction |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: inventory-tracker](https://github.com/tribe-framework/types.json/blob/master/blueprints/inventory-tracker.json) | inventory-tracker |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: event-registration](https://github.com/tribe-framework/types.json/blob/master/blueprints/event-registration.json) | event-registration |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: employee-directory](https://github.com/tribe-framework/types.json/blob/master/blueprints/employee-directory.json) | employee-directory |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: e-commerce](https://github.com/tribe-framework/types.json/blob/master/blueprints/e-commerce.json) | e-commerce |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: customer-feedback-hub](https://github.com/tribe-framework/types.json/blob/master/blueprints/customer-feedback-hub.json) | customer-feedback-hub |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: content-calendar](https://github.com/tribe-framework/types.json/blob/master/blueprints/content-calendar.json) | content-calendar |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: client-onboarding](https://github.com/tribe-framework/types.json/blob/master/blueprints/client-onboarding.json) | client-onboarding |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: bug-report-tracker](https://github.com/tribe-framework/types.json/blob/master/blueprints/bug-report-tracker.json) | bug-report-tracker |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: blog](https://github.com/tribe-framework/types.json/blob/master/blueprints/blog.json) | blog |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot_with_discord_notification](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot_with_discord_notification.json) | eth_to_usdc_automated_swap_bot_with_discord_notification |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot.json) | eth_to_usdc_automated_swap_bot |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_low_balance_telegram_alert_template](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_low_balance_telegram_alert_template.json) | eth_low_balance_telegram_alert_template |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |

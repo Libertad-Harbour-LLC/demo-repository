@@ -1,9 +1,26 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 80
+Total: 97
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [weblineindia/n8n-Summarize-Zoom-meetings: workflow-template](https://github.com/weblineindia/n8n-Summarize-Zoom-meetings-with-GPT-4o-Whisper-Supabase-RAG-and-email-reports) | workflow-template |  | 6.7 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-09 | [tribe-framework/types.json: types](https://github.com/tribe-framework/types.json/blob/master/types.json) | types |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: survey-data-collector](https://github.com/tribe-framework/types.json/blob/master/blueprints/survey-data-collector.json) | survey-data-collector |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: project-task-manager](https://github.com/tribe-framework/types.json/blob/master/blueprints/project-task-manager.json) | project-task-manager |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: portfolio](https://github.com/tribe-framework/types.json/blob/master/blueprints/portfolio.json) | portfolio |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: news-media-command-center](https://github.com/tribe-framework/types.json/blob/master/blueprints/news-media-command-center.json) | news-media-command-center |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: lead-management-system](https://github.com/tribe-framework/types.json/blob/master/blueprints/lead-management-system.json) | lead-management-system |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: junction](https://github.com/tribe-framework/types.json/blob/master/junction.json) | junction |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: inventory-tracker](https://github.com/tribe-framework/types.json/blob/master/blueprints/inventory-tracker.json) | inventory-tracker |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: event-registration](https://github.com/tribe-framework/types.json/blob/master/blueprints/event-registration.json) | event-registration |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: employee-directory](https://github.com/tribe-framework/types.json/blob/master/blueprints/employee-directory.json) | employee-directory |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: e-commerce](https://github.com/tribe-framework/types.json/blob/master/blueprints/e-commerce.json) | e-commerce |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: customer-feedback-hub](https://github.com/tribe-framework/types.json/blob/master/blueprints/customer-feedback-hub.json) | customer-feedback-hub |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: content-calendar](https://github.com/tribe-framework/types.json/blob/master/blueprints/content-calendar.json) | content-calendar |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: client-onboarding](https://github.com/tribe-framework/types.json/blob/master/blueprints/client-onboarding.json) | client-onboarding |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: bug-report-tracker](https://github.com/tribe-framework/types.json/blob/master/blueprints/bug-report-tracker.json) | bug-report-tracker |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
+| 2026-07-09 | [tribe-framework/types.json: blog](https://github.com/tribe-framework/types.json/blob/master/blueprints/blog.json) | blog |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
 | 2026-07-08 | [weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks: workflow-template](https://github.com/weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
 | 2026-07-08 | [AloysJehwin/job-app: Job_App](https://github.com/AloysJehwin/job-app/blob/main/Job_App.json) | Job_App |  | 7.3 | high | Скачать Job_App.json по ссылке json_url |
 | 2026-07-06 | [weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack: workflow-template](https://github.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/blob/main/workflow-template.json) | workflow-template |  | 7.1 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-... |

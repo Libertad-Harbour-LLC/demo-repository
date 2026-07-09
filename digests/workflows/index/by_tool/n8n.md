@@ -1,9 +1,19 @@
 # Recommended — tool: n8n
 
-Total: 258
+Total: 268
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [weblineindia/n8n-Summarize-Zoom-meetings: workflow-template](https://github.com/weblineindia/n8n-Summarize-Zoom-meetings-with-GPT-4o-Whisper-Supabase-RAG-and-email-reports) | workflow-template |  | 6.7 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-09 | [weblineindia/n8n-Send-promo-code-expiry-alerts: workflow-template](https://github.com/weblineindia/n8n-Send-promo-code-expiry-alerts-using-Webhook-Google-Sheets-Gmail-and-Slack) | workflow-template |  | 6.5 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-09 | [weblineindia/n8n-Qualify-and-route-high-intent-leads: workflow-template](https://github.com/weblineindia/n8n-Qualify-and-route-high-intent-leads-with-OpenAI-Airtable-and-Slack) | workflow-template |  | 6.8 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-09 | [weblineindia/n8n-Detect-fraud-in-user-activity: workflow-template](https://github.com/weblineindia/n8n-Detect-fraud-in-user-activity-with-PostgreSQL-OpenAI-and-Slack) | workflow-template |  | 6.8 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-09 | [iamadoctorforreal/Video-Generator-Workflow: n8n_workflow](https://github.com/iamadoctorforreal/Video-Generator-Workflow/blob/main/n8n_workflow.json) | n8n_workflow |  | 6.6 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-09 | [ahmed-ali-codes/n8n-ai-youtube-shorts-automation: ai-shorts-automation-pro](https://github.com/ahmed-ali-codes/n8n-ai-youtube-shorts-automation/blob/main/ai-shorts-automation-pro.json) | ai-shorts-automation-pro |  | 6.1 | medium | Скачать ai-shorts-automation-pro.json |
+| 2026-07-09 | [IT-Nomad-Lab/nomad: self-dev-scheduler.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/self-dev-scheduler.workflow.json) | self-dev-scheduler.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
+| 2026-07-09 | [IT-Nomad-Lab/nomad: n8n-v2-send.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/v2/n8n-v2-send.workflow.json) | n8n-v2-send.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
+| 2026-07-09 | [IT-Nomad-Lab/nomad: approval-gate.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate.workflow.json) | approval-gate.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
+| 2026-07-09 | [IT-Nomad-Lab/nomad: approval-gate-v2.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate-v2.workflow.json) | approval-gate-v2.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
 | 2026-07-08 | [weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets: workflow-template](https://github.com/weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets/blob/main/workflow-template.json) | workflow-template |  | 6.7 | medium | Скачать workflow-template.json |
 | 2026-07-08 | [weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks: workflow-template](https://github.com/weblineindia/n8n-Organize-Gmail-inbox-with-Groq-AI-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
 | 2026-07-08 | [weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.2 | medium | Скачать workflow-template.json |

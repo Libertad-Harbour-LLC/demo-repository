@@ -1,9 +1,13 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 46
+Total: 50
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [IT-Nomad-Lab/nomad: self-dev-scheduler.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/self-dev-scheduler.workflow.json) | self-dev-scheduler.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
+| 2026-07-09 | [IT-Nomad-Lab/nomad: n8n-v2-send.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/v2/n8n-v2-send.workflow.json) | n8n-v2-send.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
+| 2026-07-09 | [IT-Nomad-Lab/nomad: approval-gate.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate.workflow.json) | approval-gate.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
+| 2026-07-09 | [IT-Nomad-Lab/nomad: approval-gate-v2.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate-v2.workflow.json) | approval-gate-v2.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
 | 2026-07-05 | [weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Automate-incident-reporting-alerts-with-forms-Google-Sheets-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 5.9 | medium | Скачать workflow-template.json |
 | 2026-07-05 | [weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack: workflow-template](https://github.com/weblineindia/n8n-Auto-generate-GitHub-release-notes-and-notify-via-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.3 | medium | Скачать workflow-template.json |
 | 2026-07-01 | [tecno-consultores/ISP-Copilot: wf_event_controller_zabbix](https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_zabbix.json) | wf_event_controller_zabbix |  | 7.3 | medium | Скачать JSON нужного workflow (например RAG_qdrant.json или consultar_estado_bgp.json) |

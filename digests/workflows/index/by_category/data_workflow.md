@@ -1,9 +1,10 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 43
+Total: 44
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [weblineindia/n8n-Detect-fraud-in-user-activity: workflow-template](https://github.com/weblineindia/n8n-Detect-fraud-in-user-activity-with-PostgreSQL-OpenAI-and-Slack) | workflow-template |  | 6.8 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot_with_discord_notification](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot_with_discord_notification.json) | eth_to_usdc_automated_swap_bot_with_discord_notification |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot.json) | eth_to_usdc_automated_swap_bot |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_low_balance_telegram_alert_template](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_low_balance_telegram_alert_template.json) | eth_low_balance_telegram_alert_template |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |

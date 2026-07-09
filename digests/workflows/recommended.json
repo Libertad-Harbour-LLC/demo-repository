@@ -984,6 +984,159 @@
       "trigger_type": "webhook",
       "url": "https://github.com/Frumane/n8n-workflows/blob/master/workflows/lead-intake-scoring.json"
     },
+    "https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate-v2.workflow.json": {
+      "category": "devops_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n репозиторий с тремя workflows для DevOps: approval-gate (gate с ручным подтверждением), его v2 и self-dev-scheduler. Подходит для команд, которым нужен контроль деплоев или ручное подтверждение задач в пайплайне.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-09",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Процент операций, прошедших через gate с явным подтверждением",
+      "node_count": 20,
+      "promoted_from_watch": false,
+      "repo_full_name": "IT-Nomad-Lab/nomad",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "approval-gate-v2.workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать approval-gate-v2.workflow.json",
+        "Импортировать в n8n через Import Workflow",
+        "Просмотреть нод-граф и понять механизм ожидания подтверждения",
+        "Настроить email или Slack для уведомлений об ожидающем подтверждении",
+        "Запустить тестовый прогон и подтвердить через предусмотренный интерфейс"
+      ],
+      "title": "IT-Nomad-Lab/nomad: approval-gate-v2.workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate-v2.workflow.json"
+    },
+    "https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate.workflow.json": {
+      "category": "devops_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n репозиторий с тремя workflows для DevOps: approval-gate (gate с ручным подтверждением), его v2 и self-dev-scheduler. Подходит для команд, которым нужен контроль деплоев или ручное подтверждение задач в пайплайне.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-09",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Процент операций, прошедших через gate с явным подтверждением",
+      "node_count": 20,
+      "promoted_from_watch": false,
+      "repo_full_name": "IT-Nomad-Lab/nomad",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "approval-gate.workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать approval-gate-v2.workflow.json",
+        "Импортировать в n8n через Import Workflow",
+        "Просмотреть нод-граф и понять механизм ожидания подтверждения",
+        "Настроить email или Slack для уведомлений об ожидающем подтверждении",
+        "Запустить тестовый прогон и подтвердить через предусмотренный интерфейс"
+      ],
+      "title": "IT-Nomad-Lab/nomad: approval-gate.workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate.workflow.json"
+    },
+    "https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/self-dev-scheduler.workflow.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "n8n репозиторий с тремя workflows для DevOps: approval-gate (gate с ручным подтверждением), его v2 и self-dev-scheduler. Подходит для команд, которым нужен контроль деплоев или ручное подтверждение задач в пайплайне.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-09",
+      "metric": "Процент операций, прошедших через gate с явным подтверждением",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "IT-Nomad-Lab/nomad",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "self-dev-scheduler.workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать approval-gate-v2.workflow.json",
+        "Импортировать в n8n через Import Workflow",
+        "Просмотреть нод-граф и понять механизм ожидания подтверждения",
+        "Настроить email или Slack для уведомлений об ожидающем подтверждении",
+        "Запустить тестовый прогон и подтвердить через предусмотренный интерфейс"
+      ],
+      "title": "IT-Nomad-Lab/nomad: self-dev-scheduler.workflow",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/self-dev-scheduler.workflow.json"
+    },
+    "https://github.com/IT-Nomad-Lab/nomad/blob/main/v2/n8n-v2-send.workflow.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "n8n репозиторий с тремя workflows для DevOps: approval-gate (gate с ручным подтверждением), его v2 и self-dev-scheduler. Подходит для команд, которым нужен контроль деплоев или ручное подтверждение задач в пайплайне.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-09",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Процент операций, прошедших через gate с явным подтверждением",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "IT-Nomad-Lab/nomad",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n-v2-send.workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать approval-gate-v2.workflow.json",
+        "Импортировать в n8n через Import Workflow",
+        "Просмотреть нод-граф и понять механизм ожидания подтверждения",
+        "Настроить email или Slack для уведомлений об ожидающем подтверждении",
+        "Запустить тестовый прогон и подтвердить через предусмотренный интерфейс"
+      ],
+      "title": "IT-Nomad-Lab/nomad: n8n-v2-send.workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/IT-Nomad-Lab/nomad/blob/main/v2/n8n-v2-send.workflow.json"
+    },
     "https://github.com/JeffersonMFti/agente-dra-julia-advocacia": {
       "category": "general_workflow",
       "complexity": "complex",
@@ -3561,6 +3714,47 @@
       "trigger_type": "manual",
       "url": "https://github.com/agnellolucas/n8n-shopify-seo-product-image-optimizer"
     },
+    "https://github.com/ahmed-ali-codes/n8n-ai-youtube-shorts-automation/blob/main/ai-shorts-automation-pro.json": {
+      "category": "video_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматизации создания и публикации YouTube Shorts с использованием AI. Предназначен для контент-мейкеров и SMM-специалистов, производящих короткий видеоконтент серийно.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-09",
+      "integrations": [
+        "Google Sheets",
+        "OpenAI",
+        "YouTube"
+      ],
+      "metric": "Количество Shorts, опубликованных автоматически в единицу времени",
+      "node_count": 15,
+      "promoted_from_watch": false,
+      "repo_full_name": "ahmed-ali-codes/n8n-ai-youtube-shorts-automation",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-shorts-automation-pro"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-shorts-automation-pro.json",
+        "Импортировать в n8n через Import Workflow",
+        "Изучить node-граф и определить используемые сервисы",
+        "Настроить credentials (YouTube API, AI-сервис для генерации)",
+        "Запустить тест с коротким входным текстом"
+      ],
+      "title": "ahmed-ali-codes/n8n-ai-youtube-shorts-automation: ai-shorts-automation-pro",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/ahmed-ali-codes/n8n-ai-youtube-shorts-automation/blob/main/ai-shorts-automation-pro.json"
+    },
     "https://github.com/akahappygit/AI-Lead-Generation-Automation": {
       "category": "marketing_workflow",
       "complexity": "complex",
@@ -5819,6 +6013,42 @@
       "tool": "n8n",
       "trigger_type": "schedule",
       "url": "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram"
+    },
+    "https://github.com/iamadoctorforreal/Video-Generator-Workflow/blob/main/n8n_workflow.json": {
+      "category": "video_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической генерации видео. Репозиторий ориентирован на контент-мейкеров и команды, создающие видеоматериалы в автоматическом режиме без ручного монтажа.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-09",
+      "metric": "Время от запуска workflow до готового видео-файла",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "iamadoctorforreal/Video-Generator-Workflow",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Изучить node-граф для понимания используемых сервисов",
+        "Настроить credentials для видео-API (определить по нодам после импорта)",
+        "Запустить тестовый прогон с коротким входным параметром"
+      ],
+      "title": "iamadoctorforreal/Video-Generator-Workflow: n8n_workflow",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/iamadoctorforreal/Video-Generator-Workflow/blob/main/n8n_workflow.json"
     },
     "https://github.com/inthecyber-group/securityonion-n8n-workflows": {
       "category": "devops_workflow",
@@ -9138,6 +9368,566 @@
       "trigger_type": "webhook",
       "url": "https://github.com/traylorre/openclaw-mac"
     },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/blog.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 33,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "blog"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: blog",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/blog.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/bug-report-tracker.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 30,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "bug-report-tracker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: bug-report-tracker",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/bug-report-tracker.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/client-onboarding.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 88,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "client-onboarding"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: client-onboarding",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/client-onboarding.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/content-calendar.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 49,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "content-calendar"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: content-calendar",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/content-calendar.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/customer-feedback-hub.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 42,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "customer-feedback-hub"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: customer-feedback-hub",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/customer-feedback-hub.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/e-commerce.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 40,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "e-commerce"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: e-commerce",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/e-commerce.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/employee-directory.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 37,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "employee-directory"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: employee-directory",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/employee-directory.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/event-registration.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 40,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "event-registration"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: event-registration",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/event-registration.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/inventory-tracker.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 44,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "inventory-tracker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: inventory-tracker",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/inventory-tracker.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/lead-management-system.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 31,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "lead-management-system"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: lead-management-system",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/lead-management-system.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/news-media-command-center.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 56,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "news-media-command-center"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: news-media-command-center",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/news-media-command-center.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/portfolio.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 15,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "portfolio"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: portfolio",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/portfolio.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/project-task-manager.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 44,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "project-task-manager"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: project-task-manager",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/project-task-manager.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/blueprints/survey-data-collector.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 46,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "survey-data-collector"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: survey-data-collector",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/blueprints/survey-data-collector.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/junction.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 21,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "junction"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: junction",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/junction.json"
+    },
+    "https://github.com/tribe-framework/types.json/blob/master/types.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Make-репозиторий с набором из 8 blueprint-шаблонов для типовых бизнес-процессов: ведение блога, онбординг клиентов, контент-календарь, e-commerce, регистрация на события, трекинг багов и другие. Подходит для малого бизнеса и агентств.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-09",
+      "metric": "Время настройки сценария от импорта до первого успешного прогона",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "tribe-framework/types.json",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "types"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть нужный blueprint JSON (например, content-calendar.json)",
+        "Импортировать в Make через Scenarios > Import Blueprint",
+        "Просмотреть граф модулей и определить нужные credentials",
+        "Настроить подключения к используемым сервисам",
+        "Запустить сценарий в режиме тестирования"
+      ],
+      "title": "tribe-framework/types.json: types",
+      "tool": "make",
+      "url": "https://github.com/tribe-framework/types.json/blob/master/types.json"
+    },
     "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/abandoned_cart_email.json": {
       "category": "photo_workflow",
       "complexity": "medium",
@@ -10559,6 +11349,39 @@
       "trigger_type": "schedule",
       "url": "https://github.com/weblineindia/n8n-Detect-WooCommerce-order-fraud-and-send-alerts-to-Slack/blob/main/workflow-template.json"
     },
+    "https://github.com/weblineindia/n8n-Detect-fraud-in-user-activity-with-PostgreSQL-OpenAI-and-Slack": {
+      "category": "data_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для обнаружения подозрительной активности пользователей путём анализа данных из PostgreSQL с помощью OpenAI и отправки алертов в Slack. Подходит для SaaS-продуктов и финтех-компаний.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-09",
+      "metric": "Количество выявленных подозрительных сессий за период против ручного выявления",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Detect-fraud-in-user-activity: workflow-template",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить PostgreSQL credential (host, port, db, user, password)",
+        "Настроить OpenAI API key и Slack Bot Token",
+        "Запустить с тестовыми данными и проверить алерт в Slack"
+      ],
+      "title": "weblineindia/n8n-Detect-fraud-in-user-activity: workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Detect-fraud-in-user-activity-with-PostgreSQL-OpenAI-and-Slack"
+    },
     "https://github.com/weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail/blob/main/workflow-template.json": {
       "category": "marketing_workflow",
       "complexity": "complex",
@@ -10834,6 +11657,39 @@
       "trigger_type": "schedule",
       "url": "https://github.com/weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets/blob/main/workflow-template.json"
     },
+    "https://github.com/weblineindia/n8n-Qualify-and-route-high-intent-leads-with-OpenAI-Airtable-and-Slack": {
+      "category": "sales_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической квалификации входящих лидов через OpenAI и маршрутизации по уровню интереса в Airtable с уведомлениями в Slack. Подходит для sales-команд, работающих с большим объёмом входящих заявок.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-09",
+      "metric": "Процент лидов, корректно квалифицированных и назначенных менеджеру без ручного вмешательства",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Qualify-and-route-high-intent-leads: workflow-template",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: OpenAI API key, Airtable API key, Slack Bot Token",
+        "Указать ID базы Airtable и канал Slack в параметрах нод",
+        "Запустить тестовый прогон с тестовым лидом через Webhook"
+      ],
+      "title": "weblineindia/n8n-Qualify-and-route-high-intent-leads: workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Qualify-and-route-high-intent-leads-with-OpenAI-Airtable-and-Slack"
+    },
     "https://github.com/weblineindia/n8n-Recover-abandoned-WooCommerce-carts-using-OpenAI-GPT-4.1-mini-Gmail-and-Slack": {
       "category": "web_workflow",
       "confidence": "medium",
@@ -10974,6 +11830,39 @@
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Send-AI-personalized-deal-follow-ups-from-Zoho-CRM-via-email-Slack-and-WhatsApp-with-Gemini"
     },
+    "https://github.com/weblineindia/n8n-Send-promo-code-expiry-alerts-using-Webhook-Google-Sheets-Gmail-and-Slack": {
+      "category": "marketing_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для отслеживания сроков действия промокодов из Google Sheets и автоматической отправки уведомлений по email (Gmail) и в Slack до истечения срока. Подходит для e-commerce и маркетинговых команд.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-09",
+      "metric": "Количество промокодов с предупреждением, отправленным вовремя до истечения",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Send-promo-code-expiry-alerts: workflow-template",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить Google Sheets credential и указать ID таблицы с промокодами",
+        "Настроить Gmail и Slack credentials",
+        "Запустить тест с тестовой таблицей с промокодом, истекающим завтра"
+      ],
+      "title": "weblineindia/n8n-Send-promo-code-expiry-alerts: workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Send-promo-code-expiry-alerts-using-Webhook-Google-Sheets-Gmail-and-Slack"
+    },
     "https://github.com/weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack/blob/main/workflow-template.json": {
       "category": "general_workflow",
       "complexity": "medium",
@@ -11014,6 +11903,39 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/weblineindia/n8n-Summarize-Gmail-support-emails-with-Gemini-and-post-to-Slack/blob/main/workflow-template.json"
+    },
+    "https://github.com/weblineindia/n8n-Summarize-Zoom-meetings-with-GPT-4o-Whisper-Supabase-RAG-and-email-reports": {
+      "category": "general_workflow",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической транскрипции Zoom-звонков через Whisper, суммаризации с GPT-4o, сохранения в Supabase с RAG-индексацией и отправки email-отчёта участникам. Подходит для команд, проводящих много встреч.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-09",
+      "metric": "Время от окончания встречи до получения email-отчёта с summary",
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Summarize-Zoom-meetings: workflow-template",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить OpenAI credential (для GPT-4o и Whisper)",
+        "Настроить Supabase credential и создать таблицу для хранения транскриптов",
+        "Прогнать тест с записью короткого Zoom-звонка"
+      ],
+      "title": "weblineindia/n8n-Summarize-Zoom-meetings: workflow-template",
+      "tool": "n8n",
+      "url": "https://github.com/weblineindia/n8n-Summarize-Zoom-meetings-with-GPT-4o-Whisper-Supabase-RAG-and-email-reports"
     },
     "https://github.com/weblineindia/n8n-Website-SEO-health-analytics-with-Google-Sheets-PDF-reports-Gmail-alerts": {
       "category": "web_workflow",
