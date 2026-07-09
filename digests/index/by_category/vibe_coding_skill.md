@@ -1,9 +1,11 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 154
+Total: 156
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [wshobson/agents](https://github.com/wshobson/agents) | screen-reader-testing, wcag-audit-patterns, multi-reviewer-patterns, +28 more |  | 8.5 | high | Клонировать: git clone https://github.com/wshobson/agents.git |
+| 2026-07-09 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | api-and-interface-design, browser-testing-with-devtools, ci-cd-and-automation, +21 more |  | 8.7 | high | Клонировать репо: git clone https://github.com/addyosmani/agent-skills.git |
 | 2026-07-08 | [matteing/opal](https://github.com/matteing/opal/tree/main/.claude/skills) | ci-preflight, citations, codegen-sync, +6 more |  | 6.6 | medium | Клонировать репо: git clone https://github.com/matteing/opal.git |
 | 2026-07-06 | [seldonframe/seldonframe](https://github.com/seldonframe/seldonframe/tree/main/.claude/skills) | generate-and-grade, handoff, ship-feature, +2 more |  | 6.5 | medium | git clone https://github.com/seldonframe/seldonframe.git && cp -r seldonframe/.claude/skills/* .claude/skills/ |
 | 2026-07-06 | [forbotsake/forbotsake](https://github.com/forbotsake/forbotsake/tree/main/.claude/skills) | autoplan, benchmark, browse, +33 more |  | 7.0 | medium | git clone https://github.com/forbotsake/forbotsake.git && cp -r forbotsake/.claude/skills/* .claude/skills/ |

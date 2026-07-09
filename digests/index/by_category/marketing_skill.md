@@ -1,9 +1,11 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 19
+Total: 21
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-09 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | seo-audit, copywriting, marketing-psychology, +23 more |  | 9.2 | high | Установить через Claude Code: /install coreyhaines31/marketingskills (или клонировать репо и скопировать skills папку... |
+| 2026-07-09 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | seo-ahrefs, seo-image-gen, seo-bing, +30 more |  | 8.1 | high | Клонировать: git clone https://github.com/AgriciDaniel/claude-seo.git |
 | 2026-06-29 | [seo-skills/seo-audit-skill](https://github.com/seo-skills/seo-audit-skill/blob/main/skill/SKILL.md) | seo-audit-skill |  | 7.0 | high | git clone https://github.com/seo-skills/seo-audit-skill && скопировать skill/SKILL.md в .claude/skills/seo-audit/SKIL... |
 | 2026-06-21 | [LeadGrowGTM/research-process-builder](https://github.com/LeadGrowGTM/research-process-builder/tree/master/.claude/skills) | graduate-to-trigger, research-agent, trigger-agents, +5 more |  | 7.3 | medium | git clone https://github.com/LeadGrowGTM/research-process-builder && cp -r research-process-builder/.claude/skills/re... |
 | 2026-06-17 | [Infrasity-Labs/dev-gtm-claude-skills](https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/main/.claude/skills) | ab-testing, ad-creative, ai-seo, +17 more |  | 8.2 | medium | Клонировать репо: git clone https://github.com/Infrasity-Labs/dev-gtm-claude-skills.git |
