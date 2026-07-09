@@ -207,31 +207,54 @@ def _repo_meta(full_name: str) -> dict:
     }
 
 
-def _list_skill_dirs(full_name: str, ref: str | None = None):
-    """Return list of skill directory names under .claude/skills.
+# Directories that never contain publishable skills (mirrors the SKIP_DIRS of
+# vercel-labs/skills). Checked segment-wise against each SKILL.md path.
+_SKIP_DIR_SEGMENTS = {"node_modules", ".git", "dist", "build", "__pycache__", "vendor"}
+# Bound per-repo skill count so a mega-monorepo can't flood the digest entry.
+_MAX_SKILLS_PER_REPO = 50
 
-    ``ref`` optionally pins a branch/tag (passed as the contents API ``ref``)
-    so callers can list skills that live on a non-default branch.
+
+def _skill_folders_from_tree(full_name: str, branch: str):
+    """All skill folders in a repo via ONE recursive git-tree call.
+
+    Borrowed from vercel-labs/skills: instead of probing only
+    ``/contents/.claude/skills``, fetch the full tree and collect every
+    ``SKILL.md`` (case-insensitive basename match) anywhere in the repo —
+    ``.claude/skills/``, ``skills/<category>/<skill>/`` catalog layouts,
+    ``.agents/skills/``, ``.codex/skills/`` and the other cross-agent dirs,
+    or a single root-level SKILL.md. Same request cost as the old probe.
 
     Returns:
-        list[str] — directories found (possibly empty if .claude/skills exists but empty).
-        None — repo has no .claude/skills directory (404).
-        RATE_LIMITED — verification unknown due to rate-limit; caller should keep
-        the candidate as unverified rather than dropping it.
+        list[str] — skill folder paths ('' for a root SKILL.md), ≤ _MAX cap.
+        None — repo has no SKILL.md anywhere (or tree unavailable / 404).
+        RATE_LIMITED — verification unknown; caller keeps candidate unverified.
     """
-    params = {"ref": ref} if ref else None
-    data = _safe_get(f"{REPO_API_URL}/{full_name}/contents/.claude/skills", params=params)
+    data = _safe_get(
+        f"{REPO_API_URL}/{full_name}/git/trees/{branch}",
+        params={"recursive": "1"},
+    )
     if data == RATE_LIMITED:
         return RATE_LIMITED
-    if data is None:
+    if not isinstance(data, dict):
         return None
-    if not isinstance(data, list):
-        return []
-    return [
-        entry.get("name")
-        for entry in data
-        if isinstance(entry, dict) and entry.get("type") == "dir" and entry.get("name")
-    ]
+    folders: list[str] = []
+    seen: set[str] = set()
+    for node in data.get("tree") or []:
+        if not isinstance(node, dict) or node.get("type") != "blob":
+            continue
+        path = node.get("path") or ""
+        segs = path.split("/")
+        if segs[-1].lower() != "skill.md":
+            continue
+        if any(s in _SKIP_DIR_SEGMENTS for s in segs[:-1]):
+            continue
+        folder = "/".join(segs[:-1])
+        if folder not in seen:
+            seen.add(folder)
+            folders.append(folder)
+        if len(folders) >= _MAX_SKILLS_PER_REPO:
+            break
+    return folders or None
 
 
 def _skills_meta_line(stars: int, skills: list[dict], description: str) -> str:
@@ -302,9 +325,9 @@ def fetch_github(
                 repo_meta_cache[full] = _repo_meta(full)
             return repo_meta_cache[full]
 
-        def _dirs_for(full: str):
+        def _folders_for(full: str, branch: str):
             if full not in repo_dirs_cache:
-                repo_dirs_cache[full] = _list_skill_dirs(full)
+                repo_dirs_cache[full] = _skill_folders_from_tree(full, branch)
             return repo_dirs_cache[full]
 
         for full, cand in repos.items():
@@ -318,7 +341,7 @@ def fetch_github(
                 skills_dir_url = _build_skill_dir_url(full, ".claude/skills", branch)
 
                 if verify:
-                    dirs = _dirs_for(full)
+                    dirs = _folders_for(full, branch)
                     if dirs == RATE_LIMITED:
                         # Verification unknown — keep as unverified single repo item.
                         items.append(
@@ -361,26 +384,44 @@ def fetch_github(
                         # else: topic/desc-search candidate without skills dir — drop
                         continue
 
-                    # 200 OK: build ONE repo item listing all skill dirs.
+                    # 200 OK: build ONE repo item listing all skill folders
+                    # found anywhere in the tree ('' = root-level SKILL.md).
                     if not dirs:
-                        # .claude/skills exists but empty — skip
                         continue
-                    skills_list = [
-                        {
-                            "name": name,
-                            "path": f".claude/skills/{name}",
-                            "url": _build_skill_dir_url(full, f".claude/skills/{name}", branch),
-                        }
-                        for name in dirs
-                    ]
+                    skills_list = []
+                    for folder in dirs:
+                        if folder:
+                            name = folder.rsplit("/", 1)[-1]
+                            skills_list.append(
+                                {
+                                    "name": name,
+                                    "path": folder,
+                                    "url": _build_skill_dir_url(full, folder, branch),
+                                }
+                            )
+                        else:  # root-level SKILL.md — the repo IS the skill
+                            skills_list.append(
+                                {
+                                    "name": full.rsplit("/", 1)[-1],
+                                    "path": "SKILL.md",
+                                    "url": _build_skill_url(full, "SKILL.md", branch),
+                                }
+                            )
+                    # Keep the legacy .claude/skills link when that's where the
+                    # skills live; otherwise point at the repo root.
+                    all_claude = all(
+                        (f or "").startswith(".claude/skills") for f in dirs
+                    )
+                    item_url = skills_dir_url if all_claude else repo_html
+                    item_skill_path = ".claude/skills" if all_claude else (dirs[0] or "SKILL.md")
                     items.append(
                         {
                             "source": "github",
                             "title": full,
-                            "url": skills_dir_url,
+                            "url": item_url,
                             "meta": _skills_meta_line(stars, skills_list, description),
                             "verified": True,
-                            "skill_path": ".claude/skills",
+                            "skill_path": item_skill_path,
                             "repo_full_name": full,
                             "stars": stars,
                             "pushed_at": pushed_at,

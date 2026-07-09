@@ -103,7 +103,11 @@ data-engineering skills, или dev-ops skills, или security-skills) — за
 
 ==== СКОРИНГ (0–10 по каждой оси) ====
 - novelty — насколько свежо / редко встречается
-- traction — есть ли рост (звёзды, score, кросс-источники)
+- traction — есть ли рост (звёзды, score, кросс-источники). Если у item есть
+  поле `installs` (реальные установки из реестра skills.sh, источник
+  `skills_sh`) — это БОЛЕЕ сильный сигнал, чем звёзды: installs ≥ 100 —
+  заметная traction (traction ≥ 6), ≥ 1000 — высокая (traction ≥ 8). Репо с
+  installs, найденное ещё и на GitHub — сильный кандидат в test_now.
 - utility — реальная польза для пользователя Claude Code
 - testability — можно ли проверить за 1 день (есть SKILL.md, можно клонировать
   и закинуть в `.claude/skills/`)
@@ -117,6 +121,7 @@ final_score = (novelty*1.0 + traction*1.5 + utility*1.5 + testability*1.0
 
 confidence:
 - high  — `verified=True` ИЛИ упомянуто в ≥2 источниках ИЛИ github stars >500
+  ИЛИ `installs` ≥ 500 (реестр skills.sh считает реальные установки)
 - medium — 1 источник, но осмысленный сигнал и явно skill-формат
 - low   — единичное упоминание без подтверждения
 

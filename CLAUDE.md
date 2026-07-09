@@ -4,13 +4,16 @@
 Container repo housing automation utilities. Three active tracking pipelines:
 
 1. **trendwatch** — daily GitHub Actions job (09:00 UTC) that scans for **new
-   Claude Code Skills** (`.claude/skills/<name>/SKILL.md`) across GitHub
-   (code search + topic search). Runs Claude analysis, posts a scored Telegram
+   Claude Code Skills** (SKILL.md anywhere in a repo: `.claude/skills/`,
+   `skills/<cat>/<skill>/`, cross-agent dirs like `.codex/skills/`, root-level)
+   across GitHub (code search + topic search, git-tree verification) **and the
+   skills.sh registry** (vercel-labs/skills backend; install counts = traction
+   signal stronger than stars). Runs Claude analysis, posts a scored Telegram
    digest, **enriches each promoted skill** (`enrich.py`: reads each SKILL.md →
-   Russian description + category + tags) and **auto-pushes** the result to the
-   web catalog (`catalog.py` → Supabase ingest). Reddit/X/Threads sources exist
-   but are **disabled**. Also supports a **`--backfill`** mode (enrich + push
-   arbitrary repos).
+   frontmatter fallback + Russian description + category + tags) and
+   **auto-pushes** the result to the web catalog (`catalog.py` → Supabase
+   ingest). Reddit/X/Threads sources exist but are **disabled**. Also supports
+   a **`--backfill`** mode (enrich + push arbitrary repos).
 2. **workflows** — second pipeline (12:00 UTC) that scans for **ready-made n8n
    and Make workflows** (JSON files importable directly) across GitHub
    (n8n + Make topics, code search for workflow JSON signatures). Reuses
@@ -45,7 +48,8 @@ Container repo housing automation utilities. Three active tracking pipelines:
 | `trendwatch/skill_db.py` | Persistent skill DB (`recommended.json` + `watchlist.json`) — one-shot recommendations + signal-based graduation |
 | `trendwatch/index_writer.py` | Generates Markdown indexes in `digests/index/` (all / by_category / by_month) |
 | `trendwatch/links.py` | Builds public github.com URLs to the indexes for the Telegram footer (reads `GITHUB_REPOSITORY`) |
-| `trendwatch/sources/{github,reddit,twitter,threads}.py` | Per-source fetchers (only `github` enabled) |
+| `trendwatch/sources/{github,reddit,twitter,threads}.py` | Per-source fetchers (`github` + `skills_sh` enabled). `github.py` verifies repos via ONE recursive git-tree call (`_skill_folders_from_tree`): finds SKILL.md case-insensitively anywhere (`.claude/skills/`, `skills/<cat>/<skill>/` depth-2, `.agents`/`.codex`/`.opencode`/`.github`/`.windsurf` dirs, root), skips node_modules/dist/…, cap 50/repo |
+| `trendwatch/sources/skills_sh.py` | skills.sh registry source (vercel-labs/skills backend): `GET /api/search` per `SKILLS_SH_QUERIES` term → repos with **install counts**; `merge_installs` folds installs onto GitHub twins (no duplicate digest items), registry-only repos stay standalone |
 | `trendwatch/sources/_http.py` | Shared GitHub GET helper: `get_json_with_backoff` (429/Retry-After aware) + `build_github_headers` (prefers `GH_SEARCH_TOKEN`); used by both pipelines' fetchers |
 | `trendwatch/get_chat_id.py` | One-shot helper to capture Telegram chat_id |
 | `trendwatch/config.py` | Keywords, subreddits, source toggles, `GITHUB_CODE_QUERIES`, `REDDIT_KEYWORDS_FILTER`, `VERIFY_GITHUB_SKILLS` |
@@ -150,6 +154,9 @@ Container repo housing automation utilities. Three active tracking pipelines:
 - Workflows discovery tuning: fetch is `MAX_ITEMS_PER_SOURCE=150` selected by `_select_with_recency` (70% top-stars + recency tail, so new low-star workflows aren't truncated); analyzer input capped at `ANALYZER_MAX_ITEMS=60`; `verified=True` workflows promote at a lower bar (`final_score≥5.5`, never `skip`). **Per-workflow catalog (Fix 2):** a promoted repo is exploded by `_explode_promotions` into one `recommended.json` entry per individual workflow JSON (full git-tree enumeration, `EXPLODE_MAX_WORKFLOWS_PER_REPO=25`); the pre-analysis filter excludes already-exploded repos by `repo_full_name`.
 - Reuse over duplication: `workflows/` AND `opensource/` import `trendwatch.{state,skill_db,analyzer,telegram_client,index_writer,report,normalizer}` and pass path/category/tool kwargs. The only pipeline-specific code is fetchers, prompts, normalizer vocabulary, and the orchestrator.
 - **Workflows catalog cards (`wf_meta`/`wf_enrich`/`catalog.py`):** every `recommended.json` entry carries up to 4 OPTIONAL, backwards-compatible card fields so the site renders n8n-library-style chips: `node_count` (int>0, sum of `nodes`/modules across the entry's workflow JSONs), `complexity` (`simple`≤5 / `medium`6–15 / `complex`>15 — same thresholds as the n8n library), `integrations` (real external services from node types `n8n-nodes-base.slack`→`"Slack"` / Make module prefixes; generic control/protocol nodes like IF/Set/HTTP excluded; omitted if empty), `trigger_type` (`webhook`/`schedule`/`manual`/`chat`/`email`/`form`). On each run the newly-promoted entries are enriched (`wf_enrich`, fetches the JSONs), then the whole `recommended.json` is POSTed to the **automation** ingest endpoint (`catalog.push_recommended`, `x-automation-secret`). One-time/operator retrofit via `--backfill-meta`. New categories are free-form `<slug>_workflow` (the site auto-creates unknown ones).
+- **skills.sh signal (borrowed from vercel-labs/skills):** the `skills_sh` source queries the registry behind `npx skills find` per domain term; each hit carries **installs** (real usage telemetry). `merge_installs` copies the count onto the GitHub item for the same `repo_full_name` (meta gets `⬇ N installs`) and drops the duplicate, so one repo = one digest item; registry-exclusive repos survive as standalone `skills_sh` items. The analyzer prompt treats installs as a stronger traction signal than stars (≥100 → traction ≥6; ≥1000 → ≥8; ≥500 → confidence high). API is unofficial — any failure degrades to the other sources.
+- **Skill discovery breadth:** verification no longer probes only `/contents/.claude/skills` — one recursive git-tree call finds every `SKILL.md` (case-insensitive) outside node_modules/dist/…, including `skills/<category>/<skill>/` catalogs, cross-agent dirs (`.agents`, `.codex`, `.opencode`, `.github`, `.windsurf` — same SKILL.md format), and root-level single-skill repos (skill URL = blob link; `enrich.raw_skill_md_url` accepts both tree and blob URLs). Per-repo cap 50.
+- **Frontmatter first:** `enrich.parse_frontmatter` (no YAML dep) pulls `name`/`description` from each SKILL.md before the LLM call — the author's description ships as the card fallback if the Claude call fails (e.g. credit exhaustion) and is passed as a compact hint (`frontmatter_description:`) in the enrichment prompt.
 - **Skills catalog (`/claude-skills`):** after the skills digest, the report embeds a single machine-readable `## Import payload` JSON block (`import_payload.py`), each promoted skill is enriched (`enrich.py`: per-`SKILL.md` batched Claude call → RU description + dictionary category + tags), and the payload is POSTed to the Supabase ingest endpoint (`catalog.py`, `x-radar-secret`, idempotent upsert by repo slug / skill url). Suggested new categories are surfaced to the owner via Telegram. Category dictionary (`SKILL_CATEGORY_NAMES`, 24 slugs) is the single source of truth — the analyzer/enricher reuse it; new = `status:"suggested"`. Contract: `docs/skill-radar-import-payload.md`.
 - **Open Source pipeline:** discovers deployable OSS *products* (not skills/workflows) via topic + description search + `SEED_REPOS` (owner-curated, force-promoted to recommended). `_looks_like_list` drops awesome-lists/link-collections from the pool. Digest header `🧩 Open Source Radar`; bot source `opensource`.
 - **Once-per-day idempotency:** each orchestrator records `last_sent_date` in its own `state.json` via `state.mark_sent_today()` after a successful Telegram send. On run start, `state.was_sent_today()` short-circuits before the Anthropic call if the date matches today (UTC). Marker `[ALREADY_SENT_TODAY]`. Manual reruns can bypass with `--force`. This protects the Anthropic API budget against `workflow_dispatch` retries.

@@ -25,6 +25,7 @@ try:
     from . import config
     from .sources.github import fetch_github
     from .sources.reddit import fetch_reddit
+    from .sources.skills_sh import fetch_skills_sh, merge_installs
     from .sources.twitter import fetch_twitter
     from .sources.threads import fetch_threads
     from . import telegram_client
@@ -42,6 +43,7 @@ except ImportError:
     import config
     from sources.github import fetch_github
     from sources.reddit import fetch_reddit
+    from sources.skills_sh import fetch_skills_sh, merge_installs
     from sources.twitter import fetch_twitter
     from sources.threads import fetch_threads
     import telegram_client
@@ -147,6 +149,13 @@ def _fetch_all() -> dict[str, list[dict]]:
             max_items,
             getattr(config, "VERIFY_GITHUB_SKILLS", True),
         )
+    if sources_enabled.get("skills_sh"):
+        items_by_source["skills_sh"] = _safe(
+            "skills_sh",
+            fetch_skills_sh,
+            getattr(config, "SKILLS_SH_QUERIES", []),
+            max_items,
+        )
     if sources_enabled.get("reddit"):
         items_by_source["reddit"] = _safe(
             "reddit",
@@ -165,6 +174,12 @@ def _fetch_all() -> dict[str, list[dict]]:
         items_by_source["threads"] = _safe(
             "threads", fetch_threads, config.KEYWORDS, max_items
         )
+    # Fold skills.sh install counts into GitHub twins (one item per repo);
+    # only registry-exclusive repos stay as standalone skills_sh items.
+    try:
+        merge_installs(items_by_source)
+    except Exception as exc:
+        print(f"[trendwatch:skills_sh] merge failed: {exc}", file=sys.stderr)
     return items_by_source
 
 
