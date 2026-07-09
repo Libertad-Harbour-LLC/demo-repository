@@ -22,9 +22,11 @@ INGEST_URL = os.environ.get(
 
 
 def build_payload(recommended_db: dict) -> dict:
-    """The catalog ingests the recommended DB as-is (keyed by workflow url)."""
+    """The catalog ingests the recommended DB as-is: ``{"skills": {url: entry}}``
+    (the endpoint accepts ``{skills:{...}}`` or ``{workflows:[...]}``; our
+    recommended.json is already the former)."""
     skills = (recommended_db or {}).get("skills") or {}
-    return {"workflows": skills}
+    return {"skills": skills}
 
 
 def push_recommended(
@@ -43,7 +45,7 @@ def push_recommended(
     if not secret:
         return None, "AUTOMATION_INGEST_SECRET not set — skipping catalog push"
     payload = build_payload(recommended_db)
-    if not payload.get("workflows"):
+    if not payload.get("skills"):
         return None, "empty recommended.json (no workflows) — nothing to push"
 
     headers = {"Content-Type": "application/json", "x-automation-secret": secret}
@@ -70,7 +72,7 @@ def format_summary(result: dict | None) -> str:
     if not isinstance(result, dict):
         return "(no response)"
     parts = []
-    for k in ("ok", "workflows", "inserted", "updated", "skipped"):
+    for k in ("ok", "skills", "workflows", "inserted", "updated", "skipped"):
         if k in result:
             v = result[k]
             if isinstance(v, list):
