@@ -55,6 +55,26 @@ High-level record of notable changes so a fresh session has context.
   repo into one entry per individual workflow JSON (`list_repo_workflows`, git
   tree, cap 25/repo); repo-level dedup by `repo_full_name`.
 
+### skills.sh source + tree-wide skill discovery + frontmatter (PR #71)
+Borrowed from studying `vercel-labs/skills` (the `npx skills` CLI + skills.sh
+registry):
+- **New source `skills_sh`** — queries `skills.sh/api/search` per domain term;
+  results carry **install counts** (real usage telemetry from CLI installs).
+  `merge_installs` folds the count onto the GitHub twin item (one repo = one
+  digest item); registry-only repos stay standalone. Analyzer prompt: installs
+  outrank stars for traction (≥100→6+, ≥1000→8+, ≥500→confidence high).
+- **Tree-wide verification** — `_skill_folders_from_tree` replaces the
+  `.claude/skills`-only contents probe: one recursive git-tree call finds every
+  `SKILL.md` (case-insensitive) incl. `skills/<cat>/<skill>/` catalogs,
+  cross-agent dirs (`.agents/.codex/.opencode/.github/.windsurf` + 5 new code
+  queries), root-level skills. Same request cost, cap 50/repo.
+- **Frontmatter fallback** — `parse_frontmatter` (no YAML dep) extracts
+  `name`/`description` from SKILL.md before the LLM; author's description
+  ships if the Claude call fails; hint passed into the enrichment prompt.
+  `raw_skill_md_url` now also accepts blob URLs (root-level skills).
+- Product ideas noted, not implemented: install-count telemetry for our own
+  catalog, `.well-known/skills` (agentskills.io) as a future non-GitHub source.
+
 ### Workflow catalog cards — 4 metadata fields + automation ingest (PR #68)
 - The site's «Шаблоны автоматизаций» now renders our workflows alongside the n8n
   library as identical chip cards. Each `digests/workflows/recommended.json`

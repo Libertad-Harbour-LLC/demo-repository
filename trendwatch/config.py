@@ -45,6 +45,36 @@ GITHUB_CODE_QUERIES = [
     'filename:SKILL.md website',
     'filename:SKILL.md agent',
     'filename:SKILL.md chatbot',
+    # Cross-agent skill dirs (borrowed from vercel-labs/skills PRIORITY_PREFIXES):
+    # the SKILL.md format is shared across agents, so skills published for
+    # Codex/OpenCode/Windsurf/etc. work in Claude Code too. Each query is one
+    # paced request; we take the most active dirs, not all 28.
+    'path:.agents/skills filename:SKILL.md',
+    'path:.codex/skills filename:SKILL.md',
+    'path:.opencode/skills filename:SKILL.md',
+    'path:.github/skills filename:SKILL.md',
+    'path:.windsurf/skills filename:SKILL.md',
+]
+
+# skills.sh registry search (vercel-labs/skills backend). One GET per query;
+# results carry INSTALL COUNTS — real usage telemetry, a stronger traction
+# signal than stars for niche skills. Domain-targeted like the code queries.
+SKILLS_SH_QUERIES = [
+    "marketing",
+    "seo",
+    "content",
+    "social media",
+    "video",
+    "image",
+    "presentation",
+    "website",
+    "design",
+    "chatbot",
+    "agent",
+    "automation",
+    "email",
+    "writing",
+    "analytics",
 ]
 
 REDDIT_SUBREDDITS = [
@@ -85,6 +115,8 @@ REDDIT_MIN_SCORE = 5  # lowered — Claude Skills are niche, posts get less scor
 
 SOURCES = {
     "github": True,
+    "skills_sh": True,  # skills.sh registry (vercel-labs/skills backend) —
+                        # install-count traction signal + registry-only repos.
     "reddit": False,    # disabled — Reddit 403-blocks Actions IPs and the
                         # OAuth route needs API creds we don't maintain; it
                         # contributed 0 every run and only spammed logs. Flip

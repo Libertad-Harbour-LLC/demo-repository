@@ -41,6 +41,10 @@ MIN_TAGS = 3
 # skill.url is ``github.com/<owner>/<repo>/tree/<branch>/<path>`` (path ends at
 # the skill folder). We turn it into the raw SKILL.md URL.
 _SKILL_URL_RE = re.compile(r"github\.com/([^/]+)/([^/]+)/tree/([^/]+)/(.+?)/?$", re.IGNORECASE)
+# Root-level skills link straight at the SKILL.md file (blob URL).
+_SKILL_BLOB_RE = re.compile(
+    r"github\.com/([^/]+)/([^/]+)/blob/([^/]+)/(.+?/)?SKILL\.md$", re.IGNORECASE
+)
 
 _SYSTEM_PROMPT = """\
 Ты обогащаешь карточки Claude Code Skills для веб-каталога с поиском по словам.
@@ -73,11 +77,62 @@ def _category_dictionary_text() -> str:
 
 
 def raw_skill_md_url(skill_url: str | None) -> str | None:
+    m = _SKILL_BLOB_RE.search(skill_url or "")
+    if m:
+        owner, repo, branch, path = m.groups()
+        return f"{RAW_BASE}/{owner}/{repo}/{branch}/{path or ''}SKILL.md"
     m = _SKILL_URL_RE.search(skill_url or "")
     if not m:
         return None
     owner, repo, branch, path = m.groups()
     return f"{RAW_BASE}/{owner}/{repo}/{branch}/{path}/SKILL.md"
+
+
+# ── SKILL.md frontmatter (borrowed from vercel-labs/skills) ──
+# Skills carry a YAML frontmatter block with ``name`` and ``description``.
+# Parsing it gives a free, deterministic English description BEFORE any LLM
+# call — used as a compact prompt hint and as the fallback when the Claude
+# call fails (e.g. credit exhaustion), so a card is never left descriptionless.
+_FRONTMATTER_RE = re.compile(r"^---\r?\n(.*?)\r?\n---\r?\n?", re.DOTALL)
+_FM_KEYS = ("name", "description")
+
+
+def parse_frontmatter(raw: str | None) -> dict:
+    """Extract simple scalar fields from a SKILL.md YAML frontmatter block.
+
+    Deliberately not a YAML parser (no new dependency): handles the
+    ``key: value`` scalars that SKILL.md frontmatter actually uses, including
+    quoted values and multi-line folded/literal blocks (``>-``/``|``) by
+    concatenating the indented continuation lines. Unknown keys are ignored.
+    """
+    m = _FRONTMATTER_RE.match(raw or "")
+    if not m:
+        return {}
+    out: dict[str, str] = {}
+    lines = m.group(1).splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        i += 1
+        km = re.match(r"^([A-Za-z][\w-]*):\s*(.*)$", line)
+        if not km:
+            continue
+        key = km.group(1).strip().lower()
+        val = km.group(2).strip()
+        if val in (">", ">-", "|", "|-") or val == "":
+            # folded/literal block or empty: consume indented continuation
+            block: list[str] = []
+            while i < len(lines) and (
+                lines[i].startswith(" ") or lines[i].startswith("\t")
+            ):
+                block.append(lines[i].strip())
+                i += 1
+            val = " ".join(b for b in block if b)
+        else:
+            val = val.strip("\"'")
+        if key in _FM_KEYS and val:
+            out[key] = val[:600]
+    return out
 
 
 def _default_md_fetch(url: str | None) -> str:
@@ -185,14 +240,18 @@ def _apply_result(skill: dict, result: dict, repo_category: str, suggested: dict
 
 
 def _process_batch(batch: list[tuple], claude_complete, suggested: dict) -> None:
-    """batch items: (skill_dict, repo_category, repo_name, skill_md)."""
+    """batch items: (skill_dict, repo_category, repo_name, skill_md, frontmatter)."""
     lines = ["Скиллы для обогащения:"]
-    for i, (skill, repo_cat, repo_name, md) in enumerate(batch):
+    for i, (skill, repo_cat, repo_name, md, fm) in enumerate(batch):
+        fm_hint = ""
+        if fm.get("description"):
+            fm_hint = f"frontmatter_description: {fm['description']}\n"
         lines.append(
             f"\n--- id={i} ---\n"
             f"repo: {repo_name}\n"
             f"skill_folder: {skill.get('slug') or skill.get('name')}\n"
             f"default_category: {repo_cat}\n"
+            f"{fm_hint}"
             f"SKILL.md:\n{md or '(пусто / не удалось прочитать)'}"
         )
     user_text = "\n".join(lines)
@@ -207,7 +266,7 @@ def _process_batch(batch: list[tuple], claude_complete, suggested: dict) -> None
             by_id[int(r.get("id"))] = r
         except (TypeError, ValueError):
             continue
-    for i, (skill, repo_cat, _repo_name, _md) in enumerate(batch):
+    for i, (skill, repo_cat, _repo_name, _md, _fm) in enumerate(batch):
         result = by_id.get(i)
         if result:
             _apply_result(skill, result, repo_cat, suggested)
@@ -244,7 +303,12 @@ def enrich_payload(
         repo_name = repo.get("name") or repo.get("slug") or ""
         for skill in (repo.get("skills") or [])[:max_per_repo]:
             md = md_fetch(raw_skill_md_url(skill.get("url")))
-            batch.append((skill, repo_cat, repo_name, md))
+            fm = parse_frontmatter(md)
+            # Deterministic fallback: if the Claude call later fails, the card
+            # still ships with the author's own frontmatter description.
+            if fm.get("description") and not skill.get("description"):
+                skill["description"] = import_payload.clean_text(fm["description"])
+            batch.append((skill, repo_cat, repo_name, md, fm))
             enriched += 1
             if len(batch) >= batch_size:
                 _process_batch(batch, claude_complete, suggested)
@@ -257,4 +321,7 @@ def enrich_payload(
     return list(suggested.values())
 
 
-__all__ = ["enrich_payload", "raw_skill_md_url", "normalize_tags", "DEFAULT_BATCH"]
+__all__ = [
+    "enrich_payload", "raw_skill_md_url", "parse_frontmatter",
+    "normalize_tags", "DEFAULT_BATCH",
+]
