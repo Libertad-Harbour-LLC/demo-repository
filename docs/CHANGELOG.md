@@ -55,6 +55,20 @@ High-level record of notable changes so a fresh session has context.
   repo into one entry per individual workflow JSON (`list_repo_workflows`, git
   tree, cap 25/repo); repo-level dedup by `repo_full_name`.
 
+### Workflow cards published to the site — push path + fixes (PR #70, #72–#74)
+- `workflows.py --push-only` + `.github/workflows/push-cards.yml` (+ sentinel
+  `.github/trigger-push-cards`): fast (re)publish of `recommended.json` to the
+  automation catalog without the slow fetch/analyzer phase (~1 min vs 30+).
+- Secret saga: `AUTOMATION_INGEST_SECRET` was first added to the WRONG repo
+  (`site-clone-engineer`); the pipelines live in `demo-repository`. The correct
+  value is the same key as in Supabase. Diagnosed via the run log (`env:` block
+  shows the secret empty vs `***`).
+- Payload shape fix (PR #74): the ingest endpoint accepts `{skills:{...}}` or
+  `{workflows:[...]}`; we sent `{workflows:{...}}` → HTTP 400. Now the
+  recommended DB is POSTed verbatim (`{"skills": {url: entry}}`).
+- Final state (2026-07-09): **catalog push ok=True — 287 workflows published,
+  273 with card fields**; the 14 without fields are 404/deleted repos.
+
 ### skills.sh source + tree-wide skill discovery + frontmatter (PR #71)
 Borrowed from studying `vercel-labs/skills` (the `npx skills` CLI + skills.sh
 registry):
