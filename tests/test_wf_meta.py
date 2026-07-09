@@ -208,7 +208,9 @@ def test_owner_repo_from_polluted_repo_full_name():
 def test_catalog_build_payload_and_push_guard(monkeypatch):
     from workflows import catalog
     db = {"skills": {"u1": {"tool": "n8n", "node_count": 3}}}
-    assert catalog.build_payload(db) == {"workflows": {"u1": {"tool": "n8n", "node_count": 3}}}
+    # Endpoint contract: {skills: {...}} (or {workflows: [...]}) — we send the
+    # recommended DB verbatim.
+    assert catalog.build_payload(db) == {"skills": {"u1": {"tool": "n8n", "node_count": 3}}}
 
     # no secret -> skipped, never posts
     res, err = catalog.push_recommended(db, secret="")
@@ -236,4 +238,4 @@ def test_catalog_build_payload_and_push_guard(monkeypatch):
     assert err is None and res == {"ok": True, "workflows": 1}
     assert captured["headers"]["x-automation-secret"] == "sekret"
     assert captured["url"].endswith("/ingest-automation-workflows")
-    assert captured["json"] == {"workflows": db["skills"]}
+    assert captured["json"] == {"skills": db["skills"]}
