@@ -89,6 +89,48 @@
       "title": "Actual-Chat/actual-chat",
       "url": "https://github.com/Actual-Chat/actual-chat/tree/dev/.claude/skills"
     },
+    "https://github.com/AgriciDaniel/claude-ads": {
+      "category": "marketing_skill",
+      "confidence": "medium",
+      "description": "Набор из 23 skills для управления рекламными кампаниями на всех основных платформах: Google, Meta, LinkedIn, TikTok, YouTube, Amazon, Apple. Включает skills для аудита, планирования бюджета и конкурентного анализа.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-10",
+      "metric": "Количество actionable рекомендаций по улучшению кампании за сессию",
+      "promoted_from_watch": false,
+      "repo_full_name": "AgriciDaniel/claude-ads",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 13,
+      "skills_in_repo": [
+        "ads",
+        "ads-amazon",
+        "ads-apple",
+        "ads-google",
+        "ads-meta",
+        "ads-linkedin",
+        "ads-tiktok",
+        "ads-youtube",
+        "ads-creative",
+        "ads-audit",
+        "ads-budget",
+        "ads-competitor",
+        "ads-plan"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/AgriciDaniel/claude-ads и скопировать skills/ads-audit/ в .claude/skills/ads-audit/",
+        "Запустить Claude Code с доступом к данным о вашей рекламной кампании (CSV или описание)",
+        "Дать промт: 'используй ads-audit чтобы проанализировать структуру нашей Google Ads кампании и найти проблемы'"
+      ],
+      "title": "AgriciDaniel/claude-ads",
+      "url": "https://github.com/AgriciDaniel/claude-ads"
+    },
     "https://github.com/AgriciDaniel/claude-seo": {
       "category": "marketing_skill",
       "confidence": "high",
@@ -1313,6 +1355,45 @@
       "title": "JubaKitiashvili/everything-react-native-expo",
       "url": "https://github.com/JubaKitiashvili/everything-react-native-expo/tree/main/.claude/skills"
     },
+    "https://github.com/K-Dense-AI/scientific-agent-skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 50 skills для научных агентов: биоинформатика, астрофизика, клинические данные, квантовые вычисления. Каждый skill — инструкции по работе с конкретной научной библиотекой или задачей.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-10",
+      "metric": "Рабочий Python-скрипт с правильными Biopython API вызовами без галлюцинаций",
+      "promoted_from_watch": false,
+      "repo_full_name": "K-Dense-AI/scientific-agent-skills",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "biopython",
+        "deepchem",
+        "astropy",
+        "anndata",
+        "bulk-rnaseq",
+        "experimental-design",
+        "hypothesis-generation",
+        "exa-search",
+        "citation-management",
+        "clinical-decision-support"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/K-Dense-AI/scientific-agent-skills и скопировать skills/biopython/ в .claude/skills/biopython/",
+        "Запустить Claude Code в Python-проекте с биологическими данными",
+        "Дать промт: 'используй biopython skill чтобы написать скрипт для парсинга GenBank записей и анализа последовательностей'"
+      ],
+      "title": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+    },
     "https://github.com/KhazP/vibe-coding-prompt-template/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -2022,6 +2103,47 @@
       ],
       "title": "RonenMars/threadbase-streamer",
       "url": "https://github.com/RonenMars/threadbase-streamer/tree/main/.claude/skills"
+    },
+    "https://github.com/SamurAIGPT/Generative-Media-Skills": {
+      "category": "video_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с 50 skills для генерации видео, изображений и социального контента через muapi и другие AI-сервисы. Охватывает YouTube Shorts, UGC-видео, рекламные креативы, продуктовые видео.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-10",
+      "metric": "Получен полный сценарий + промты для AI-генерации видео",
+      "promoted_from_watch": false,
+      "repo_full_name": "SamurAIGPT/Generative-Media-Skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "muapi-ad-creative",
+        "muapi-cinema-director",
+        "muapi-product-video-ad-maker",
+        "muapi-youtube-shorts",
+        "muapi-ugc-video-factory",
+        "cinema-director",
+        "product-video-ad-maker",
+        "ugc-video-factory",
+        "youtube-shorts",
+        "social-media-video",
+        "ad-creative",
+        "instagram-post"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/SamurAIGPT/Generative-Media-Skills и скопировать library/motion/product-video-ad-maker/ в .claude/skills/",
+        "Запустить Claude Code с описанием продукта и целевой аудитории",
+        "Дать промт: 'используй product-video-ad-maker чтобы создать сценарий и промты для рекламного ролика нашего продукта'"
+      ],
+      "title": "SamurAIGPT/Generative-Media-Skills",
+      "url": "https://github.com/SamurAIGPT/Generative-Media-Skills"
     },
     "https://github.com/SenolIsci/mykg/tree/main/.claude/skills": {
       "category": "general_skill",
@@ -3051,6 +3173,45 @@
       "test_steps": [],
       "title": "anthropics/claude-code: frontend-design plugin",
       "url": "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design"
+    },
+    "https://github.com/anthropics/claude-plugins-official": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий плагинов от Anthropic для Claude Code. Содержит 29 skills, включая интеграции с Discord, iMessage, Telegram, а также skills для разработки плагинов и MCP-серверов.",
+      "final_score": 8.6,
+      "first_recommended": "2026-07-10",
+      "metric": "Получен рабочий SKILL.md для нового кастомного skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "anthropics/claude-plugins-official",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 1,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "frontend-design",
+        "writing-rules",
+        "math-olympiad",
+        "build-mcp-app",
+        "build-mcp-server",
+        "skill-creator",
+        "session-report",
+        "project-artifact",
+        "claude-automation-recommender",
+        "claude-md-improver"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/anthropics/claude-plugins-official и скопировать папку plugins/skill-creator/ в .claude/skills/skill-creator/",
+        "Запустить Claude Code в любом проекте",
+        "Дать промт: 'используй skill-creator чтобы создать новый skill для авто-генерации changelog'"
+      ],
+      "title": "anthropics/claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official"
     },
     "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -8877,6 +9038,44 @@
       ],
       "title": "vellum-ai/vellum-assistant",
       "url": "https://github.com/vellum-ai/vellum-assistant/tree/main/.claude/skills"
+    },
+    "https://github.com/vercel-labs/agent-skills": {
+      "category": "webdev_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий skills от Vercel для Claude Code и совместимых агентов. Содержит 9 skills по React-разработке, деплою на Vercel и гайдлайнам по веб-дизайну.",
+      "final_score": 8.8,
+      "first_recommended": "2026-07-10",
+      "metric": "Количество конкретных, релевантных рекомендаций по Vercel-паттернам за сессию",
+      "promoted_from_watch": false,
+      "repo_full_name": "vercel-labs/agent-skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "vercel-react-best-practices",
+        "web-design-guidelines",
+        "vercel-composition-patterns",
+        "vercel-react-native-skills",
+        "deploy-to-vercel",
+        "vercel-react-view-transitions",
+        "vercel-cli-with-tokens",
+        "vercel-optimize",
+        "writing-guidelines"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить через skills.sh: найти vercel-labs/agent-skills в реестре и добавить нужный skill в .claude/skills/",
+        "Запустить Claude Code в Next.js/React проекте",
+        "Дать промт: 'используй vercel-react-best-practices — проверь текущие компоненты на соответствие гайдлайнам Vercel и дай рекомендации'"
+      ],
+      "title": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills"
     },
     "https://github.com/viclafouch/mui-otp-input/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",

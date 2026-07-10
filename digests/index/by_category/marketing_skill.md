@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 21
+Total: 22
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-10 | [AgriciDaniel/claude-ads](https://github.com/AgriciDaniel/claude-ads) | ads, ads-amazon, ads-apple, +10 more |  | 7.8 | medium | git clone https://github.com/AgriciDaniel/claude-ads и скопировать skills/ads-audit/ в .claude/skills/ads-audit/ |
 | 2026-07-09 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | seo-audit, copywriting, marketing-psychology, +23 more |  | 9.2 | high | Установить через Claude Code: /install coreyhaines31/marketingskills (или клонировать репо и скопировать skills папку... |
 | 2026-07-09 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | seo-ahrefs, seo-image-gen, seo-bing, +30 more |  | 8.1 | high | Клонировать: git clone https://github.com/AgriciDaniel/claude-seo.git |
 | 2026-06-29 | [seo-skills/seo-audit-skill](https://github.com/seo-skills/seo-audit-skill/blob/main/skill/SKILL.md) | seo-audit-skill |  | 7.0 | high | git clone https://github.com/seo-skills/seo-audit-skill && скопировать skill/SKILL.md в .claude/skills/seo-audit/SKIL... |
