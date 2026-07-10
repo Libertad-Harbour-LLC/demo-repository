@@ -1,106 +1,106 @@
 {
   "items": {
-    "https://github.com/Autom8AI/Open-Higgsfield-AI": {
-      "added_date": "2026-07-07",
-      "category": "video_oss",
-      "description": "Open-Higgsfield-AI — open-source студия для генерации видео в стиле Higgsfield AI. Является заменой коммерческого сервиса Higgsfield; требует проверки полноты деплоя и наличия рабочего inference.",
-      "expires_at": "2026-08-06",
-      "last_checked": "2026-07-07",
-      "metric_baseline": {
-        "cross_source_count": null,
-        "skills_count": null,
-        "stars": null
-      },
-      "repo_full_name": "Autom8AI/Open-Higgsfield-AI",
-      "signal_to_wait": "Появление подтверждённых деплой-инструкций и отзывов о качестве генерации видео",
-      "title": "Autom8AI/Open-Higgsfield-AI",
-      "url": "https://github.com/Autom8AI/Open-Higgsfield-AI",
-      "why_interesting": "Прямой клон дорогого коммерческого видеосервиса; высокий потенциал бизнес-применения при подтверждении качества"
-    },
     "https://github.com/Egonex-AI/Understand-Anything": {
-      "added_date": "2026-07-07",
-      "category": "data_oss",
-      "description": "Understand-Anything — open-source инструмент для глубокого анализа и понимания произвольных данных/документов с помощью AI. Разворачивается self-hosted; потенциально заменяет дорогие enterprise-аналитические сервисы.",
-      "expires_at": "2026-08-06",
-      "last_checked": "2026-07-07",
+      "added_date": "2026-07-10",
+      "category": "agents_oss",
+      "description": "Understand-Anything — платформа для глубокого понимания и анализа любого контента (документов, видео, изображений) с помощью AI-агентов. Потенциально self-hosted альтернатива NotebookLM и Perplexity для корпоративного использования.",
+      "expires_at": "2026-08-09",
+      "last_checked": "2026-07-10",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "Egonex-AI/Understand-Anything",
-      "signal_to_wait": "Рост звёзд выше 500, появление docker-compose и примеров использования",
+      "signal_to_wait": "Появление Docker-деплоя, документации по API и первые 500+ звёзд",
       "title": "Egonex-AI/Understand-Anything",
       "url": "https://github.com/Egonex-AI/Understand-Anything",
-      "why_interesting": "Интересный класс задач (universal document understanding); сид-кандидат требует проверки функциональности"
+      "why_interesting": "Нишевый инструмент для мультимодального понимания контента; потенциал как корпоративный knowledge assistant"
     },
-    "https://github.com/NickIBrody/arcade_ai": {
-      "added_date": "2026-07-07",
-      "category": "apps_oss",
-      "description": "Arcade_ai — готовое мобильное AI-приложение, подходящее для ребрендинга под собственный AI-сервис. Деплоится как мобильное приложение; требует проверки технического стека.",
-      "expires_at": "2026-08-06",
-      "last_checked": "2026-07-07",
+    "https://github.com/HKUDS/CLI-Anything": {
+      "added_date": "2026-07-10",
+      "category": "devtools_oss",
+      "description": "CLI-Anything — платформа для превращения любого программного обеспечения в agent-native через CLI-интерфейс с хабом clianything.cc. Новое репо (появилось за период), 45k звёзд — редкий случай нового проекта с мгновенной тракцией.",
+      "expires_at": "2026-08-09",
+      "last_checked": "2026-07-10",
       "metric_baseline": {
-        "cross_source_count": null,
+        "cross_source_count": 1,
         "skills_count": null,
-        "stars": null
+        "stars": 45087
       },
-      "repo_full_name": "NickIBrody/arcade_ai",
-      "signal_to_wait": "Подтверждение наличия App Store / Play Store совместимости и build-инструкций",
-      "title": "NickIBrody/arcade_ai",
-      "url": "https://github.com/NickIBrody/arcade_ai",
-      "why_interesting": "Готовое мобильное приложение с AI — редкая ниша в open-source; потенциал для white-label"
+      "repo_full_name": "HKUDS/CLI-Anything",
+      "signal_to_wait": "Подтверждение деплоибельности, Docker/installer, более подробная документация",
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "why_interesting": "Единственная реальная новинка периода с 45k звёзд; концепция agent-native CLI для любого ПО актуальна"
     },
-    "https://github.com/arelove/infinity-loop": {
-      "added_date": "2026-07-07",
-      "category": "apps_oss",
-      "description": "Infinity-loop — open-source desktop-приложение, разворачиваемое локально. Подходит для ребрендинга под специализированный инструмент; требует проверки конкретной функциональности.",
-      "expires_at": "2026-08-06",
-      "last_checked": "2026-07-07",
+    "https://github.com/browser-use/browser-use": {
+      "added_date": "2026-07-10",
+      "category": "automation_oss",
+      "description": "Browser-use — self-hosted библиотека/фреймворк для управления браузером через AI-агентов, позволяющая автоматизировать веб-задачи. 104k звёзд, +807 за 72h; ближе к библиотеке чем к готовому продукту, но имеет потенциал как основа для RPA-сервиса.",
+      "expires_at": "2026-08-09",
+      "last_checked": "2026-07-10",
       "metric_baseline": {
-        "cross_source_count": null,
+        "cross_source_count": 1,
         "skills_count": null,
-        "stars": null
+        "stars": 104072
       },
-      "repo_full_name": "arelove/infinity-loop",
-      "signal_to_wait": "Уточнение функциональности и наличие installer/releases для Windows/Mac/Linux",
-      "title": "arelove/infinity-loop",
-      "url": "https://github.com/arelove/infinity-loop",
-      "why_interesting": "Desktop-приложение из curated seed-листа; потенциал для ребрендинга"
+      "repo_full_name": "browser-use/browser-use",
+      "signal_to_wait": "Появление hosted UI или no-code интерфейса для запуска задач без кода",
+      "title": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "why_interesting": "+807 звёзд за 72h; растущий спрос на browser automation для AI-агентов"
     },
     "https://github.com/hexo-ai/sia": {
-      "added_date": "2026-07-07",
+      "added_date": "2026-07-10",
       "category": "agents_oss",
-      "description": "Sia от hexo-ai — агентный фреймворк/платформа для построения AI-агентов. Из seed-листа; граница между фреймворком и готовым продуктом требует проверки.",
-      "expires_at": "2026-08-06",
-      "last_checked": "2026-07-07",
+      "description": "Sia — агентный фреймворк или платформа от hexo-ai для построения AI-сервисов; требует дополнительного изучения на предмет наличия готового деплоибельного продукта. Упоминается в сидах, но позиционирование как фреймворк vs продукт неоднозначно.",
+      "expires_at": "2026-08-09",
+      "last_checked": "2026-07-10",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "hexo-ai/sia",
-      "signal_to_wait": "Появление документированного деплоя, UI и примеров production-использования",
+      "signal_to_wait": "Появление docker-compose или installer; документация по деплою как standalone продукта",
       "title": "hexo-ai/sia",
       "url": "https://github.com/hexo-ai/sia",
-      "why_interesting": "Сид-кандидат с потенциально интересной агентной архитектурой; нужна проверка наличия UI и деплоя"
+      "why_interesting": "Сид-репозиторий; потенциально интересный агентный инструмент, если окажется деплоибельным продуктом"
     },
-    "https://github.com/mem0ai/mem0": {
-      "added_date": "2026-07-04",
+    "https://github.com/lobehub/lobehub": {
+      "added_date": "2026-07-10",
       "category": "agents_oss",
-      "description": "Mem0 — универсальный memory layer для AI-агентов, позволяющий добавить долгосрочную память любому агенту или чат-боту. 60k звёзд; позиционируется как библиотека, но имеет hosted API — смотреть как managed service.",
-      "expires_at": "2026-08-03",
-      "last_checked": "2026-07-07",
+      "description": "LobeHub — self-hosted платформа для управления командой AI-агентов в режиме 7x24, позиционируется как Chief Agent Operator. 79k звёзд, активное развитие; может служить основой для B2B AI-агентного SaaS.",
+      "expires_at": "2026-08-09",
+      "last_checked": "2026-07-10",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": null,
-        "stars": 60066
+        "stars": 79701
       },
-      "repo_full_name": "mem0ai/mem0",
-      "signal_to_wait": "Появление полноценного self-hosted UI или managed SaaS с white-label возможностями",
-      "title": "mem0ai/mem0",
-      "url": "https://github.com/mem0ai/mem0",
-      "why_interesting": "60k звёзд, растущий тренд AI-памяти; граница между библиотекой и продуктом размыта — есть hosted платформа"
+      "repo_full_name": "lobehub/lobehub",
+      "signal_to_wait": "White-label возможности и billing-интеграция для перепродажи",
+      "title": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub",
+      "why_interesting": "79k звёзд; концепция агентной операционной платформы актуальна для enterprise"
+    },
+    "https://github.com/unclecode/crawl4ai": {
+      "added_date": "2026-07-10",
+      "category": "data_oss",
+      "description": "Crawl4AI — LLM-дружественный open-source веб-краулер и скрапер, оптимизированный для работы с AI-моделями. 72k звёзд, +889 за 72h; конкурирует с firecrawl, более низкий порог входа.",
+      "expires_at": "2026-08-09",
+      "last_checked": "2026-07-10",
+      "metric_baseline": {
+        "cross_source_count": 1,
+        "skills_count": null,
+        "stars": 72148
+      },
+      "repo_full_name": "unclecode/crawl4ai",
+      "signal_to_wait": "Появление SaaS-обёртки или docker-compose с полным UI для не-разработчиков",
+      "title": "unclecode/crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "why_interesting": "+889 звёзд за 72h, второй по росту в периоде; более простой деплой чем firecrawl"
     }
   }
 }

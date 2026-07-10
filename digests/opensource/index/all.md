@@ -1,11 +1,13 @@
 # Recommended Claude Skills — all time
 
-Total: 39
+Total: 41
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-10 | [mem0ai/mem0](https://github.com/mem0ai/mem0) |  | 60544 | 6.8 | high | pip install mem0ai |
+| 2026-07-10 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) |  | 148693 | 8.2 | high | git clone https://github.com/firecrawl/firecrawl |
 | 2026-07-07 | [zhayujie/CowAgent](https://github.com/zhayujie/CowAgent) |  | 45843 | 6.7 | high | pip install cowagent (или git clone + pip install -r requirements.txt) |
 | 2026-07-07 | [pewdiepie-archdaemon/odysseus](https://github.com/pewdiepie-archdaemon/odysseus) |  | 81279 | 7.9 | high | git clone https://github.com/pewdiepie-archdaemon/odysseus && cd odysseus |
 | 2026-07-07 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) |  | 210712 | 7.9 | high | git clone https://github.com/NousResearch/hermes-agent |

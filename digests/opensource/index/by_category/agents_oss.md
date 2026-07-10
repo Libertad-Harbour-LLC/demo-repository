@@ -1,9 +1,10 @@
 # Recommended Claude Skills — agents_oss
 
-Total: 12
+Total: 13
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-10 | [mem0ai/mem0](https://github.com/mem0ai/mem0) |  | 60544 | 6.8 | high | pip install mem0ai |
 | 2026-07-07 | [zhayujie/CowAgent](https://github.com/zhayujie/CowAgent) |  | 45843 | 6.7 | high | pip install cowagent (или git clone + pip install -r requirements.txt) |
 | 2026-07-07 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) |  | 210712 | 7.9 | high | git clone https://github.com/NousResearch/hermes-agent |
 | 2026-07-04 | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) |  | 79368 | 7.8 | high | docker pull ghcr.io/all-hands-ai/openhands:main |

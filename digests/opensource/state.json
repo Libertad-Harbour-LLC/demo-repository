@@ -5,7 +5,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 166,
+      "stars": 172,
       "title": "Anil-matcha/Open-AI-UGC"
     },
     "https://github.com/Anil-matcha/Open-Generative-AI": {
@@ -13,7 +13,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 22648,
+      "stars": 22989,
       "title": "Anil-matcha/Open-Generative-AI"
     },
     "https://github.com/AppFlowy-IO/AppFlowy": {
@@ -21,7 +21,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 73417,
+      "stars": 73589,
       "title": "AppFlowy-IO/AppFlowy"
     },
     "https://github.com/Autom8AI/Open-Higgsfield-AI": {
@@ -37,7 +37,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 88400,
+      "stars": 88431,
       "title": "ChatGPTNextWeb/NextChat"
     },
     "https://github.com/ClickHouse/ClickHouse": {
@@ -45,7 +45,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 48492,
+      "stars": 48560,
       "title": "ClickHouse/ClickHouse"
     },
     "https://github.com/DietrichGebert/ponytail": {
@@ -53,7 +53,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 76460,
+      "stars": 79777,
       "title": "DietrichGebert/ponytail"
     },
     "https://github.com/Egonex-AI/Understand-Anything": {
@@ -61,7 +61,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 71618,
+      "stars": 72473,
       "title": "Egonex-AI/Understand-Anything"
     },
     "https://github.com/Eugeny/tabby": {
@@ -69,7 +69,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 72956,
+      "stars": 73146,
       "title": "Eugeny/tabby"
     },
     "https://github.com/FlowiseAI/Flowise": {
@@ -77,7 +77,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 54369,
+      "stars": 54492,
       "title": "FlowiseAI/Flowise"
     },
     "https://github.com/GitHubDaily/GitHubDaily": {
@@ -85,7 +85,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 46992,
+      "stars": 47025,
       "title": "GitHubDaily/GitHubDaily"
     },
     "https://github.com/Graphify-Labs/graphify": {
@@ -93,15 +93,23 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 79139,
+      "stars": 81633,
       "title": "Graphify-Labs/graphify"
+    },
+    "https://github.com/HKUDS/CLI-Anything": {
+      "first_seen": "2026-07-10T12:29:06Z",
+      "score": null,
+      "skills_count": null,
+      "source": "github_oss",
+      "stars": 45087,
+      "title": "HKUDS/CLI-Anything"
     },
     "https://github.com/HKUDS/nanobot": {
       "first_seen": "2026-06-29T16:29:34Z",
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 45097,
+      "stars": 45210,
       "title": "HKUDS/nanobot"
     },
     "https://github.com/JuliusBrussee/caveman": {
@@ -109,7 +117,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 86033,
+      "stars": 87557,
       "title": "JuliusBrussee/caveman"
     },
     "https://github.com/KRTirtho/spotube": {
@@ -117,7 +125,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 47367,
+      "stars": 47433,
       "title": "KRTirtho/spotube"
     },
     "https://github.com/Mintplex-Labs/anything-llm": {
@@ -125,7 +133,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 62735,
+      "stars": 63049,
       "title": "Mintplex-Labs/anything-llm"
     },
     "https://github.com/NickIBrody/arcade_ai": {
@@ -141,7 +149,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 210712,
+      "stars": 212547,
       "title": "NousResearch/hermes-agent"
     },
     "https://github.com/OpenHands/OpenHands": {
@@ -149,7 +157,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 79740,
+      "stars": 80321,
       "title": "OpenHands/OpenHands"
     },
     "https://github.com/Significant-Gravitas/AutoGPT": {
@@ -157,7 +165,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 185415,
+      "stars": 185448,
       "title": "Significant-Gravitas/AutoGPT"
     },
     "https://github.com/Stirling-Tools/Stirling-PDF": {
@@ -165,7 +173,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 86378,
+      "stars": 86720,
       "title": "Stirling-Tools/Stirling-PDF"
     },
     "https://github.com/aaif-goose/goose": {
@@ -173,7 +181,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 50766,
+      "stars": 51021,
       "title": "aaif-goose/goose"
     },
     "https://github.com/abi/screenshot-to-code": {
@@ -181,7 +189,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 73182,
+      "stars": 73225,
       "title": "abi/screenshot-to-code"
     },
     "https://github.com/activepieces/activepieces": {
@@ -189,7 +197,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 23158,
+      "stars": 23196,
       "title": "activepieces/activepieces"
     },
     "https://github.com/affaan-m/ECC": {
@@ -197,7 +205,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 226836,
+      "stars": 228131,
       "title": "affaan-m/ECC"
     },
     "https://github.com/anuraghazra/github-readme-stats": {
@@ -205,7 +213,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 79779,
+      "stars": 79791,
       "title": "anuraghazra/github-readme-stats"
     },
     "https://github.com/appwrite/appwrite": {
@@ -213,7 +221,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 56511,
+      "stars": 56540,
       "title": "appwrite/appwrite"
     },
     "https://github.com/arelove/infinity-loop": {
@@ -221,7 +229,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 28,
+      "stars": 30,
       "title": "arelove/infinity-loop"
     },
     "https://github.com/bradtraversy/design-resources-for-developers": {
@@ -229,7 +237,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 66320,
+      "stars": 66361,
       "title": "bradtraversy/design-resources-for-developers"
     },
     "https://github.com/browser-use/browser-use": {
@@ -237,7 +245,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 103265,
+      "stars": 104072,
       "title": "browser-use/browser-use"
     },
     "https://github.com/bytedance/deer-flow": {
@@ -245,7 +253,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 76339,
+      "stars": 76709,
       "title": "bytedance/deer-flow"
     },
     "https://github.com/calesthio/OpenMontage": {
@@ -253,7 +261,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 34730,
+      "stars": 36482,
       "title": "calesthio/OpenMontage"
     },
     "https://github.com/cline/cline": {
@@ -261,7 +269,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 64397,
+      "stars": 64518,
       "title": "cline/cline"
     },
     "https://github.com/code-yeongyu/oh-my-openagent": {
@@ -269,7 +277,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 65139,
+      "stars": 65463,
       "title": "code-yeongyu/oh-my-openagent"
     },
     "https://github.com/coollabsio/coolify": {
@@ -277,7 +285,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 58038,
+      "stars": 58237,
       "title": "coollabsio/coolify"
     },
     "https://github.com/crewAIInc/crewAI": {
@@ -285,7 +293,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 55071,
+      "stars": 55290,
       "title": "crewAIInc/crewAI"
     },
     "https://github.com/dair-ai/Prompt-Engineering-Guide": {
@@ -293,7 +301,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 76269,
+      "stars": 76335,
       "title": "dair-ai/Prompt-Engineering-Guide"
     },
     "https://github.com/daytonaio/daytona": {
@@ -301,7 +309,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 72268,
+      "stars": 72243,
       "title": "daytonaio/daytona"
     },
     "https://github.com/duixcom/Duix-Avatar": {
@@ -309,7 +317,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 13837,
+      "stars": 13920,
       "title": "duixcom/Duix-Avatar"
     },
     "https://github.com/every-app/open-seo": {
@@ -317,7 +325,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 4156,
+      "stars": 4218,
       "title": "every-app/open-seo"
     },
     "https://github.com/farion1231/cc-switch": {
@@ -325,7 +333,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 114264,
+      "stars": 115560,
       "title": "farion1231/cc-switch"
     },
     "https://github.com/fatedier/frp": {
@@ -333,7 +341,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 107833,
+      "stars": 107907,
       "title": "fatedier/frp"
     },
     "https://github.com/firecrawl/firecrawl": {
@@ -341,7 +349,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 146938,
+      "stars": 148693,
       "title": "firecrawl/firecrawl"
     },
     "https://github.com/go-gitea/gitea": {
@@ -349,7 +357,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 56713,
+      "stars": 56764,
       "title": "go-gitea/gitea"
     },
     "https://github.com/gogs/gogs": {
@@ -357,7 +365,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 47658,
+      "stars": 47674,
       "title": "gogs/gogs"
     },
     "https://github.com/google-gemini/gemini-cli": {
@@ -365,7 +373,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 105822,
+      "stars": 105884,
       "title": "google-gemini/gemini-cli"
     },
     "https://github.com/hexo-ai/sia": {
@@ -373,7 +381,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 1964,
+      "stars": 2003,
       "title": "hexo-ai/sia"
     },
     "https://github.com/hoppscotch/hoppscotch": {
@@ -381,7 +389,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 79754,
+      "stars": 79775,
       "title": "hoppscotch/hoppscotch"
     },
     "https://github.com/immich-app/immich": {
@@ -389,7 +397,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 106625,
+      "stars": 107180,
       "title": "immich-app/immich"
     },
     "https://github.com/infiniflow/ragflow": {
@@ -397,7 +405,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 84503,
+      "stars": 84757,
       "title": "infiniflow/ragflow"
     },
     "https://github.com/langchain-ai/langchain": {
@@ -405,7 +413,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 141182,
+      "stars": 141464,
       "title": "langchain-ai/langchain"
     },
     "https://github.com/langgenius/dify": {
@@ -413,7 +421,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 148030,
+      "stars": 148397,
       "title": "langgenius/dify"
     },
     "https://github.com/lobehub/lobehub": {
@@ -421,7 +429,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 79572,
+      "stars": 79701,
       "title": "lobehub/lobehub"
     },
     "https://github.com/louislam/uptime-kuma": {
@@ -429,7 +437,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 88848,
+      "stars": 88969,
       "title": "louislam/uptime-kuma"
     },
     "https://github.com/mem0ai/mem0": {
@@ -437,7 +445,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 60294,
+      "stars": 60544,
       "title": "mem0ai/mem0"
     },
     "https://github.com/microsoft/ai-agents-for-beginners": {
@@ -445,7 +453,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 68771,
+      "stars": 68953,
       "title": "microsoft/ai-agents-for-beginners"
     },
     "https://github.com/mutonby/openshorts": {
@@ -453,7 +461,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 2546,
+      "stars": 2562,
       "title": "mutonby/openshorts"
     },
     "https://github.com/n8n-io/n8n": {
@@ -461,7 +469,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 195505,
+      "stars": 195926,
       "title": "n8n-io/n8n"
     },
     "https://github.com/nesquena/hermes-webui": {
@@ -469,7 +477,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 15606,
+      "stars": 15753,
       "title": "nesquena/hermes-webui"
     },
     "https://github.com/nexu-io/open-design": {
@@ -477,7 +485,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 75825,
+      "stars": 77002,
       "title": "nexu-io/open-design"
     },
     "https://github.com/ollama/ollama": {
@@ -485,7 +493,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 175643,
+      "stars": 175854,
       "title": "ollama/ollama"
     },
     "https://github.com/open-webui/open-webui": {
@@ -493,7 +501,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 144542,
+      "stars": 144940,
       "title": "open-webui/open-webui"
     },
     "https://github.com/paperclipai/paperclip": {
@@ -501,7 +509,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 72959,
+      "stars": 73281,
       "title": "paperclipai/paperclip"
     },
     "https://github.com/pewdiepie-archdaemon/odysseus": {
@@ -509,7 +517,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 81279,
+      "stars": 82044,
       "title": "pewdiepie-archdaemon/odysseus"
     },
     "https://github.com/rustdesk/rustdesk": {
@@ -517,7 +525,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 117782,
+      "stars": 117993,
       "title": "rustdesk/rustdesk"
     },
     "https://github.com/ruvnet/ruflo": {
@@ -525,7 +533,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 63381,
+      "stars": 63796,
       "title": "ruvnet/ruflo"
     },
     "https://github.com/seanZhang414/openadserver": {
@@ -541,23 +549,15 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 62147,
+      "stars": 62393,
       "title": "shanraisshan/claude-code-best-practice"
-    },
-    "https://github.com/siyuan-note/siyuan": {
-      "first_seen": "2026-06-29T16:29:34Z",
-      "score": null,
-      "skills_count": null,
-      "source": "github_oss",
-      "stars": 44969,
-      "title": "siyuan-note/siyuan"
     },
     "https://github.com/strapi/strapi": {
       "first_seen": "2026-06-29T15:47:47Z",
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 72618,
+      "stars": 72636,
       "title": "strapi/strapi"
     },
     "https://github.com/supabase/supabase": {
@@ -565,7 +565,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 105852,
+      "stars": 106093,
       "title": "supabase/supabase"
     },
     "https://github.com/thedaviddias/Front-End-Checklist": {
@@ -573,7 +573,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 73142,
+      "stars": 73172,
       "title": "thedaviddias/Front-End-Checklist"
     },
     "https://github.com/thedotmack/claude-mem": {
@@ -581,7 +581,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 86260,
+      "stars": 86708,
       "title": "thedotmack/claude-mem"
     },
     "https://github.com/toeverything/AFFiNE": {
@@ -589,7 +589,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 70154,
+      "stars": 70285,
       "title": "toeverything/AFFiNE"
     },
     "https://github.com/unclecode/crawl4ai": {
@@ -597,7 +597,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 71259,
+      "stars": 72148,
       "title": "unclecode/crawl4ai"
     },
     "https://github.com/unslothai/unsloth": {
@@ -605,7 +605,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 67874,
+      "stars": 67980,
       "title": "unslothai/unsloth"
     },
     "https://github.com/upscayl/upscayl": {
@@ -613,7 +613,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 46753,
+      "stars": 46807,
       "title": "upscayl/upscayl"
     },
     "https://github.com/usememos/memos": {
@@ -621,7 +621,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 61391,
+      "stars": 61461,
       "title": "usememos/memos"
     },
     "https://github.com/zhayujie/CowAgent": {
@@ -629,7 +629,7 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 45843,
+      "stars": 45905,
       "title": "zhayujie/CowAgent"
     },
     "https://github.com/zylon-ai/private-gpt": {
@@ -637,10 +637,10 @@
       "score": null,
       "skills_count": null,
       "source": "github_oss",
-      "stars": 57313,
+      "stars": 57326,
       "title": "zylon-ai/private-gpt"
     }
   },
-  "last_run": "2026-07-07T12:31:12Z",
-  "last_sent_date": "2026-07-07"
+  "last_run": "2026-07-10T12:29:06Z",
+  "last_sent_date": "2026-07-10"
 }

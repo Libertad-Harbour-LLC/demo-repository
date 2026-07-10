@@ -544,6 +544,35 @@
       "title": "farion1231/cc-switch",
       "url": "https://github.com/farion1231/cc-switch"
     },
+    "https://github.com/firecrawl/firecrawl": {
+      "category": "data_oss",
+      "confidence": "high",
+      "description": "Firecrawl — self-hosted API для поиска, скрапинга и взаимодействия с веб-сайтами в масштабе с возможностью конвертации в Markdown для LLM. Является open-source альтернативой платному Firecrawl Cloud; разворачивается через Docker и может быть перепродан как API-сервис для разработчиков AI-агентов.",
+      "final_score": 8.2,
+      "first_recommended": "2026-07-10",
+      "metric": "Успешность скрапинга защищённых сайтов, latency, стоимость vs облачного плана",
+      "promoted_from_watch": false,
+      "repo_full_name": "firecrawl/firecrawl",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 8,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 148693,
+      "test_steps": [
+        "git clone https://github.com/firecrawl/firecrawl",
+        "docker-compose up -d (self-hosted режим)",
+        "Отправить первый запрос через REST API на скрапинг целевого сайта",
+        "Интегрировать результаты в LLM-пайплайн или агента"
+      ],
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl"
+    },
     "https://github.com/hexo-ai/sia": {
       "category": "agents_oss",
       "confidence": null,
@@ -705,6 +734,35 @@
       ],
       "title": "louislam/uptime-kuma",
       "url": "https://github.com/louislam/uptime-kuma"
+    },
+    "https://github.com/mem0ai/mem0": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "Mem0 — универсальный memory layer для AI-агентов, позволяющий добавить долгосрочную персонализированную память любому чат-боту или агенту. Выпускник watchlist (+250 звёзд за 72h); имеет hosted API и может быть использован как managed memory service для AI-продуктов.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-10",
+      "metric": "Точность recall памяти, latency, стоимость хранения",
+      "promoted_from_watch": false,
+      "repo_full_name": "mem0ai/mem0",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 6,
+        "traction": 9,
+        "utility": 7
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 60544,
+      "test_steps": [
+        "pip install mem0ai",
+        "Настроить конфиг с vector store (Qdrant/Chroma)",
+        "Интегрировать в существующего агента или чат-бота",
+        "Протестировать персистентность памяти между сессиями"
+      ],
+      "title": "mem0ai/mem0",
+      "url": "https://github.com/mem0ai/mem0"
     },
     "https://github.com/mutonby/openshorts": {
       "category": "video_oss",
