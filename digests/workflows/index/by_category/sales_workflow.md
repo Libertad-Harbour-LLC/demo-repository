@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 24
+Total: 25
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-10 | [nuel-omole/n8n-ai-quoting-agent: workflow](https://github.com/nuel-omole/n8n-ai-quoting-agent/blob/master/workflow.json) | workflow |  | 6.3 | medium | Скачать workflow.json из репозитория |
 | 2026-07-09 | [weblineindia/n8n-Qualify-and-route-high-intent-leads: workflow-template](https://github.com/weblineindia/n8n-Qualify-and-route-high-intent-leads-with-OpenAI-Airtable-and-Slack) | workflow-template |  | 6.8 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-08 | [weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets: workflow-template](https://github.com/weblineindia/n8n-Predict-deal-close-dates-and-update-Salesforce-with-Groq-and-Google-Sheets/blob/main/workflow-template.json) | workflow-template |  | 6.7 | medium | Скачать workflow-template.json |
 | 2026-07-06 | [weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI: workflow-template](https://github.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать JSON: https://raw.githubusercontent.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CR... |

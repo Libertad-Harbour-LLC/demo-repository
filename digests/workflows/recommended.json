@@ -626,6 +626,45 @@
       "trigger_type": "webhook",
       "url": "https://github.com/Dimitrearaujo/n8n-whatsapp-lead-nurturing/blob/main/workflows/whatsapp-lead-nurturing.json"
     },
+    "https://github.com/DmitriiDmallSick/ecom-tech-speed-checker/blob/main/n8n/tech-checker-template.json": {
+      "category": "web_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Workflow для автоматического аудита технологического стека и скорости загрузки e-commerce сайтов через n8n. Полезен для технических консультантов и владельцев интернет-магазинов, отслеживающих производительность конкурентов или собственных сайтов.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-10",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Количество проверенных сайтов за прогон и точность определения техстека",
+      "node_count": 25,
+      "promoted_from_watch": false,
+      "repo_full_name": "DmitriiDmallSick/ecom-tech-speed-checker",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tech-checker-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать tech-checker-template.json из папки n8n/",
+        "Импортировать в n8n",
+        "Подготовить список URL e-commerce сайтов для проверки",
+        "Настроить HTTP Request nodes и парсер ответов",
+        "Запустить на 2-3 тестовых URL и проверить отчёт"
+      ],
+      "title": "DmitriiDmallSick/ecom-tech-speed-checker: tech-checker-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/DmitriiDmallSick/ecom-tech-speed-checker/blob/main/n8n/tech-checker-template.json"
+    },
     "https://github.com/DragonJAR/n8n-workflows-esp": {
       "category": "content_workflow",
       "complexity": "complex",
@@ -5152,6 +5191,45 @@
       "trigger_type": "schedule",
       "url": "https://github.com/ceyre-boop/email-automation"
     },
+    "https://github.com/cjstudio39/successfactors-n8n-onboarding/blob/main/SFONB_Survey_template.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Автоматизация HR-онбординга через SAP SuccessFactors: отправка опросов новым сотрудникам и сбор ответов через n8n. Ориентирован на HR-команды, использующие SAP SuccessFactors в связке с n8n.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-10",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Количество автоматически отправленных опросов и процент собранных ответов",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "cjstudio39/successfactors-n8n-onboarding",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "SFONB_Survey_template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать SFONB_Survey_template.json с GitHub",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Добавить credentials SAP SuccessFactors (API key или Basic Auth)",
+        "Настроить параметры опроса и список сотрудников",
+        "Запустить тестовый прогон на одном тестовом пользователе"
+      ],
+      "title": "cjstudio39/successfactors-n8n-onboarding: SFONB_Survey_template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/cjstudio39/successfactors-n8n-onboarding/blob/main/SFONB_Survey_template.json"
+    },
     "https://github.com/codezer0x/GoogleMapAIagent/blob/main/Google map ai agent.json": {
       "category": "marketing_workflow",
       "complexity": "complex",
@@ -5762,6 +5840,153 @@
       "tool": "n8n",
       "trigger_type": "manual",
       "url": "https://github.com/enescingoz/awesome-n8n-templates"
+    },
+    "https://github.com/erliona/tunova-templates/blob/main/n8n/01-form-to-song.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflow для сервиса генерации персонализированной музыки Tunova: приём заявок через форму или webhook, генерация треков и дистрибуция через Telegram и плейлисты. Ориентирован на разработчиков музыкальных продуктов и платформ.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-10",
+      "metric": "Время от подачи заявки до получения трека в Telegram",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "erliona/tunova-templates",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-form-to-song"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 4 JSON из папки n8n/ репозитория",
+        "Импортировать 01-form-to-song.json в n8n как первый workflow",
+        "Настроить credentials музыкального AI-сервиса (Tunova API или аналог)",
+        "Настроить Telegram bot token для 03-playlist-to-telegram",
+        "Отправить тестовую заявку через форму и проверить результат"
+      ],
+      "title": "erliona/tunova-templates: 01-form-to-song",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/erliona/tunova-templates/blob/main/n8n/01-form-to-song.json"
+    },
+    "https://github.com/erliona/tunova-templates/blob/main/n8n/02-webhook-to-song.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflow для сервиса генерации персонализированной музыки Tunova: приём заявок через форму или webhook, генерация треков и дистрибуция через Telegram и плейлисты. Ориентирован на разработчиков музыкальных продуктов и платформ.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-10",
+      "metric": "Время от подачи заявки до получения трека в Telegram",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "erliona/tunova-templates",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02-webhook-to-song"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 4 JSON из папки n8n/ репозитория",
+        "Импортировать 01-form-to-song.json в n8n как первый workflow",
+        "Настроить credentials музыкального AI-сервиса (Tunova API или аналог)",
+        "Настроить Telegram bot token для 03-playlist-to-telegram",
+        "Отправить тестовую заявку через форму и проверить результат"
+      ],
+      "title": "erliona/tunova-templates: 02-webhook-to-song",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/erliona/tunova-templates/blob/main/n8n/02-webhook-to-song.json"
+    },
+    "https://github.com/erliona/tunova-templates/blob/main/n8n/03-playlist-to-telegram.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflow для сервиса генерации персонализированной музыки Tunova: приём заявок через форму или webhook, генерация треков и дистрибуция через Telegram и плейлисты. Ориентирован на разработчиков музыкальных продуктов и платформ.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-10",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Время от подачи заявки до получения трека в Telegram",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "erliona/tunova-templates",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03-playlist-to-telegram"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 4 JSON из папки n8n/ репозитория",
+        "Импортировать 01-form-to-song.json в n8n как первый workflow",
+        "Настроить credentials музыкального AI-сервиса (Tunova API или аналог)",
+        "Настроить Telegram bot token для 03-playlist-to-telegram",
+        "Отправить тестовую заявку через форму и проверить результат"
+      ],
+      "title": "erliona/tunova-templates: 03-playlist-to-telegram",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/erliona/tunova-templates/blob/main/n8n/03-playlist-to-telegram.json"
+    },
+    "https://github.com/erliona/tunova-templates/blob/main/n8n/04-ambient-mix-factory.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflow для сервиса генерации персонализированной музыки Tunova: приём заявок через форму или webhook, генерация треков и дистрибуция через Telegram и плейлисты. Ориентирован на разработчиков музыкальных продуктов и платформ.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-10",
+      "metric": "Время от подачи заявки до получения трека в Telegram",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "erliona/tunova-templates",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "04-ambient-mix-factory"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать все 4 JSON из папки n8n/ репозитория",
+        "Импортировать 01-form-to-song.json в n8n как первый workflow",
+        "Настроить credentials музыкального AI-сервиса (Tunova API или аналог)",
+        "Настроить Telegram bot token для 03-playlist-to-telegram",
+        "Отправить тестовую заявку через форму и проверить результат"
+      ],
+      "title": "erliona/tunova-templates: 04-ambient-mix-factory",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/erliona/tunova-templates/blob/main/n8n/04-ambient-mix-factory.json"
     },
     "https://github.com/felores/make-blueprints": {
       "category": "video_workflow",
@@ -7604,6 +7829,42 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/n8nKOR/n8n-shared-workflow"
+    },
+    "https://github.com/nuel-omole/n8n-ai-quoting-agent/blob/master/workflow.json": {
+      "category": "sales_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "AI-агент для автоматической генерации коммерческих предложений (quotes) на основе входящих запросов клиентов через n8n. Подходит для малого и среднего бизнеса, который хочет ускорить продажный цикл.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-10",
+      "metric": "Время от получения запроса до отправки готового предложения клиенту",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "nuel-omole/n8n-ai-quoting-agent",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow.json из репозитория",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить credentials для используемого AI-провайдера (OpenAI/Anthropic)",
+        "Настроить триггер (webhook для входящих запросов)",
+        "Отправить тестовый запрос и проверить сгенерированное предложение"
+      ],
+      "title": "nuel-omole/n8n-ai-quoting-agent: workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/nuel-omole/n8n-ai-quoting-agent/blob/master/workflow.json"
     },
     "https://github.com/oxbshw/Open-Workflow-Library": {
       "category": "content_workflow",

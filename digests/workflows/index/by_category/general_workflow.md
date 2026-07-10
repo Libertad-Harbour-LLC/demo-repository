@@ -1,9 +1,14 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 97
+Total: 102
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-10 | [erliona/tunova-templates: 04-ambient-mix-factory](https://github.com/erliona/tunova-templates/blob/main/n8n/04-ambient-mix-factory.json) | 04-ambient-mix-factory |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [erliona/tunova-templates: 03-playlist-to-telegram](https://github.com/erliona/tunova-templates/blob/main/n8n/03-playlist-to-telegram.json) | 03-playlist-to-telegram |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [erliona/tunova-templates: 02-webhook-to-song](https://github.com/erliona/tunova-templates/blob/main/n8n/02-webhook-to-song.json) | 02-webhook-to-song |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [erliona/tunova-templates: 01-form-to-song](https://github.com/erliona/tunova-templates/blob/main/n8n/01-form-to-song.json) | 01-form-to-song |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [cjstudio39/successfactors-n8n-onboarding: SFONB_Survey_template](https://github.com/cjstudio39/successfactors-n8n-onboarding/blob/main/SFONB_Survey_template.json) | SFONB_Survey_template |  | 6.5 | medium | Скачать SFONB_Survey_template.json с GitHub |
 | 2026-07-09 | [weblineindia/n8n-Summarize-Zoom-meetings: workflow-template](https://github.com/weblineindia/n8n-Summarize-Zoom-meetings-with-GPT-4o-Whisper-Supabase-RAG-and-email-reports) | workflow-template |  | 6.7 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-09 | [tribe-framework/types.json: types](https://github.com/tribe-framework/types.json/blob/master/types.json) | types |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |
 | 2026-07-09 | [tribe-framework/types.json: survey-data-collector](https://github.com/tribe-framework/types.json/blob/master/blueprints/survey-data-collector.json) | survey-data-collector |  | 6.4 | medium | Открыть нужный blueprint JSON (например, content-calendar.json) |

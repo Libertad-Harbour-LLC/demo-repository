@@ -1,9 +1,16 @@
 # Recommended — tool: n8n
 
-Total: 268
+Total: 275
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-10 | [nuel-omole/n8n-ai-quoting-agent: workflow](https://github.com/nuel-omole/n8n-ai-quoting-agent/blob/master/workflow.json) | workflow |  | 6.3 | medium | Скачать workflow.json из репозитория |
+| 2026-07-10 | [erliona/tunova-templates: 04-ambient-mix-factory](https://github.com/erliona/tunova-templates/blob/main/n8n/04-ambient-mix-factory.json) | 04-ambient-mix-factory |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [erliona/tunova-templates: 03-playlist-to-telegram](https://github.com/erliona/tunova-templates/blob/main/n8n/03-playlist-to-telegram.json) | 03-playlist-to-telegram |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [erliona/tunova-templates: 02-webhook-to-song](https://github.com/erliona/tunova-templates/blob/main/n8n/02-webhook-to-song.json) | 02-webhook-to-song |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [erliona/tunova-templates: 01-form-to-song](https://github.com/erliona/tunova-templates/blob/main/n8n/01-form-to-song.json) | 01-form-to-song |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
+| 2026-07-10 | [cjstudio39/successfactors-n8n-onboarding: SFONB_Survey_template](https://github.com/cjstudio39/successfactors-n8n-onboarding/blob/main/SFONB_Survey_template.json) | SFONB_Survey_template |  | 6.5 | medium | Скачать SFONB_Survey_template.json с GitHub |
+| 2026-07-10 | [DmitriiDmallSick/ecom-tech-speed-checker: tech-checker-template](https://github.com/DmitriiDmallSick/ecom-tech-speed-checker/blob/main/n8n/tech-checker-template.json) | tech-checker-template |  | 6.1 | medium | Скачать tech-checker-template.json из папки n8n/ |
 | 2026-07-09 | [weblineindia/n8n-Summarize-Zoom-meetings: workflow-template](https://github.com/weblineindia/n8n-Summarize-Zoom-meetings-with-GPT-4o-Whisper-Supabase-RAG-and-email-reports) | workflow-template |  | 6.7 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-09 | [weblineindia/n8n-Send-promo-code-expiry-alerts: workflow-template](https://github.com/weblineindia/n8n-Send-promo-code-expiry-alerts-using-Webhook-Google-Sheets-Gmail-and-Slack) | workflow-template |  | 6.5 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-09 | [weblineindia/n8n-Qualify-and-route-high-intent-leads: workflow-template](https://github.com/weblineindia/n8n-Qualify-and-route-high-intent-leads-with-OpenAI-Airtable-and-Slack) | workflow-template |  | 6.8 | medium | Скачать JSON по ссылке json_url |
