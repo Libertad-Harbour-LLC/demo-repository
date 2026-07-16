@@ -2598,6 +2598,43 @@
       "title": "a5c-ai/babysitter",
       "url": "https://github.com/a5c-ai/babysitter/tree/main/.claude/skills"
     },
+    "https://github.com/aaron-he-zhu/seo-geo-claude-skills": {
+      "category": "marketing_skill",
+      "confidence": "high",
+      "description": "Специализированная коллекция SEO и GEO (Generative Engine Optimization) skills для Claude Code. Охватывает полный цикл SEO-работ: технический аудит, on-page оптимизацию, анализ пробелов в контенте и обновление существующего контента. 65K установок в реестре.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-16",
+      "metric": "Полнота и точность SEO-аудита по сравнению с ручным анализом через Ahrefs/Screaming Frog",
+      "promoted_from_watch": false,
+      "repo_full_name": "aaron-he-zhu/seo-geo-claude-skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "backlink-analyzer",
+        "seo-content-writer",
+        "technical-seo-checker",
+        "on-page-seo-auditor",
+        "geo-content-optimizer",
+        "content-quality-auditor",
+        "content-gap-analysis",
+        "content-refresher"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть https://github.com/aaron-he-zhu/seo-geo-claude-skills и найти структуру skills",
+        "Скопировать skill seo-content-writer или technical-seo-checker в .claude/skills/ проекта",
+        "В Claude Code: 'Run a technical SEO audit on my website at [URL] and give me a prioritized action list'"
+      ],
+      "title": "aaron-he-zhu/seo-geo-claude-skills",
+      "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills"
+    },
     "https://github.com/addyosmani/agent-skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -5963,6 +6000,43 @@
       "title": "kv0906/pm-kit",
       "url": "https://github.com/kv0906/pm-kit/tree/main/.claude/skills"
     },
+    "https://github.com/leonxlnx/taste-skill": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Коллекция skills для генерации высококачественного фронтенда с упором на дизайн-вкус: включает переосмысление существующих интерфейсов, конвертацию изображений в код и генерацию мобильных/веб-макетов через AI. На skills.sh набрал 1.4 млн реальных установок — абсолютный лидер реестра.",
+      "final_score": 9.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Качество сгенерированного CSS/HTML по сравнению с оригинальным дизайном",
+      "promoted_from_watch": false,
+      "repo_full_name": "leonxlnx/taste-skill",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "design-taste-frontend",
+        "high-end-visual-design",
+        "redesign-existing-projects",
+        "stitch-design-taste",
+        "image-to-code",
+        "imagegen-frontend-web",
+        "imagegen-frontend-mobile",
+        "design-taste-frontend-v1"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть https://github.com/leonxlnx/taste-skill и клонировать репозиторий",
+        "Скопировать папку нужного skill (например skills/redesign-existing-projects) в .claude/skills/ своего проекта",
+        "В Claude Code дать промт: 'Redesign the main page of my app using the taste-skill approach, focus on high-end visual quality'"
+      ],
+      "title": "leonxlnx/taste-skill",
+      "url": "https://github.com/leonxlnx/taste-skill"
+    },
     "https://github.com/lifinance/contracts/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "high",
@@ -8667,6 +8741,47 @@
       "title": "steve-magne/hookstack",
       "url": "https://github.com/steve-magne/hookstack/tree/main/.claude/skills"
     },
+    "https://github.com/storybookjs/storybook/tree/next/.claude/skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий Storybook (90K+ звёзд) содержит production-grade Claude Skills для автоматизации своего собственного workflow: PR-менеджмент, review документации, релизный процесс и QA-лейблинг. Реальный пример использования skills крупным open-source проектом.",
+      "final_score": 7.8,
+      "first_recommended": "2026-07-16",
+      "metric": "Насколько полным и правильно структурированным получился автоматически созданный PR",
+      "promoted_from_watch": false,
+      "repo_full_name": "storybookjs/storybook",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "canary",
+        "docs-review",
+        "fix-linting-types-on-pr",
+        "github-qa-labels",
+        "handle-pr-comments",
+        "minor-release",
+        "open-pr",
+        "pr",
+        "rebuild-restart-storybook",
+        "storybook-startup-benchmark",
+        "storybook-upgrade",
+        "update-pr-description"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/storybookjs/storybook и перейти в ветку next",
+        "Скопировать .claude/skills/pr/ или .claude/skills/docs-review/ в свой проект",
+        "В Claude Code: 'Use the pr skill to create a pull request for my current changes with proper description'"
+      ],
+      "title": "storybookjs/storybook",
+      "url": "https://github.com/storybookjs/storybook/tree/next/.claude/skills"
+    },
     "https://github.com/susomejias/rembric/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -9284,6 +9399,49 @@
       "title": "vstakhovsky/shokunin-review",
       "url": "https://github.com/vstakhovsky/shokunin-review/tree/main/.claude/skills"
     },
+    "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 50+ skills для автономного академического исследования: поиск по arxiv, автоматическое ревью статей, планирование экспериментов, написание и компиляция LaTeX-бумаг. Создана для запуска исследовательских агентов в фоновом режиме.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-16",
+      "metric": "Качество и оригинальность сгенерированных гипотез по оценке эксперта в области",
+      "promoted_from_watch": false,
+      "repo_full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 14,
+      "skills_in_repo": [
+        "ablation-planner",
+        "alphaxiv",
+        "analyze-results",
+        "arxiv",
+        "auto-paper-improvement-loop",
+        "auto-review-loop",
+        "citation-audit",
+        "deep-research",
+        "experiment-plan",
+        "idea-creator",
+        "novelty-check",
+        "paper-compile",
+        "paper-plan",
+        "overleaf-sync"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+        "Скопировать skills/arxiv/ и skills/idea-creator/ в .claude/skills/",
+        "В Claude Code: 'Use arxiv skill to find 5 recent papers on [тема], then use idea-creator to generate 3 novel research hypotheses based on them'"
+      ],
+      "title": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
+    },
     "https://github.com/webiny/webiny-js/tree/next/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -9453,6 +9611,48 @@
       ],
       "title": "woocommerce/woocommerce-ios",
       "url": "https://github.com/woocommerce/woocommerce-ios/tree/trunk/.claude/skills"
+    },
+    "https://github.com/worldwonderer/oh-story-claudecode": {
+      "category": "content_skill",
+      "confidence": "medium",
+      "description": "Репозиторий с набором skills для создания, редактирования и публикации длинных нарративных историй через Claude Code. Включает полный пайплайн от импорта материалов до написания, ревью и генерации обложек. Верифицирован GitHub, активно обновлялся сегодня.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Читаемость и естественность текста — попросить 3 людей оценить, насколько текст звучит «по-человечески»",
+      "promoted_from_watch": false,
+      "repo_full_name": "worldwonderer/oh-story-claudecode",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 8
+      },
+      "skills_count": 13,
+      "skills_in_repo": [
+        "browser-cdp",
+        "story-cover",
+        "story-deslop",
+        "story-import",
+        "story-long-analyze",
+        "story-long-scan",
+        "story-long-write",
+        "story-review",
+        "story-setup",
+        "story-short-analyze",
+        "story-short-scan",
+        "story-short-write",
+        "story"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/worldwonderer/oh-story-claudecode",
+        "Скопировать skills/story-deslop/ и skills/story-short-write/ в .claude/skills/",
+        "В Claude Code: 'Use story-short-write to write a 1000-word short story about [тема], then apply story-deslop to remove AI-sounding phrases'"
+      ],
+      "title": "worldwonderer/oh-story-claudecode",
+      "url": "https://github.com/worldwonderer/oh-story-claudecode"
     },
     "https://github.com/wsbs20/claude-code-aso-skill/tree/main/.claude/skills": {
       "category": "marketing_skill",

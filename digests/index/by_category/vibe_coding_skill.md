@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 156
+Total: 157
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-16 | [storybookjs/storybook](https://github.com/storybookjs/storybook/tree/next/.claude/skills) | canary, docs-review, fix-linting-types-on-pr, +9 more |  | 7.8 | high | git clone https://github.com/storybookjs/storybook и перейти в ветку next |
 | 2026-07-09 | [wshobson/agents](https://github.com/wshobson/agents) | screen-reader-testing, wcag-audit-patterns, multi-reviewer-patterns, +28 more |  | 8.5 | high | Клонировать: git clone https://github.com/wshobson/agents.git |
 | 2026-07-09 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | api-and-interface-design, browser-testing-with-devtools, ci-cd-and-automation, +21 more |  | 8.7 | high | Клонировать репо: git clone https://github.com/addyosmani/agent-skills.git |
 | 2026-07-08 | [matteing/opal](https://github.com/matteing/opal/tree/main/.claude/skills) | ci-preflight, citations, codegen-sync, +6 more |  | 6.6 | medium | Клонировать репо: git clone https://github.com/matteing/opal.git |

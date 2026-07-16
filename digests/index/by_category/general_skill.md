@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 55
+Total: 56
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-16 | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | ablation-planner, alphaxiv, analyze-results, +11 more |  | 7.1 | medium | git clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep |
 | 2026-07-10 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | frontend-design, writing-rules, math-olympiad, +7 more |  | 8.6 | high | git clone https://github.com/anthropics/claude-plugins-official и скопировать папку plugins/skill-creator/ в .claude/... |
 | 2026-07-10 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | biopython, deepchem, astropy, +7 more |  | 7.0 | medium | git clone https://github.com/K-Dense-AI/scientific-agent-skills и скопировать skills/biopython/ в .claude/skills/biop... |
 | 2026-07-05 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU/tree/main/.claude/skills/memu) | memu |  | 7.3 | high | Клонировать репо: git clone https://github.com/NevaMind-AI/memU.git |

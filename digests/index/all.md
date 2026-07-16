@@ -1,11 +1,16 @@
 # Recommended Claude Skills — all time
 
-Total: 254
+Total: 259
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-16 | [worldwonderer/oh-story-claudecode](https://github.com/worldwonderer/oh-story-claudecode) | browser-cdp, story-cover, story-deslop, +10 more |  | 7.0 | medium | git clone https://github.com/worldwonderer/oh-story-claudecode |
+| 2026-07-16 | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | ablation-planner, alphaxiv, analyze-results, +11 more |  | 7.1 | medium | git clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep |
+| 2026-07-16 | [storybookjs/storybook](https://github.com/storybookjs/storybook/tree/next/.claude/skills) | canary, docs-review, fix-linting-types-on-pr, +9 more |  | 7.8 | high | git clone https://github.com/storybookjs/storybook и перейти в ветку next |
+| 2026-07-16 | [leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill) | design-taste-frontend, high-end-visual-design, redesign-existing-projects, +5 more |  | 9.0 | high | Открыть https://github.com/leonxlnx/taste-skill и клонировать репозиторий |
+| 2026-07-16 | [aaron-he-zhu/seo-geo-claude-skills](https://github.com/aaron-he-zhu/seo-geo-claude-skills) | backlink-analyzer, seo-content-writer, technical-seo-checker, +5 more |  | 7.8 | high | Открыть https://github.com/aaron-he-zhu/seo-geo-claude-skills и найти структуру skills |
 | 2026-07-10 | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | vercel-react-best-practices, web-design-guidelines, vercel-composition-patterns, +6 more |  | 8.8 | high | Установить через skills.sh: найти vercel-labs/agent-skills в реестре и добавить нужный skill в .claude/skills/ |
 | 2026-07-10 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | frontend-design, writing-rules, math-olympiad, +7 more |  | 8.6 | high | git clone https://github.com/anthropics/claude-plugins-official и скопировать папку plugins/skill-creator/ в .claude/... |
 | 2026-07-10 | [SamurAIGPT/Generative-Media-Skills](https://github.com/SamurAIGPT/Generative-Media-Skills) | muapi-ad-creative, muapi-cinema-director, muapi-product-video-ad-maker, +9 more |  | 7.1 | medium | git clone https://github.com/SamurAIGPT/Generative-Media-Skills и скопировать library/motion/product-video-ad-maker/ ... |
