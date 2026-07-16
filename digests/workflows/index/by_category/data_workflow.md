@@ -1,9 +1,31 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 44
+Total: 66
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-16 | [youssefmkb/insurance-document-processor: workflow](https://github.com/youssefmkb/insurance-document-processor/blob/main/workflow.json) | workflow |  | 7.0 | medium | Скачать workflow.json из репо |
+| 2026-07-16 | [xerael/ultralab: ultralab-systematicreview-orchestrator](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-systematicreview-orchestrator.json) | ultralab-systematicreview-orchestrator |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-snowballing](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-snowballing.json) | ultralab-snowballing |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-search-apis](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-search-apis.json) | ultralab-search-apis |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-screening](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-screening.json) | ultralab-screening |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-riskofbias](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-riskofbias.json) | ultralab-riskofbias |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-ranking](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-ranking.json) | ultralab-ranking |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-qdrant-store](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-qdrant-store.json) | ultralab-qdrant-store |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-prisma](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-prisma.json) | ultralab-prisma |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-predatory](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-predatory.json) | ultralab-predatory |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-pdf-fetch](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-pdf-fetch.json) | ultralab-pdf-fetch |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-pdf-extract](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-pdf-extract.json) | ultralab-pdf-extract |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-normalize](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-normalize.json) | ultralab-normalize |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-module](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-module.json) | ultralab-module |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-metaanalysis](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-metaanalysis.json) | ultralab-metaanalysis |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-grade](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-grade.json) | ultralab-grade |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-fulltext](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-fulltext.json) | ultralab-fulltext |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-export](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-export.json) | ultralab-export |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-embedding](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-embedding.json) | ultralab-embedding |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-deduplicate](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-deduplicate.json) | ultralab-deduplicate |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-clustering](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-clustering.json) | ultralab-clustering |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
+| 2026-07-16 | [xerael/ultralab: ultralab-api-search-isolated](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-api-search-isolated.json) | ultralab-api-search-isolated |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
 | 2026-07-09 | [weblineindia/n8n-Detect-fraud-in-user-activity: workflow-template](https://github.com/weblineindia/n8n-Detect-fraud-in-user-activity-with-PostgreSQL-OpenAI-and-Slack) | workflow-template |  | 6.8 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot_with_discord_notification](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot_with_discord_notification.json) | eth_to_usdc_automated_swap_bot_with_discord_notification |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |
 | 2026-07-08 | [bicced/make-integromat-crypto-workflows: eth_to_usdc_automated_swap_bot](https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/eth_to_usdc_automated_swap_bot.json) | eth_to_usdc_automated_swap_bot |  | 6.1 | medium | Скачать daily_eth_balance_reporter_telegram.json |

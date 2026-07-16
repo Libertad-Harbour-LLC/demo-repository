@@ -1,9 +1,16 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 20
+Total: 27
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 04-dr-threshold-alert](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/04-dr-threshold-alert.json) | 04-dr-threshold-alert |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |
+| 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 03-weekly-backlink-report](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/03-weekly-backlink-report.json) | 03-weekly-backlink-report |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |
+| 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 02-google-indexing-submitter](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/02-google-indexing-submitter.json) | 02-google-indexing-submitter |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |
+| 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 01-backlink-health-checker](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/01-backlink-health-checker.json) | 01-backlink-health-checker |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |
+| 2026-07-16 | [Airvision2026/automazioni-pmi-italia: 03-rassegna-email-ai](https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/03-rassegna-email-ai.json) | 03-rassegna-email-ai |  | 6.7 | medium | Скачать 01-lead-form-registro-notifiche.json |
+| 2026-07-16 | [Airvision2026/automazioni-pmi-italia: 02-promemoria-scadenze-pagamenti](https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/02-promemoria-scadenze-pagamenti.json) | 02-promemoria-scadenze-pagamenti |  | 6.7 | medium | Скачать 01-lead-form-registro-notifiche.json |
+| 2026-07-16 | [Airvision2026/automazioni-pmi-italia: 01-lead-form-registro-notifiche](https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/01-lead-form-registro-notifiche.json) | 01-lead-form-registro-notifiche |  | 6.7 | medium | Скачать 01-lead-form-registro-notifiche.json |
 | 2026-07-09 | [weblineindia/n8n-Send-promo-code-expiry-alerts: workflow-template](https://github.com/weblineindia/n8n-Send-promo-code-expiry-alerts-using-Webhook-Google-Sheets-Gmail-and-Slack) | workflow-template |  | 6.5 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-08 | [weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Draft-and-approve-client-portfolio-emails-with-Gemini-Sheets-Slack-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.2 | medium | Скачать workflow-template.json |
 | 2026-07-07 | [kevorklepedjian1/N8N-GTM: GTM](https://github.com/kevorklepedjian1/N8N-GTM/blob/main/GTM.json) | GTM |  | 5.6 | medium | Скачать GTM.json по ссылке json_url |

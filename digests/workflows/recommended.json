@@ -40,6 +40,128 @@
       "trigger_type": "webhook",
       "url": "https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer"
     },
+    "https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/01-lead-form-registro-notifiche.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Три готовых n8n-workflow для итальянского малого бизнеса: регистрация лидов из формы с уведомлениями, напоминания о сроках оплаты и AI-дайджест входящей почты. Все верифицированы, созданы 15-16 июля 2026.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Google Sheets",
+        "Telegram",
+        "Gmail"
+      ],
+      "metric": "Время от заполнения формы до получения уведомления менеджером",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "Airvision2026/automazioni-pmi-italia",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-lead-form-registro-notifiche"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-lead-form-registro-notifiche.json",
+        "Импортировать в n8n",
+        "Настроить Form-триггер и email/Telegram credentials для уведомлений",
+        "Отправить тестовую заявку через форму",
+        "Проверить получение уведомления и запись данных"
+      ],
+      "title": "Airvision2026/automazioni-pmi-italia: 01-lead-form-registro-notifiche",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/01-lead-form-registro-notifiche.json"
+    },
+    "https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/02-promemoria-scadenze-pagamenti.json": {
+      "category": "marketing_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Три готовых n8n-workflow для итальянского малого бизнеса: регистрация лидов из формы с уведомлениями, напоминания о сроках оплаты и AI-дайджест входящей почты. Все верифицированы, созданы 15-16 июля 2026.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Google Sheets",
+        "Gmail"
+      ],
+      "metric": "Время от заполнения формы до получения уведомления менеджером",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "Airvision2026/automazioni-pmi-italia",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02-promemoria-scadenze-pagamenti"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-lead-form-registro-notifiche.json",
+        "Импортировать в n8n",
+        "Настроить Form-триггер и email/Telegram credentials для уведомлений",
+        "Отправить тестовую заявку через форму",
+        "Проверить получение уведомления и запись данных"
+      ],
+      "title": "Airvision2026/automazioni-pmi-italia: 02-promemoria-scadenze-pagamenti",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/02-promemoria-scadenze-pagamenti.json"
+    },
+    "https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/03-rassegna-email-ai.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Три готовых n8n-workflow для итальянского малого бизнеса: регистрация лидов из формы с уведомлениями, напоминания о сроках оплаты и AI-дайджест входящей почты. Все верифицированы, созданы 15-16 июля 2026.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Gmail",
+        "OpenAI",
+        "Telegram"
+      ],
+      "metric": "Время от заполнения формы до получения уведомления менеджером",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "Airvision2026/automazioni-pmi-italia",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03-rassegna-email-ai"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-lead-form-registro-notifiche.json",
+        "Импортировать в n8n",
+        "Настроить Form-триггер и email/Telegram credentials для уведомлений",
+        "Отправить тестовую заявку через форму",
+        "Проверить получение уведомления и запись данных"
+      ],
+      "title": "Airvision2026/automazioni-pmi-italia: 03-rassegna-email-ai",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Airvision2026/automazioni-pmi-italia/blob/main/workflows/03-rassegna-email-ai.json"
+    },
     "https://github.com/AkuchiS/n8n-Templates": {
       "category": "content_workflow",
       "complexity": "complex",
@@ -7732,6 +7854,167 @@
       "trigger_type": "form",
       "url": "https://github.com/muhammadzayed2003/AI-powered-classifier-for-Grants/blob/main/AI powered classifier for Grants.json"
     },
+    "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/01-backlink-health-checker.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n-workflow для SEO-автоматизации бэклинков: проверка здоровья ссылок, отправка URL в Google Indexing API, еженедельный отчёт и алерты при падении DR-порога. Ориентирован на SEO-специалистов и владельцев сайтов, которые хотят автоматизировать мониторинг ссылочного профиля.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество обработанных бэклинков за запуск, время формирования отчёта",
+      "node_count": 13,
+      "promoted_from_watch": false,
+      "repo_full_name": "mukul-ppp/bla-backlink-automation-template",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-backlink-health-checker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 01-backlink-health-checker.json из репо",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Google Search Console / Ahrefs API для DR-данных",
+        "Добавить список URL бэклинков в входной узел",
+        "Запустить тестовый прогон на 5-10 URL и проверить отчёт"
+      ],
+      "title": "mukul-ppp/bla-backlink-automation-template: 01-backlink-health-checker",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/01-backlink-health-checker.json"
+    },
+    "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/02-google-indexing-submitter.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n-workflow для SEO-автоматизации бэклинков: проверка здоровья ссылок, отправка URL в Google Indexing API, еженедельный отчёт и алерты при падении DR-порога. Ориентирован на SEO-специалистов и владельцев сайтов, которые хотят автоматизировать мониторинг ссылочного профиля.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Google Sheets",
+        "Slack",
+        "Time Saved"
+      ],
+      "metric": "Количество обработанных бэклинков за запуск, время формирования отчёта",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "mukul-ppp/bla-backlink-automation-template",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02-google-indexing-submitter"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 01-backlink-health-checker.json из репо",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Google Search Console / Ahrefs API для DR-данных",
+        "Добавить список URL бэклинков в входной узел",
+        "Запустить тестовый прогон на 5-10 URL и проверить отчёт"
+      ],
+      "title": "mukul-ppp/bla-backlink-automation-template: 02-google-indexing-submitter",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/02-google-indexing-submitter.json"
+    },
+    "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/03-weekly-backlink-report.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n-workflow для SEO-автоматизации бэклинков: проверка здоровья ссылок, отправка URL в Google Indexing API, еженедельный отчёт и алерты при падении DR-порога. Ориентирован на SEO-специалистов и владельцев сайтов, которые хотят автоматизировать мониторинг ссылочного профиля.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество обработанных бэклинков за запуск, время формирования отчёта",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "mukul-ppp/bla-backlink-automation-template",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03-weekly-backlink-report"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 01-backlink-health-checker.json из репо",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Google Search Console / Ahrefs API для DR-данных",
+        "Добавить список URL бэклинков в входной узел",
+        "Запустить тестовый прогон на 5-10 URL и проверить отчёт"
+      ],
+      "title": "mukul-ppp/bla-backlink-automation-template: 03-weekly-backlink-report",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/03-weekly-backlink-report.json"
+    },
+    "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/04-dr-threshold-alert.json": {
+      "category": "marketing_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n-workflow для SEO-автоматизации бэклинков: проверка здоровья ссылок, отправка URL в Google Indexing API, еженедельный отчёт и алерты при падении DR-порога. Ориентирован на SEO-специалистов и владельцев сайтов, которые хотят автоматизировать мониторинг ссылочного профиля.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Количество обработанных бэклинков за запуск, время формирования отчёта",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "mukul-ppp/bla-backlink-automation-template",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "04-dr-threshold-alert"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 01-backlink-health-checker.json из репо",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Google Search Console / Ahrefs API для DR-данных",
+        "Добавить список URL бэклинков в входной узел",
+        "Запустить тестовый прогон на 5-10 URL и проверить отчёт"
+      ],
+      "title": "mukul-ppp/bla-backlink-automation-template: 04-dr-threshold-alert",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/04-dr-threshold-alert.json"
+    },
     "https://github.com/n8n-io/test-workflows": {
       "category": "general_workflow",
       "complexity": "complex",
@@ -8061,6 +8344,45 @@
       "tool": "n8n",
       "trigger_type": "schedule",
       "url": "https://github.com/prashant1507/n8n-youtube-ai-shorts-pipeline/blob/main/n8n/video-pipeline-youtube.json"
+    },
+    "https://github.com/qemoza/call-to-tasks-starter/blob/main/n8n_template.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "n8n-workflow, превращающий записи телефонных звонков в структурированные задачи. Создан 16 июля 2026, ориентирован на команды продаж и операционных менеджеров, которые хотят автоматически извлекать action items из звонков.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Доля звонков, из которых успешно созданы задачи без ручного вмешательства",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "qemoza/call-to-tasks-starter",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n_template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать n8n_template.json",
+        "Импортировать в n8n",
+        "Настроить источник звонков (webhook/Twilio/Zoom)",
+        "Подключить LLM credentials для извлечения задач",
+        "Провести тестовый прогон с примером транскрипта"
+      ],
+      "title": "qemoza/call-to-tasks-starter: n8n_template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/qemoza/call-to-tasks-starter/blob/main/n8n_template.json"
     },
     "https://github.com/ravindragith/zie619": {
       "category": "general_workflow",
@@ -12400,6 +12722,762 @@
       "trigger_type": "webhook",
       "url": "https://github.com/wranngle/n8n"
     },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-api-search-isolated.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 18,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-api-search-isolated"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-api-search-isolated",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-api-search-isolated.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-clustering.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-clustering"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-clustering",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-clustering.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-deduplicate.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-deduplicate"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-deduplicate",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-deduplicate.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-embedding.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-embedding"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-embedding",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-embedding.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-export.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-export"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-export",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-export.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-fulltext.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-fulltext"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-fulltext",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-fulltext.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-grade.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-grade"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-grade",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-grade.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-metaanalysis.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-metaanalysis"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-metaanalysis",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-metaanalysis.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-module.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 29,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-module"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-module",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-module.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-normalize.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-normalize"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-normalize",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-normalize.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-pdf-extract.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-pdf-extract"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-pdf-extract",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-pdf-extract.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-pdf-fetch.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-pdf-fetch"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-pdf-fetch",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-pdf-fetch.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-predatory.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-predatory"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-predatory",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-predatory.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-prisma.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-prisma"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-prisma",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-prisma.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-qdrant-store.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-qdrant-store"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-qdrant-store",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-qdrant-store.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-ranking.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-ranking"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-ranking",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-ranking.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-riskofbias.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-riskofbias"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-riskofbias",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-riskofbias.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-screening.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-screening"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-screening",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-screening.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-search-apis.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-search-apis"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-search-apis",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-search-apis.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-snowballing.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-snowballing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-snowballing",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-snowballing.json"
+    },
+    "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-systematicreview-orchestrator.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из 8 взаимосвязанных n8n-workflow для семантического поиска, кластеризации, дедупликации и мета-анализа данных — вероятно, для исследовательских или аналитических пайплайнов. Обновлён сегодня, все файлы verified.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "metric": "Время обработки 1000 записей от поиска до кластеризованного отчёта",
+      "node_count": 28,
+      "promoted_from_watch": false,
+      "repo_full_name": "xerael/ultralab",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ultralab-systematicreview-orchestrator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ultralab-api-search-isolated.json и импортировать в n8n",
+        "Изучить node-граф, определить требуемые API credentials",
+        "Настроить embedding-сервис (OpenAI/local model)",
+        "Запустить поиск на тестовом датасете",
+        "Последовательно добавить остальные 7 workflow"
+      ],
+      "title": "xerael/ultralab: ultralab-systematicreview-orchestrator",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/xerael/ultralab/blob/main/workflows/ultralab-systematicreview-orchestrator.json"
+    },
     "https://github.com/yedoww/vibemarketingflow/blob/main/CompetitorAnalysis.json": {
       "category": "marketing_workflow",
       "complexity": "complex",
@@ -12614,6 +13692,46 @@
       "tool": "n8n",
       "trigger_type": "manual",
       "url": "https://github.com/youerning/blog/blob/master/n8n/novel-workflow.json"
+    },
+    "https://github.com/youssefmkb/insurance-document-processor/blob/main/workflow.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической обработки страховых документов: извлечение данных из PDF/сканов, структурирование и запись в систему. Создан 16 июля 2026, ориентирован на страховые компании и брокеров, желающих автоматизировать документооборот.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-16",
+      "integrations": [
+        "Google Sheets",
+        "Gmail"
+      ],
+      "metric": "Точность извлечения ключевых полей документа (имя, номер полиса, сумма)",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "youssefmkb/insurance-document-processor",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow.json из репо",
+        "Импортировать в n8n",
+        "Настроить credentials для PDF-парсера и целевого хранилища",
+        "Подать тестовый страховой документ через триггер",
+        "Проверить корректность извлечённых полей"
+      ],
+      "title": "youssefmkb/insurance-document-processor: workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/youssefmkb/insurance-document-processor/blob/main/workflow.json"
     },
     "https://github.com/zengfr/n8n-workflow-all-templates": {
       "category": "general_workflow",

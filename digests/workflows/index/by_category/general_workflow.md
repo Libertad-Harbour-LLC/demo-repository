@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 102
+Total: 103
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-16 | [qemoza/call-to-tasks-starter: n8n_template](https://github.com/qemoza/call-to-tasks-starter/blob/main/n8n_template.json) | n8n_template |  | 6.4 | medium | Скачать n8n_template.json |
 | 2026-07-10 | [erliona/tunova-templates: 04-ambient-mix-factory](https://github.com/erliona/tunova-templates/blob/main/n8n/04-ambient-mix-factory.json) | 04-ambient-mix-factory |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
 | 2026-07-10 | [erliona/tunova-templates: 03-playlist-to-telegram](https://github.com/erliona/tunova-templates/blob/main/n8n/03-playlist-to-telegram.json) | 03-playlist-to-telegram |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
 | 2026-07-10 | [erliona/tunova-templates: 02-webhook-to-song](https://github.com/erliona/tunova-templates/blob/main/n8n/02-webhook-to-song.json) | 02-webhook-to-song |  | 6.3 | medium | Скачать все 4 JSON из папки n8n/ репозитория |
