@@ -1,9 +1,11 @@
 # Recommended Claude Skills — design_skill
 
-Total: 5
+Total: 7
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-17 | [nexu-io/html-anything](https://github.com/nexu-io/html-anything/tree/main/next/src/lib/templates/skills) | article-magazine, deck-pitch, deck-product-launch, +8 more |  | 7.4 | medium | git clone https://github.com/nexu-io/html-anything |
+| 2026-07-17 | [anthropics/skills](https://github.com/anthropics/skills) | frontend-design, canvas-design |  | 8.5 | high | Установить skill: скопировать инструкцию с https://github.com/anthropics/skills или использовать skills.sh install an... |
 | 2026-07-16 | [leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill) | design-taste-frontend, high-end-visual-design, redesign-existing-projects, +5 more |  | 9.0 | high | Открыть https://github.com/leonxlnx/taste-skill и клонировать репозиторий |
 | 2026-06-24 | [Kuneosu/make-slide](https://github.com/Kuneosu/make-slide/tree/main/.claude/skills) | make-slide |  | 7.1 | medium | git clone https://github.com/Kuneosu/make-slide && cp -r make-slide/.claude/skills/make-slide <ваш_проект>/.claude/sk... |
 | 2026-06-18 | [kasonye/ui-aesthetics-skill](https://github.com/kasonye/ui-aesthetics-skill/tree/main/.claude/skills/ui-aesthetics) | ui-aesthetics |  | 7.5 | high | git clone https://github.com/kasonye/ui-aesthetics-skill.git && cp -r ui-aesthetics-skill/.claude/skills/ui-aesthetic... |

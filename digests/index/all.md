@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 259
+Total: 265
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-17 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | agent-browser |  | 8.5 | high | Установить: skills.sh install vercel-labs/agent-browser или склонировать и скопировать SKILL.md в .claude/skills/agen... |
+| 2026-07-17 | [nexu-io/html-anything](https://github.com/nexu-io/html-anything/tree/main/next/src/lib/templates/skills) | article-magazine, deck-pitch, deck-product-launch, +8 more |  | 7.4 | medium | git clone https://github.com/nexu-io/html-anything |
+| 2026-07-17 | [getpaseo/paseo](https://github.com/getpaseo/paseo/tree/main/skills/paseo) | release-beta, release-stable, paseo-advisor, +4 more |  | 8.1 | high | git clone https://github.com/getpaseo/paseo && cp -r skills/paseo <ваш-проект>/.claude/skills/paseo |
+| 2026-07-17 | [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills) | jobs-to-be-done, competitive-analysis-process, prd-development, +5 more |  | 7.3 | medium | git clone https://github.com/deanpeters/Product-Manager-Skills |
+| 2026-07-17 | [anthropics/skills](https://github.com/anthropics/skills) | frontend-design, canvas-design |  | 8.5 | high | Установить skill: скопировать инструкцию с https://github.com/anthropics/skills или использовать skills.sh install an... |
+| 2026-07-17 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | a11y-audit, ab-test-setup, ad-creative, +5 more |  | 7.7 | high | git clone https://github.com/alirezarezvani/claude-skills |
 | 2026-07-16 | [worldwonderer/oh-story-claudecode](https://github.com/worldwonderer/oh-story-claudecode) | browser-cdp, story-cover, story-deslop, +10 more |  | 7.0 | medium | git clone https://github.com/worldwonderer/oh-story-claudecode |
 | 2026-07-16 | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | ablation-planner, alphaxiv, analyze-results, +11 more |  | 7.1 | medium | git clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep |
 | 2026-07-16 | [storybookjs/storybook](https://github.com/storybookjs/storybook/tree/next/.claude/skills) | canary, docs-review, fix-linting-types-on-pr, +9 more |  | 7.8 | high | git clone https://github.com/storybookjs/storybook и перейти в ветку next |

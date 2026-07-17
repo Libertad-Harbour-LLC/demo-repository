@@ -1,9 +1,12 @@
 # Recommended Claude Skills — general_skill
 
-Total: 56
+Total: 59
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-17 | [getpaseo/paseo](https://github.com/getpaseo/paseo/tree/main/skills/paseo) | release-beta, release-stable, paseo-advisor, +4 more |  | 8.1 | high | git clone https://github.com/getpaseo/paseo && cp -r skills/paseo <ваш-проект>/.claude/skills/paseo |
+| 2026-07-17 | [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills) | jobs-to-be-done, competitive-analysis-process, prd-development, +5 more |  | 7.3 | medium | git clone https://github.com/deanpeters/Product-Manager-Skills |
+| 2026-07-17 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | a11y-audit, ab-test-setup, ad-creative, +5 more |  | 7.7 | high | git clone https://github.com/alirezarezvani/claude-skills |
 | 2026-07-16 | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | ablation-planner, alphaxiv, analyze-results, +11 more |  | 7.1 | medium | git clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep |
 | 2026-07-10 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | frontend-design, writing-rules, math-olympiad, +7 more |  | 8.6 | high | git clone https://github.com/anthropics/claude-plugins-official и скопировать папку plugins/skill-creator/ в .claude/... |
 | 2026-07-10 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | biopython, deepchem, astropy, +7 more |  | 7.0 | medium | git clone https://github.com/K-Dense-AI/scientific-agent-skills и скопировать skills/biopython/ в .claude/skills/biop... |

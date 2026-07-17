@@ -3122,6 +3122,43 @@
       "title": "alfredolopez80/multi-agent-ralph-loop",
       "url": "https://github.com/alfredolopez80/multi-agent-ralph-loop/tree/main/.claude/skills"
     },
+    "https://github.com/alirezarezvani/claude-skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Мультидоменная коллекция из 50+ skills для Claude Code, охватывающая бизнес, маркетинг, технологии и продуктовую разработку. Репо имеет 2431 установку в реестре skills.sh и 22 663 звезды.",
+      "final_score": 7.7,
+      "first_recommended": "2026-07-17",
+      "metric": "Применимость skill к конкретной бизнес-задаче",
+      "promoted_from_watch": false,
+      "repo_full_name": "alirezarezvani/claude-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "a11y-audit",
+        "ab-test-setup",
+        "ad-creative",
+        "api-design-reviewer",
+        "aws-solution-architect",
+        "board-deck-builder",
+        "brand-guidelines",
+        "business-growth-skills"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/alirezarezvani/claude-skills",
+        "Найти нужный skill в .gemini/skills/ или корне репо, скопировать в .claude/skills/<имя>/",
+        "Промт: 'Use the board-deck-builder skill to create a board presentation outline for Q3 results'"
+      ],
+      "title": "alirezarezvani/claude-skills",
+      "url": "https://github.com/alirezarezvani/claude-skills"
+    },
     "https://github.com/alirezarezvani/claude-skills/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "general_skill",
@@ -3249,6 +3286,37 @@
       ],
       "title": "anthropics/claude-plugins-official",
       "url": "https://github.com/anthropics/claude-plugins-official"
+    },
+    "https://github.com/anthropics/skills": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Официальный пак skills от Anthropic для Claude Code. Содержит два skill'а для фронтенд-дизайна и работы с canvas-артефактами. Рассчитан на разработчиков и дизайнеров, работающих с UI.",
+      "final_score": 8.5,
+      "first_recommended": "2026-07-17",
+      "metric": "Качество и скорость генерации UI vs. без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "anthropics/skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 5,
+        "testability": 7,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "frontend-design",
+        "canvas-design"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить skill: скопировать инструкцию с https://github.com/anthropics/skills или использовать skills.sh install anthropics/skills",
+        "Открыть Claude Code в проекте с UI-компонентами",
+        "Промт: 'Use the frontend-design skill to create a responsive card component with Tailwind'"
+      ],
+      "title": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills"
     },
     "https://github.com/anyproto/anytype-ts/tree/develop/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -4214,6 +4282,43 @@
       ],
       "title": "datagrok-ai/public",
       "url": "https://github.com/datagrok-ai/public/tree/master/.claude/skills"
+    },
+    "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills": {
+      "category": "general_skill",
+      "confidence": "medium",
+      "description": "50 skills для product managers: фреймворки (JTBD, Porter's Five Forces, Ansoff Matrix), шаблоны PRD, конкурентная разведка, онбординг-плейбуки. Репо верифицировано, активно обновляется.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-17",
+      "metric": "Глубина и структура JTBD-анализа по сравнению с чистым запросом",
+      "promoted_from_watch": false,
+      "repo_full_name": "deanpeters/Product-Manager-Skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 8,
+      "skills_in_repo": [
+        "jobs-to-be-done",
+        "competitive-analysis-process",
+        "prd-development",
+        "prioritization-advisor",
+        "discovery-process",
+        "porters-five-forces",
+        "positioning-statement",
+        "customer-journey-map"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/deanpeters/Product-Manager-Skills",
+        "cp -r skills/jobs-to-be-done <ваш-проект>/.claude/skills/jobs-to-be-done",
+        "Промт: 'Use the jobs-to-be-done skill to analyze user needs for a project management app'"
+      ],
+      "title": "deanpeters/Product-Manager-Skills",
+      "url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills"
     },
     "https://github.com/deanwhitex/AIW2.0STACK/tree/main/.claude/skills": {
       "category": "marketing_skill",
@@ -5283,6 +5388,42 @@
       ],
       "title": "getkyo/kyo",
       "url": "https://github.com/getkyo/kyo/tree/main/.claude/skills"
+    },
+    "https://github.com/getpaseo/paseo/tree/main/skills/paseo": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Набор skills для проекта Paseo — тестовой сети Polkadot-экосистемы. Skills автоматизируют выпуск релизов, советы по протоколу и координацию комитета. Репозиторий верифицирован, 7722 реальные установки.",
+      "final_score": 8.1,
+      "first_recommended": "2026-07-17",
+      "metric": "Корректность описания release-процесса согласно документу в skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "getpaseo/paseo",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "release-beta",
+        "release-stable",
+        "paseo-advisor",
+        "paseo-committee",
+        "paseo-handoff",
+        "paseo-loop",
+        "paseo"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/getpaseo/paseo && cp -r skills/paseo <ваш-проект>/.claude/skills/paseo",
+        "Запустить Claude Code в проекте",
+        "Промт: 'Use the paseo skill to outline the release process for a new beta version'"
+      ],
+      "title": "getpaseo/paseo",
+      "url": "https://github.com/getpaseo/paseo/tree/main/skills/paseo"
     },
     "https://github.com/github/gh-aw/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -7061,6 +7202,46 @@
       ],
       "title": "nextlevelbuilder/ui-ux-pro-max-skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills"
+    },
+    "https://github.com/nexu-io/html-anything/tree/main/next/src/lib/templates/skills": {
+      "category": "design_skill",
+      "confidence": "medium",
+      "description": "Коллекция из 50 HTML-шаблонных skills для генерации презентаций, статей, карточек соцсетей, дашбордов и других визуальных форматов. Репозиторий верифицирован, stars 7816.",
+      "final_score": 7.4,
+      "first_recommended": "2026-07-17",
+      "metric": "Качество HTML pitch deck vs. запроса без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "nexu-io/html-anything",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 11,
+      "skills_in_repo": [
+        "article-magazine",
+        "deck-pitch",
+        "deck-product-launch",
+        "blog-post",
+        "email-marketing",
+        "data-report",
+        "finance-report",
+        "deck-simple",
+        "dashboard",
+        "card-twitter",
+        "card-xiaohongshu"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/nexu-io/html-anything",
+        "cp -r next/src/lib/templates/skills/deck-pitch <ваш-проект>/.claude/skills/deck-pitch",
+        "Промт: 'Use the deck-pitch skill to create a 5-slide investor pitch for a SaaS product'"
+      ],
+      "title": "nexu-io/html-anything",
+      "url": "https://github.com/nexu-io/html-anything/tree/main/next/src/lib/templates/skills"
     },
     "https://github.com/nexu-io/open-design/tree/main/.claude/skills": {
       "category": "design_skill",
@@ -9153,6 +9334,36 @@
       ],
       "title": "vellum-ai/vellum-assistant",
       "url": "https://github.com/vellum-ai/vellum-assistant/tree/main/.claude/skills"
+    },
+    "https://github.com/vercel-labs/agent-browser": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Skill от Vercel Labs для управления браузером через Claude Code. Позволяет агенту открывать URL, взаимодействовать с веб-страницами и выполнять browser automation задачи.",
+      "final_score": 8.5,
+      "first_recommended": "2026-07-17",
+      "metric": "Успешность навигации и извлечения данных из веба",
+      "promoted_from_watch": false,
+      "repo_full_name": "vercel-labs/agent-browser",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent-browser"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить: skills.sh install vercel-labs/agent-browser или склонировать и скопировать SKILL.md в .claude/skills/agent-browser/",
+        "Запустить Claude Code в проекте",
+        "Промт: 'Use agent-browser to open https://example.com and extract the main heading'"
+      ],
+      "title": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser"
     },
     "https://github.com/vercel-labs/agent-skills": {
       "category": "webdev_skill",
