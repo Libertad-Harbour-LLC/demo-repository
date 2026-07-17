@@ -1,9 +1,10 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 66
+Total: 67
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-17 | [weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack: workflow-template](https://github.com/weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.2 | medium | Скачать workflow-template.json |
 | 2026-07-16 | [youssefmkb/insurance-document-processor: workflow](https://github.com/youssefmkb/insurance-document-processor/blob/main/workflow.json) | workflow |  | 7.0 | medium | Скачать workflow.json из репо |
 | 2026-07-16 | [xerael/ultralab: ultralab-systematicreview-orchestrator](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-systematicreview-orchestrator.json) | ultralab-systematicreview-orchestrator |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
 | 2026-07-16 | [xerael/ultralab: ultralab-snowballing](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-snowballing.json) | ultralab-snowballing |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |

@@ -6361,6 +6361,333 @@
       "trigger_type": "schedule",
       "url": "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram"
     },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/01-ai-email-summarizer.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Gmail",
+        "Slack",
+        "Google Sheets"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-ai-email-summarizer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 01-ai-email-summarizer",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/01-ai-email-summarizer.json"
+    },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/02-ai-lead-qualification-and-follow-up.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack",
+        "Google Sheets",
+        "Gmail"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 18,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02-ai-lead-qualification-and-follow-up"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 02-ai-lead-qualification-and-follow-up",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/02-ai-lead-qualification-and-follow-up.json"
+    },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/03-support-ticket-classifier.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack",
+        "Google Sheets",
+        "Notion"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 15,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03-support-ticket-classifier"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 03-support-ticket-classifier",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/03-support-ticket-classifier.json"
+    },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/04-meeting-notes-generator.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack",
+        "Notion",
+        "Google Sheets"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "04-meeting-notes-generator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 04-meeting-notes-generator",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/04-meeting-notes-generator.json"
+    },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/05-google-sheets-crm-enrichment.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Sheets",
+        "Slack"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 15,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "05-google-sheets-crm-enrichment"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 05-google-sheets-crm-enrichment",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/05-google-sheets-crm-enrichment.json"
+    },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/06-invoice-data-extraction.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack",
+        "Google Sheets"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 16,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "06-invoice-data-extraction"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 06-invoice-data-extraction",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/06-invoice-data-extraction.json"
+    },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/07-daily-business-report-generator.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Sheets",
+        "Slack",
+        "Gmail",
+        "Notion"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "07-daily-business-report-generator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 07-daily-business-report-generator",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/07-daily-business-report-generator.json"
+    },
+    "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/08-human-approval-ai-response.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Готовый kit из 8 n8n-workflow для типичных бизнес-задач: суммаризация email, квалификация лидов, классификация тикетов, генерация заметок с митингов, обогащение CRM, извлечение данных из инвойсов, дневные отчёты и human-in-the-loop подтверждение. Подходит как стартовый набор для новичков в n8n.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack",
+        "Gmail",
+        "Google Sheets"
+      ],
+      "metric": "Время на обработку одного email/тикета (до и после)",
+      "node_count": 20,
+      "promoted_from_watch": false,
+      "repo_full_name": "humayun-sarfraz/n8n-ai-workflow-kit",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "08-human-approval-ai-response"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-ai-email-summarizer.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить Gmail/IMAP credentials и OpenAI API key",
+        "Запустить на тестовом письме",
+        "Проверить суммаризацию в указанном выводе"
+      ],
+      "title": "humayun-sarfraz/n8n-ai-workflow-kit: 08-human-approval-ai-response",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/humayun-sarfraz/n8n-ai-workflow-kit/blob/main/workflows/08-human-approval-ai-response.json"
+    },
     "https://github.com/iamadoctorforreal/Video-Generator-Workflow/blob/main/n8n_workflow.json": {
       "category": "video_workflow",
       "complexity": "medium",
@@ -8464,6 +8791,438 @@
       "trigger_type": "schedule",
       "url": "https://github.com/ritik-prog/n8n-automation-templates-5000"
     },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v01-margin-guardrail.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v01-margin-guardrail"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v01-margin-guardrail",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v01-margin-guardrail.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v02-labor-cap-monitor.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v02-labor-cap-monitor"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v02-labor-cap-monitor",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v02-labor-cap-monitor.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v03-field-validation.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v03-field-validation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v03-field-validation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v03-field-validation.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v04-job-completion.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v04-job-completion"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v04-job-completion",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v04-job-completion.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v05-material-order.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v05-material-order"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v05-material-order",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v05-material-order.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v06-change-order-sync.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v06-change-order-sync"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v06-change-order-sync",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v06-change-order-sync.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v07-payout-gate.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v07-payout-gate"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v07-payout-gate",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v07-payout-gate.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v08-co-paid-recalc.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v08-co-paid-recalc"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v08-co-paid-recalc",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v08-co-paid-recalc.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v09-dashboard-feed.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v09-dashboard-feed"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v09-dashboard-feed",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v09-dashboard-feed.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v10-dashboard-feed-ghl.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v10-dashboard-feed-ghl"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v10-dashboard-feed-ghl",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v10-dashboard-feed-ghl.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v11-dashboard-live-json.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v11-dashboard-live-json"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v11-dashboard-live-json",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v11-dashboard-live-json.json"
+    },
+    "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v12-signoff-receiver.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 8 n8n-workflow для управления финансами и операциями в field service или строительном бизнесе: контроль маржи, лимиты на труд, валидация нарядов, синхронизация change order и расчёт выплат. Редкая вертикаль для компаний с выездными бригадами.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-17",
+      "metric": "Количество заданий, пойманных guardrail до выполнения с отрицательной маржой",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "scubarichard/rpe-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-v12-signoff-receiver"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-v01-margin-guardrail.json из папки workflows/",
+        "Импортировать в n8n",
+        "Настроить источник данных (предположительно Airtable/Google Sheets с job-данными)",
+        "Задать пороговые значения маржи в параметрах workflow",
+        "Запустить тест с синтетическим job-записью ниже порога"
+      ],
+      "title": "scubarichard/rpe-systems: workflow-v12-signoff-receiver",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/scubarichard/rpe-systems/blob/main/workflows/workflow-v12-signoff-receiver.json"
+    },
     "https://github.com/shikherjha/n8n-video-Summarizer-Bot/blob/main/new_workflow.json": {
       "category": "video_workflow",
       "complexity": "complex",
@@ -8789,6 +9548,1009 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/splx-ai/agentic-radar"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__ai-web-developer-site-rebuild.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Airtop Tool",
+        "Google Gemini"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 15,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent__ai-web-developer-site-rebuild"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: agent__ai-web-developer-site-rebuild",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__ai-web-developer-site-rebuild.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__auto-repair-gmail-quote-intake.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Gmail",
+        "Google Sheets Tool",
+        "Google Gemini",
+        "Gmail Tool",
+        "Twilio Tool"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent__auto-repair-gmail-quote-intake"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: agent__auto-repair-gmail-quote-intake",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__auto-repair-gmail-quote-intake.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__dental-practice-voice-scheduler.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Calendar Tool",
+        "Google Gemini",
+        "Google Sheets Tool"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent__dental-practice-voice-scheduler"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: agent__dental-practice-voice-scheduler",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__dental-practice-voice-scheduler.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__gmail-ai-inbox-triage-and-reply.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Gmail",
+        "Gmail Tool",
+        "Google Sheets Tool",
+        "Google Gemini",
+        "Google Docs Tool"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 24,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent__gmail-ai-inbox-triage-and-reply"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: agent__gmail-ai-inbox-triage-and-reply",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__gmail-ai-inbox-triage-and-reply.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__marketing-team-voice-operator.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Gemini",
+        "Perplexity Tool"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 17,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent__marketing-team-voice-operator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: agent__marketing-team-voice-operator",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__marketing-team-voice-operator.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__twitter-x-keyword-reply-operator.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack",
+        "OpenAI",
+        "X (Twitter)",
+        "Anthropic"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 26,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent__twitter-x-keyword-reply-operator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: agent__twitter-x-keyword-reply-operator",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__twitter-x-keyword-reply-operator.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__whatsapp-hospitality-concierge.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Gemini",
+        "Firecrawl",
+        "WhatsApp"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 19,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "agent__whatsapp-hospitality-concierge"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: agent__whatsapp-hospitality-concierge",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__whatsapp-hospitality-concierge.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__ai-newsletter-writer.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "AWS S3",
+        "Google Gemini",
+        "Slack",
+        "Anthropic"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 91,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__ai-newsletter-writer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__ai-newsletter-writer",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__ai-newsletter-writer.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__brand-image-generation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__brand-image-generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__brand-image-generation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__brand-image-generation.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__email-research-report-delivery.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__email-research-report-delivery"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__email-research-report-delivery",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__email-research-report-delivery.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__firecrawl-url-content-extractor.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__firecrawl-url-content-extractor"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__firecrawl-url-content-extractor",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__firecrawl-url-content-extractor.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__newsletter-to-short-form-script.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "AWS S3",
+        "Slack",
+        "Anthropic"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 45,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__newsletter-to-short-form-script"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__newsletter-to-short-form-script",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__newsletter-to-short-form-script.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__newsletter-to-twitter-x-thread.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__newsletter-to-twitter-x-thread"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__newsletter-to-twitter-x-thread",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__newsletter-to-twitter-x-thread.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__talking-avatar-video-generation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__talking-avatar-video-generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__talking-avatar-video-generation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__talking-avatar-video-generation.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__website-map-and-scrape.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Firecrawl"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__website-map-and-scrape"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__website-map-and-scrape",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__website-map-and-scrape.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__website-redesign-prd-writer.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Gemini"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "tool__website-redesign-prd-writer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: tool__website-redesign-prd-writer",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/tool__website-redesign-prd-writer.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__ai-news-data-ingestion.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "AWS S3",
+        "OpenAI",
+        "Reddit"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 80,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__ai-news-data-ingestion"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__ai-news-data-ingestion",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__ai-news-data-ingestion.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__ai-newsletter-editorial-generator.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "AWS S3",
+        "Anthropic",
+        "Google Gemini",
+        "Slack"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 87,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__ai-newsletter-editorial-generator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__ai-newsletter-editorial-generator",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__ai-newsletter-editorial-generator.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__calorie-app-image-nutrition-backend.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "OpenAI"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__calorie-app-image-nutrition-backend"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__calorie-app-image-nutrition-backend",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__calorie-app-image-nutrition-backend.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__facebook-ugc-competitor-ad-remix.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Firecrawl",
+        "Google Gemini",
+        "Google Docs",
+        "Anthropic",
+        "Google Drive"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 38,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__facebook-ugc-competitor-ad-remix"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__facebook-ugc-competitor-ad-remix",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__facebook-ugc-competitor-ad-remix.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__firecrawl-website-email-scraper.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__firecrawl-website-email-scraper"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__firecrawl-website-email-scraper",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__firecrawl-website-email-scraper.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__insurance-lawyer-lead-generation.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Firecrawl",
+        "Google Sheets",
+        "Google Gemini"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 33,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__insurance-lawyer-lead-generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__insurance-lawyer-lead-generation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__insurance-lawyer-lead-generation.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__llm-ready-web-scraping-pipeline.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Drive"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__llm-ready-web-scraping-pipeline"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__llm-ready-web-scraping-pipeline",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__llm-ready-web-scraping-pipeline.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__local-news-podcast-generator.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Gemini"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__local-news-podcast-generator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__local-news-podcast-generator",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__local-news-podcast-generator.json"
+    },
+    "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__meta-ads-audit-sales-deck-generator.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Коллекция из 8 n8n-агентов для малого и среднего бизнеса: голосовой планировщик для стоматологии, консьерж для отеля через WhatsApp, автоответчик Gmail, Twitter-оператор по ключевым словам и AI-рассылка. Каждый агент — самостоятельный импортируемый JSON.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Apify"
+      ],
+      "metric": "Процент входящих запросов, обработанных агентом без вмешательства человека",
+      "node_count": 16,
+      "promoted_from_watch": false,
+      "repo_full_name": "tahsinmert/n8n-ai-otomations",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow__meta-ads-audit-sales-deck-generator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Выбрать нужного агента (например agent__dental-practice-voice-scheduler.json)",
+        "Импортировать JSON в n8n",
+        "Настроить credentials для выбранного канала (Gmail/WhatsApp/Twitter)",
+        "Установить тестовый триггер (вебхук или тестовый email)",
+        "Проверить ответ агента на тестовый запрос"
+      ],
+      "title": "tahsinmert/n8n-ai-otomations: workflow__meta-ads-audit-sales-deck-generator",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/workflow__meta-ads-audit-sales-deck-generator.json"
     },
     "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/RAG_qdrant.json": {
       "category": "devops_workflow",
@@ -11548,6 +13310,821 @@
       "trigger_type": "webhook",
       "url": "https://github.com/tushar2704/N8N-Agents/blob/main/n8n/breaking_news_summarizer.json"
     },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/01-linkedin-dm-icp-scorer.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-linkedin-dm-icp-scorer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 01-linkedin-dm-icp-scorer",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/01-linkedin-dm-icp-scorer.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/02-inbound-form-ai-qualifier.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "HubSpot",
+        "Slack",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02-inbound-form-ai-qualifier"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 02-inbound-form-ai-qualifier",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/02-inbound-form-ai-qualifier.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/03-cold-email-warmup-reply-detector.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03-cold-email-warmup-reply-detector"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 03-cold-email-warmup-reply-detector",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/03-cold-email-warmup-reply-detector.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/04-linkedin-comment-dm-trigger.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Sheets",
+        "Anthropic"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "04-linkedin-comment-dm-trigger"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 04-linkedin-comment-dm-trigger",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/04-linkedin-comment-dm-trigger.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/05-voice-note-followup-elevenlabs.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Google Drive",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "05-voice-note-followup-elevenlabs"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 05-voice-note-followup-elevenlabs",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/05-voice-note-followup-elevenlabs.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/06-aeo-citation-monitor-4llm.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Sheets",
+        "Anthropic",
+        "Slack"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "06-aeo-citation-monitor-4llm"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 06-aeo-citation-monitor-4llm",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/06-aeo-citation-monitor-4llm.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/07-competitor-blog-my-angle-draft.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Google Docs",
+        "Slack"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "07-competitor-blog-my-angle-draft"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 07-competitor-blog-my-angle-draft",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/07-competitor-blog-my-angle-draft.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/08-youtube-transcript-9-assets.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Google Docs",
+        "Notion",
+        "Slack"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "08-youtube-transcript-9-assets"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 08-youtube-transcript-9-assets",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/08-youtube-transcript-9-assets.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/09-gsc-anomaly-bot.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "09-gsc-anomaly-bot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 09-gsc-anomaly-bot",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/09-gsc-anomaly-bot.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/10-faq-schema-wp-rest-inject.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "10-faq-schema-wp-rest-inject"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 10-faq-schema-wp-rest-inject",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/10-faq-schema-wp-rest-inject.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/11-receipt-ocr-sheets-tax.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Gmail",
+        "Google Drive",
+        "Anthropic",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "11-receipt-ocr-sheets-tax"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 11-receipt-ocr-sheets-tax",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/11-receipt-ocr-sheets-tax.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/12-meeting-action-items-clickup.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "12-meeting-action-items-clickup"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 12-meeting-action-items-clickup",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/12-meeting-action-items-clickup.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/13-calendly-dossier-li-twitter-company.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Gmail"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "13-calendly-dossier-li-twitter-company"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 13-calendly-dossier-li-twitter-company",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/13-calendly-dossier-li-twitter-company.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/14-loom-auto-doc-slack.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "14-loom-auto-doc-slack"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 14-loom-auto-doc-slack",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/14-loom-auto-doc-slack.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/15-async-standup-bot.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Sheets",
+        "Slack",
+        "Anthropic"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "15-async-standup-bot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 15-async-standup-bot",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/15-async-standup-bot.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/16-abandoned-cart-wa-voice-note.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "AWS S3",
+        "Twilio",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "16-abandoned-cart-wa-voice-note"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 16-abandoned-cart-wa-voice-note",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/16-abandoned-cart-wa-voice-note.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/17-negative-review-ai-reply-draft.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Anthropic",
+        "Slack",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "17-negative-review-ai-reply-draft"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 17-negative-review-ai-reply-draft",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/17-negative-review-ai-reply-draft.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/18-vip-cohort-detector-wa-congrats.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Twilio",
+        "Google Sheets"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "18-vip-cohort-detector-wa-congrats"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 18-vip-cohort-detector-wa-congrats",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/18-vip-cohort-detector-wa-congrats.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/19-real-estate-listing-5-platforms.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Airtable",
+        "Anthropic"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "19-real-estate-listing-5-platforms"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 19-real-estate-listing-5-platforms",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/19-real-estate-listing-5-platforms.json"
+    },
+    "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/20-clinic-missed-call-wa-recovery.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Пак из 8 готовых n8n-workflow для автоматизации продаж и маркетинга: скоринг LinkedIn DM по ICP, квалификация входящих форм, детектор ответов на cold email, voice follow-up через ElevenLabs и мониторинг цитирования в LLM-поисковиках. Подходит для B2B-команд, которые хотят автоматизировать весь верхний sales-funnel.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Sheets",
+        "Twilio"
+      ],
+      "metric": "Количество лидов, квалифицированных автоматически без ручного просмотра",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "waseemnasir2k26/skynet-automation-pack",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "20-clinic-missed-call-wa-recovery"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json)",
+        "Импортировать JSON в n8n через Import Workflow",
+        "Настроить credentials: LinkedIn API / Apollo / ElevenLabs по названию workflow",
+        "Запустить тестовый прогон с тестовым лидом",
+        "Проверить вывод скора ICP в Slack/email"
+      ],
+      "title": "waseemnasir2k26/skynet-automation-pack: 20-clinic-missed-call-wa-recovery",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/20-clinic-missed-call-wa-recovery.json"
+    },
     "https://github.com/weblineindia/n8n-Answer-product-queries-via-WhatsApp-using-OpenAI-GPT-4o-PDF-knowledge-base": {
       "category": "sales_workflow",
       "complexity": "complex",
@@ -11848,6 +14425,47 @@
       "title": "weblineindia/n8n-Automated-podcast-production-publishing: Automated Podcast Generation",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Automated-podcast-production-publishing-with-OpenAI-Airtable-Buzzsprout"
+    },
+    "https://github.com/weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack/blob/main/workflow-template.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической классификации KYC-риска из входящих форм: данные из формы → OpenAI анализирует риск → результат логируется в Google Sheets и уведомление идёт в Slack. Подходит для финтех и compliance-команд.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-17",
+      "integrations": [
+        "Google Sheets",
+        "Slack",
+        "OpenAI"
+      ],
+      "metric": "Процент KYC-форм, классифицированных автоматически без ручного просмотра",
+      "node_count": 14,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Google Sheets ID, Slack webhook и OpenAI API key",
+        "Отправить тестовую форму с KYC-данными",
+        "Проверить запись в Sheets и уведомление в Slack"
+      ],
+      "title": "weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Compare-proposals-and-analyze-gaps-for-Salesforce-CRM-with-Groq-AI/blob/main/workflow-template.json": {
       "category": "sales_workflow",
