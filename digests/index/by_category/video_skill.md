@@ -1,9 +1,10 @@
 # Recommended Claude Skills — video_skill
 
-Total: 5
+Total: 6
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [skills-collective/skills](https://github.com/skills-collective/skills) | ai-image-generation, ai-video-generation, image-to-video, +1 more |  | 7.4 | high | Установить skill через skills.sh CLI или найти SKILL.md в репозитории |
 | 2026-07-10 | [SamurAIGPT/Generative-Media-Skills](https://github.com/SamurAIGPT/Generative-Media-Skills) | muapi-ad-creative, muapi-cinema-director, muapi-product-video-ad-maker, +9 more |  | 7.1 | medium | git clone https://github.com/SamurAIGPT/Generative-Media-Skills и скопировать library/motion/product-video-ad-maker/ ... |
 | 2026-07-09 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | website-to-hyperframes, general-video, product-launch-video, +3 more |  | 8.2 | high | Установить через Claude Code из реестра или клонировать репо heygen-com/hyperframes |
 | 2026-07-01 | [0xAxiom/AppFactory](https://github.com/0xAxiom/AppFactory/tree/main/.claude/skills) | appfactory-builder, remotion, setup |  | 6.5 | medium | Клонировать репо: git clone https://github.com/0xAxiom/AppFactory.git и скопировать .claude/skills/remotion/ в свой R... |

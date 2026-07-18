@@ -1,11 +1,15 @@
 # Recommended Claude Skills — all time
 
-Total: 265
+Total: 269
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [supabase/agent-skills](https://github.com/supabase/agent-skills) | supabase-postgres-best-practices, supabase |  | 8.5 | high | Открыть Claude Code в Supabase-проекте (или создать тестовый Next.js + Supabase проект) |
+| 2026-07-18 | [skills-collective/skills](https://github.com/skills-collective/skills) | ai-image-generation, ai-video-generation, image-to-video, +1 more |  | 7.4 | high | Установить skill через skills.sh CLI или найти SKILL.md в репозитории |
+| 2026-07-18 | [googleworkspace/cli](https://github.com/googleworkspace/cli) | gws-workflow-email-to-task, recipe-create-presentation, recipe-draft-email-from-doc, +6 more |  | 8.1 | high | Установить skill через skills.sh CLI или клонировать репозиторий и найти SKILL.md |
+| 2026-07-18 | [arvindrk/extract-design-system](https://github.com/arvindrk/extract-design-system) | extract-design-system |  | 7.5 | high | Установить skill через skills.sh или скопировать SKILL.md в .claude/skills/extract-design-system/ |
 | 2026-07-17 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | agent-browser |  | 8.5 | high | Установить: skills.sh install vercel-labs/agent-browser или склонировать и скопировать SKILL.md в .claude/skills/agen... |
 | 2026-07-17 | [nexu-io/html-anything](https://github.com/nexu-io/html-anything/tree/main/next/src/lib/templates/skills) | article-magazine, deck-pitch, deck-product-launch, +8 more |  | 7.4 | medium | git clone https://github.com/nexu-io/html-anything |
 | 2026-07-17 | [getpaseo/paseo](https://github.com/getpaseo/paseo/tree/main/skills/paseo) | release-beta, release-stable, paseo-advisor, +4 more |  | 8.1 | high | git clone https://github.com/getpaseo/paseo && cp -r skills/paseo <ваш-проект>/.claude/skills/paseo |

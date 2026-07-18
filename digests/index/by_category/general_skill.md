@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 59
+Total: 60
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [googleworkspace/cli](https://github.com/googleworkspace/cli) | gws-workflow-email-to-task, recipe-create-presentation, recipe-draft-email-from-doc, +6 more |  | 8.1 | high | Установить skill через skills.sh CLI или клонировать репозиторий и найти SKILL.md |
 | 2026-07-17 | [getpaseo/paseo](https://github.com/getpaseo/paseo/tree/main/skills/paseo) | release-beta, release-stable, paseo-advisor, +4 more |  | 8.1 | high | git clone https://github.com/getpaseo/paseo && cp -r skills/paseo <ваш-проект>/.claude/skills/paseo |
 | 2026-07-17 | [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills) | jobs-to-be-done, competitive-analysis-process, prd-development, +5 more |  | 7.3 | medium | git clone https://github.com/deanpeters/Product-Manager-Skills |
 | 2026-07-17 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | a11y-audit, ab-test-setup, ad-creative, +5 more |  | 7.7 | high | git clone https://github.com/alirezarezvani/claude-skills |

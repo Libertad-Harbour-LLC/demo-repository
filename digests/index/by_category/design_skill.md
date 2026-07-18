@@ -1,9 +1,10 @@
 # Recommended Claude Skills — design_skill
 
-Total: 7
+Total: 8
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [arvindrk/extract-design-system](https://github.com/arvindrk/extract-design-system) | extract-design-system |  | 7.5 | high | Установить skill через skills.sh или скопировать SKILL.md в .claude/skills/extract-design-system/ |
 | 2026-07-17 | [nexu-io/html-anything](https://github.com/nexu-io/html-anything/tree/main/next/src/lib/templates/skills) | article-magazine, deck-pitch, deck-product-launch, +8 more |  | 7.4 | medium | git clone https://github.com/nexu-io/html-anything |
 | 2026-07-17 | [anthropics/skills](https://github.com/anthropics/skills) | frontend-design, canvas-design |  | 8.5 | high | Установить skill: скопировать инструкцию с https://github.com/anthropics/skills или использовать skills.sh install an... |
 | 2026-07-16 | [leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill) | design-taste-frontend, high-end-visual-design, redesign-existing-projects, +5 more |  | 9.0 | high | Открыть https://github.com/leonxlnx/taste-skill и клонировать репозиторий |

@@ -3387,6 +3387,36 @@
       "title": "appwrite/appwrite",
       "url": "https://github.com/appwrite/appwrite/tree/1.9.x/.claude/skills"
     },
+    "https://github.com/arvindrk/extract-design-system": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Skill для автоматического извлечения дизайн-системы из существующего кода или Figma-файлов. Помогает агенту анализировать UI-компоненты и формализовать токены, паттерны и гайдлайны. Полезен frontend-разработчикам и дизайн-инженерам.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-18",
+      "metric": "Полнота и точность извлечённых токенов, наличие структурированного вывода (JSON/CSS variables)",
+      "promoted_from_watch": false,
+      "repo_full_name": "arvindrk/extract-design-system",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "extract-design-system"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить skill через skills.sh или скопировать SKILL.md в .claude/skills/extract-design-system/",
+        "Открыть Claude Code в проекте с React/Vue компонентами",
+        "Попросить: 'Извлеки дизайн-систему из наших компонентов — токены, паттерны, цвета, типографику'"
+      ],
+      "title": "arvindrk/extract-design-system",
+      "url": "https://github.com/arvindrk/extract-design-system"
+    },
     "https://github.com/atopile/atopile/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "general_skill",
@@ -5516,6 +5546,44 @@
       ],
       "title": "glenwille12/ios-developer-agents",
       "url": "https://github.com/glenwille12/ios-developer-agents/tree/master/.claude/skills"
+    },
+    "https://github.com/googleworkspace/cli": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий Google Workspace CLI с 9 skills-рецептами для автоматизации работы с Gmail, Drive, Docs и Slides. Позволяет агенту выполнять комплексные задачи типа 'создай презентацию из документа' или 'сохрани вложения из email в Drive'. Для бизнес-пользователей Google Workspace.",
+      "final_score": 8.1,
+      "first_recommended": "2026-07-18",
+      "metric": "Агент успешно выполняет workflow без дополнительных подсказок, правильно использует API",
+      "promoted_from_watch": false,
+      "repo_full_name": "googleworkspace/cli",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "gws-workflow-email-to-task",
+        "recipe-create-presentation",
+        "recipe-draft-email-from-doc",
+        "recipe-email-drive-link",
+        "recipe-save-email-attachments",
+        "persona-content-creator",
+        "recipe-label-and-archive-emails",
+        "recipe-save-email-to-doc",
+        "recipe-forward-labeled-emails"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить skill через skills.sh CLI или клонировать репозиторий и найти SKILL.md",
+        "Настроить Google Workspace API credentials в проекте",
+        "Попросить агента: 'Сохрани все вложения из непрочитанных писем за сегодня в папку Drive/Attachments'"
+      ],
+      "title": "googleworkspace/cli",
+      "url": "https://github.com/googleworkspace/cli"
     },
     "https://github.com/gsd-build/get-shit-done": {
       "added_manually": true,
@@ -8611,6 +8679,39 @@
       "title": "shanraisshan/claude-code-best-practice",
       "url": "https://github.com/shanraisshan/claude-code-best-practice/tree/main/.claude/skills"
     },
+    "https://github.com/skills-collective/skills": {
+      "category": "video_skill",
+      "confidence": "high",
+      "description": "Коллективный репозиторий с 4 skills для AI-генерации и обработки медиаконтента. Включает skills для генерации изображений, видео, конвертации изображений в видео и базового редактирования. Для контент-мейкеров и маркетологов, использующих AI-медиаинструменты.",
+      "final_score": 7.4,
+      "first_recommended": "2026-07-18",
+      "metric": "Качество сгенерированного видео-промта, корректность API-вызовов",
+      "promoted_from_watch": false,
+      "repo_full_name": "skills-collective/skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "ai-image-generation",
+        "ai-video-generation",
+        "image-to-video",
+        "video-edit"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить skill через skills.sh CLI или найти SKILL.md в репозитории",
+        "Подготовить API-ключ для AI-видео сервиса (RunwayML/Kling/другой, указанный в SKILL.md)",
+        "Попросить агента: 'Создай 10-секундное видео из этого изображения с плавным зумом' и оценить промт, который генерирует skill"
+      ],
+      "title": "skills-collective/skills",
+      "url": "https://github.com/skills-collective/skills"
+    },
     "https://github.com/sliamh11/Deus/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "medium",
@@ -8962,6 +9063,37 @@
       ],
       "title": "storybookjs/storybook",
       "url": "https://github.com/storybookjs/storybook/tree/next/.claude/skills"
+    },
+    "https://github.com/supabase/agent-skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий Supabase со skills для Claude Code. Содержит специализированные инструкции по работе с Supabase Postgres и best practices для агентных сценариев. Ориентирован на разработчиков, использующих Supabase как бэкенд.",
+      "final_score": 8.5,
+      "first_recommended": "2026-07-18",
+      "metric": "Качество сгенерированного SQL: наличие RLS-политик, правильные типы данных, безопасные паттерны",
+      "promoted_from_watch": false,
+      "repo_full_name": "supabase/agent-skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "supabase-postgres-best-practices",
+        "supabase"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть Claude Code в Supabase-проекте (или создать тестовый Next.js + Supabase проект)",
+        "Установить skill: claude skills install supabase/agent-skills или скопировать SKILL.md в .claude/skills/supabase/",
+        "Попросить агента: 'Создай таблицу users с RLS-политиками для аутентификации' и сравни результат без skill и со skill"
+      ],
+      "title": "supabase/agent-skills",
+      "url": "https://github.com/supabase/agent-skills"
     },
     "https://github.com/susomejias/rembric/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
