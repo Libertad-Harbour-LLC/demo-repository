@@ -1,11 +1,20 @@
 # Recommended Claude Skills — all time
 
-Total: 416
+Total: 425
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 03-reply-tracker](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/03-reply-tracker.json) | 03-reply-tracker |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
+| 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 02-email-automation](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/02-email-automation.json) | 02-email-automation |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
+| 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 01-lead-search-scoring](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/01-lead-search-scoring.json) | 01-lead-search-scoring |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
+| 2026-07-18 | [ifra489/AI-Daily-News-Summarizer-using-n8n: AI Daily News Summarizer](https://github.com/ifra489/AI-Daily-News-Summarizer-using-n8n/blob/main/AI Daily News Summarizer.json) | AI Daily News Summarizer |  | 5.9 | medium | Скачать JSON: 'AI Daily News Summarizer.json' |
+| 2026-07-18 | [dntnqlssoRj/ChurnRadar: churn_alert_fatigue_control](https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert_fatigue_control.json) | churn_alert_fatigue_control |  | 5.9 | medium | Скачать churn_alert.json |
+| 2026-07-18 | [dntnqlssoRj/ChurnRadar: churn_alert](https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert.json) | churn_alert |  | 5.9 | medium | Скачать churn_alert.json |
+| 2026-07-18 | [930m310n/n8n-nodes-geomelon: nearest-cities-by-coordinates](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/nearest-cities-by-coordinates.json) | nearest-cities-by-coordinates |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
+| 2026-07-18 | [930m310n/n8n-nodes-geomelon: free-city-autocomplete-webhook](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/free-city-autocomplete-webhook.json) | free-city-autocomplete-webhook |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
+| 2026-07-18 | [930m310n/n8n-nodes-geomelon: ai-agent-city-lookup](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/ai-agent-city-lookup.json) | ai-agent-city-lookup |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
 | 2026-07-17 | [weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack: workflow-template](https://github.com/weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.2 | medium | Скачать workflow-template.json |
 | 2026-07-17 | [waseemnasir2k26/skynet-automation-pack: 20-clinic-missed-call-wa-recovery](https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/20-clinic-missed-call-wa-recovery.json) | 20-clinic-missed-call-wa-recovery |  | 7.0 | medium | Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json) |
 | 2026-07-17 | [waseemnasir2k26/skynet-automation-pack: 19-real-estate-listing-5-platforms](https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/19-real-estate-listing-5-platforms.json) | 19-real-estate-listing-5-platforms |  | 7.0 | medium | Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json) |

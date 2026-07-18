@@ -1,9 +1,14 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 45
+Total: 50
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 03-reply-tracker](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/03-reply-tracker.json) | 03-reply-tracker |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
+| 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 02-email-automation](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/02-email-automation.json) | 02-email-automation |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
+| 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 01-lead-search-scoring](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/01-lead-search-scoring.json) | 01-lead-search-scoring |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
+| 2026-07-18 | [dntnqlssoRj/ChurnRadar: churn_alert_fatigue_control](https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert_fatigue_control.json) | churn_alert_fatigue_control |  | 5.9 | medium | Скачать churn_alert.json |
+| 2026-07-18 | [dntnqlssoRj/ChurnRadar: churn_alert](https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert.json) | churn_alert |  | 5.9 | medium | Скачать churn_alert.json |
 | 2026-07-17 | [waseemnasir2k26/skynet-automation-pack: 20-clinic-missed-call-wa-recovery](https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/20-clinic-missed-call-wa-recovery.json) | 20-clinic-missed-call-wa-recovery |  | 7.0 | medium | Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json) |
 | 2026-07-17 | [waseemnasir2k26/skynet-automation-pack: 19-real-estate-listing-5-platforms](https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/19-real-estate-listing-5-platforms.json) | 19-real-estate-listing-5-platforms |  | 7.0 | medium | Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json) |
 | 2026-07-17 | [waseemnasir2k26/skynet-automation-pack: 18-vip-cohort-detector-wa-congrats](https://github.com/waseemnasir2k26/skynet-automation-pack/blob/main/n8n/18-vip-cohort-detector-wa-congrats.json) | 18-vip-cohort-detector-wa-congrats |  | 7.0 | medium | Скачать нужный JSON из папки n8n/ (например 01-linkedin-dm-icp-scorer.json) |

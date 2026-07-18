@@ -1,5 +1,123 @@
 {
   "skills": {
+    "https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/ai-agent-city-lookup.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 n8n-workflow для работы с геолокационными данными: AI-поиск городов, автокомплит через webhook и поиск ближайших городов по координатам. Демонстрирует использование кастомной ноды geomelon.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "OpenAI",
+        "Geomelon"
+      ],
+      "metric": "Время отклика геолокационного запроса; точность автокомплита",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "930m310n/n8n-nodes-geomelon",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-agent-city-lookup"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить npm-пакет n8n-nodes-geomelon в n8n (community node)",
+        "Скачать ai-agent-city-lookup.json",
+        "Импортировать в n8n",
+        "Настроить credential для Geomelon API (если требуется)",
+        "Запустить тестовый запрос с названием города"
+      ],
+      "title": "930m310n/n8n-nodes-geomelon: ai-agent-city-lookup",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/ai-agent-city-lookup.json"
+    },
+    "https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/free-city-autocomplete-webhook.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 n8n-workflow для работы с геолокационными данными: AI-поиск городов, автокомплит через webhook и поиск ближайших городов по координатам. Демонстрирует использование кастомной ноды geomelon.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "Geomelon"
+      ],
+      "metric": "Время отклика геолокационного запроса; точность автокомплита",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "930m310n/n8n-nodes-geomelon",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "free-city-autocomplete-webhook"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить npm-пакет n8n-nodes-geomelon в n8n (community node)",
+        "Скачать ai-agent-city-lookup.json",
+        "Импортировать в n8n",
+        "Настроить credential для Geomelon API (если требуется)",
+        "Запустить тестовый запрос с названием города"
+      ],
+      "title": "930m310n/n8n-nodes-geomelon: free-city-autocomplete-webhook",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/free-city-autocomplete-webhook.json"
+    },
+    "https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/nearest-cities-by-coordinates.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 n8n-workflow для работы с геолокационными данными: AI-поиск городов, автокомплит через webhook и поиск ближайших городов по координатам. Демонстрирует использование кастомной ноды geomelon.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "Geomelon"
+      ],
+      "metric": "Время отклика геолокационного запроса; точность автокомплита",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "930m310n/n8n-nodes-geomelon",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "nearest-cities-by-coordinates"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить npm-пакет n8n-nodes-geomelon в n8n (community node)",
+        "Скачать ai-agent-city-lookup.json",
+        "Импортировать в n8n",
+        "Настроить credential для Geomelon API (если требуется)",
+        "Запустить тестовый запрос с названием города"
+      ],
+      "title": "930m310n/n8n-nodes-geomelon: nearest-cities-by-coordinates",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/nearest-cities-by-coordinates.json"
+    },
     "https://github.com/Agenius-AI-Labs/Wazuh-AI-Security-Analyzer": {
       "category": "devops_workflow",
       "complexity": "complex",
@@ -5747,6 +5865,90 @@
       "trigger_type": "chat",
       "url": "https://github.com/djeknet/n8n-master-workflows"
     },
+    "https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для мониторинга оттока клиентов: отслеживает поведенческие сигналы и отправляет алерты при риске churn. Подходит для SaaS-команд и менеджеров по удержанию клиентов.",
+      "final_score": 5.9,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "OpenAI",
+        "Slack",
+        "Gmail",
+        "Google Sheets"
+      ],
+      "metric": "Количество своевременно выявленных churn-рисков; время от сигнала до алерта",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "dntnqlssoRj/ChurnRadar",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "churn_alert"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать churn_alert.json",
+        "Импортировать в n8n",
+        "Подключить источник данных о клиентах (CRM, БД, CSV)",
+        "Настроить канал уведомлений (Slack/email)",
+        "Запустить на тестовом сегменте клиентов"
+      ],
+      "title": "dntnqlssoRj/ChurnRadar: churn_alert",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert.json"
+    },
+    "https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert_fatigue_control.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для мониторинга оттока клиентов: отслеживает поведенческие сигналы и отправляет алерты при риске churn. Подходит для SaaS-команд и менеджеров по удержанию клиентов.",
+      "final_score": 5.9,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "Google Sheets",
+        "OpenAI",
+        "Slack",
+        "Gmail"
+      ],
+      "metric": "Количество своевременно выявленных churn-рисков; время от сигнала до алерта",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "dntnqlssoRj/ChurnRadar",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "churn_alert_fatigue_control"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать churn_alert.json",
+        "Импортировать в n8n",
+        "Подключить источник данных о клиентах (CRM, БД, CSV)",
+        "Настроить канал уведомлений (Slack/email)",
+        "Запустить на тестовом сегменте клиентов"
+      ],
+      "title": "dntnqlssoRj/ChurnRadar: churn_alert_fatigue_control",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/dntnqlssoRj/ChurnRadar/blob/main/workflows/churn_alert_fatigue_control.json"
+    },
     "https://github.com/doreen-akpede/email-classification-n8n/blob/main/Email Classification Workflow.json": {
       "category": "general_workflow",
       "complexity": "complex",
@@ -6723,6 +6925,46 @@
       "tool": "n8n",
       "trigger_type": "form",
       "url": "https://github.com/iamadoctorforreal/Video-Generator-Workflow/blob/main/n8n_workflow.json"
+    },
+    "https://github.com/ifra489/AI-Daily-News-Summarizer-using-n8n/blob/main/AI Daily News Summarizer.json": {
+      "category": "content_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow, который ежедневно собирает новости из внешних источников, обрабатывает их с помощью AI и формирует краткую сводку. Полезен для команд, которым нужен автоматический мониторинг отрасли.",
+      "final_score": 5.9,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "Google Gemini",
+        "Gmail"
+      ],
+      "metric": "Количество обработанных статей в день; время доставки дайджеста",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "ifra489/AI-Daily-News-Summarizer-using-n8n",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "AI Daily News Summarizer"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 'AI Daily News Summarizer.json'",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить RSS-источники или News API credential",
+        "Подключить LLM-credential (OpenAI/Gemini)",
+        "Задать расписание и запустить тестовый прогон"
+      ],
+      "title": "ifra489/AI-Daily-News-Summarizer-using-n8n: AI Daily News Summarizer",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/ifra489/AI-Daily-News-Summarizer-using-n8n/blob/main/AI Daily News Summarizer.json"
     },
     "https://github.com/inthecyber-group/securityonion-n8n-workflows": {
       "category": "devops_workflow",
@@ -9548,6 +9790,120 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/splx-ai/agentic-radar"
+    },
+    "https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/01-lead-search-scoring.json": {
+      "category": "sales_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит три связанных n8n-workflow для автоматизации outreach-процесса: поиск и скоринг лидов, автоматическая email-рассылка и трекер ответов. Подходит командам по продажам и growth-специалистам.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-18",
+      "metric": "Количество лидов, прошедших через все 3 этапа; процент ответов",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "sunshinemultiplechoice751/outreach-os",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-lead-search-scoring"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 01-lead-search-scoring.json из папки workflows/",
+        "Импортировать в n8n через Settings → Import Workflow",
+        "Повторить для 02-email-automation.json и 03-reply-tracker.json",
+        "Настроить credentials: email-провайдер, CRM или источник лидов",
+        "Запустить тестовый прогон на небольшом списке лидов"
+      ],
+      "title": "sunshinemultiplechoice751/outreach-os: 01-lead-search-scoring",
+      "tool": "n8n",
+      "url": "https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/01-lead-search-scoring.json"
+    },
+    "https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/02-email-automation.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит три связанных n8n-workflow для автоматизации outreach-процесса: поиск и скоринг лидов, автоматическая email-рассылка и трекер ответов. Подходит командам по продажам и growth-специалистам.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "Google Sheets",
+        "Gmail"
+      ],
+      "metric": "Количество лидов, прошедших через все 3 этапа; процент ответов",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "sunshinemultiplechoice751/outreach-os",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02-email-automation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 01-lead-search-scoring.json из папки workflows/",
+        "Импортировать в n8n через Settings → Import Workflow",
+        "Повторить для 02-email-automation.json и 03-reply-tracker.json",
+        "Настроить credentials: email-провайдер, CRM или источник лидов",
+        "Запустить тестовый прогон на небольшом списке лидов"
+      ],
+      "title": "sunshinemultiplechoice751/outreach-os: 02-email-automation",
+      "tool": "n8n",
+      "url": "https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/02-email-automation.json"
+    },
+    "https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/03-reply-tracker.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит три связанных n8n-workflow для автоматизации outreach-процесса: поиск и скоринг лидов, автоматическая email-рассылка и трекер ответов. Подходит командам по продажам и growth-специалистам.",
+      "final_score": 6.4,
+      "first_recommended": "2026-07-18",
+      "integrations": [
+        "Google Sheets",
+        "Gmail"
+      ],
+      "metric": "Количество лидов, прошедших через все 3 этапа; процент ответов",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "sunshinemultiplechoice751/outreach-os",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03-reply-tracker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: 01-lead-search-scoring.json из папки workflows/",
+        "Импортировать в n8n через Settings → Import Workflow",
+        "Повторить для 02-email-automation.json и 03-reply-tracker.json",
+        "Настроить credentials: email-провайдер, CRM или источник лидов",
+        "Запустить тестовый прогон на небольшом списке лидов"
+      ],
+      "title": "sunshinemultiplechoice751/outreach-os: 03-reply-tracker",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/03-reply-tracker.json"
     },
     "https://github.com/tahsinmert/n8n-ai-otomations/blob/main/agent__ai-web-developer-site-rebuild.json": {
       "category": "general_workflow",

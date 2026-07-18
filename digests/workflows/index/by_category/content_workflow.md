@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 19
+Total: 20
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [ifra489/AI-Daily-News-Summarizer-using-n8n: AI Daily News Summarizer](https://github.com/ifra489/AI-Daily-News-Summarizer-using-n8n/blob/main/AI Daily News Summarizer.json) | AI Daily News Summarizer |  | 5.9 | medium | Скачать JSON: 'AI Daily News Summarizer.json' |
 | 2026-07-04 | [PedroTomazeti/wordpress-auto-post-openai: WORDPRESS_AUTO_POST_OPENAI_V3](https://github.com/PedroTomazeti/wordpress-auto-post-openai/blob/main/WORDPRESS_AUTO_POST_OPENAI_V3.json) | WORDPRESS_AUTO_POST_OPENAI_V3 |  | 5.6 | medium | Скачать WORDPRESS_AUTO_POST_OPENAI_V3.json |
 | 2026-07-01 | [kkornas/n8n-ai-news-pipeline: ai-news-pipeline](https://github.com/kkornas/n8n-ai-news-pipeline/blob/main/ai-news-pipeline.json) | ai-news-pipeline |  | 6.7 | medium | Скачать ai-news-pipeline.json из репозитория |
 | 2026-06-30 | [youerning/blog: novel-workflow](https://github.com/youerning/blog/blob/master/n8n/novel-workflow.json) | novel-workflow |  | 6.4 | high | Скачать novel-workflow.json по прямой ссылке |

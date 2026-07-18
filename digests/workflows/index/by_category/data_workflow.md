@@ -1,9 +1,12 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 67
+Total: 70
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-18 | [930m310n/n8n-nodes-geomelon: nearest-cities-by-coordinates](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/nearest-cities-by-coordinates.json) | nearest-cities-by-coordinates |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
+| 2026-07-18 | [930m310n/n8n-nodes-geomelon: free-city-autocomplete-webhook](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/free-city-autocomplete-webhook.json) | free-city-autocomplete-webhook |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
+| 2026-07-18 | [930m310n/n8n-nodes-geomelon: ai-agent-city-lookup](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/ai-agent-city-lookup.json) | ai-agent-city-lookup |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
 | 2026-07-17 | [weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack: workflow-template](https://github.com/weblineindia/n8n-Classify-KYC-risk-from-form-submissions-with-OpenAI-Google-Sheets-and-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.2 | medium | Скачать workflow-template.json |
 | 2026-07-16 | [youssefmkb/insurance-document-processor: workflow](https://github.com/youssefmkb/insurance-document-processor/blob/main/workflow.json) | workflow |  | 7.0 | medium | Скачать workflow.json из репо |
 | 2026-07-16 | [xerael/ultralab: ultralab-systematicreview-orchestrator](https://github.com/xerael/ultralab/blob/main/workflows/ultralab-systematicreview-orchestrator.json) | ultralab-systematicreview-orchestrator |  | 7.0 | medium | Скачать ultralab-api-search-isolated.json и импортировать в n8n |
