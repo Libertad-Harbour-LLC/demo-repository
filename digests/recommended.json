@@ -1091,6 +1091,39 @@
       "title": "IgorGanapolsky/ThumbGate",
       "url": "https://github.com/IgorGanapolsky/ThumbGate/tree/main/.claude/skills"
     },
+    "https://github.com/Imbad0202/academic-research-skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Набор из 4 skills для академических исследований: рецензирование статей, написание научных текстов, автоматизированный исследовательский конвейер и глубокий поиск. Ориентирован на аспирантов, учёных и студентов.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-19",
+      "metric": "Глубина и структурированность академической рецензии: методология, вклад, ограничения",
+      "promoted_from_watch": false,
+      "repo_full_name": "Imbad0202/academic-research-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "academic-paper-reviewer",
+        "academic-paper",
+        "academic-pipeline",
+        "deep-research"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: `git clone https://github.com/Imbad0202/academic-research-skills`",
+        "Скопировать skill: `cp -r academic-paper-reviewer ~/.claude/skills/`",
+        "Дать промт: 'Using academic-paper-reviewer skill, review this abstract and introduction for a machine learning paper and provide structured feedback'"
+      ],
+      "title": "Imbad0202/academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills"
+    },
     "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/main/.claude/skills": {
       "category": "marketing_skill",
       "confidence": "medium",
@@ -1728,6 +1761,44 @@
       ],
       "title": "LiorCohen/sdd",
       "url": "https://github.com/LiorCohen/sdd/tree/main/.claude/skills"
+    },
+    "https://github.com/MadsLorentzen/ai-job-search": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Набор skills для автоматизированного поиска работы: скрапинг вакансий с датских платформ (JobNet, Jobindex, LinkedIn) и помощь в написании сопроводительных писем. Интересен как шаблон для локализованных job-search агентов.",
+      "final_score": 7.7,
+      "first_recommended": "2026-07-19",
+      "metric": "Качество и персонализация сопроводительного письма",
+      "promoted_from_watch": false,
+      "repo_full_name": "MadsLorentzen/ai-job-search",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "freehire-search",
+        "jobbank-search",
+        "jobdanmark-search",
+        "jobindex-search",
+        "jobnet-search",
+        "linkedin-search",
+        "job-application-assistant",
+        "job-scraper",
+        "upskill"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать: `git clone https://github.com/MadsLorentzen/ai-job-search`",
+        "Скопировать: `cp -r .claude/skills/job-application-assistant ~/.claude/skills/`",
+        "Дать промт: 'Using job-application-assistant skill, help me write a cover letter for a Senior Data Engineer position at [company], based on my CV [paste CV]'"
+      ],
+      "title": "MadsLorentzen/ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search"
     },
     "https://github.com/MetaMask/ocap-kernel/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -4702,6 +4773,36 @@
       "title": "elrufaiforexfx22-creator/claudecode-video-maker",
       "url": "https://github.com/elrufaiforexfx22-creator/claudecode-video-maker/tree/main/.claude/skills"
     },
+    "https://github.com/emilkowalski/skills": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Репозиторий от Emil Kowalski — дизайнера, известного по Sonner и другим UI-библиотекам. Содержит skill по дизайн-инжинирингу с упором на взаимодействие дизайна и кода. Предназначен для разработчиков и дизайн-инженеров.",
+      "final_score": 8.5,
+      "first_recommended": "2026-07-19",
+      "metric": "Качество и детализация дизайн-рекомендаций по сравнению с базовым Claude",
+      "promoted_from_watch": false,
+      "repo_full_name": "emilkowalski/skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "emil-design-eng"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить через skills.sh: запустить `skills install emilkowalski/skills` или клонировать репо и скопировать SKILL.md в `.claude/skills/emil-design-eng/`",
+        "Открыть Claude Code в проекте с React/Next.js компонентами",
+        "Дать промт: 'Using the emil-design-eng skill, review my Button component and suggest improvements for design engineering quality'"
+      ],
+      "title": "emilkowalski/skills",
+      "url": "https://github.com/emilkowalski/skills"
+    },
     "https://github.com/ergrelet/windiff/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -4898,6 +4999,67 @@
       ],
       "title": "eugenelim/agent-ready-repo",
       "url": "https://github.com/eugenelim/agent-ready-repo/tree/main/.claude/skills"
+    },
+    "https://github.com/firebase/agent-skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Официальный репозиторий Firebase с skill для Claude Code, обучающим агента работе с Firebase — аутентификацией, Firestore, Cloud Functions и Hosting. Подходит разработчикам, строящим serverless-приложения на Firebase.",
+      "final_score": 8.5,
+      "first_recommended": "2026-07-19",
+      "metric": "Корректность сгенерированного Firebase-кода: правильный SDK v9, паттерны auth и Firestore",
+      "promoted_from_watch": false,
+      "repo_full_name": "firebase/agent-skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 9,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "firebase-basics"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить: `skills install firebase/agent-skills` или скопировать SKILL.md в `.claude/skills/firebase-basics/`",
+        "Открыть Claude Code в проекте с Firebase",
+        "Дать промт: 'Using firebase-basics skill, add email/password authentication to this Next.js app with Firestore user profiles'"
+      ],
+      "title": "firebase/agent-skills",
+      "url": "https://github.com/firebase/agent-skills"
+    },
+    "https://github.com/firecrawl/firecrawl-workflows": {
+      "category": "marketing_skill",
+      "confidence": "high",
+      "description": "Официальные skills от команды Firecrawl для клонирования дизайна сайтов и SEO-аудита с использованием веб-скрапинга. Подходит маркетологам и разработчикам, анализирующим конкурентов и оптимизирующим контент.",
+      "final_score": 8.1,
+      "first_recommended": "2026-07-19",
+      "metric": "Полнота SEO-аудита: meta-теги, скорость, структура заголовков, broken links, schema",
+      "promoted_from_watch": false,
+      "repo_full_name": "firecrawl/firecrawl-workflows",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 2,
+      "skills_in_repo": [
+        "firecrawl-website-design-clone",
+        "firecrawl-seo-audit"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить: `skills install firecrawl/firecrawl-workflows` или скопировать SKILL.md в `.claude/skills/`",
+        "Убедиться, что FIRECRAWL_API_KEY задан в окружении",
+        "Дать промт: 'Using firecrawl-seo-audit skill, run a full SEO audit of https://example.com and give me a prioritized action list'"
+      ],
+      "title": "firecrawl/firecrawl-workflows",
+      "url": "https://github.com/firecrawl/firecrawl-workflows"
     },
     "https://github.com/flowglad/flowglad/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -7014,6 +7176,40 @@
       ],
       "title": "mozilla/fx-private-relay",
       "url": "https://github.com/mozilla/fx-private-relay/tree/main/.claude/skills"
+    },
+    "https://github.com/mukul975/Anthropic-Cybersecurity-Skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Коллекция из 50+ skills по кибербезопасности: форензика, малвар-анализ, пентест, соответствие стандартам (CMMC, MITRE). Репозиторий ориентирован на специалистов по ИБ, использующих Claude Code для анализа угроз и расследований.",
+      "final_score": 8.4,
+      "first_recommended": "2026-07-19",
+      "metric": "Точность и полнота инструкций по форензике: правильные команды Volatility, интерпретация артефактов",
+      "promoted_from_watch": false,
+      "repo_full_name": "mukul975/Anthropic-Cybersecurity-Skills",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 5,
+      "skills_in_repo": [
+        "abusing-dpapi-for-credential-access",
+        "analyzing-memory-dumps-with-volatility",
+        "analyzing-malware-behavior-with-cuckoo-sandbox",
+        "analyzing-network-traffic-with-wireshark",
+        "achieving-cmmc-level-2-compliance"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо: `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills`",
+        "Скопировать нужный skill: `cp -r skills/analyzing-memory-dumps-with-volatility ~/.claude/skills/`",
+        "Открыть Claude Code и дать промт: 'Using the analyzing-memory-dumps-with-volatility skill, help me analyze this memory dump for signs of Mimikatz activity'"
+      ],
+      "title": "mukul975/Anthropic-Cybersecurity-Skills",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
     },
     "https://github.com/multica-ai/andrej-karpathy-skills/tree/main/.claude/skills": {
       "added_manually": true,

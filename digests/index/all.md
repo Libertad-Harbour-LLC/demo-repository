@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 269
+Total: 275
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-19 | [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | abusing-dpapi-for-credential-access, analyzing-memory-dumps-with-volatility, analyzing-malware-behavior-with-cuckoo-sandbox, +2 more |  | 8.4 | high | Клонировать репо: `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills` |
+| 2026-07-19 | [firecrawl/firecrawl-workflows](https://github.com/firecrawl/firecrawl-workflows) | firecrawl-website-design-clone, firecrawl-seo-audit |  | 8.1 | high | Установить: `skills install firecrawl/firecrawl-workflows` или скопировать SKILL.md в `.claude/skills/` |
+| 2026-07-19 | [firebase/agent-skills](https://github.com/firebase/agent-skills) | firebase-basics |  | 8.5 | high | Установить: `skills install firebase/agent-skills` или скопировать SKILL.md в `.claude/skills/firebase-basics/` |
+| 2026-07-19 | [emilkowalski/skills](https://github.com/emilkowalski/skills) | emil-design-eng |  | 8.5 | high | Установить через skills.sh: запустить `skills install emilkowalski/skills` или клонировать репо и скопировать SKILL.m... |
+| 2026-07-19 | [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) | freehire-search, jobbank-search, jobdanmark-search, +6 more |  | 7.7 | high | Клонировать: `git clone https://github.com/MadsLorentzen/ai-job-search` |
+| 2026-07-19 | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | academic-paper-reviewer, academic-paper, academic-pipeline, +1 more |  | 7.9 | high | Клонировать: `git clone https://github.com/Imbad0202/academic-research-skills` |
 | 2026-07-18 | [supabase/agent-skills](https://github.com/supabase/agent-skills) | supabase-postgres-best-practices, supabase |  | 8.5 | high | Открыть Claude Code в Supabase-проекте (или создать тестовый Next.js + Supabase проект) |
 | 2026-07-18 | [skills-collective/skills](https://github.com/skills-collective/skills) | ai-image-generation, ai-video-generation, image-to-video, +1 more |  | 7.4 | high | Установить skill через skills.sh CLI или найти SKILL.md в репозитории |
 | 2026-07-18 | [googleworkspace/cli](https://github.com/googleworkspace/cli) | gws-workflow-email-to-task, recipe-create-presentation, recipe-draft-email-from-doc, +6 more |  | 8.1 | high | Установить skill через skills.sh CLI или клонировать репозиторий и найти SKILL.md |

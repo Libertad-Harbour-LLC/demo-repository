@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 159
+Total: 160
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-19 | [firebase/agent-skills](https://github.com/firebase/agent-skills) | firebase-basics |  | 8.5 | high | Установить: `skills install firebase/agent-skills` или скопировать SKILL.md в `.claude/skills/firebase-basics/` |
 | 2026-07-18 | [supabase/agent-skills](https://github.com/supabase/agent-skills) | supabase-postgres-best-practices, supabase |  | 8.5 | high | Открыть Claude Code в Supabase-проекте (или создать тестовый Next.js + Supabase проект) |
 | 2026-07-17 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | agent-browser |  | 8.5 | high | Установить: skills.sh install vercel-labs/agent-browser или склонировать и скопировать SKILL.md в .claude/skills/agen... |
 | 2026-07-16 | [storybookjs/storybook](https://github.com/storybookjs/storybook/tree/next/.claude/skills) | canary, docs-review, fix-linting-types-on-pr, +9 more |  | 7.8 | high | git clone https://github.com/storybookjs/storybook и перейти в ветку next |
