@@ -706,6 +706,35 @@
       "title": "langgenius/dify",
       "url": "https://github.com/langgenius/dify"
     },
+    "https://github.com/lobehub/lobehub": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "LobeHub — self-hosted платформа для управления командой AI-агентов в режиме 7x24 с планировщиком и отчётностью, позиционируется как Chief Agent Operator. Альтернатива корпоративным AI-планировщикам; разворачивается через Docker, поддерживает MCP и множество LLM.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Стабильность 7x24 агентного цикла, поддержка MCP, наличие API для интеграции",
+      "promoted_from_watch": false,
+      "repo_full_name": "lobehub/lobehub",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 80509,
+      "test_steps": [
+        "git clone https://github.com/lobehub/lobehub && docker-compose up -d",
+        "Открыть web UI, подключить LLM провайдер (OpenAI/Anthropic/DeepSeek)",
+        "Создать первого агента с расписанием и знание-базой",
+        "Проверить агентный отчёт и возможности multi-agent orchestration"
+      ],
+      "title": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub"
+    },
     "https://github.com/louislam/uptime-kuma": {
       "category": "devtools_oss",
       "confidence": "high",
@@ -880,6 +909,35 @@
       "title": "nexu-io/open-design",
       "url": "https://github.com/nexu-io/open-design"
     },
+    "https://github.com/odysseus-dev/odysseus": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Self-hosted AI workspace — готовая платформа для личного или командного использования AI-инструментов под своим доменом. Альтернатива Notion AI и ChatGPT Teams: разворачивается на своём сервере, можно прицепить собственный бренд и API.",
+      "final_score": 8.0,
+      "first_recommended": "2026-07-19",
+      "metric": "Работает ли UI, поддерживается ли подключение своей LLM, наличие возможности кастомизации бренда",
+      "promoted_from_watch": false,
+      "repo_full_name": "odysseus-dev/odysseus",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 83232,
+      "test_steps": [
+        "Склонировать: git clone https://github.com/odysseus-dev/odysseus",
+        "Найти docker-compose.yml в корне и запустить: docker-compose up -d",
+        "Открыть localhost:PORT в браузере, создать аккаунт",
+        "Прицепить API-ключ (OpenAI/Anthropic) через настройки, проверить базовый чат и workspace"
+      ],
+      "title": "odysseus-dev/odysseus",
+      "url": "https://github.com/odysseus-dev/odysseus"
+    },
     "https://github.com/open-webui/open-webui": {
       "category": "apps_oss",
       "confidence": "high",
@@ -1053,6 +1111,35 @@
       ],
       "title": "seanZhang414/openadserver",
       "url": "https://github.com/seanZhang414/openadserver"
+    },
+    "https://github.com/unclecode/crawl4ai": {
+      "category": "data_oss",
+      "confidence": "high",
+      "description": "Crawl4AI — open-source веб-краулер и скрапер, оптимизированный для подготовки данных для LLM, конкурент Firecrawl. Разворачивается через pip или Docker, имеет Python API, подходит для построения RAG-пайплайнов и data-сервисов для AI-агентов.",
+      "final_score": 7.2,
+      "first_recommended": "2026-07-19",
+      "metric": "Скорость краулинга, качество извлечения контента, поддержка JS-рендеринга",
+      "promoted_from_watch": false,
+      "repo_full_name": "unclecode/crawl4ai",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 73264,
+      "test_steps": [
+        "pip install crawl4ai && crawl4ai-setup",
+        "Или: docker run -p 11235:11235 unclecode/crawl4ai",
+        "Запустить тестовый скрапинг: python -m crawl4ai.quick_start",
+        "Проверить качество markdown output и интеграцию с OpenAI embeddings"
+      ],
+      "title": "unclecode/crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai"
     },
     "https://github.com/unslothai/unsloth": {
       "category": "apps_oss",
