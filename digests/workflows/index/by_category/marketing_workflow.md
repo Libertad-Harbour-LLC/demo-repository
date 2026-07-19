@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 27
+Total: 28
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-19 | [Mohil-Wankar/CampaignPilot: CampaignPilot - GTM Decision Engine](https://github.com/Mohil-Wankar/CampaignPilot/blob/main/n8n/CampaignPilot - GTM Decision Engine.json) | CampaignPilot - GTM Decision Engine |  | 6.7 | medium | Скачать JSON из n8n/CampaignPilot - GTM Decision Engine.json |
 | 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 04-dr-threshold-alert](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/04-dr-threshold-alert.json) | 04-dr-threshold-alert |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |
 | 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 03-weekly-backlink-report](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/03-weekly-backlink-report.json) | 03-weekly-backlink-report |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |
 | 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 02-google-indexing-submitter](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/02-google-indexing-submitter.json) | 02-google-indexing-submitter |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |

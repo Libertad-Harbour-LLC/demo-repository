@@ -1,9 +1,10 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 50
+Total: 51
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-19 | [DanielMadsenDK/servicenow-helper: workflow-template](https://github.com/DanielMadsenDK/servicenow-helper/blob/main/n8n/init/workflow-template.json) | workflow-template |  | 6.0 | medium | Скачать workflow-template.json |
 | 2026-07-09 | [IT-Nomad-Lab/nomad: self-dev-scheduler.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/self-dev-scheduler.workflow.json) | self-dev-scheduler.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
 | 2026-07-09 | [IT-Nomad-Lab/nomad: n8n-v2-send.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/v2/n8n-v2-send.workflow.json) | n8n-v2-send.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
 | 2026-07-09 | [IT-Nomad-Lab/nomad: approval-gate.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/approval-gate.workflow.json) | approval-gate.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |

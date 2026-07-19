@@ -1,9 +1,13 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 50
+Total: 54
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-19 | [MusaIslamFahad/n8n-free-lead-outreach-pipeline: lead-gen-outreach-reply-digest](https://github.com/MusaIslamFahad/n8n-free-lead-outreach-pipeline/blob/main/workflows/lead-gen-outreach-reply-digest.json) | lead-gen-outreach-reply-digest |  | 6.8 | medium | Скачать lead-gen-outreach-reply-digest.json |
+| 2026-07-19 | [Deekshak11/automation-systems: hubspot-enrich-outreach](https://github.com/Deekshak11/automation-systems/blob/main/workflows/hubspot-enrich-outreach.json) | hubspot-enrich-outreach |  | 6.9 | medium | Скачать ai-lead-research-engine.json из /workflows/ |
+| 2026-07-19 | [Deekshak11/automation-systems: ai-lead-research-engine](https://github.com/Deekshak11/automation-systems/blob/main/workflows/ai-lead-research-engine.json) | ai-lead-research-engine |  | 6.9 | medium | Скачать ai-lead-research-engine.json из /workflows/ |
+| 2026-07-19 | [Deekshak11/automation-systems: ai-email-rag-responder](https://github.com/Deekshak11/automation-systems/blob/main/workflows/ai-email-rag-responder.json) | ai-email-rag-responder |  | 6.9 | medium | Скачать ai-lead-research-engine.json из /workflows/ |
 | 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 03-reply-tracker](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/03-reply-tracker.json) | 03-reply-tracker |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
 | 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 02-email-automation](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/02-email-automation.json) | 02-email-automation |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |
 | 2026-07-18 | [sunshinemultiplechoice751/outreach-os: 01-lead-search-scoring](https://github.com/sunshinemultiplechoice751/outreach-os/blob/main/workflows/01-lead-search-scoring.json) | 01-lead-search-scoring |  | 6.4 | medium | Скачать JSON: 01-lead-search-scoring.json из папки workflows/ |

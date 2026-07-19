@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 20
+Total: 21
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-19 | [Virajgosavi1810/n8n-create-publish-blog-wordpress: Create___Publish_Blog_Post_on_WordPress](https://github.com/Virajgosavi1810/n8n-create-publish-blog-wordpress/blob/main/Create___Publish_Blog_Post_on_WordPress.json) | Create___Publish_Blog_Post_on_WordPress |  | 6.2 | medium | Скачать JSON Create___Publish_Blog_Post_on_WordPress.json |
 | 2026-07-18 | [ifra489/AI-Daily-News-Summarizer-using-n8n: AI Daily News Summarizer](https://github.com/ifra489/AI-Daily-News-Summarizer-using-n8n/blob/main/AI Daily News Summarizer.json) | AI Daily News Summarizer |  | 5.9 | medium | Скачать JSON: 'AI Daily News Summarizer.json' |
 | 2026-07-04 | [PedroTomazeti/wordpress-auto-post-openai: WORDPRESS_AUTO_POST_OPENAI_V3](https://github.com/PedroTomazeti/wordpress-auto-post-openai/blob/main/WORDPRESS_AUTO_POST_OPENAI_V3.json) | WORDPRESS_AUTO_POST_OPENAI_V3 |  | 5.6 | medium | Скачать WORDPRESS_AUTO_POST_OPENAI_V3.json |
 | 2026-07-01 | [kkornas/n8n-ai-news-pipeline: ai-news-pipeline](https://github.com/kkornas/n8n-ai-news-pipeline/blob/main/ai-news-pipeline.json) | ai-news-pipeline |  | 6.7 | medium | Скачать ai-news-pipeline.json из репозитория |

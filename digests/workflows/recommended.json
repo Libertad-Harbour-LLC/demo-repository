@@ -737,6 +737,48 @@
       "trigger_type": "schedule",
       "url": "https://github.com/DINAKAR-S/N8N-Workflows"
     },
+    "https://github.com/DanielMadsenDK/servicenow-helper/blob/main/n8n/init/workflow-template.json": {
+      "category": "devops_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для интеграции с ServiceNow — популярной ITSM-платформой. Содержит шаблон workflow для автоматизации IT-сервисных процессов через ServiceNow API.",
+      "final_score": 6.0,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Postgres",
+        "OpenAI",
+        "Date Time Tool",
+        "OpenRouter"
+      ],
+      "metric": "Количество автоматически обработанных ITSM-тикетов",
+      "node_count": 61,
+      "promoted_from_watch": false,
+      "repo_full_name": "DanielMadsenDK/servicenow-helper",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 3,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить ServiceNow credentials (instance URL, username, password)",
+        "Изучить node-граф для понимания точек интеграции",
+        "Запустить тестовый прогон на dev-экземпляре ServiceNow"
+      ],
+      "title": "DanielMadsenDK/servicenow-helper: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/DanielMadsenDK/servicenow-helper/blob/main/n8n/init/workflow-template.json"
+    },
     "https://github.com/Danitilahun/n8n-workflow-templates": {
       "category": "general_workflow",
       "complexity": "complex",
@@ -829,6 +871,129 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/Davidbruno1/n8n-Handle-failed-payment-renewals-with-AI-analysis-Jira-tickets-Slack-alerts"
+    },
+    "https://github.com/Deekshak11/automation-systems/blob/main/workflows/ai-email-rag-responder.json": {
+      "category": "sales_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 n8n-workflow для автоматизации продаж: AI-агент для ответов на email через RAG, движок исследования лидов и обогащение контактов в HubSpot с последующим outreach. Подходит для SDR-команд и стартапов без большого sales-штата.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "OpenAI",
+        "Google Drive"
+      ],
+      "metric": "Количество персонализированных outreach-писем в час без участия человека",
+      "node_count": 26,
+      "promoted_from_watch": false,
+      "repo_full_name": "Deekshak11/automation-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-email-rag-responder"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-lead-research-engine.json из /workflows/",
+        "Импортировать в n8n через Workflows → Import from file",
+        "Настроить credentials HubSpot API и AI-провайдера (OpenAI/Anthropic)",
+        "Запустить на тестовом лиде",
+        "Проверить обогащённые данные в HubSpot"
+      ],
+      "title": "Deekshak11/automation-systems: ai-email-rag-responder",
+      "tool": "n8n",
+      "trigger_type": "email",
+      "url": "https://github.com/Deekshak11/automation-systems/blob/main/workflows/ai-email-rag-responder.json"
+    },
+    "https://github.com/Deekshak11/automation-systems/blob/main/workflows/ai-lead-research-engine.json": {
+      "category": "sales_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 n8n-workflow для автоматизации продаж: AI-агент для ответов на email через RAG, движок исследования лидов и обогащение контактов в HubSpot с последующим outreach. Подходит для SDR-команд и стартапов без большого sales-штата.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Tavily Tool",
+        "Groq",
+        "Google Sheets"
+      ],
+      "metric": "Количество персонализированных outreach-писем в час без участия человека",
+      "node_count": 22,
+      "promoted_from_watch": false,
+      "repo_full_name": "Deekshak11/automation-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-lead-research-engine"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-lead-research-engine.json из /workflows/",
+        "Импортировать в n8n через Workflows → Import from file",
+        "Настроить credentials HubSpot API и AI-провайдера (OpenAI/Anthropic)",
+        "Запустить на тестовом лиде",
+        "Проверить обогащённые данные в HubSpot"
+      ],
+      "title": "Deekshak11/automation-systems: ai-lead-research-engine",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/Deekshak11/automation-systems/blob/main/workflows/ai-lead-research-engine.json"
+    },
+    "https://github.com/Deekshak11/automation-systems/blob/main/workflows/hubspot-enrich-outreach.json": {
+      "category": "sales_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 3 n8n-workflow для автоматизации продаж: AI-агент для ответов на email через RAG, движок исследования лидов и обогащение контактов в HubSpot с последующим outreach. Подходит для SDR-команд и стартапов без большого sales-штата.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Google Sheets",
+        "HubSpot",
+        "OpenAI",
+        "Gmail"
+      ],
+      "metric": "Количество персонализированных outreach-писем в час без участия человека",
+      "node_count": 30,
+      "promoted_from_watch": false,
+      "repo_full_name": "Deekshak11/automation-systems",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "hubspot-enrich-outreach"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ai-lead-research-engine.json из /workflows/",
+        "Импортировать в n8n через Workflows → Import from file",
+        "Настроить credentials HubSpot API и AI-провайдера (OpenAI/Anthropic)",
+        "Запустить на тестовом лиде",
+        "Проверить обогащённые данные в HubSpot"
+      ],
+      "title": "Deekshak11/automation-systems: hubspot-enrich-outreach",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Deekshak11/automation-systems/blob/main/workflows/hubspot-enrich-outreach.json"
     },
     "https://github.com/Dimitrearaujo/n8n-whatsapp-lead-nurturing/blob/main/workflows/whatsapp-lead-nurturing.json": {
       "category": "sales_workflow",
@@ -1815,6 +1980,85 @@
       "trigger_type": "webhook",
       "url": "https://github.com/MohElshamy1994/n8n-course-Projetcs"
     },
+    "https://github.com/Mohil-Wankar/CampaignPilot/blob/main/n8n/CampaignPilot - GTM Decision Engine.json": {
+      "category": "marketing_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для принятия GTM-решений (Go-To-Market): автоматизирует анализ данных кампании и помогает определить следующий шаг в маркетинговой стратегии. Ориентирован на маркетологов и product-команды, запускающие новые продукты или фичи.",
+      "final_score": 6.7,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Google Sheets",
+        "OpenAI"
+      ],
+      "metric": "Скорость принятия GTM-решений, время от получения данных до рекомендации",
+      "node_count": 18,
+      "promoted_from_watch": false,
+      "repo_full_name": "Mohil-Wankar/CampaignPilot",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "CampaignPilot - GTM Decision Engine"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON из n8n/CampaignPilot - GTM Decision Engine.json",
+        "Импортировать в n8n через Workflows → Import",
+        "Изучить node-граф для понимания входных параметров",
+        "Подключить необходимые credentials (CRM/analytics)",
+        "Запустить тестовый прогон с тестовыми данными кампании"
+      ],
+      "title": "Mohil-Wankar/CampaignPilot: CampaignPilot - GTM Decision Engine",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/Mohil-Wankar/CampaignPilot/blob/main/n8n/CampaignPilot - GTM Decision Engine.json"
+    },
+    "https://github.com/MusaIslamFahad/n8n-free-lead-outreach-pipeline/blob/main/workflows/lead-gen-outreach-reply-digest.json": {
+      "category": "sales_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для полного цикла лидогенерации: сбор лидов, рассылка outreach-писем и дайджест ответов. Позиционируется как бесплатная альтернатива платным sales automation инструментам.",
+      "final_score": 6.8,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Google Sheets"
+      ],
+      "metric": "Reply rate на outreach, количество лидов в pipeline за день",
+      "node_count": 36,
+      "promoted_from_watch": false,
+      "repo_full_name": "MusaIslamFahad/n8n-free-lead-outreach-pipeline",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "lead-gen-outreach-reply-digest"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать lead-gen-outreach-reply-digest.json",
+        "Импортировать в n8n",
+        "Настроить email credentials (SMTP/Gmail)",
+        "Указать источник лидов (Google Sheets/CSV)",
+        "Запустить тестовый прогон на 2-3 тестовых контакта"
+      ],
+      "title": "MusaIslamFahad/n8n-free-lead-outreach-pipeline: lead-gen-outreach-reply-digest",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/MusaIslamFahad/n8n-free-lead-outreach-pipeline/blob/main/workflows/lead-gen-outreach-reply-digest.json"
+    },
     "https://github.com/Nijamudin/automated-business-analysis-workflow": {
       "category": "marketing_workflow",
       "complexity": "complex",
@@ -2681,6 +2925,45 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/V1D1AN/S1EM/blob/master/n8n/S1EM_TheHive.json"
+    },
+    "https://github.com/Virajgosavi1810/n8n-create-publish-blog-wordpress/blob/main/Create___Publish_Blog_Post_on_WordPress.json": {
+      "category": "content_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматического создания и публикации статей на WordPress. Часть серии workflow от автора Virajgosavi1810, охватывающей AI-агентов, voice и email автоматизации.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "OpenAI"
+      ],
+      "metric": "Количество опубликованных постов в неделю без ручного написания",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "Virajgosavi1810/n8n-create-publish-blog-wordpress",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Create___Publish_Blog_Post_on_WordPress"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON Create___Publish_Blog_Post_on_WordPress.json",
+        "Импортировать в n8n",
+        "Настроить WordPress API credentials (Application Password)",
+        "Настроить AI-провайдер (OpenAI/Gemini) для генерации контента",
+        "Запустить тестовый прогон с тестовой темой поста"
+      ],
+      "title": "Virajgosavi1810/n8n-create-publish-blog-wordpress: Create___Publish_Blog_Post_on_WordPress",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Virajgosavi1810/n8n-create-publish-blog-wordpress/blob/main/Create___Publish_Blog_Post_on_WordPress.json"
     },
     "https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql.json": {
       "category": "data_workflow",
@@ -4312,6 +4595,963 @@
       "tool": "n8n",
       "trigger_type": "schedule",
       "url": "https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_01_multi_currency_revenue_recognition_reporting.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Stripe",
+        "Salesforce",
+        "Slack"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_01_multi_currency_revenue_recognition_reporting"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_01_multi_currency_revenue_recognition_reporting",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_01_multi_currency_revenue_recognition_reporting.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_02_automated_budget_vs_actuals_cloud_cost_monitoring.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "AWS",
+        "Jira",
+        "Slack"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_02_automated_budget_vs_actuals_cloud_cost_monitoring"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_02_automated_budget_vs_actuals_cloud_cost_monitoring",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_02_automated_budget_vs_actuals_cloud_cost_monitoring.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_03_intelligent_accounts_payable_automation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "AWS"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_03_intelligent_accounts_payable_automation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_03_intelligent_accounts_payable_automation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_03_intelligent_accounts_payable_automation.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_04_dynamic_subscription_dunning_retention.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Stripe",
+        "Intercom",
+        "Salesforce"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_04_dynamic_subscription_dunning_retention"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_04_dynamic_subscription_dunning_retention",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_04_dynamic_subscription_dunning_retention.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_05_omnichannel_sales_aggregation_data_warehousing.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Shopify",
+        "Snowflake"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_05_omnichannel_sales_aggregation_data_warehousing"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_05_omnichannel_sales_aggregation_data_warehousing",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_05_omnichannel_sales_aggregation_data_warehousing.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_06_corporate_card_expense_reconciliation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_06_corporate_card_expense_reconciliation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_06_corporate_card_expense_reconciliation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_06_corporate_card_expense_reconciliation.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_07_crypto_treasury_real_time_p_l_tracking.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Notion",
+        "Pager Duty"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_07_crypto_treasury_real_time_p_l_tracking"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_07_crypto_treasury_real_time_p_l_tracking",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_07_crypto_treasury_real_time_p_l_tracking.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_08_fraud_resistant_vendor_payment_gateway.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_08_fraud_resistant_vendor_payment_gateway"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_08_fraud_resistant_vendor_payment_gateway",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_08_fraud_resistant_vendor_payment_gateway.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_09_automated_month_end_close_board_reporting.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_09_automated_month_end_close_board_reporting"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_09_automated_month_end_close_board_reporting",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_09_automated_month_end_close_board_reporting.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_10_headless_checkout_tax_liability_sync.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01_10_headless_checkout_tax_liability_sync"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 01_10_headless_checkout_tax_liability_sync",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_10_headless_checkout_tax_liability_sync.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_01_seamless_zero_touch_employee_onboarding.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_01_seamless_zero_touch_employee_onboarding"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_01_seamless_zero_touch_employee_onboarding",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_01_seamless_zero_touch_employee_onboarding.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_02_secure_offboarding_data_leakage_prevention.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Jira"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_02_secure_offboarding_data_leakage_prevention"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_02_secure_offboarding_data_leakage_prevention",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_02_secure_offboarding_data_leakage_prevention.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_03_automated_linkedin_talent_sourcing_screening.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_03_automated_linkedin_talent_sourcing_screening"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_03_automated_linkedin_talent_sourcing_screening",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_03_automated_linkedin_talent_sourcing_screening.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_04_360_degree_performance_review_aggregation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Slack",
+        "Notion"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_04_360_degree_performance_review_aggregation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_04_360_degree_performance_review_aggregation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_04_360_degree_performance_review_aggregation.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_05_proactive_employee_sentiment_churn_risk_alerting.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_05_proactive_employee_sentiment_churn_risk_alerting"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_05_proactive_employee_sentiment_churn_risk_alerting",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_05_proactive_employee_sentiment_churn_risk_alerting.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_06_automated_visa_relocation_compliance.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_06_automated_visa_relocation_compliance"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_06_automated_visa_relocation_compliance",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_06_automated_visa_relocation_compliance.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_07_frictionless_internal_mobility_transfers.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_07_frictionless_internal_mobility_transfers"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_07_frictionless_internal_mobility_transfers",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_07_frictionless_internal_mobility_transfers.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_08_mandatory_compliance_training_enforcement.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_08_mandatory_compliance_training_enforcement"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_08_mandatory_compliance_training_enforcement",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_08_mandatory_compliance_training_enforcement.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_09_intelligent_interview_scheduling_prep.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Slack"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_09_intelligent_interview_scheduling_prep"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_09_intelligent_interview_scheduling_prep",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_09_intelligent_interview_scheduling_prep.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_10_pre_processing_payroll_anomaly_detection.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Jira"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "02_10_pre_processing_payroll_anomaly_detection"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 02_10_pre_processing_payroll_anomaly_detection",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/02_10_pre_processing_payroll_anomaly_detection.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_01_predictive_inventory_po_generation.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Shopify"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03_01_predictive_inventory_po_generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 03_01_predictive_inventory_po_generation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_01_predictive_inventory_po_generation.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_02_ocean_freight_delay_rerouting_automation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Salesforce"
+      ],
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03_02_ocean_freight_delay_rerouting_automation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 03_02_ocean_freight_delay_rerouting_automation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_02_ocean_freight_delay_rerouting_automation.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_03_automated_supplier_quality_scorecarding.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03_03_automated_supplier_quality_scorecarding"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 03_03_automated_supplier_quality_scorecarding",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_03_automated_supplier_quality_scorecarding.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_04_zero_touch_customs_documentation.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03_04_zero_touch_customs_documentation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 03_04_zero_touch_customs_documentation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_04_zero_touch_customs_documentation.json"
+    },
+    "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_05_weather_risk_supply_chain_mitigation.json": {
+      "category": "general_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 n8n-workflow для финансовой автоматизации бизнеса: мультивалютный учёт выручки, мониторинг бюджета vs факта, автоматизация кредиторской задолженности, dunning-кампании, сверка корпоративных карт, crypto P&L и fraud-resistant платёжный шлюз. Ориентирован на финансовые команды и SaaS-компании.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-19",
+      "metric": "Время ручной сверки финансовых данных до/после автоматизации",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "avuzmal/n8n.automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 2,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "03_05_weather_risk_supply_chain_mitigation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Открыть репо и скачать нужный JSON из папки workflows/",
+        "Импортнуть JSON через n8n UI → Import from file",
+        "Настроить credentials для используемых сервисов (Google Sheets, Stripe, банковское API)",
+        "Запустить тестовый прогон на тестовых данных",
+        "Проверить выходные данные и настроить расписание"
+      ],
+      "title": "avuzmal/n8n.automation: 03_05_weather_risk_supply_chain_mitigation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_05_weather_risk_supply_chain_mitigation.json"
     },
     "https://github.com/bicced/make-integromat-crypto-workflows/blob/main/workflows/automated_crypto_price_tracker_for_discord_btc_+_eth_via_coingecko.json": {
       "category": "data_workflow",
@@ -6522,6 +7762,46 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/gnueole/jobby-md2html"
+    },
+    "https://github.com/hamzaasad5/AI-Email-Assistant/blob/main/workflows/AI Email Assistant (Production Ready).json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для AI-ассистента по email, позиционируемый как production-ready. Автоматизирует обработку входящих писем с помощью AI для классификации, ответов или маршрутизации.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-19",
+      "integrations": [
+        "Gmail",
+        "Google Sheets"
+      ],
+      "metric": "Процент писем, обработанных без участия человека",
+      "node_count": 20,
+      "promoted_from_watch": false,
+      "repo_full_name": "hamzaasad5/AI-Email-Assistant",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "AI Email Assistant (Production Ready)"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON из /workflows/",
+        "Импортировать в n8n",
+        "Настроить email credentials (Gmail IMAP/SMTP)",
+        "Подключить AI-провайдер",
+        "Запустить на тестовом почтовом ящике"
+      ],
+      "title": "hamzaasad5/AI-Email-Assistant: AI Email Assistant (Production Ready)",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/hamzaasad5/AI-Email-Assistant/blob/main/workflows/AI Email Assistant (Production Ready).json"
     },
     "https://github.com/hassanrauf1/Generate-AI-Viral-Videos-with-Seedance-and-Upload-to-TikTok-YouTube-Instagram": {
       "category": "video_workflow",
