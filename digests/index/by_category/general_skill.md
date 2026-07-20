@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 63
+Total: 65
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-20 | [github/awesome-copilot](https://github.com/github/awesome-copilot) | playwright-explore-website, playwright-automation-fill-in-form, web-design-reviewer, +3 more |  | 6.9 | high | Открыть https://github.com/github/awesome-copilot и найти папку skills/ |
+| 2026-07-20 | [claude-office-skills/skills](https://github.com/claude-office-skills/skills) | excel-automation, asana automation, airtable-automation, +7 more |  | 6.6 | high | Открыть https://github.com/claude-office-skills/skills и найти нужный skill |
 | 2026-07-19 | [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | abusing-dpapi-for-credential-access, analyzing-memory-dumps-with-volatility, analyzing-malware-behavior-with-cuckoo-sandbox, +2 more |  | 8.4 | high | Клонировать репо: `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills` |
 | 2026-07-19 | [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) | freehire-search, jobbank-search, jobdanmark-search, +6 more |  | 7.7 | high | Клонировать: `git clone https://github.com/MadsLorentzen/ai-job-search` |
 | 2026-07-19 | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | academic-paper-reviewer, academic-paper, academic-pipeline, +1 more |  | 7.9 | high | Клонировать: `git clone https://github.com/Imbad0202/academic-research-skills` |

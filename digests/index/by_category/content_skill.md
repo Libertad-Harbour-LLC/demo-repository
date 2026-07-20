@@ -1,9 +1,10 @@
 # Recommended Claude Skills — content_skill
 
-Total: 6
+Total: 7
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-20 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills/tree/main/skills) | baoyu-article-illustrator, baoyu-comic, baoyu-compress-image, +13 more |  | 7.1 | high | git clone https://github.com/JimLiu/baoyu-skills |
 | 2026-07-16 | [worldwonderer/oh-story-claudecode](https://github.com/worldwonderer/oh-story-claudecode) | browser-cdp, story-cover, story-deslop, +10 more |  | 7.0 | medium | git clone https://github.com/worldwonderer/oh-story-claudecode |
 | 2026-06-22 | [littlebearapps/pitchdocs](https://github.com/littlebearapps/pitchdocs/tree/main/.claude/skills) | api-reference, changelog, doc-refresh, +12 more |  | 7.1 | medium | git clone https://github.com/littlebearapps/pitchdocs && cd pitchdocs |
 | 2026-06-17 | [mintlify/docs](https://github.com/mintlify/docs/tree/main/.claude/skills) | doc-author, doc-reader, mintlify, +1 more |  | 7.3 | high | git clone https://github.com/mintlify/docs.git && cp -r docs/.claude/skills/doc-author /your-project/.claude/skills/ |
