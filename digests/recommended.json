@@ -32,6 +32,36 @@
       "title": "0xAxiom/AppFactory",
       "url": "https://github.com/0xAxiom/AppFactory/tree/main/.claude/skills"
     },
+    "https://github.com/101-skills/skills": {
+      "category": "video_skill",
+      "confidence": "high",
+      "description": "Skill для генерации видео с помощью AI-инструментов, распространяемый через реестр skills.sh. Является лидером по установкам среди всех skills в выборке — 275 367 installs.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-21",
+      "metric": "Качество сгенерированного промпта для AI-видео, скорость выполнения задачи по сравнению с обычным чатом",
+      "promoted_from_watch": false,
+      "repo_full_name": "101-skills/skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 6,
+        "traction": 10,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ai-video-generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить skill через skills.sh CLI: skills install 101-skills/skills (или скопировать из GitHub если доступен)",
+        "Перейти в любой проект с Claude Code, убедиться что skill появился в .claude/skills/ai-video-generation/",
+        "Вызвать в Claude Code: /ai-video-generation — дать задачу 'создай промпт для генерации рекламного видео 15 сек'"
+      ],
+      "title": "101-skills/skills",
+      "url": "https://github.com/101-skills/skills"
+    },
     "https://github.com/199-biotechnologies/claude-deep-research-skill": {
       "added_manually": true,
       "category": "general_skill",
@@ -4763,6 +4793,47 @@
       "title": "doccker/cc-use-exp",
       "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills"
     },
+    "https://github.com/dontbesilent2025/dbskill/tree/main/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Коллекция из 29 skills для Claude Code, охватывающая контент, принятие решений, диагностику, отчётность и workflow-паттерны. Проект на GitHub верифицирован и зафиксировал 24 577 реальных установок через реестр skills.sh.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-21",
+      "metric": "Корректно ли Claude Code использует инструкции из SKILL.md при вызове по имени skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "dontbesilent2025/dbskill",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 9,
+        "utility": 7
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "dbs-action",
+        "dbs-content",
+        "dbs-decision",
+        "dbs-diagnosis",
+        "dbs-hook",
+        "dbs-knowledge",
+        "dbs-report",
+        "dbs-resonate",
+        "dbs-script-flow",
+        "dbs-xhs-title",
+        "dbs-wechat-html",
+        "dbs"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/dontbesilent2025/dbskill && cd dbskill",
+        "Скопировать папку skills/dbs-content (или любой нужный skill) в .claude/skills/ своего проекта",
+        "Открыть Claude Code в проекте и вызвать: /dbs-content — проверить что skill подхватился и даёт инструкции по созданию контента"
+      ],
+      "title": "dontbesilent2025/dbskill",
+      "url": "https://github.com/dontbesilent2025/dbskill/tree/main/skills"
+    },
     "https://github.com/doodledood/manifest-dev/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -6250,6 +6321,47 @@
       ],
       "title": "iOfficeAI/AionUi",
       "url": "https://github.com/iOfficeAI/AionUi/tree/main/.claude/skills"
+    },
+    "https://github.com/iOfficeAI/OfficeCLI/tree/main/skills": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Коллекция skills для работы с Office-документами через Claude Code: генерация PPTX, DOCX, XLSX, финансовые модели, pitch deck и data dashboard. Репозиторий имеет корневой SKILL.md и набор специализированных skills.",
+      "final_score": 7.2,
+      "first_recommended": "2026-07-21",
+      "metric": "Корректность сгенерированного PPTX; соответствие инструкциям SKILL.md",
+      "promoted_from_watch": false,
+      "repo_full_name": "iOfficeAI/OfficeCLI",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 12,
+      "skills_in_repo": [
+        "OfficeCLI",
+        "morph-ppt-3d",
+        "morph-ppt",
+        "officecli-academic-paper",
+        "officecli-data-dashboard",
+        "officecli-docx",
+        "officecli-financial-model",
+        "officecli-pitch-deck",
+        "officecli-pptx",
+        "officecli-word-form",
+        "officecli-xlsx",
+        "officecli"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/iOfficeAI/OfficeCLI && cp -r OfficeCLI/skills/officecli-pptx .claude/skills/",
+        "Открыть Claude Code в проекте с нужным контентом",
+        "Вызвать /officecli-pptx с запросом: 'создай презентацию из этого markdown-контента на 10 слайдов'"
+      ],
+      "title": "iOfficeAI/OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI/tree/main/skills"
     },
     "https://github.com/imbue-ai/mngr/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -8396,6 +8508,38 @@
       ],
       "title": "photostructure/exiftool-vendored.js",
       "url": "https://github.com/photostructure/exiftool-vendored.js/tree/main/.claude/skills"
+    },
+    "https://github.com/pilioai/skills": {
+      "category": "photo_skill",
+      "confidence": "high",
+      "description": "Три skill для работы с изображениями через Claude Code: генерация с GPT Image 2, удаление водяных знаков и апскейлинг. Набрал 34 705 установок в реестре skills.sh.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-21",
+      "metric": "Качество сгенерированного изображения; работает ли remove-image-watermark на тестовом файле",
+      "promoted_from_watch": false,
+      "repo_full_name": "pilioai/skills",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 6,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 3,
+      "skills_in_repo": [
+        "gpt-image-2",
+        "remove-image-watermark",
+        "upscale-image"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить через skills.sh: skills install pilioai/skills",
+        "Убедиться что skills появились в .claude/skills/ (gpt-image-2, remove-image-watermark, upscale-image)",
+        "Вызвать /gpt-image-2 с промптом: 'сгенерируй рекламный баннер 1200x628 для SaaS-продукта'"
+      ],
+      "title": "pilioai/skills",
+      "url": "https://github.com/pilioai/skills"
     },
     "https://github.com/pr-pm/prpm/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -10717,6 +10861,50 @@
       ],
       "title": "zeuikli/claude-code-workspace",
       "url": "https://github.com/zeuikli/claude-code-workspace/tree/main/.claude/skills"
+    },
+    "https://github.com/zubair-trabzada/geo-seo-claude/tree/main/skills": {
+      "category": "marketing_skill",
+      "confidence": "high",
+      "description": "Набор из 16 skills для GEO (Generative Engine Optimization) и SEO-аудита сайтов в Claude Code. Охватывает весь цикл: от технического аудита до генерации отчётов и оптимизации для LLM-поисковиков.",
+      "final_score": 7.4,
+      "first_recommended": "2026-07-21",
+      "metric": "Полнота и точность GEO-аудита по сравнению с ручным анализом; время на создание отчёта",
+      "promoted_from_watch": false,
+      "repo_full_name": "zubair-trabzada/geo-seo-claude",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "geo-audit",
+        "geo-brand-mentions",
+        "geo-citability",
+        "geo-compare",
+        "geo-content",
+        "geo-crawlers",
+        "geo-llmstxt",
+        "geo-platform-optimizer",
+        "geo-proposal",
+        "geo-prospect",
+        "geo-report-pdf",
+        "geo-report",
+        "geo-schema",
+        "geo-technical",
+        "geo-update"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/zubair-trabzada/geo-seo-claude && cp -r geo-seo-claude/skills/geo-audit .claude/skills/",
+        "Открыть проект с вашим сайтом в Claude Code",
+        "Вызвать /geo-audit и указать URL сайта; затем /geo-report для генерации отчёта"
+      ],
+      "title": "zubair-trabzada/geo-seo-claude",
+      "url": "https://github.com/zubair-trabzada/geo-seo-claude/tree/main/skills"
     },
     "https://github.com/zubayer0077/Claude-Multi-Agent-Research-System-Skill/tree/main/.claude/skills": {
       "category": "general_skill",

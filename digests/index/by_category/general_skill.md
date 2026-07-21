@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_skill
 
-Total: 65
+Total: 66
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-21 | [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main/skills) | dbs-action, dbs-content, dbs-decision, +9 more |  | 7.5 | high | git clone https://github.com/dontbesilent2025/dbskill && cd dbskill |
 | 2026-07-20 | [github/awesome-copilot](https://github.com/github/awesome-copilot) | playwright-explore-website, playwright-automation-fill-in-form, web-design-reviewer, +3 more |  | 6.9 | high | Открыть https://github.com/github/awesome-copilot и найти папку skills/ |
 | 2026-07-20 | [claude-office-skills/skills](https://github.com/claude-office-skills/skills) | excel-automation, asana automation, airtable-automation, +7 more |  | 6.6 | high | Открыть https://github.com/claude-office-skills/skills и найти нужный skill |
 | 2026-07-19 | [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | abusing-dpapi-for-credential-access, analyzing-memory-dumps-with-volatility, analyzing-malware-behavior-with-cuckoo-sandbox, +2 more |  | 8.4 | high | Клонировать репо: `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills` |
