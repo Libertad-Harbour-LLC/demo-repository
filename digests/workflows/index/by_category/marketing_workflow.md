@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_workflow
 
-Total: 28
+Total: 29
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-21 | [dabiH2/Automazioni-n8n: 01-lead-gen-form-crm](https://github.com/dabiH2/Automazioni-n8n/blob/main/01-lead-gen-form-crm.json) | 01-lead-gen-form-crm |  | 5.9 | medium | Скачать 01-lead-gen-form-crm.json |
 | 2026-07-19 | [Mohil-Wankar/CampaignPilot: CampaignPilot - GTM Decision Engine](https://github.com/Mohil-Wankar/CampaignPilot/blob/main/n8n/CampaignPilot - GTM Decision Engine.json) | CampaignPilot - GTM Decision Engine |  | 6.7 | medium | Скачать JSON из n8n/CampaignPilot - GTM Decision Engine.json |
 | 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 04-dr-threshold-alert](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/04-dr-threshold-alert.json) | 04-dr-threshold-alert |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |
 | 2026-07-16 | [mukul-ppp/bla-backlink-automation-template: 03-weekly-backlink-report](https://github.com/mukul-ppp/bla-backlink-automation-template/blob/main/workflows/03-weekly-backlink-report.json) | 03-weekly-backlink-report |  | 7.1 | medium | Скачать JSON: 01-backlink-health-checker.json из репо |

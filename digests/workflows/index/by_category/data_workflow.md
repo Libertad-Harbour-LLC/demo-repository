@@ -1,9 +1,11 @@
 # Recommended Claude Skills — data_workflow
 
-Total: 70
+Total: 72
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-21 | [Yassine-Najmi/n8n-ocr-mistral-pipeline: ocr_mistral_workflow](https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_mistral_workflow.json) | ocr_mistral_workflow |  | 6.2 | medium | Скачать ocr_mistral_workflow.json и ocr_error_handler_workflow.json |
+| 2026-07-21 | [Yassine-Najmi/n8n-ocr-mistral-pipeline: ocr_error_handler_workflow](https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_error_handler_workflow.json) | ocr_error_handler_workflow |  | 6.2 | medium | Скачать ocr_mistral_workflow.json и ocr_error_handler_workflow.json |
 | 2026-07-18 | [930m310n/n8n-nodes-geomelon: nearest-cities-by-coordinates](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/nearest-cities-by-coordinates.json) | nearest-cities-by-coordinates |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
 | 2026-07-18 | [930m310n/n8n-nodes-geomelon: free-city-autocomplete-webhook](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/free-city-autocomplete-webhook.json) | free-city-autocomplete-webhook |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |
 | 2026-07-18 | [930m310n/n8n-nodes-geomelon: ai-agent-city-lookup](https://github.com/930m310n/n8n-nodes-geomelon/blob/main/workflows/ai-agent-city-lookup.json) | ai-agent-city-lookup |  | 6.0 | medium | Установить npm-пакет n8n-nodes-geomelon в n8n (community node) |

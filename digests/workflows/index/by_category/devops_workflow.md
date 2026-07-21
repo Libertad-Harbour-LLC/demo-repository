@@ -1,9 +1,11 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 51
+Total: 53
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-21 | [omarbabba779xx/wazuh-n8n-soc-pipeline: wazuh-alert-processing.workflow](https://github.com/omarbabba779xx/wazuh-n8n-soc-pipeline/blob/master/n8n/wazuh-alert-processing.workflow.json) | wazuh-alert-processing.workflow |  | 6.6 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-21 | [ashwanth-saran/wazuh-network-threat-intelligence-playbook: network-threat-intelligence](https://github.com/ashwanth-saran/wazuh-network-threat-intelligence-playbook/blob/main/n8n/network-threat-intelligence.json) | network-threat-intelligence |  | 6.3 | medium | Скачать network-threat-intelligence.json |
 | 2026-07-19 | [DanielMadsenDK/servicenow-helper: workflow-template](https://github.com/DanielMadsenDK/servicenow-helper/blob/main/n8n/init/workflow-template.json) | workflow-template |  | 6.0 | medium | Скачать workflow-template.json |
 | 2026-07-09 | [IT-Nomad-Lab/nomad: self-dev-scheduler.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/n8n/self-dev-scheduler.workflow.json) | self-dev-scheduler.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |
 | 2026-07-09 | [IT-Nomad-Lab/nomad: n8n-v2-send.workflow](https://github.com/IT-Nomad-Lab/nomad/blob/main/v2/n8n-v2-send.workflow.json) | n8n-v2-send.workflow |  | 6.3 | medium | Скачать approval-gate-v2.workflow.json |

@@ -1,9 +1,16 @@
 # Recommended — tool: n8n
 
-Total: 413
+Total: 420
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-21 | [weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
+| 2026-07-21 | [thebitanpaul/TheAcepirant: Shorts_Automation_OpenSourceVersion](https://github.com/thebitanpaul/TheAcepirant/blob/main/Shorts_Automation_OpenSourceVersion.json) | Shorts_Automation_OpenSourceVersion |  | 6.1 | medium | Скачать Shorts_Automation_OpenSourceVersion.json |
+| 2026-07-21 | [omarbabba779xx/wazuh-n8n-soc-pipeline: wazuh-alert-processing.workflow](https://github.com/omarbabba779xx/wazuh-n8n-soc-pipeline/blob/master/n8n/wazuh-alert-processing.workflow.json) | wazuh-alert-processing.workflow |  | 6.6 | medium | Скачать JSON по ссылке json_url |
+| 2026-07-21 | [dabiH2/Automazioni-n8n: 01-lead-gen-form-crm](https://github.com/dabiH2/Automazioni-n8n/blob/main/01-lead-gen-form-crm.json) | 01-lead-gen-form-crm |  | 5.9 | medium | Скачать 01-lead-gen-form-crm.json |
+| 2026-07-21 | [ashwanth-saran/wazuh-network-threat-intelligence-playbook: network-threat-intelligence](https://github.com/ashwanth-saran/wazuh-network-threat-intelligence-playbook/blob/main/n8n/network-threat-intelligence.json) | network-threat-intelligence |  | 6.3 | medium | Скачать network-threat-intelligence.json |
+| 2026-07-21 | [Yassine-Najmi/n8n-ocr-mistral-pipeline: ocr_mistral_workflow](https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_mistral_workflow.json) | ocr_mistral_workflow |  | 6.2 | medium | Скачать ocr_mistral_workflow.json и ocr_error_handler_workflow.json |
+| 2026-07-21 | [Yassine-Najmi/n8n-ocr-mistral-pipeline: ocr_error_handler_workflow](https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_error_handler_workflow.json) | ocr_error_handler_workflow |  | 6.2 | medium | Скачать ocr_mistral_workflow.json и ocr_error_handler_workflow.json |
 | 2026-07-19 | [hamzaasad5/AI-Email-Assistant: AI Email Assistant (Production Ready)](https://github.com/hamzaasad5/AI-Email-Assistant/blob/main/workflows/AI Email Assistant (Production Ready).json) | AI Email Assistant (Production Ready) |  | 6.1 | medium | Скачать JSON из /workflows/ |
 | 2026-07-19 | [avuzmal/n8n.automation: 03_05_weather_risk_supply_chain_mitigation](https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_05_weather_risk_supply_chain_mitigation.json) | 03_05_weather_risk_supply_chain_mitigation |  | 7.3 | medium | Открыть репо и скачать нужный JSON из папки workflows/ |
 | 2026-07-19 | [avuzmal/n8n.automation: 03_04_zero_touch_customs_documentation](https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_04_zero_touch_customs_documentation.json) | 03_04_zero_touch_customs_documentation |  | 7.3 | medium | Открыть репо и скачать нужный JSON из папки workflows/ |

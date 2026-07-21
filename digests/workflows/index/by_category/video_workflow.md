@@ -1,9 +1,10 @@
 # Recommended Claude Skills — video_workflow
 
-Total: 12
+Total: 13
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-21 | [thebitanpaul/TheAcepirant: Shorts_Automation_OpenSourceVersion](https://github.com/thebitanpaul/TheAcepirant/blob/main/Shorts_Automation_OpenSourceVersion.json) | Shorts_Automation_OpenSourceVersion |  | 6.1 | medium | Скачать Shorts_Automation_OpenSourceVersion.json |
 | 2026-07-09 | [iamadoctorforreal/Video-Generator-Workflow: n8n_workflow](https://github.com/iamadoctorforreal/Video-Generator-Workflow/blob/main/n8n_workflow.json) | n8n_workflow |  | 6.6 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-09 | [ahmed-ali-codes/n8n-ai-youtube-shorts-automation: ai-shorts-automation-pro](https://github.com/ahmed-ali-codes/n8n-ai-youtube-shorts-automation/blob/main/ai-shorts-automation-pro.json) | ai-shorts-automation-pro |  | 6.1 | medium | Скачать ai-shorts-automation-pro.json |
 | 2026-07-06 | [kker4m/pov-videos-n8n-workflow: template](https://github.com/kker4m/pov-videos-n8n-workflow/blob/main/template.json) | template |  | 7.0 | medium | Скачать JSON: https://raw.githubusercontent.com/kker4m/pov-videos-n8n-workflow/main/template.json |

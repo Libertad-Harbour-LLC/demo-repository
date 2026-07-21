@@ -3047,6 +3047,89 @@
       "trigger_type": "webhook",
       "url": "https://github.com/Wilsonoonn/n8n_nl2sql/blob/main/nl2sql_2.0.json"
     },
+    "https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_error_handler_workflow.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "n8n-пайплайн для OCR документов с использованием Mistral AI, включающий основной workflow и обработчик ошибок. Полезен для команд, которым нужно автоматически извлекать текст из сканов и документов.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-21",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Количество документов, обработанных OCR автоматически без ошибок за тест",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Yassine-Najmi/n8n-ocr-mistral-pipeline",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ocr_error_handler_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ocr_mistral_workflow.json и ocr_error_handler_workflow.json",
+        "Импортировать оба в n8n",
+        "Настроить Mistral API credentials в n8n",
+        "Подать тестовый документ (PDF/PNG) в workflow",
+        "Проверить результат OCR в выходных данных узла"
+      ],
+      "title": "Yassine-Najmi/n8n-ocr-mistral-pipeline: ocr_error_handler_workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_error_handler_workflow.json"
+    },
+    "https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_mistral_workflow.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-пайплайн для OCR документов с использованием Mistral AI, включающий основной workflow и обработчик ошибок. Полезен для команд, которым нужно автоматически извлекать текст из сканов и документов.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-21",
+      "integrations": [
+        "Google Gemini",
+        "Postgres",
+        "Execution Data",
+        "Gmail",
+        "Google Sheets",
+        "Telegram"
+      ],
+      "metric": "Количество документов, обработанных OCR автоматически без ошибок за тест",
+      "node_count": 24,
+      "promoted_from_watch": false,
+      "repo_full_name": "Yassine-Najmi/n8n-ocr-mistral-pipeline",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ocr_mistral_workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать ocr_mistral_workflow.json и ocr_error_handler_workflow.json",
+        "Импортировать оба в n8n",
+        "Настроить Mistral API credentials в n8n",
+        "Подать тестовый документ (PDF/PNG) в workflow",
+        "Проверить результат OCR в выходных данных узла"
+      ],
+      "title": "Yassine-Najmi/n8n-ocr-mistral-pipeline: ocr_mistral_workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Yassine-Najmi/n8n-ocr-mistral-pipeline/blob/main/workflows/ocr_mistral_workflow.json"
+    },
     "https://github.com/abbasZaidi110/n8n-Parse-Invoices-Documents-with-Gemini-AI-OCR-and-Google-Sheets-Integration": {
       "category": "data_workflow",
       "complexity": "medium",
@@ -4595,6 +4678,45 @@
       "tool": "n8n",
       "trigger_type": "schedule",
       "url": "https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json"
+    },
+    "https://github.com/ashwanth-saran/wazuh-network-threat-intelligence-playbook/blob/main/n8n/network-threat-intelligence.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-playbook для автоматизации сетевого threat intelligence на основе данных из Wazuh. Подходит для SOC-аналитиков и DevSecOps-инженеров, которым нужно обогащать сетевые алерты данными TI-фидов.",
+      "final_score": 6.3,
+      "first_recommended": "2026-07-21",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Доля сетевых алертов, обогащённых TI-данными автоматически",
+      "node_count": 11,
+      "promoted_from_watch": false,
+      "repo_full_name": "ashwanth-saran/wazuh-network-threat-intelligence-playbook",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "network-threat-intelligence"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать network-threat-intelligence.json",
+        "Импортировать в n8n через Import from File",
+        "Настроить Wazuh webhook как источник алертов",
+        "Подключить TI-сервис (VirusTotal, AbuseIPDB или аналог) через credentials",
+        "Запустить тест с sample-алертом"
+      ],
+      "title": "ashwanth-saran/wazuh-network-threat-intelligence-playbook: network-threat-intelligence",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/ashwanth-saran/wazuh-network-threat-intelligence-playbook/blob/main/n8n/network-threat-intelligence.json"
     },
     "https://github.com/avuzmal/n8n.automation/blob/main/workflows/01_01_multi_currency_revenue_recognition_reporting.json": {
       "category": "general_workflow",
@@ -6789,6 +6911,46 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/codezer0x/GoogleMapAIagent/blob/main/Gooogle map lead ai agent.json"
+    },
+    "https://github.com/dabiH2/Automazioni-n8n/blob/main/01-lead-gen-form-crm.json": {
+      "category": "marketing_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для захвата лидов из формы и автоматической передачи их в CRM. Подходит для маркетологов и команд лидогенерации, которые хотят убрать ручной ввод данных между формой и CRM.",
+      "final_score": 5.9,
+      "first_recommended": "2026-07-21",
+      "integrations": [
+        "Google Sheets",
+        "Telegram"
+      ],
+      "metric": "Процент лидов из формы, автоматически попавших в CRM без ручного вмешательства",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "dabiH2/Automazioni-n8n",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "01-lead-gen-form-crm"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать 01-lead-gen-form-crm.json",
+        "Импортировать в n8n через Import from File",
+        "Проверить тип триггера (Webhook) и скопировать Webhook URL",
+        "Настроить CRM credentials (тип CRM уточнить в node-графе)",
+        "Отправить тестовый POST-запрос на webhook и проверить создание лида в CRM"
+      ],
+      "title": "dabiH2/Automazioni-n8n: 01-lead-gen-form-crm",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/dabiH2/Automazioni-n8n/blob/main/01-lead-gen-form-crm.json"
     },
     "https://github.com/daemon-Ad/Job-Aggregation-and-Email-Intelligence-System/blob/main/workflows/job.1_email_ingestion_pipeline.json": {
       "category": "general_workflow",
@@ -9998,6 +10160,45 @@
       "trigger_type": "webhook",
       "url": "https://github.com/nuel-omole/n8n-ai-quoting-agent/blob/master/workflow.json"
     },
+    "https://github.com/omarbabba779xx/wazuh-n8n-soc-pipeline/blob/master/n8n/wazuh-alert-processing.workflow.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для обработки алертов из Wazuh SIEM в рамках SOC-пайплайна. Предназначен для команд безопасности, которым нужна автоматическая маршрутизация и обогащение инцидентов без ручного триажа.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-21",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Количество алертов, автоматически обработанных без ручного вмешательства за смену",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "omarbabba779xx/wazuh-n8n-soc-pipeline",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "wazuh-alert-processing.workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON по ссылке json_url",
+        "Открыть n8n → Import from File → выбрать wazuh-alert-processing.workflow.json",
+        "Настроить Wazuh webhook credentials (URL + API-ключ) в узле-триггере",
+        "Указать downstream destination (Slack/Jira/email) в соответствующих узлах",
+        "Запустить тестовый прогон с mock-алертом из Wazuh"
+      ],
+      "title": "omarbabba779xx/wazuh-n8n-soc-pipeline: wazuh-alert-processing.workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/omarbabba779xx/wazuh-n8n-soc-pipeline/blob/master/n8n/wazuh-alert-processing.workflow.json"
+    },
     "https://github.com/oxbshw/Open-Workflow-Library": {
       "category": "content_workflow",
       "complexity": "simple",
@@ -13184,6 +13385,49 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/theaiautomators/insights-lm-public"
+    },
+    "https://github.com/thebitanpaul/TheAcepirant/blob/main/Shorts_Automation_OpenSourceVersion.json": {
+      "category": "video_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Открытый n8n-workflow для автоматизации создания и публикации YouTube Shorts. Подходит для контент-мейкеров и агентств, которые хотят поставить производство коротких видео на поток.",
+      "final_score": 6.1,
+      "first_recommended": "2026-07-21",
+      "integrations": [
+        "Mcp Client Tool",
+        "YouTube",
+        "Google Gemini",
+        "Facebook",
+        "GitHub"
+      ],
+      "metric": "Количество Shorts, опубликованных автоматически за неделю",
+      "node_count": 29,
+      "promoted_from_watch": false,
+      "repo_full_name": "thebitanpaul/TheAcepirant",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Shorts_Automation_OpenSourceVersion"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать Shorts_Automation_OpenSourceVersion.json",
+        "Импортировать в n8n через Import from File",
+        "Подключить YouTube credentials (OAuth2) в n8n",
+        "Настроить источник контента (текст/изображения/видеофрагменты)",
+        "Запустить тестовый прогон с одним Shorts-роликом"
+      ],
+      "title": "thebitanpaul/TheAcepirant: Shorts_Automation_OpenSourceVersion",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/thebitanpaul/TheAcepirant/blob/main/Shorts_Automation_OpenSourceVersion.json"
     },
     "https://github.com/thecloudstation/n8n-workflows": {
       "category": "marketing_workflow",
@@ -16592,6 +16836,47 @@
       "title": "weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks"
+    },
+    "https://github.com/weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail/blob/main/workflow-template.json": {
+      "category": "sales_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n-workflow для автоматической оценки здоровья клиента и риска оттока на основе данных Salesforce с использованием Google Gemini AI и отправкой результатов через Gmail. Предназначен для Customer Success и Sales-команд на Salesforce.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-21",
+      "integrations": [
+        "Salesforce",
+        "Gmail",
+        "Google Gemini"
+      ],
+      "metric": "Количество клиентов, получивших churn-score автоматически за прогон",
+      "node_count": 32,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 3,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n через Import from File",
+        "Настроить Salesforce credentials (OAuth2) в n8n",
+        "Добавить Google Gemini API key в credentials",
+        "Настроить Gmail credentials и запустить тест на 1-2 тестовых клиентах"
+      ],
+      "title": "weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Screen-resumes-with-GPT-4-Turbo-from-Gmail-and-send-shortlisted-to-Slack/blob/main/workflow-template.json": {
       "category": "general_workflow",

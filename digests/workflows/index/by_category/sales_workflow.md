@@ -1,9 +1,10 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 54
+Total: 55
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-21 | [weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
 | 2026-07-19 | [MusaIslamFahad/n8n-free-lead-outreach-pipeline: lead-gen-outreach-reply-digest](https://github.com/MusaIslamFahad/n8n-free-lead-outreach-pipeline/blob/main/workflows/lead-gen-outreach-reply-digest.json) | lead-gen-outreach-reply-digest |  | 6.8 | medium | Скачать lead-gen-outreach-reply-digest.json |
 | 2026-07-19 | [Deekshak11/automation-systems: hubspot-enrich-outreach](https://github.com/Deekshak11/automation-systems/blob/main/workflows/hubspot-enrich-outreach.json) | hubspot-enrich-outreach |  | 6.9 | medium | Скачать ai-lead-research-engine.json из /workflows/ |
 | 2026-07-19 | [Deekshak11/automation-systems: ai-lead-research-engine](https://github.com/Deekshak11/automation-systems/blob/main/workflows/ai-lead-research-engine.json) | ai-lead-research-engine |  | 6.9 | medium | Скачать ai-lead-research-engine.json из /workflows/ |
