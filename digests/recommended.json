@@ -1342,6 +1342,45 @@
       "title": "JetBrains/ideavim",
       "url": "https://github.com/JetBrains/ideavim/tree/master/.claude/skills"
     },
+    "https://github.com/JimLiu/baoyu-skills": {
+      "category": "content_skill",
+      "confidence": "high",
+      "description": "Коллекция из 22 skills для мультиплатформенного создания и распространения контента: генерация иллюстраций к статьям, создание инфографики, кросс-постинг на X, WeChat, Weibo, перевод, конвертация URL в Markdown.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-22",
+      "metric": "Claude возвращает чистый Markdown с правильной структурой из URL",
+      "promoted_from_watch": false,
+      "repo_full_name": "JimLiu/baoyu-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "baoyu-article-illustrator",
+        "baoyu-image-gen",
+        "baoyu-comic",
+        "baoyu-infographic",
+        "baoyu-post-to-x",
+        "baoyu-post-to-wechat",
+        "baoyu-post-to-weibo",
+        "baoyu-translate",
+        "baoyu-url-to-markdown",
+        "baoyu-slide-deck"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/JimLiu/baoyu-skills",
+        "Скопировать skills/baoyu-url-to-markdown в .claude/skills/ проекта",
+        "В Claude Code: 'Use baoyu-url-to-markdown skill to convert this URL to clean Markdown: [url]'"
+      ],
+      "title": "JimLiu/baoyu-skills",
+      "url": "https://github.com/JimLiu/baoyu-skills"
+    },
     "https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -4793,6 +4832,49 @@
       "title": "doccker/cc-use-exp",
       "url": "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills"
     },
+    "https://github.com/dontbesilent2025/dbskill": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Коллекция из 29 skills для Claude Code на русскоязычную и китайскую аудиторию: управление контентом, целеполагание, диагностика, продуктивность. Верифицированный репо с наибольшим числом реальных установок среди репо с подтверждённой структурой.",
+      "final_score": 8.2,
+      "first_recommended": "2026-07-22",
+      "metric": "Генерирует ли Claude структурированный сценарий согласно инструкциям SKILL.md без дополнительных промптов",
+      "promoted_from_watch": false,
+      "repo_full_name": "dontbesilent2025/dbskill",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 14,
+      "skills_in_repo": [
+        "dbs-action",
+        "dbs-agent-migration",
+        "dbs-ai-check",
+        "dbs-content",
+        "dbs-decision",
+        "dbs-goal",
+        "dbs-hook",
+        "dbs-knowledge",
+        "dbs-report",
+        "dbs-resonate",
+        "dbs-script-flow",
+        "dbs-wechat-html",
+        "dbs-xhs-title",
+        "dbs"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/dontbesilent2025/dbskill",
+        "Скопировать папку skills/dbs-script-flow (или любой нужный skill) в .claude/skills/ своего проекта",
+        "Запустить Claude Code в проекте и набрать: 'Use the dbs-script-flow skill to create a content script for [тема]'"
+      ],
+      "title": "dontbesilent2025/dbskill",
+      "url": "https://github.com/dontbesilent2025/dbskill"
+    },
     "https://github.com/dontbesilent2025/dbskill/tree/main/skills": {
       "category": "general_skill",
       "confidence": "high",
@@ -6634,6 +6716,36 @@
       "title": "kv0906/pm-kit",
       "url": "https://github.com/kv0906/pm-kit/tree/main/.claude/skills"
     },
+    "https://github.com/larksuite/cli": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Skill для интеграции Claude с Lark (Feishu) — корпоративным мессенджером ByteDance. Лидер по установкам в реестре skills.sh с 265k installs.",
+      "final_score": 8.1,
+      "first_recommended": "2026-07-22",
+      "metric": "Успешно ли Claude взаимодействует с Lark API через skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "larksuite/cli",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 5,
+        "traction": 10,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "lark-vc-agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить через Claude Code: /skills install larksuite/cli (или найти SKILL.md в репо)",
+        "Настроить Lark API credentials в конфиге проекта",
+        "Попросить Claude: 'Use lark-vc-agent to summarize my last Lark meeting'"
+      ],
+      "title": "larksuite/cli",
+      "url": "https://github.com/larksuite/cli"
+    },
     "https://github.com/leonxlnx/taste-skill": {
       "category": "design_skill",
       "confidence": "high",
@@ -7569,6 +7681,45 @@
       "title": "mylee04/code-notify",
       "url": "https://github.com/mylee04/code-notify/tree/main/.claude/skills"
     },
+    "https://github.com/nanocoai/nanoclaw": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Наиболее полная коллекция skills для наращивания возможностей Claude: 50 skills для подключения мессенджеров (Slack, Telegram, Discord, WhatsApp, Signal), сервисов (GitHub, Linear, Vercel) и инструментов разработчика. Используется как платформа для расширения Claude.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-22",
+      "metric": "Claude предлагает пошаговую настройку Slack integration согласно SKILL.md",
+      "promoted_from_watch": false,
+      "repo_full_name": "nanocoai/nanoclaw",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "add-slack",
+        "add-telegram",
+        "add-discord",
+        "add-github",
+        "add-gmail-tool",
+        "add-gcal-tool",
+        "add-linear",
+        "setup",
+        "migrate-from-openclaw",
+        "update-nanoclaw"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/nanocoai/nanoclaw",
+        "Скопировать .claude/skills/add-slack в .claude/skills/ своего проекта",
+        "Запустить Claude Code и написать: 'Use add-slack skill to configure Slack integration'"
+      ],
+      "title": "nanocoai/nanoclaw",
+      "url": "https://github.com/nanocoai/nanoclaw"
+    },
     "https://github.com/nanocoai/nanoclaw/tree/main/.claude/skills": {
       "category": "general_skill",
       "confidence": "high",
@@ -8061,6 +8212,46 @@
       ],
       "title": "omnigent-ai/omnigent",
       "url": "https://github.com/omnigent-ai/omnigent/tree/main/.claude/skills"
+    },
+    "https://github.com/openclaw/gogcli": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Коллекция из 31 skill для работы с Google Workspace через Claude: Gmail, Calendar, Drive, Docs, Sheets, Slides, Meet и другие сервисы. Предназначена для автоматизации ежедневных задач в Google-экосистеме.",
+      "final_score": 7.4,
+      "first_recommended": "2026-07-22",
+      "metric": "Claude корректно вызывает Google API и возвращает организованный список писем",
+      "promoted_from_watch": false,
+      "repo_full_name": "openclaw/gogcli",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 11,
+      "skills_in_repo": [
+        "gog-gmail",
+        "gog-calendar",
+        "gog-drive",
+        "gog-docs",
+        "gog-sheets",
+        "gog-slides",
+        "gog-meet",
+        "gog-inbox-triage",
+        "gog-weekly-digest",
+        "gog-youtube",
+        "gog-analytics"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/openclaw/gogcli",
+        "Скопировать .agents/skills/gog-inbox-triage в .claude/skills/ проекта",
+        "Запустить Claude Code: 'Use gog-inbox-triage to organize my Gmail inbox by priority'"
+      ],
+      "title": "openclaw/gogcli",
+      "url": "https://github.com/openclaw/gogcli"
     },
     "https://github.com/opencue/cuecards/tree/main/.claude/skills": {
       "category": "general_skill",

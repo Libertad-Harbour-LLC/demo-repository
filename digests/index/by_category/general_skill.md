@@ -1,9 +1,13 @@
 # Recommended Claude Skills — general_skill
 
-Total: 66
+Total: 70
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-22 | [openclaw/gogcli](https://github.com/openclaw/gogcli) | gog-gmail, gog-calendar, gog-drive, +8 more |  | 7.4 | high | git clone https://github.com/openclaw/gogcli |
+| 2026-07-22 | [nanocoai/nanoclaw](https://github.com/nanocoai/nanoclaw) | add-slack, add-telegram, add-discord, +7 more |  | 7.5 | high | git clone https://github.com/nanocoai/nanoclaw |
+| 2026-07-22 | [larksuite/cli](https://github.com/larksuite/cli) | lark-vc-agent |  | 8.1 | high | Установить через Claude Code: /skills install larksuite/cli (или найти SKILL.md в репо) |
+| 2026-07-22 | [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill) | dbs-action, dbs-agent-migration, dbs-ai-check, +11 more |  | 8.2 | high | git clone https://github.com/dontbesilent2025/dbskill |
 | 2026-07-21 | [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main/skills) | dbs-action, dbs-content, dbs-decision, +9 more |  | 7.5 | high | git clone https://github.com/dontbesilent2025/dbskill && cd dbskill |
 | 2026-07-20 | [github/awesome-copilot](https://github.com/github/awesome-copilot) | playwright-explore-website, playwright-automation-fill-in-form, web-design-reviewer, +3 more |  | 6.9 | high | Открыть https://github.com/github/awesome-copilot и найти папку skills/ |
 | 2026-07-20 | [claude-office-skills/skills](https://github.com/claude-office-skills/skills) | excel-automation, asana automation, airtable-automation, +7 more |  | 6.6 | high | Открыть https://github.com/claude-office-skills/skills и найти нужный skill |
