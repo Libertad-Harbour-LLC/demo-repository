@@ -1,9 +1,10 @@
 # Recommended Claude Skills — agents_oss
 
-Total: 14
+Total: 15
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-22 | [zylon-ai/private-gpt](https://github.com/zylon-ai/private-gpt) |  | 57357 | 7.7 | high | git clone https://github.com/zylon-ai/private-gpt |
 | 2026-07-19 | [lobehub/lobehub](https://github.com/lobehub/lobehub) |  | 80509 | 7.3 | high | git clone https://github.com/lobehub/lobehub && docker-compose up -d |
 | 2026-07-10 | [mem0ai/mem0](https://github.com/mem0ai/mem0) |  | 60544 | 6.8 | high | pip install mem0ai |
 | 2026-07-07 | [zhayujie/CowAgent](https://github.com/zhayujie/CowAgent) |  | 45843 | 6.7 | high | pip install cowagent (или git clone + pip install -r requirements.txt) |

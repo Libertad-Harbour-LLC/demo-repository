@@ -1,11 +1,15 @@
 # Recommended Claude Skills — all time
 
-Total: 44
+Total: 48
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-22 | [zylon-ai/private-gpt](https://github.com/zylon-ai/private-gpt) |  | 57357 | 7.7 | high | git clone https://github.com/zylon-ai/private-gpt |
+| 2026-07-22 | [supabase/supabase](https://github.com/supabase/supabase) |  | 106774 | 8.5 | high | git clone https://github.com/supabase/supabase && cd docker |
+| 2026-07-22 | [ollama/ollama](https://github.com/ollama/ollama) |  | 176623 | 8.7 | high | curl -fsSL https://ollama.com/install.sh \| sh |
+| 2026-07-22 | [browser-use/browser-use](https://github.com/browser-use/browser-use) |  | 106052 | 7.0 | high | pip install browser-use playwright |
 | 2026-07-19 | [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai) |  | 73264 | 7.2 | high | pip install crawl4ai && crawl4ai-setup |
 | 2026-07-19 | [odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus) |  | 83232 | 8.0 | high | Склонировать: git clone https://github.com/odysseus-dev/odysseus |
 | 2026-07-19 | [lobehub/lobehub](https://github.com/lobehub/lobehub) |  | 80509 | 7.3 | high | git clone https://github.com/lobehub/lobehub && docker-compose up -d |

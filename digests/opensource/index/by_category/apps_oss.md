@@ -1,9 +1,10 @@
 # Recommended Claude Skills — apps_oss
 
-Total: 11
+Total: 12
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-22 | [ollama/ollama](https://github.com/ollama/ollama) |  | 176623 | 8.7 | high | curl -fsSL https://ollama.com/install.sh \| sh |
 | 2026-07-19 | [odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus) |  | 83232 | 8.0 | high | Склонировать: git clone https://github.com/odysseus-dev/odysseus |
 | 2026-07-07 | [pewdiepie-archdaemon/odysseus](https://github.com/pewdiepie-archdaemon/odysseus) |  | 81279 | 7.9 | high | git clone https://github.com/pewdiepie-archdaemon/odysseus && cd odysseus |
 | 2026-07-04 | [immich-app/immich](https://github.com/immich-app/immich) |  | 105367 | 7.9 | high | wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml |

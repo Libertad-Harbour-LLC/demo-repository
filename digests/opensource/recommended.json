@@ -370,6 +370,35 @@
       "title": "arelove/infinity-loop",
       "url": "https://github.com/arelove/infinity-loop"
     },
+    "https://github.com/browser-use/browser-use": {
+      "category": "automation_oss",
+      "confidence": "high",
+      "description": "Browser-use — open-source библиотека для управления браузером через AI-агентов на базе Playwright, позволяющая автоматизировать любые веб-задачи. Окончила период наблюдения с +552 звёзды; используется как основа для RPA-сервисов и web-scraping агентов.",
+      "final_score": 7.0,
+      "first_recommended": "2026-07-22",
+      "metric": "Успешность выполнения 3 реальных web-задач (форма, поиск, скрейп)",
+      "promoted_from_watch": false,
+      "repo_full_name": "browser-use/browser-use",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 5,
+        "testability": 6,
+        "traction": 10,
+        "utility": 7
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 106052,
+      "test_steps": [
+        "pip install browser-use playwright",
+        "playwright install chromium",
+        "Написать 10-строчный скрипт с задачей для агента",
+        "Запустить и проверить выполнение задачи в браузере"
+      ],
+      "title": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use"
+    },
     "https://github.com/bytedance/deer-flow": {
       "category": "agents_oss",
       "confidence": "high",
@@ -938,6 +967,35 @@
       "title": "odysseus-dev/odysseus",
       "url": "https://github.com/odysseus-dev/odysseus"
     },
+    "https://github.com/ollama/ollama": {
+      "category": "apps_oss",
+      "confidence": "high",
+      "description": "Ollama — платформа для локального запуска больших языковых моделей (LLaMA, DeepSeek, Qwen, Gemma и др.) через простой CLI и REST API. Используется как self-hosted замена OpenAI API для любых приложений без передачи данных в облако.",
+      "final_score": 8.7,
+      "first_recommended": "2026-07-22",
+      "metric": "Скорость генерации токенов на локальном железе, совместимость с OpenAI API",
+      "promoted_from_watch": false,
+      "repo_full_name": "ollama/ollama",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 4,
+        "testability": 10,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 176623,
+      "test_steps": [
+        "curl -fsSL https://ollama.com/install.sh | sh",
+        "ollama pull llama3.2 (или qwen2.5)",
+        "ollama serve && curl localhost:11434/api/generate",
+        "Подключить к Flowise или Open-WebUI для полного продукта"
+      ],
+      "title": "ollama/ollama",
+      "url": "https://github.com/ollama/ollama"
+    },
     "https://github.com/open-webui/open-webui": {
       "category": "apps_oss",
       "confidence": "high",
@@ -1112,6 +1170,35 @@
       "title": "seanZhang414/openadserver",
       "url": "https://github.com/seanZhang414/openadserver"
     },
+    "https://github.com/supabase/supabase": {
+      "category": "devtools_oss",
+      "confidence": "high",
+      "description": "Supabase — self-hosted open-source платформа для разработки, предоставляющая Postgres БД, аутентификацию, realtime, хранилище файлов и edge functions; полная альтернатива Firebase. Разворачивается через Docker и служит бэкендом для любых web/mobile/AI-приложений.",
+      "final_score": 8.5,
+      "first_recommended": "2026-07-22",
+      "metric": "Время до рабочего бэкенда с auth + БД + API для тестового приложения",
+      "promoted_from_watch": false,
+      "repo_full_name": "supabase/supabase",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 1,
+        "novelty": 4,
+        "testability": 9,
+        "traction": 10,
+        "utility": 9
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 106774,
+      "test_steps": [
+        "git clone https://github.com/supabase/supabase && cd docker",
+        "cp .env.example .env && редактировать секреты",
+        "docker-compose up -d",
+        "Открыть localhost:8000 (Studio) и создать первую таблицу"
+      ],
+      "title": "supabase/supabase",
+      "url": "https://github.com/supabase/supabase"
+    },
     "https://github.com/unclecode/crawl4ai": {
       "category": "data_oss",
       "confidence": "high",
@@ -1227,6 +1314,35 @@
       ],
       "title": "zhayujie/CowAgent",
       "url": "https://github.com/zhayujie/CowAgent"
+    },
+    "https://github.com/zylon-ai/private-gpt": {
+      "category": "agents_oss",
+      "confidence": "high",
+      "description": "PrivateGPT — self-hosted API-платформа для приватных AI-приложений на локальных моделях с поддержкой RAG, MCP, tools и text-to-SQL. Полная замена OpenAI API для корпораций, которым нельзя отправлять данные в облако; легко ребрендируется как enterprise AI-решение.",
+      "final_score": 7.7,
+      "first_recommended": "2026-07-22",
+      "metric": "Точность RAG-ответов на корпоративных документах, совместимость с OpenAI API",
+      "promoted_from_watch": false,
+      "repo_full_name": "zylon-ai/private-gpt",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 4,
+        "testability": 8,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 0,
+      "skills_in_repo": [],
+      "stars": 57357,
+      "test_steps": [
+        "git clone https://github.com/zylon-ai/private-gpt",
+        "poetry install && PGPT_PROFILES=local make run",
+        "Загрузить тестовые документы через API",
+        "Проверить RAG-запросы и tool-calling через /v1/chat/completions"
+      ],
+      "title": "zylon-ai/private-gpt",
+      "url": "https://github.com/zylon-ai/private-gpt"
     }
   }
 }

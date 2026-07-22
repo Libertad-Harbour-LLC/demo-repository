@@ -1,28 +1,28 @@
 {
   "items": {
     "https://github.com/Egonex-AI/Understand-Anything": {
-      "added_date": "2026-07-19",
+      "added_date": "2026-07-22",
       "category": "agents_oss",
-      "description": "Understand-Anything — AI-платформа от Egonex-AI для анализа и понимания контента (документов, видео, изображений). Seed-репо с неизвестными метриками; нужна проверка наличия деплоибельного продукта.",
-      "expires_at": "2026-08-18",
-      "last_checked": "2026-07-19",
+      "description": "Understand-Anything — AI-платформа для понимания и анализа контента (документов, видео, изображений), потенциально self-hosted альтернатива мультимодальным AI-сервисам. Требует проверки наличия деплоибельного UI.",
+      "expires_at": "2026-08-21",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "Egonex-AI/Understand-Anything",
-      "signal_to_wait": "Подтверждение docker-деплоя или hosted demo, 200+ звёзд, наличие API",
+      "signal_to_wait": "Появление Docker-деплоя, звёзд >500 и подтверждения наличия полноценного UI",
       "title": "Egonex-AI/Understand-Anything",
       "url": "https://github.com/Egonex-AI/Understand-Anything",
-      "why_interesting": "Seed-репо; ниша AI document/content understanding активно монетизируется ($20-100/мес)"
+      "why_interesting": "Мультимодальный анализ контента — востребованный корпоративный сценарий"
     },
     "https://github.com/HKUDS/CLI-Anything": {
       "added_date": "2026-07-10",
       "category": "devtools_oss",
       "description": "CLI-Anything — платформа для превращения любого программного обеспечения в agent-native через CLI-интерфейс с хабом clianything.cc. Новое репо (появилось за период), 45k звёзд — редкий случай нового проекта с мгновенной тракцией.",
       "expires_at": "2026-08-09",
-      "last_checked": "2026-07-19",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": 1,
         "skills_count": null,
@@ -35,123 +35,106 @@
       "why_interesting": "Единственная реальная новинка периода с 45k звёзд; концепция agent-native CLI для любого ПО актуальна"
     },
     "https://github.com/NickIBrody/arcade_ai": {
-      "added_date": "2026-07-19",
+      "added_date": "2026-07-22",
       "category": "apps_oss",
-      "description": "Arcade AI — готовое мобильное AI-приложение (seed-репо), потенциально готовое к деплою как мобильный продукт с AI функционалом. Нужна проверка наличия build-инструкций и реального функционала.",
-      "expires_at": "2026-08-18",
-      "last_checked": "2026-07-19",
+      "description": "Arcade AI — готовое мобильное приложение с AI-возможностями, которое можно ребрендировать и публиковать как собственный продукт. Seed-кандидат с потенциалом как основа для AI-мобильных приложений.",
+      "expires_at": "2026-08-21",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "NickIBrody/arcade_ai",
-      "signal_to_wait": "Подтверждение наличия APK/IPA release или Expo/Flutter build, 200+ звёзд, описание функционала",
+      "signal_to_wait": "Данные о звёздах, подтверждение наличия App Store / Play Store инструкций и деплоя",
       "title": "NickIBrody/arcade_ai",
       "url": "https://github.com/NickIBrody/arcade_ai",
-      "why_interesting": "Seed-репо как пример готового мобильного AI-приложения; мобильные AI-продукты монетизируются хорошо"
+      "why_interesting": "Готовое мобильное AI-приложение для ребрендинга — редкая ниша в open-source"
     },
     "https://github.com/arelove/infinity-loop": {
-      "added_date": "2026-07-19",
+      "added_date": "2026-07-22",
       "category": "apps_oss",
-      "description": "Infinity-loop — готовое desktop-приложение (seed-репо) с неизвестным пока функционалом, упомянутое как образец деплоибельного продукта. Нужна проверка README для оценки реального использования.",
-      "expires_at": "2026-08-18",
-      "last_checked": "2026-07-19",
+      "description": "Infinity-loop — desktop-приложение (seed-кандидат), точное назначение требует проверки. Потенциально AI-инструмент для непрерывной генерации или автоматизации задач в desktop-формате.",
+      "expires_at": "2026-08-21",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "arelove/infinity-loop",
-      "signal_to_wait": "Подтверждение функционала через README, наличие releases/installer, 100+ звёзд",
+      "signal_to_wait": "Изучение README для понимания функционала, подтверждение installer/executable, звёзды >100",
       "title": "arelove/infinity-loop",
       "url": "https://github.com/arelove/infinity-loop",
-      "why_interesting": "Seed-репо как пример desktop-приложения; если функционал подтвердится — прямой путь в test_now"
-    },
-    "https://github.com/browser-use/browser-use": {
-      "added_date": "2026-07-10",
-      "category": "automation_oss",
-      "description": "Browser-use — self-hosted библиотека/фреймворк для управления браузером через AI-агентов, позволяющая автоматизировать веб-задачи. 104k звёзд, +807 за 72h; ближе к библиотеке чем к готовому продукту, но имеет потенциал как основа для RPA-сервиса.",
-      "expires_at": "2026-08-09",
-      "last_checked": "2026-07-19",
-      "metric_baseline": {
-        "cross_source_count": 1,
-        "skills_count": null,
-        "stars": 104072
-      },
-      "repo_full_name": "browser-use/browser-use",
-      "signal_to_wait": "Появление hosted UI или no-code интерфейса для запуска задач без кода",
-      "title": "browser-use/browser-use",
-      "url": "https://github.com/browser-use/browser-use",
-      "why_interesting": "+807 звёзд за 72h; растущий спрос на browser automation для AI-агентов"
+      "why_interesting": "Desktop AI-приложения — незаполненная ниша; если это готовый продукт, потенциал высок"
     },
     "https://github.com/every-app/open-seo": {
-      "added_date": "2026-07-19",
+      "added_date": "2026-07-22",
       "category": "marketing_oss",
-      "description": "Open-SEO — open-source SEO-платформа для анализа и оптимизации сайтов, self-hosted альтернатива Ahrefs/SEMrush. Потенциально разворачивается как веб-приложение с дашбордом и API, подходит для ребрендинга под SEO-SaaS.",
-      "expires_at": "2026-08-18",
-      "last_checked": "2026-07-19",
+      "description": "Open-SEO — open-source SEO-платформа для анализа и оптимизации веб-сайтов, self-hosted альтернатива платным SEO-инструментам типа Semrush и Ahrefs. Может использоваться как основа для SEO-агентства или белая метка для SEO SaaS.",
+      "expires_at": "2026-08-21",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "every-app/open-seo",
-      "signal_to_wait": "Подтверждение наличия деплоибельного UI, появление docker-compose, 500+ звёзд",
+      "signal_to_wait": "Появление данных о звёздах (>500), подтверждение наличия рабочего UI и деплоя через Docker",
       "title": "every-app/open-seo",
       "url": "https://github.com/every-app/open-seo",
-      "why_interesting": "Seed-репо в нише с высоким ARPU (SEO-инструменты стоят $99-999/мес); self-hosted SEO — редкий продукт"
+      "why_interesting": "Высокий бизнес-потенциал как self-hosted SEO-инструмент; рынок SEO SaaS огромен"
     },
     "https://github.com/hexo-ai/sia": {
-      "added_date": "2026-07-19",
+      "added_date": "2026-07-22",
       "category": "agents_oss",
-      "description": "Sia — AI-агент или платформа от hexo-ai (seed-репо), потенциально готовый продукт для автоматизации или AI-ассистенции. Нужна проверка функционала и наличия деплоя для оценки.",
-      "expires_at": "2026-08-18",
-      "last_checked": "2026-07-19",
+      "description": "Sia от hexo-ai — AI-агент или агентный фреймворк (seed-кандидат), точный тип продукта требует проверки. Если это платформа, а не библиотека, может быть интересна как основа для корпоративных агентов.",
+      "expires_at": "2026-08-21",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "hexo-ai/sia",
-      "signal_to_wait": "Подтверждение наличия UI/API, docker-деплоя, описания как готового продукта",
+      "signal_to_wait": "Подтверждение наличия деплоибельного UI/API без написания кода, звёзды >500",
       "title": "hexo-ai/sia",
       "url": "https://github.com/hexo-ai/sia",
-      "why_interesting": "Seed-репо; если это готовый агентный продукт с UI — переходит в test_now немедленно"
+      "why_interesting": "Потенциально интересный агентный продукт, но ближе к фреймворку по описанию"
     },
     "https://github.com/mutonby/openshorts": {
-      "added_date": "2026-07-19",
+      "added_date": "2026-07-22",
       "category": "video_oss",
-      "description": "OpenShorts — open-source платформа для автоматической генерации коротких видео (шортсов) для TikTok/YouTube Shorts/Reels. Seed-репо с потенциалом как faceless video SaaS; нужно проверить наличие рабочего деплоя.",
-      "expires_at": "2026-08-18",
-      "last_checked": "2026-07-19",
+      "description": "OpenShorts — self-hosted платформа для автоматической генерации коротких вертикальных видео (Shorts/Reels/TikTok), open-source альтернатива платным сервисам автоматизации контента. Может быть базой для faceless-видео сервиса.",
+      "expires_at": "2026-08-21",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "mutonby/openshorts",
-      "signal_to_wait": "Появление docker-compose с рабочим demo, 200+ звёзд, подтверждение качества генерации",
+      "signal_to_wait": "Данные о звёздах >200, подтверждение Docker-деплоя и качества генерируемого контента",
       "title": "mutonby/openshorts",
       "url": "https://github.com/mutonby/openshorts",
-      "why_interesting": "Seed-репо; ниша faceless shorts растёт, спрос на автоматизацию шортсов очень высокий"
+      "why_interesting": "Бум короткого видеоконтента; faceless-каналы — растущая ниша с высоким спросом"
     },
     "https://github.com/seanZhang414/openadserver": {
-      "added_date": "2026-07-19",
+      "added_date": "2026-07-22",
       "category": "marketing_oss",
-      "description": "OpenAdServer — open-source рекламный сервер для ротации и управления объявлениями, self-hosted альтернатива Google Ad Manager. Seed-репо; если деплой подтверждён — высокий бизнес-потенциал для AdTech ниши.",
-      "expires_at": "2026-08-18",
-      "last_checked": "2026-07-19",
+      "description": "OpenAdServer — self-hosted open-source ad-сервер для размещения и ротации рекламы, альтернатива платным ad-tech платформам. Может использоваться как основа для собственной рекламной сети или white-label решения.",
+      "expires_at": "2026-08-21",
+      "last_checked": "2026-07-22",
       "metric_baseline": {
         "cross_source_count": null,
         "skills_count": null,
         "stars": null
       },
       "repo_full_name": "seanZhang414/openadserver",
-      "signal_to_wait": "Подтверждение docker-деплоя, наличие UI для управления рекламой, 300+ звёзд",
+      "signal_to_wait": "Подтверждение зрелости кода, наличие звёзд >300 и документации по деплою",
       "title": "seanZhang414/openadserver",
       "url": "https://github.com/seanZhang414/openadserver",
-      "why_interesting": "Seed-репо в AdTech нише с высоким ARPU; self-hosted ad server — нишевой, но денежный продукт"
+      "why_interesting": "Ad-tech инфраструктура — высокомаржинальный рынок; self-hosted ad-сервер редок"
     }
   }
 }
