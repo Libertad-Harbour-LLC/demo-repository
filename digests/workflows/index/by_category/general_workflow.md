@@ -1,9 +1,10 @@
 # Recommended Claude Skills — general_workflow
 
-Total: 174
+Total: 175
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-22 | [weblineindia/n8n-Review-contract-risk-and-rewrite-clauses-with-Groq-Google-Drive-Notion-and-Slack: workflow-template](https://github.com/weblineindia/n8n-Review-contract-risk-and-rewrite-clauses-with-Groq-Google-Drive-Notion-and-Slack/blob/main/workflow-template.json) | workflow-template |  | 6.6 | medium | Скачать workflow-template.json |
 | 2026-07-19 | [hamzaasad5/AI-Email-Assistant: AI Email Assistant (Production Ready)](https://github.com/hamzaasad5/AI-Email-Assistant/blob/main/workflows/AI Email Assistant (Production Ready).json) | AI Email Assistant (Production Ready) |  | 6.1 | medium | Скачать JSON из /workflows/ |
 | 2026-07-19 | [avuzmal/n8n.automation: 03_05_weather_risk_supply_chain_mitigation](https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_05_weather_risk_supply_chain_mitigation.json) | 03_05_weather_risk_supply_chain_mitigation |  | 7.3 | medium | Открыть репо и скачать нужный JSON из папки workflows/ |
 | 2026-07-19 | [avuzmal/n8n.automation: 03_04_zero_touch_customs_documentation](https://github.com/avuzmal/n8n.automation/blob/main/workflows/03_04_zero_touch_customs_documentation.json) | 03_04_zero_touch_customs_documentation |  | 7.3 | medium | Открыть репо и скачать нужный JSON из папки workflows/ |

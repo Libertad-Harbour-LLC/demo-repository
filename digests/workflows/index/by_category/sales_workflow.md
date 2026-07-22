@@ -1,9 +1,13 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 55
+Total: 59
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-22 | [weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks: workflow-template](https://github.com/weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
+| 2026-07-22 | [angelus213/foundry-api-workflows: rag-content-ingestion](https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/rag-content-ingestion.json) | rag-content-ingestion |  | 5.8 | medium | Скачать local-sales-intelligence.json из папки n8n/ |
+| 2026-07-22 | [angelus213/foundry-api-workflows: local-sales-intelligence](https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/local-sales-intelligence.json) | local-sales-intelligence |  | 5.8 | medium | Скачать local-sales-intelligence.json из папки n8n/ |
+| 2026-07-22 | [angelus213/foundry-api-workflows: document-automation](https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/document-automation.json) | document-automation |  | 5.8 | medium | Скачать local-sales-intelligence.json из папки n8n/ |
 | 2026-07-21 | [weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail: workflow-template](https://github.com/weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
 | 2026-07-19 | [MusaIslamFahad/n8n-free-lead-outreach-pipeline: lead-gen-outreach-reply-digest](https://github.com/MusaIslamFahad/n8n-free-lead-outreach-pipeline/blob/main/workflows/lead-gen-outreach-reply-digest.json) | lead-gen-outreach-reply-digest |  | 6.8 | medium | Скачать lead-gen-outreach-reply-digest.json |
 | 2026-07-19 | [Deekshak11/automation-systems: hubspot-enrich-outreach](https://github.com/Deekshak11/automation-systems/blob/main/workflows/hubspot-enrich-outreach.json) | hubspot-enrich-outreach |  | 6.9 | medium | Скачать ai-lead-research-engine.json из /workflows/ |

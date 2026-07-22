@@ -1,9 +1,14 @@
 # Recommended Claude Skills — devops_workflow
 
-Total: 53
+Total: 58
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-22 | [shuricksumy/frigate-yard-stats: yard-stats-semantic-search-tool](https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/yard-stats-semantic-search-tool.json) | yard-stats-semantic-search-tool |  | 5.8 | medium | Скачать alerts-report.json из папки n8n/ |
+| 2026-07-22 | [shuricksumy/frigate-yard-stats: yard-stats-qa](https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/yard-stats-qa.json) | yard-stats-qa |  | 5.8 | medium | Скачать alerts-report.json из папки n8n/ |
+| 2026-07-22 | [shuricksumy/frigate-yard-stats: daily-report](https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/daily-report.json) | daily-report |  | 5.8 | medium | Скачать alerts-report.json из папки n8n/ |
+| 2026-07-22 | [shuricksumy/frigate-yard-stats: alerts-report](https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/alerts-report.json) | alerts-report |  | 5.8 | medium | Скачать alerts-report.json из папки n8n/ |
+| 2026-07-22 | [KellyCalvin23/SOC-Automation: n8n-workflow-wazuh-soc](https://github.com/KellyCalvin23/SOC-Automation/blob/main/n8n-workflow-wazuh-soc.json) | n8n-workflow-wazuh-soc |  | 7.1 | medium | Скачать n8n-workflow-wazuh-soc.json |
 | 2026-07-21 | [omarbabba779xx/wazuh-n8n-soc-pipeline: wazuh-alert-processing.workflow](https://github.com/omarbabba779xx/wazuh-n8n-soc-pipeline/blob/master/n8n/wazuh-alert-processing.workflow.json) | wazuh-alert-processing.workflow |  | 6.6 | medium | Скачать JSON по ссылке json_url |
 | 2026-07-21 | [ashwanth-saran/wazuh-network-threat-intelligence-playbook: network-threat-intelligence](https://github.com/ashwanth-saran/wazuh-network-threat-intelligence-playbook/blob/main/n8n/network-threat-intelligence.json) | network-threat-intelligence |  | 6.3 | medium | Скачать network-threat-intelligence.json |
 | 2026-07-19 | [DanielMadsenDK/servicenow-helper: workflow-template](https://github.com/DanielMadsenDK/servicenow-helper/blob/main/n8n/init/workflow-template.json) | workflow-template |  | 6.0 | medium | Скачать workflow-template.json |

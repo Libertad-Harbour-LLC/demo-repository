@@ -608,6 +608,46 @@
       "trigger_type": "manual",
       "url": "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud"
     },
+    "https://github.com/Cai-yizhe/n8n-research-to-PDF/blob/main/github.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического поиска исследований на GitHub и конвертации результатов в PDF-отчёт. Подходит для исследователей и аналитиков, которым нужно регулярно собирать и документировать технические материалы.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "DeepSeek",
+        "MySQL"
+      ],
+      "metric": "Время от запроса до готового PDF",
+      "node_count": 155,
+      "promoted_from_watch": false,
+      "repo_full_name": "Cai-yizhe/n8n-research-to-PDF",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "github"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать github.json с https://raw.githubusercontent.com/Cai-yizhe/n8n-research-to-PDF/main/github.json",
+        "Импортировать JSON в n8n через Settings → Import Workflow",
+        "Настроить GitHub credentials (Personal Access Token)",
+        "Настроить PDF-генерацию (проверить наличие соответствующего node)",
+        "Запустить тестовый прогон с тестовым поисковым запросом"
+      ],
+      "title": "Cai-yizhe/n8n-research-to-PDF: github",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/Cai-yizhe/n8n-research-to-PDF/blob/main/github.json"
+    },
     "https://github.com/Cheffromspace/AI-PR-Assistant/blob/main/n8n-workflow.json": {
       "category": "devops_workflow",
       "complexity": "medium",
@@ -1688,6 +1728,42 @@
       "title": "KRYSPRODUCER/n8n-automation-youtube-transcription: Youtube Transcribe_Comment to Docs",
       "tool": "n8n",
       "url": "https://github.com/KRYSPRODUCER/n8n-automation-youtube-transcription"
+    },
+    "https://github.com/KellyCalvin23/SOC-Automation/blob/main/n8n-workflow-wazuh-soc.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматизации реагирования на инциденты безопасности через интеграцию с Wazuh SIEM. Предназначен для SOC-команд, которые хотят автоматизировать триаж и эскалацию алертов.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-22",
+      "metric": "Время от алерта Wazuh до созданного инцидента",
+      "node_count": 15,
+      "promoted_from_watch": false,
+      "repo_full_name": "KellyCalvin23/SOC-Automation",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "n8n-workflow-wazuh-soc"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать n8n-workflow-wazuh-soc.json",
+        "Импортировать в n8n",
+        "Установить и настроить Wazuh (или использовать тестовый инстанс)",
+        "Настроить webhook между Wazuh и n8n",
+        "Отправить тестовый алерт из Wazuh и проверить прохождение"
+      ],
+      "title": "KellyCalvin23/SOC-Automation: n8n-workflow-wazuh-soc",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/KellyCalvin23/SOC-Automation/blob/main/n8n-workflow-wazuh-soc.json"
     },
     "https://github.com/Lucetrsn/n8n-Real-time-uptime-alerts-to-Jira-with-smart-Slack-on-call-routing": {
       "category": "devops_workflow",
@@ -2776,6 +2852,1001 @@
       "tool": "n8n",
       "trigger_type": "schedule",
       "url": "https://github.com/SidhartSami/HiringAutomation"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/AI Learning Pipeline Telegram to Notion ETL.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram",
+        "Lm Ollama",
+        "Ollama",
+        "Notion",
+        "OpenRouter"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 13,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "AI Learning Pipeline Telegram to Notion ETL"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: AI Learning Pipeline Telegram to Notion ETL",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/AI Learning Pipeline Telegram to Notion ETL.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Apple RAG ChatBot.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Google Drive",
+        "Ollama",
+        "Lm Ollama",
+        "Time Saved"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 19,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Apple RAG ChatBot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Apple RAG ChatBot",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Apple RAG ChatBot.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Apple RAG Chatbot V2.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Google Drive",
+        "Ollama",
+        "Lm Ollama",
+        "Time Saved"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 23,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Apple RAG Chatbot V2"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Apple RAG Chatbot V2",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Apple RAG Chatbot V2.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Batch processing RSS feeds.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Batch processing RSS feeds"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Batch processing RSS feeds",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Batch processing RSS feeds.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Business Owner Workflow.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram",
+        "OpenAI",
+        "Google Calendar Tool",
+        "Google Sheets Tool",
+        "Gmail Tool"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Business Owner Workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Business Owner Workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Business Owner Workflow.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Comp_Company_Chatbot_V3.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Google Sheets Tool",
+        "Gmail Tool",
+        "Ollama",
+        "Time Saved"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Comp_Company_Chatbot_V3"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Comp_Company_Chatbot_V3",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Comp_Company_Chatbot_V3.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Computer_Company_Chatbot.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Ollama",
+        "Gmail Tool",
+        "Google Sheets Tool",
+        "Time Saved"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Computer_Company_Chatbot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Computer_Company_Chatbot",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Computer_Company_Chatbot.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Converting JSON to a CSV file.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Converting JSON to a CSV file"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Converting JSON to a CSV file",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Converting JSON to a CSV file.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Couse30- RAG Chatbot.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram",
+        "Google Sheets Tool",
+        "OpenRouter"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 8,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Couse30- RAG Chatbot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Couse30- RAG Chatbot",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Couse30- RAG Chatbot.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Create & track LinkedIn posts with Google Sheets, GPT-5.1, Unsplash, and Sona.json": {
+      "category": "data_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "OpenAI",
+        "Google Sheets",
+        "LinkedIn",
+        "Gmail"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 33,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Create & track LinkedIn posts with Google Sheets, GPT-5.1, Unsplash, and Sona"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Create & track LinkedIn posts with Google Sheets, GPT-5.1, Unsplash, and Sona",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Create & track LinkedIn posts with Google Sheets, GPT-5.1, Unsplash, and Sona.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Customer service agent.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "OpenAI",
+        "Data Table Tool",
+        "HTTP Request Tool"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Customer service agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Customer service agent",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Customer service agent.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Daily Viral Content Radar (AnyAPI).json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Any API",
+        "Gmail",
+        "Google Sheets",
+        "OpenRouter",
+        "Google Gemini"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 13,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Daily Viral Content Radar (AnyAPI)"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Daily Viral Content Radar (AnyAPI)",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Daily Viral Content Radar (AnyAPI).json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Data Transformation.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Data Transformation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Data Transformation",
+      "tool": "n8n",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Data Transformation.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Deepseek_Model.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Ollama"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Deepseek_Model"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Deepseek_Model",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Deepseek_Model.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Delivery Telegram Bot.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram",
+        "Microsoft SQL",
+        "OpenRouter"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 13,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Delivery Telegram Bot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Delivery Telegram Bot",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Delivery Telegram Bot.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Demo RAG in n8n 2.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Ollama"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Demo RAG in n8n 2"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Demo RAG in n8n 2",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Demo RAG in n8n 2.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Demo RAG in n8n.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "OpenAI"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Demo RAG in n8n"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Demo RAG in n8n",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Demo RAG in n8n.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Downloading and editing an image.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Downloading and editing an image"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Downloading and editing an image",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Downloading and editing an image.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Emaar Towers Lead Qualification Agent.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram",
+        "OpenRouter",
+        "Ollama",
+        "Google Sheets Tool",
+        "Time Saved"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Emaar Towers Lead Qualification Agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Emaar Towers Lead Qualification Agent",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Emaar Towers Lead Qualification Agent.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Error Workflow.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Gmail"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 2,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Error Workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Error Workflow",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Error Workflow.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Finance Tracker.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram",
+        "Google Gemini",
+        "Notion"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Finance Tracker"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: Finance Tracker",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/Finance Tracker.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B AI Agent Workflow.json": {
+      "category": "data_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "OpenAI"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "GPT-OSS-20B AI Agent Workflow"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: GPT-OSS-20B AI Agent Workflow",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B AI Agent Workflow.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B HuggingFace.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "GPT-OSS-20B HuggingFace"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: GPT-OSS-20B HuggingFace",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B HuggingFace.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B OpenRouter.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "GPT-OSS-20B OpenRouter"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: GPT-OSS-20B OpenRouter",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B OpenRouter.json"
+    },
+    "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B_AI_Agent_Advanced.json": {
+      "category": "data_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит 8 готовых n8n workflows для продакшн-очередей: ETL-пайплайн Telegram→Notion, RAG-чатботы, batch-обработка RSS и конвертация форматов. Подходит для команд, строящих AI-powered data pipelines.",
+      "final_score": 6.9,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "OpenAI"
+      ],
+      "metric": "Задержка от Telegram-сообщения до записи в Notion",
+      "node_count": 6,
+      "promoted_from_watch": false,
+      "repo_full_name": "Sohila-Khaled-Abbas/n8n-production-queue-setup",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "GPT-OSS-20B_AI_Agent_Advanced"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо или скачать нужный JSON из папки workflows/",
+        "Импортировать выбранный workflow в n8n",
+        "Настроить Telegram Bot Token и Notion API credentials",
+        "Запустить тестовое сообщение в Telegram",
+        "Проверить появление записи в Notion"
+      ],
+      "title": "Sohila-Khaled-Abbas/n8n-production-queue-setup: GPT-OSS-20B_AI_Agent_Advanced",
+      "tool": "n8n",
+      "trigger_type": "chat",
+      "url": "https://github.com/Sohila-Khaled-Abbas/n8n-production-queue-setup/blob/main/workflows/GPT-OSS-20B_AI_Agent_Advanced.json"
     },
     "https://github.com/Tanishq60/n8n_nl2sql": {
       "category": "data_workflow",
@@ -4603,6 +5674,114 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/alejandrosnz/srt-llm-translator"
+    },
+    "https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/document-automation.json": {
+      "category": "sales_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий из 3 n8n workflows для работы с Foundry API: автоматизация документов, локальная sales-разведка и RAG-ингестия контента. Подходит для команд, интегрирующих корпоративные данные с LLM-агентами.",
+      "final_score": 5.8,
+      "first_recommended": "2026-07-22",
+      "metric": "Количество sales-данных, собранных автоматически vs вручную",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "angelus213/foundry-api-workflows",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "document-automation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать local-sales-intelligence.json из папки n8n/",
+        "Импортировать в n8n",
+        "Изучить node-граф для понимания требуемых API",
+        "Настроить Foundry API credentials",
+        "Запустить тестовый прогон"
+      ],
+      "title": "angelus213/foundry-api-workflows: document-automation",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/document-automation.json"
+    },
+    "https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/local-sales-intelligence.json": {
+      "category": "sales_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий из 3 n8n workflows для работы с Foundry API: автоматизация документов, локальная sales-разведка и RAG-ингестия контента. Подходит для команд, интегрирующих корпоративные данные с LLM-агентами.",
+      "final_score": 5.8,
+      "first_recommended": "2026-07-22",
+      "metric": "Количество sales-данных, собранных автоматически vs вручную",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "angelus213/foundry-api-workflows",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "local-sales-intelligence"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать local-sales-intelligence.json из папки n8n/",
+        "Импортировать в n8n",
+        "Изучить node-граф для понимания требуемых API",
+        "Настроить Foundry API credentials",
+        "Запустить тестовый прогон"
+      ],
+      "title": "angelus213/foundry-api-workflows: local-sales-intelligence",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/local-sales-intelligence.json"
+    },
+    "https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/rag-content-ingestion.json": {
+      "category": "sales_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Репозиторий из 3 n8n workflows для работы с Foundry API: автоматизация документов, локальная sales-разведка и RAG-ингестия контента. Подходит для команд, интегрирующих корпоративные данные с LLM-агентами.",
+      "final_score": 5.8,
+      "first_recommended": "2026-07-22",
+      "metric": "Количество sales-данных, собранных автоматически vs вручную",
+      "node_count": 4,
+      "promoted_from_watch": false,
+      "repo_full_name": "angelus213/foundry-api-workflows",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "rag-content-ingestion"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать local-sales-intelligence.json из папки n8n/",
+        "Импортировать в n8n",
+        "Изучить node-граф для понимания требуемых API",
+        "Настроить Foundry API credentials",
+        "Запустить тестовый прогон"
+      ],
+      "title": "angelus213/foundry-api-workflows: rag-content-ingestion",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/rag-content-ingestion.json"
     },
     "https://github.com/anilrajrimal1/n8n-backups": {
       "category": "devops_workflow",
@@ -11069,6 +12248,159 @@
       "trigger_type": "schedule",
       "url": "https://github.com/shreyvaughn/claude-ai-sales-system"
     },
+    "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/alerts-report.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflows для интеграции с Frigate NVR (система видеонаблюдения): отчёты об алертах, ежедневные сводки, QA-запросы и семантический поиск по данным камер. Предназначен для домашней автоматизации и smart home.",
+      "final_score": 5.8,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Полнота охвата алертов Frigate в ежедневном отчёте",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "shuricksumy/frigate-yard-stats",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "alerts-report"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать alerts-report.json из папки n8n/",
+        "Импортировать в n8n",
+        "Настроить подключение к Frigate NVR API",
+        "Настроить канал доставки отчётов (email/telegram)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "shuricksumy/frigate-yard-stats: alerts-report",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/alerts-report.json"
+    },
+    "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/daily-report.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflows для интеграции с Frigate NVR (система видеонаблюдения): отчёты об алертах, ежедневные сводки, QA-запросы и семантический поиск по данным камер. Предназначен для домашней автоматизации и smart home.",
+      "final_score": 5.8,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Telegram"
+      ],
+      "metric": "Полнота охвата алертов Frigate в ежедневном отчёте",
+      "node_count": 5,
+      "promoted_from_watch": false,
+      "repo_full_name": "shuricksumy/frigate-yard-stats",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "daily-report"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать alerts-report.json из папки n8n/",
+        "Импортировать в n8n",
+        "Настроить подключение к Frigate NVR API",
+        "Настроить канал доставки отчётов (email/telegram)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "shuricksumy/frigate-yard-stats: daily-report",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/daily-report.json"
+    },
+    "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/yard-stats-qa.json": {
+      "category": "devops_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflows для интеграции с Frigate NVR (система видеонаблюдения): отчёты об алертах, ежедневные сводки, QA-запросы и семантический поиск по данным камер. Предназначен для домашней автоматизации и smart home.",
+      "final_score": 5.8,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "OpenAI"
+      ],
+      "metric": "Полнота охвата алертов Frigate в ежедневном отчёте",
+      "node_count": 10,
+      "promoted_from_watch": false,
+      "repo_full_name": "shuricksumy/frigate-yard-stats",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "yard-stats-qa"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать alerts-report.json из папки n8n/",
+        "Импортировать в n8n",
+        "Настроить подключение к Frigate NVR API",
+        "Настроить канал доставки отчётов (email/telegram)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "shuricksumy/frigate-yard-stats: yard-stats-qa",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/yard-stats-qa.json"
+    },
+    "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/yard-stats-semantic-search-tool.json": {
+      "category": "devops_workflow",
+      "complexity": "simple",
+      "confidence": "medium",
+      "description": "Набор из 4 n8n workflows для интеграции с Frigate NVR (система видеонаблюдения): отчёты об алертах, ежедневные сводки, QA-запросы и семантический поиск по данным камер. Предназначен для домашней автоматизации и smart home.",
+      "final_score": 5.8,
+      "first_recommended": "2026-07-22",
+      "metric": "Полнота охвата алертов Frigate в ежедневном отчёте",
+      "node_count": 3,
+      "promoted_from_watch": false,
+      "repo_full_name": "shuricksumy/frigate-yard-stats",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 2,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "yard-stats-semantic-search-tool"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать alerts-report.json из папки n8n/",
+        "Импортировать в n8n",
+        "Настроить подключение к Frigate NVR API",
+        "Настроить канал доставки отчётов (email/telegram)",
+        "Запустить тестовый прогон"
+      ],
+      "title": "shuricksumy/frigate-yard-stats: yard-stats-semantic-search-tool",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/shuricksumy/frigate-yard-stats/blob/main/n8n/yard-stats-semantic-search-tool.json"
+    },
     "https://github.com/sinabarimd/reputation-engine": {
       "category": "content_workflow",
       "complexity": "complex",
@@ -16804,6 +18136,48 @@
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Recover-abandoned-WooCommerce-carts-using-OpenAI-GPT-4.1-mini-Gmail-and-Slack"
     },
+    "https://github.com/weblineindia/n8n-Review-contract-risk-and-rewrite-clauses-with-Groq-Google-Drive-Notion-and-Slack/blob/main/workflow-template.json": {
+      "category": "general_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматического анализа рисков в договорах: читает документ из Google Drive, выявляет рискованные клаузы через Groq LLM, сохраняет результат в Notion и отправляет алерт в Slack. Подходит для юридических и procurement-команд.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Groq",
+        "Google Drive",
+        "Notion",
+        "Slack"
+      ],
+      "metric": "Количество выявленных рискованных клауз на документ",
+      "node_count": 30,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Review-contract-risk-and-rewrite-clauses-with-Groq-Google-Drive-Notion-and-Slack",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Google Drive OAuth и Notion Integration Token",
+        "Настроить Groq API key и Slack Bot Token",
+        "Загрузить тестовый контракт в Google Drive и запустить workflow"
+      ],
+      "title": "weblineindia/n8n-Review-contract-risk-and-rewrite-clauses-with-Groq-Google-Drive-Notion-and-Slack: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/weblineindia/n8n-Review-contract-risk-and-rewrite-clauses-with-Groq-Google-Drive-Notion-and-Slack/blob/main/workflow-template.json"
+    },
     "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks": {
       "category": "general_workflow",
       "confidence": "medium",
@@ -16836,6 +18210,49 @@
       "title": "weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk: workflow-template",
       "tool": "n8n",
       "url": "https://github.com/weblineindia/n8n-Route-Gmail-support-emails-to-Zendesk-with-spam-filtering-and-duplicate-checks"
+    },
+    "https://github.com/weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n workflow для автоматической оценки и триажа входящих лидов с помощью Groq AI, с записью в Google Sheets, уведомлениями в Slack и созданием задач в Google Tasks. Предназначен для sales-команд с потоком входящих заявок.",
+      "final_score": 6.5,
+      "first_recommended": "2026-07-22",
+      "integrations": [
+        "Groq",
+        "Slack Tool",
+        "Data Table",
+        "Google Tasks Tool",
+        "Google Sheets Tool"
+      ],
+      "metric": "Процент лидов, получивших скор автоматически vs вручную",
+      "node_count": 13,
+      "promoted_from_watch": false,
+      "repo_full_name": "weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 8,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-template"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-template.json",
+        "Импортировать в n8n",
+        "Настроить Groq API key, Google Sheets OAuth, Slack Bot Token, Google Tasks OAuth",
+        "Настроить триггер (webhook или polling) для входящих лидов",
+        "Отправить тестовый лид и проверить скоринг и создание задачи"
+      ],
+      "title": "weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks: workflow-template",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json"
     },
     "https://github.com/weblineindia/n8n-Score-customer-health-and-churn-risk-with-Salesforce-Gemini-and-Gmail/blob/main/workflow-template.json": {
       "category": "sales_workflow",
