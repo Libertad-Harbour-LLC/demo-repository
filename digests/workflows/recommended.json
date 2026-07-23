@@ -608,6 +608,91 @@
       "trigger_type": "manual",
       "url": "https://github.com/AtlasCloudAI/n8n-nodes-atlascloud"
     },
+    "https://github.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/blob/main/AI Lead Qualification & Sales Automation System.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит два n8n-workflow для автоматической квалификации входящих лидов с помощью AI и управления продажами. Первый workflow обрабатывает лиды и оценивает их приоритет, второй отвечает за приём и разбор входящих писем.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "OpenAI",
+        "Gmail",
+        "Google Sheets",
+        "Discord"
+      ],
+      "metric": "Процент лидов, автоматически квалифицированных без ручного вмешательства",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "AviVAvi/AI-Lead-Qualification-Sales-Automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "AI Lead Qualification & Sales Automation System"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/main/AI Lead Qualification & Sales Automation System.json",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Email/IMAP для Email Intake, API-ключ AI-провайдера",
+        "Запустить тестовый прогон с тестовым письмом-лидом",
+        "Проверить, что лид получает скор и попадает в нужную ветку обработки"
+      ],
+      "title": "AviVAvi/AI-Lead-Qualification-Sales-Automation: AI Lead Qualification & Sales Automation System",
+      "tool": "n8n",
+      "trigger_type": "form",
+      "url": "https://github.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/blob/main/AI Lead Qualification & Sales Automation System.json"
+    },
+    "https://github.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/blob/main/Email Intake.json": {
+      "category": "sales_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Репозиторий содержит два n8n-workflow для автоматической квалификации входящих лидов с помощью AI и управления продажами. Первый workflow обрабатывает лиды и оценивает их приоритет, второй отвечает за приём и разбор входящих писем.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "Gmail",
+        "OpenAI",
+        "HubSpot",
+        "Google Sheets",
+        "Discord"
+      ],
+      "metric": "Процент лидов, автоматически квалифицированных без ручного вмешательства",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "AviVAvi/AI-Lead-Qualification-Sales-Automation",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "Email Intake"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON: https://raw.githubusercontent.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/main/AI Lead Qualification & Sales Automation System.json",
+        "Импортировать в n8n через меню Import Workflow",
+        "Настроить credentials: Email/IMAP для Email Intake, API-ключ AI-провайдера",
+        "Запустить тестовый прогон с тестовым письмом-лидом",
+        "Проверить, что лид получает скор и попадает в нужную ветку обработки"
+      ],
+      "title": "AviVAvi/AI-Lead-Qualification-Sales-Automation: Email Intake",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/blob/main/Email Intake.json"
+    },
     "https://github.com/Cai-yizhe/n8n-research-to-PDF/blob/main/github.json": {
       "category": "data_workflow",
       "complexity": "complex",
@@ -5822,6 +5907,126 @@
       "trigger_type": "schedule",
       "url": "https://github.com/anilrajrimal1/n8n-backups"
     },
+    "https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-1-content-generation.json": {
+      "category": "content_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из трёх связанных n8n-workflow для полного цикла автоматизации публикаций в социальных сетях: генерация контента, ревью и перегенерация при необходимости, финальная публикация и дистрибуция. Подходит для SMM-менеджеров и контент-команд.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "Data Table",
+        "OpenAI"
+      ],
+      "metric": "Время от идеи до публикации поста; количество постов, опубликованных без ручного вмешательства",
+      "node_count": 43,
+      "promoted_from_watch": false,
+      "repo_full_name": "arturolg20/n8n-social-media-automation-",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-1-content-generation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-1-content-generation.json",
+        "Импортировать в n8n и изучить node-граф",
+        "Настроить AI-credential для генерации контента",
+        "Запустить тест на одном посте",
+        "После успеха импортировать workflow-2 и workflow-3"
+      ],
+      "title": "arturolg20/n8n-social-media-automation-: workflow-1-content-generation",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-1-content-generation.json"
+    },
+    "https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-2-review-regeneration.json": {
+      "category": "content_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из трёх связанных n8n-workflow для полного цикла автоматизации публикаций в социальных сетях: генерация контента, ревью и перегенерация при необходимости, финальная публикация и дистрибуция. Подходит для SMM-менеджеров и контент-команд.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "Data Table",
+        "OpenAI"
+      ],
+      "metric": "Время от идеи до публикации поста; количество постов, опубликованных без ручного вмешательства",
+      "node_count": 22,
+      "promoted_from_watch": false,
+      "repo_full_name": "arturolg20/n8n-social-media-automation-",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-2-review-regeneration"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-1-content-generation.json",
+        "Импортировать в n8n и изучить node-граф",
+        "Настроить AI-credential для генерации контента",
+        "Запустить тест на одном посте",
+        "После успеха импортировать workflow-2 и workflow-3"
+      ],
+      "title": "arturolg20/n8n-social-media-automation-: workflow-2-review-regeneration",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-2-review-regeneration.json"
+    },
+    "https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-3-publishing-distribution.json": {
+      "category": "content_workflow",
+      "complexity": "complex",
+      "confidence": "medium",
+      "description": "Набор из трёх связанных n8n-workflow для полного цикла автоматизации публикаций в социальных сетях: генерация контента, ревью и перегенерация при необходимости, финальная публикация и дистрибуция. Подходит для SMM-менеджеров и контент-команд.",
+      "final_score": 6.6,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "Data Table",
+        "LinkedIn"
+      ],
+      "metric": "Время от идеи до публикации поста; количество постов, опубликованных без ручного вмешательства",
+      "node_count": 50,
+      "promoted_from_watch": false,
+      "repo_full_name": "arturolg20/n8n-social-media-automation-",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 6,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "workflow-3-publishing-distribution"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать workflow-1-content-generation.json",
+        "Импортировать в n8n и изучить node-граф",
+        "Настроить AI-credential для генерации контента",
+        "Запустить тест на одном посте",
+        "После успеха импортировать workflow-2 и workflow-3"
+      ],
+      "title": "arturolg20/n8n-social-media-automation-: workflow-3-publishing-distribution",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-3-publishing-distribution.json"
+    },
     "https://github.com/arvinmoj/Sentinel-Agent/blob/main/workflows/trading-bot.json": {
       "category": "data_workflow",
       "complexity": "medium",
@@ -9622,6 +9827,87 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/inthecyber-group/securityonion-n8n-workflows"
+    },
+    "https://github.com/itechdavaor/medflow-ai/blob/main/n8n/MedFlow AI — Appointment Scheduler.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Два n8n-workflow для медицинской клиники: автоматическое планирование приёмов пациентов и последующие follow-up напоминания. Ориентирован на небольшие медицинские практики, желающие автоматизировать административную работу.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "Supabase",
+        "Google Calendar",
+        "Gmail"
+      ],
+      "metric": "Сокращение пропущенных визитов после внедрения follow-up автоматизации",
+      "node_count": 12,
+      "promoted_from_watch": false,
+      "repo_full_name": "itechdavaor/medflow-ai",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "MedFlow AI — Appointment Scheduler"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON Appointment Scheduler из репо",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить credentials: календарь (Google Calendar / Calendly), мессенджер для уведомлений",
+        "Запустить с тестовой записью пациента",
+        "Проверить создание события и отправку подтверждения"
+      ],
+      "title": "itechdavaor/medflow-ai: MedFlow AI — Appointment Scheduler",
+      "tool": "n8n",
+      "trigger_type": "webhook",
+      "url": "https://github.com/itechdavaor/medflow-ai/blob/main/n8n/MedFlow AI — Appointment Scheduler.json"
+    },
+    "https://github.com/itechdavaor/medflow-ai/blob/main/n8n/MedFlow AI — Follow-up Automation.json": {
+      "category": "general_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "Два n8n-workflow для медицинской клиники: автоматическое планирование приёмов пациентов и последующие follow-up напоминания. Ориентирован на небольшие медицинские практики, желающие автоматизировать административную работу.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "Supabase",
+        "Gmail"
+      ],
+      "metric": "Сокращение пропущенных визитов после внедрения follow-up автоматизации",
+      "node_count": 7,
+      "promoted_from_watch": false,
+      "repo_full_name": "itechdavaor/medflow-ai",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 4,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "MedFlow AI — Follow-up Automation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Скачать JSON Appointment Scheduler из репо",
+        "Импортировать в n8n через Import Workflow",
+        "Настроить credentials: календарь (Google Calendar / Calendly), мессенджер для уведомлений",
+        "Запустить с тестовой записью пациента",
+        "Проверить создание события и отправку подтверждения"
+      ],
+      "title": "itechdavaor/medflow-ai: MedFlow AI — Follow-up Automation",
+      "tool": "n8n",
+      "trigger_type": "schedule",
+      "url": "https://github.com/itechdavaor/medflow-ai/blob/main/n8n/MedFlow AI — Follow-up Automation.json"
     },
     "https://github.com/jipraks/n8n-templates/blob/main/ai-accounting-staff.json": {
       "category": "web_workflow",
@@ -14671,6 +14957,46 @@
       "tool": "n8n",
       "trigger_type": "webhook",
       "url": "https://github.com/tecno-consultores/ISP-Copilot/blob/main/workflows/wf_event_controller_zabbix.json"
+    },
+    "https://github.com/thangnch/MIAI_n8n_dockercompose/blob/main/gen_llm_sd_oneshot.json": {
+      "category": "photo_workflow",
+      "complexity": "medium",
+      "confidence": "medium",
+      "description": "n8n-workflow для одношагового (oneshot) создания изображений через связку LLM и Stable Diffusion. Репозиторий включает docker-compose для развёртывания всего стека локально.",
+      "final_score": 6.2,
+      "first_recommended": "2026-07-23",
+      "integrations": [
+        "OpenAI",
+        "WordPress"
+      ],
+      "metric": "Время генерации одного изображения от текстового запроса до файла",
+      "node_count": 9,
+      "promoted_from_watch": false,
+      "repo_full_name": "thangnch/MIAI_n8n_dockercompose",
+      "scores": {
+        "business_impact": 6,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 8,
+        "traction": 5,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "gen_llm_sd_oneshot"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Клонировать репо и запустить docker-compose up",
+        "Дождаться старта n8n и Stable Diffusion",
+        "Импортировать gen_llm_sd_oneshot.json в n8n",
+        "Настроить LLM credential и URL Stable Diffusion",
+        "Запустить workflow с тестовым текстовым запросом"
+      ],
+      "title": "thangnch/MIAI_n8n_dockercompose: gen_llm_sd_oneshot",
+      "tool": "n8n",
+      "trigger_type": "manual",
+      "url": "https://github.com/thangnch/MIAI_n8n_dockercompose/blob/main/gen_llm_sd_oneshot.json"
     },
     "https://github.com/theaiautomators/insights-lm-public": {
       "category": "content_workflow",

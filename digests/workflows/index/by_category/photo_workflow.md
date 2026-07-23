@@ -1,9 +1,10 @@
 # Recommended Claude Skills — photo_workflow
 
-Total: 27
+Total: 28
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-23 | [thangnch/MIAI_n8n_dockercompose: gen_llm_sd_oneshot](https://github.com/thangnch/MIAI_n8n_dockercompose/blob/main/gen_llm_sd_oneshot.json) | gen_llm_sd_oneshot |  | 6.2 | medium | Клонировать репо и запустить docker-compose up |
 | 2026-07-05 | [tushar2704/N8N-Agents: breaking_news_summarizer](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/breaking_news_summarizer.json) | breaking_news_summarizer |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
 | 2026-07-05 | [tushar2704/N8N-Agents: blood_test_email_alert](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blood_test_email_alert.json) | blood_test_email_alert |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |
 | 2026-07-05 | [tushar2704/N8N-Agents: blog_comment_discord](https://github.com/tushar2704/N8N-Agents/blob/main/n8n/blog_comment_discord.json) | blog_comment_discord |  | 6.0 | medium | Скачать unsplash_to_pinterest.json |

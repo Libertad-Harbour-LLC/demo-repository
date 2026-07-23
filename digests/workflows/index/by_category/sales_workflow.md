@@ -1,9 +1,11 @@
 # Recommended Claude Skills — sales_workflow
 
-Total: 59
+Total: 61
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-23 | [AviVAvi/AI-Lead-Qualification-Sales-Automation: Email Intake](https://github.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/blob/main/Email Intake.json) | Email Intake |  | 7.5 | medium | Скачать JSON: https://raw.githubusercontent.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/main/AI Lead Qualifica... |
+| 2026-07-23 | [AviVAvi/AI-Lead-Qualification-Sales-Automation: AI Lead Qualification & Sales Automation System](https://github.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/blob/main/AI Lead Qualification & Sales Automation System.json) | AI Lead Qualification & Sales Automation System |  | 7.5 | medium | Скачать JSON: https://raw.githubusercontent.com/AviVAvi/AI-Lead-Qualification-Sales-Automation/main/AI Lead Qualifica... |
 | 2026-07-22 | [weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks: workflow-template](https://github.com/weblineindia/n8n-Score-and-triage-inbound-leads-with-Groq-Slack-Google-Sheets-and-Google-Tasks/blob/main/workflow-template.json) | workflow-template |  | 6.5 | medium | Скачать workflow-template.json |
 | 2026-07-22 | [angelus213/foundry-api-workflows: rag-content-ingestion](https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/rag-content-ingestion.json) | rag-content-ingestion |  | 5.8 | medium | Скачать local-sales-intelligence.json из папки n8n/ |
 | 2026-07-22 | [angelus213/foundry-api-workflows: local-sales-intelligence](https://github.com/angelus213/foundry-api-workflows/blob/main/n8n/local-sales-intelligence.json) | local-sales-intelligence |  | 5.8 | medium | Скачать local-sales-intelligence.json из папки n8n/ |

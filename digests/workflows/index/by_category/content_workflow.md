@@ -1,9 +1,12 @@
 # Recommended Claude Skills — content_workflow
 
-Total: 21
+Total: 24
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-23 | [arturolg20/n8n-social-media-automation-: workflow-3-publishing-distribution](https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-3-publishing-distribution.json) | workflow-3-publishing-distribution |  | 6.6 | medium | Скачать workflow-1-content-generation.json |
+| 2026-07-23 | [arturolg20/n8n-social-media-automation-: workflow-2-review-regeneration](https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-2-review-regeneration.json) | workflow-2-review-regeneration |  | 6.6 | medium | Скачать workflow-1-content-generation.json |
+| 2026-07-23 | [arturolg20/n8n-social-media-automation-: workflow-1-content-generation](https://github.com/arturolg20/n8n-social-media-automation-/blob/main/workflow-1-content-generation.json) | workflow-1-content-generation |  | 6.6 | medium | Скачать workflow-1-content-generation.json |
 | 2026-07-19 | [Virajgosavi1810/n8n-create-publish-blog-wordpress: Create___Publish_Blog_Post_on_WordPress](https://github.com/Virajgosavi1810/n8n-create-publish-blog-wordpress/blob/main/Create___Publish_Blog_Post_on_WordPress.json) | Create___Publish_Blog_Post_on_WordPress |  | 6.2 | medium | Скачать JSON Create___Publish_Blog_Post_on_WordPress.json |
 | 2026-07-18 | [ifra489/AI-Daily-News-Summarizer-using-n8n: AI Daily News Summarizer](https://github.com/ifra489/AI-Daily-News-Summarizer-using-n8n/blob/main/AI Daily News Summarizer.json) | AI Daily News Summarizer |  | 5.9 | medium | Скачать JSON: 'AI Daily News Summarizer.json' |
 | 2026-07-04 | [PedroTomazeti/wordpress-auto-post-openai: WORDPRESS_AUTO_POST_OPENAI_V3](https://github.com/PedroTomazeti/wordpress-auto-post-openai/blob/main/WORDPRESS_AUTO_POST_OPENAI_V3.json) | WORDPRESS_AUTO_POST_OPENAI_V3 |  | 5.6 | medium | Скачать WORDPRESS_AUTO_POST_OPENAI_V3.json |
