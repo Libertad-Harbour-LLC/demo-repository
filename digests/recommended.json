@@ -1991,6 +1991,36 @@
       "title": "Neetx/ai-research-radar",
       "url": "https://github.com/Neetx/ai-research-radar/tree/main/.claude/skills"
     },
+    "https://github.com/NevaMind-AI/memU/blob/main/SKILL.md": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Skill memU от NevaMind-AI для управления памятью агента — хранение и извлечение контекста между сессиями. Один SKILL.md в корне репо, 14k звёзд.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-23",
+      "metric": "Сохраняется ли контекст между сессиями Claude Code",
+      "promoted_from_watch": false,
+      "repo_full_name": "NevaMind-AI/memU",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "memU"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/NevaMind-AI/memU && cp SKILL.md ~/.claude/skills/memU/SKILL.md (создать папку)",
+        "Запустить Claude Code и сказать: 'Запомни, что я предпочитаю TypeScript и работаю над проектом X'",
+        "Начать новую сессию и проверить: 'Что ты знаешь о моих предпочтениях?'"
+      ],
+      "title": "NevaMind-AI/memU",
+      "url": "https://github.com/NevaMind-AI/memU/blob/main/SKILL.md"
+    },
     "https://github.com/NevaMind-AI/memU/tree/main/.claude/skills/memu": {
       "category": "general_skill",
       "confidence": "high",
@@ -2987,6 +3017,39 @@
       ],
       "title": "affaan-m/everything-claude-code",
       "url": "https://github.com/affaan-m/everything-claude-code/tree/main/.claude/skills"
+    },
+    "https://github.com/agricidaniel/claude-seo": {
+      "category": "marketing_skill",
+      "confidence": "high",
+      "description": "Набор из 4 SEO-ориентированных skills от agricidaniel: аудит, генерация sitemap, анализ конкурентов. 17k установок в реестре skills.sh — реальная аудитория SEO-специалистов.",
+      "final_score": 7.1,
+      "first_recommended": "2026-07-23",
+      "metric": "Количество конкретных SEO-рекомендаций с приоритетами vs. generic советы без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "agricidaniel/claude-seo",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 4,
+      "skills_in_repo": [
+        "seo",
+        "seo-audit",
+        "seo-sitemap",
+        "seo-competitor-pages"
+      ],
+      "stars": null,
+      "test_steps": [
+        "skills install agricidaniel/claude-seo (или клонировать репо и скопировать нужный skill)",
+        "Открыть Claude Code в директории с веб-проектом",
+        "Промт: 'Используй seo-audit skill, проанализируй мою главную страницу и дай top-10 улучшений'"
+      ],
+      "title": "agricidaniel/claude-seo",
+      "url": "https://github.com/agricidaniel/claude-seo"
     },
     "https://github.com/ahumblenerd/tour-of-agents/tree/master/.claude/skills": {
       "category": "marketing_skill",
@@ -5267,6 +5330,36 @@
       "title": "firebase/agent-skills",
       "url": "https://github.com/firebase/agent-skills"
     },
+    "https://github.com/firecrawl/cli": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Skill от команды Firecrawl для интеграции веб-скрейпинга и обхода сайтов прямо из Claude Code. 74k установок в реестре подтверждают востребованность у исследователей и data-инженеров.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-23",
+      "metric": "Успешность извлечения веб-контента без ручного copy-paste",
+      "promoted_from_watch": false,
+      "repo_full_name": "firecrawl/cli",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 8,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "firecrawl-agent"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить: skills install firecrawl/cli или скопировать skill из репо в .claude/skills/firecrawl-agent/",
+        "Убедиться, что есть FIRECRAWL_API_KEY в env (бесплатный tier доступен)",
+        "В Claude Code: 'Используй firecrawl-agent skill, scrape главную страницу https://example.com и дай мне структурированное резюме контента'"
+      ],
+      "title": "firecrawl/cli",
+      "url": "https://github.com/firecrawl/cli"
+    },
     "https://github.com/firecrawl/firecrawl-workflows": {
       "category": "marketing_skill",
       "confidence": "high",
@@ -5817,6 +5910,36 @@
       ],
       "title": "getkyo/kyo",
       "url": "https://github.com/getkyo/kyo/tree/main/.claude/skills"
+    },
+    "https://github.com/getpaperclipai/paperclip": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Skill из реестра skills.sh от команды Paperclip AI с фокусом на design-guide. Лидер по установкам на платформе — 157k installs, что говорит о реальном использовании среди дизайнеров и продуктовых команд.",
+      "final_score": 8.0,
+      "first_recommended": "2026-07-23",
+      "metric": "Насколько точно skill применяет дизайн-паттерны без дополнительных инструкций",
+      "promoted_from_watch": false,
+      "repo_full_name": "getpaperclipai/paperclip",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 7,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "design-guide"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить skill: skills install getpaperclipai/paperclip (или клонировать репо и скопировать SKILL.md в .claude/skills/design-guide/)",
+        "Открыть Claude Code в своём дизайн-проекте",
+        "Попросить: 'Используй skill design-guide, предложи цветовую схему и типографику для landing page стартапа'"
+      ],
+      "title": "getpaperclipai/paperclip",
+      "url": "https://github.com/getpaperclipai/paperclip"
     },
     "https://github.com/getpaseo/paseo/tree/main/skills/paseo": {
       "category": "general_skill",
@@ -7881,6 +8004,44 @@
       "title": "nextlevelbuilder/ui-ux-pro-max-skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills"
     },
+    "https://github.com/nexu-io/html-anything": {
+      "category": "design_skill",
+      "confidence": "medium",
+      "description": "Репозиторий html-anything от nexu-io с 50 HTML-шаблонами в формате skills: презентации, отчёты, email-рассылки, карточки для соцсетей, дашборды. Ориентирован на контент и дизайн без кода.",
+      "final_score": 7.2,
+      "first_recommended": "2026-07-23",
+      "metric": "Качество и готовность сгенерированного HTML pitch deck без доработок",
+      "promoted_from_watch": false,
+      "repo_full_name": "nexu-io/html-anything",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 6,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "deck-pitch",
+        "deck-product-launch",
+        "email-marketing",
+        "blog-post",
+        "card-twitter",
+        "deck-simple",
+        "finance-report",
+        "dashboard",
+        "data-report"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/nexu-io/html-anything && cp -r html-anything/next/src/lib/templates/skills/deck-pitch ./.claude/skills/",
+        "Открыть Claude Code",
+        "Промт: 'Используй deck-pitch skill и создай pitch deck для моего SaaS-продукта X с 5 слайдами'"
+      ],
+      "title": "nexu-io/html-anything",
+      "url": "https://github.com/nexu-io/html-anything"
+    },
     "https://github.com/nexu-io/html-anything/tree/main/next/src/lib/templates/skills": {
       "category": "design_skill",
       "confidence": "medium",
@@ -9533,6 +9694,36 @@
       ],
       "title": "spencermarx/open-code-review",
       "url": "https://github.com/spencermarx/open-code-review/tree/main/.claude/skills"
+    },
+    "https://github.com/squirrelscan/skills": {
+      "category": "marketing_skill",
+      "confidence": "high",
+      "description": "Skill для SEO и технического аудита сайтов от команды SquirrelScan. 65k установок — третий по популярности skill в реестре за день, ориентирован на маркетологов и SEO-специалистов.",
+      "final_score": 7.6,
+      "first_recommended": "2026-07-23",
+      "metric": "Количество найденных реальных SEO/технических проблем vs. ручная проверка",
+      "promoted_from_watch": false,
+      "repo_full_name": "squirrelscan/skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 7,
+        "testability": 7,
+        "traction": 8,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "audit-website"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить: skills install squirrelscan/skills",
+        "Запустить Claude Code в рабочем директории",
+        "Промт: 'Используй audit-website skill, проведи аудит https://mysite.com и дай приоритизированный список проблем'"
+      ],
+      "title": "squirrelscan/skills",
+      "url": "https://github.com/squirrelscan/skills"
     },
     "https://github.com/srid/emanote/tree/master/.claude/skills": {
       "category": "vibe_coding_skill",

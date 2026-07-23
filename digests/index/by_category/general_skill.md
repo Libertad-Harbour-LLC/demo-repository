@@ -1,9 +1,11 @@
 # Recommended Claude Skills — general_skill
 
-Total: 70
+Total: 72
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-23 | [firecrawl/cli](https://github.com/firecrawl/cli) | firecrawl-agent |  | 7.9 | high | Установить: skills install firecrawl/cli или скопировать skill из репо в .claude/skills/firecrawl-agent/ |
+| 2026-07-23 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU/blob/main/SKILL.md) | memU |  | 7.1 | high | git clone https://github.com/NevaMind-AI/memU && cp SKILL.md ~/.claude/skills/memU/SKILL.md (создать папку) |
 | 2026-07-22 | [openclaw/gogcli](https://github.com/openclaw/gogcli) | gog-gmail, gog-calendar, gog-drive, +8 more |  | 7.4 | high | git clone https://github.com/openclaw/gogcli |
 | 2026-07-22 | [nanocoai/nanoclaw](https://github.com/nanocoai/nanoclaw) | add-slack, add-telegram, add-discord, +7 more |  | 7.5 | high | git clone https://github.com/nanocoai/nanoclaw |
 | 2026-07-22 | [larksuite/cli](https://github.com/larksuite/cli) | lark-vc-agent |  | 8.1 | high | Установить через Claude Code: /skills install larksuite/cli (или найти SKILL.md в репо) |

@@ -1,9 +1,11 @@
 # Recommended Claude Skills — design_skill
 
-Total: 11
+Total: 13
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-23 | [nexu-io/html-anything](https://github.com/nexu-io/html-anything) | deck-pitch, deck-product-launch, email-marketing, +6 more |  | 7.2 | medium | git clone https://github.com/nexu-io/html-anything && cp -r html-anything/next/src/lib/templates/skills/deck-pitch ./... |
+| 2026-07-23 | [getpaperclipai/paperclip](https://github.com/getpaperclipai/paperclip) | design-guide |  | 8.0 | high | Установить skill: skills install getpaperclipai/paperclip (или клонировать репо и скопировать SKILL.md в .claude/skil... |
 | 2026-07-21 | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI/tree/main/skills) | OfficeCLI, morph-ppt-3d, morph-ppt, +9 more |  | 7.2 | high | git clone https://github.com/iOfficeAI/OfficeCLI && cp -r OfficeCLI/skills/officecli-pptx .claude/skills/ |
 | 2026-07-20 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | design-md, stitch-design, taste-design |  | 7.5 | high | Открыть https://github.com/google-labs-code/stitch-skills и найти папки skills/ |
 | 2026-07-19 | [emilkowalski/skills](https://github.com/emilkowalski/skills) | emil-design-eng |  | 8.5 | high | Установить через skills.sh: запустить `skills install emilkowalski/skills` или клонировать репо и скопировать SKILL.m... |

@@ -1,9 +1,11 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 25
+Total: 27
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-23 | [squirrelscan/skills](https://github.com/squirrelscan/skills) | audit-website |  | 7.6 | high | Установить: skills install squirrelscan/skills |
+| 2026-07-23 | [agricidaniel/claude-seo](https://github.com/agricidaniel/claude-seo) | seo, seo-audit, seo-sitemap, +1 more |  | 7.1 | high | skills install agricidaniel/claude-seo (или клонировать репо и скопировать нужный skill) |
 | 2026-07-21 | [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude/tree/main/skills) | geo-audit, geo-brand-mentions, geo-citability, +12 more |  | 7.4 | high | git clone https://github.com/zubair-trabzada/geo-seo-claude && cp -r geo-seo-claude/skills/geo-audit .claude/skills/ |
 | 2026-07-19 | [firecrawl/firecrawl-workflows](https://github.com/firecrawl/firecrawl-workflows) | firecrawl-website-design-clone, firecrawl-seo-audit |  | 8.1 | high | Установить: `skills install firecrawl/firecrawl-workflows` или скопировать SKILL.md в `.claude/skills/` |
 | 2026-07-16 | [aaron-he-zhu/seo-geo-claude-skills](https://github.com/aaron-he-zhu/seo-geo-claude-skills) | backlink-analyzer, seo-content-writer, technical-seo-checker, +5 more |  | 7.8 | high | Открыть https://github.com/aaron-he-zhu/seo-geo-claude-skills и найти структуру skills |

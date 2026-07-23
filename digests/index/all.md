@@ -1,11 +1,17 @@
 # Recommended Claude Skills — all time
 
-Total: 289
+Total: 295
 
 ## July 2026
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-23 | [squirrelscan/skills](https://github.com/squirrelscan/skills) | audit-website |  | 7.6 | high | Установить: skills install squirrelscan/skills |
+| 2026-07-23 | [nexu-io/html-anything](https://github.com/nexu-io/html-anything) | deck-pitch, deck-product-launch, email-marketing, +6 more |  | 7.2 | medium | git clone https://github.com/nexu-io/html-anything && cp -r html-anything/next/src/lib/templates/skills/deck-pitch ./... |
+| 2026-07-23 | [getpaperclipai/paperclip](https://github.com/getpaperclipai/paperclip) | design-guide |  | 8.0 | high | Установить skill: skills install getpaperclipai/paperclip (или клонировать репо и скопировать SKILL.md в .claude/skil... |
+| 2026-07-23 | [firecrawl/cli](https://github.com/firecrawl/cli) | firecrawl-agent |  | 7.9 | high | Установить: skills install firecrawl/cli или скопировать skill из репо в .claude/skills/firecrawl-agent/ |
+| 2026-07-23 | [agricidaniel/claude-seo](https://github.com/agricidaniel/claude-seo) | seo, seo-audit, seo-sitemap, +1 more |  | 7.1 | high | skills install agricidaniel/claude-seo (или клонировать репо и скопировать нужный skill) |
+| 2026-07-23 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU/blob/main/SKILL.md) | memU |  | 7.1 | high | git clone https://github.com/NevaMind-AI/memU && cp SKILL.md ~/.claude/skills/memU/SKILL.md (создать папку) |
 | 2026-07-22 | [openclaw/gogcli](https://github.com/openclaw/gogcli) | gog-gmail, gog-calendar, gog-drive, +8 more |  | 7.4 | high | git clone https://github.com/openclaw/gogcli |
 | 2026-07-22 | [nanocoai/nanoclaw](https://github.com/nanocoai/nanoclaw) | add-slack, add-telegram, add-discord, +7 more |  | 7.5 | high | git clone https://github.com/nanocoai/nanoclaw |
 | 2026-07-22 | [larksuite/cli](https://github.com/larksuite/cli) | lark-vc-agent |  | 8.1 | high | Установить через Claude Code: /skills install larksuite/cli (или найти SKILL.md в репо) |
