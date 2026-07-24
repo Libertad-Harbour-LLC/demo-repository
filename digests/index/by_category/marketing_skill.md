@@ -1,9 +1,10 @@
 # Recommended Claude Skills — marketing_skill
 
-Total: 27
+Total: 28
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-24 | [resciencelab/opc-skills](https://github.com/resciencelab/opc-skills) | seo-geo |  | 7.5 | high | Установить через реестр: claude skill install resciencelab/opc-skills или клонировать репо |
 | 2026-07-23 | [squirrelscan/skills](https://github.com/squirrelscan/skills) | audit-website |  | 7.6 | high | Установить: skills install squirrelscan/skills |
 | 2026-07-23 | [agricidaniel/claude-seo](https://github.com/agricidaniel/claude-seo) | seo, seo-audit, seo-sitemap, +1 more |  | 7.1 | high | skills install agricidaniel/claude-seo (или клонировать репо и скопировать нужный skill) |
 | 2026-07-21 | [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude/tree/main/skills) | geo-audit, geo-brand-mentions, geo-citability, +12 more |  | 7.4 | high | git clone https://github.com/zubair-trabzada/geo-seo-claude && cp -r geo-seo-claude/skills/geo-audit .claude/skills/ |

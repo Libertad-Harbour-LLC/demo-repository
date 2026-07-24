@@ -1,9 +1,10 @@
 # Recommended Claude Skills — vibe_coding_skill
 
-Total: 160
+Total: 161
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-24 | [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks/tree/main/Anthropic/Claude%20Code/bundled-skills) | claude-api, claude-code-docs, code-review, +4 more |  | 7.9 | high | git clone https://github.com/asgeirtj/system_prompts_leaks |
 | 2026-07-19 | [firebase/agent-skills](https://github.com/firebase/agent-skills) | firebase-basics |  | 8.5 | high | Установить: `skills install firebase/agent-skills` или скопировать SKILL.md в `.claude/skills/firebase-basics/` |
 | 2026-07-18 | [supabase/agent-skills](https://github.com/supabase/agent-skills) | supabase-postgres-best-practices, supabase |  | 8.5 | high | Открыть Claude Code в Supabase-проекте (или создать тестовый Next.js + Supabase проект) |
 | 2026-07-17 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | agent-browser |  | 8.5 | high | Установить: skills.sh install vercel-labs/agent-browser или склонировать и скопировать SKILL.md в .claude/skills/agen... |

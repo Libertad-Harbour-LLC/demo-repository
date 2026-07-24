@@ -161,6 +161,50 @@
       "title": "AgriciDaniel/claude-ads",
       "url": "https://github.com/AgriciDaniel/claude-ads"
     },
+    "https://github.com/AgriciDaniel/claude-obsidian/tree/main/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Специализированные skills для работы с Obsidian через Claude Code: ingestion заметок, canvas-диаграммы, wiki-операции, поиск и структурирование знаний в Obsidian vault.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-24",
+      "metric": "Количество заметок успешно проиндексированных и доступных через wiki-query",
+      "promoted_from_watch": false,
+      "repo_full_name": "AgriciDaniel/claude-obsidian",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 6,
+        "utility": 9
+      },
+      "skills_count": 15,
+      "skills_in_repo": [
+        "autoresearch",
+        "canvas",
+        "defuddle",
+        "obsidian-bases",
+        "obsidian-markdown",
+        "save",
+        "think",
+        "wiki-cli",
+        "wiki-fold",
+        "wiki-ingest",
+        "wiki-lint",
+        "wiki-mode",
+        "wiki-query",
+        "wiki-retrieve",
+        "wiki"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/AgriciDaniel/claude-obsidian",
+        "Скопировать skills/wiki-ingest/ и skills/wiki-query/ в .claude/skills/ внутри вашего Obsidian vault",
+        "Открыть Claude Code в папке vault и попросить: используй skill wiki-ingest чтобы проиндексировать все заметки в папке Projects/"
+      ],
+      "title": "AgriciDaniel/claude-obsidian",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian/tree/main/skills"
+    },
     "https://github.com/AgriciDaniel/claude-seo": {
       "category": "marketing_skill",
       "confidence": "high",
@@ -1834,6 +1878,44 @@
       "title": "LeadGrowGTM/research-process-builder",
       "url": "https://github.com/LeadGrowGTM/research-process-builder/tree/master/.claude/skills"
     },
+    "https://github.com/Leonxlnx/taste-skill/tree/main/skills": {
+      "category": "design_skill",
+      "confidence": "high",
+      "description": "Коллекция design-oriented skills для Claude Code: создание brandkit, генерация UI в разных стилях (brutalist, minimalist), image-to-code конвертация и imagegen для мобильного и веб-фронтенда.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-24",
+      "metric": "Насколько сгенерированный UI соответствует заявленному стилю (brutalist/minimalist) без дополнительных инструкций",
+      "promoted_from_watch": false,
+      "repo_full_name": "Leonxlnx/taste-skill",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 8,
+        "traction": 7,
+        "utility": 8
+      },
+      "skills_count": 9,
+      "skills_in_repo": [
+        "brandkit",
+        "brutalist-skill",
+        "gpt-tasteskill",
+        "image-to-code-skill",
+        "imagegen-frontend-mobile",
+        "imagegen-frontend-web",
+        "minimalist-skill",
+        "redesign-skill",
+        "taste-skill"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Leonxlnx/taste-skill",
+        "Скопировать skills/brutalist-skill/ или skills/minimalist-skill/ в .claude/skills/ вашего фронтенд-проекта",
+        "Попросить Claude Code: используй skill brutalist-skill и создай лендинг для SaaS-продукта"
+      ],
+      "title": "Leonxlnx/taste-skill",
+      "url": "https://github.com/Leonxlnx/taste-skill/tree/main/skills"
+    },
     "https://github.com/LiorCohen/sdd/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "medium",
@@ -2126,6 +2208,45 @@
       ],
       "title": "OpenCoworkAI/open-cowork",
       "url": "https://github.com/OpenCoworkAI/open-cowork/tree/main/.claude/skills"
+    },
+    "https://github.com/Orchestra-Research/AI-Research-SKILLs": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Коллекция из 50 skills для AI/ML исследователей: архитектуры моделей, fine-tuning фреймворки, distributed training, safety alignment и оптимизация. Охватывает весь стек от nanogpt до megatron-core.",
+      "final_score": 7.7,
+      "first_recommended": "2026-07-24",
+      "metric": "Точность и полнота конфигурации, которую генерирует Claude Code с учётом skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "Orchestra-Research/AI-Research-SKILLs",
+      "scores": {
+        "business_impact": 9,
+        "noise_risk": 2,
+        "novelty": 9,
+        "testability": 8,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 10,
+      "skills_in_repo": [
+        "0-autoresearch-skill",
+        "litgpt",
+        "mamba",
+        "axolotl",
+        "unsloth",
+        "verl",
+        "deepspeed",
+        "flash-attention",
+        "llamaguard",
+        "nemo-guardrails"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/Orchestra-Research/AI-Research-SKILLs",
+        "Скопировать папку нужного skill (например 03-fine-tuning/axolotl/) в .claude/skills/axolotl/ вашего ML-проекта",
+        "Запустить Claude Code и попросить: используй skill axolotl чтобы настроить fine-tuning Llama-3 с LoRA"
+      ],
+      "title": "Orchestra-Research/AI-Research-SKILLs",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
     },
     "https://github.com/OutSystems/docs-product/tree/master/.claude/skills": {
       "category": "content_skill",
@@ -3665,6 +3786,43 @@
       "title": "arvindrk/extract-design-system",
       "url": "https://github.com/arvindrk/extract-design-system"
     },
+    "https://github.com/asgeirtj/system_prompts_leaks/tree/main/Anthropic/Claude%20Code/bundled-skills": {
+      "category": "vibe_coding_skill",
+      "confidence": "high",
+      "description": "Репозиторий содержит утечки системных промптов AI-систем, в том числе официальные bundled-skills от Anthropic для Claude Code. Включает skills для code review, dataviz, deep research и design sync — именно те, что Anthropic использует внутри продукта.",
+      "final_score": 7.9,
+      "first_recommended": "2026-07-24",
+      "metric": "Качество и глубина ответа при использовании официального skill vs без него",
+      "promoted_from_watch": false,
+      "repo_full_name": "asgeirtj/system_prompts_leaks",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 9,
+        "testability": 9,
+        "traction": 7,
+        "utility": 9
+      },
+      "skills_count": 7,
+      "skills_in_repo": [
+        "claude-api",
+        "claude-code-docs",
+        "code-review",
+        "dataviz",
+        "deep-research",
+        "design-sync",
+        "run-skill-generator"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/asgeirtj/system_prompts_leaks",
+        "Перейти в папку Anthropic/Claude\\ Code/bundled-skills/ и изучить SKILL.md каждого skill",
+        "Скопировать нужный skill (например deep-research) в .claude/skills/deep-research/ вашего проекта",
+        "Запустить Claude Code и дать команду: используй skill deep-research чтобы исследовать тему X"
+      ],
+      "title": "asgeirtj/system_prompts_leaks",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks/tree/main/Anthropic/Claude%20Code/bundled-skills"
+    },
     "https://github.com/atopile/atopile/tree/main/.claude/skills": {
       "added_manually": true,
       "category": "general_skill",
@@ -4847,6 +5005,36 @@
       ],
       "title": "divinevideo/divine-mobile",
       "url": "https://github.com/divinevideo/divine-mobile/tree/main/.claude/skills"
+    },
+    "https://github.com/doany-skills/skills": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Skill для автоматизации работы с Reddit через Claude Code: размещение постов, мониторинг тредов, взаимодействие с аудиторией. Лидер по числу установок в реестре skills.sh сегодня (42k+).",
+      "final_score": 7.2,
+      "first_recommended": "2026-07-24",
+      "metric": "Количество релевантных постов найденных и качество предложенных ответов",
+      "promoted_from_watch": false,
+      "repo_full_name": "doany-skills/skills",
+      "scores": {
+        "business_impact": 7,
+        "noise_risk": 4,
+        "novelty": 8,
+        "testability": 5,
+        "traction": 9,
+        "utility": 7
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "reddit-automation"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить через реестр: claude skill install doany-skills/skills или клонировать репо",
+        "Настроить SKILL.md: добавить Reddit API credentials в переменные окружения",
+        "Попросить Claude Code: используй skill reddit-automation чтобы мониторить посты про [ваш продукт] и предложить ответы"
+      ],
+      "title": "doany-skills/skills",
+      "url": "https://github.com/doany-skills/skills"
     },
     "https://github.com/doccker/cc-use-exp/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
@@ -9122,6 +9310,36 @@
       "title": "regent-vcs/re_gent",
       "url": "https://github.com/regent-vcs/re_gent/tree/main/.claude/skills"
     },
+    "https://github.com/resciencelab/opc-skills": {
+      "category": "marketing_skill",
+      "confidence": "high",
+      "description": "Skill для SEO с акцентом на GEO (Generative Engine Optimization) — оптимизацию контента под AI-поисковики. Установлен 36k+ раз через реестр skills.sh, что указывает на высокий практический спрос.",
+      "final_score": 7.5,
+      "first_recommended": "2026-07-24",
+      "metric": "Количество конкретных изменений (структурных + семантических) в статье до и после применения skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "resciencelab/opc-skills",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 3,
+        "novelty": 8,
+        "testability": 5,
+        "traction": 9,
+        "utility": 8
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "seo-geo"
+      ],
+      "stars": null,
+      "test_steps": [
+        "Установить через реестр: claude skill install resciencelab/opc-skills или клонировать репо",
+        "Скопировать skill seo-geo в .claude/skills/seo-geo/ вашего проекта",
+        "Дать Claude Code существующую статью и попросить: используй skill seo-geo чтобы оптимизировать её для AI-поисковиков"
+      ],
+      "title": "resciencelab/opc-skills",
+      "url": "https://github.com/resciencelab/opc-skills"
+    },
     "https://github.com/rjmurillo/ai-agents/tree/main/.claude/skills": {
       "category": "vibe_coding_skill",
       "confidence": "high",
@@ -9807,6 +10025,36 @@
       ],
       "title": "srid/haskell-flake",
       "url": "https://github.com/srid/haskell-flake/tree/master/.claude/skills"
+    },
+    "https://github.com/stas00/ml-engineering/blob/master/SKILL.md": {
+      "category": "general_skill",
+      "confidence": "high",
+      "description": "Skill на основе книги ML Engineering от бывшего инженера HuggingFace. SKILL.md упаковывает обширные знания о distributed training, debugging, performance оптимизации в единый контекст для Claude Code.",
+      "final_score": 7.3,
+      "first_recommended": "2026-07-24",
+      "metric": "Глубина и конкретность диагностики vs ответ Claude Code без skill",
+      "promoted_from_watch": false,
+      "repo_full_name": "stas00/ml-engineering",
+      "scores": {
+        "business_impact": 8,
+        "noise_risk": 2,
+        "novelty": 8,
+        "testability": 9,
+        "traction": 5,
+        "utility": 9
+      },
+      "skills_count": 1,
+      "skills_in_repo": [
+        "ml-engineering"
+      ],
+      "stars": null,
+      "test_steps": [
+        "git clone https://github.com/stas00/ml-engineering",
+        "Скопировать SKILL.md как .claude/skills/ml-engineering/SKILL.md в ваш ML-проект",
+        "Запустить Claude Code и попросить: используй skill ml-engineering чтобы диагностировать почему обучение модели зависает на 2-м GPU"
+      ],
+      "title": "stas00/ml-engineering",
+      "url": "https://github.com/stas00/ml-engineering/blob/master/SKILL.md"
     },
     "https://github.com/staskh/trading_skills/tree/main/.claude/skills": {
       "category": "general_skill",

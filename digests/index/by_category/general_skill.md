@@ -1,9 +1,13 @@
 # Recommended Claude Skills — general_skill
 
-Total: 72
+Total: 76
 
 | Date | Repo | Skills | Stars | Final Score | Confidence | First Test |
 |---|---|---|---|---|---|---|
+| 2026-07-24 | [stas00/ml-engineering](https://github.com/stas00/ml-engineering/blob/master/SKILL.md) | ml-engineering |  | 7.3 | high | git clone https://github.com/stas00/ml-engineering |
+| 2026-07-24 | [doany-skills/skills](https://github.com/doany-skills/skills) | reddit-automation |  | 7.2 | high | Установить через реестр: claude skill install doany-skills/skills или клонировать репо |
+| 2026-07-24 | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | 0-autoresearch-skill, litgpt, mamba, +7 more |  | 7.7 | high | git clone https://github.com/Orchestra-Research/AI-Research-SKILLs |
+| 2026-07-24 | [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian/tree/main/skills) | autoresearch, canvas, defuddle, +12 more |  | 7.5 | high | git clone https://github.com/AgriciDaniel/claude-obsidian |
 | 2026-07-23 | [firecrawl/cli](https://github.com/firecrawl/cli) | firecrawl-agent |  | 7.9 | high | Установить: skills install firecrawl/cli или скопировать skill из репо в .claude/skills/firecrawl-agent/ |
 | 2026-07-23 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU/blob/main/SKILL.md) | memU |  | 7.1 | high | git clone https://github.com/NevaMind-AI/memU && cp SKILL.md ~/.claude/skills/memU/SKILL.md (создать папку) |
 | 2026-07-22 | [openclaw/gogcli](https://github.com/openclaw/gogcli) | gog-gmail, gog-calendar, gog-drive, +8 more |  | 7.4 | high | git clone https://github.com/openclaw/gogcli |
